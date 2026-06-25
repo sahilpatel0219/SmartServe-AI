@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}AI Insights — SmartServe AI{% endblock %}
+{% block page_title %}AI Insights{% endblock %}
+
+{% block content %}
+{% if not insights %}
+<div class="empty-state" style="padding-top:var(--space-8);">
+  <div class="empty-state-icon"><i class="bi bi-lightbulb" style="font-size:1.5rem;"></i></div>
+  <h2 class="empty-state-title">No insights yet</h2>
+  <p class="empty-state-desc">Run a full analysis to generate AI-powered insights from your business data.</p>
+  <a href="{% url 'ml_engine:analyze' %}" class="btn btn-primary"><i class="bi bi-cpu me-2"></i>Analyze My Business</a>
+</div>
+{% else %}
+<div style="max-width:720px;">
+  {% for insight in insights %}
+  <div class="card mb-4">
+    <div class="card-body flex gap-4">
+      <div style="width:36px;height:36px;border-radius:50%;background:var(--color-primary-light);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+        <i class="bi bi-lightbulb" style="color:var(--color-primary);font-size:0.9rem;"></i>
+      </div>
+      <div style="flex:1;">
+        <p style="margin:0;font-size:var(--text-base);line-height:1.6;">{{ insight.text }}</p>
+        {% if insight.category %}<span class="badge badge-neutral mt-2">{{ insight.category }}</span>{% endif %}
+        <div class="text-muted text-xs mt-2">{{ insight.created_at|date:"d M Y, H:i" }}</div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endif %}
+{% endblock %}

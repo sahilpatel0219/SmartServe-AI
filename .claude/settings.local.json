@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(python --version)",
+      "PowerShell(pip --version)",
+      "PowerShell(Copy-Item \"D:\\\\SmartServe AI\\\\.env.example\" \"D:\\\\SmartServe AI\\\\.env\")",
+      "PowerShell(New-Item -ItemType Directory -Force \"D:\\\\SmartServe AI\\\\static\\\\css\")",
+      "PowerShell(New-Item -ItemType Directory -Force \"D:\\\\SmartServe AI\\\\static\\\\js\")",
+      "PowerShell(New-Item -ItemType Directory -Force \"D:\\\\SmartServe AI\\\\static\\\\img\")",
+      "PowerShell(New-Item -ItemType Directory -Force \"D:\\\\SmartServe AI\\\\templates\\\\core\")",
+      "PowerShell(New-Item -ItemType Directory -Force \"D:\\\\SmartServe AI\\\\templates\\\\accounts\")",
+      "PowerShell(New-Item -ItemType Directory -Force \"D:\\\\SmartServe AI\\\\templates\\\\onboarding\")",
+      "PowerShell(New-Item -ItemType Directory -Force \"D:\\\\SmartServe AI\\\\templates\\\\partials\")",
+      "PowerShell(New-Item -ItemType Directory -Force \"D:\\\\SmartServe AI\\\\media\")",
+      "PowerShell(Get-ChildItem \"D:\\\\SmartServe AI\" -Recurse -File | Where-Object { $_.Extension -match \"\\\\.\\(py|html|css|js\\)$\" } | Select-Object FullName | ForEach-Object { $_.FullName.Replace\\(\"D:\\\\SmartServe AI\\\\\", \"\"\\) } | Sort-Object)"
+    ]
+  }
+}

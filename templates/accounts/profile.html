@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}Profile — SmartServe AI{% endblock %}
+{% block page_title %}My Profile{% endblock %}
+{% block content %}
+<div style="max-width:640px;">
+  <div class="card">
+    <div class="card-header"><span class="card-title">Account Details</span></div>
+    <div class="card-body">
+      <div class="flex items-center gap-4" style="margin-bottom:var(--space-6);">
+        <div style="width:64px;height:64px;border-radius:50%;background:var(--color-primary-light);display:flex;align-items:center;justify-content:center;color:var(--color-primary);font-weight:700;font-size:1.5rem;">
+          {{ user.first_name|first|upper }}{{ user.last_name|first|upper }}
+        </div>
+        <div>
+          <div style="font-weight:var(--fw-semi);font-size:var(--text-lg);">{{ user.get_full_name }}</div>
+          <div class="text-muted text-sm">{{ user.email }}</div>
+          {% if membership %}<div class="badge badge-success mt-2">{{ membership.get_role_display }}</div>{% endif %}
+        </div>
+      </div>
+      <table class="data-table">
+        <tr><td style="color:var(--color-muted);width:140px;">Email</td><td>{{ user.email }}</td></tr>
+        <tr><td style="color:var(--color-muted);">Phone</td><td>{{ user.phone|default:"—" }}</td></tr>
+        <tr><td style="color:var(--color-muted);">Member since</td><td>{{ user.created_at|date:"d M Y" }}</td></tr>
+        <tr><td style="color:var(--color-muted);">Email verified</td><td>{% if user.is_email_verified %}<span class="badge badge-success">Verified</span>{% else %}<span class="badge badge-warning">Pending</span>{% endif %}</td></tr>
+      </table>
+    </div>
+  </div>
+
+  {% if login_history %}
+  <div class="card mt-6">
+    <div class="card-header"><span class="card-title">Recent Login Activity</span></div>
+    <div class="card-body" style="padding:0;">
+      <table class="data-table">
+        <thead><tr><th>Date & Time</th><th>IP Address</th><th>Status</th></tr></thead>
+        <tbody>
+          {% for h in login_history %}
+          <tr>
+            <td>{{ h.logged_in_at|date:"d M Y, H:i" }}</td>
+            <td>{{ h.ip_address|default:"—" }}</td>
+            <td>{% if h.success %}<span class="badge badge-success">Success</span>{% else %}<span class="badge badge-danger">Failed</span>{% endif %}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+  {% endif %}
+</div>
+{% endblock %}

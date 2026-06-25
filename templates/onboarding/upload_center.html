@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+{% block title %}Data Upload Center — SmartServe AI{% endblock %}
+{% block page_title %}Data Upload Center{% endblock %}
+
+{% block content %}
+
+<!-- Readiness meter -->
+<div class="card" style="margin-bottom:var(--space-6);">
+  <div class="card-body" style="padding:var(--space-5) var(--space-6);">
+    <div class="flex justify-between items-center" style="margin-bottom:var(--space-3);">
+      <div>
+        <span style="font-weight:var(--fw-semi);">Data Readiness</span>
+        <span class="text-muted text-sm" style="margin-left:var(--space-2);">{{ done_count }}/4 datasets uploaded — AI features unlock at 100%</span>
+      </div>
+      <span style="font-size:var(--text-xl);font-weight:var(--fw-bold);color:var(--color-primary);">{{ readiness_score }}%</span>
+    </div>
+    <div class="progress-bar">
+      <div class="progress-fill" style="width:{{ readiness_score }}%;"></div>
+    </div>
+  </div>
+</div>
+
+{% include "partials/messages.html" %}
+
+<!-- Upload cards -->
+<div class="grid grid-2 gap-6" style="margin-bottom:var(--space-8);">
+  {% for ut in upload_types %}
+  <div class="card {% if ut.done %}border border-success{% endif %}">
+    <div class="card-header">
+      <div class="flex items-center gap-3">
+        <div class="stat-card-icon" style="background:{% if ut.done %}var(--color-success-bg){% else %}var(--color-canvas){% endif %};margin:0;width:40px;height:40px;">
+          <i class="bi bi-{{ ut.icon }}" style="color:{% if ut.done %}var(--color-success){% else %}var(--color-muted){% endif %};font-size:1.1rem;"></i>
+        </div>
+        <div>
+          <div class="card-title">{{ ut.label }}</div>
+          <div class="text-muted text-xs">{{ ut.desc }}</div>
+        </div>
+      </div>
+      {% if ut.done %}
+        <span class="badge badge-success"><i class="bi bi-check2"></i> Uploaded</span>
+      {% else %}
+        <span class="badge badge-neutral">Pending</span>
+      {% endif %}
+    </div>
+    <div class="card-body">
+      <p class="text-muted text-sm" style="margin-bottom:var(--space-4);">
+        <strong>Required columns:</strong> {{ ut.columns }}
+      </p>
+      <form method="post" action="{% url 'onboarding:upload_file' ut.key %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="dropzone" style="padding:var(--space-6);margin-bottom:var(--space-3);">
+          <input type="file" name="file" accept=".csv,.xlsx,.xls" style="display:none;" id="file_{{ ut.key }}">
+          <div class="dropzone-icon"><i class="bi bi-cloud-upload" style="font-size:1.5rem;"></i></div>
+          <p style="font-size:var(--text-sm);color:var(--color-ink);font-weight:var(--fw-medium);margin-bottom:4px;">
+            Drop CSV or XLSX here
+          </p>
+          <p class="text-muted text-xs">or click to browse</p>
+          <span id="fname_{{ ut.key }}" style="font-size:var(--text-xs);color:var(--color-primary);margin-top:var(--space-2);display:block;"></span>
+        </div>
+        <script>
+          document.getElementById('file_{{ ut.key }}').addEventListener('change', function(){
+            document.getElementById('fname_{{ ut.key }}').textContent = this.files[0]?.name || '';
+          });
+        </script>
+        <div class="flex gap-2">
+          <button type="submit" class="btn btn-primary btn-sm" style="flex:1;justify-content:center;">
+            <i class="bi bi-upload"></i> Upload & Validate
+          </button>
+          <a href="{% url 'onboarding:download_template' ut.key %}" class="btn btn-outline btn-sm" title="Download template CSV">
+            <i class="bi bi-download"></i> Template
+          </a>
+        </div>
+      </form>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<!-- Recent uploads table -->
+{% if datasets %}
+<div class="card">
+  <div class="card-header"><span class="card-title">Upload History</span></div>
+  <div class="card-body" style="padding:0;">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Type</th><th>File</th><th>Rows</th><th>Uploaded</th><th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for d in datasets %}
+        <tr>
+          <td><span class="badge badge-neutral">{{ d.type }}</span></td>
+          <td style="font-size:var(--text-sm);">{{ d.filename }}</td>
+          <td class="tabular-nums">{{ d.row_count }}</td>
+          <td class="text-muted text-sm">{{ d.uploaded_at|date:"d M Y, H:i" }}</td>
+          <td><span class="badge badge-success">{{ d.status }}</span></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endif %}
+
+{% if readiness_score == 100 %}
+<div class="card mt-6" style="border-color:var(--color-primary);">
+  <div class="card-body flex items-center gap-4">
+    <div style="width:48px;height:48px;border-radius:50%;background:var(--color-primary-light);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+      <i class="bi bi-stars" style="color:var(--color-primary);font-size:1.25rem;"></i>
+    </div>
+    <div style="flex:1;">
+      <div style="font-weight:var(--fw-semi);">All data uploaded — AI features unlocked!</div>
+      <div class="text-muted text-sm">Run a full analysis to get forecasts, insights, and your Business Health Score.</div>
+    </div>
+    <a href="{% url 'ml_engine:analyze' %}" class="btn btn-primary">
+      <i class="bi bi-cpu"></i> Analyze My Business
+    </a>
+  </div>
+</div>
+{% endif %}
+
+{% endblock %}

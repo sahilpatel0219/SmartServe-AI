@@ -1,0 +1,33 @@
+{% if data_readiness %}
+<div class="card" style="margin-bottom:var(--space-6);">
+  <div class="card-body" style="padding:var(--space-5) var(--space-6);">
+    <div class="flex justify-between items-center" style="margin-bottom:var(--space-3);">
+      <div>
+        <span style="font-size:var(--text-sm);font-weight:var(--fw-semi);color:var(--color-ink);">Data Readiness</span>
+        <span style="font-size:var(--text-xs);color:var(--color-muted);margin-left:var(--space-2);">AI features unlock as you upload data</span>
+      </div>
+      <span style="font-size:var(--text-sm);font-weight:var(--fw-semi);color:var(--color-primary);">{{ data_readiness.score }}%</span>
+    </div>
+    <div class="progress-bar" style="margin-bottom:var(--space-4);">
+      <div class="progress-fill" style="width:{{ data_readiness.score }}%;"></div>
+    </div>
+    <div style="display:flex;gap:var(--space-4);flex-wrap:wrap;">
+      {% for item in data_readiness.items %}
+      <div style="display:flex;align-items:center;gap:var(--space-2);">
+        {% if item.done %}
+          <i class="bi bi-check-circle-fill" style="color:var(--color-success);font-size:14px;"></i>
+        {% else %}
+          <i class="bi bi-circle" style="color:var(--color-border);font-size:14px;"></i>
+        {% endif %}
+        <span style="font-size:var(--text-xs);color:{% if item.done %}var(--color-ink){% else %}var(--color-muted){% endif %};">{{ item.label }}</span>
+      </div>
+      {% endfor %}
+      {% if data_readiness.score < 100 %}
+      <a href="{% url 'onboarding:upload_center' %}" style="font-size:var(--text-xs);color:var(--color-primary);font-weight:var(--fw-medium);margin-left:auto;">
+        <i class="bi bi-plus-circle me-1"></i>Upload more data
+      </a>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endif %}

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}New Order — SmartServe AI{% endblock %}
+{% block page_title %}New Order{% endblock %}
+{% block content %}
+{% include "partials/messages.html" %}
+{% if has_data == False %}
+<div class="empty-state" style="padding-top:var(--space-8);">
+  <div class="empty-state-icon"><i class="bi bi-receipt" style="font-size:1.5rem;"></i></div>
+  <h2 class="empty-state-title">New Order</h2>
+  <p class="empty-state-desc">Create a new order from the counter, phone, or QR scan.</p>
+  <a href="{% url 'onboarding:upload_center' %}" class="btn btn-primary"><i class="bi bi-cloud-upload me-2"></i>Upload Data</a>
+</div>
+{% else %}
+<p class="text-muted">No records yet. Use the buttons above to add data.</p>
+{% endif %}
+{% endblock %}

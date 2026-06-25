@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Analyze My Business — SmartServe AI{% endblock %}
+{% block page_title %}Analyze My Business{% endblock %}
+
+{% block content %}
+<div style="max-width:800px;">
+  <div class="card">
+    <div class="card-body" style="text-align:center;padding:var(--space-12);">
+      <div style="width:72px;height:72px;background:var(--color-primary-light);border-radius:var(--radius-xl);display:flex;align-items:center;justify-content:center;margin:0 auto var(--space-6);">
+        <i class="bi bi-stars" style="font-size:2rem;color:var(--color-primary);"></i>
+      </div>
+      <h2 style="font-size:var(--text-2xl);font-weight:var(--fw-bold);margin-bottom:var(--space-2);">Full Business Analysis</h2>
+      <p class="text-muted" style="max-width:480px;margin:0 auto var(--space-8);line-height:1.7;">
+        This runs sales forecasting, inventory predictions, profitability analysis,
+        waste detection, health score computation, and insight generation — all on
+        <strong>{{ business.name }}'s</strong> real data.
+      </p>
+      <form method="post" action="{% url 'ml_engine:run_analysis' %}" id="analyzeForm">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-primary btn-lg" id="runBtn"
+                onclick="this.disabled=true;document.getElementById('spinner').style.display='flex';this.textContent='Running…'">
+          <i class="bi bi-cpu me-2"></i>Run Full Analysis
+        </button>
+      </form>
+      <div id="spinner" style="display:none;align-items:center;justify-content:center;gap:var(--space-3);margin-top:var(--space-6);">
+        <div class="spinner-border spinner-border-sm text-success" role="status"></div>
+        <span class="text-muted text-sm">Training models on your data… this may take 30–60 seconds.</span>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

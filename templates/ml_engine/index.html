@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% block title %}AI Engine — SmartServe AI{% endblock %}
+{% block page_title %}AI Engine{% endblock %}
+
+{% block content %}
+{% include "partials/messages.html" %}
+
+{% if not has_sales %}
+<div class="empty-state" style="padding-top:var(--space-8);">
+  <div class="empty-state-icon">
+    <i class="bi bi-cpu" style="font-size:1.5rem;"></i>
+  </div>
+  <h2 class="empty-state-title">AI Engine needs data</h2>
+  <p class="empty-state-desc">
+    Upload at least 30 days of sales history to unlock forecasting, demand prediction,
+    waste alerts, and your Business Health Score.
+  </p>
+  <a href="{% url 'onboarding:upload_center' %}" class="btn btn-primary">
+    <i class="bi bi-cloud-upload me-2"></i>Upload Sales Data
+  </a>
+</div>
+
+{% else %}
+
+<div class="flex justify-between items-center mb-6">
+  <div>
+    <h1 style="font-size:var(--text-2xl);font-weight:var(--fw-bold);">AI Engine</h1>
+    <p class="text-muted text-sm">Run analysis on {{ business.name }}'s real data.</p>
+  </div>
+  <a href="{% url 'ml_engine:analyze' %}" class="btn btn-primary btn-lg">
+    <i class="bi bi-stars me-2"></i>Analyze My Business
+  </a>
+</div>
+
+<div class="grid grid-3 gap-4">
+  {% with caps=latest_prediction %}
+  <div class="card">
+    <div class="card-body">
+      <div class="stat-card-icon" style="background:var(--color-primary-light);margin-bottom:var(--space-4);width:44px;height:44px;">
+        <i class="bi bi-graph-up-arrow" style="color:var(--color-primary);font-size:1.1rem;"></i>
+      </div>
+      <div class="card-title mb-2">Sales Forecast</div>
+      <p class="text-muted text-sm">Next-day and per-item demand predictions using your historical sales data.</p>
+      <a href="{% url 'ml_engine:analyze' %}" class="btn btn-outline btn-sm mt-4">Run Forecast</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+      <div class="stat-card-icon" style="background:var(--color-warning-bg);margin-bottom:var(--space-4);width:44px;height:44px;">
+        <i class="bi bi-trash3" style="color:var(--color-warning);font-size:1.1rem;"></i>
+      </div>
+      <div class="card-title mb-2">Waste Prediction</div>
+      <p class="text-muted text-sm">Identify ingredients at risk of expiry before they spoil and estimate potential losses.</p>
+      <a href="{% url 'ml_engine:analyze' %}" class="btn btn-outline btn-sm mt-4">Predict Waste</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+      <div class="stat-card-icon" style="background:var(--color-info-bg);margin-bottom:var(--space-4);width:44px;height:44px;">
+        <i class="bi bi-heart-pulse" style="color:var(--color-info);font-size:1.1rem;"></i>
+      </div>
+      <div class="card-title mb-2">Business Health Score</div>
+      <p class="text-muted text-sm">A 0–100 score combining revenue growth, margins, waste, and customer retention.</p>
+      <a href="{% url 'ml_engine:analyze' %}" class="btn btn-outline btn-sm mt-4">Compute Score</a>
+    </div>
+  </div>
+  {% endwith %}
+</div>
+
+{% if latest_prediction %}
+<div class="card mt-6">
+  <div class="card-header">
+    <span class="card-title">Last Analysis</span>
+    <span class="text-muted text-sm">{{ latest_prediction.created_at|date:"d M Y, H:i" }}</span>
+  </div>
+  <div class="card-body">
+    <a href="{% url 'ml_engine:insights' %}" class="btn btn-outline btn-sm">View Insights</a>
+  </div>
+</div>
+{% endif %}
+
+{% endif %}
+{% endblock %}

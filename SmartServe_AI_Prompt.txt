@@ -1,0 +1,959 @@
+================================================================================
+SMARTSERVE AI — MASTER BUILD PROMPT FOR ANTIGRAVITY IDE
+================================================================================
+Project Name  : SmartServe AI
+Type          : AI-Powered Restaurant Operating System (Full-Stack Web App)
+Stack         : Python · Django · MongoDB · HTML · CSS · Bootstrap 5 · JavaScript
+                · Chart.js · Pandas · Scikit-learn · XGBoost · Prophet
+Target Users  : Any food business — restaurant, café, bakery, food stall,
+                cloud kitchen, juice bar, fast-food outlet
+================================================================================
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 1 — DESIGN SYSTEM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+UI Philosophy: Minimalism + Spatial UI Design
+
+The entire UI must feel like a premium SaaS product — not a college project.
+Think: Linear.app meets Notion meets a modern fintech dashboard.
+
+Core Design Rules:
+- Maximum whitespace. Nothing should feel crowded.
+- Cards float with subtle shadows (not heavy box-shadows).
+- Subtle depth layers: background → surface → elevated card → modal.
+- Smooth micro-animations on hover, page load, and data updates.
+- Every page has one clear visual focal point.
+- Typography does heavy lifting — minimal icons used decoratively.
+- Data is presented spatially — charts, heatmaps, metric cards with hierarchy.
+
+Color Palette (Professional Dark + Neutral):
+  --bg-base        : #0F0F10   (deepest background)
+  --bg-surface     : #17171A   (cards, sidebars)
+  --bg-elevated    : #1E1E23   (modals, dropdowns)
+  --accent-primary : #6C63FF   (primary actions, active nav, highlights)
+  --accent-soft    : #9D97FF   (secondary accents, tags)
+  --accent-success : #22C55E   (positive metrics, stock OK)
+  --accent-warning : #F59E0B   (alerts, low stock)
+  --accent-danger  : #EF4444   (critical alerts, negative metrics)
+  --text-primary   : #F5F5F7   (headings, primary content)
+  --text-secondary : #9898A6   (labels, subtitles, placeholders)
+  --text-muted     : #55555F   (disabled, helper text)
+  --border-subtle  : #2A2A32   (card borders, dividers)
+
+Typography:
+  Font Family  : "Inter", sans-serif (Google Fonts — import in base template)
+  Heading      : 600 weight, tight tracking
+  Body         : 400 weight, 1.6 line-height
+  Mono/Data    : "JetBrains Mono" for numbers, IDs, code
+
+Sidebar:
+  - Fixed left sidebar, 240px wide, dark (#17171A)
+  - Collapsible to icon-only mode (64px) on smaller screens
+  - Active nav item: accent-primary left border + soft purple background
+  - Grouped nav sections with muted category labels
+
+Spacing Grid: 4px base unit. Use multiples: 4, 8, 12, 16, 24, 32, 48, 64px.
+
+Card Style:
+  background   : var(--bg-surface)
+  border       : 1px solid var(--border-subtle)
+  border-radius: 12px
+  padding      : 24px
+  box-shadow   : 0 1px 3px rgba(0,0,0,0.4)
+
+Button Style:
+  Primary: background accent-primary, white text, 8px border-radius, no border
+  Ghost  : transparent background, accent-primary border, accent-primary text
+  Danger : background accent-danger, white text
+  All buttons: 400ms ease transition on hover
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 2 — TECH STACK (EXACT VERSIONS)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Backend:
+  Python 3.11+
+  Django 5.x
+  Django REST Framework 3.15+
+  Djongo or PyMongo 4.x (MongoDB connector)
+  django-allauth (authentication)
+  djangorestframework-simplejwt (JWT tokens)
+  Celery + Redis (background tasks for AI jobs)
+  django-cors-headers
+
+Database:
+  MongoDB 7.x
+  Collections listed in Section 6
+
+AI / ML:
+  Pandas 2.x
+  NumPy 1.26+
+  Scikit-learn 1.4+
+  XGBoost 2.x
+  Prophet (Meta's time-series forecasting)
+  Matplotlib / Seaborn (for server-side chart generation if needed)
+
+Frontend:
+  HTML5 + CSS3 (custom variables as defined above)
+  Bootstrap 5.3 (grid and utility classes only — DO NOT use Bootstrap's default color theme)
+  Vanilla JavaScript (ES6+)
+  Chart.js 4.x (all dashboard charts)
+  Alpine.js (lightweight reactivity for dropdowns, tabs, toggling)
+  Flatpickr (date pickers)
+  Toastr.js (toast notifications)
+
+File Handling:
+  openpyxl (Excel read/write)
+  csv (Python built-in)
+  Pillow (image uploads)
+
+Deployment-Ready:
+  Docker + docker-compose
+  Gunicorn (WSGI server)
+  Nginx (reverse proxy)
+  python-decouple or python-dotenv (environment variables)
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 3 — USER ROLES & PERMISSIONS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Role 1: Super Admin (Platform Owner — SmartServe AI team)
+  - Access to all business accounts on the platform
+  - Manage subscriptions and plans
+  - View platform-wide analytics
+  - Block / activate businesses
+  - Django admin panel access
+
+Role 2: Business Owner
+  - Full access to their own business workspace
+  - Upload data, configure AI, view all reports
+  - Manage staff accounts, inventory, menu
+  - Access AI forecasting, waste predictions, chatbot
+
+Role 3: Manager
+  - Manage orders, staff shifts, inventory
+  - View reports (not profit settings)
+  - Cannot change business settings or billing
+
+Role 4: Staff
+  - View assigned shifts
+  - Mark attendance
+  - Update order status only
+
+Implement role-based access using Django's permission system + custom decorators.
+Every view must check the user's role before rendering.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 4 — PROJECT FOLDER STRUCTURE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+smartserve_ai/
+├── manage.py
+├── .env                         ← All secrets go here
+├── requirements.txt
+├── docker-compose.yml
+├── Dockerfile
+├── nginx/
+│   └── nginx.conf
+├── smartserve_ai/               ← Main Django project settings
+│   ├── settings/
+│   │   ├── base.py
+│   │   ├── development.py
+│   │   └── production.py
+│   ├── urls.py
+│   └── wsgi.py
+├── apps/
+│   ├── accounts/                ← Auth, users, roles
+│   ├── business/                ← Business profile, onboarding
+│   ├── menu/                    ← Menu items, categories
+│   ├── inventory/               ← Stock, ingredients, alerts
+│   ├── orders/                  ← Order management, QR ordering
+│   ├── customers/               ← Customer profiles, loyalty
+│   ├── staff/                   ← Employees, shifts, attendance
+│   ├── analytics/               ← Sales dashboard, profit analytics
+│   ├── forecasting/             ← AI demand forecasting (Prophet + XGBoost)
+│   ├── waste/                   ← Food waste tracking and prediction
+│   ├── assistant/               ← AI chatbot (rule-based + LLM calls)
+│   ├── suppliers/               ← Supplier management
+│   ├── reports/                 ← PDF/Excel report generation
+│   └── notifications/           ← Alerts and notification system
+├── static/
+│   ├── css/
+│   │   ├── variables.css        ← All CSS variables from design system
+│   │   ├── base.css
+│   │   ├── sidebar.css
+│   │   └── components.css
+│   ├── js/
+│   │   ├── charts.js
+│   │   ├── sidebar.js
+│   │   └── utils.js
+│   └── img/
+│       └── logo.svg
+├── templates/
+│   ├── base.html                ← Master layout with sidebar
+│   ├── auth/
+│   ├── dashboard/
+│   ├── business/
+│   ├── menu/
+│   ├── inventory/
+│   ├── orders/
+│   ├── customers/
+│   ├── staff/
+│   ├── analytics/
+│   ├── forecasting/
+│   ├── waste/
+│   ├── assistant/
+│   ├── suppliers/
+│   └── reports/
+└── media/                       ← User-uploaded files (logos, CSVs)
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 5 — ALL MODULES (DETAILED REQUIREMENTS)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+────────────────────────────────
+MODULE 0: LANDING PAGE (Public)
+────────────────────────────────
+URL: /
+
+Content:
+- Hero section: "Your AI-Powered Restaurant Operating System"
+  Subtext: "One platform for orders, inventory, staff, forecasting and profit analytics."
+  CTA buttons: "Get Started Free" → /register | "View Demo" → /demo
+- Features section (6 cards): Orders · Inventory · Forecasting · Waste · Analytics · AI Assistant
+- Pricing section (3 plans)
+- Footer with logo, links
+
+Design: Full dark background. Large heading. Minimal. One strong accent color CTA.
+No clutter. No stock photos. Use CSS geometric shapes for visual interest.
+
+────────────────────────────────
+MODULE 1: AUTHENTICATION
+────────────────────────────────
+URLs: /register · /login · /logout · /password-reset · /verify-email
+
+Features:
+- Registration: Name, Email, Password, Business Type (dropdown), Phone
+- Email verification via token link (use Django's built-in email + SMTP)
+- Login with email + password
+- JWT token stored in httpOnly cookie
+- Password reset via email OTP or link
+- Login history stored: IP address, timestamp, device
+- After login → redirect to /onboarding if business not set up, else /dashboard
+
+Design:
+- Split layout: left = dark card with form, right = brand panel with tagline
+- Floating label inputs
+- Show/hide password toggle
+- Animated logo on brand panel
+
+────────────────────────────────
+MODULE 2: BUSINESS ONBOARDING
+────────────────────────────────
+URL: /onboarding (shown only once after registration)
+
+Step 1 — Business Profile:
+  Fields: Business Name, Business Type, GST Number (optional), Address,
+          City, State, Pincode, Phone, Logo (image upload), Number of branches,
+          Number of employees, Opening hours
+
+Step 2 — Data Import (choose one or more):
+  Upload Sales History CSV/Excel
+  Upload Inventory CSV/Excel
+  Upload Menu CSV/Excel
+  Upload Historical Orders CSV/Excel
+  OR: "Skip and enter manually later"
+
+  For each upload:
+  - Show expected column format with example
+  - Validate columns on upload, show errors per row
+  - Show success count: "127 sales records imported."
+
+Step 3 — AI Setup:
+  - "Analyze My Business" button triggers backend AI pipeline
+  - Progress bar shown while AI processes uploaded data
+  - On completion → redirect to /dashboard
+
+CSV/Excel Templates to provide for download:
+  sales_template.csv       : Date, Item Name, Quantity, Revenue, Category
+  inventory_template.csv   : Ingredient, Quantity, Unit, Cost Per Unit, Expiry Date
+  menu_template.csv        : Item Name, Category, Price, Ingredients (comma-separated)
+  orders_template.csv      : Order ID, Date, Items, Quantity, Total Amount, Channel
+
+────────────────────────────────
+MODULE 3: MAIN DASHBOARD
+────────────────────────────────
+URL: /dashboard
+
+Top KPI Row (6 metric cards):
+  - Today's Revenue (with % change vs yesterday)
+  - Orders Today
+  - Profit Today (estimated)
+  - Inventory Alerts (count of low/expiring items)
+  - Food Waste Risk (kg at risk this week)
+  - AI Forecast Tomorrow (₹ predicted)
+
+Charts Section:
+  - Revenue Trend (last 30 days) — Line chart
+  - Top 5 Items by Sales — Horizontal bar chart
+  - Sales by Channel (Dine-in / Delivery / QR) — Donut chart
+  - Hourly Traffic Heatmap (day × hour grid) — Spatial heatmap
+
+Quick Actions Panel:
+  - Add Order · Add Inventory · View Forecast · Generate Report
+
+AI Insight Strip (below charts):
+  Rotating AI-generated text insights, e.g.:
+  "Pizza accounts for 31% of this week's revenue."
+  "Stock of cheese will last approximately 3 more days."
+  "Friday evenings show 28% higher traffic — consider extra staff."
+
+────────────────────────────────
+MODULE 4: MENU MANAGEMENT
+────────────────────────────────
+URL: /menu
+
+Features:
+- Add/Edit/Delete menu categories (e.g., Starters, Main Course, Beverages)
+- Add/Edit/Delete menu items:
+    Fields: Name, Category, Price (MRP), Cost Price, Description,
+            Image (optional), Ingredients used (multi-select from inventory),
+            Quantity per ingredient per serving, Availability toggle
+- Menu items table with filter by category, search by name
+- Bulk upload via CSV
+- Display: Profit Margin auto-calculated = ((Price - Cost) / Price) × 100
+- Color badge: Green if margin > 40%, Yellow 20-40%, Red < 20%
+
+────────────────────────────────
+MODULE 5: SMART INVENTORY SYSTEM
+────────────────────────────────
+URL: /inventory
+
+Features:
+- Add/Edit/Delete ingredients:
+    Fields: Name, Category, Current Stock, Unit (kg/g/L/ml/pieces),
+            Minimum Threshold, Cost Per Unit, Supplier, Expiry Date
+- Inventory table with:
+    Search · Filter by category · Sort by stock level
+- Status badges: OK · Low Stock · Critical · Expiring Soon
+- Auto-deduction: When an order is placed or manually entered, system checks
+  menu item ingredients and deducts stock accordingly
+- Manual stock adjustment with reason log
+- Reorder Log: track when and what was restocked
+
+Alerts Panel (right sidebar):
+  - Items below minimum threshold (red)
+  - Items expiring within 5 days (orange)
+  - Items out of stock (critical)
+
+AI Inventory Prediction (bottom section):
+  - "Based on current usage rate, Cheese will run out in 3 days."
+  - "Recommended reorder: 10kg Cheese, 15kg Tomatoes"
+
+────────────────────────────────
+MODULE 6: ORDER MANAGEMENT
+────────────────────────────────
+URL: /orders
+
+Sub-pages:
+  /orders/live        → Live orders board (Kanban style: Pending → Preparing → Ready → Delivered)
+  /orders/history     → Past orders with date filter, search, export
+  /orders/new         → Create new manual order
+
+Live Orders Board:
+  - Cards per order: Order ID, Customer Name, Items, Amount, Time elapsed
+  - Drag-and-drop between status columns (or button-based for simpler build)
+  - Color: Pending=muted, Preparing=accent, Ready=green, Delivered=dim
+
+Order Sources: Counter · QR Scan · Delivery (Zomato/Swiggy) · Phone · Website
+  (Source shown as badge on each order card)
+
+New Order Form:
+  - Select customer (or add new)
+  - Add items from menu (with quantity)
+  - Auto-calculate total
+  - Apply discount code / loyalty points
+  - Choose order source and payment method
+  - Submit → auto-deducts inventory
+
+────────────────────────────────
+MODULE 7: QR ORDERING SYSTEM
+────────────────────────────────
+URL: /qr-menu (public, no login required)
+
+Features:
+- Each business gets a unique QR code → leads to /qr-menu/<business_slug>/
+- Public page shows: Business name, Logo, Menu by category
+- Customer can: Browse items, Add to cart, Place order (name + phone required)
+- Order flows directly into /orders/live dashboard
+- "Call Waiter" button sends notification to staff dashboard
+- Online payment integration placeholder (Razorpay ready — API key configurable)
+
+QR Code Generation:
+  URL: /settings/qr-code
+  - Generate QR code image (use Python qrcode library)
+  - Download as PNG
+  - Preview how menu looks on mobile
+
+────────────────────────────────
+MODULE 8: CUSTOMER MANAGEMENT
+────────────────────────────────
+URL: /customers
+
+Features:
+- Auto-create customer profile on first order (phone as unique ID)
+- Customer table: Name, Phone, Total Visits, Total Spend, Last Visit, Segment
+- Customer detail page: Full order history, spending chart, loyalty points
+- Manual add customer
+
+AI Segmentation (auto-computed):
+  VIP       : top 10% by spend in last 30 days
+  Regular   : ordered more than 3 times this month
+  At Risk   : ordered before but not in last 21 days
+  Inactive  : no order in 45+ days
+
+Loyalty System:
+  - 1 point per ₹10 spent
+  - Redeem 100 points = ₹50 discount
+  - Configurable in settings
+
+Campaign Panel:
+  - Filter by segment → "Send Offer" → generates a coupon code
+  - Coupon codes: % discount or flat off, with expiry date
+
+────────────────────────────────
+MODULE 9: STAFF MANAGEMENT
+────────────────────────────────
+URL: /staff
+
+Features:
+- Add/Edit/Delete employees:
+    Fields: Name, Role (Chef/Waiter/Cashier/Cleaner/Manager), Phone,
+            Email, Salary, Shift (Morning/Evening/Night), Join Date
+- Attendance tracking: Manual check-in/out or one-click mark per day
+- Leave management: Apply, approve, reject
+- Performance log: Notes per employee (free text)
+- Monthly salary summary view
+
+AI Shift Planner:
+  URL: /staff/shift-planner
+  - Uses historical sales data to predict busy periods
+  - Recommends: "This Saturday evening needs 3 waiters and 2 chefs."
+  - Display weekly shift calendar (7-day grid per role)
+  - Manager can adjust and confirm the AI suggestion
+
+────────────────────────────────
+MODULE 10: AI DEMAND FORECASTING
+────────────────────────────────
+URL: /forecasting
+
+This is the flagship module.
+
+Input Features Used by AI Model:
+  - Day of week
+  - Month
+  - Holiday flag (Indian public holidays pre-loaded)
+  - Festival flag (Diwali, Eid, Navratri, Christmas, etc.)
+  - Weather conditions (OpenWeatherMap API — if key provided)
+  - Historical sales last 90 days
+  - Rolling 7-day average sales
+
+Model:
+  - Primary: Facebook Prophet (time-series)
+  - Secondary: XGBoost (regression on item-level demand)
+  - Train on uploaded historical data during onboarding
+  - Retrain button available (triggers Celery background task)
+
+Output Displayed:
+  - Tomorrow's predicted total revenue (₹)
+  - Next 7 days revenue forecast (line chart with confidence band)
+  - Item-level forecast table: Item Name | Expected Qty | Expected Revenue
+  - Weekend forecast highlight
+
+Forecast Accuracy:
+  - Show MAE and MAPE on model performance card
+  - "Last prediction was 94% accurate" badge
+
+Manual Override:
+  - User can add event flag: "Festival tomorrow" / "Cricket match" / "Rain expected"
+  - AI adjusts forecast accordingly
+
+────────────────────────────────
+MODULE 11: FOOD WASTE ANALYTICS
+────────────────────────────────
+URL: /waste
+
+Features:
+- Manual waste log: Item, Quantity Wasted, Reason (Expired/Overcooked/Returned), Date
+- Waste dashboard:
+    Total waste this month (kg and ₹ value)
+    Waste by category (pie chart)
+    Waste trend (line chart last 30 days)
+    Top 5 most wasted items
+
+AI Waste Prediction:
+  - "7kg vegetables likely to expire within 3 days."
+  - Based on: current stock, usage rate, expiry dates
+  - Recommendations:
+      "Use spinach in tomorrow's special dish."
+      "Run a promotion on mushroom items to clear stock."
+
+Monthly Waste Report:
+  - Total waste ₹ value
+  - Comparison vs previous month
+  - Potential savings if waste reduced by 30%
+
+────────────────────────────────
+MODULE 12: PROFIT ANALYTICS
+────────────────────────────────
+URL: /analytics
+
+Menu Intelligence (Boston Matrix):
+  Categorize every menu item into:
+    Stars   : High sales + High profit margin → Promote these
+    Puzzles : Low sales + High profit margin → Market better
+    Horses  : High sales + Low profit margin → Optimize cost
+    Dogs    : Low sales + Low profit margin → Consider removing
+
+Charts:
+  - Revenue vs Cost vs Profit (grouped bar chart, monthly)
+  - Profit margin per item (horizontal bar, sorted)
+  - Best vs Worst performers table
+
+Sales Breakdown:
+  - By category, by channel (dine-in/delivery/QR), by time of day
+  - Day-of-week heatmap (which day earns most)
+  - Month-over-month comparison
+
+Business Health Score (0–100):
+  Computed from:
+    Revenue growth (20 pts)
+    Profit margin (20 pts)
+    Waste ratio (20 pts)
+    Customer retention (20 pts)
+    Inventory efficiency (20 pts)
+  Display as a large circular gauge + breakdown bar
+
+────────────────────────────────
+MODULE 13: AI RESTAURANT ASSISTANT
+────────────────────────────────
+URL: /assistant
+
+Interface:
+  - Chat-style interface (dark, like a terminal but minimal)
+  - Input at bottom, conversation thread above
+  - SmartServe AI avatar on the left of each AI response
+
+Query Types Handled:
+  RULE-BASED (no API needed — answer from database):
+    "Why were sales low yesterday?"
+      → "Sales dropped 22% due to lower evening orders compared to last Tuesday."
+    "What should I reorder?"
+      → "Cheese (3 days left), Tomatoes (2 days left)"
+    "Which item has the best margin?"
+      → "Pasta — 62% margin"
+    "How many orders today?"
+      → Live count from DB
+    "What's my forecast for this weekend?"
+      → From forecasting module
+
+  LLM-BASED (optional — uses OpenAI API or Anthropic API if key provided):
+    Freeform business questions
+    Menu strategy advice
+    Promotional ideas
+
+  Make rule-based the default. LLM is optional (toggled in settings with API key).
+
+Suggested Questions (chips shown in empty state):
+  "Sales summary today"
+  "What to restock?"
+  "Best performing item this week"
+  "Weekend forecast"
+  "Waste this month"
+
+────────────────────────────────
+MODULE 14: SUPPLIER MANAGEMENT
+────────────────────────────────
+URL: /suppliers
+
+Features:
+- Add/Edit/Delete suppliers:
+    Fields: Name, Contact Person, Phone, Email, Address, Items Supplied
+- Purchase Order creation:
+    Select supplier → Select items and quantities → Set delivery date
+    PO status: Draft · Sent · Received · Cancelled
+- Purchase history per supplier (date, items, cost, delivery)
+- Auto-link: Receiving a PO → updates inventory stock
+
+────────────────────────────────
+MODULE 15: REPORTS
+────────────────────────────────
+URL: /reports
+
+Report Types (generate on demand):
+  1. Daily Sales Report
+  2. Weekly Sales Summary
+  3. Monthly Profit Report
+  4. Inventory Status Report
+  5. Food Waste Report
+  6. Staff Attendance Report
+  7. AI Forecast Accuracy Report
+  8. Customer Loyalty Report
+
+Each report:
+  - Date range selector
+  - Preview in-browser
+  - Download as PDF (use WeasyPrint or ReportLab)
+  - Download as Excel (use openpyxl)
+
+────────────────────────────────
+MODULE 16: SETTINGS
+────────────────────────────────
+URL: /settings
+
+Tabs:
+  Business Profile    → Edit all business info, upload logo
+  Billing & Plan      → View current plan, upgrade button (placeholder)
+  Notifications       → Toggle: email alerts, low stock alerts, daily summary
+  Integrations        →
+      OpenWeatherMap API Key (for weather-based forecasting)
+      Razorpay Key ID + Secret (for QR menu payments)
+      OpenAI API Key or Anthropic API Key (for AI assistant LLM mode)
+      Zomato / Swiggy webhook URL (placeholder)
+  AI Settings         → Retrain model button, forecasting horizon (days)
+  User Management     → Invite staff/manager (send email invite with role)
+  Security            → Change password, active sessions, login history
+  QR Code             → Generate and download QR for table ordering
+  Data Management     → Re-upload data, clear and reimport, download all data
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 6 — MONGODB COLLECTIONS (SCHEMA OVERVIEW)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Collection          Key Fields
+──────────────────────────────────────────────────────────────
+users               _id, email, password_hash, role, business_id,
+                    created_at, last_login, login_history[]
+
+businesses          _id, owner_id, name, type, slug, gst, address,
+                    logo_url, opening_hours, plan, created_at
+
+menu_items          _id, business_id, name, category, price, cost_price,
+                    margin, ingredients[], image_url, available, created_at
+
+categories          _id, business_id, name, display_order
+
+ingredients         _id, business_id, name, category, unit, stock,
+                    min_threshold, cost_per_unit, expiry_date, supplier_id
+
+inventory_logs      _id, business_id, ingredient_id, change_amount,
+                    reason, order_id, timestamp
+
+orders              _id, business_id, customer_id, items[], total_amount,
+                    discount, source, status, channel, created_at
+
+customers           _id, business_id, name, phone, email, total_spend,
+                    visit_count, loyalty_points, segment, last_visit
+
+employees           _id, business_id, name, role, phone, salary,
+                    shift, join_date
+
+attendance          _id, employee_id, date, check_in, check_out, status
+
+suppliers           _id, business_id, name, contact, phone, email,
+                    items_supplied[], address
+
+purchase_orders     _id, business_id, supplier_id, items[], status,
+                    created_at, delivery_date, received_at
+
+sales               _id, business_id, date, total_revenue, total_orders,
+                    channel_breakdown{}, item_breakdown[]
+
+predictions         _id, business_id, prediction_date, predicted_revenue,
+                    item_forecasts[], model_mape, created_at
+
+waste_logs          _id, business_id, ingredient_id, quantity, reason,
+                    cost_value, date
+
+notifications       _id, business_id, type, message, read, created_at
+
+reports             _id, business_id, type, date_range, file_url, created_at
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 7 — AI PIPELINE LOGIC
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Step 1: Data Ingestion
+  - Parse uploaded CSVs/Excel using Pandas
+  - Validate: required columns, date format (DD-MM-YYYY or ISO), numeric fields
+  - Clean: fill missing values, remove duplicates, normalize item names
+
+Step 2: Feature Engineering
+  - Extract: day_of_week, month, week_number, is_weekend, is_holiday
+  - Rolling: 7-day avg revenue, 14-day avg revenue
+  - Weather: if OpenWeatherMap key provided, fetch temp and condition
+  - Festival: pre-coded list of Indian festivals by date
+
+Step 3: Model Training
+  - Prophet: fit on (date → total_revenue) time series
+  - XGBoost: fit on (features → item quantity) per menu item
+  - Save models per business_id using joblib/pickle to /media/models/<business_id>/
+
+Step 4: Prediction
+  - On-demand or daily Celery task
+  - Generate next 7-day revenue forecast
+  - Generate item-level demand for tomorrow
+  - Store results in predictions collection
+
+Step 5: Waste Prediction
+  - For each ingredient: compute daily usage rate from past 14 days
+  - Check: (current_stock / avg_daily_usage) → days remaining
+  - Flag: if days_remaining < 4 → alert + recommendation
+
+Step 6: Business Health Score
+  - Compute all 5 sub-scores from database aggregations
+  - Weighted sum → total score out of 100
+  - Store in businesses collection, update weekly
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 8 — BASE TEMPLATE STRUCTURE (base.html)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Layout:
+  <div class="app-shell">
+    <aside class="sidebar">           ← Fixed left navigation
+    <main class="main-content">
+      <header class="topbar">         ← Page title, notifications bell, user avatar
+      <section class="page-body">     ← {% block content %}{% endblock %}
+    </main>
+  </div>
+
+Sidebar Nav Groups:
+  OVERVIEW
+    Dashboard (/)
+  OPERATIONS
+    Orders (/orders)
+    Menu (/menu)
+    Inventory (/inventory)
+    QR Ordering (/settings/qr-code)
+  INTELLIGENCE
+    AI Forecasting (/forecasting)
+    Profit Analytics (/analytics)
+    Food Waste (/waste)
+    AI Assistant (/assistant)
+  PEOPLE
+    Customers (/customers)
+    Staff (/staff)
+    Suppliers (/suppliers)
+  MANAGEMENT
+    Reports (/reports)
+    Settings (/settings)
+
+Topbar:
+  Left: Page title (dynamic)
+  Right: Notification bell (badge count) · Business name · User avatar dropdown
+         (dropdown: Profile · Settings · Logout)
+
+Notification Dropdown:
+  Show latest 5 unread notifications inline
+  "View all" link → /notifications
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 9 — ENVIRONMENT VARIABLES (.env FILE)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Create a file named .env in the project root with these variables.
+NEVER commit .env to Git. Add it to .gitignore.
+
+# Django
+SECRET_KEY=your-django-secret-key-here
+DEBUG=True
+ALLOWED_HOSTS=localhost,127.0.0.1
+
+# MongoDB
+MONGO_URI=mongodb://localhost:27017/
+MONGO_DB_NAME=smartserve_ai
+
+# Email (SMTP — for verification and password reset emails)
+EMAIL_HOST=smtp.gmail.com
+EMAIL_PORT=587
+EMAIL_USE_TLS=True
+EMAIL_HOST_USER=your-email@gmail.com
+EMAIL_HOST_PASSWORD=your-gmail-app-password
+
+# Redis (for Celery background tasks)
+REDIS_URL=redis://localhost:6379/0
+
+# OpenWeatherMap (optional — for weather-based forecasting)
+OPENWEATHERMAP_API_KEY=your-openweathermap-key
+
+# OpenAI (optional — for LLM-powered AI assistant)
+OPENAI_API_KEY=your-openai-key
+
+# Razorpay (optional — for QR menu online payments)
+RAZORPAY_KEY_ID=your-razorpay-key-id
+RAZORPAY_KEY_SECRET=your-razorpay-key-secret
+
+# Admin
+DJANGO_SUPERUSER_EMAIL=admin@smartserve.ai
+DJANGO_SUPERUSER_PASSWORD=changeme123
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 10 — THINGS YOU MUST CHANGE AFTER PROJECT IS GENERATED
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+After Antigravity generates the project, go through this checklist before running it:
+
+─────────────────────────────────
+1. Django SECRET_KEY
+   File: .env
+   Variable: SECRET_KEY
+   Action: Generate a new one using:
+     python -c "from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())"
+   Never use the placeholder in production.
+
+2. MongoDB Connection URI
+   File: .env
+   Variable: MONGO_URI and MONGO_DB_NAME
+   Action: Replace with your MongoDB Atlas URI or local MongoDB URI.
+   Atlas format: mongodb+srv://<username>:<password>@cluster.mongodb.net/
+
+3. Email / SMTP Credentials
+   File: .env
+   Variables: EMAIL_HOST_USER, EMAIL_HOST_PASSWORD
+   Action: Use your Gmail address + a Gmail App Password
+   (Gmail → Account → Security → App Passwords → Generate one for "Mail")
+   Required for: email verification, password reset
+
+4. Django Admin Superuser
+   File: .env
+   Variables: DJANGO_SUPERUSER_EMAIL, DJANGO_SUPERUSER_PASSWORD
+   Action: Change to your actual email and a strong password.
+   Then run: python manage.py createsuperuser
+   Or use the env variables if the project has a setup script.
+   Admin panel URL: /admin/
+
+5. OpenWeatherMap API Key (for weather-based forecasting)
+   File: .env or Settings page in the app
+   Variable: OPENWEATHERMAP_API_KEY
+   Action: Sign up at https://openweathermap.org/api → free tier is enough.
+   Get "Current Weather" + "5-Day Forecast" API access.
+   Enter your city name in Settings → Business Profile → City field.
+   Without this key, forecasting still works using seasonal averages.
+
+6. Razorpay Keys (for QR menu payments)
+   File: .env or Settings → Integrations
+   Variables: RAZORPAY_KEY_ID, RAZORPAY_KEY_SECRET
+   Action: Create account at https://razorpay.com → Dashboard → API Keys.
+   Use test keys during development. Switch to live keys before production.
+   Without this, QR menu works but shows "Cash on Delivery" only.
+
+7. OpenAI API Key (only if AI Assistant LLM mode is enabled)
+   File: Settings → Integrations in the app
+   Variable: OPENAI_API_KEY
+   Action: Get from https://platform.openai.com/api-keys
+   Cost: Charged per token. Set a usage limit in your OpenAI account.
+   Without this, AI Assistant works in rule-based mode only (recommended for start).
+
+8. ALLOWED_HOSTS
+   File: .env
+   Variable: ALLOWED_HOSTS
+   Action: In production, change to your actual domain:
+   ALLOWED_HOSTS=yourdomain.com,www.yourdomain.com
+   Keep localhost for local development.
+
+9. DEBUG Mode
+   File: .env
+   Variable: DEBUG
+   Action: Set DEBUG=False in production.
+   This hides error details from users and enables static file serving via Nginx.
+
+10. Redis URL
+    File: .env
+    Variable: REDIS_URL
+    Action: If using local Redis → redis://localhost:6379/0
+    If using Redis Cloud → redis://:password@host:port/0
+    Redis is needed for background AI tasks (Celery). Without it, forecasting
+    runs synchronously (slower but functional).
+
+11. Static Files (Production)
+    Command: python manage.py collectstatic
+    Run this before deployment. Output goes to /staticfiles/
+    Configure Nginx to serve /staticfiles/ directly.
+
+12. Media Files
+    Check: MEDIA_ROOT and MEDIA_URL in settings/base.py
+    Default: /media/
+    In production: use AWS S3 bucket or same server /var/www/smartserve/media/
+    Update MEDIA_ROOT path accordingly.
+
+13. Celery Worker (for background AI tasks)
+    Start separately: celery -A smartserve_ai worker --loglevel=info
+    For production: use Supervisor or systemd to keep it running.
+
+14. First-Time Setup Commands (run in order):
+    pip install -r requirements.txt
+    python manage.py migrate (if using SQL models alongside MongoDB)
+    python manage.py createsuperuser
+    python manage.py collectstatic
+    python manage.py runserver
+
+15. Indian Holidays & Festivals Data
+    File: apps/forecasting/data/holidays.py
+    Action: Review the pre-loaded list of Indian public holidays.
+    Add your city/state-specific local holidays (e.g., regional festivals).
+    These are used as feature flags in the AI forecasting model.
+
+─────────────────────────────────
+OPTIONAL BUT RECOMMENDED AFTER SETUP:
+  - Upload 3–6 months of your real sales data from the onboarding CSV template
+  - Click "Analyze My Business" to train the AI model on your data
+  - Set minimum stock thresholds for all ingredients in Inventory
+  - Add your actual menu items with cost prices (needed for margin calculation)
+  - Invite your manager/staff with their role via Settings → User Management
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 11 — IMPLEMENTATION ORDER (STEP-BY-STEP FOR ANTIGRAVITY)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Build in this order to avoid dependency issues:
+
+01. Project setup: Django, MongoDB connection, .env, folder structure
+02. Design system: variables.css, base.css, base.html with sidebar and topbar
+03. Landing page (public)
+04. Authentication: register, login, logout, email verification, JWT
+05. Business onboarding: profile form + CSV upload + validation
+06. Menu management: categories + items + ingredient linking
+07. Inventory system: CRUD + alerts + auto-deduction logic
+08. Order management: live board + new order form + status updates
+09. QR ordering: public menu page + QR code generation
+10. Customer management: profiles + segmentation + loyalty points
+11. Staff management: employees + attendance + leave
+12. Sales dashboard: KPI cards + Chart.js charts
+13. AI forecasting: data pipeline + Prophet + XGBoost + output display
+14. Food waste module: manual log + AI prediction + dashboard
+15. Profit analytics: margin calculation + Boston Matrix + health score
+16. AI assistant: rule-based engine + optional LLM integration
+17. Supplier management: supplier CRUD + purchase orders
+18. Reports: PDF + Excel generation + download
+19. Settings: all tabs including integrations and API keys
+20. Notifications: bell icon + dropdown + in-app alert system
+21. Super admin panel: platform-wide management views
+22. Docker setup: Dockerfile + docker-compose.yml + Nginx config
+23. Final: .env.example, README.md, requirements.txt cleanup
+
+================================================================================
+END OF PROMPT — SmartServe AI Master Build Specification
+================================================================================

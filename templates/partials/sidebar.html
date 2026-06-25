@@ -1,0 +1,106 @@
+{% load static %}
+<aside class="sidebar" id="sidebar">
+  <!-- Logo -->
+  <div class="sidebar-logo">
+    <div class="logo-mark">S</div>
+    <div>
+      <div class="logo-text">SmartServe AI</div>
+      {% if active_business %}
+        <div class="logo-sub" style="max-width:150px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">
+          {{ active_business.name }}
+        </div>
+      {% else %}
+        <div class="logo-sub">Food OS</div>
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="sidebar-nav">
+
+    <!-- Main -->
+    <div class="nav-section">
+      <div class="nav-section-label">Main</div>
+      <a href="{% url 'core:dashboard' %}" class="nav-link {% if request.resolver_match.url_name == 'dashboard' %}active{% endif %}">
+        <i class="bi bi-grid-1x2"></i> Dashboard
+      </a>
+      <a href="{% url 'analytics:index' %}" class="nav-link {% if 'analytics' in request.resolver_match.namespace %}active{% endif %}">
+        <i class="bi bi-bar-chart-line"></i> Analytics
+      </a>
+    </div>
+
+    <!-- Operations -->
+    <div class="nav-section">
+      <div class="nav-section-label">Operations</div>
+      <a href="{% url 'orders:index' %}" class="nav-link {% if 'orders' in request.resolver_match.namespace %}active{% endif %}">
+        <i class="bi bi-receipt"></i> Orders
+      </a>
+      <a href="{% url 'catalog:index' %}" class="nav-link {% if 'catalog' in request.resolver_match.namespace %}active{% endif %}">
+        <i class="bi bi-journal-text"></i> Menu
+      </a>
+      <a href="{% url 'inventory:index' %}" class="nav-link {% if 'inventory' in request.resolver_match.namespace %}active{% endif %}">
+        <i class="bi bi-box-seam"></i> Inventory
+      </a>
+      <a href="{% url 'customers:index' %}" class="nav-link {% if 'customers' in request.resolver_match.namespace %}active{% endif %}">
+        <i class="bi bi-people"></i> Customers
+      </a>
+    </div>
+
+    <!-- Team & Supply -->
+    <div class="nav-section">
+      <div class="nav-section-label">Team & Supply</div>
+      <a href="{% url 'staff:index' %}" class="nav-link {% if 'staff' in request.resolver_match.namespace %}active{% endif %}">
+        <i class="bi bi-person-badge"></i> Staff
+      </a>
+      <a href="{% url 'suppliers:index' %}" class="nav-link {% if 'suppliers' in request.resolver_match.namespace %}active{% endif %}">
+        <i class="bi bi-truck"></i> Suppliers
+      </a>
+    </div>
+
+    <!-- AI & Insights -->
+    <div class="nav-section">
+      <div class="nav-section-label">AI & Insights</div>
+      <a href="{% url 'ml_engine:index' %}" class="nav-link {% if 'ml_engine' in request.resolver_match.namespace %}active{% endif %}">
+        <i class="bi bi-cpu"></i> AI Engine
+      </a>
+      <a href="{% url 'assistant:index' %}" class="nav-link {% if 'assistant' in request.resolver_match.namespace %}active{% endif %}">
+        <i class="bi bi-chat-dots"></i> AI Assistant
+      </a>
+      <a href="{% url 'reports:index' %}" class="nav-link {% if 'reports' in request.resolver_match.namespace %}active{% endif %}">
+        <i class="bi bi-file-earmark-bar-graph"></i> Reports
+      </a>
+    </div>
+
+    <!-- Settings -->
+    <div class="nav-section">
+      <div class="nav-section-label">Settings</div>
+      <a href="{% url 'onboarding:upload_center' %}" class="nav-link {% if 'onboarding' in request.resolver_match.namespace %}active{% endif %}">
+        <i class="bi bi-cloud-upload"></i> Data Upload
+      </a>
+      <a href="{% url 'notifications:index' %}" class="nav-link {% if 'notifications' in request.resolver_match.namespace %}active{% endif %}">
+        <i class="bi bi-bell"></i> Notifications
+      </a>
+    </div>
+
+  </nav>
+
+  <!-- Bottom: user info -->
+  <div class="sidebar-bottom">
+    <div class="flex items-center gap-3">
+      <div style="width:32px;height:32px;border-radius:50%;background:var(--color-primary-light);display:flex;align-items:center;justify-content:center;color:var(--color-primary);font-weight:600;font-size:13px;flex-shrink:0;">
+        {{ user.first_name|first|upper }}{{ user.last_name|first|upper }}
+      </div>
+      <div style="flex:1;min-width:0;">
+        <div style="font-size:var(--text-sm);font-weight:var(--fw-medium);color:var(--color-ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">
+          {{ user.get_full_name|default:user.email }}
+        </div>
+        {% if active_membership %}
+        <div style="font-size:var(--text-xs);color:var(--color-muted);">{{ active_membership.get_role_display }}</div>
+        {% endif %}
+      </div>
+      <a href="{% url 'accounts:logout' %}" class="btn btn-ghost btn-sm" title="Logout" style="padding:6px;">
+        <i class="bi bi-box-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</aside>

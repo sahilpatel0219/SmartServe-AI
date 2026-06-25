@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Notifications — SmartServe AI{% endblock %}
+{% block page_title %}Notifications{% endblock %}
+{% block content %}
+{% include "partials/messages.html" %}
+{% if has_data == False %}
+<div class="empty-state" style="padding-top:var(--space-8);">
+  <div class="empty-state-icon"><i class="bi bi-bell" style="font-size:1.5rem;"></i></div>
+  <h2 class="empty-state-title">Notifications</h2>
+  <p class="empty-state-desc">Smart alerts for low stock, expiry warnings, and demand forecasts.</p>
+  <a href="{% url 'onboarding:upload_center' %}" class="btn btn-primary"><i class="bi bi-cloud-upload me-2"></i>Upload Data</a>
+</div>
+{% else %}
+<p class="text-muted">No records yet. Use the buttons above to add data.</p>
+{% endif %}
+{% endblock %}

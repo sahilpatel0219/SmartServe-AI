@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Server Error — SmartServe AI{% endblock %}
+{% block content %}
+<div class="empty-state" style="padding-top:var(--space-16);">
+  <div class="empty-state-icon"><i class="bi bi-exclamation-triangle" style="font-size:1.5rem;color:var(--color-danger);"></i></div>
+  <h1 class="empty-state-title">Something went wrong</h1>
+  <p class="empty-state-desc">An unexpected error occurred. Please try again or contact support.</p>
+  <a href="{% url 'core:dashboard' %}" class="btn btn-primary">Back to Dashboard</a>
+</div>
+{% endblock %}
+{% block full_page %}{% endblock %}
