@@ -1,0 +1,43 @@
+﻿{% extends "base.html" %}
+{% block title %}Customer — {{ customer.name }}{% endblock %}
+{% block page_title %}{{ customer.name }}{% endblock %}
+{% block content %}
+<div style="max-width:640px;">
+<div class="card mb-4">
+  <div class="card-header">
+    <span class="card-title">Customer Profile</span>
+    <span class="badge {% if customer.segment == 'VIP' %}badge-success{% elif customer.segment == 'Regular' %}badge-info{% else %}badge-neutral{% endif %}">{{ customer.segment }}</span>
+  </div>
+  <div class="card-body">
+    <table class="data-table">
+      <tr><td class="text-muted">Phone</td><td>{{ customer.phone|default:"—" }}</td></tr>
+      <tr><td class="text-muted">Email</td><td>{{ customer.email|default:"—" }}</td></tr>
+      <tr><td class="text-muted">Visit Count</td><td class="tabular-nums">{{ customer.visit_count|default:0 }}</td></tr>
+      <tr><td class="text-muted">Total Spend</td><td class="tabular-nums">Rs. {{ customer.total_spend|default:0|floatformat:0 }}</td></tr>
+      <tr><td class="text-muted">Notes</td><td>{{ customer.notes|default:"—" }}</td></tr>
+      <tr><td class="text-muted">Member Since</td><td>{{ customer.created_at|date:"d M Y" }}</td></tr>
+    </table>
+  </div>
+</div>
+{% if orders %}
+<div class="card">
+  <div class="card-header"><span class="card-title">Recent Orders</span></div>
+  <div class="card-body" style="padding:0;">
+    <table class="data-table">
+      <thead><tr><th>Date</th><th>Items</th><th>Total</th><th>Status</th></tr></thead>
+      <tbody>
+        {% for o in orders %}
+        <tr>
+          <td class="text-sm">{{ o.created_at|date:"d M Y" }}</td>
+          <td>{{ o.items|length }}</td>
+          <td class="tabular-nums">Rs. {{ o.total_amount|floatformat:0 }}</td>
+          <td><span class="badge badge-neutral">{{ o.status }}</span></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endif %}
+</div>
+{% endblock %}

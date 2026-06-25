@@ -1,16 +1,63 @@
-{% extends "base.html" %}
-{% block title %}New Order — SmartServe AI{% endblock %}
+﻿{% extends "base.html" %}
+{% block title %}New Order{% endblock %}
 {% block page_title %}New Order{% endblock %}
 {% block content %}
 {% include "partials/messages.html" %}
-{% if has_data == False %}
-<div class="empty-state" style="padding-top:var(--space-8);">
-  <div class="empty-state-icon"><i class="bi bi-receipt" style="font-size:1.5rem;"></i></div>
-  <h2 class="empty-state-title">New Order</h2>
-  <p class="empty-state-desc">Create a new order from the counter, phone, or QR scan.</p>
-  <a href="{% url 'onboarding:upload_center' %}" class="btn btn-primary"><i class="bi bi-cloud-upload me-2"></i>Upload Data</a>
+<div style="max-width:720px;">
+<div class="card">
+  <div class="card-header"><span class="card-title">Create Order</span></div>
+  <div class="card-body">
+    <form method="post">
+      {% csrf_token %}
+      <div class="grid grid-2 gap-4 mb-4">
+        <div class="form-group">
+          <label class="form-label">Order Type</label>
+          <select name="order_type" class="form-control">
+            {% for val, label in order_types %}<option value="{{ val }}">{{ label }}</option>{% endfor %}
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Table No. <span class="text-subtle">(optional)</span></label>
+          <input type="text" name="table_no" class="form-control" placeholder="e.g. T1, T2">
+        </div>
+        <div class="form-group" style="grid-column:1/-1;">
+          <label class="form-label">Customer Name <span class="text-subtle">(optional)</span></label>
+          <input type="text" name="customer_name" class="form-control" placeholder="Walk-in">
+        </div>
+      </div>
+      <hr class="divider">
+      <h3 style="font-size:var(--text-sm);font-weight:var(--fw-semi);margin-bottom:var(--space-4);">Select Items</h3>
+      {% if menu_items %}
+      <div class="grid grid-2 gap-3" style="margin-bottom:var(--space-4);">
+        {% for item in menu_items %}
+        <div class="card" style="padding:var(--space-3);box-shadow:none;">
+          <div class="flex justify-between items-center gap-3">
+            <div style="flex:1;min-width:0;">
+              <div style="font-weight:var(--fw-medium);font-size:var(--text-sm);">{{ item.name }}</div>
+              <div class="text-muted text-xs">{{ item.category }} &middot; Rs. {{ item.price|floatformat:0 }}</div>
+            </div>
+            <input type="hidden" name="item_id" value="{{ item._id }}">
+            <input type="number" name="item_qty" class="form-control" style="width:70px;padding:6px 8px;font-size:var(--text-sm);" value="0" min="0">
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      {% else %}
+      <div class="alert alert-warning mb-4">
+        <i class="bi bi-exclamation-triangle"></i>
+        <span>No available menu items. <a href="{% url 'catalog:create_item' %}">Add items</a> first.</span>
+      </div>
+      {% endif %}
+      <div class="form-group">
+        <label class="form-label">Notes</label>
+        <textarea name="notes" class="form-control" rows="2" placeholder="Any special instructions..."></textarea>
+      </div>
+      <div class="flex gap-3 mt-4">
+        <button type="submit" class="btn btn-primary btn-lg">Place Order</button>
+        <a href="{% url 'orders:index' %}" class="btn btn-outline btn-lg">Cancel</a>
+      </div>
+    </form>
+  </div>
 </div>
-{% else %}
-<p class="text-muted">No records yet. Use the buttons above to add data.</p>
-{% endif %}
+</div>
 {% endblock %}

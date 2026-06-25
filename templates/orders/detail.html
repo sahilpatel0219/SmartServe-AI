@@ -1,0 +1,57 @@
+﻿{% extends "base.html" %}
+{% block title %}Order Detail{% endblock %}
+{% block page_title %}Order #{{ order._id|stringformat:"s"|slice:"-6:" }}{% endblock %}
+{% block content %}
+{% include "partials/messages.html" %}
+<div style="max-width:640px;">
+<div class="card mb-4">
+  <div class="card-header">
+    <span class="card-title">Order Details</span>
+    <span class="badge badge-{% if order.status == 'delivered' %}success{% elif order.status == 'cancelled' %}danger{% elif order.status == 'ready' %}info{% else %}warning{% endif %}">{{ order.status }}</span>
+  </div>
+  <div class="card-body">
+    <table class="data-table">
+      <tr><td class="text-muted">Type</td><td style="text-transform:capitalize;">{{ order.order_type }}</td></tr>
+      <tr><td class="text-muted">Customer</td><td>{{ order.customer_name|default:"Walk-in" }}</td></tr>
+      <tr><td class="text-muted">Table</td><td>{{ order.table_no|default:"—" }}</td></tr>
+      <tr><td class="text-muted">Placed At</td><td>{{ order.created_at|date:"d M Y, H:i" }}</td></tr>
+      <tr><td class="text-muted">Notes</td><td>{{ order.notes|default:"—" }}</td></tr>
+    </table>
+  </div>
+</div>
+<div class="card mb-4">
+  <div class="card-header"><span class="card-title">Items</span></div>
+  <div class="card-body" style="padding:0;">
+    <table class="data-table">
+      <thead><tr><th>Item</th><th>Qty</th><th>Price</th><th>Subtotal</th></tr></thead>
+      <tbody>
+        {% for line in order.items %}
+        <tr>
+          <td>{{ line.name }}</td>
+          <td class="tabular-nums">{{ line.quantity }}</td>
+          <td class="tabular-nums">Rs. {{ line.price|floatformat:0 }}</td>
+          <td class="tabular-nums font-medium">Rs. {{ line.subtotal|floatformat:0 }}</td>
+        </tr>
+        {% endfor %}
+        <tr style="background:var(--color-canvas);">
+          <td colspan="3" style="text-align:right;font-weight:600;">Total</td>
+          <td class="tabular-nums font-bold" style="color:var(--color-primary);">Rs. {{ order.total_amount|floatformat:0 }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="card">
+  <div class="card-body">
+    <form method="post" action="{% url 'orders:update_status' order._id|stringformat:'s' %}" class="flex gap-3 items-center">
+      {% csrf_token %}
+      <select name="status" class="form-control" style="max-width:200px;">
+        {% for s in statuses %}<option value="{{ s }}" {% if order.status == s %}selected{% endif %}>{{ s }}</option>{% endfor %}
+      </select>
+      <button type="submit" class="btn btn-primary">Update Status</button>
+      <a href="{% url 'orders:index' %}" class="btn btn-outline">Back</a>
+    </form>
+  </div>
+</div>
+</div>
+{% endblock %}

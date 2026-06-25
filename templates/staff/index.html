@@ -1,16 +1,41 @@
-{% extends "base.html" %}
-{% block title %}Staff — SmartServe AI{% endblock %}
+﻿{% extends "base.html" %}
+{% block title %}Staff — {{ business.name }}{% endblock %}
 {% block page_title %}Staff{% endblock %}
 {% block content %}
 {% include "partials/messages.html" %}
-{% if has_data == False %}
-<div class="empty-state" style="padding-top:var(--space-8);">
-  <div class="empty-state-icon"><i class="bi bi-person-badge" style="font-size:1.5rem;"></i></div>
-  <h2 class="empty-state-title">Staff</h2>
-  <p class="empty-state-desc">Manage employees, shifts, and attendance records.</p>
-  <a href="{% url 'onboarding:upload_center' %}" class="btn btn-primary"><i class="bi bi-cloud-upload me-2"></i>Upload Data</a>
+<div class="flex justify-between items-center mb-6">
+  <span class="text-muted text-sm">{{ employees|length }} team member{{ employees|length|pluralize }}</span>
+  <div class="flex gap-2">
+    <a href="{% url 'staff:attendance' %}" class="btn btn-outline btn-sm"><i class="bi bi-calendar-check me-1"></i>Mark Attendance</a>
+    <a href="{% url 'staff:add_employee' %}" class="btn btn-primary btn-sm"><i class="bi bi-person-plus me-1"></i>Add Employee</a>
+  </div>
+</div>
+{% if employees %}
+<div class="card">
+  <div class="card-body" style="padding:0;">
+    <table class="data-table">
+      <thead><tr><th>Name</th><th>Role</th><th>Phone</th><th>Salary (INR)</th><th>Join Date</th><th>Status</th></tr></thead>
+      <tbody>
+        {% for emp in employees %}
+        <tr>
+          <td style="font-weight:var(--fw-medium);">{{ emp.name }}</td>
+          <td>{{ emp.role|default:"—" }}</td>
+          <td>{{ emp.phone|default:"—" }}</td>
+          <td class="tabular-nums">{{ emp.salary|default:0|floatformat:0 }}</td>
+          <td>{{ emp.join_date|default:"—" }}</td>
+          <td><span class="badge {% if emp.status == 'active' %}badge-success{% else %}badge-neutral{% endif %}">{{ emp.status|default:"active" }}</span></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
 </div>
 {% else %}
-<p class="text-muted">No records yet. Use the buttons above to add data.</p>
+<div class="empty-state">
+  <div class="empty-state-icon"><i class="bi bi-person-badge" style="font-size:1.5rem;"></i></div>
+  <h2 class="empty-state-title">No staff members yet</h2>
+  <p class="empty-state-desc">Add your team members to manage shifts and attendance.</p>
+  <a href="{% url 'staff:add_employee' %}" class="btn btn-primary">Add Employee</a>
+</div>
 {% endif %}
 {% endblock %}

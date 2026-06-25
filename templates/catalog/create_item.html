@@ -1,16 +1,75 @@
-{% extends "base.html" %}
-{% block title %}Add Menu Item — SmartServe AI{% endblock %}
+﻿{% extends "base.html" %}
+{% block title %}Add Menu Item{% endblock %}
 {% block page_title %}Add Menu Item{% endblock %}
 {% block content %}
 {% include "partials/messages.html" %}
-{% if has_data == False %}
-<div class="empty-state" style="padding-top:var(--space-8);">
-  <div class="empty-state-icon"><i class="bi bi-journal-plus" style="font-size:1.5rem;"></i></div>
-  <h2 class="empty-state-title">Add Menu Item</h2>
-  <p class="empty-state-desc">Define a new menu item with price, cost, and recipe ingredients.</p>
-  <a href="{% url 'onboarding:upload_center' %}" class="btn btn-primary"><i class="bi bi-cloud-upload me-2"></i>Upload Data</a>
+<div style="max-width:640px;">
+<div class="card">
+  <div class="card-header"><span class="card-title">New Menu Item</span></div>
+  <div class="card-body">
+    <form method="post">
+      {% csrf_token %}
+      <div class="grid grid-2 gap-4">
+        <div class="form-group" style="grid-column:1/-1;">
+          <label class="form-label">Item Name *</label>
+          <input type="text" name="name" class="form-control" required placeholder="e.g. Masala Dosa">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Category</label>
+          <input type="text" name="category" class="form-control" list="cat_list" placeholder="e.g. Breakfast">
+          <datalist id="cat_list">{% for c in categories %}<option value="{{ c }}">{% endfor %}</datalist>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Or New Category</label>
+          <input type="text" name="new_category" class="form-control" placeholder="Type a new category">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Selling Price (INR) *</label>
+          <input type="number" name="price" class="form-control" step="0.01" min="0" placeholder="120">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Cost Price (INR)</label>
+          <input type="number" name="cost" class="form-control" step="0.01" min="0" placeholder="40">
+        </div>
+        <div class="form-group" style="grid-column:1/-1;">
+          <label class="form-label">Description</label>
+          <textarea name="description" class="form-control" rows="2" placeholder="Optional description"></textarea>
+        </div>
+        <div class="form-group" style="grid-column:1/-1;">
+          <label style="display:flex;align-items:center;gap:8px;cursor:pointer;">
+            <input type="checkbox" name="is_available" checked style="width:16px;height:16px;"> Available on menu
+          </label>
+        </div>
+      </div>
+      <hr class="divider">
+      <div style="margin-bottom:var(--space-4);">
+        <div class="flex justify-between items-center mb-3">
+          <span style="font-weight:var(--fw-semi);font-size:var(--text-sm);">Recipe / Ingredients</span>
+          <button type="button" class="btn btn-outline btn-sm" onclick="addIngredient()"><i class="bi bi-plus-lg me-1"></i>Add Ingredient</button>
+        </div>
+        <div id="recipe_rows"></div>
+      </div>
+      <div class="flex gap-3">
+        <button type="submit" class="btn btn-primary">Save Item</button>
+        <a href="{% url 'catalog:index' %}" class="btn btn-outline">Cancel</a>
+      </div>
+    </form>
+  </div>
 </div>
-{% else %}
-<p class="text-muted">No records yet. Use the buttons above to add data.</p>
-{% endif %}
+</div>
+<datalist id="ing_list">{% for i in inv_items %}<option value="{{ i.item_name }}">{% endfor %}</datalist>
+<script>
+let recipeCount = 0;
+function addIngredient() {
+  recipeCount++;
+  const div = document.createElement('div');
+  div.className = 'grid gap-3 mb-3';
+  div.style.gridTemplateColumns = '1fr 100px 100px 40px';
+  div.innerHTML = '<input type="text" name="ingredient_name" class="form-control" placeholder="Ingredient" list="ing_list">' +
+    '<input type="number" name="ingredient_qty" class="form-control" placeholder="Qty" step="0.1" min="0">' +
+    '<input type="text" name="ingredient_unit" class="form-control" placeholder="Unit">' +
+    '<button type="button" class="btn btn-ghost btn-sm text-danger" onclick="this.parentElement.remove()"><i class="bi bi-x-lg"></i></button>';
+  document.getElementById('recipe_rows').appendChild(div);
+}
+</script>
 {% endblock %}

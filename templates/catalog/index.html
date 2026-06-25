@@ -1,16 +1,52 @@
 {% extends "base.html" %}
-{% block title %}Menu — SmartServe AI{% endblock %}
+{% block title %}Menu — {{ business.name }}{% endblock %}
 {% block page_title %}Menu{% endblock %}
 {% block content %}
 {% include "partials/messages.html" %}
-{% if has_data == False %}
-<div class="empty-state" style="padding-top:var(--space-8);">
-  <div class="empty-state-icon"><i class="bi bi-journal-text" style="font-size:1.5rem;"></i></div>
-  <h2 class="empty-state-title">Menu</h2>
-  <p class="empty-state-desc">Add menu items, categories, and recipe mappings to enable inventory auto-deduction.</p>
-  <a href="{% url 'onboarding:upload_center' %}" class="btn btn-primary"><i class="bi bi-cloud-upload me-2"></i>Upload Data</a>
+<div class="flex justify-between items-center mb-6">
+  <div class="flex gap-2 flex-wrap">
+    <a href="{% url 'catalog:index' %}" class="btn {% if not category_filter %}btn-primary{% else %}btn-outline{% endif %} btn-sm">All</a>
+    {% for cat in categories %}<a href="?category={{ cat }}" class="btn {% if category_filter == cat %}btn-primary{% else %}btn-outline{% endif %} btn-sm">{{ cat }}</a>{% endfor %}
+  </div>
+  <a href="{% url 'catalog:create_item' %}" class="btn btn-primary btn-sm"><i class="bi bi-plus-lg me-1"></i>Add Item</a>
+</div>
+{% if items %}
+<div class="card">
+  <div class="card-body" style="padding:0;">
+    <table class="data-table">
+      <thead><tr><th>Item</th><th>Category</th><th>Price</th><th>Cost</th><th>Status</th><th>Recipe</th><th></th></tr></thead>
+      <tbody>
+        {% for item in items %}
+        <tr>
+          <td><div style="font-weight:var(--fw-medium);">{{ item.name }}</div>{% if item.description %}<div class="text-muted text-xs">{{ item.description|truncatechars:50 }}</div>{% endif %}</td>
+          <td><span class="badge badge-neutral">{{ item.category|default:"—" }}</span></td>
+          <td class="tabular-nums">₹{{ item.price|default:0|floatformat:0 }}</td>
+          <td class="tabular-nums text-muted">₹{{ item.cost|default:0|floatformat:0 }}</td>
+          <td>{% if item.is_available %}<span class="badge badge-success">Available</span>{% else %}<span class="badge badge-neutral">Hidden</span>{% endif %}</td>
+          <td>{% if item.recipe %}<span class="badge badge-info">{{ item.recipe|length }} ing.</span>{% else %}<span class="text-subtle text-xs">—</span>{% endif %}</td>
+          <td>
+            <div class="flex gap-2">
+              <a href="{% url 'catalog:edit_item' item._id|stringformat:'s' %}" class="btn btn-ghost btn-sm"><i class="bi bi-pencil"></i></a>
+              <form method="post" action="{% url 'catalog:delete_item' item._id|stringformat:'s' %}" onsubmit="return confirm('Delete this item?')">
+                {% csrf_token %}<button type="submit" class="btn btn-ghost btn-sm text-danger"><i class="bi bi-trash3"></i></button>
+              </form>
+            </div>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
 </div>
 {% else %}
-<p class="text-muted">No records yet. Use the buttons above to add data.</p>
+<div class="empty-state">
+  <div class="empty-state-icon"><i class="bi bi-journal-text" style="font-size:1.5rem;"></i></div>
+  <h2 class="empty-state-title">No menu items yet</h2>
+  <p class="empty-state-desc">Add items manually or upload a menu CSV to get started.</p>
+  <div class="flex gap-3" style="justify-content:center;">
+    <a href="{% url 'catalog:create_item' %}" class="btn btn-primary">Add Item</a>
+    <a href="{% url 'onboarding:upload_center' %}" class="btn btn-outline">Upload Menu CSV</a>
+  </div>
+</div>
 {% endif %}
 {% endblock %}

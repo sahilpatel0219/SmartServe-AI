@@ -1,0 +1,22 @@
+﻿{% extends "base.html" %}
+{% block title %}Add Employee{% endblock %}
+{% block page_title %}Add Employee{% endblock %}
+{% block content %}
+{% include "partials/messages.html" %}
+<div style="max-width:480px;">
+<div class="card">
+  <div class="card-body">
+    <form method="post">
+      {% csrf_token %}
+      <div class="form-group"><label class="form-label">Full Name *</label><input type="text" name="name" class="form-control" required></div>
+      <div class="form-group"><label class="form-label">Role</label><input type="text" name="role" class="form-control" placeholder="e.g. Chef, Cashier, Server"></div>
+      <div class="form-group"><label class="form-label">Phone</label><input type="tel" name="phone" class="form-control"></div>
+      <div class="form-group"><label class="form-label">Email</label><input type="email" name="email" class="form-control"></div>
+      <div class="form-group"><label class="form-label">Monthly Salary (INR)</label><input type="number" name="salary" class="form-control" step="0.01" min="0"></div>
+      <div class="form-group"><label class="form-label">Join Date</label><input type="date" name="join_date" class="form-control"></div>
+      <div class="flex gap-3"><button type="submit" class="btn btn-primary">Add Employee</button><a href="{% url 'staff:index' %}" class="btn btn-outline">Cancel</a></div>
+    </form>
+  </div>
+</div>
+</div>
+{% endblock %}

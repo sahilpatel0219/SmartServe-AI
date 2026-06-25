@@ -1,0 +1,49 @@
+﻿{% extends "base.html" %}
+{% block title %}Purchase Orders{% endblock %}
+{% block page_title %}Purchase Orders{% endblock %}
+{% block content %}
+{% include "partials/messages.html" %}
+<div class="grid gap-6" style="grid-template-columns:1fr 1fr;">
+<div class="card">
+  <div class="card-header"><span class="card-title">New Purchase Order</span></div>
+  <div class="card-body">
+    <form method="post">
+      {% csrf_token %}
+      <div class="form-group">
+        <label class="form-label">Supplier</label>
+        <select name="supplier_id" class="form-control" onchange="this.form.supplier_name.value=this.options[this.selectedIndex].text">
+          <option value="">Select supplier</option>
+          {% for s in suppliers %}<option value="{{ s._id }}">{{ s.name }}</option>{% endfor %}
+        </select>
+        <input type="hidden" name="supplier_name">
+      </div>
+      <div class="form-group"><label class="form-label">Items / Description</label><textarea name="items" class="form-control" rows="3" placeholder="e.g. 50kg Rice, 20L Oil"></textarea></div>
+      <div class="form-group"><label class="form-label">Total Amount (INR)</label><input type="number" name="total" class="form-control" step="0.01" min="0"></div>
+      <button type="submit" class="btn btn-primary">Create PO</button>
+    </form>
+  </div>
+</div>
+<div class="card">
+  <div class="card-header"><span class="card-title">Recent Orders</span></div>
+  <div class="card-body" style="padding:0;">
+    {% if purchase_orders %}
+    <table class="data-table">
+      <thead><tr><th>Supplier</th><th>Total</th><th>Status</th><th>Date</th></tr></thead>
+      <tbody>
+        {% for po in purchase_orders %}
+        <tr>
+          <td>{{ po.supplier_name|default:"—" }}</td>
+          <td class="tabular-nums">Rs. {{ po.total_amount|floatformat:0 }}</td>
+          <td><span class="badge badge-neutral">{{ po.status }}</span></td>
+          <td class="text-muted text-xs">{{ po.created_at|date:"d M Y" }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% else %}
+    <div class="p-6 text-muted text-sm text-center">No purchase orders yet.</div>
+    {% endif %}
+  </div>
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,39 @@
+﻿{% extends "base.html" %}
+{% block title %}Mark Attendance — {{ today }}{% endblock %}
+{% block page_title %}Mark Attendance — {{ today }}{% endblock %}
+{% block content %}
+{% include "partials/messages.html" %}
+<div style="max-width:560px;">
+<div class="card">
+  <div class="card-body">
+    <form method="post">
+      {% csrf_token %}
+      {% if employees %}
+      <table class="data-table" style="margin-bottom:var(--space-6);">
+        <thead><tr><th>Employee</th><th>Role</th><th>Today</th></tr></thead>
+        <tbody>
+          {% for emp in employees %}
+          <tr>
+            <td>{{ emp.name }}</td>
+            <td class="text-muted">{{ emp.role|default:"—" }}</td>
+            <td>
+              <select name="att_{{ emp._id }}" class="form-control" style="width:auto;padding:4px 8px;font-size:13px;">
+                <option value="present" {% if today_attendance[emp._id|stringformat:"s"] == "present" %}selected{% endif %}>Present</option>
+                <option value="absent" {% if today_attendance[emp._id|stringformat:"s"] == "absent" %}selected{% endif %}>Absent</option>
+                <option value="half_day" {% if today_attendance[emp._id|stringformat:"s"] == "half_day" %}selected{% endif %}>Half Day</option>
+                <option value="leave" {% if today_attendance[emp._id|stringformat:"s"] == "leave" %}selected{% endif %}>Leave</option>
+              </select>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <button type="submit" class="btn btn-primary">Save Attendance</button>
+      {% else %}
+      <p class="text-muted">No active employees. <a href="{% url 'staff:add_employee' %}">Add employees</a> first.</p>
+      {% endif %}
+    </form>
+  </div>
+</div>
+</div>
+{% endblock %}

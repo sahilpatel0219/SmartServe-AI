@@ -1,16 +1,63 @@
-{% extends "base.html" %}
-{% block title %}Orders — SmartServe AI{% endblock %}
+﻿{% extends "base.html" %}
+{% block title %}Orders — {{ business.name }}{% endblock %}
 {% block page_title %}Orders{% endblock %}
 {% block content %}
 {% include "partials/messages.html" %}
-{% if has_data == False %}
-<div class="empty-state" style="padding-top:var(--space-8);">
-  <div class="empty-state-icon"><i class="bi bi-receipt" style="font-size:1.5rem;"></i></div>
-  <h2 class="empty-state-title">Orders</h2>
-  <p class="empty-state-desc">All live and recent orders will appear here.</p>
-  <a href="{% url 'onboarding:upload_center' %}" class="btn btn-primary"><i class="bi bi-cloud-upload me-2"></i>Upload Data</a>
+<div class="flex justify-between items-center mb-6">
+  <div class="flex gap-2 flex-wrap">
+    <a href="{% url 'orders:index' %}" class="btn {% if not status_filter %}btn-primary{% else %}btn-outline{% endif %} btn-sm">All</a>
+    {% for s in statuses %}<a href="?status={{ s }}" class="btn {% if status_filter == s %}btn-primary{% else %}btn-outline{% endif %} btn-sm" style="text-transform:capitalize;">{{ s }} {% if counts[s] %}<span class="badge badge-neutral ms-1" style="font-size:10px;">{{ counts[s] }}</span>{% endif %}</a>{% endfor %}
+  </div>
+  <a href="{% url 'orders:create' %}" class="btn btn-primary btn-sm"><i class="bi bi-plus-lg me-1"></i>New Order</a>
+</div>
+{% if orders %}
+<div class="card">
+  <div class="card-body" style="padding:0;">
+    <table class="data-table">
+      <thead><tr><th>Order ID</th><th>Type</th><th>Customer</th><th>Items</th><th>Total</th><th>Status</th><th>Time</th><th></th></tr></thead>
+      <tbody>
+        {% for order in orders %}
+        <tr>
+          <td class="tabular-nums text-sm text-muted">#{{ order._id|stringformat:"s"|slice:"-6:" }}</td>
+          <td><span class="badge badge-neutral" style="text-transform:capitalize;">{{ order.order_type|default:"—" }}</span></td>
+          <td>{{ order.customer_name|default:"Walk-in" }}</td>
+          <td class="tabular-nums">{{ order.items|length }}</td>
+          <td class="tabular-nums font-medium">Rs. {{ order.total_amount|floatformat:0 }}</td>
+          <td>
+            <select class="form-control" style="padding:4px 8px;font-size:12px;width:auto;" onchange="updateStatus('{{ order._id }}', this.value)">
+              {% for s in statuses %}<option value="{{ s }}" {% if order.status == s %}selected{% endif %} style="text-transform:capitalize;">{{ s }}</option>{% endfor %}
+            </select>
+          </td>
+          <td class="text-muted text-xs">{{ order.created_at|date:"d M, H:i" }}</td>
+          <td><a href="{% url 'orders:detail' order._id|stringformat:'s' %}" class="btn btn-ghost btn-sm"><i class="bi bi-eye"></i></a></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
 </div>
 {% else %}
-<p class="text-muted">No records yet. Use the buttons above to add data.</p>
+<div class="empty-state">
+  <div class="empty-state-icon"><i class="bi bi-receipt" style="font-size:1.5rem;"></i></div>
+  <h2 class="empty-state-title">No orders yet</h2>
+  <p class="empty-state-desc">Create your first order or upload historical order data.</p>
+  <a href="{% url 'orders:create' %}" class="btn btn-primary">New Order</a>
+</div>
 {% endif %}
+<script>
+function updateStatus(orderId, status) {
+  const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]') ? document.querySelector('[name=csrfmiddlewaretoken]').value : '';
+  fetch('/orders/' + orderId + '/status/', {
+    method: 'POST',
+    headers: {'X-CSRFToken': getCookie('csrftoken'), 'Content-Type': 'application/x-www-form-urlencoded'},
+    body: 'status=' + status
+  }).then(r => r.json()).then(d => { if(d.status) showToast('Status updated to ' + d.status, 'success'); });
+}
+function getCookie(name) {
+  let v = null;
+  document.cookie.split(';').forEach(c => { if(c.trim().startsWith(name+'=')) v = decodeURIComponent(c.trim().slice(name.length+1)); });
+  return v;
+}
+</script>
+{% csrf_token %}
 {% endblock %}

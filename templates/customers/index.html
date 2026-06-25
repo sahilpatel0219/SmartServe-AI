@@ -1,16 +1,41 @@
-{% extends "base.html" %}
-{% block title %}Customers — SmartServe AI{% endblock %}
+﻿{% extends "base.html" %}
+{% block title %}Customers — {{ business.name }}{% endblock %}
 {% block page_title %}Customers{% endblock %}
 {% block content %}
 {% include "partials/messages.html" %}
-{% if has_data == False %}
-<div class="empty-state" style="padding-top:var(--space-8);">
-  <div class="empty-state-icon"><i class="bi bi-people" style="font-size:1.5rem;"></i></div>
-  <h2 class="empty-state-title">Customers</h2>
-  <p class="empty-state-desc">Upload customer data or add customers manually to build your CRM.</p>
-  <a href="{% url 'onboarding:upload_center' %}" class="btn btn-primary"><i class="bi bi-cloud-upload me-2"></i>Upload Data</a>
+<div class="flex justify-between items-center mb-6">
+  <div class="flex gap-2">
+    <a href="{% url 'customers:index' %}" class="btn {% if not segment_filter %}btn-primary{% else %}btn-outline{% endif %} btn-sm">All</a>
+    {% for seg in segments %}<a href="?segment={{ seg }}" class="btn {% if segment_filter == seg %}btn-primary{% else %}btn-outline{% endif %} btn-sm">{{ seg }}</a>{% endfor %}
+  </div>
+  <a href="{% url 'customers:add' %}" class="btn btn-primary btn-sm"><i class="bi bi-person-plus me-1"></i>Add Customer</a>
+</div>
+{% if customers %}
+<div class="card">
+  <div class="card-body" style="padding:0;">
+    <table class="data-table">
+      <thead><tr><th>Name</th><th>Phone</th><th>Visits</th><th>Total Spend</th><th>Segment</th><th></th></tr></thead>
+      <tbody>
+        {% for c in customers %}
+        <tr>
+          <td style="font-weight:var(--fw-medium);">{{ c.name }}</td>
+          <td>{{ c.phone|default:"—" }}</td>
+          <td class="tabular-nums">{{ c.visit_count|default:0 }}</td>
+          <td class="tabular-nums">Rs. {{ c.total_spend|default:0|floatformat:0 }}</td>
+          <td><span class="badge {% if c.segment == 'VIP' %}badge-success{% elif c.segment == 'Regular' %}badge-info{% else %}badge-neutral{% endif %}">{{ c.segment }}</span></td>
+          <td><a href="{% url 'customers:detail' c._id|stringformat:'s' %}" class="btn btn-ghost btn-sm"><i class="bi bi-eye"></i></a></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
 </div>
 {% else %}
-<p class="text-muted">No records yet. Use the buttons above to add data.</p>
+<div class="empty-state">
+  <div class="empty-state-icon"><i class="bi bi-people" style="font-size:1.5rem;"></i></div>
+  <h2 class="empty-state-title">No customers yet</h2>
+  <p class="empty-state-desc">Add customers manually or they will appear automatically when orders are placed.</p>
+  <a href="{% url 'customers:add' %}" class="btn btn-primary">Add Customer</a>
+</div>
 {% endif %}
 {% endblock %}

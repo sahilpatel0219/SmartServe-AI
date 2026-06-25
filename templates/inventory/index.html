@@ -1,16 +1,64 @@
-{% extends "base.html" %}
-{% block title %}Inventory — SmartServe AI{% endblock %}
+﻿{% extends "base.html" %}
+{% block title %}Inventory — {{ business.name }}{% endblock %}
 {% block page_title %}Inventory{% endblock %}
 {% block content %}
 {% include "partials/messages.html" %}
-{% if has_data == False %}
-<div class="empty-state" style="padding-top:var(--space-8);">
-  <div class="empty-state-icon"><i class="bi bi-box-seam" style="font-size:1.5rem;"></i></div>
-  <h2 class="empty-state-title">Inventory</h2>
-  <p class="empty-state-desc">Upload your inventory data to track stock levels, reorder alerts, and expiry dates.</p>
-  <a href="{% url 'onboarding:upload_center' %}" class="btn btn-primary"><i class="bi bi-cloud-upload me-2"></i>Upload Data</a>
+<div class="flex justify-between items-center mb-6">
+  <div class="flex gap-3">
+    {% if low_stock_count > 0 %}<span class="badge badge-danger" style="font-size:13px;padding:6px 12px;"><i class="bi bi-exclamation-triangle me-1"></i>{{ low_stock_count }} low stock</span>{% endif %}
+    {% if expiring_count > 0 %}<span class="badge badge-warning" style="font-size:13px;padding:6px 12px;"><i class="bi bi-calendar-x me-1"></i>{{ expiring_count }} expiring soon</span>{% endif %}
+  </div>
+  <a href="{% url 'inventory:add_stock' %}" class="btn btn-primary btn-sm"><i class="bi bi-plus-lg me-1"></i>Add Stock</a>
+</div>
+{% if items %}
+<div class="card">
+  <div class="card-body" style="padding:0;">
+    <table class="data-table">
+      <thead><tr><th>Item</th><th>Quantity</th><th>Unit</th><th>Cost/Unit</th><th>Reorder Level</th><th>Expiry</th><th>Status</th><th></th></tr></thead>
+      <tbody>
+        {% for item in items %}
+        <tr {% if item.low_stock %}style="background:var(--color-danger-bg);"{% elif item.expiring_soon %}style="background:var(--color-warning-bg);"{% endif %}>
+          <td style="font-weight:var(--fw-medium);">{{ item.item_name }}</td>
+          <td class="tabular-nums">{{ item.quantity|floatformat:1 }}</td>
+          <td>{{ item.unit|default:"—" }}</td>
+          <td class="tabular-nums">₹{{ item.cost_per_unit|default:0|floatformat:2 }}</td>
+          <td class="tabular-nums text-muted">{{ item.reorder_level|default:"—" }}</td>
+          <td>
+            {% if item.expiry_date %}
+              {{ item.expiry_date }}
+              {% if item.days_to_expiry is not None %}
+                <span class="badge {% if item.days_to_expiry <= 3 %}badge-danger{% elif item.days_to_expiry <= 7 %}badge-warning{% else %}badge-neutral{% endif %} ms-1">{{ item.days_to_expiry }}d</span>
+              {% endif %}
+            {% else %}—{% endif %}
+          </td>
+          <td>
+            {% if item.low_stock %}<span class="badge badge-danger">Low Stock</span>
+            {% elif item.expiring_soon %}<span class="badge badge-warning">Expiring</span>
+            {% else %}<span class="badge badge-success">OK</span>{% endif %}
+          </td>
+          <td>
+            <div class="flex gap-1">
+              <a href="{% url 'inventory:edit_stock' item._id|stringformat:'s' %}" class="btn btn-ghost btn-sm"><i class="bi bi-pencil"></i></a>
+              <form method="post" action="{% url 'inventory:delete_stock' item._id|stringformat:'s' %}" onsubmit="return confirm('Remove this item?')">
+                {% csrf_token %}<button type="submit" class="btn btn-ghost btn-sm text-danger"><i class="bi bi-trash3"></i></button>
+              </form>
+            </div>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
 </div>
 {% else %}
-<p class="text-muted">No records yet. Use the buttons above to add data.</p>
+<div class="empty-state">
+  <div class="empty-state-icon"><i class="bi bi-box-seam" style="font-size:1.5rem;"></i></div>
+  <h2 class="empty-state-title">No inventory yet</h2>
+  <p class="empty-state-desc">Add stock items manually or upload an inventory CSV.</p>
+  <div class="flex gap-3" style="justify-content:center;">
+    <a href="{% url 'inventory:add_stock' %}" class="btn btn-primary">Add Stock</a>
+    <a href="{% url 'onboarding:upload_center' %}" class="btn btn-outline">Upload CSV</a>
+  </div>
+</div>
 {% endif %}
 {% endblock %}
