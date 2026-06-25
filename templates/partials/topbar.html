@@ -32,8 +32,11 @@
     {% endif %}
 
     <!-- Notifications -->
-    <a href="{% url 'notifications:index' %}" class="btn btn-ghost btn-sm" style="padding:8px;" title="Notifications">
+    <a href="{% url 'notifications:index' %}" class="btn btn-ghost btn-sm" style="padding:8px;position:relative;" title="Notifications">
       <i class="bi bi-bell" style="font-size:1rem;"></i>
+      {% if unread_notifications %}
+      <span style="position:absolute;top:4px;right:4px;width:8px;height:8px;border-radius:50%;background:#DC3545;display:block;border:2px solid var(--color-surface);"></span>
+      {% endif %}
     </a>
 
     <!-- Profile -->

@@ -1,16 +1,231 @@
-{% extends "base.html" %}
-{% block title %}Sales Analytics — SmartServe AI{% endblock %}
-{% block page_title %}Sales Analytics{% endblock %}
+﻿{% extends "base.html" %}
+{% block title %}Analytics — SmartServe AI{% endblock %}
+{% block page_title %}Analytics{% endblock %}
+
 {% block content %}
-{% include "partials/messages.html" %}
-{% if has_data == False %}
-<div class="empty-state" style="padding-top:var(--space-8);">
-  <div class="empty-state-icon"><i class="bi bi-bar-chart-line" style="font-size:1.5rem;"></i></div>
-  <h2 class="empty-state-title">Sales Analytics</h2>
-  <p class="empty-state-desc">Upload your sales history to see revenue trends, top-selling items, and busiest hours.</p>
-  <a href="{% url 'onboarding:upload_center' %}" class="btn btn-primary"><i class="bi bi-cloud-upload me-2"></i>Upload Data</a>
+{% if not has_data %}
+<!-- Empty state: no sales data uploaded yet -->
+<div class="empty-state" style="margin-top:var(--space-10);">
+  <div class="empty-icon"><i class="bi bi-bar-chart-line"></i></div>
+  <h3 class="empty-title">No Sales Data Yet</h3>
+  <p class="empty-desc">Upload your sales history to see revenue trends, top-performing items, and busiest hours.</p>
+  <a href="{% url 'onboarding:upload_file' 'sales' %}" class="btn btn-primary mt-2">
+    <i class="bi bi-upload"></i> Upload Sales Data
+  </a>
 </div>
 {% else %}
-<p class="text-muted">No records yet. Use the buttons above to add data.</p>
+
+<!-- Period selector -->
+<div class="flex items-center justify-between mb-6">
+  <h2 style="font-size:var(--text-lg);font-weight:var(--fw-semi);">Sales Analytics</h2>
+  <div class="btn-group" role="group">
+    {% for p,label in period_options %}
+    <a href="?period={{ p }}"
+       class="btn btn-sm {% if period == p %}btn-primary{% else %}btn-outline{% endif %}">
+      {{ label }}
+    </a>
+    {% endfor %}
+  </div>
+</div>
+
+<!-- KPI row -->
+<div class="stat-grid mb-6">
+  <div class="stat-card">
+    <div class="stat-icon" style="background:rgba(45,106,79,.12);color:var(--color-primary);">
+      <i class="bi bi-currency-rupee"></i>
+    </div>
+    <div>
+      <div class="stat-value">₹{{ kpis.total_revenue|floatformat:0 }}</div>
+      <div class="stat-label">Total Revenue</div>
+    </div>
+    {% if kpis.wow_change != 0 %}
+    <span class="badge {% if kpis.wow_change > 0 %}badge-success{% else %}badge-danger{% endif %} ms-auto">
+      {% if kpis.wow_change > 0 %}↑{% else %}↓{% endif %} {{ kpis.wow_change|floatformat:1 }}%
+    </span>
+    {% endif %}
+  </div>
+  <div class="stat-card">
+    <div class="stat-icon" style="background:rgba(232,163,61,.12);color:var(--color-secondary);">
+      <i class="bi bi-graph-up-arrow"></i>
+    </div>
+    <div>
+      <div class="stat-value">₹{{ kpis.total_profit|floatformat:0 }}</div>
+      <div class="stat-label">Gross Profit</div>
+    </div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-icon" style="background:rgba(45,106,79,.08);color:var(--color-primary);">
+      <i class="bi bi-receipt"></i>
+    </div>
+    <div>
+      <div class="stat-value">{{ kpis.total_orders }}</div>
+      <div class="stat-label">Total Transactions</div>
+    </div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-icon" style="background:rgba(22,24,29,.07);color:var(--color-ink);">
+      <i class="bi bi-basket"></i>
+    </div>
+    <div>
+      <div class="stat-value">₹{{ kpis.avg_order_value|floatformat:0 }}</div>
+      <div class="stat-label">Avg. Order Value</div>
+    </div>
+  </div>
+</div>
+
+<!-- Revenue & Profit trend chart -->
+<div class="grid" style="grid-template-columns:2fr 1fr;gap:var(--space-4);margin-bottom:var(--space-4);">
+  <div class="card">
+    <div class="card-header">
+      <span class="card-title">Revenue &amp; Profit Trend</span>
+    </div>
+    <div class="card-body">
+      <canvas id="revTrendChart" height="120"></canvas>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="card-title">Busiest Days</span>
+    </div>
+    <div class="card-body">
+      <canvas id="dowChart" height="120"></canvas>
+    </div>
+  </div>
+</div>
+
+<!-- Top Items chart -->
+{% if chart_data.top_items_labels %}
+<div class="card mb-4">
+  <div class="card-header">
+    <span class="card-title">Top Items by Revenue</span>
+  </div>
+  <div class="card-body">
+    <canvas id="topItemsChart" height="80"></canvas>
+  </div>
+</div>
+{% endif %}
+
+<!-- Export row -->
+<div class="flex gap-3 mt-2">
+  <a href="{% url 'reports:export' 'sales' 'excel' %}?period={{ period }}"
+     class="btn btn-outline btn-sm">
+    <i class="bi bi-file-earmark-excel"></i> Export Excel
+  </a>
+  <a href="{% url 'reports:export' 'sales' 'pdf' %}?period={{ period }}"
+     class="btn btn-outline btn-sm">
+    <i class="bi bi-file-earmark-pdf"></i> Export PDF
+  </a>
+</div>
+
+<script>
+(function () {
+  const labels   = {{ chart_data.daily_labels|safe }};
+  const revenue  = {{ chart_data.daily_revenue|safe }};
+  const profit   = {{ chart_data.daily_profit|safe }};
+  const dowLbls  = {{ chart_data.dow_labels|safe }};
+  const dowData  = {{ chart_data.dow_data|safe }};
+  const tiLbls   = {{ chart_data.top_items_labels|safe }};
+  const tiRev    = {{ chart_data.top_items_revenue|safe }};
+
+  const gridColor = 'rgba(22,24,29,.06)';
+  const fontColor = '#16181D';
+
+  Chart.defaults.font.family = "'Inter','Segoe UI',sans-serif";
+  Chart.defaults.color = fontColor;
+
+  // Revenue & Profit trend (line)
+  new Chart(document.getElementById('revTrendChart'), {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [
+        {
+          label: 'Revenue',
+          data: revenue,
+          borderColor: '#2D6A4F',
+          backgroundColor: 'rgba(45,106,79,.08)',
+          fill: true,
+          tension: .35,
+          pointRadius: labels.length > 30 ? 0 : 3,
+        },
+        {
+          label: 'Profit',
+          data: profit,
+          borderColor: '#E8A33D',
+          backgroundColor: 'rgba(232,163,61,.08)',
+          fill: true,
+          tension: .35,
+          pointRadius: labels.length > 30 ? 0 : 3,
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      plugins: { legend: { position: 'top' } },
+      scales: {
+        x: { grid: { color: gridColor }, ticks: { maxTicksLimit: 10 } },
+        y: {
+          grid: { color: gridColor },
+          ticks: { callback: v => '₹' + v.toLocaleString('en-IN') },
+        },
+      },
+    },
+  });
+
+  // Day-of-week bar
+  new Chart(document.getElementById('dowChart'), {
+    type: 'bar',
+    data: {
+      labels: dowLbls.map(d => d.slice(0,3)),
+      datasets: [{
+        label: 'Revenue',
+        data: dowData,
+        backgroundColor: 'rgba(45,106,79,.75)',
+        borderRadius: 6,
+      }],
+    },
+    options: {
+      responsive: true,
+      plugins: { legend: { display: false } },
+      scales: {
+        x: { grid: { display: false } },
+        y: {
+          grid: { color: gridColor },
+          ticks: { callback: v => '₹' + v.toLocaleString('en-IN') },
+        },
+      },
+    },
+  });
+
+  // Top items horizontal bar
+  if (document.getElementById('topItemsChart')) {
+    new Chart(document.getElementById('topItemsChart'), {
+      type: 'bar',
+      data: {
+        labels: tiLbls,
+        datasets: [{
+          label: 'Revenue',
+          data: tiRev,
+          backgroundColor: 'rgba(45,106,79,.75)',
+          borderRadius: 6,
+        }],
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        plugins: { legend: { display: false } },
+        scales: {
+          x: {
+            grid: { color: gridColor },
+            ticks: { callback: v => '₹' + v.toLocaleString('en-IN') },
+          },
+          y: { grid: { display: false } },
+        },
+      },
+    });
+  }
+})();
+</script>
 {% endif %}
 {% endblock %}

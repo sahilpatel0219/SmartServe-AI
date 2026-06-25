@@ -1,0 +1,176 @@
+﻿{% extends "base.html" %}
+{% block title %}AI Results — SmartServe AI{% endblock %}
+{% block page_title %}AI Analysis Results{% endblock %}
+
+{% block content %}
+
+<div class="flex items-center justify-between mb-6">
+  <div>
+    <h2 style="font-size:var(--text-lg);font-weight:var(--fw-semi);">Full Business Report</h2>
+    <p class="text-muted text-sm">Generated from your uploaded data &mdash; {{ latest.created_at }}</p>
+  </div>
+  <a href="{% url 'ml_engine:analyze' %}" class="btn btn-outline btn-sm">
+    <i class="bi bi-arrow-clockwise"></i> Re-run
+  </a>
+</div>
+
+<!-- Health Score card -->
+<div class="card mb-4">
+  <div class="card-header">
+    <span class="card-title"><i class="bi bi-heart-pulse me-2" style="color:var(--color-primary);"></i>Business Health Score</span>
+    <span class="badge {% if health.total_score >= 70 %}badge-success{% elif health.total_score >= 40 %}badge-warning{% else %}badge-danger{% endif %}" style="font-size:.95rem;">
+      {{ health.total_score|floatformat:1 }} / 100
+    </span>
+  </div>
+  <div class="card-body">
+    {% for comp, score in health.components.items %}
+    <div class="mb-3">
+      <div class="flex justify-between text-sm mb-1">
+        <span>{{ comp|title|cut:"_" }}</span>
+        <span class="fw-medium">{{ score|floatformat:1 }} / 20</span>
+      </div>
+      <div style="height:8px;background:var(--color-canvas);border-radius:99px;overflow:hidden;">
+        <div style="height:100%;width:{{ score|floatformat:0 }}%;background:var(--color-primary);border-radius:99px;transition:width .4s;"></div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<!-- Forecast chart -->
+{% if forecast_dates %}
+<div class="card mb-4">
+  <div class="card-header">
+    <span class="card-title"><i class="bi bi-graph-up me-2" style="color:var(--color-secondary);"></i>7-Day Revenue Forecast</span>
+  </div>
+  <div class="card-body">
+    <canvas id="forecastChart" height="90"></canvas>
+  </div>
+</div>
+{% endif %}
+
+<!-- Menu Engineering matrix -->
+<div class="card mb-4">
+  <div class="card-header">
+    <span class="card-title"><i class="bi bi-grid-3x3-gap me-2"></i>Menu Engineering</span>
+  </div>
+  <div class="card-body">
+    <div class="grid" style="grid-template-columns:1fr 1fr;gap:var(--space-3);">
+
+      <div style="border:1px solid var(--color-border);border-radius:var(--radius-md);padding:var(--space-3);background:rgba(45,106,79,.04);">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="badge badge-success">★ Stars</span>
+          <span class="text-sm text-muted">High popularity · High margin</span>
+        </div>
+        {% for item in stars %}<div class="text-sm">{{ item.item }}</div>{% empty %}<div class="text-muted text-sm">—</div>{% endfor %}
+      </div>
+
+      <div style="border:1px solid var(--color-border);border-radius:var(--radius-md);padding:var(--space-3);background:rgba(232,163,61,.04);">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="badge badge-warning">⚑ Plowhorses</span>
+          <span class="text-sm text-muted">High popularity · Low margin</span>
+        </div>
+        {% for item in plowhorses %}<div class="text-sm">{{ item.item }}</div>{% empty %}<div class="text-muted text-sm">—</div>{% endfor %}
+      </div>
+
+      <div style="border:1px solid var(--color-border);border-radius:var(--radius-md);padding:var(--space-3);background:rgba(13,110,253,.04);">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="badge badge-info">? Puzzles</span>
+          <span class="text-sm text-muted">Low popularity · High margin</span>
+        </div>
+        {% for item in puzzles %}<div class="text-sm">{{ item.item }}</div>{% empty %}<div class="text-muted text-sm">—</div>{% endfor %}
+      </div>
+
+      <div style="border:1px solid var(--color-border);border-radius:var(--radius-md);padding:var(--space-3);background:rgba(220,53,69,.04);">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="badge badge-danger">✗ Dogs</span>
+          <span class="text-sm text-muted">Low popularity · Low margin</span>
+        </div>
+        {% for item in dogs %}<div class="text-sm">{{ item.item }}</div>{% empty %}<div class="text-muted text-sm">—</div>{% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Waste alerts -->
+{% if waste_items %}
+<div class="card mb-4">
+  <div class="card-header">
+    <span class="card-title"><i class="bi bi-exclamation-triangle me-2" style="color:#DC3545;"></i>Waste Risk Items</span>
+    <span class="badge badge-danger">₹{{ latest.waste.estimated_loss_inr|floatformat:0 }} estimated loss</span>
+  </div>
+  <div class="card-body" style="padding:0;">
+    <table class="data-table">
+      <thead><tr><th>Item</th><th>Stock</th><th>Daily Use</th><th>Days Until Expiry</th><th>Estimated Loss (₹)</th></tr></thead>
+      <tbody>
+        {% for w in waste_items %}
+        <tr>
+          <td>{{ w.item }}</td>
+          <td>{{ w.current_stock }}</td>
+          <td>{{ w.daily_use|floatformat:1 }}</td>
+          <td>{{ w.days_to_expiry|default:"—" }}</td>
+          <td class="text-danger">₹{{ w.estimated_loss|floatformat:0 }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endif %}
+
+<!-- Insights list -->
+{% if insights %}
+<div class="card mb-4">
+  <div class="card-header">
+    <span class="card-title"><i class="bi bi-lightbulb me-2" style="color:var(--color-secondary);"></i>AI Insights</span>
+    <span class="badge badge-neutral">{{ insights|length }}</span>
+  </div>
+  <div class="card-body" style="padding:0;">
+    {% for ins in insights %}
+    <div style="padding:var(--space-3) var(--space-4);border-bottom:1px solid var(--color-border);">
+      <div class="flex gap-2">
+        <span class="badge badge-neutral text-xs" style="flex-shrink:0;">{{ ins.category|default:"General" }}</span>
+        <span class="text-sm">{{ ins.text }}</span>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+
+{% if forecast_dates %}
+<script>
+(function(){
+  const labels = {{ forecast_dates|safe }};
+  const data   = {{ forecast_values|safe }};
+  new Chart(document.getElementById('forecastChart'), {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [{
+        label: 'Forecasted Revenue',
+        data,
+        borderColor: '#2D6A4F',
+        backgroundColor: 'rgba(45,106,79,.1)',
+        fill: true,
+        tension: .4,
+        pointRadius: 5,
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: { legend: { display: false } },
+      scales: {
+        x: { grid: { color: 'rgba(22,24,29,.06)' } },
+        y: {
+          grid: { color: 'rgba(22,24,29,.06)' },
+          ticks: { callback: v => '₹' + v.toLocaleString('en-IN') }
+        }
+      }
+    }
+  });
+})();
+</script>
+{% endif %}
+
+{% endblock %}

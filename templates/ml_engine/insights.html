@@ -1,31 +1,49 @@
-{% extends "base.html" %}
+﻿{% extends "base.html" %}
 {% block title %}AI Insights — SmartServe AI{% endblock %}
 {% block page_title %}AI Insights{% endblock %}
 
 {% block content %}
-{% if not insights %}
-<div class="empty-state" style="padding-top:var(--space-8);">
-  <div class="empty-state-icon"><i class="bi bi-lightbulb" style="font-size:1.5rem;"></i></div>
-  <h2 class="empty-state-title">No insights yet</h2>
-  <p class="empty-state-desc">Run a full analysis to generate AI-powered insights from your business data.</p>
-  <a href="{% url 'ml_engine:analyze' %}" class="btn btn-primary"><i class="bi bi-cpu me-2"></i>Analyze My Business</a>
+
+{% if not has_insights %}
+<div class="empty-state" style="margin-top:var(--space-10);">
+  <div class="empty-icon"><i class="bi bi-lightbulb"></i></div>
+  <h3 class="empty-title">No Insights Yet</h3>
+  <p class="empty-desc">Run the AI analysis on your uploaded data to generate actionable insights.</p>
+  <a href="{% url 'ml_engine:analyze' %}" class="btn btn-primary mt-2">
+    <i class="bi bi-cpu"></i> Run Analysis
+  </a>
 </div>
 {% else %}
-<div style="max-width:720px;">
-  {% for insight in insights %}
-  <div class="card mb-4">
-    <div class="card-body flex gap-4">
-      <div style="width:36px;height:36px;border-radius:50%;background:var(--color-primary-light);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-        <i class="bi bi-lightbulb" style="color:var(--color-primary);font-size:0.9rem;"></i>
-      </div>
-      <div style="flex:1;">
-        <p style="margin:0;font-size:var(--text-base);line-height:1.6;">{{ insight.text }}</p>
-        {% if insight.category %}<span class="badge badge-neutral mt-2">{{ insight.category }}</span>{% endif %}
-        <div class="text-muted text-xs mt-2">{{ insight.created_at|date:"d M Y, H:i" }}</div>
+
+<p class="text-muted mb-5">{{ insights|length }} insight{{ insights|length|pluralize }} generated from your data.</p>
+
+{% for cat, items in by_cat.items %}
+<div class="card mb-4">
+  <div class="card-header">
+    <span class="card-title">{{ cat }}</span>
+    <span class="badge badge-neutral">{{ items|length }}</span>
+  </div>
+  <div class="card-body" style="padding:0;">
+    {% for ins in items %}
+    <div style="padding:var(--space-3) var(--space-4);border-bottom:1px solid var(--color-border);">
+      <div class="flex gap-3 items-start">
+        <i class="bi bi-lightbulb-fill" style="color:var(--color-secondary);flex-shrink:0;margin-top:2px;"></i>
+        <p class="text-sm mb-0">{{ ins.text }}</p>
       </div>
     </div>
+    {% endfor %}
   </div>
-  {% endfor %}
 </div>
+{% endfor %}
+
+<div class="flex gap-3 mt-2">
+  <a href="{% url 'ml_engine:results' %}" class="btn btn-outline btn-sm">
+    <i class="bi bi-bar-chart-line"></i> Full Report
+  </a>
+  <a href="{% url 'ml_engine:analyze' %}" class="btn btn-outline btn-sm">
+    <i class="bi bi-arrow-clockwise"></i> Re-run Analysis
+  </a>
+</div>
+
 {% endif %}
 {% endblock %}

@@ -1,16 +1,158 @@
-{% extends "base.html" %}
+﻿{% extends "base.html" %}
 {% block title %}AI Assistant — SmartServe AI{% endblock %}
 {% block page_title %}AI Assistant{% endblock %}
+
 {% block content %}
-{% include "partials/messages.html" %}
-{% if has_data == False %}
-<div class="empty-state" style="padding-top:var(--space-8);">
-  <div class="empty-state-icon"><i class="bi bi-chat-dots" style="font-size:1.5rem;"></i></div>
-  <h2 class="empty-state-title">AI Assistant</h2>
-  <p class="empty-state-desc">Ask questions about your business in plain language. Requires sales data to be uploaded first.</p>
-  <a href="{% url 'onboarding:upload_center' %}" class="btn btn-primary"><i class="bi bi-cloud-upload me-2"></i>Upload Data</a>
+<div style="max-width:680px;display:flex;flex-direction:column;height:calc(100vh - 120px);">
+
+  <div class="flex items-center gap-3 mb-4">
+    <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--color-primary),#40916C);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+      <i class="bi bi-robot" style="color:#fff;font-size:1.2rem;"></i>
+    </div>
+    <div>
+      <h2 style="font-weight:var(--fw-semi);margin:0;">SmartServe Assistant</h2>
+      <p class="text-muted text-sm mb-0">
+        {% if llm_enabled %}AI-powered · {% endif %}
+        Ask about your sales, stock, forecasts, or insights.
+        {% if not has_data %}<span class="badge badge-warning ms-1">Upload data first</span>{% endif %}
+      </p>
+    </div>
+  </div>
+
+  <!-- Chat window -->
+  <div id="chatWindow" style="flex:1;overflow-y:auto;background:var(--color-canvas);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-4);margin-bottom:var(--space-3);display:flex;flex-direction:column;gap:var(--space-3);">
+
+    <!-- Welcome message -->
+    <div class="flex gap-2">
+      <div style="width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--color-primary),#40916C);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+        <i class="bi bi-robot" style="color:#fff;font-size:.85rem;"></i>
+      </div>
+      <div class="chat-bubble-ai">
+        <p class="mb-0">Hi! I'm your SmartServe AI assistant for <strong>{{ business.name }}</strong>. I can answer questions about your revenue, inventory, AI forecasts, and business health — all from your actual data.</p>
+        <p class="mb-0 mt-2 text-muted text-sm">Try: "What are my top items?" · "How's my stock?" · "What's my health score?"</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Input bar -->
+  <div class="flex gap-2" style="align-items:flex-end;">
+    <textarea id="msgInput" rows="1"
+      class="form-control"
+      placeholder="Ask about your business data…"
+      style="resize:none;border-radius:var(--radius-md);flex:1;"
+      {% if not has_data %}disabled{% endif %}></textarea>
+    <button id="sendBtn" class="btn btn-primary"
+      style="height:42px;padding:0 16px;"
+      {% if not has_data %}disabled{% endif %}>
+      <i class="bi bi-send"></i>
+    </button>
+  </div>
+
+  {% if not has_data %}
+  <p class="text-muted text-sm text-center mt-2">
+    <a href="{% url 'onboarding:upload_center' %}">Upload your data</a> to enable the assistant.
+  </p>
+  {% endif %}
+
 </div>
-{% else %}
-<p class="text-muted">No records yet. Use the buttons above to add data.</p>
-{% endif %}
+
+<style>
+.chat-bubble-ai {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 0 var(--radius-md) var(--radius-md) var(--radius-md);
+  padding: var(--space-3) var(--space-3);
+  max-width: 85%;
+  font-size: .9rem;
+  box-shadow: var(--shadow-sm);
+}
+.chat-bubble-user {
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: var(--radius-md) 0 var(--radius-md) var(--radius-md);
+  padding: var(--space-2) var(--space-3);
+  max-width: 75%;
+  font-size: .9rem;
+  margin-left: auto;
+}
+.chat-row-user { display: flex; justify-content: flex-end; }
+.chat-bubble-typing { color: var(--color-muted); font-style: italic; font-size: .85rem; }
+</style>
+
+<script>
+const chatWindow = document.getElementById('chatWindow');
+const msgInput   = document.getElementById('msgInput');
+const sendBtn    = document.getElementById('sendBtn');
+
+function addBubble(text, isUser) {
+  const row = document.createElement('div');
+  if (isUser) {
+    row.className = 'chat-row-user';
+    row.innerHTML = `<div class="chat-bubble-user">${escHtml(text)}</div>`;
+  } else {
+    row.className = 'flex gap-2';
+    const icon = `<div style="width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--color-primary),#40916C);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="bi bi-robot" style="color:#fff;font-size:.85rem;"></i></div>`;
+    row.innerHTML = `${icon}<div class="chat-bubble-ai">${escHtml(text)}</div>`;
+  }
+  chatWindow.appendChild(row);
+  chatWindow.scrollTop = chatWindow.scrollHeight;
+  return row;
+}
+
+function addTyping() {
+  const row = document.createElement('div');
+  row.className = 'flex gap-2';
+  const icon = `<div style="width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--color-primary),#40916C);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="bi bi-robot" style="color:#fff;font-size:.85rem;"></i></div>`;
+  row.innerHTML = `${icon}<div class="chat-bubble-ai chat-bubble-typing">Thinking…</div>`;
+  row.id = 'typingRow';
+  chatWindow.appendChild(row);
+  chatWindow.scrollTop = chatWindow.scrollHeight;
+}
+
+function escHtml(t) {
+  return t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\n/g,'<br>');
+}
+
+async function sendMessage() {
+  const msg = msgInput.value.trim();
+  if (!msg) return;
+  msgInput.value = '';
+  msgInput.style.height = '';
+  sendBtn.disabled = true;
+
+  addBubble(msg, true);
+  addTyping();
+
+  try {
+    const resp = await fetch('{% url "assistant:chat" %}', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json', 'X-CSRFToken': '{{ csrf_token }}'},
+      body: JSON.stringify({message: msg}),
+    });
+    const data = await resp.json();
+    const typing = document.getElementById('typingRow');
+    if (typing) typing.remove();
+    addBubble(data.reply || data.error || 'No response received.', false);
+  } catch(e) {
+    const typing = document.getElementById('typingRow');
+    if (typing) typing.remove();
+    addBubble('Network error. Please try again.', false);
+  } finally {
+    sendBtn.disabled = false;
+    msgInput.focus();
+  }
+}
+
+sendBtn.addEventListener('click', sendMessage);
+msgInput.addEventListener('keydown', function(e) {
+  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); }
+});
+
+// Auto-grow textarea
+msgInput.addEventListener('input', function() {
+  this.style.height = '';
+  this.style.height = Math.min(this.scrollHeight, 120) + 'px';
+});
+</script>
 {% endblock %}

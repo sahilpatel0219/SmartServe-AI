@@ -1,16 +1,76 @@
-{% extends "base.html" %}
+﻿{% extends "base.html" %}
 {% block title %}Reports — SmartServe AI{% endblock %}
 {% block page_title %}Reports{% endblock %}
+
 {% block content %}
-{% include "partials/messages.html" %}
-{% if has_data == False %}
-<div class="empty-state" style="padding-top:var(--space-8);">
-  <div class="empty-state-icon"><i class="bi bi-file-earmark-bar-graph" style="font-size:1.5rem;"></i></div>
-  <h2 class="empty-state-title">Reports</h2>
-  <p class="empty-state-desc">Generate and export sales, inventory, and profit reports as PDF or Excel.</p>
-  <a href="{% url 'onboarding:upload_center' %}" class="btn btn-primary"><i class="bi bi-cloud-upload me-2"></i>Upload Data</a>
+<div style="max-width:700px;">
+  <p class="text-muted mb-6">Download your business data as PDF or Excel. Reports are generated from the data you have uploaded.</p>
+
+  {% if not has_sales and not has_inventory %}
+  <div class="empty-state">
+    <div class="empty-icon"><i class="bi bi-file-earmark-bar-graph"></i></div>
+    <h3 class="empty-title">No Data to Report</h3>
+    <p class="empty-desc">Upload sales or inventory data first.</p>
+    <a href="{% url 'onboarding:upload_center' %}" class="btn btn-primary mt-2">
+      <i class="bi bi-upload"></i> Upload Data
+    </a>
+  </div>
+  {% else %}
+
+  <!-- Sales report card -->
+  {% if has_sales %}
+  <div class="card mb-4">
+    <div class="card-header">
+      <div>
+        <span class="card-title">Sales Report</span>
+        <div class="text-muted text-sm mt-1">Daily revenue and transaction counts</div>
+      </div>
+      <i class="bi bi-currency-rupee" style="font-size:1.4rem;color:var(--color-primary);"></i>
+    </div>
+    <div class="card-body">
+      <div class="flex gap-3 flex-wrap">
+        {% for p,label in period_options %}
+        <div class="flex gap-2">
+          <a href="{% url 'reports:export' 'sales' 'excel' %}?period={{ p }}"
+             class="btn btn-outline btn-sm">
+            <i class="bi bi-file-earmark-excel"></i> {{ label }} Excel
+          </a>
+          <a href="{% url 'reports:export' 'sales' 'pdf' %}?period={{ p }}"
+             class="btn btn-outline btn-sm">
+            <i class="bi bi-file-earmark-pdf"></i> {{ label }} PDF
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% endif %}
+
+  <!-- Inventory report card -->
+  {% if has_inventory %}
+  <div class="card mb-4">
+    <div class="card-header">
+      <div>
+        <span class="card-title">Inventory Report</span>
+        <div class="text-muted text-sm mt-1">Current stock levels, costs, and reorder status</div>
+      </div>
+      <i class="bi bi-box-seam" style="font-size:1.4rem;color:var(--color-secondary);"></i>
+    </div>
+    <div class="card-body">
+      <div class="flex gap-2">
+        <a href="{% url 'reports:export' 'inventory' 'excel' %}"
+           class="btn btn-outline btn-sm">
+          <i class="bi bi-file-earmark-excel"></i> Export Excel
+        </a>
+        <a href="{% url 'reports:export' 'inventory' 'pdf' %}"
+           class="btn btn-outline btn-sm">
+          <i class="bi bi-file-earmark-pdf"></i> Export PDF
+        </a>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+
+  {% endif %}
 </div>
-{% else %}
-<p class="text-muted">No records yet. Use the buttons above to add data.</p>
-{% endif %}
 {% endblock %}

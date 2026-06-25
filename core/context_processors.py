@@ -36,4 +36,15 @@ def global_context(request):
         ctx['active_membership'] = first
         request.session['active_business_id'] = first.business_id
 
+    # Unread notification count for topbar badge
+    if ctx['active_business']:
+        try:
+            from mongo import collections as col
+            ctx['unread_notifications'] = col.notifications().count_documents({
+                'business_id': ctx['active_business'].mongo_id,
+                'read': False,
+            })
+        except Exception:
+            ctx['unread_notifications'] = 0
+
     return ctx

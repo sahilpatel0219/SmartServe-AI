@@ -1,16 +1,79 @@
-{% extends "base.html" %}
+﻿{% extends "base.html" %}
 {% block title %}Notifications — SmartServe AI{% endblock %}
 {% block page_title %}Notifications{% endblock %}
+
 {% block content %}
-{% include "partials/messages.html" %}
-{% if has_data == False %}
-<div class="empty-state" style="padding-top:var(--space-8);">
-  <div class="empty-state-icon"><i class="bi bi-bell" style="font-size:1.5rem;"></i></div>
-  <h2 class="empty-state-title">Notifications</h2>
-  <p class="empty-state-desc">Smart alerts for low stock, expiry warnings, and demand forecasts.</p>
-  <a href="{% url 'onboarding:upload_center' %}" class="btn btn-primary"><i class="bi bi-cloud-upload me-2"></i>Upload Data</a>
+<div style="max-width:680px;">
+
+  <div class="flex items-center justify-between mb-5">
+    <p class="text-muted mb-0">{{ notifications|length }} notification{{ notifications|length|pluralize }}{% if unread %} · <strong>{{ unread }} unread</strong>{% endif %}</p>
+    {% if unread %}
+    <form method="post" action="{% url 'notifications:mark_all_read' %}">
+      {% csrf_token %}
+      <button type="submit" class="btn btn-ghost btn-sm">Mark all as read</button>
+    </form>
+    {% endif %}
+  </div>
+
+  {% if not notifications %}
+  <div class="empty-state">
+    <div class="empty-icon"><i class="bi bi-bell"></i></div>
+    <h3 class="empty-title">No Notifications</h3>
+    <p class="empty-desc">SmartServe will alert you about low stock, expiry dates, and AI-detected risks as you use the platform.</p>
+  </div>
+  {% else %}
+
+  <div style="display:flex;flex-direction:column;gap:var(--space-2);">
+    {% for n in notifications %}
+    <div class="card {% if not n.read %}unread-notif{% endif %}"
+         id="notif-{{ n._id }}"
+         style="{% if not n.read %}border-left:3px solid var(--color-primary);{% endif %}">
+      <div class="card-body" style="display:flex;align-items:flex-start;gap:var(--space-3);padding:var(--space-3) var(--space-4);">
+        <div style="margin-top:2px;">
+          {% if n.severity == 'danger' %}
+          <i class="bi bi-exclamation-circle-fill" style="color:#DC3545;"></i>
+          {% elif n.severity == 'warning' %}
+          <i class="bi bi-exclamation-triangle-fill" style="color:var(--color-secondary);"></i>
+          {% else %}
+          <i class="bi bi-info-circle-fill" style="color:var(--color-primary);"></i>
+          {% endif %}
+        </div>
+        <div style="flex:1;">
+          <p class="mb-0 text-sm">{{ n.message }}</p>
+          <span class="text-muted" style="font-size:.75rem;">{{ n.created_at }}</span>
+        </div>
+        {% if not n.read %}
+        <button class="btn btn-ghost btn-sm mark-read-btn"
+                data-id="{{ n._id }}"
+                style="font-size:.75rem;padding:2px 8px;">
+          Mark read
+        </button>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
 </div>
-{% else %}
-<p class="text-muted">No records yet. Use the buttons above to add data.</p>
-{% endif %}
+
+<style>
+.unread-notif { background: rgba(45,106,79,.03); }
+</style>
+
+<script>
+document.querySelectorAll('.mark-read-btn').forEach(btn => {
+  btn.addEventListener('click', async function() {
+    const id = this.dataset.id;
+    await fetch(`/notifications/${id}/read/`, {
+      method: 'POST',
+      headers: {'X-CSRFToken': '{{ csrf_token }}'},
+    });
+    const card = document.getElementById('notif-' + id);
+    card.classList.remove('unread-notif');
+    card.style.borderLeft = '';
+    this.remove();
+  });
+});
+</script>
 {% endblock %}
