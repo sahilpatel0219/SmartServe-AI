@@ -14,6 +14,17 @@ def create_business_view(request):
             return redirect('onboarding:upload_center')
 
     form = BusinessForm(request.POST or None, request.FILES or None)
+    if request.method == 'POST':
+        import logging
+        logger = logging.getLogger(__name__)
+        logger.warning('CREATE BUSINESS POST: valid=%s errors=%s data=%s',
+                       form.is_valid(), dict(form.errors), dict(request.POST))
+        if not form.is_valid():
+            # Convert form errors into Django messages so the user sees them as toasts
+            for field, errs in form.errors.items():
+                label = form.fields[field].label or field if field != '__all__' else ''
+                for e in errs:
+                    messages.error(request, f'{label}: {e}' if label else e)
     if request.method == 'POST' and form.is_valid():
         business = form.save()
         Membership.objects.create(user=request.user, business=business, role='owner')
