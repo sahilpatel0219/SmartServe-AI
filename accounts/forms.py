@@ -43,7 +43,7 @@ class BusinessForm(forms.ModelForm):
         model = Business
         fields = [
             'name', 'business_type', 'address', 'city', 'state', 'pincode',
-            'phone', 'email', 'website', 'gst_number', 'logo', 'currency',
+            'phone', 'email', 'website', 'gst_number', 'logo',
         ]
         widgets = {
             'address': forms.Textarea(attrs={'rows': 3}),
