@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => el.remove(), 5500);
   });
 
-  // Dropzone drag-and-drop
+  // Dropzone drag-and-drop (click handled natively by <label> wrapper)
   document.querySelectorAll('.dropzone').forEach(zone => {
     zone.addEventListener('dragover',  e => { e.preventDefault(); zone.classList.add('dragging'); });
     zone.addEventListener('dragleave', () => zone.classList.remove('dragging'));
@@ -89,11 +89,8 @@ document.addEventListener('DOMContentLoaded', () => {
         dt.items.add(e.dataTransfer.files[0]);
         input.files = dt.files;
         input.dispatchEvent(new Event('change'));
-        const label = zone.querySelector('.dropzone-label');
-        if (label) label.textContent = e.dataTransfer.files[0].name;
       }
     });
-    zone.addEventListener('click', () => zone.querySelector('input[type=file]')?.click());
   });
 
   // Active nav link highlight based on URL
@@ -104,6 +101,11 @@ document.addEventListener('DOMContentLoaded', () => {
       if (path.startsWith(linkPath)) link.classList.add('active');
     }
   });
+
+  // Sync theme icon with current theme
+  const icon = document.getElementById('themeIcon');
+  const savedTheme = localStorage.getItem('ss_theme') || 'light';
+  if (icon) icon.className = savedTheme === 'dark' ? 'bi bi-sun' : 'bi bi-moon';
 
   // Animate stat cards and content cards on page load
   document.querySelectorAll('.stat-card').forEach((card, i) => {
@@ -134,6 +136,36 @@ function animateCounter(el, target) {
   }
   requestAnimationFrame(step);
 }
+
+// ── Upload file guard ────────────────────────────────────────
+function checkFile(key) {
+  const input = document.getElementById('file_' + key);
+  if (!input || !input.files || input.files.length === 0) {
+    showToast('Please select a file first — click the upload area to browse.', 'warning');
+    input && input.click();
+    return false;
+  }
+  return true;
+}
+
+// ── Theme (light / dark) ─────────────────────────────────────
+function applyTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  localStorage.setItem('ss_theme', theme);
+  const icon = document.getElementById('themeIcon');
+  if (icon) icon.className = theme === 'dark' ? 'bi bi-sun' : 'bi bi-moon';
+}
+
+function toggleTheme() {
+  const current = document.documentElement.getAttribute('data-theme') || 'light';
+  applyTheme(current === 'dark' ? 'light' : 'dark');
+}
+
+// Apply saved theme immediately (runs before DOMContentLoaded to avoid flash)
+(function () {
+  const saved = localStorage.getItem('ss_theme') || 'light';
+  document.documentElement.setAttribute('data-theme', saved);
+})();
 
 // ── Formatters ───────────────────────────────────────────────
 function formatCurrency(val, currency = 'INR') {

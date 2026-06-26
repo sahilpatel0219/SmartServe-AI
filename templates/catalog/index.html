@@ -26,8 +26,8 @@
           <td>{% if item.recipe %}<span class="badge badge-info">{{ item.recipe|length }} ing.</span>{% else %}<span class="text-subtle text-xs">—</span>{% endif %}</td>
           <td>
             <div class="flex gap-2">
-              <a href="{% url 'catalog:edit_item' item._id|stringformat:'s' %}" class="btn btn-ghost btn-sm"><i class="bi bi-pencil"></i></a>
-              <form method="post" action="{% url 'catalog:delete_item' item._id|stringformat:'s' %}" onsubmit="return confirm('Delete this item?')">
+              <a href="{% url 'catalog:edit_item' item.str_id|stringformat:'s' %}" class="btn btn-ghost btn-sm"><i class="bi bi-pencil"></i></a>
+              <form method="post" action="{% url 'catalog:delete_item' item.str_id|stringformat:'s' %}" onsubmit="return confirm('Delete this item?')">
                 {% csrf_token %}<button type="submit" class="btn btn-ghost btn-sm text-danger"><i class="bi bi-trash3"></i></button>
               </form>
             </div>

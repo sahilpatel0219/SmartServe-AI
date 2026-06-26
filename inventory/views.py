@@ -19,6 +19,8 @@ def index_view(request):
         return redirect('onboarding:create_business')
     bid = business.mongo_id
     items = list(col.inventory().find({'business_id': bid}, sort=[('item_name', 1)]))
+    for item in items:
+        item['str_id'] = str(item.get('_id', ''))
     today = date.today()
     for item in items:
         qty = float(str(item.get('quantity', 0)).replace(',', '') or 0)

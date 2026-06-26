@@ -1,0 +1,2341 @@
+Date,Item,Quantity,Revenue
+2026-02-16,Cappuccino,23,3427
+2026-02-16,Cafe Latte,18,2862
+2026-02-16,Espresso,10,1190
+2026-02-16,Masala Chai,28,2212
+2026-02-16,Cold Coffee,29,4901
+2026-02-16,Iced Latte,16,2864
+2026-02-16,Lemon Iced Tea,18,2322
+2026-02-16,Fresh Lime Soda,15,1485
+2026-02-16,Veg Sandwich,13,1807
+2026-02-16,Grilled Cheese Sandwich,12,1908
+2026-02-16,Veg Burger,16,2384
+2026-02-16,French Fries,22,2618
+2026-02-16,Margherita Pizza,11,2739
+2026-02-16,Pasta Alfredo,9,2061
+2026-02-16,Chocolate Brownie,11,1419
+2026-02-16,Blueberry Muffin,7,693
+2026-02-16,Croissant,11,1199
+2026-02-16,Cheesecake Slice,9,1431
+2026-02-17,Cappuccino,23,3427
+2026-02-17,Cafe Latte,17,2703
+2026-02-17,Espresso,10,1190
+2026-02-17,Masala Chai,18,1422
+2026-02-17,Cold Coffee,27,4563
+2026-02-17,Iced Latte,21,3759
+2026-02-17,Lemon Iced Tea,18,2322
+2026-02-17,Fresh Lime Soda,14,1386
+2026-02-17,Veg Sandwich,14,1946
+2026-02-17,Grilled Cheese Sandwich,12,1908
+2026-02-17,Veg Burger,16,2384
+2026-02-17,French Fries,14,1666
+2026-02-17,Margherita Pizza,10,2490
+2026-02-17,Pasta Alfredo,6,1374
+2026-02-17,Chocolate Brownie,7,903
+2026-02-17,Blueberry Muffin,7,693
+2026-02-17,Croissant,8,872
+2026-02-17,Cheesecake Slice,8,1272
+2026-02-18,Cappuccino,28,4172
+2026-02-18,Cafe Latte,16,2544
+2026-02-18,Espresso,12,1428
+2026-02-18,Masala Chai,23,1817
+2026-02-18,Cold Coffee,31,5239
+2026-02-18,Iced Latte,21,3759
+2026-02-18,Lemon Iced Tea,18,2322
+2026-02-18,Fresh Lime Soda,18,1782
+2026-02-18,Veg Sandwich,16,2224
+2026-02-18,Grilled Cheese Sandwich,13,2067
+2026-02-18,Veg Burger,18,2682
+2026-02-18,French Fries,21,2499
+2026-02-18,Margherita Pizza,10,2490
+2026-02-18,Pasta Alfredo,8,1832
+2026-02-18,Chocolate Brownie,13,1677
+2026-02-18,Blueberry Muffin,10,990
+2026-02-18,Croissant,10,1090
+2026-02-18,Cheesecake Slice,11,1749
+2026-02-19,Cappuccino,23,3427
+2026-02-19,Cafe Latte,17,2703
+2026-02-19,Espresso,13,1547
+2026-02-19,Masala Chai,35,2765
+2026-02-19,Cold Coffee,36,6084
+2026-02-19,Iced Latte,26,4654
+2026-02-19,Lemon Iced Tea,24,3096
+2026-02-19,Fresh Lime Soda,17,1683
+2026-02-19,Veg Sandwich,12,1668
+2026-02-19,Grilled Cheese Sandwich,12,1908
+2026-02-19,Veg Burger,20,2980
+2026-02-19,French Fries,16,1904
+2026-02-19,Margherita Pizza,11,2739
+2026-02-19,Pasta Alfredo,10,2290
+2026-02-19,Chocolate Brownie,14,1806
+2026-02-19,Blueberry Muffin,11,1089
+2026-02-19,Croissant,12,1308
+2026-02-19,Cheesecake Slice,12,1908
+2026-02-20,Cappuccino,36,5364
+2026-02-20,Cafe Latte,23,3657
+2026-02-20,Espresso,13,1547
+2026-02-20,Masala Chai,30,2370
+2026-02-20,Cold Coffee,47,7943
+2026-02-20,Iced Latte,26,4654
+2026-02-20,Lemon Iced Tea,23,2967
+2026-02-20,Fresh Lime Soda,24,2376
+2026-02-20,Veg Sandwich,16,2224
+2026-02-20,Grilled Cheese Sandwich,15,2385
+2026-02-20,Veg Burger,15,2235
+2026-02-20,French Fries,21,2499
+2026-02-20,Margherita Pizza,13,3237
+2026-02-20,Pasta Alfredo,12,2748
+2026-02-20,Chocolate Brownie,21,2709
+2026-02-20,Blueberry Muffin,12,1188
+2026-02-20,Croissant,14,1526
+2026-02-20,Cheesecake Slice,11,1749
+2026-02-21,Cappuccino,45,6705
+2026-02-21,Cafe Latte,34,5406
+2026-02-21,Espresso,17,2023
+2026-02-21,Masala Chai,34,2686
+2026-02-21,Cold Coffee,55,9295
+2026-02-21,Iced Latte,35,6265
+2026-02-21,Lemon Iced Tea,33,4257
+2026-02-21,Fresh Lime Soda,25,2475
+2026-02-21,Veg Sandwich,28,3892
+2026-02-21,Grilled Cheese Sandwich,18,2862
+2026-02-21,Veg Burger,31,4619
+2026-02-21,French Fries,30,3570
+2026-02-21,Margherita Pizza,15,3735
+2026-02-21,Pasta Alfredo,11,2519
+2026-02-21,Chocolate Brownie,20,2580
+2026-02-21,Blueberry Muffin,17,1683
+2026-02-21,Croissant,18,1962
+2026-02-21,Cheesecake Slice,14,2226
+2026-02-22,Cappuccino,23,3427
+2026-02-22,Cafe Latte,32,5088
+2026-02-22,Espresso,17,2023
+2026-02-22,Masala Chai,36,2844
+2026-02-22,Cold Coffee,42,7098
+2026-02-22,Iced Latte,32,5728
+2026-02-22,Lemon Iced Tea,34,4386
+2026-02-22,Fresh Lime Soda,20,1980
+2026-02-22,Veg Sandwich,19,2641
+2026-02-22,Grilled Cheese Sandwich,22,3498
+2026-02-22,Veg Burger,22,3278
+2026-02-22,French Fries,27,3213
+2026-02-22,Margherita Pizza,16,3984
+2026-02-22,Pasta Alfredo,10,2290
+2026-02-22,Chocolate Brownie,20,2580
+2026-02-22,Blueberry Muffin,11,1089
+2026-02-22,Croissant,18,1962
+2026-02-22,Cheesecake Slice,12,1908
+2026-02-23,Cappuccino,33,4917
+2026-02-23,Cafe Latte,20,3180
+2026-02-23,Espresso,12,1428
+2026-02-23,Masala Chai,20,1580
+2026-02-23,Cold Coffee,30,5070
+2026-02-23,Iced Latte,22,3938
+2026-02-23,Lemon Iced Tea,22,2838
+2026-02-23,Fresh Lime Soda,12,1188
+2026-02-23,Veg Sandwich,16,2224
+2026-02-23,Grilled Cheese Sandwich,13,2067
+2026-02-23,Veg Burger,19,2831
+2026-02-23,French Fries,21,2499
+2026-02-23,Margherita Pizza,10,2490
+2026-02-23,Pasta Alfredo,8,1832
+2026-02-23,Chocolate Brownie,10,1290
+2026-02-23,Blueberry Muffin,9,891
+2026-02-23,Croissant,10,1090
+2026-02-23,Cheesecake Slice,10,1590
+2026-02-24,Cappuccino,20,2980
+2026-02-24,Cafe Latte,19,3021
+2026-02-24,Espresso,7,833
+2026-02-24,Masala Chai,23,1817
+2026-02-24,Cold Coffee,30,5070
+2026-02-24,Iced Latte,22,3938
+2026-02-24,Lemon Iced Tea,20,2580
+2026-02-24,Fresh Lime Soda,15,1485
+2026-02-24,Veg Sandwich,11,1529
+2026-02-24,Grilled Cheese Sandwich,12,1908
+2026-02-24,Veg Burger,16,2384
+2026-02-24,French Fries,19,2261
+2026-02-24,Margherita Pizza,9,2241
+2026-02-24,Pasta Alfredo,10,2290
+2026-02-24,Chocolate Brownie,12,1548
+2026-02-24,Blueberry Muffin,9,891
+2026-02-24,Croissant,12,1308
+2026-02-24,Cheesecake Slice,8,1272
+2026-02-25,Cappuccino,27,4023
+2026-02-25,Cafe Latte,27,4293
+2026-02-25,Espresso,11,1309
+2026-02-25,Masala Chai,26,2054
+2026-02-25,Cold Coffee,33,5577
+2026-02-25,Iced Latte,28,5012
+2026-02-25,Lemon Iced Tea,19,2451
+2026-02-25,Fresh Lime Soda,18,1782
+2026-02-25,Veg Sandwich,17,2363
+2026-02-25,Grilled Cheese Sandwich,12,1908
+2026-02-25,Veg Burger,12,1788
+2026-02-25,French Fries,21,2499
+2026-02-25,Margherita Pizza,11,2739
+2026-02-25,Pasta Alfredo,8,1832
+2026-02-25,Chocolate Brownie,15,1935
+2026-02-25,Blueberry Muffin,10,990
+2026-02-25,Croissant,9,981
+2026-02-25,Cheesecake Slice,9,1431
+2026-02-26,Cappuccino,26,3874
+2026-02-26,Cafe Latte,16,2544
+2026-02-26,Espresso,12,1428
+2026-02-26,Masala Chai,29,2291
+2026-02-26,Cold Coffee,31,5239
+2026-02-26,Iced Latte,26,4654
+2026-02-26,Lemon Iced Tea,21,2709
+2026-02-26,Fresh Lime Soda,16,1584
+2026-02-26,Veg Sandwich,16,2224
+2026-02-26,Grilled Cheese Sandwich,16,2544
+2026-02-26,Veg Burger,15,2235
+2026-02-26,French Fries,22,2618
+2026-02-26,Margherita Pizza,11,2739
+2026-02-26,Pasta Alfredo,13,2977
+2026-02-26,Chocolate Brownie,10,1290
+2026-02-26,Blueberry Muffin,11,1089
+2026-02-26,Croissant,11,1199
+2026-02-26,Cheesecake Slice,8,1272
+2026-02-27,Cappuccino,42,6258
+2026-02-27,Cafe Latte,25,3975
+2026-02-27,Espresso,19,2261
+2026-02-27,Masala Chai,32,2528
+2026-02-27,Cold Coffee,45,7605
+2026-02-27,Iced Latte,27,4833
+2026-02-27,Lemon Iced Tea,21,2709
+2026-02-27,Fresh Lime Soda,22,2178
+2026-02-27,Veg Sandwich,18,2502
+2026-02-27,Grilled Cheese Sandwich,17,2703
+2026-02-27,Veg Burger,14,2086
+2026-02-27,French Fries,34,4046
+2026-02-27,Margherita Pizza,14,3486
+2026-02-27,Pasta Alfredo,15,3435
+2026-02-27,Chocolate Brownie,15,1935
+2026-02-27,Blueberry Muffin,12,1188
+2026-02-27,Croissant,21,2289
+2026-02-27,Cheesecake Slice,9,1431
+2026-02-28,Cappuccino,29,4321
+2026-02-28,Cafe Latte,27,4293
+2026-02-28,Espresso,18,2142
+2026-02-28,Masala Chai,45,3555
+2026-02-28,Cold Coffee,60,10140
+2026-02-28,Iced Latte,33,5907
+2026-02-28,Lemon Iced Tea,21,2709
+2026-02-28,Fresh Lime Soda,24,2376
+2026-02-28,Veg Sandwich,26,3614
+2026-02-28,Grilled Cheese Sandwich,21,3339
+2026-02-28,Veg Burger,17,2533
+2026-02-28,French Fries,30,3570
+2026-02-28,Margherita Pizza,20,4980
+2026-02-28,Pasta Alfredo,18,4122
+2026-02-28,Chocolate Brownie,22,2838
+2026-02-28,Blueberry Muffin,14,1386
+2026-02-28,Croissant,13,1417
+2026-02-28,Cheesecake Slice,11,1749
+2026-03-01,Cappuccino,37,5513
+2026-03-01,Cafe Latte,31,4929
+2026-03-01,Espresso,17,2023
+2026-03-01,Masala Chai,36,2844
+2026-03-01,Cold Coffee,39,6591
+2026-03-01,Iced Latte,29,5191
+2026-03-01,Lemon Iced Tea,22,2838
+2026-03-01,Fresh Lime Soda,27,2673
+2026-03-01,Veg Sandwich,13,1807
+2026-03-01,Grilled Cheese Sandwich,17,2703
+2026-03-01,Veg Burger,25,3725
+2026-03-01,French Fries,36,4284
+2026-03-01,Margherita Pizza,16,3984
+2026-03-01,Pasta Alfredo,15,3435
+2026-03-01,Chocolate Brownie,18,2322
+2026-03-01,Blueberry Muffin,12,1188
+2026-03-01,Croissant,14,1526
+2026-03-01,Cheesecake Slice,15,2385
+2026-03-02,Cappuccino,28,4172
+2026-03-02,Cafe Latte,20,3180
+2026-03-02,Espresso,16,1904
+2026-03-02,Masala Chai,26,2054
+2026-03-02,Cold Coffee,35,5915
+2026-03-02,Iced Latte,23,4117
+2026-03-02,Lemon Iced Tea,17,2193
+2026-03-02,Fresh Lime Soda,22,2178
+2026-03-02,Veg Sandwich,17,2363
+2026-03-02,Grilled Cheese Sandwich,9,1431
+2026-03-02,Veg Burger,14,2086
+2026-03-02,French Fries,20,2380
+2026-03-02,Margherita Pizza,12,2988
+2026-03-02,Pasta Alfredo,7,1603
+2026-03-02,Chocolate Brownie,8,1032
+2026-03-02,Blueberry Muffin,6,594
+2026-03-02,Croissant,10,1090
+2026-03-02,Cheesecake Slice,8,1272
+2026-03-03,Cappuccino,24,3576
+2026-03-03,Cafe Latte,16,2544
+2026-03-03,Espresso,8,952
+2026-03-03,Masala Chai,16,1264
+2026-03-03,Cold Coffee,31,5239
+2026-03-03,Iced Latte,22,3938
+2026-03-03,Lemon Iced Tea,20,2580
+2026-03-03,Fresh Lime Soda,17,1683
+2026-03-03,Veg Sandwich,13,1807
+2026-03-03,Grilled Cheese Sandwich,14,2226
+2026-03-03,Veg Burger,14,2086
+2026-03-03,French Fries,16,1904
+2026-03-03,Margherita Pizza,9,2241
+2026-03-03,Pasta Alfredo,7,1603
+2026-03-03,Chocolate Brownie,8,1032
+2026-03-03,Blueberry Muffin,8,792
+2026-03-03,Croissant,10,1090
+2026-03-03,Cheesecake Slice,7,1113
+2026-03-04,Cappuccino,23,3427
+2026-03-04,Cafe Latte,21,3339
+2026-03-04,Espresso,14,1666
+2026-03-04,Masala Chai,28,2212
+2026-03-04,Cold Coffee,31,5239
+2026-03-04,Iced Latte,21,3759
+2026-03-04,Lemon Iced Tea,19,2451
+2026-03-04,Fresh Lime Soda,14,1386
+2026-03-04,Veg Sandwich,14,1946
+2026-03-04,Grilled Cheese Sandwich,13,2067
+2026-03-04,Veg Burger,21,3129
+2026-03-04,French Fries,23,2737
+2026-03-04,Margherita Pizza,13,3237
+2026-03-04,Pasta Alfredo,8,1832
+2026-03-04,Chocolate Brownie,15,1935
+2026-03-04,Blueberry Muffin,7,693
+2026-03-04,Croissant,11,1199
+2026-03-04,Cheesecake Slice,9,1431
+2026-03-05,Cappuccino,24,3576
+2026-03-05,Cafe Latte,28,4452
+2026-03-05,Espresso,13,1547
+2026-03-05,Masala Chai,20,1580
+2026-03-05,Cold Coffee,39,6591
+2026-03-05,Iced Latte,23,4117
+2026-03-05,Lemon Iced Tea,20,2580
+2026-03-05,Fresh Lime Soda,20,1980
+2026-03-05,Veg Sandwich,16,2224
+2026-03-05,Grilled Cheese Sandwich,9,1431
+2026-03-05,Veg Burger,14,2086
+2026-03-05,French Fries,24,2856
+2026-03-05,Margherita Pizza,14,3486
+2026-03-05,Pasta Alfredo,13,2977
+2026-03-05,Chocolate Brownie,19,2451
+2026-03-05,Blueberry Muffin,6,594
+2026-03-05,Croissant,13,1417
+2026-03-05,Cheesecake Slice,6,954
+2026-03-06,Cappuccino,41,6109
+2026-03-06,Cafe Latte,27,4293
+2026-03-06,Espresso,11,1309
+2026-03-06,Masala Chai,46,3634
+2026-03-06,Cold Coffee,48,8112
+2026-03-06,Iced Latte,21,3759
+2026-03-06,Lemon Iced Tea,26,3354
+2026-03-06,Fresh Lime Soda,20,1980
+2026-03-06,Veg Sandwich,19,2641
+2026-03-06,Grilled Cheese Sandwich,15,2385
+2026-03-06,Veg Burger,26,3874
+2026-03-06,French Fries,20,2380
+2026-03-06,Margherita Pizza,15,3735
+2026-03-06,Pasta Alfredo,15,3435
+2026-03-06,Chocolate Brownie,15,1935
+2026-03-06,Blueberry Muffin,12,1188
+2026-03-06,Croissant,14,1526
+2026-03-06,Cheesecake Slice,9,1431
+2026-03-07,Cappuccino,42,6258
+2026-03-07,Cafe Latte,31,4929
+2026-03-07,Espresso,14,1666
+2026-03-07,Masala Chai,53,4187
+2026-03-07,Cold Coffee,58,9802
+2026-03-07,Iced Latte,34,6086
+2026-03-07,Lemon Iced Tea,26,3354
+2026-03-07,Fresh Lime Soda,23,2277
+2026-03-07,Veg Sandwich,26,3614
+2026-03-07,Grilled Cheese Sandwich,19,3021
+2026-03-07,Veg Burger,26,3874
+2026-03-07,French Fries,29,3451
+2026-03-07,Margherita Pizza,18,4482
+2026-03-07,Pasta Alfredo,13,2977
+2026-03-07,Chocolate Brownie,23,2967
+2026-03-07,Blueberry Muffin,13,1287
+2026-03-07,Croissant,19,2071
+2026-03-07,Cheesecake Slice,14,2226
+2026-03-08,Cappuccino,36,5364
+2026-03-08,Cafe Latte,25,3975
+2026-03-08,Espresso,13,1547
+2026-03-08,Masala Chai,35,2765
+2026-03-08,Cold Coffee,42,7098
+2026-03-08,Iced Latte,39,6981
+2026-03-08,Lemon Iced Tea,28,3612
+2026-03-08,Fresh Lime Soda,32,3168
+2026-03-08,Veg Sandwich,29,4031
+2026-03-08,Grilled Cheese Sandwich,19,3021
+2026-03-08,Veg Burger,18,2682
+2026-03-08,French Fries,27,3213
+2026-03-08,Margherita Pizza,16,3984
+2026-03-08,Pasta Alfredo,10,2290
+2026-03-08,Chocolate Brownie,19,2451
+2026-03-08,Blueberry Muffin,14,1386
+2026-03-08,Croissant,15,1635
+2026-03-08,Cheesecake Slice,10,1590
+2026-03-09,Cappuccino,21,3129
+2026-03-09,Cafe Latte,24,3816
+2026-03-09,Espresso,10,1190
+2026-03-09,Masala Chai,22,1738
+2026-03-09,Cold Coffee,31,5239
+2026-03-09,Iced Latte,26,4654
+2026-03-09,Lemon Iced Tea,17,2193
+2026-03-09,Fresh Lime Soda,18,1782
+2026-03-09,Veg Sandwich,15,2085
+2026-03-09,Grilled Cheese Sandwich,14,2226
+2026-03-09,Veg Burger,19,2831
+2026-03-09,French Fries,17,2023
+2026-03-09,Margherita Pizza,12,2988
+2026-03-09,Pasta Alfredo,8,1832
+2026-03-09,Chocolate Brownie,12,1548
+2026-03-09,Blueberry Muffin,10,990
+2026-03-09,Croissant,12,1308
+2026-03-09,Cheesecake Slice,8,1272
+2026-03-10,Cappuccino,18,2682
+2026-03-10,Cafe Latte,20,3180
+2026-03-10,Espresso,9,1071
+2026-03-10,Masala Chai,21,1659
+2026-03-10,Cold Coffee,27,4563
+2026-03-10,Iced Latte,22,3938
+2026-03-10,Lemon Iced Tea,12,1548
+2026-03-10,Fresh Lime Soda,17,1683
+2026-03-10,Veg Sandwich,13,1807
+2026-03-10,Grilled Cheese Sandwich,10,1590
+2026-03-10,Veg Burger,17,2533
+2026-03-10,French Fries,20,2380
+2026-03-10,Margherita Pizza,9,2241
+2026-03-10,Pasta Alfredo,7,1603
+2026-03-10,Chocolate Brownie,14,1806
+2026-03-10,Blueberry Muffin,6,594
+2026-03-10,Croissant,9,981
+2026-03-10,Cheesecake Slice,7,1113
+2026-03-11,Cappuccino,26,3874
+2026-03-11,Cafe Latte,21,3339
+2026-03-11,Espresso,11,1309
+2026-03-11,Masala Chai,32,2528
+2026-03-11,Cold Coffee,36,6084
+2026-03-11,Iced Latte,23,4117
+2026-03-11,Lemon Iced Tea,16,2064
+2026-03-11,Fresh Lime Soda,20,1980
+2026-03-11,Veg Sandwich,16,2224
+2026-03-11,Grilled Cheese Sandwich,16,2544
+2026-03-11,Veg Burger,15,2235
+2026-03-11,French Fries,20,2380
+2026-03-11,Margherita Pizza,11,2739
+2026-03-11,Pasta Alfredo,9,2061
+2026-03-11,Chocolate Brownie,14,1806
+2026-03-11,Blueberry Muffin,7,693
+2026-03-11,Croissant,12,1308
+2026-03-11,Cheesecake Slice,9,1431
+2026-03-12,Cappuccino,32,4768
+2026-03-12,Cafe Latte,29,4611
+2026-03-12,Espresso,11,1309
+2026-03-12,Masala Chai,29,2291
+2026-03-12,Cold Coffee,37,6253
+2026-03-12,Iced Latte,33,5907
+2026-03-12,Lemon Iced Tea,15,1935
+2026-03-12,Fresh Lime Soda,20,1980
+2026-03-12,Veg Sandwich,12,1668
+2026-03-12,Grilled Cheese Sandwich,8,1272
+2026-03-12,Veg Burger,12,1788
+2026-03-12,French Fries,17,2023
+2026-03-12,Margherita Pizza,14,3486
+2026-03-12,Pasta Alfredo,8,1832
+2026-03-12,Chocolate Brownie,14,1806
+2026-03-12,Blueberry Muffin,8,792
+2026-03-12,Croissant,13,1417
+2026-03-12,Cheesecake Slice,7,1113
+2026-03-13,Cappuccino,40,5960
+2026-03-13,Cafe Latte,22,3498
+2026-03-13,Espresso,12,1428
+2026-03-13,Masala Chai,36,2844
+2026-03-13,Cold Coffee,45,7605
+2026-03-13,Iced Latte,38,6802
+2026-03-13,Lemon Iced Tea,26,3354
+2026-03-13,Fresh Lime Soda,19,1881
+2026-03-13,Veg Sandwich,17,2363
+2026-03-13,Grilled Cheese Sandwich,15,2385
+2026-03-13,Veg Burger,24,3576
+2026-03-13,French Fries,27,3213
+2026-03-13,Margherita Pizza,14,3486
+2026-03-13,Pasta Alfredo,13,2977
+2026-03-13,Chocolate Brownie,16,2064
+2026-03-13,Blueberry Muffin,11,1089
+2026-03-13,Croissant,14,1526
+2026-03-13,Cheesecake Slice,13,2067
+2026-03-14,Cappuccino,38,5662
+2026-03-14,Cafe Latte,29,4611
+2026-03-14,Espresso,14,1666
+2026-03-14,Masala Chai,46,3634
+2026-03-14,Cold Coffee,48,8112
+2026-03-14,Iced Latte,38,6802
+2026-03-14,Lemon Iced Tea,21,2709
+2026-03-14,Fresh Lime Soda,32,3168
+2026-03-14,Veg Sandwich,17,2363
+2026-03-14,Grilled Cheese Sandwich,17,2703
+2026-03-14,Veg Burger,29,4321
+2026-03-14,French Fries,24,2856
+2026-03-14,Margherita Pizza,16,3984
+2026-03-14,Pasta Alfredo,14,3206
+2026-03-14,Chocolate Brownie,17,2193
+2026-03-14,Blueberry Muffin,17,1683
+2026-03-14,Croissant,21,2289
+2026-03-14,Cheesecake Slice,8,1272
+2026-03-15,Cappuccino,29,4321
+2026-03-15,Cafe Latte,33,5247
+2026-03-15,Espresso,13,1547
+2026-03-15,Masala Chai,37,2923
+2026-03-15,Cold Coffee,52,8788
+2026-03-15,Iced Latte,39,6981
+2026-03-15,Lemon Iced Tea,28,3612
+2026-03-15,Fresh Lime Soda,27,2673
+2026-03-15,Veg Sandwich,19,2641
+2026-03-15,Grilled Cheese Sandwich,22,3498
+2026-03-15,Veg Burger,22,3278
+2026-03-15,French Fries,31,3689
+2026-03-15,Margherita Pizza,15,3735
+2026-03-15,Pasta Alfredo,14,3206
+2026-03-15,Chocolate Brownie,19,2451
+2026-03-15,Blueberry Muffin,13,1287
+2026-03-15,Croissant,13,1417
+2026-03-15,Cheesecake Slice,13,2067
+2026-03-16,Cappuccino,30,4470
+2026-03-16,Cafe Latte,20,3180
+2026-03-16,Espresso,12,1428
+2026-03-16,Masala Chai,30,2370
+2026-03-16,Cold Coffee,38,6422
+2026-03-16,Iced Latte,24,4296
+2026-03-16,Lemon Iced Tea,20,2580
+2026-03-16,Fresh Lime Soda,20,1980
+2026-03-16,Veg Sandwich,14,1946
+2026-03-16,Grilled Cheese Sandwich,10,1590
+2026-03-16,Veg Burger,16,2384
+2026-03-16,French Fries,13,1547
+2026-03-16,Margherita Pizza,10,2490
+2026-03-16,Pasta Alfredo,9,2061
+2026-03-16,Chocolate Brownie,16,2064
+2026-03-16,Blueberry Muffin,9,891
+2026-03-16,Croissant,12,1308
+2026-03-16,Cheesecake Slice,8,1272
+2026-03-17,Cappuccino,19,2831
+2026-03-17,Cafe Latte,14,2226
+2026-03-17,Espresso,8,952
+2026-03-17,Masala Chai,19,1501
+2026-03-17,Cold Coffee,35,5915
+2026-03-17,Iced Latte,21,3759
+2026-03-17,Lemon Iced Tea,20,2580
+2026-03-17,Fresh Lime Soda,16,1584
+2026-03-17,Veg Sandwich,15,2085
+2026-03-17,Grilled Cheese Sandwich,13,2067
+2026-03-17,Veg Burger,13,1937
+2026-03-17,French Fries,17,2023
+2026-03-17,Margherita Pizza,9,2241
+2026-03-17,Pasta Alfredo,6,1374
+2026-03-17,Chocolate Brownie,14,1806
+2026-03-17,Blueberry Muffin,10,990
+2026-03-17,Croissant,10,1090
+2026-03-17,Cheesecake Slice,7,1113
+2026-03-18,Cappuccino,30,4470
+2026-03-18,Cafe Latte,13,2067
+2026-03-18,Espresso,11,1309
+2026-03-18,Masala Chai,28,2212
+2026-03-18,Cold Coffee,32,5408
+2026-03-18,Iced Latte,30,5370
+2026-03-18,Lemon Iced Tea,24,3096
+2026-03-18,Fresh Lime Soda,18,1782
+2026-03-18,Veg Sandwich,15,2085
+2026-03-18,Grilled Cheese Sandwich,12,1908
+2026-03-18,Veg Burger,15,2235
+2026-03-18,French Fries,16,1904
+2026-03-18,Margherita Pizza,14,3486
+2026-03-18,Pasta Alfredo,11,2519
+2026-03-18,Chocolate Brownie,16,2064
+2026-03-18,Blueberry Muffin,8,792
+2026-03-18,Croissant,15,1635
+2026-03-18,Cheesecake Slice,11,1749
+2026-03-19,Cappuccino,28,4172
+2026-03-19,Cafe Latte,18,2862
+2026-03-19,Espresso,10,1190
+2026-03-19,Masala Chai,31,2449
+2026-03-19,Cold Coffee,32,5408
+2026-03-19,Iced Latte,26,4654
+2026-03-19,Lemon Iced Tea,25,3225
+2026-03-19,Fresh Lime Soda,15,1485
+2026-03-19,Veg Sandwich,21,2919
+2026-03-19,Grilled Cheese Sandwich,17,2703
+2026-03-19,Veg Burger,14,2086
+2026-03-19,French Fries,17,2023
+2026-03-19,Margherita Pizza,11,2739
+2026-03-19,Pasta Alfredo,8,1832
+2026-03-19,Chocolate Brownie,14,1806
+2026-03-19,Blueberry Muffin,6,594
+2026-03-19,Croissant,11,1199
+2026-03-19,Cheesecake Slice,11,1749
+2026-03-20,Cappuccino,27,4023
+2026-03-20,Cafe Latte,25,3975
+2026-03-20,Espresso,11,1309
+2026-03-20,Masala Chai,39,3081
+2026-03-20,Cold Coffee,44,7436
+2026-03-20,Iced Latte,41,7339
+2026-03-20,Lemon Iced Tea,27,3483
+2026-03-20,Fresh Lime Soda,22,2178
+2026-03-20,Veg Sandwich,21,2919
+2026-03-20,Grilled Cheese Sandwich,15,2385
+2026-03-20,Veg Burger,17,2533
+2026-03-20,French Fries,27,3213
+2026-03-20,Margherita Pizza,14,3486
+2026-03-20,Pasta Alfredo,12,2748
+2026-03-20,Chocolate Brownie,19,2451
+2026-03-20,Blueberry Muffin,11,1089
+2026-03-20,Croissant,15,1635
+2026-03-20,Cheesecake Slice,14,2226
+2026-03-21,Cappuccino,32,4768
+2026-03-21,Cafe Latte,39,6201
+2026-03-21,Espresso,16,1904
+2026-03-21,Masala Chai,36,2844
+2026-03-21,Cold Coffee,75,12675
+2026-03-21,Iced Latte,38,6802
+2026-03-21,Lemon Iced Tea,38,4902
+2026-03-21,Fresh Lime Soda,31,3069
+2026-03-21,Veg Sandwich,16,2224
+2026-03-21,Grilled Cheese Sandwich,20,3180
+2026-03-21,Veg Burger,23,3427
+2026-03-21,French Fries,24,2856
+2026-03-21,Margherita Pizza,12,2988
+2026-03-21,Pasta Alfredo,14,3206
+2026-03-21,Chocolate Brownie,23,2967
+2026-03-21,Blueberry Muffin,15,1485
+2026-03-21,Croissant,16,1744
+2026-03-21,Cheesecake Slice,11,1749
+2026-03-22,Cappuccino,31,4619
+2026-03-22,Cafe Latte,27,4293
+2026-03-22,Espresso,13,1547
+2026-03-22,Masala Chai,39,3081
+2026-03-22,Cold Coffee,52,8788
+2026-03-22,Iced Latte,31,5549
+2026-03-22,Lemon Iced Tea,29,3741
+2026-03-22,Fresh Lime Soda,24,2376
+2026-03-22,Veg Sandwich,21,2919
+2026-03-22,Grilled Cheese Sandwich,20,3180
+2026-03-22,Veg Burger,25,3725
+2026-03-22,French Fries,32,3808
+2026-03-22,Margherita Pizza,12,2988
+2026-03-22,Pasta Alfredo,13,2977
+2026-03-22,Chocolate Brownie,21,2709
+2026-03-22,Blueberry Muffin,15,1485
+2026-03-22,Croissant,12,1308
+2026-03-22,Cheesecake Slice,12,1908
+2026-03-23,Cappuccino,29,4321
+2026-03-23,Cafe Latte,19,3021
+2026-03-23,Espresso,10,1190
+2026-03-23,Masala Chai,28,2212
+2026-03-23,Cold Coffee,36,6084
+2026-03-23,Iced Latte,26,4654
+2026-03-23,Lemon Iced Tea,20,2580
+2026-03-23,Fresh Lime Soda,18,1782
+2026-03-23,Veg Sandwich,12,1668
+2026-03-23,Grilled Cheese Sandwich,12,1908
+2026-03-23,Veg Burger,19,2831
+2026-03-23,French Fries,19,2261
+2026-03-23,Margherita Pizza,10,2490
+2026-03-23,Pasta Alfredo,8,1832
+2026-03-23,Chocolate Brownie,15,1935
+2026-03-23,Blueberry Muffin,8,792
+2026-03-23,Croissant,12,1308
+2026-03-23,Cheesecake Slice,7,1113
+2026-03-24,Cappuccino,19,2831
+2026-03-24,Cafe Latte,19,3021
+2026-03-24,Espresso,10,1190
+2026-03-24,Masala Chai,26,2054
+2026-03-24,Cold Coffee,38,6422
+2026-03-24,Iced Latte,21,3759
+2026-03-24,Lemon Iced Tea,20,2580
+2026-03-24,Fresh Lime Soda,14,1386
+2026-03-24,Veg Sandwich,16,2224
+2026-03-24,Grilled Cheese Sandwich,13,2067
+2026-03-24,Veg Burger,16,2384
+2026-03-24,French Fries,19,2261
+2026-03-24,Margherita Pizza,9,2241
+2026-03-24,Pasta Alfredo,8,1832
+2026-03-24,Chocolate Brownie,13,1677
+2026-03-24,Blueberry Muffin,8,792
+2026-03-24,Croissant,10,1090
+2026-03-24,Cheesecake Slice,6,954
+2026-03-25,Cappuccino,27,4023
+2026-03-25,Cafe Latte,18,2862
+2026-03-25,Espresso,9,1071
+2026-03-25,Masala Chai,27,2133
+2026-03-25,Cold Coffee,26,4394
+2026-03-25,Iced Latte,28,5012
+2026-03-25,Lemon Iced Tea,24,3096
+2026-03-25,Fresh Lime Soda,19,1881
+2026-03-25,Veg Sandwich,12,1668
+2026-03-25,Grilled Cheese Sandwich,11,1749
+2026-03-25,Veg Burger,16,2384
+2026-03-25,French Fries,12,1428
+2026-03-25,Margherita Pizza,11,2739
+2026-03-25,Pasta Alfredo,10,2290
+2026-03-25,Chocolate Brownie,13,1677
+2026-03-25,Blueberry Muffin,9,891
+2026-03-25,Croissant,11,1199
+2026-03-25,Cheesecake Slice,9,1431
+2026-03-26,Cappuccino,32,4768
+2026-03-26,Cafe Latte,22,3498
+2026-03-26,Espresso,10,1190
+2026-03-26,Masala Chai,27,2133
+2026-03-26,Cold Coffee,40,6760
+2026-03-26,Iced Latte,33,5907
+2026-03-26,Lemon Iced Tea,21,2709
+2026-03-26,Fresh Lime Soda,17,1683
+2026-03-26,Veg Sandwich,13,1807
+2026-03-26,Grilled Cheese Sandwich,9,1431
+2026-03-26,Veg Burger,19,2831
+2026-03-26,French Fries,17,2023
+2026-03-26,Margherita Pizza,9,2241
+2026-03-26,Pasta Alfredo,7,1603
+2026-03-26,Chocolate Brownie,12,1548
+2026-03-26,Blueberry Muffin,11,1089
+2026-03-26,Croissant,9,981
+2026-03-26,Cheesecake Slice,6,954
+2026-03-27,Cappuccino,34,5066
+2026-03-27,Cafe Latte,25,3975
+2026-03-27,Espresso,15,1785
+2026-03-27,Masala Chai,40,3160
+2026-03-27,Cold Coffee,47,7943
+2026-03-27,Iced Latte,26,4654
+2026-03-27,Lemon Iced Tea,26,3354
+2026-03-27,Fresh Lime Soda,26,2574
+2026-03-27,Veg Sandwich,17,2363
+2026-03-27,Grilled Cheese Sandwich,13,2067
+2026-03-27,Veg Burger,25,3725
+2026-03-27,French Fries,24,2856
+2026-03-27,Margherita Pizza,13,3237
+2026-03-27,Pasta Alfredo,12,2748
+2026-03-27,Chocolate Brownie,21,2709
+2026-03-27,Blueberry Muffin,12,1188
+2026-03-27,Croissant,13,1417
+2026-03-27,Cheesecake Slice,12,1908
+2026-03-28,Cappuccino,52,7748
+2026-03-28,Cafe Latte,37,5883
+2026-03-28,Espresso,19,2261
+2026-03-28,Masala Chai,34,2686
+2026-03-28,Cold Coffee,89,15041
+2026-03-28,Iced Latte,31,5549
+2026-03-28,Lemon Iced Tea,30,3870
+2026-03-28,Fresh Lime Soda,25,2475
+2026-03-28,Veg Sandwich,28,3892
+2026-03-28,Grilled Cheese Sandwich,21,3339
+2026-03-28,Veg Burger,19,2831
+2026-03-28,French Fries,32,3808
+2026-03-28,Margherita Pizza,18,4482
+2026-03-28,Pasta Alfredo,13,2977
+2026-03-28,Chocolate Brownie,17,2193
+2026-03-28,Blueberry Muffin,12,1188
+2026-03-28,Croissant,16,1744
+2026-03-28,Cheesecake Slice,13,2067
+2026-03-29,Cappuccino,34,5066
+2026-03-29,Cafe Latte,33,5247
+2026-03-29,Espresso,14,1666
+2026-03-29,Masala Chai,29,2291
+2026-03-29,Cold Coffee,47,7943
+2026-03-29,Iced Latte,45,8055
+2026-03-29,Lemon Iced Tea,28,3612
+2026-03-29,Fresh Lime Soda,38,3762
+2026-03-29,Veg Sandwich,23,3197
+2026-03-29,Grilled Cheese Sandwich,15,2385
+2026-03-29,Veg Burger,21,3129
+2026-03-29,French Fries,31,3689
+2026-03-29,Margherita Pizza,13,3237
+2026-03-29,Pasta Alfredo,19,4351
+2026-03-29,Chocolate Brownie,17,2193
+2026-03-29,Blueberry Muffin,15,1485
+2026-03-29,Croissant,20,2180
+2026-03-29,Cheesecake Slice,12,1908
+2026-03-30,Cappuccino,21,3129
+2026-03-30,Cafe Latte,18,2862
+2026-03-30,Espresso,11,1309
+2026-03-30,Masala Chai,30,2370
+2026-03-30,Cold Coffee,36,6084
+2026-03-30,Iced Latte,19,3401
+2026-03-30,Lemon Iced Tea,20,2580
+2026-03-30,Fresh Lime Soda,16,1584
+2026-03-30,Veg Sandwich,9,1251
+2026-03-30,Grilled Cheese Sandwich,11,1749
+2026-03-30,Veg Burger,12,1788
+2026-03-30,French Fries,21,2499
+2026-03-30,Margherita Pizza,14,3486
+2026-03-30,Pasta Alfredo,11,2519
+2026-03-30,Chocolate Brownie,12,1548
+2026-03-30,Blueberry Muffin,8,792
+2026-03-30,Croissant,12,1308
+2026-03-30,Cheesecake Slice,9,1431
+2026-03-31,Cappuccino,22,3278
+2026-03-31,Cafe Latte,18,2862
+2026-03-31,Espresso,13,1547
+2026-03-31,Masala Chai,24,1896
+2026-03-31,Cold Coffee,31,5239
+2026-03-31,Iced Latte,23,4117
+2026-03-31,Lemon Iced Tea,21,2709
+2026-03-31,Fresh Lime Soda,14,1386
+2026-03-31,Veg Sandwich,13,1807
+2026-03-31,Grilled Cheese Sandwich,9,1431
+2026-03-31,Veg Burger,14,2086
+2026-03-31,French Fries,24,2856
+2026-03-31,Margherita Pizza,11,2739
+2026-03-31,Pasta Alfredo,8,1832
+2026-03-31,Chocolate Brownie,11,1419
+2026-03-31,Blueberry Muffin,8,792
+2026-03-31,Croissant,12,1308
+2026-03-31,Cheesecake Slice,7,1113
+2026-04-01,Cappuccino,32,4768
+2026-04-01,Cafe Latte,16,2544
+2026-04-01,Espresso,11,1309
+2026-04-01,Masala Chai,36,2844
+2026-04-01,Cold Coffee,26,4394
+2026-04-01,Iced Latte,31,5549
+2026-04-01,Lemon Iced Tea,15,1935
+2026-04-01,Fresh Lime Soda,19,1881
+2026-04-01,Veg Sandwich,14,1946
+2026-04-01,Grilled Cheese Sandwich,15,2385
+2026-04-01,Veg Burger,8,1192
+2026-04-01,French Fries,14,1666
+2026-04-01,Margherita Pizza,10,2490
+2026-04-01,Pasta Alfredo,9,2061
+2026-04-01,Chocolate Brownie,12,1548
+2026-04-01,Blueberry Muffin,9,891
+2026-04-01,Croissant,9,981
+2026-04-01,Cheesecake Slice,8,1272
+2026-04-02,Cappuccino,24,3576
+2026-04-02,Cafe Latte,22,3498
+2026-04-02,Espresso,13,1547
+2026-04-02,Masala Chai,36,2844
+2026-04-02,Cold Coffee,36,6084
+2026-04-02,Iced Latte,26,4654
+2026-04-02,Lemon Iced Tea,23,2967
+2026-04-02,Fresh Lime Soda,20,1980
+2026-04-02,Veg Sandwich,16,2224
+2026-04-02,Grilled Cheese Sandwich,10,1590
+2026-04-02,Veg Burger,19,2831
+2026-04-02,French Fries,18,2142
+2026-04-02,Margherita Pizza,10,2490
+2026-04-02,Pasta Alfredo,7,1603
+2026-04-02,Chocolate Brownie,18,2322
+2026-04-02,Blueberry Muffin,10,990
+2026-04-02,Croissant,14,1526
+2026-04-02,Cheesecake Slice,9,1431
+2026-04-03,Cappuccino,24,3576
+2026-04-03,Cafe Latte,22,3498
+2026-04-03,Espresso,16,1904
+2026-04-03,Masala Chai,31,2449
+2026-04-03,Cold Coffee,40,6760
+2026-04-03,Iced Latte,32,5728
+2026-04-03,Lemon Iced Tea,27,3483
+2026-04-03,Fresh Lime Soda,21,2079
+2026-04-03,Veg Sandwich,18,2502
+2026-04-03,Grilled Cheese Sandwich,15,2385
+2026-04-03,Veg Burger,13,1937
+2026-04-03,French Fries,28,3332
+2026-04-03,Margherita Pizza,12,2988
+2026-04-03,Pasta Alfredo,14,3206
+2026-04-03,Chocolate Brownie,15,1935
+2026-04-03,Blueberry Muffin,9,891
+2026-04-03,Croissant,17,1853
+2026-04-03,Cheesecake Slice,8,1272
+2026-04-04,Cappuccino,35,5215
+2026-04-04,Cafe Latte,34,5406
+2026-04-04,Espresso,16,1904
+2026-04-04,Masala Chai,31,2449
+2026-04-04,Cold Coffee,59,9971
+2026-04-04,Iced Latte,38,6802
+2026-04-04,Lemon Iced Tea,39,5031
+2026-04-04,Fresh Lime Soda,32,3168
+2026-04-04,Veg Sandwich,33,4587
+2026-04-04,Grilled Cheese Sandwich,14,2226
+2026-04-04,Veg Burger,25,3725
+2026-04-04,French Fries,26,3094
+2026-04-04,Margherita Pizza,20,4980
+2026-04-04,Pasta Alfredo,16,3664
+2026-04-04,Chocolate Brownie,24,3096
+2026-04-04,Blueberry Muffin,12,1188
+2026-04-04,Croissant,15,1635
+2026-04-04,Cheesecake Slice,9,1431
+2026-04-05,Cappuccino,48,7152
+2026-04-05,Cafe Latte,32,5088
+2026-04-05,Espresso,16,1904
+2026-04-05,Masala Chai,47,3713
+2026-04-05,Cold Coffee,62,10478
+2026-04-05,Iced Latte,44,7876
+2026-04-05,Lemon Iced Tea,23,2967
+2026-04-05,Fresh Lime Soda,25,2475
+2026-04-05,Veg Sandwich,22,3058
+2026-04-05,Grilled Cheese Sandwich,20,3180
+2026-04-05,Veg Burger,28,4172
+2026-04-05,French Fries,25,2975
+2026-04-05,Margherita Pizza,17,4233
+2026-04-05,Pasta Alfredo,18,4122
+2026-04-05,Chocolate Brownie,22,2838
+2026-04-05,Blueberry Muffin,15,1485
+2026-04-05,Croissant,16,1744
+2026-04-05,Cheesecake Slice,14,2226
+2026-04-06,Cappuccino,32,4768
+2026-04-06,Cafe Latte,20,3180
+2026-04-06,Espresso,13,1547
+2026-04-06,Masala Chai,23,1817
+2026-04-06,Cold Coffee,40,6760
+2026-04-06,Iced Latte,28,5012
+2026-04-06,Lemon Iced Tea,18,2322
+2026-04-06,Fresh Lime Soda,22,2178
+2026-04-06,Veg Sandwich,13,1807
+2026-04-06,Grilled Cheese Sandwich,11,1749
+2026-04-06,Veg Burger,16,2384
+2026-04-06,French Fries,25,2975
+2026-04-06,Margherita Pizza,11,2739
+2026-04-06,Pasta Alfredo,10,2290
+2026-04-06,Chocolate Brownie,12,1548
+2026-04-06,Blueberry Muffin,9,891
+2026-04-06,Croissant,9,981
+2026-04-06,Cheesecake Slice,7,1113
+2026-04-07,Cappuccino,26,3874
+2026-04-07,Cafe Latte,18,2862
+2026-04-07,Espresso,12,1428
+2026-04-07,Masala Chai,24,1896
+2026-04-07,Cold Coffee,33,5577
+2026-04-07,Iced Latte,28,5012
+2026-04-07,Lemon Iced Tea,18,2322
+2026-04-07,Fresh Lime Soda,13,1287
+2026-04-07,Veg Sandwich,16,2224
+2026-04-07,Grilled Cheese Sandwich,12,1908
+2026-04-07,Veg Burger,10,1490
+2026-04-07,French Fries,18,2142
+2026-04-07,Margherita Pizza,9,2241
+2026-04-07,Pasta Alfredo,11,2519
+2026-04-07,Chocolate Brownie,11,1419
+2026-04-07,Blueberry Muffin,8,792
+2026-04-07,Croissant,9,981
+2026-04-07,Cheesecake Slice,6,954
+2026-04-08,Cappuccino,23,3427
+2026-04-08,Cafe Latte,16,2544
+2026-04-08,Espresso,9,1071
+2026-04-08,Masala Chai,21,1659
+2026-04-08,Cold Coffee,29,4901
+2026-04-08,Iced Latte,20,3580
+2026-04-08,Lemon Iced Tea,20,2580
+2026-04-08,Fresh Lime Soda,18,1782
+2026-04-08,Veg Sandwich,12,1668
+2026-04-08,Grilled Cheese Sandwich,14,2226
+2026-04-08,Veg Burger,17,2533
+2026-04-08,French Fries,19,2261
+2026-04-08,Margherita Pizza,10,2490
+2026-04-08,Pasta Alfredo,12,2748
+2026-04-08,Chocolate Brownie,15,1935
+2026-04-08,Blueberry Muffin,10,990
+2026-04-08,Croissant,7,763
+2026-04-08,Cheesecake Slice,8,1272
+2026-04-09,Cappuccino,18,2682
+2026-04-09,Cafe Latte,20,3180
+2026-04-09,Espresso,13,1547
+2026-04-09,Masala Chai,26,2054
+2026-04-09,Cold Coffee,44,7436
+2026-04-09,Iced Latte,23,4117
+2026-04-09,Lemon Iced Tea,26,3354
+2026-04-09,Fresh Lime Soda,16,1584
+2026-04-09,Veg Sandwich,15,2085
+2026-04-09,Grilled Cheese Sandwich,15,2385
+2026-04-09,Veg Burger,19,2831
+2026-04-09,French Fries,21,2499
+2026-04-09,Margherita Pizza,16,3984
+2026-04-09,Pasta Alfredo,9,2061
+2026-04-09,Chocolate Brownie,14,1806
+2026-04-09,Blueberry Muffin,6,594
+2026-04-09,Croissant,15,1635
+2026-04-09,Cheesecake Slice,8,1272
+2026-04-10,Cappuccino,27,4023
+2026-04-10,Cafe Latte,32,5088
+2026-04-10,Espresso,17,2023
+2026-04-10,Masala Chai,37,2923
+2026-04-10,Cold Coffee,38,6422
+2026-04-10,Iced Latte,36,6444
+2026-04-10,Lemon Iced Tea,26,3354
+2026-04-10,Fresh Lime Soda,21,2079
+2026-04-10,Veg Sandwich,22,3058
+2026-04-10,Grilled Cheese Sandwich,11,1749
+2026-04-10,Veg Burger,24,3576
+2026-04-10,French Fries,28,3332
+2026-04-10,Margherita Pizza,19,4731
+2026-04-10,Pasta Alfredo,13,2977
+2026-04-10,Chocolate Brownie,12,1548
+2026-04-10,Blueberry Muffin,10,990
+2026-04-10,Croissant,15,1635
+2026-04-10,Cheesecake Slice,11,1749
+2026-04-11,Cappuccino,46,6854
+2026-04-11,Cafe Latte,21,3339
+2026-04-11,Espresso,16,1904
+2026-04-11,Masala Chai,49,3871
+2026-04-11,Cold Coffee,73,12337
+2026-04-11,Iced Latte,52,9308
+2026-04-11,Lemon Iced Tea,31,3999
+2026-04-11,Fresh Lime Soda,35,3465
+2026-04-11,Veg Sandwich,29,4031
+2026-04-11,Grilled Cheese Sandwich,23,3657
+2026-04-11,Veg Burger,28,4172
+2026-04-11,French Fries,35,4165
+2026-04-11,Margherita Pizza,15,3735
+2026-04-11,Pasta Alfredo,11,2519
+2026-04-11,Chocolate Brownie,24,3096
+2026-04-11,Blueberry Muffin,13,1287
+2026-04-11,Croissant,17,1853
+2026-04-11,Cheesecake Slice,12,1908
+2026-04-12,Cappuccino,36,5364
+2026-04-12,Cafe Latte,31,4929
+2026-04-12,Espresso,14,1666
+2026-04-12,Masala Chai,41,3239
+2026-04-12,Cold Coffee,59,9971
+2026-04-12,Iced Latte,38,6802
+2026-04-12,Lemon Iced Tea,29,3741
+2026-04-12,Fresh Lime Soda,33,3267
+2026-04-12,Veg Sandwich,28,3892
+2026-04-12,Grilled Cheese Sandwich,17,2703
+2026-04-12,Veg Burger,29,4321
+2026-04-12,French Fries,34,4046
+2026-04-12,Margherita Pizza,9,2241
+2026-04-12,Pasta Alfredo,12,2748
+2026-04-12,Chocolate Brownie,18,2322
+2026-04-12,Blueberry Muffin,15,1485
+2026-04-12,Croissant,17,1853
+2026-04-12,Cheesecake Slice,13,2067
+2026-04-13,Cappuccino,27,4023
+2026-04-13,Cafe Latte,17,2703
+2026-04-13,Espresso,9,1071
+2026-04-13,Masala Chai,21,1659
+2026-04-13,Cold Coffee,36,6084
+2026-04-13,Iced Latte,25,4475
+2026-04-13,Lemon Iced Tea,22,2838
+2026-04-13,Fresh Lime Soda,17,1683
+2026-04-13,Veg Sandwich,16,2224
+2026-04-13,Grilled Cheese Sandwich,14,2226
+2026-04-13,Veg Burger,20,2980
+2026-04-13,French Fries,22,2618
+2026-04-13,Margherita Pizza,11,2739
+2026-04-13,Pasta Alfredo,10,2290
+2026-04-13,Chocolate Brownie,15,1935
+2026-04-13,Blueberry Muffin,8,792
+2026-04-13,Croissant,13,1417
+2026-04-13,Cheesecake Slice,10,1590
+2026-04-14,Cappuccino,31,4619
+2026-04-14,Cafe Latte,19,3021
+2026-04-14,Espresso,11,1309
+2026-04-14,Masala Chai,27,2133
+2026-04-14,Cold Coffee,35,5915
+2026-04-14,Iced Latte,26,4654
+2026-04-14,Lemon Iced Tea,20,2580
+2026-04-14,Fresh Lime Soda,17,1683
+2026-04-14,Veg Sandwich,17,2363
+2026-04-14,Grilled Cheese Sandwich,12,1908
+2026-04-14,Veg Burger,15,2235
+2026-04-14,French Fries,21,2499
+2026-04-14,Margherita Pizza,10,2490
+2026-04-14,Pasta Alfredo,9,2061
+2026-04-14,Chocolate Brownie,12,1548
+2026-04-14,Blueberry Muffin,7,693
+2026-04-14,Croissant,10,1090
+2026-04-14,Cheesecake Slice,6,954
+2026-04-15,Cappuccino,27,4023
+2026-04-15,Cafe Latte,17,2703
+2026-04-15,Espresso,13,1547
+2026-04-15,Masala Chai,32,2528
+2026-04-15,Cold Coffee,41,6929
+2026-04-15,Iced Latte,27,4833
+2026-04-15,Lemon Iced Tea,24,3096
+2026-04-15,Fresh Lime Soda,14,1386
+2026-04-15,Veg Sandwich,12,1668
+2026-04-15,Grilled Cheese Sandwich,13,2067
+2026-04-15,Veg Burger,18,2682
+2026-04-15,French Fries,20,2380
+2026-04-15,Margherita Pizza,9,2241
+2026-04-15,Pasta Alfredo,10,2290
+2026-04-15,Chocolate Brownie,13,1677
+2026-04-15,Blueberry Muffin,8,792
+2026-04-15,Croissant,12,1308
+2026-04-15,Cheesecake Slice,8,1272
+2026-04-16,Cappuccino,33,4917
+2026-04-16,Cafe Latte,24,3816
+2026-04-16,Espresso,13,1547
+2026-04-16,Masala Chai,31,2449
+2026-04-16,Cold Coffee,36,6084
+2026-04-16,Iced Latte,24,4296
+2026-04-16,Lemon Iced Tea,18,2322
+2026-04-16,Fresh Lime Soda,32,3168
+2026-04-16,Veg Sandwich,13,1807
+2026-04-16,Grilled Cheese Sandwich,13,2067
+2026-04-16,Veg Burger,17,2533
+2026-04-16,French Fries,21,2499
+2026-04-16,Margherita Pizza,11,2739
+2026-04-16,Pasta Alfredo,7,1603
+2026-04-16,Chocolate Brownie,13,1677
+2026-04-16,Blueberry Muffin,8,792
+2026-04-16,Croissant,12,1308
+2026-04-16,Cheesecake Slice,8,1272
+2026-04-17,Cappuccino,30,4470
+2026-04-17,Cafe Latte,27,4293
+2026-04-17,Espresso,13,1547
+2026-04-17,Masala Chai,42,3318
+2026-04-17,Cold Coffee,48,8112
+2026-04-17,Iced Latte,36,6444
+2026-04-17,Lemon Iced Tea,23,2967
+2026-04-17,Fresh Lime Soda,29,2871
+2026-04-17,Veg Sandwich,18,2502
+2026-04-17,Grilled Cheese Sandwich,18,2862
+2026-04-17,Veg Burger,23,3427
+2026-04-17,French Fries,26,3094
+2026-04-17,Margherita Pizza,15,3735
+2026-04-17,Pasta Alfredo,11,2519
+2026-04-17,Chocolate Brownie,22,2838
+2026-04-17,Blueberry Muffin,14,1386
+2026-04-17,Croissant,16,1744
+2026-04-17,Cheesecake Slice,9,1431
+2026-04-18,Cappuccino,33,4917
+2026-04-18,Cafe Latte,28,4452
+2026-04-18,Espresso,16,1904
+2026-04-18,Masala Chai,46,3634
+2026-04-18,Cold Coffee,51,8619
+2026-04-18,Iced Latte,49,8771
+2026-04-18,Lemon Iced Tea,34,4386
+2026-04-18,Fresh Lime Soda,21,2079
+2026-04-18,Veg Sandwich,21,2919
+2026-04-18,Grilled Cheese Sandwich,12,1908
+2026-04-18,Veg Burger,22,3278
+2026-04-18,French Fries,28,3332
+2026-04-18,Margherita Pizza,15,3735
+2026-04-18,Pasta Alfredo,13,2977
+2026-04-18,Chocolate Brownie,20,2580
+2026-04-18,Blueberry Muffin,13,1287
+2026-04-18,Croissant,21,2289
+2026-04-18,Cheesecake Slice,15,2385
+2026-04-19,Cappuccino,31,4619
+2026-04-19,Cafe Latte,36,5724
+2026-04-19,Espresso,12,1428
+2026-04-19,Masala Chai,36,2844
+2026-04-19,Cold Coffee,72,12168
+2026-04-19,Iced Latte,26,4654
+2026-04-19,Lemon Iced Tea,36,4644
+2026-04-19,Fresh Lime Soda,24,2376
+2026-04-19,Veg Sandwich,21,2919
+2026-04-19,Grilled Cheese Sandwich,19,3021
+2026-04-19,Veg Burger,31,4619
+2026-04-19,French Fries,26,3094
+2026-04-19,Margherita Pizza,16,3984
+2026-04-19,Pasta Alfredo,15,3435
+2026-04-19,Chocolate Brownie,20,2580
+2026-04-19,Blueberry Muffin,12,1188
+2026-04-19,Croissant,16,1744
+2026-04-19,Cheesecake Slice,12,1908
+2026-04-20,Cappuccino,29,4321
+2026-04-20,Cafe Latte,17,2703
+2026-04-20,Espresso,10,1190
+2026-04-20,Masala Chai,28,2212
+2026-04-20,Cold Coffee,37,6253
+2026-04-20,Iced Latte,25,4475
+2026-04-20,Lemon Iced Tea,22,2838
+2026-04-20,Fresh Lime Soda,17,1683
+2026-04-20,Veg Sandwich,12,1668
+2026-04-20,Grilled Cheese Sandwich,13,2067
+2026-04-20,Veg Burger,13,1937
+2026-04-20,French Fries,23,2737
+2026-04-20,Margherita Pizza,11,2739
+2026-04-20,Pasta Alfredo,7,1603
+2026-04-20,Chocolate Brownie,14,1806
+2026-04-20,Blueberry Muffin,9,891
+2026-04-20,Croissant,12,1308
+2026-04-20,Cheesecake Slice,10,1590
+2026-04-21,Cappuccino,22,3278
+2026-04-21,Cafe Latte,16,2544
+2026-04-21,Espresso,9,1071
+2026-04-21,Masala Chai,21,1659
+2026-04-21,Cold Coffee,32,5408
+2026-04-21,Iced Latte,26,4654
+2026-04-21,Lemon Iced Tea,21,2709
+2026-04-21,Fresh Lime Soda,17,1683
+2026-04-21,Veg Sandwich,12,1668
+2026-04-21,Grilled Cheese Sandwich,12,1908
+2026-04-21,Veg Burger,14,2086
+2026-04-21,French Fries,15,1785
+2026-04-21,Margherita Pizza,10,2490
+2026-04-21,Pasta Alfredo,8,1832
+2026-04-21,Chocolate Brownie,10,1290
+2026-04-21,Blueberry Muffin,10,990
+2026-04-21,Croissant,11,1199
+2026-04-21,Cheesecake Slice,8,1272
+2026-04-22,Cappuccino,27,4023
+2026-04-22,Cafe Latte,23,3657
+2026-04-22,Espresso,11,1309
+2026-04-22,Masala Chai,32,2528
+2026-04-22,Cold Coffee,51,8619
+2026-04-22,Iced Latte,28,5012
+2026-04-22,Lemon Iced Tea,25,3225
+2026-04-22,Fresh Lime Soda,24,2376
+2026-04-22,Veg Sandwich,14,1946
+2026-04-22,Grilled Cheese Sandwich,11,1749
+2026-04-22,Veg Burger,20,2980
+2026-04-22,French Fries,16,1904
+2026-04-22,Margherita Pizza,15,3735
+2026-04-22,Pasta Alfredo,11,2519
+2026-04-22,Chocolate Brownie,15,1935
+2026-04-22,Blueberry Muffin,10,990
+2026-04-22,Croissant,15,1635
+2026-04-22,Cheesecake Slice,7,1113
+2026-04-23,Cappuccino,23,3427
+2026-04-23,Cafe Latte,20,3180
+2026-04-23,Espresso,11,1309
+2026-04-23,Masala Chai,25,1975
+2026-04-23,Cold Coffee,44,7436
+2026-04-23,Iced Latte,30,5370
+2026-04-23,Lemon Iced Tea,21,2709
+2026-04-23,Fresh Lime Soda,28,2772
+2026-04-23,Veg Sandwich,12,1668
+2026-04-23,Grilled Cheese Sandwich,11,1749
+2026-04-23,Veg Burger,19,2831
+2026-04-23,French Fries,21,2499
+2026-04-23,Margherita Pizza,13,3237
+2026-04-23,Pasta Alfredo,9,2061
+2026-04-23,Chocolate Brownie,13,1677
+2026-04-23,Blueberry Muffin,9,891
+2026-04-23,Croissant,11,1199
+2026-04-23,Cheesecake Slice,10,1590
+2026-04-24,Cappuccino,31,4619
+2026-04-24,Cafe Latte,30,4770
+2026-04-24,Espresso,16,1904
+2026-04-24,Masala Chai,42,3318
+2026-04-24,Cold Coffee,60,10140
+2026-04-24,Iced Latte,40,7160
+2026-04-24,Lemon Iced Tea,34,4386
+2026-04-24,Fresh Lime Soda,25,2475
+2026-04-24,Veg Sandwich,19,2641
+2026-04-24,Grilled Cheese Sandwich,12,1908
+2026-04-24,Veg Burger,23,3427
+2026-04-24,French Fries,24,2856
+2026-04-24,Margherita Pizza,15,3735
+2026-04-24,Pasta Alfredo,13,2977
+2026-04-24,Chocolate Brownie,14,1806
+2026-04-24,Blueberry Muffin,10,990
+2026-04-24,Croissant,14,1526
+2026-04-24,Cheesecake Slice,10,1590
+2026-04-25,Cappuccino,41,6109
+2026-04-25,Cafe Latte,26,4134
+2026-04-25,Espresso,17,2023
+2026-04-25,Masala Chai,31,2449
+2026-04-25,Cold Coffee,40,6760
+2026-04-25,Iced Latte,47,8413
+2026-04-25,Lemon Iced Tea,28,3612
+2026-04-25,Fresh Lime Soda,29,2871
+2026-04-25,Veg Sandwich,18,2502
+2026-04-25,Grilled Cheese Sandwich,15,2385
+2026-04-25,Veg Burger,24,3576
+2026-04-25,French Fries,29,3451
+2026-04-25,Margherita Pizza,20,4980
+2026-04-25,Pasta Alfredo,15,3435
+2026-04-25,Chocolate Brownie,20,2580
+2026-04-25,Blueberry Muffin,16,1584
+2026-04-25,Croissant,20,2180
+2026-04-25,Cheesecake Slice,14,2226
+2026-04-26,Cappuccino,36,5364
+2026-04-26,Cafe Latte,35,5565
+2026-04-26,Espresso,21,2499
+2026-04-26,Masala Chai,46,3634
+2026-04-26,Cold Coffee,76,12844
+2026-04-26,Iced Latte,47,8413
+2026-04-26,Lemon Iced Tea,39,5031
+2026-04-26,Fresh Lime Soda,25,2475
+2026-04-26,Veg Sandwich,18,2502
+2026-04-26,Grilled Cheese Sandwich,19,3021
+2026-04-26,Veg Burger,18,2682
+2026-04-26,French Fries,27,3213
+2026-04-26,Margherita Pizza,19,4731
+2026-04-26,Pasta Alfredo,12,2748
+2026-04-26,Chocolate Brownie,22,2838
+2026-04-26,Blueberry Muffin,11,1089
+2026-04-26,Croissant,15,1635
+2026-04-26,Cheesecake Slice,14,2226
+2026-04-27,Cappuccino,26,3874
+2026-04-27,Cafe Latte,21,3339
+2026-04-27,Espresso,14,1666
+2026-04-27,Masala Chai,33,2607
+2026-04-27,Cold Coffee,34,5746
+2026-04-27,Iced Latte,32,5728
+2026-04-27,Lemon Iced Tea,20,2580
+2026-04-27,Fresh Lime Soda,20,1980
+2026-04-27,Veg Sandwich,14,1946
+2026-04-27,Grilled Cheese Sandwich,15,2385
+2026-04-27,Veg Burger,13,1937
+2026-04-27,French Fries,21,2499
+2026-04-27,Margherita Pizza,12,2988
+2026-04-27,Pasta Alfredo,10,2290
+2026-04-27,Chocolate Brownie,13,1677
+2026-04-27,Blueberry Muffin,10,990
+2026-04-27,Croissant,10,1090
+2026-04-27,Cheesecake Slice,10,1590
+2026-04-28,Cappuccino,25,3725
+2026-04-28,Cafe Latte,14,2226
+2026-04-28,Espresso,11,1309
+2026-04-28,Masala Chai,26,2054
+2026-04-28,Cold Coffee,35,5915
+2026-04-28,Iced Latte,22,3938
+2026-04-28,Lemon Iced Tea,20,2580
+2026-04-28,Fresh Lime Soda,15,1485
+2026-04-28,Veg Sandwich,17,2363
+2026-04-28,Grilled Cheese Sandwich,10,1590
+2026-04-28,Veg Burger,14,2086
+2026-04-28,French Fries,22,2618
+2026-04-28,Margherita Pizza,11,2739
+2026-04-28,Pasta Alfredo,9,2061
+2026-04-28,Chocolate Brownie,16,2064
+2026-04-28,Blueberry Muffin,8,792
+2026-04-28,Croissant,8,872
+2026-04-28,Cheesecake Slice,9,1431
+2026-04-29,Cappuccino,30,4470
+2026-04-29,Cafe Latte,20,3180
+2026-04-29,Espresso,9,1071
+2026-04-29,Masala Chai,34,2686
+2026-04-29,Cold Coffee,46,7774
+2026-04-29,Iced Latte,22,3938
+2026-04-29,Lemon Iced Tea,27,3483
+2026-04-29,Fresh Lime Soda,16,1584
+2026-04-29,Veg Sandwich,14,1946
+2026-04-29,Grilled Cheese Sandwich,11,1749
+2026-04-29,Veg Burger,15,2235
+2026-04-29,French Fries,18,2142
+2026-04-29,Margherita Pizza,10,2490
+2026-04-29,Pasta Alfredo,11,2519
+2026-04-29,Chocolate Brownie,15,1935
+2026-04-29,Blueberry Muffin,10,990
+2026-04-29,Croissant,13,1417
+2026-04-29,Cheesecake Slice,8,1272
+2026-04-30,Cappuccino,29,4321
+2026-04-30,Cafe Latte,24,3816
+2026-04-30,Espresso,15,1785
+2026-04-30,Masala Chai,35,2765
+2026-04-30,Cold Coffee,54,9126
+2026-04-30,Iced Latte,35,6265
+2026-04-30,Lemon Iced Tea,29,3741
+2026-04-30,Fresh Lime Soda,16,1584
+2026-04-30,Veg Sandwich,18,2502
+2026-04-30,Grilled Cheese Sandwich,15,2385
+2026-04-30,Veg Burger,18,2682
+2026-04-30,French Fries,20,2380
+2026-04-30,Margherita Pizza,11,2739
+2026-04-30,Pasta Alfredo,11,2519
+2026-04-30,Chocolate Brownie,17,2193
+2026-04-30,Blueberry Muffin,8,792
+2026-04-30,Croissant,12,1308
+2026-04-30,Cheesecake Slice,8,1272
+2026-05-01,Cappuccino,29,4321
+2026-05-01,Cafe Latte,28,4452
+2026-05-01,Espresso,14,1666
+2026-05-01,Masala Chai,33,2607
+2026-05-01,Cold Coffee,47,7943
+2026-05-01,Iced Latte,38,6802
+2026-05-01,Lemon Iced Tea,31,3999
+2026-05-01,Fresh Lime Soda,23,2277
+2026-05-01,Veg Sandwich,17,2363
+2026-05-01,Grilled Cheese Sandwich,17,2703
+2026-05-01,Veg Burger,23,3427
+2026-05-01,French Fries,22,2618
+2026-05-01,Margherita Pizza,16,3984
+2026-05-01,Pasta Alfredo,11,2519
+2026-05-01,Chocolate Brownie,26,3354
+2026-05-01,Blueberry Muffin,10,990
+2026-05-01,Croissant,13,1417
+2026-05-01,Cheesecake Slice,11,1749
+2026-05-02,Cappuccino,34,5066
+2026-05-02,Cafe Latte,36,5724
+2026-05-02,Espresso,22,2618
+2026-05-02,Masala Chai,40,3160
+2026-05-02,Cold Coffee,65,10985
+2026-05-02,Iced Latte,40,7160
+2026-05-02,Lemon Iced Tea,36,4644
+2026-05-02,Fresh Lime Soda,40,3960
+2026-05-02,Veg Sandwich,26,3614
+2026-05-02,Grilled Cheese Sandwich,17,2703
+2026-05-02,Veg Burger,32,4768
+2026-05-02,French Fries,37,4403
+2026-05-02,Margherita Pizza,19,4731
+2026-05-02,Pasta Alfredo,13,2977
+2026-05-02,Chocolate Brownie,22,2838
+2026-05-02,Blueberry Muffin,12,1188
+2026-05-02,Croissant,18,1962
+2026-05-02,Cheesecake Slice,12,1908
+2026-05-03,Cappuccino,25,3725
+2026-05-03,Cafe Latte,35,5565
+2026-05-03,Espresso,17,2023
+2026-05-03,Masala Chai,49,3871
+2026-05-03,Cold Coffee,60,10140
+2026-05-03,Iced Latte,43,7697
+2026-05-03,Lemon Iced Tea,41,5289
+2026-05-03,Fresh Lime Soda,33,3267
+2026-05-03,Veg Sandwich,23,3197
+2026-05-03,Grilled Cheese Sandwich,29,4611
+2026-05-03,Veg Burger,24,3576
+2026-05-03,French Fries,31,3689
+2026-05-03,Margherita Pizza,21,5229
+2026-05-03,Pasta Alfredo,12,2748
+2026-05-03,Chocolate Brownie,17,2193
+2026-05-03,Blueberry Muffin,11,1089
+2026-05-03,Croissant,18,1962
+2026-05-03,Cheesecake Slice,14,2226
+2026-05-04,Cappuccino,28,4172
+2026-05-04,Cafe Latte,16,2544
+2026-05-04,Espresso,13,1547
+2026-05-04,Masala Chai,32,2528
+2026-05-04,Cold Coffee,39,6591
+2026-05-04,Iced Latte,28,5012
+2026-05-04,Lemon Iced Tea,25,3225
+2026-05-04,Fresh Lime Soda,22,2178
+2026-05-04,Veg Sandwich,16,2224
+2026-05-04,Grilled Cheese Sandwich,10,1590
+2026-05-04,Veg Burger,16,2384
+2026-05-04,French Fries,16,1904
+2026-05-04,Margherita Pizza,12,2988
+2026-05-04,Pasta Alfredo,10,2290
+2026-05-04,Chocolate Brownie,13,1677
+2026-05-04,Blueberry Muffin,9,891
+2026-05-04,Croissant,8,872
+2026-05-04,Cheesecake Slice,9,1431
+2026-05-05,Cappuccino,22,3278
+2026-05-05,Cafe Latte,19,3021
+2026-05-05,Espresso,12,1428
+2026-05-05,Masala Chai,22,1738
+2026-05-05,Cold Coffee,45,7605
+2026-05-05,Iced Latte,26,4654
+2026-05-05,Lemon Iced Tea,22,2838
+2026-05-05,Fresh Lime Soda,21,2079
+2026-05-05,Veg Sandwich,11,1529
+2026-05-05,Grilled Cheese Sandwich,13,2067
+2026-05-05,Veg Burger,15,2235
+2026-05-05,French Fries,22,2618
+2026-05-05,Margherita Pizza,10,2490
+2026-05-05,Pasta Alfredo,8,1832
+2026-05-05,Chocolate Brownie,14,1806
+2026-05-05,Blueberry Muffin,8,792
+2026-05-05,Croissant,8,872
+2026-05-05,Cheesecake Slice,7,1113
+2026-05-06,Cappuccino,32,4768
+2026-05-06,Cafe Latte,21,3339
+2026-05-06,Espresso,10,1190
+2026-05-06,Masala Chai,32,2528
+2026-05-06,Cold Coffee,30,5070
+2026-05-06,Iced Latte,19,3401
+2026-05-06,Lemon Iced Tea,24,3096
+2026-05-06,Fresh Lime Soda,23,2277
+2026-05-06,Veg Sandwich,16,2224
+2026-05-06,Grilled Cheese Sandwich,11,1749
+2026-05-06,Veg Burger,17,2533
+2026-05-06,French Fries,16,1904
+2026-05-06,Margherita Pizza,12,2988
+2026-05-06,Pasta Alfredo,7,1603
+2026-05-06,Chocolate Brownie,14,1806
+2026-05-06,Blueberry Muffin,10,990
+2026-05-06,Croissant,8,872
+2026-05-06,Cheesecake Slice,8,1272
+2026-05-07,Cappuccino,32,4768
+2026-05-07,Cafe Latte,28,4452
+2026-05-07,Espresso,9,1071
+2026-05-07,Masala Chai,32,2528
+2026-05-07,Cold Coffee,36,6084
+2026-05-07,Iced Latte,24,4296
+2026-05-07,Lemon Iced Tea,32,4128
+2026-05-07,Fresh Lime Soda,26,2574
+2026-05-07,Veg Sandwich,14,1946
+2026-05-07,Grilled Cheese Sandwich,15,2385
+2026-05-07,Veg Burger,20,2980
+2026-05-07,French Fries,23,2737
+2026-05-07,Margherita Pizza,16,3984
+2026-05-07,Pasta Alfredo,11,2519
+2026-05-07,Chocolate Brownie,8,1032
+2026-05-07,Blueberry Muffin,10,990
+2026-05-07,Croissant,11,1199
+2026-05-07,Cheesecake Slice,9,1431
+2026-05-08,Cappuccino,34,5066
+2026-05-08,Cafe Latte,24,3816
+2026-05-08,Espresso,12,1428
+2026-05-08,Masala Chai,45,3555
+2026-05-08,Cold Coffee,60,10140
+2026-05-08,Iced Latte,34,6086
+2026-05-08,Lemon Iced Tea,35,4515
+2026-05-08,Fresh Lime Soda,31,3069
+2026-05-08,Veg Sandwich,24,3336
+2026-05-08,Grilled Cheese Sandwich,14,2226
+2026-05-08,Veg Burger,25,3725
+2026-05-08,French Fries,24,2856
+2026-05-08,Margherita Pizza,17,4233
+2026-05-08,Pasta Alfredo,12,2748
+2026-05-08,Chocolate Brownie,12,1548
+2026-05-08,Blueberry Muffin,12,1188
+2026-05-08,Croissant,10,1090
+2026-05-08,Cheesecake Slice,11,1749
+2026-05-09,Cappuccino,40,5960
+2026-05-09,Cafe Latte,30,4770
+2026-05-09,Espresso,13,1547
+2026-05-09,Masala Chai,35,2765
+2026-05-09,Cold Coffee,56,9464
+2026-05-09,Iced Latte,43,7697
+2026-05-09,Lemon Iced Tea,45,5805
+2026-05-09,Fresh Lime Soda,37,3663
+2026-05-09,Veg Sandwich,21,2919
+2026-05-09,Grilled Cheese Sandwich,24,3816
+2026-05-09,Veg Burger,20,2980
+2026-05-09,French Fries,35,4165
+2026-05-09,Margherita Pizza,17,4233
+2026-05-09,Pasta Alfredo,15,3435
+2026-05-09,Chocolate Brownie,24,3096
+2026-05-09,Blueberry Muffin,13,1287
+2026-05-09,Croissant,19,2071
+2026-05-09,Cheesecake Slice,13,2067
+2026-05-10,Cappuccino,54,8046
+2026-05-10,Cafe Latte,29,4611
+2026-05-10,Espresso,20,2380
+2026-05-10,Masala Chai,46,3634
+2026-05-10,Cold Coffee,51,8619
+2026-05-10,Iced Latte,52,9308
+2026-05-10,Lemon Iced Tea,30,3870
+2026-05-10,Fresh Lime Soda,21,2079
+2026-05-10,Veg Sandwich,25,3475
+2026-05-10,Grilled Cheese Sandwich,23,3657
+2026-05-10,Veg Burger,25,3725
+2026-05-10,French Fries,29,3451
+2026-05-10,Margherita Pizza,21,5229
+2026-05-10,Pasta Alfredo,15,3435
+2026-05-10,Chocolate Brownie,19,2451
+2026-05-10,Blueberry Muffin,15,1485
+2026-05-10,Croissant,13,1417
+2026-05-10,Cheesecake Slice,11,1749
+2026-05-11,Cappuccino,21,3129
+2026-05-11,Cafe Latte,13,2067
+2026-05-11,Espresso,9,1071
+2026-05-11,Masala Chai,33,2607
+2026-05-11,Cold Coffee,34,5746
+2026-05-11,Iced Latte,26,4654
+2026-05-11,Lemon Iced Tea,19,2451
+2026-05-11,Fresh Lime Soda,24,2376
+2026-05-11,Veg Sandwich,15,2085
+2026-05-11,Grilled Cheese Sandwich,14,2226
+2026-05-11,Veg Burger,16,2384
+2026-05-11,French Fries,16,1904
+2026-05-11,Margherita Pizza,9,2241
+2026-05-11,Pasta Alfredo,10,2290
+2026-05-11,Chocolate Brownie,13,1677
+2026-05-11,Blueberry Muffin,10,990
+2026-05-11,Croissant,5,545
+2026-05-11,Cheesecake Slice,10,1590
+2026-05-12,Cappuccino,22,3278
+2026-05-12,Cafe Latte,25,3975
+2026-05-12,Espresso,9,1071
+2026-05-12,Masala Chai,26,2054
+2026-05-12,Cold Coffee,43,7267
+2026-05-12,Iced Latte,23,4117
+2026-05-12,Lemon Iced Tea,25,3225
+2026-05-12,Fresh Lime Soda,18,1782
+2026-05-12,Veg Sandwich,16,2224
+2026-05-12,Grilled Cheese Sandwich,13,2067
+2026-05-12,Veg Burger,17,2533
+2026-05-12,French Fries,17,2023
+2026-05-12,Margherita Pizza,10,2490
+2026-05-12,Pasta Alfredo,9,2061
+2026-05-12,Chocolate Brownie,9,1161
+2026-05-12,Blueberry Muffin,8,792
+2026-05-12,Croissant,12,1308
+2026-05-12,Cheesecake Slice,6,954
+2026-05-13,Cappuccino,32,4768
+2026-05-13,Cafe Latte,19,3021
+2026-05-13,Espresso,12,1428
+2026-05-13,Masala Chai,24,1896
+2026-05-13,Cold Coffee,47,7943
+2026-05-13,Iced Latte,32,5728
+2026-05-13,Lemon Iced Tea,30,3870
+2026-05-13,Fresh Lime Soda,27,2673
+2026-05-13,Veg Sandwich,18,2502
+2026-05-13,Grilled Cheese Sandwich,14,2226
+2026-05-13,Veg Burger,14,2086
+2026-05-13,French Fries,26,3094
+2026-05-13,Margherita Pizza,9,2241
+2026-05-13,Pasta Alfredo,9,2061
+2026-05-13,Chocolate Brownie,16,2064
+2026-05-13,Blueberry Muffin,10,990
+2026-05-13,Croissant,14,1526
+2026-05-13,Cheesecake Slice,9,1431
+2026-05-14,Cappuccino,21,3129
+2026-05-14,Cafe Latte,21,3339
+2026-05-14,Espresso,13,1547
+2026-05-14,Masala Chai,29,2291
+2026-05-14,Cold Coffee,57,9633
+2026-05-14,Iced Latte,31,5549
+2026-05-14,Lemon Iced Tea,20,2580
+2026-05-14,Fresh Lime Soda,26,2574
+2026-05-14,Veg Sandwich,13,1807
+2026-05-14,Grilled Cheese Sandwich,18,2862
+2026-05-14,Veg Burger,19,2831
+2026-05-14,French Fries,17,2023
+2026-05-14,Margherita Pizza,14,3486
+2026-05-14,Pasta Alfredo,14,3206
+2026-05-14,Chocolate Brownie,10,1290
+2026-05-14,Blueberry Muffin,12,1188
+2026-05-14,Croissant,13,1417
+2026-05-14,Cheesecake Slice,9,1431
+2026-05-15,Cappuccino,36,5364
+2026-05-15,Cafe Latte,29,4611
+2026-05-15,Espresso,13,1547
+2026-05-15,Masala Chai,45,3555
+2026-05-15,Cold Coffee,44,7436
+2026-05-15,Iced Latte,51,9129
+2026-05-15,Lemon Iced Tea,40,5160
+2026-05-15,Fresh Lime Soda,23,2277
+2026-05-15,Veg Sandwich,20,2780
+2026-05-15,Grilled Cheese Sandwich,21,3339
+2026-05-15,Veg Burger,20,2980
+2026-05-15,French Fries,26,3094
+2026-05-15,Margherita Pizza,14,3486
+2026-05-15,Pasta Alfredo,15,3435
+2026-05-15,Chocolate Brownie,17,2193
+2026-05-15,Blueberry Muffin,12,1188
+2026-05-15,Croissant,16,1744
+2026-05-15,Cheesecake Slice,11,1749
+2026-05-16,Cappuccino,35,5215
+2026-05-16,Cafe Latte,25,3975
+2026-05-16,Espresso,13,1547
+2026-05-16,Masala Chai,35,2765
+2026-05-16,Cold Coffee,48,8112
+2026-05-16,Iced Latte,40,7160
+2026-05-16,Lemon Iced Tea,40,5160
+2026-05-16,Fresh Lime Soda,34,3366
+2026-05-16,Veg Sandwich,20,2780
+2026-05-16,Grilled Cheese Sandwich,17,2703
+2026-05-16,Veg Burger,22,3278
+2026-05-16,French Fries,25,2975
+2026-05-16,Margherita Pizza,14,3486
+2026-05-16,Pasta Alfredo,16,3664
+2026-05-16,Chocolate Brownie,17,2193
+2026-05-16,Blueberry Muffin,15,1485
+2026-05-16,Croissant,16,1744
+2026-05-16,Cheesecake Slice,18,2862
+2026-05-17,Cappuccino,28,4172
+2026-05-17,Cafe Latte,32,5088
+2026-05-17,Espresso,16,1904
+2026-05-17,Masala Chai,37,2923
+2026-05-17,Cold Coffee,67,11323
+2026-05-17,Iced Latte,45,8055
+2026-05-17,Lemon Iced Tea,30,3870
+2026-05-17,Fresh Lime Soda,35,3465
+2026-05-17,Veg Sandwich,24,3336
+2026-05-17,Grilled Cheese Sandwich,24,3816
+2026-05-17,Veg Burger,23,3427
+2026-05-17,French Fries,38,4522
+2026-05-17,Margherita Pizza,16,3984
+2026-05-17,Pasta Alfredo,10,2290
+2026-05-17,Chocolate Brownie,23,2967
+2026-05-17,Blueberry Muffin,14,1386
+2026-05-17,Croissant,14,1526
+2026-05-17,Cheesecake Slice,14,2226
+2026-05-18,Cappuccino,24,3576
+2026-05-18,Cafe Latte,23,3657
+2026-05-18,Espresso,11,1309
+2026-05-18,Masala Chai,31,2449
+2026-05-18,Cold Coffee,47,7943
+2026-05-18,Iced Latte,31,5549
+2026-05-18,Lemon Iced Tea,20,2580
+2026-05-18,Fresh Lime Soda,25,2475
+2026-05-18,Veg Sandwich,15,2085
+2026-05-18,Grilled Cheese Sandwich,17,2703
+2026-05-18,Veg Burger,18,2682
+2026-05-18,French Fries,22,2618
+2026-05-18,Margherita Pizza,10,2490
+2026-05-18,Pasta Alfredo,9,2061
+2026-05-18,Chocolate Brownie,14,1806
+2026-05-18,Blueberry Muffin,7,693
+2026-05-18,Croissant,9,981
+2026-05-18,Cheesecake Slice,8,1272
+2026-05-19,Cappuccino,24,3576
+2026-05-19,Cafe Latte,20,3180
+2026-05-19,Espresso,12,1428
+2026-05-19,Masala Chai,24,1896
+2026-05-19,Cold Coffee,44,7436
+2026-05-19,Iced Latte,27,4833
+2026-05-19,Lemon Iced Tea,22,2838
+2026-05-19,Fresh Lime Soda,21,2079
+2026-05-19,Veg Sandwich,9,1251
+2026-05-19,Grilled Cheese Sandwich,12,1908
+2026-05-19,Veg Burger,14,2086
+2026-05-19,French Fries,16,1904
+2026-05-19,Margherita Pizza,7,1743
+2026-05-19,Pasta Alfredo,8,1832
+2026-05-19,Chocolate Brownie,9,1161
+2026-05-19,Blueberry Muffin,10,990
+2026-05-19,Croissant,10,1090
+2026-05-19,Cheesecake Slice,6,954
+2026-05-20,Cappuccino,24,3576
+2026-05-20,Cafe Latte,24,3816
+2026-05-20,Espresso,10,1190
+2026-05-20,Masala Chai,28,2212
+2026-05-20,Cold Coffee,42,7098
+2026-05-20,Iced Latte,30,5370
+2026-05-20,Lemon Iced Tea,19,2451
+2026-05-20,Fresh Lime Soda,23,2277
+2026-05-20,Veg Sandwich,14,1946
+2026-05-20,Grilled Cheese Sandwich,20,3180
+2026-05-20,Veg Burger,17,2533
+2026-05-20,French Fries,20,2380
+2026-05-20,Margherita Pizza,13,3237
+2026-05-20,Pasta Alfredo,9,2061
+2026-05-20,Chocolate Brownie,15,1935
+2026-05-20,Blueberry Muffin,8,792
+2026-05-20,Croissant,14,1526
+2026-05-20,Cheesecake Slice,8,1272
+2026-05-21,Cappuccino,30,4470
+2026-05-21,Cafe Latte,27,4293
+2026-05-21,Espresso,12,1428
+2026-05-21,Masala Chai,31,2449
+2026-05-21,Cold Coffee,52,8788
+2026-05-21,Iced Latte,36,6444
+2026-05-21,Lemon Iced Tea,22,2838
+2026-05-21,Fresh Lime Soda,25,2475
+2026-05-21,Veg Sandwich,14,1946
+2026-05-21,Grilled Cheese Sandwich,13,2067
+2026-05-21,Veg Burger,16,2384
+2026-05-21,French Fries,27,3213
+2026-05-21,Margherita Pizza,15,3735
+2026-05-21,Pasta Alfredo,14,3206
+2026-05-21,Chocolate Brownie,15,1935
+2026-05-21,Blueberry Muffin,9,891
+2026-05-21,Croissant,10,1090
+2026-05-21,Cheesecake Slice,12,1908
+2026-05-22,Cappuccino,26,3874
+2026-05-22,Cafe Latte,26,4134
+2026-05-22,Espresso,14,1666
+2026-05-22,Masala Chai,48,3792
+2026-05-22,Cold Coffee,48,8112
+2026-05-22,Iced Latte,47,8413
+2026-05-22,Lemon Iced Tea,40,5160
+2026-05-22,Fresh Lime Soda,29,2871
+2026-05-22,Veg Sandwich,21,2919
+2026-05-22,Grilled Cheese Sandwich,13,2067
+2026-05-22,Veg Burger,22,3278
+2026-05-22,French Fries,26,3094
+2026-05-22,Margherita Pizza,9,2241
+2026-05-22,Pasta Alfredo,13,2977
+2026-05-22,Chocolate Brownie,20,2580
+2026-05-22,Blueberry Muffin,9,891
+2026-05-22,Croissant,11,1199
+2026-05-22,Cheesecake Slice,10,1590
+2026-05-23,Cappuccino,37,5513
+2026-05-23,Cafe Latte,30,4770
+2026-05-23,Espresso,15,1785
+2026-05-23,Masala Chai,37,2923
+2026-05-23,Cold Coffee,71,11999
+2026-05-23,Iced Latte,43,7697
+2026-05-23,Lemon Iced Tea,38,4902
+2026-05-23,Fresh Lime Soda,34,3366
+2026-05-23,Veg Sandwich,25,3475
+2026-05-23,Grilled Cheese Sandwich,20,3180
+2026-05-23,Veg Burger,30,4470
+2026-05-23,French Fries,33,3927
+2026-05-23,Margherita Pizza,20,4980
+2026-05-23,Pasta Alfredo,17,3893
+2026-05-23,Chocolate Brownie,17,2193
+2026-05-23,Blueberry Muffin,17,1683
+2026-05-23,Croissant,22,2398
+2026-05-23,Cheesecake Slice,11,1749
+2026-05-24,Cappuccino,39,5811
+2026-05-24,Cafe Latte,29,4611
+2026-05-24,Espresso,18,2142
+2026-05-24,Masala Chai,46,3634
+2026-05-24,Cold Coffee,59,9971
+2026-05-24,Iced Latte,54,9666
+2026-05-24,Lemon Iced Tea,32,4128
+2026-05-24,Fresh Lime Soda,33,3267
+2026-05-24,Veg Sandwich,26,3614
+2026-05-24,Grilled Cheese Sandwich,26,4134
+2026-05-24,Veg Burger,23,3427
+2026-05-24,French Fries,35,4165
+2026-05-24,Margherita Pizza,17,4233
+2026-05-24,Pasta Alfredo,10,2290
+2026-05-24,Chocolate Brownie,18,2322
+2026-05-24,Blueberry Muffin,11,1089
+2026-05-24,Croissant,15,1635
+2026-05-24,Cheesecake Slice,12,1908
+2026-05-25,Cappuccino,26,3874
+2026-05-25,Cafe Latte,24,3816
+2026-05-25,Espresso,12,1428
+2026-05-25,Masala Chai,39,3081
+2026-05-25,Cold Coffee,41,6929
+2026-05-25,Iced Latte,33,5907
+2026-05-25,Lemon Iced Tea,26,3354
+2026-05-25,Fresh Lime Soda,27,2673
+2026-05-25,Veg Sandwich,14,1946
+2026-05-25,Grilled Cheese Sandwich,15,2385
+2026-05-25,Veg Burger,21,3129
+2026-05-25,French Fries,18,2142
+2026-05-25,Margherita Pizza,11,2739
+2026-05-25,Pasta Alfredo,10,2290
+2026-05-25,Chocolate Brownie,13,1677
+2026-05-25,Blueberry Muffin,8,792
+2026-05-25,Croissant,14,1526
+2026-05-25,Cheesecake Slice,8,1272
+2026-05-26,Cappuccino,31,4619
+2026-05-26,Cafe Latte,17,2703
+2026-05-26,Espresso,10,1190
+2026-05-26,Masala Chai,29,2291
+2026-05-26,Cold Coffee,39,6591
+2026-05-26,Iced Latte,24,4296
+2026-05-26,Lemon Iced Tea,21,2709
+2026-05-26,Fresh Lime Soda,22,2178
+2026-05-26,Veg Sandwich,12,1668
+2026-05-26,Grilled Cheese Sandwich,12,1908
+2026-05-26,Veg Burger,10,1490
+2026-05-26,French Fries,17,2023
+2026-05-26,Margherita Pizza,10,2490
+2026-05-26,Pasta Alfredo,8,1832
+2026-05-26,Chocolate Brownie,11,1419
+2026-05-26,Blueberry Muffin,7,693
+2026-05-26,Croissant,10,1090
+2026-05-26,Cheesecake Slice,10,1590
+2026-05-27,Cappuccino,21,3129
+2026-05-27,Cafe Latte,20,3180
+2026-05-27,Espresso,13,1547
+2026-05-27,Masala Chai,31,2449
+2026-05-27,Cold Coffee,45,7605
+2026-05-27,Iced Latte,29,5191
+2026-05-27,Lemon Iced Tea,26,3354
+2026-05-27,Fresh Lime Soda,23,2277
+2026-05-27,Veg Sandwich,10,1390
+2026-05-27,Grilled Cheese Sandwich,12,1908
+2026-05-27,Veg Burger,12,1788
+2026-05-27,French Fries,26,3094
+2026-05-27,Margherita Pizza,13,3237
+2026-05-27,Pasta Alfredo,8,1832
+2026-05-27,Chocolate Brownie,16,2064
+2026-05-27,Blueberry Muffin,14,1386
+2026-05-27,Croissant,11,1199
+2026-05-27,Cheesecake Slice,11,1749
+2026-05-28,Cappuccino,30,4470
+2026-05-28,Cafe Latte,22,3498
+2026-05-28,Espresso,10,1190
+2026-05-28,Masala Chai,28,2212
+2026-05-28,Cold Coffee,46,7774
+2026-05-28,Iced Latte,21,3759
+2026-05-28,Lemon Iced Tea,30,3870
+2026-05-28,Fresh Lime Soda,24,2376
+2026-05-28,Veg Sandwich,18,2502
+2026-05-28,Grilled Cheese Sandwich,13,2067
+2026-05-28,Veg Burger,27,4023
+2026-05-28,French Fries,17,2023
+2026-05-28,Margherita Pizza,10,2490
+2026-05-28,Pasta Alfredo,11,2519
+2026-05-28,Chocolate Brownie,21,2709
+2026-05-28,Blueberry Muffin,9,891
+2026-05-28,Croissant,16,1744
+2026-05-28,Cheesecake Slice,8,1272
+2026-05-29,Cappuccino,42,6258
+2026-05-29,Cafe Latte,28,4452
+2026-05-29,Espresso,20,2380
+2026-05-29,Masala Chai,48,3792
+2026-05-29,Cold Coffee,53,8957
+2026-05-29,Iced Latte,59,10561
+2026-05-29,Lemon Iced Tea,28,3612
+2026-05-29,Fresh Lime Soda,29,2871
+2026-05-29,Veg Sandwich,26,3614
+2026-05-29,Grilled Cheese Sandwich,15,2385
+2026-05-29,Veg Burger,20,2980
+2026-05-29,French Fries,28,3332
+2026-05-29,Margherita Pizza,16,3984
+2026-05-29,Pasta Alfredo,13,2977
+2026-05-29,Chocolate Brownie,16,2064
+2026-05-29,Blueberry Muffin,13,1287
+2026-05-29,Croissant,16,1744
+2026-05-29,Cheesecake Slice,14,2226
+2026-05-30,Cappuccino,43,6407
+2026-05-30,Cafe Latte,26,4134
+2026-05-30,Espresso,18,2142
+2026-05-30,Masala Chai,39,3081
+2026-05-30,Cold Coffee,84,14196
+2026-05-30,Iced Latte,35,6265
+2026-05-30,Lemon Iced Tea,43,5547
+2026-05-30,Fresh Lime Soda,30,2970
+2026-05-30,Veg Sandwich,28,3892
+2026-05-30,Grilled Cheese Sandwich,23,3657
+2026-05-30,Veg Burger,27,4023
+2026-05-30,French Fries,35,4165
+2026-05-30,Margherita Pizza,17,4233
+2026-05-30,Pasta Alfredo,16,3664
+2026-05-30,Chocolate Brownie,22,2838
+2026-05-30,Blueberry Muffin,16,1584
+2026-05-30,Croissant,18,1962
+2026-05-30,Cheesecake Slice,8,1272
+2026-05-31,Cappuccino,36,5364
+2026-05-31,Cafe Latte,39,6201
+2026-05-31,Espresso,21,2499
+2026-05-31,Masala Chai,43,3397
+2026-05-31,Cold Coffee,66,11154
+2026-05-31,Iced Latte,44,7876
+2026-05-31,Lemon Iced Tea,42,5418
+2026-05-31,Fresh Lime Soda,38,3762
+2026-05-31,Veg Sandwich,19,2641
+2026-05-31,Grilled Cheese Sandwich,22,3498
+2026-05-31,Veg Burger,30,4470
+2026-05-31,French Fries,26,3094
+2026-05-31,Margherita Pizza,16,3984
+2026-05-31,Pasta Alfredo,15,3435
+2026-05-31,Chocolate Brownie,24,3096
+2026-05-31,Blueberry Muffin,13,1287
+2026-05-31,Croissant,15,1635
+2026-05-31,Cheesecake Slice,12,1908
+2026-06-01,Cappuccino,27,4023
+2026-06-01,Cafe Latte,22,3498
+2026-06-01,Espresso,11,1309
+2026-06-01,Masala Chai,22,1738
+2026-06-01,Cold Coffee,36,6084
+2026-06-01,Iced Latte,33,5907
+2026-06-01,Lemon Iced Tea,20,2580
+2026-06-01,Fresh Lime Soda,23,2277
+2026-06-01,Veg Sandwich,14,1946
+2026-06-01,Grilled Cheese Sandwich,12,1908
+2026-06-01,Veg Burger,17,2533
+2026-06-01,French Fries,26,3094
+2026-06-01,Margherita Pizza,12,2988
+2026-06-01,Pasta Alfredo,9,2061
+2026-06-01,Chocolate Brownie,11,1419
+2026-06-01,Blueberry Muffin,10,990
+2026-06-01,Croissant,13,1417
+2026-06-01,Cheesecake Slice,9,1431
+2026-06-02,Cappuccino,29,4321
+2026-06-02,Cafe Latte,21,3339
+2026-06-02,Espresso,8,952
+2026-06-02,Masala Chai,26,2054
+2026-06-02,Cold Coffee,45,7605
+2026-06-02,Iced Latte,32,5728
+2026-06-02,Lemon Iced Tea,22,2838
+2026-06-02,Fresh Lime Soda,21,2079
+2026-06-02,Veg Sandwich,15,2085
+2026-06-02,Grilled Cheese Sandwich,15,2385
+2026-06-02,Veg Burger,18,2682
+2026-06-02,French Fries,21,2499
+2026-06-02,Margherita Pizza,11,2739
+2026-06-02,Pasta Alfredo,7,1603
+2026-06-02,Chocolate Brownie,11,1419
+2026-06-02,Blueberry Muffin,9,891
+2026-06-02,Croissant,12,1308
+2026-06-02,Cheesecake Slice,8,1272
+2026-06-03,Cappuccino,30,4470
+2026-06-03,Cafe Latte,16,2544
+2026-06-03,Espresso,9,1071
+2026-06-03,Masala Chai,35,2765
+2026-06-03,Cold Coffee,47,7943
+2026-06-03,Iced Latte,25,4475
+2026-06-03,Lemon Iced Tea,31,3999
+2026-06-03,Fresh Lime Soda,25,2475
+2026-06-03,Veg Sandwich,23,3197
+2026-06-03,Grilled Cheese Sandwich,16,2544
+2026-06-03,Veg Burger,19,2831
+2026-06-03,French Fries,21,2499
+2026-06-03,Margherita Pizza,12,2988
+2026-06-03,Pasta Alfredo,10,2290
+2026-06-03,Chocolate Brownie,11,1419
+2026-06-03,Blueberry Muffin,11,1089
+2026-06-03,Croissant,12,1308
+2026-06-03,Cheesecake Slice,5,795
+2026-06-04,Cappuccino,26,3874
+2026-06-04,Cafe Latte,20,3180
+2026-06-04,Espresso,14,1666
+2026-06-04,Masala Chai,31,2449
+2026-06-04,Cold Coffee,62,10478
+2026-06-04,Iced Latte,25,4475
+2026-06-04,Lemon Iced Tea,24,3096
+2026-06-04,Fresh Lime Soda,30,2970
+2026-06-04,Veg Sandwich,15,2085
+2026-06-04,Grilled Cheese Sandwich,12,1908
+2026-06-04,Veg Burger,17,2533
+2026-06-04,French Fries,20,2380
+2026-06-04,Margherita Pizza,13,3237
+2026-06-04,Pasta Alfredo,12,2748
+2026-06-04,Chocolate Brownie,12,1548
+2026-06-04,Blueberry Muffin,10,990
+2026-06-04,Croissant,12,1308
+2026-06-04,Cheesecake Slice,9,1431
+2026-06-05,Cappuccino,40,5960
+2026-06-05,Cafe Latte,28,4452
+2026-06-05,Espresso,14,1666
+2026-06-05,Masala Chai,31,2449
+2026-06-05,Cold Coffee,43,7267
+2026-06-05,Iced Latte,39,6981
+2026-06-05,Lemon Iced Tea,35,4515
+2026-06-05,Fresh Lime Soda,36,3564
+2026-06-05,Veg Sandwich,19,2641
+2026-06-05,Grilled Cheese Sandwich,24,3816
+2026-06-05,Veg Burger,22,3278
+2026-06-05,French Fries,25,2975
+2026-06-05,Margherita Pizza,16,3984
+2026-06-05,Pasta Alfredo,11,2519
+2026-06-05,Chocolate Brownie,19,2451
+2026-06-05,Blueberry Muffin,8,792
+2026-06-05,Croissant,17,1853
+2026-06-05,Cheesecake Slice,11,1749
+2026-06-06,Cappuccino,43,6407
+2026-06-06,Cafe Latte,33,5247
+2026-06-06,Espresso,14,1666
+2026-06-06,Masala Chai,38,3002
+2026-06-06,Cold Coffee,89,15041
+2026-06-06,Iced Latte,53,9487
+2026-06-06,Lemon Iced Tea,37,4773
+2026-06-06,Fresh Lime Soda,39,3861
+2026-06-06,Veg Sandwich,25,3475
+2026-06-06,Grilled Cheese Sandwich,27,4293
+2026-06-06,Veg Burger,31,4619
+2026-06-06,French Fries,34,4046
+2026-06-06,Margherita Pizza,16,3984
+2026-06-06,Pasta Alfredo,19,4351
+2026-06-06,Chocolate Brownie,22,2838
+2026-06-06,Blueberry Muffin,13,1287
+2026-06-06,Croissant,14,1526
+2026-06-06,Cheesecake Slice,11,1749
+2026-06-07,Cappuccino,37,5513
+2026-06-07,Cafe Latte,35,5565
+2026-06-07,Espresso,19,2261
+2026-06-07,Masala Chai,50,3950
+2026-06-07,Cold Coffee,70,11830
+2026-06-07,Iced Latte,53,9487
+2026-06-07,Lemon Iced Tea,53,6837
+2026-06-07,Fresh Lime Soda,40,3960
+2026-06-07,Veg Sandwich,28,3892
+2026-06-07,Grilled Cheese Sandwich,15,2385
+2026-06-07,Veg Burger,22,3278
+2026-06-07,French Fries,27,3213
+2026-06-07,Margherita Pizza,10,2490
+2026-06-07,Pasta Alfredo,14,3206
+2026-06-07,Chocolate Brownie,26,3354
+2026-06-07,Blueberry Muffin,13,1287
+2026-06-07,Croissant,18,1962
+2026-06-07,Cheesecake Slice,11,1749
+2026-06-08,Cappuccino,24,3576
+2026-06-08,Cafe Latte,21,3339
+2026-06-08,Espresso,9,1071
+2026-06-08,Masala Chai,33,2607
+2026-06-08,Cold Coffee,31,5239
+2026-06-08,Iced Latte,33,5907
+2026-06-08,Lemon Iced Tea,24,3096
+2026-06-08,Fresh Lime Soda,29,2871
+2026-06-08,Veg Sandwich,17,2363
+2026-06-08,Grilled Cheese Sandwich,9,1431
+2026-06-08,Veg Burger,10,1490
+2026-06-08,French Fries,17,2023
+2026-06-08,Margherita Pizza,10,2490
+2026-06-08,Pasta Alfredo,9,2061
+2026-06-08,Chocolate Brownie,14,1806
+2026-06-08,Blueberry Muffin,10,990
+2026-06-08,Croissant,9,981
+2026-06-08,Cheesecake Slice,6,954
+2026-06-09,Cappuccino,25,3725
+2026-06-09,Cafe Latte,18,2862
+2026-06-09,Espresso,10,1190
+2026-06-09,Masala Chai,23,1817
+2026-06-09,Cold Coffee,41,6929
+2026-06-09,Iced Latte,36,6444
+2026-06-09,Lemon Iced Tea,18,2322
+2026-06-09,Fresh Lime Soda,18,1782
+2026-06-09,Veg Sandwich,15,2085
+2026-06-09,Grilled Cheese Sandwich,15,2385
+2026-06-09,Veg Burger,15,2235
+2026-06-09,French Fries,15,1785
+2026-06-09,Margherita Pizza,7,1743
+2026-06-09,Pasta Alfredo,9,2061
+2026-06-09,Chocolate Brownie,10,1290
+2026-06-09,Blueberry Muffin,12,1188
+2026-06-09,Croissant,14,1526
+2026-06-09,Cheesecake Slice,8,1272
+2026-06-10,Cappuccino,30,4470
+2026-06-10,Cafe Latte,21,3339
+2026-06-10,Espresso,14,1666
+2026-06-10,Masala Chai,29,2291
+2026-06-10,Cold Coffee,49,8281
+2026-06-10,Iced Latte,40,7160
+2026-06-10,Lemon Iced Tea,30,3870
+2026-06-10,Fresh Lime Soda,33,3267
+2026-06-10,Veg Sandwich,12,1668
+2026-06-10,Grilled Cheese Sandwich,13,2067
+2026-06-10,Veg Burger,15,2235
+2026-06-10,French Fries,25,2975
+2026-06-10,Margherita Pizza,11,2739
+2026-06-10,Pasta Alfredo,11,2519
+2026-06-10,Chocolate Brownie,12,1548
+2026-06-10,Blueberry Muffin,10,990
+2026-06-10,Croissant,16,1744
+2026-06-10,Cheesecake Slice,11,1749
+2026-06-11,Cappuccino,20,2980
+2026-06-11,Cafe Latte,24,3816
+2026-06-11,Espresso,14,1666
+2026-06-11,Masala Chai,29,2291
+2026-06-11,Cold Coffee,42,7098
+2026-06-11,Iced Latte,39,6981
+2026-06-11,Lemon Iced Tea,30,3870
+2026-06-11,Fresh Lime Soda,28,2772
+2026-06-11,Veg Sandwich,16,2224
+2026-06-11,Grilled Cheese Sandwich,20,3180
+2026-06-11,Veg Burger,16,2384
+2026-06-11,French Fries,21,2499
+2026-06-11,Margherita Pizza,13,3237
+2026-06-11,Pasta Alfredo,12,2748
+2026-06-11,Chocolate Brownie,12,1548
+2026-06-11,Blueberry Muffin,13,1287
+2026-06-11,Croissant,10,1090
+2026-06-11,Cheesecake Slice,9,1431
+2026-06-12,Cappuccino,33,4917
+2026-06-12,Cafe Latte,25,3975
+2026-06-12,Espresso,18,2142
+2026-06-12,Masala Chai,24,1896
+2026-06-12,Cold Coffee,55,9295
+2026-06-12,Iced Latte,36,6444
+2026-06-12,Lemon Iced Tea,40,5160
+2026-06-12,Fresh Lime Soda,40,3960
+2026-06-12,Veg Sandwich,23,3197
+2026-06-12,Grilled Cheese Sandwich,22,3498
+2026-06-12,Veg Burger,15,2235
+2026-06-12,French Fries,28,3332
+2026-06-12,Margherita Pizza,12,2988
+2026-06-12,Pasta Alfredo,12,2748
+2026-06-12,Chocolate Brownie,20,2580
+2026-06-12,Blueberry Muffin,13,1287
+2026-06-12,Croissant,18,1962
+2026-06-12,Cheesecake Slice,8,1272
+2026-06-13,Cappuccino,36,5364
+2026-06-13,Cafe Latte,25,3975
+2026-06-13,Espresso,13,1547
+2026-06-13,Masala Chai,51,4029
+2026-06-13,Cold Coffee,75,12675
+2026-06-13,Iced Latte,62,11098
+2026-06-13,Lemon Iced Tea,49,6321
+2026-06-13,Fresh Lime Soda,38,3762
+2026-06-13,Veg Sandwich,20,2780
+2026-06-13,Grilled Cheese Sandwich,24,3816
+2026-06-13,Veg Burger,24,3576
+2026-06-13,French Fries,26,3094
+2026-06-13,Margherita Pizza,14,3486
+2026-06-13,Pasta Alfredo,15,3435
+2026-06-13,Chocolate Brownie,27,3483
+2026-06-13,Blueberry Muffin,15,1485
+2026-06-13,Croissant,21,2289
+2026-06-13,Cheesecake Slice,13,2067
+2026-06-14,Cappuccino,37,5513
+2026-06-14,Cafe Latte,45,7155
+2026-06-14,Espresso,22,2618
+2026-06-14,Masala Chai,44,3476
+2026-06-14,Cold Coffee,61,10309
+2026-06-14,Iced Latte,36,6444
+2026-06-14,Lemon Iced Tea,43,5547
+2026-06-14,Fresh Lime Soda,35,3465
+2026-06-14,Veg Sandwich,24,3336
+2026-06-14,Grilled Cheese Sandwich,21,3339
+2026-06-14,Veg Burger,27,4023
+2026-06-14,French Fries,37,4403
+2026-06-14,Margherita Pizza,18,4482
+2026-06-14,Pasta Alfredo,13,2977
+2026-06-14,Chocolate Brownie,19,2451
+2026-06-14,Blueberry Muffin,16,1584
+2026-06-14,Croissant,14,1526
+2026-06-14,Cheesecake Slice,14,2226
+2026-06-15,Cappuccino,29,4321
+2026-06-15,Cafe Latte,20,3180
+2026-06-15,Espresso,10,1190
+2026-06-15,Masala Chai,20,1580
+2026-06-15,Cold Coffee,38,6422
+2026-06-15,Iced Latte,23,4117
+2026-06-15,Lemon Iced Tea,26,3354
+2026-06-15,Fresh Lime Soda,22,2178
+2026-06-15,Veg Sandwich,13,1807
+2026-06-15,Grilled Cheese Sandwich,15,2385
+2026-06-15,Veg Burger,17,2533
+2026-06-15,French Fries,21,2499
+2026-06-15,Margherita Pizza,12,2988
+2026-06-15,Pasta Alfredo,11,2519
+2026-06-15,Chocolate Brownie,10,1290
+2026-06-15,Blueberry Muffin,10,990
+2026-06-15,Croissant,8,872
+2026-06-15,Cheesecake Slice,7,1113
+2026-06-16,Cappuccino,29,4321
+2026-06-16,Cafe Latte,21,3339
+2026-06-16,Espresso,12,1428
+2026-06-16,Masala Chai,27,2133
+2026-06-16,Cold Coffee,53,8957
+2026-06-16,Iced Latte,22,3938
+2026-06-16,Lemon Iced Tea,24,3096
+2026-06-16,Fresh Lime Soda,23,2277
+2026-06-16,Veg Sandwich,19,2641
+2026-06-16,Grilled Cheese Sandwich,14,2226
+2026-06-16,Veg Burger,18,2682
+2026-06-16,French Fries,17,2023
+2026-06-16,Margherita Pizza,14,3486
+2026-06-16,Pasta Alfredo,9,2061
+2026-06-16,Chocolate Brownie,11,1419
+2026-06-16,Blueberry Muffin,12,1188
+2026-06-16,Croissant,8,872
+2026-06-16,Cheesecake Slice,7,1113
+2026-06-17,Cappuccino,27,4023
+2026-06-17,Cafe Latte,18,2862
+2026-06-17,Espresso,13,1547
+2026-06-17,Masala Chai,31,2449
+2026-06-17,Cold Coffee,50,8450
+2026-06-17,Iced Latte,44,7876
+2026-06-17,Lemon Iced Tea,21,2709
+2026-06-17,Fresh Lime Soda,31,3069
+2026-06-17,Veg Sandwich,14,1946
+2026-06-17,Grilled Cheese Sandwich,17,2703
+2026-06-17,Veg Burger,23,3427
+2026-06-17,French Fries,30,3570
+2026-06-17,Margherita Pizza,11,2739
+2026-06-17,Pasta Alfredo,8,1832
+2026-06-17,Chocolate Brownie,16,2064
+2026-06-17,Blueberry Muffin,10,990
+2026-06-17,Croissant,9,981
+2026-06-17,Cheesecake Slice,10,1590
+2026-06-18,Cappuccino,25,3725
+2026-06-18,Cafe Latte,28,4452
+2026-06-18,Espresso,14,1666
+2026-06-18,Masala Chai,30,2370
+2026-06-18,Cold Coffee,52,8788
+2026-06-18,Iced Latte,34,6086
+2026-06-18,Lemon Iced Tea,28,3612
+2026-06-18,Fresh Lime Soda,40,3960
+2026-06-18,Veg Sandwich,14,1946
+2026-06-18,Grilled Cheese Sandwich,15,2385
+2026-06-18,Veg Burger,22,3278
+2026-06-18,French Fries,22,2618
+2026-06-18,Margherita Pizza,11,2739
+2026-06-18,Pasta Alfredo,8,1832
+2026-06-18,Chocolate Brownie,19,2451
+2026-06-18,Blueberry Muffin,12,1188
+2026-06-18,Croissant,13,1417
+2026-06-18,Cheesecake Slice,7,1113
+2026-06-19,Cappuccino,38,5662
+2026-06-19,Cafe Latte,29,4611
+2026-06-19,Espresso,14,1666
+2026-06-19,Masala Chai,30,2370
+2026-06-19,Cold Coffee,63,10647
+2026-06-19,Iced Latte,37,6623
+2026-06-19,Lemon Iced Tea,37,4773
+2026-06-19,Fresh Lime Soda,33,3267
+2026-06-19,Veg Sandwich,19,2641
+2026-06-19,Grilled Cheese Sandwich,20,3180
+2026-06-19,Veg Burger,22,3278
+2026-06-19,French Fries,30,3570
+2026-06-19,Margherita Pizza,16,3984
+2026-06-19,Pasta Alfredo,15,3435
+2026-06-19,Chocolate Brownie,16,2064
+2026-06-19,Blueberry Muffin,12,1188
+2026-06-19,Croissant,17,1853
+2026-06-19,Cheesecake Slice,12,1908
+2026-06-20,Cappuccino,49,7301
+2026-06-20,Cafe Latte,37,5883
+2026-06-20,Espresso,17,2023
+2026-06-20,Masala Chai,51,4029
+2026-06-20,Cold Coffee,71,11999
+2026-06-20,Iced Latte,59,10561
+2026-06-20,Lemon Iced Tea,55,7095
+2026-06-20,Fresh Lime Soda,45,4455
+2026-06-20,Veg Sandwich,32,4448
+2026-06-20,Grilled Cheese Sandwich,16,2544
+2026-06-20,Veg Burger,24,3576
+2026-06-20,French Fries,31,3689
+2026-06-20,Margherita Pizza,17,4233
+2026-06-20,Pasta Alfredo,16,3664
+2026-06-20,Chocolate Brownie,21,2709
+2026-06-20,Blueberry Muffin,17,1683
+2026-06-20,Croissant,21,2289
+2026-06-20,Cheesecake Slice,14,2226
+2026-06-21,Cappuccino,34,5066
+2026-06-21,Cafe Latte,34,5406
+2026-06-21,Espresso,19,2261
+2026-06-21,Masala Chai,45,3555
+2026-06-21,Cold Coffee,72,12168
+2026-06-21,Iced Latte,60,10740
+2026-06-21,Lemon Iced Tea,37,4773
+2026-06-21,Fresh Lime Soda,35,3465
+2026-06-21,Veg Sandwich,25,3475
+2026-06-21,Grilled Cheese Sandwich,22,3498
+2026-06-21,Veg Burger,29,4321
+2026-06-21,French Fries,30,3570
+2026-06-21,Margherita Pizza,14,3486
+2026-06-21,Pasta Alfredo,11,2519
+2026-06-21,Chocolate Brownie,20,2580
+2026-06-21,Blueberry Muffin,16,1584
+2026-06-21,Croissant,19,2071
+2026-06-21,Cheesecake Slice,9,1431
+2026-06-22,Cappuccino,28,4172
+2026-06-22,Cafe Latte,20,3180
+2026-06-22,Espresso,9,1071
+2026-06-22,Masala Chai,38,3002
+2026-06-22,Cold Coffee,49,8281
+2026-06-22,Iced Latte,37,6623
+2026-06-22,Lemon Iced Tea,38,4902
+2026-06-22,Fresh Lime Soda,22,2178
+2026-06-22,Veg Sandwich,14,1946
+2026-06-22,Grilled Cheese Sandwich,16,2544
+2026-06-22,Veg Burger,13,1937
+2026-06-22,French Fries,21,2499
+2026-06-22,Margherita Pizza,11,2739
+2026-06-22,Pasta Alfredo,11,2519
+2026-06-22,Chocolate Brownie,15,1935
+2026-06-22,Blueberry Muffin,8,792
+2026-06-22,Croissant,13,1417
+2026-06-22,Cheesecake Slice,10,1590
+2026-06-23,Cappuccino,21,3129
+2026-06-23,Cafe Latte,17,2703
+2026-06-23,Espresso,10,1190
+2026-06-23,Masala Chai,22,1738
+2026-06-23,Cold Coffee,52,8788
+2026-06-23,Iced Latte,29,5191
+2026-06-23,Lemon Iced Tea,24,3096
+2026-06-23,Fresh Lime Soda,19,1881
+2026-06-23,Veg Sandwich,13,1807
+2026-06-23,Grilled Cheese Sandwich,15,2385
+2026-06-23,Veg Burger,18,2682
+2026-06-23,French Fries,14,1666
+2026-06-23,Margherita Pizza,9,2241
+2026-06-23,Pasta Alfredo,10,2290
+2026-06-23,Chocolate Brownie,12,1548
+2026-06-23,Blueberry Muffin,8,792
+2026-06-23,Croissant,9,981
+2026-06-23,Cheesecake Slice,6,954
+2026-06-24,Cappuccino,28,4172
+2026-06-24,Cafe Latte,20,3180
+2026-06-24,Espresso,14,1666
+2026-06-24,Masala Chai,29,2291
+2026-06-24,Cold Coffee,42,7098
+2026-06-24,Iced Latte,38,6802
+2026-06-24,Lemon Iced Tea,35,4515
+2026-06-24,Fresh Lime Soda,23,2277
+2026-06-24,Veg Sandwich,12,1668
+2026-06-24,Grilled Cheese Sandwich,13,2067
+2026-06-24,Veg Burger,14,2086
+2026-06-24,French Fries,28,3332
+2026-06-24,Margherita Pizza,9,2241
+2026-06-24,Pasta Alfredo,9,2061
+2026-06-24,Chocolate Brownie,18,2322
+2026-06-24,Blueberry Muffin,11,1089
+2026-06-24,Croissant,11,1199
+2026-06-24,Cheesecake Slice,8,1272
+2026-06-25,Cappuccino,28,4172
+2026-06-25,Cafe Latte,22,3498
+2026-06-25,Espresso,16,1904
+2026-06-25,Masala Chai,31,2449
+2026-06-25,Cold Coffee,42,7098
+2026-06-25,Iced Latte,42,7518
+2026-06-25,Lemon Iced Tea,35,4515
+2026-06-25,Fresh Lime Soda,26,2574
+2026-06-25,Veg Sandwich,19,2641
+2026-06-25,Grilled Cheese Sandwich,15,2385
+2026-06-25,Veg Burger,15,2235
+2026-06-25,French Fries,23,2737
+2026-06-25,Margherita Pizza,10,2490
+2026-06-25,Pasta Alfredo,9,2061
+2026-06-25,Chocolate Brownie,13,1677
+2026-06-25,Blueberry Muffin,11,1089
+2026-06-25,Croissant,13,1417
+2026-06-25,Cheesecake Slice,7,1113

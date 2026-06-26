@@ -46,25 +46,23 @@
       <p class="text-muted text-sm" style="margin-bottom:var(--space-4);">
         <strong>Required columns:</strong> {{ ut.columns }}
       </p>
-      <form method="post" action="{% url 'onboarding:upload_file' ut.key %}" enctype="multipart/form-data">
+      <form method="post" action="{% url 'onboarding:upload_file' ut.key %}" enctype="multipart/form-data"
+            id="upload_form_{{ ut.key }}" onsubmit="return checkFile('{{ ut.key }}')">
         {% csrf_token %}
-        <div class="dropzone" style="padding:var(--space-6);margin-bottom:var(--space-3);">
-          <input type="file" name="file" accept=".csv,.xlsx,.xls" style="display:none;" id="file_{{ ut.key }}">
+        {# Label wraps the dropzone — clicking anywhere on it reliably opens the file picker #}
+        <label for="file_{{ ut.key }}" class="dropzone" style="padding:var(--space-6);margin-bottom:var(--space-3);cursor:pointer;display:block;">
+          <input type="file" name="file" accept=".csv,.xlsx,.xls" style="display:none;" id="file_{{ ut.key }}"
+                 onchange="document.getElementById('fname_{{ ut.key }}').textContent = this.files[0]?.name || ''">
           <div class="dropzone-icon"><i class="bi bi-cloud-upload" style="font-size:1.5rem;"></i></div>
           <p style="font-size:var(--text-sm);color:var(--color-ink);font-weight:var(--fw-medium);margin-bottom:4px;">
             Drop CSV or XLSX here
           </p>
           <p class="text-muted text-xs">or click to browse</p>
           <span id="fname_{{ ut.key }}" style="font-size:var(--text-xs);color:var(--color-primary);margin-top:var(--space-2);display:block;"></span>
-        </div>
-        <script>
-          document.getElementById('file_{{ ut.key }}').addEventListener('change', function(){
-            document.getElementById('fname_{{ ut.key }}').textContent = this.files[0]?.name || '';
-          });
-        </script>
+        </label>
         <div class="flex gap-2">
           <button type="submit" class="btn btn-primary btn-sm" style="flex:1;justify-content:center;">
-            <i class="bi bi-upload"></i> Upload & Validate
+            <i class="bi bi-upload"></i> Upload &amp; Validate
           </button>
           <a href="{% url 'onboarding:download_template' ut.key %}" class="btn btn-outline btn-sm" title="Download template CSV">
             <i class="bi bi-download"></i> Template

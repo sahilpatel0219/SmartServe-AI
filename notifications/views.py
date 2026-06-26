@@ -102,6 +102,8 @@ def index_view(request):
     generate_notifications(bid)
 
     notifs = list(col.notifications().find({'business_id': bid}, sort=[('created_at', -1)], limit=50))
+    for n in notifs:
+        n['str_id'] = str(n.get('_id', ''))
     unread = sum(1 for n in notifs if not n.get('read'))
 
     return render(request, 'notifications/index.html', {

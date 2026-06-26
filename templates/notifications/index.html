@@ -26,7 +26,7 @@
   <div style="display:flex;flex-direction:column;gap:var(--space-2);">
     {% for n in notifications %}
     <div class="card {% if not n.read %}unread-notif{% endif %}"
-         id="notif-{{ n._id }}"
+         id="notif-{{ n.str_id }}"
          style="{% if not n.read %}border-left:3px solid var(--color-primary);{% endif %}">
       <div class="card-body" style="display:flex;align-items:flex-start;gap:var(--space-3);padding:var(--space-3) var(--space-4);">
         <div style="margin-top:2px;">
@@ -44,7 +44,7 @@
         </div>
         {% if not n.read %}
         <button class="btn btn-ghost btn-sm mark-read-btn"
-                data-id="{{ n._id }}"
+                data-id="{{ n.str_id }}"
                 style="font-size:.75rem;padding:2px 8px;">
           Mark read
         </button>

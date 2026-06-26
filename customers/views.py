@@ -30,6 +30,7 @@ def index_view(request):
     segment_filter = request.GET.get('segment', '')
     custs = list(col.customers().find({'business_id': bid}, sort=[('name', 1)]))
     for c in custs:
+        c['str_id'] = str(c.get('_id', ''))
         c['segment'] = _segment(c.get('visit_count', 0), c.get('total_spend', 0))
     if segment_filter:
         custs = [c for c in custs if c['segment'] == segment_filter]

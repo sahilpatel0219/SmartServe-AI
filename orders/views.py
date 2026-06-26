@@ -25,11 +25,15 @@ def index_view(request):
     if status_filter:
         query['status'] = status_filter
     orders = list(col.orders().find(query, sort=[('created_at', -1)], limit=100))
+    for o in orders:
+        o['str_id'] = str(o.get('_id', ''))
     counts = {s: col.orders().count_documents({'business_id': bid, 'status': s}) for s in STATUSES}
+    statuses_with_counts = [(s, counts[s]) for s in STATUSES]
     return render(request, 'orders/index.html', {
         'business': business,
         'orders': orders,
         'statuses': STATUSES,
+        'statuses_with_counts': statuses_with_counts,
         'status_filter': status_filter,
         'counts': counts,
     })

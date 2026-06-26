@@ -6,7 +6,7 @@
 <div class="flex justify-between items-center mb-6">
   <div class="flex gap-2 flex-wrap">
     <a href="{% url 'orders:index' %}" class="btn {% if not status_filter %}btn-primary{% else %}btn-outline{% endif %} btn-sm">All</a>
-    {% for s in statuses %}<a href="?status={{ s }}" class="btn {% if status_filter == s %}btn-primary{% else %}btn-outline{% endif %} btn-sm" style="text-transform:capitalize;">{{ s }} {% if counts[s] %}<span class="badge badge-neutral ms-1" style="font-size:10px;">{{ counts[s] }}</span>{% endif %}</a>{% endfor %}
+    {% for s, cnt in statuses_with_counts %}<a href="?status={{ s }}" class="btn {% if status_filter == s %}btn-primary{% else %}btn-outline{% endif %} btn-sm" style="text-transform:capitalize;">{{ s }} {% if cnt %}<span class="badge badge-neutral ms-1" style="font-size:10px;">{{ cnt }}</span>{% endif %}</a>{% endfor %}
   </div>
   <a href="{% url 'orders:create' %}" class="btn btn-primary btn-sm"><i class="bi bi-plus-lg me-1"></i>New Order</a>
 </div>
@@ -18,18 +18,18 @@
       <tbody>
         {% for order in orders %}
         <tr>
-          <td class="tabular-nums text-sm text-muted">#{{ order._id|stringformat:"s"|slice:"-6:" }}</td>
+          <td class="tabular-nums text-sm text-muted">#{{ order.str_id|stringformat:"s"|slice:"-6:" }}</td>
           <td><span class="badge badge-neutral" style="text-transform:capitalize;">{{ order.order_type|default:"—" }}</span></td>
           <td>{{ order.customer_name|default:"Walk-in" }}</td>
           <td class="tabular-nums">{{ order.items|length }}</td>
           <td class="tabular-nums font-medium">Rs. {{ order.total_amount|floatformat:0 }}</td>
           <td>
-            <select class="form-control" style="padding:4px 8px;font-size:12px;width:auto;" onchange="updateStatus('{{ order._id }}', this.value)">
+            <select class="form-control" style="padding:4px 8px;font-size:12px;width:auto;" onchange="updateStatus('{{ order.str_id }}', this.value)">
               {% for s in statuses %}<option value="{{ s }}" {% if order.status == s %}selected{% endif %} style="text-transform:capitalize;">{{ s }}</option>{% endfor %}
             </select>
           </td>
           <td class="text-muted text-xs">{{ order.created_at|date:"d M, H:i" }}</td>
-          <td><a href="{% url 'orders:detail' order._id|stringformat:'s' %}" class="btn btn-ghost btn-sm"><i class="bi bi-eye"></i></a></td>
+          <td><a href="{% url 'orders:detail' order.str_id|stringformat:'s' %}" class="btn btn-ghost btn-sm"><i class="bi bi-eye"></i></a></td>
         </tr>
         {% endfor %}
       </tbody>

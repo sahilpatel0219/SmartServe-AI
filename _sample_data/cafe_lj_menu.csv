@@ -1,0 +1,19 @@
+Item,Price,Category
+Cappuccino,149,Hot Beverage
+Cafe Latte,159,Hot Beverage
+Espresso,119,Hot Beverage
+Masala Chai,79,Hot Beverage
+Cold Coffee,169,Cold Beverage
+Iced Latte,179,Cold Beverage
+Lemon Iced Tea,129,Cold Beverage
+Fresh Lime Soda,99,Cold Beverage
+Veg Sandwich,139,Snacks
+Grilled Cheese Sandwich,159,Snacks
+Veg Burger,149,Snacks
+French Fries,119,Snacks
+Margherita Pizza,249,Main Course
+Pasta Alfredo,229,Main Course
+Chocolate Brownie,129,Dessert
+Blueberry Muffin,99,Dessert
+Croissant,109,Bakery
+Cheesecake Slice,159,Dessert

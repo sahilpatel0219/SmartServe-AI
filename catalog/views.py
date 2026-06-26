@@ -25,6 +25,8 @@ def index_view(request):
     if category_filter:
         query['category'] = category_filter
     items = list(col.menu_items().find(query, sort=[('category', 1), ('name', 1)]))
+    for item in items:
+        item['str_id'] = str(item.get('_id', ''))
     categories = col.menu_items().distinct('category', {'business_id': bid})
     return render(request, 'catalog/index.html', {
         'business': business,

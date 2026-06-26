@@ -38,8 +38,8 @@
           </td>
           <td>
             <div class="flex gap-1">
-              <a href="{% url 'inventory:edit_stock' item._id|stringformat:'s' %}" class="btn btn-ghost btn-sm"><i class="bi bi-pencil"></i></a>
-              <form method="post" action="{% url 'inventory:delete_stock' item._id|stringformat:'s' %}" onsubmit="return confirm('Remove this item?')">
+              <a href="{% url 'inventory:edit_stock' item.str_id|stringformat:'s' %}" class="btn btn-ghost btn-sm"><i class="bi bi-pencil"></i></a>
+              <form method="post" action="{% url 'inventory:delete_stock' item.str_id|stringformat:'s' %}" onsubmit="return confirm('Remove this item?')">
                 {% csrf_token %}<button type="submit" class="btn btn-ghost btn-sm text-danger"><i class="bi bi-trash3"></i></button>
               </form>
             </div>
