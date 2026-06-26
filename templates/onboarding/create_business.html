@@ -1,108 +1,98 @@
-{% extends "base.html" %}
+﻿{% extends "base.html" %}
 {% load static %}
-{% block title %}Set Up Your Business — SmartServe AI{% endblock %}
+{% block title %}Create Business — SmartServe AI{% endblock %}
+{% block page_title %}Create Business{% endblock %}
 
-{% block full_page %}
-<div class="auth-page" style="align-items:flex-start;padding-top:var(--space-16);">
-  <div style="width:100%;max-width:600px;margin:0 auto;">
+{% block content %}
+<div style="max-width:640px;margin:0 auto;">
 
-    <div class="auth-logo justify-content-center mb-4">
-      <div style="width:44px;height:44px;background:var(--color-primary);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:1.25rem;">S</div>
-      <div>
-        <div style="font-weight:700;font-size:1.2rem;color:var(--color-ink);">SmartServe AI</div>
-        <div style="font-size:var(--text-xs);color:var(--color-muted);">Let's set up your workspace</div>
-      </div>
-    </div>
-
-    <!-- Step indicator -->
-    <div class="flex items-center gap-3 mb-6" style="justify-content:center;">
-      <div style="width:28px;height:28px;border-radius:50%;background:var(--color-primary);color:white;display:flex;align-items:center;justify-content:center;font-size:var(--text-xs);font-weight:600;">1</div>
-      <div style="height:2px;width:48px;background:var(--color-border);"></div>
-      <div style="width:28px;height:28px;border-radius:50%;background:var(--color-border);color:var(--color-muted);display:flex;align-items:center;justify-content:center;font-size:var(--text-xs);font-weight:600;">2</div>
-      <div style="height:2px;width:48px;background:var(--color-border);"></div>
-      <div style="width:28px;height:28px;border-radius:50%;background:var(--color-border);color:var(--color-muted);display:flex;align-items:center;justify-content:center;font-size:var(--text-xs);font-weight:600;">3</div>
-    </div>
-    <div class="flex gap-3 mb-8 text-xs text-muted" style="justify-content:center;gap:60px;">
-      <span style="color:var(--color-primary);font-weight:600;">Business Info</span>
-      <span>Upload Data</span>
-      <span>Done!</span>
-    </div>
-
-    <div class="card">
-      <div class="card-header">
-        <div>
-          <div class="card-title">Business Details</div>
-          <div class="text-muted text-sm">This creates your isolated workspace.</div>
-        </div>
-      </div>
-      <div class="card-body">
-        {% include "partials/messages.html" %}
-        <form method="post" enctype="multipart/form-data" novalidate>
-          {% csrf_token %}
-
-          <div class="grid grid-2 gap-4">
-            <div class="form-group" style="grid-column:1/-1;">
-              <label class="form-label">Business Name *</label>
-              {{ form.name }}
-              {% if form.name.errors %}<div class="form-text text-danger">{{ form.name.errors.0 }}</div>{% endif %}
-            </div>
-
-            <div class="form-group">
-              <label class="form-label">Business Type *</label>
-              {{ form.business_type }}
-              {% if form.business_type.errors %}<div class="form-text text-danger">{{ form.business_type.errors.0 }}</div>{% endif %}
-            </div>
-
-            <div class="form-group">
-              <label class="form-label">Phone</label>
-              {{ form.phone }}
-            </div>
-
-            <div class="form-group" style="grid-column:1/-1;">
-              <label class="form-label">Email</label>
-              {{ form.email }}
-            </div>
-
-            <div class="form-group" style="grid-column:1/-1;">
-              <label class="form-label">Address</label>
-              {{ form.address }}
-            </div>
-
-            <div class="form-group">
-              <label class="form-label">City</label>
-              {{ form.city }}
-            </div>
-
-            <div class="form-group">
-              <label class="form-label">State</label>
-              {{ form.state }}
-            </div>
-
-            <div class="form-group">
-              <label class="form-label">Pincode</label>
-              {{ form.pincode }}
-            </div>
-
-            <div class="form-group">
-              <label class="form-label">GST Number</label>
-              {{ form.gst_number }}
-            </div>
-
-            <div class="form-group" style="grid-column:1/-1;">
-              <label class="form-label">Logo <span class="text-subtle">(optional)</span></label>
-              {{ form.logo }}
-            </div>
-          </div>
-
-          <div style="display:flex;gap:var(--space-3);margin-top:var(--space-4);">
-            <button type="submit" class="btn btn-primary" style="flex:1;justify-content:center;padding:12px;">
-              Create Workspace <i class="bi bi-arrow-right ms-1"></i>
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
-
+  <!-- Step indicator -->
+  <div class="flex items-center gap-2 mb-8" style="justify-content:center;">
+    <div style="width:32px;height:32px;border-radius:50%;background:var(--color-primary);color:#fff;display:flex;align-items:center;justify-content:center;font-size:var(--text-xs);font-weight:700;">1</div>
+    <div style="height:2px;width:56px;background:var(--color-primary);border-radius:2px;"></div>
+    <div style="width:32px;height:32px;border-radius:50%;background:var(--color-border);color:var(--color-muted);display:flex;align-items:center;justify-content:center;font-size:var(--text-xs);font-weight:600;">2</div>
+    <div style="height:2px;width:56px;background:var(--color-border);border-radius:2px;"></div>
+    <div style="width:32px;height:32px;border-radius:50%;background:var(--color-border);color:var(--color-muted);display:flex;align-items:center;justify-content:center;font-size:var(--text-xs);font-weight:600;">3</div>
   </div>
+  <div class="flex text-xs text-muted mb-8" style="justify-content:center;gap:72px;">
+    <span style="color:var(--color-primary);font-weight:600;">Business Info</span>
+    <span>Upload Data</span>
+    <span>Done!</span>
+  </div>
+
+  <div class="card animate-in">
+    <div class="card-header">
+      <div>
+        <div class="card-title">Business Details</div>
+        <div class="text-muted text-sm">This creates your isolated workspace in SmartServe AI.</div>
+      </div>
+      <i class="bi bi-building" style="font-size:1.5rem;color:var(--color-primary);opacity:.5;"></i>
+    </div>
+    <div class="card-body">
+      {% include "partials/messages.html" %}
+      <form method="post" enctype="multipart/form-data" novalidate>
+        {% csrf_token %}
+
+        <div class="grid grid-2 gap-4">
+          <div class="form-group" style="grid-column:1/-1;">
+            <label class="form-label">Business Name *</label>
+            {{ form.name }}
+            {% if form.name.errors %}<div class="form-text text-danger">{{ form.name.errors.0 }}</div>{% endif %}
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Business Type *</label>
+            {{ form.business_type }}
+            {% if form.business_type.errors %}<div class="form-text text-danger">{{ form.business_type.errors.0 }}</div>{% endif %}
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Phone</label>
+            {{ form.phone }}
+          </div>
+
+          <div class="form-group" style="grid-column:1/-1;">
+            <label class="form-label">Email</label>
+            {{ form.email }}
+          </div>
+
+          <div class="form-group" style="grid-column:1/-1;">
+            <label class="form-label">Address</label>
+            {{ form.address }}
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">City</label>
+            {{ form.city }}
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">State</label>
+            {{ form.state }}
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Pincode</label>
+            {{ form.pincode }}
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">GST Number</label>
+            {{ form.gst_number }}
+          </div>
+
+          <div class="form-group" style="grid-column:1/-1;">
+            <label class="form-label">Logo <span class="text-muted">(optional)</span></label>
+            {{ form.logo }}
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;margin-top:var(--space-2);">
+          Create Workspace <i class="bi bi-arrow-right ms-2"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
 </div>
 {% endblock %}

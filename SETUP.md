@@ -175,7 +175,7 @@ Visit: **http://127.0.0.1:8000**
 
 ## 10. First Run Walkthrough
 
-1. **Register** → create your account at `/accounts/register/`
+1. **Register** → create your account at `   `
 2. **Create Business** → name, type (restaurant/café/bakery/etc.), address
 3. **Upload Data** → go to Data Import Center (`/onboarding/`) and upload:
    - `sales` — at least 30 rows to unlock AI analysis

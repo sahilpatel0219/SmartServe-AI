@@ -1,56 +1,144 @@
-/* SmartServe AI — global utilities */
+/* SmartServe AI — global utilities v2 */
 
-// Sidebar toggle (mobile)
+// ── Sidebar toggle (mobile) ──────────────────────────────────
 function toggleSidebar() {
-  document.getElementById('sidebar').classList.toggle('open');
+  const sidebar = document.getElementById('sidebar');
+  const overlay = document.getElementById('sidebarOverlay');
+  const isOpen  = sidebar.classList.contains('open');
+  sidebar.classList.toggle('open', !isOpen);
+  if (overlay) overlay.classList.toggle('active', !isOpen);
+  document.body.style.overflow = isOpen ? '' : 'hidden';
 }
 
-// Show a toast notification
-function showToast(message, type = 'success', duration = 4000) {
+// Close sidebar on Escape key
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && document.getElementById('sidebar')?.classList.contains('open')) {
+    toggleSidebar();
+  }
+});
+
+// ── Toast notifications ──────────────────────────────────────
+function showToast(message, type = 'success', duration = 4500) {
   const container = document.getElementById('toastContainer');
-  const icons = { success: 'check-circle', danger: 'exclamation-circle', warning: 'exclamation-triangle', info: 'info-circle' };
-  const colors = { success: 'var(--color-success)', danger: 'var(--color-danger)', warning: 'var(--color-warning)', info: 'var(--color-info)' };
+  if (!container) return;
+
+  const icons = {
+    success: 'check-circle-fill',
+    danger:  'x-circle-fill',
+    warning: 'exclamation-triangle-fill',
+    info:    'info-circle-fill',
+  };
 
   const toast = document.createElement('div');
-  toast.className = 'toast';
+  toast.className = `toast ${type}`;
+  toast.style.cssText = 'opacity:0;transform:translateX(20px);transition:opacity .25s,transform .25s;';
   toast.innerHTML = `
-    <i class="bi bi-${icons[type] || 'info-circle'}" style="color:${colors[type]};font-size:1.1rem;flex-shrink:0;"></i>
-    <span style="font-size:var(--text-sm);flex:1;">${message}</span>
-    <button onclick="this.parentElement.remove()" style="background:none;border:none;cursor:pointer;color:var(--color-muted);padding:0;line-height:1;">
+    <i class="bi bi-${icons[type] || 'info-circle-fill'}" style="font-size:1rem;flex-shrink:0;opacity:.85;"></i>
+    <span style="flex:1;line-height:1.4;">${message}</span>
+    <button onclick="this.parentElement.remove()"
+      style="background:none;border:none;cursor:pointer;color:rgba(255,255,255,.6);padding:0;line-height:1;font-size:1.1rem;">
       <i class="bi bi-x"></i>
     </button>`;
+
   container.appendChild(toast);
-  setTimeout(() => toast.remove(), duration);
+  requestAnimationFrame(() => {
+    toast.style.opacity = '1';
+    toast.style.transform = 'translateX(0)';
+  });
+
+  const timer = setTimeout(() => removeToast(toast), duration);
+  toast.querySelector('button').addEventListener('click', () => clearTimeout(timer));
 }
 
-// Confirm dialog helper
+function removeToast(toast) {
+  toast.style.opacity = '0';
+  toast.style.transform = 'translateX(20px)';
+  setTimeout(() => toast.remove(), 300);
+}
+
+// ── Confirm dialog ───────────────────────────────────────────
 function confirmAction(message, callback) {
   if (window.confirm(message)) callback();
 }
 
-// Auto-dismiss Django messages after 5s
+// ── DOMContentLoaded ─────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.alert').forEach(el => {
-    setTimeout(() => el.style.opacity = '0', 4500);
-    setTimeout(() => el.remove(), 5000);
-    el.style.transition = 'opacity 0.5s';
+
+  // Convert Django flash messages to toasts
+  document.querySelectorAll('.django-message[data-type]').forEach(el => {
+    showToast(el.dataset.text, el.dataset.type);
+    el.remove();
   });
 
-  // Dropzone drag-and-drop highlight
+  // Auto-dismiss .alert banners (keep them visible longer)
+  document.querySelectorAll('.alert').forEach(el => {
+    el.style.transition = 'opacity .5s,transform .5s';
+    setTimeout(() => { el.style.opacity = '0'; el.style.transform = 'translateY(-4px)'; }, 5000);
+    setTimeout(() => el.remove(), 5500);
+  });
+
+  // Dropzone drag-and-drop
   document.querySelectorAll('.dropzone').forEach(zone => {
-    zone.addEventListener('dragover', e => { e.preventDefault(); zone.classList.add('dragging'); });
+    zone.addEventListener('dragover',  e => { e.preventDefault(); zone.classList.add('dragging'); });
     zone.addEventListener('dragleave', () => zone.classList.remove('dragging'));
-    zone.addEventListener('drop', e => { e.preventDefault(); zone.classList.remove('dragging'); });
+    zone.addEventListener('drop', e => {
+      e.preventDefault(); zone.classList.remove('dragging');
+      const input = zone.querySelector('input[type=file]');
+      if (input && e.dataTransfer.files.length) {
+        const dt = new DataTransfer();
+        dt.items.add(e.dataTransfer.files[0]);
+        input.files = dt.files;
+        input.dispatchEvent(new Event('change'));
+        const label = zone.querySelector('.dropzone-label');
+        if (label) label.textContent = e.dataTransfer.files[0].name;
+      }
+    });
     zone.addEventListener('click', () => zone.querySelector('input[type=file]')?.click());
   });
+
+  // Active nav link highlight based on URL
+  const path = window.location.pathname;
+  document.querySelectorAll('.nav-link').forEach(link => {
+    if (link.href && link.href !== window.location.origin + '/') {
+      const linkPath = new URL(link.href).pathname;
+      if (path.startsWith(linkPath)) link.classList.add('active');
+    }
+  });
+
+  // Animate stat cards and content cards on page load
+  document.querySelectorAll('.stat-card').forEach((card, i) => {
+    card.style.animationDelay = `${i * 0.07}s`;
+    card.classList.add('animate-in');
+  });
+
+  // Number counter animation for stat values
+  document.querySelectorAll('.stat-value[data-count], .stat-card-value[data-count]').forEach(el => {
+    animateCounter(el, parseInt(el.dataset.count));
+  });
+
 });
 
-// Currency formatter (INR)
-function formatCurrency(val, currency = 'INR') {
-  return new Intl.NumberFormat('en-IN', { style: 'currency', currency, maximumFractionDigits: 0 }).format(val);
+// ── Number counter animation ─────────────────────────────────
+function animateCounter(el, target) {
+  const start   = 0;
+  const duration = 1200;
+  const startTime = performance.now();
+  const prefix  = el.dataset.prefix || '';
+  const suffix  = el.dataset.suffix || '';
+
+  function step(now) {
+    const progress = Math.min((now - startTime) / duration, 1);
+    const ease = 1 - Math.pow(1 - progress, 3);
+    el.textContent = prefix + Math.floor(ease * target).toLocaleString('en-IN') + suffix;
+    if (progress < 1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
 }
 
-// Number with commas
+// ── Formatters ───────────────────────────────────────────────
+function formatCurrency(val, currency = 'INR') {
+  return new Intl.NumberFormat('en-IN', { style:'currency', currency, maximumFractionDigits:0 }).format(val);
+}
 function formatNumber(val) {
   return new Intl.NumberFormat('en-IN').format(val);
 }

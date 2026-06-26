@@ -1,58 +1,58 @@
-{% extends "base.html" %}
-{% load static %}
-
+﻿{% extends "base.html" %}
 {% block title %}Sign In — SmartServe AI{% endblock %}
 
 {% block full_page %}
 <div class="auth-page">
-  <div style="width:100%;max-width:440px;">
-    <!-- Logo -->
-    <div class="auth-logo justify-content-center mb-4">
-      <div style="width:44px;height:44px;background:var(--color-primary);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:1.25rem;">S</div>
+  <div style="width:100%;max-width:420px;">
+
+    <div class="auth-logo" style="justify-content:center;margin-bottom:var(--space-6);">
+      <div style="width:44px;height:44px;background:linear-gradient(135deg,var(--color-primary),#40916C);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:1.25rem;box-shadow:0 4px 14px rgba(45,106,79,.3);">S</div>
       <div>
-        <div style="font-weight:700;font-size:1.2rem;color:var(--color-ink);">SmartServe AI</div>
+        <div style="font-weight:700;font-size:1.15rem;color:var(--color-ink);">SmartServe AI</div>
         <div style="font-size:var(--text-xs);color:var(--color-muted);">AI-Powered Food Business OS</div>
       </div>
     </div>
 
     <div class="auth-card">
-      <h1 style="font-size:var(--text-2xl);font-weight:700;margin-bottom:var(--space-1);">Welcome back</h1>
-      <p class="text-muted" style="margin-bottom:var(--space-6);font-size:var(--text-sm);">Sign in to your SmartServe workspace</p>
-
-      {% include "partials/messages.html" %}
+      <h1 style="font-size:var(--text-2xl);font-weight:700;margin-bottom:4px;">Welcome back</h1>
+      <p class="text-muted text-sm mb-6">Sign in to your SmartServe workspace</p>
 
       <form method="post" novalidate>
         {% csrf_token %}
+
         <div class="form-group">
-          <label class="form-label" for="{{ form.username.id_for_label }}">Email address</label>
-          {{ form.username }}
-          {% if form.username.errors %}
-            <div class="form-text text-danger">{{ form.username.errors.0 }}</div>
-          {% endif %}
+          <label class="form-label" for="id_username">Email address</label>
+          <input type="text" name="username" id="id_username" class="form-control"
+                 placeholder="your@email.com" autofocus autocomplete="username">
         </div>
 
         <div class="form-group">
-          <div class="flex justify-between items-center" style="margin-bottom:var(--space-2);">
-            <label class="form-label" style="margin:0;" for="{{ form.password.id_for_label }}">Password</label>
-            <a href="#" style="font-size:var(--text-xs);color:var(--color-primary);">Forgot password?</a>
+          <div class="flex justify-between items-center mb-2">
+            <label class="form-label" style="margin:0;" for="id_password">Password</label>
           </div>
-          {{ form.password }}
-          {% if form.password.errors %}
-            <div class="form-text text-danger">{{ form.password.errors.0 }}</div>
-          {% endif %}
+          <input type="password" name="password" id="id_password" class="form-control"
+                 placeholder="••••••••" autocomplete="current-password">
         </div>
 
-        <button type="submit" class="btn btn-primary w-full" style="width:100%;justify-content:center;padding:12px;">
-          Sign in
+        {% if form.non_field_errors %}
+        <div class="alert alert-danger mb-4">
+          <i class="bi bi-exclamation-circle"></i>
+          <span>{{ form.non_field_errors.0 }}</span>
+        </div>
+        {% endif %}
+
+        <button type="submit" class="btn btn-primary btn-lg w-full" style="justify-content:center;">
+          Sign in <i class="bi bi-arrow-right ms-1"></i>
         </button>
       </form>
 
       <div class="divider"></div>
-      <p style="text-align:center;font-size:var(--text-sm);color:var(--color-muted);">
+      <p class="text-center text-sm text-muted">
         Don't have an account?
-        <a href="{% url 'accounts:register' %}" style="font-weight:var(--fw-medium);">Create one free</a>
+        <a href="{% url 'accounts:register' %}" style="font-weight:var(--fw-semi);">Create one free</a>
       </p>
     </div>
+
   </div>
 </div>
 {% endblock %}
