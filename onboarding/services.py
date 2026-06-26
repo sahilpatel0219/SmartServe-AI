@@ -35,6 +35,68 @@ SCHEMA = {
     },
 }
 
+# ── Column aliases per type ──────────────────────────────────────────────────
+# Maps each canonical column → list of accepted source names (after normalisation).
+# Lets users upload real-world files with varied headers (Item, Product, Qty, …)
+# without renaming columns by hand.
+COLUMN_ALIASES = {
+    'sales': {
+        'date':      ['date', 'sale_date', 'transaction_date', 'day', 'order_date', 'datetime'],
+        'item_name': ['item_name', 'item', 'product', 'product_name', 'name', 'dish', 'menu_item'],
+        'quantity':  ['quantity', 'qty', 'units', 'count', 'qty_sold', 'units_sold', 'no_of_items'],
+        'revenue':   ['revenue', 'sales', 'sales_amount', 'amount', 'total', 'total_amount', 'total_revenue'],
+        'cost':      ['cost', 'cost_price', 'cogs', 'total_cost'],
+        'category':  ['category', 'group', 'section'],
+        'order_type':['order_type', 'source', 'channel'],
+    },
+    'inventory': {
+        'item_name':     ['item_name', 'item', 'ingredient', 'product', 'name', 'material'],
+        'quantity':      ['quantity', 'qty', 'stock', 'current_stock', 'on_hand', 'in_stock'],
+        'unit':          ['unit', 'uom', 'measure', 'units'],
+        'cost_per_unit': ['cost_per_unit', 'unit_cost', 'price_per_unit', 'rate', 'cost'],
+        'reorder_level': ['reorder_level', 'min_threshold', 'minimum', 'threshold', 'min_stock', 'reorder', 'reorder_point', 'min_qty'],
+        'expiry_date':   ['expiry_date', 'expiry', 'expiration', 'best_before', 'use_by'],
+        'category':      ['category', 'group', 'type'],
+        'supplier':      ['supplier', 'vendor'],
+    },
+    'menu': {
+        'item_name':    ['item_name', 'item', 'product', 'name', 'dish', 'menu_item'],
+        'category':     ['category', 'group', 'section', 'type'],
+        'price':        ['price', 'selling_price', 'mrp', 'rate', 'amount'],
+        'cost':         ['cost', 'cost_price', 'cogs'],
+        'is_available': ['is_available', 'available', 'active'],
+        'description':  ['description', 'desc', 'details'],
+    },
+    'orders': {
+        'order_date':    ['order_date', 'date', 'sale_date', 'transaction_date', 'datetime'],
+        'order_id':      ['order_id', 'order_no', 'bill_no', 'invoice', 'invoice_no', 'receipt_no', 'id'],
+        'item_name':     ['item_name', 'item', 'product', 'name', 'dish'],
+        'quantity':      ['quantity', 'qty', 'units', 'count', 'item_count'],
+        'amount':        ['amount', 'total', 'total_amount', 'bill_amount', 'revenue'],
+        'order_type':    ['order_type', 'source', 'channel', 'type'],
+        'customer_name': ['customer_name', 'customer', 'client', 'guest'],
+        'status':        ['status', 'state'],
+    },
+}
+
+
+def _apply_aliases(df, upload_type):
+    """Rename any recognised alias columns to their canonical names (in place)."""
+    aliases = COLUMN_ALIASES.get(upload_type, {})
+    present = set(df.columns)
+    rename_map = {}
+    for canonical, variants in aliases.items():
+        if canonical in present:
+            continue  # already correctly named
+        for v in variants:
+            if v in present and v not in rename_map.values():
+                rename_map[v] = canonical
+                break
+    if rename_map:
+        df.rename(columns=rename_map, inplace=True)
+    return df
+
+
 TEMPLATE_ROWS = {
     'sales': [
         {'date': '2024-01-01', 'item_name': 'Masala Dosa', 'quantity': 5, 'revenue': 600, 'cost': 200},
@@ -78,16 +140,21 @@ def validate_and_preview(uploaded_file, upload_type: str) -> dict:
     if df.empty:
         return {'status': 'error', 'message': 'The file is empty.'}
 
-    # Normalise column names: lowercase, strip whitespace, replace spaces with underscores
-    df.columns = [c.strip().lower().replace(' ', '_') for c in df.columns]
+    # Normalise column names: lowercase, strip whitespace, replace spaces/hyphens with underscores
+    df.columns = [c.strip().lower().replace(' ', '_').replace('-', '_') for c in df.columns]
+
+    # Auto-map common alternative headers (Item → item_name, Qty → quantity, …)
+    df = _apply_aliases(df, upload_type)
 
     # Check required columns
     missing = [c for c in schema['required'] if c not in df.columns]
     if missing:
+        found = ', '.join(df.columns) or '(none)'
         return {
             'status': 'error',
             'message': f'Missing required column(s): {", ".join(missing)}. '
-                       f'Download the template to see the expected format.'
+                       f'Your file has these columns: {found}. '
+                       f'Rename them to match, or download the template for the exact format.'
         }
 
     # Remove completely empty rows

@@ -1,1222 +1,360 @@
-Order_ID,Date,Time,Customer,Items,Item_Count,Amount,Source,Payment_Mode,Status
-ORD1001,2026-05-27,19:29,Priya Shah,Blueberry Muffin,1,99,QR Order,UPI,Delivered
-ORD1002,2026-05-27,12:54,Simran Kaur,Iced Latte,1,179,Counter,Card,Completed
-ORD1003,2026-05-27,13:11,Aarav Patel,French Fries; Lemon Iced Tea; Fresh Lime Soda,3,347,QR Order,Card,Delivered
-ORD1004,2026-05-27,18:17,Aditya Jain,Veg Sandwich,1,139,QR Order,Card,Delivered
-ORD1005,2026-05-27,08:40,Tanvi Bose,Margherita Pizza; Fresh Lime Soda,2,348,Counter,UPI,Delivered
-ORD1006,2026-05-27,18:07,Aditya Jain,Cold Coffee; Pasta Alfredo,2,398,QR Order,Card,Completed
-ORD1007,2026-05-27,15:58,Ananya Iyer,Lemon Iced Tea; Iced Latte,2,308,Counter,UPI,Delivered
-ORD1008,2026-05-27,20:12,Diya Saxena,Espresso,1,119,QR Order,Cash,Completed
-ORD1009,2026-05-27,15:36,Walk-in,Lemon Iced Tea,1,129,Counter,UPI,Completed
-ORD1010,2026-05-27,21:17,Farhan Sheikh,Masala Chai,1,79,QR Order,UPI,Delivered
-ORD1011,2026-05-27,15:53,Gauri Dixit,French Fries,1,119,Counter,UPI,Completed
-ORD1012,2026-05-27,13:37,Rahul Mehta,Cold Coffee,1,169,Counter,Card,Completed
-ORD1013,2026-05-27,21:38,Walk-in,Iced Latte; Veg Sandwich,2,318,Zomato,UPI,Completed
-ORD1014,2026-05-27,15:17,Karan Joshi,Masala Chai,1,79,QR Order,Card,Completed
-ORD1015,2026-05-27,18:40,Aarav Patel,Veg Burger,1,149,Counter,Card,Completed
-ORD1016,2026-05-27,14:20,Harsh Modi,Margherita Pizza,1,249,Zomato,UPI,Completed
-ORD1017,2026-05-27,18:52,Walk-in,Cafe Latte; Croissant,2,268,QR Order,Cash,Completed
-ORD1018,2026-05-27,12:40,Karan Joshi,Fresh Lime Soda,1,99,QR Order,UPI,Completed
-ORD1019,2026-05-27,16:05,Riya Kapoor,Espresso; Iced Latte; Cheesecake Slice,3,457,Counter,Card,Delivered
-ORD1020,2026-05-27,17:06,Ananya Iyer,Grilled Cheese Sandwich; Cappuccino,2,308,Counter,UPI,Completed
-ORD1021,2026-05-27,15:04,Yash Bhatt,Lemon Iced Tea; Iced Latte,2,308,QR Order,Cash,Delivered
-ORD1022,2026-05-27,13:36,Priya Shah,Cold Coffee,1,169,Counter,UPI,Delivered
-ORD1023,2026-05-27,17:08,Harsh Modi,Masala Chai,1,79,QR Order,UPI,Completed
-ORD1024,2026-05-27,08:38,Aditya Jain,Iced Latte,1,179,Counter,UPI,Completed
-ORD1025,2026-05-27,14:31,Rahul Mehta,Grilled Cheese Sandwich; Cold Coffee,2,328,Swiggy,UPI,Delivered
-ORD1026,2026-05-27,16:23,Priya Shah,Cheesecake Slice,1,159,Zomato,Card,Cancelled
-ORD1027,2026-05-27,08:40,Ishita Nair,French Fries; Cappuccino; Cappuccino,3,417,Counter,UPI,Delivered
-ORD1028,2026-05-27,10:51,Varun Malhotra,Cappuccino; Fresh Lime Soda,2,248,QR Order,UPI,Completed
-ORD1029,2026-05-27,09:29,Priya Shah,Iced Latte,1,179,Zomato,UPI,Completed
-ORD1030,2026-05-28,10:08,Aarav Patel,Veg Burger,1,149,Counter,UPI,Completed
-ORD1031,2026-05-28,14:04,Walk-in,Cafe Latte; Chocolate Brownie,2,288,Swiggy,Cash,Delivered
-ORD1032,2026-05-28,08:32,Pooja Gupta,Fresh Lime Soda,1,99,Counter,UPI,Delivered
-ORD1033,2026-05-28,17:47,Walk-in,Cappuccino,1,149,Counter,Cash,Delivered
-ORD1034,2026-05-28,10:57,Sneha Desai,Veg Burger,1,149,Counter,UPI,Delivered
-ORD1035,2026-05-28,12:18,Rahul Mehta,Cappuccino; Lemon Iced Tea; Cold Coffee,3,447,Zomato,UPI,Completed
-ORD1036,2026-05-28,18:59,Sneha Desai,Veg Sandwich,1,139,Swiggy,UPI,Delivered
-ORD1037,2026-05-28,17:33,Ananya Iyer,Veg Burger; Cappuccino,2,298,QR Order,Cash,Delivered
-ORD1038,2026-05-28,20:05,Pooja Gupta,Cafe Latte; Masala Chai; Cappuccino,3,387,Zomato,UPI,Delivered
-ORD1039,2026-05-28,16:59,Aditya Jain,Fresh Lime Soda,1,99,QR Order,Cash,Delivered
-ORD1040,2026-05-28,08:28,Rohan Das,Masala Chai,1,79,Swiggy,Card,Delivered
-ORD1041,2026-05-28,12:19,Sara Ahmed,French Fries,1,119,QR Order,Card,Delivered
-ORD1042,2026-05-28,21:43,Pooja Gupta,Pasta Alfredo,1,229,Counter,Card,Delivered
-ORD1043,2026-05-28,20:51,Akash Pandey,Iced Latte,1,179,QR Order,UPI,Delivered
-ORD1044,2026-05-28,14:04,Rahul Mehta,Cheesecake Slice; Cafe Latte,2,318,QR Order,Card,Completed
-ORD1045,2026-05-28,11:27,Yash Bhatt,Pasta Alfredo,1,229,QR Order,Card,Completed
-ORD1046,2026-05-28,20:02,Vivek Sharma,Iced Latte,1,179,Zomato,UPI,Delivered
-ORD1047,2026-05-28,11:41,Kavya Reddy,Chocolate Brownie,1,129,QR Order,UPI,Delivered
-ORD1048,2026-05-28,19:01,Rahul Mehta,French Fries; Cold Coffee; Fresh Lime Soda,3,387,Counter,UPI,Delivered
-ORD1049,2026-05-28,17:42,Karan Joshi,Cheesecake Slice,1,159,QR Order,Card,Delivered
-ORD1050,2026-05-28,13:20,Pooja Gupta,Croissant; Fresh Lime Soda,2,208,QR Order,Card,Cancelled
-ORD1051,2026-05-28,15:11,Parth Gandhi,Veg Burger,1,149,Swiggy,UPI,Completed
-ORD1052,2026-05-28,18:03,Sneha Desai,Cappuccino; Lemon Iced Tea,2,278,Counter,UPI,Delivered
-ORD1053,2026-05-28,12:20,Yash Bhatt,Pasta Alfredo; Chocolate Brownie,2,358,QR Order,UPI,Completed
-ORD1054,2026-05-28,15:24,Varun Malhotra,Croissant; Grilled Cheese Sandwich,2,268,Counter,Card,Delivered
-ORD1055,2026-05-28,13:58,Yash Bhatt,Cappuccino,1,149,QR Order,UPI,Completed
-ORD1056,2026-05-28,08:16,Priya Shah,Cafe Latte; French Fries; Masala Chai,3,357,QR Order,UPI,Cancelled
-ORD1057,2026-05-28,13:56,Simran Kaur,Cafe Latte,1,159,Swiggy,Card,Delivered
-ORD1058,2026-05-28,11:01,Riya Kapoor,French Fries; Veg Sandwich,2,258,Counter,Card,Completed
-ORD1059,2026-05-28,21:57,Walk-in,Espresso,1,119,Swiggy,Card,Delivered
-ORD1060,2026-05-28,16:15,Aarav Patel,Iced Latte; Cappuccino,2,328,Counter,UPI,Delivered
-ORD1061,2026-05-28,13:13,Sara Ahmed,Espresso; Cold Coffee,2,288,QR Order,Card,Delivered
-ORD1062,2026-05-28,12:11,Priya Shah,Cafe Latte,1,159,Counter,Cash,Completed
-ORD1063,2026-05-28,17:42,Harsh Modi,Iced Latte,1,179,Counter,UPI,Delivered
-ORD1064,2026-05-28,13:05,Parth Gandhi,Cappuccino,1,149,Swiggy,UPI,Delivered
-ORD1065,2026-05-28,11:51,Kabir Khanna,Lemon Iced Tea; Fresh Lime Soda,2,228,QR Order,UPI,Cancelled
-ORD1066,2026-05-29,20:25,Nikhil Verma,Grilled Cheese Sandwich; Pasta Alfredo; Masala Chai,3,467,Zomato,Card,Completed
-ORD1067,2026-05-29,20:09,Walk-in,Blueberry Muffin,1,99,Zomato,UPI,Delivered
-ORD1068,2026-05-29,14:31,Riya Kapoor,Fresh Lime Soda; Cafe Latte; Cold Coffee,3,427,Zomato,UPI,Delivered
-ORD1069,2026-05-29,19:15,Tara Menon,Cafe Latte,1,159,Counter,Card,Completed
-ORD1070,2026-05-29,13:47,Arjun Pillai,Cappuccino; Margherita Pizza; Cold Coffee,3,567,Swiggy,UPI,Delivered
-ORD1071,2026-05-29,21:52,Farhan Sheikh,Veg Sandwich; Cafe Latte,2,298,Counter,UPI,Delivered
-ORD1072,2026-05-29,18:53,Tanvi Bose,Lemon Iced Tea,1,129,Counter,UPI,Delivered
-ORD1073,2026-05-29,18:31,Rahul Mehta,Veg Burger; Masala Chai; Margherita Pizza,3,477,Zomato,Cash,Delivered
-ORD1074,2026-05-29,17:03,Ishita Nair,Cold Coffee; Espresso,2,288,QR Order,UPI,Completed
-ORD1075,2026-05-29,12:41,Nikhil Verma,Grilled Cheese Sandwich; Veg Burger,2,308,QR Order,UPI,Delivered
-ORD1076,2026-05-29,16:29,Ritu Singh,Margherita Pizza,1,249,Counter,UPI,Delivered
-ORD1077,2026-05-29,19:06,Kabir Khanna,Iced Latte; Cafe Latte,2,338,Swiggy,UPI,Delivered
-ORD1078,2026-05-29,18:48,Karan Joshi,Chocolate Brownie; Masala Chai,2,208,QR Order,UPI,Completed
-ORD1079,2026-05-29,16:47,Varun Malhotra,Veg Burger; Veg Burger,2,298,Counter,UPI,Completed
-ORD1080,2026-05-29,21:54,Parth Gandhi,Cold Coffee; Veg Burger,2,318,QR Order,UPI,Completed
-ORD1081,2026-05-29,09:22,Sara Ahmed,Cafe Latte,1,159,QR Order,Card,Delivered
-ORD1082,2026-05-29,20:55,Walk-in,Chocolate Brownie,1,129,Counter,UPI,Delivered
-ORD1083,2026-05-29,20:55,Lavanya Rao,Chocolate Brownie,1,129,QR Order,UPI,Delivered
-ORD1084,2026-05-29,15:31,Sneha Desai,Cheesecake Slice,1,159,Counter,Card,Completed
-ORD1085,2026-05-29,09:08,Walk-in,Cappuccino,1,149,Zomato,Cash,Delivered
-ORD1086,2026-05-29,12:12,Aditya Jain,Lemon Iced Tea,1,129,Counter,Card,Delivered
-ORD1087,2026-05-29,10:19,Sneha Desai,Chocolate Brownie,1,129,Counter,Cash,Delivered
-ORD1088,2026-05-29,15:58,Gauri Dixit,Veg Burger,1,149,QR Order,Cash,Delivered
-ORD1089,2026-05-29,10:16,Sneha Desai,Cafe Latte; French Fries,2,278,QR Order,UPI,Completed
-ORD1090,2026-05-29,12:30,Lavanya Rao,Grilled Cheese Sandwich; Grilled Cheese Sandwich; Cappuccino,3,467,Counter,UPI,Completed
-ORD1091,2026-05-29,09:46,Rahul Mehta,Grilled Cheese Sandwich,1,159,Zomato,UPI,Completed
-ORD1092,2026-05-29,20:10,Priya Shah,Veg Sandwich,1,139,Counter,UPI,Completed
-ORD1093,2026-05-29,08:49,Nikhil Verma,Lemon Iced Tea; Masala Chai,2,208,Zomato,UPI,Delivered
-ORD1094,2026-05-29,09:51,Tanvi Bose,Grilled Cheese Sandwich; Iced Latte; Cheesecake Slice,3,497,Counter,Card,Delivered
-ORD1095,2026-05-29,19:39,Riya Kapoor,French Fries,1,119,Counter,Card,Delivered
-ORD1096,2026-05-29,11:56,Ananya Iyer,Iced Latte,1,179,QR Order,UPI,Completed
-ORD1097,2026-05-29,13:49,Rahul Mehta,Pasta Alfredo; Cafe Latte; Blueberry Muffin,3,487,Counter,UPI,Delivered
-ORD1098,2026-05-29,14:45,Aarav Patel,Lemon Iced Tea,1,129,QR Order,Card,Completed
-ORD1099,2026-05-29,15:22,Parth Gandhi,Masala Chai; Croissant,2,188,Counter,Card,Completed
-ORD1100,2026-05-29,20:04,Yash Bhatt,Fresh Lime Soda; Cheesecake Slice,2,258,QR Order,Cash,Delivered
-ORD1101,2026-05-29,11:05,Ananya Iyer,Cappuccino; Masala Chai; Grilled Cheese Sandwich,3,387,QR Order,Cash,Delivered
-ORD1102,2026-05-29,14:13,Riya Kapoor,French Fries; Cappuccino; Iced Latte,3,447,Counter,Card,Delivered
-ORD1103,2026-05-29,14:06,Rohan Das,Cappuccino,1,149,QR Order,Card,Delivered
-ORD1104,2026-05-29,12:31,Ananya Iyer,Grilled Cheese Sandwich,1,159,QR Order,UPI,Completed
-ORD1105,2026-05-29,15:45,Neha Chauhan,Veg Sandwich,1,139,Counter,UPI,Delivered
-ORD1106,2026-05-29,17:47,Mohit Lal,Pasta Alfredo; Veg Sandwich; French Fries,3,487,Counter,UPI,Delivered
-ORD1107,2026-05-29,09:42,Walk-in,Lemon Iced Tea; Lemon Iced Tea,2,258,Zomato,UPI,Completed
-ORD1108,2026-05-29,20:18,Walk-in,Cold Coffee,1,169,Swiggy,UPI,Cancelled
-ORD1109,2026-05-29,13:39,Devansh Rao,Chocolate Brownie; Lemon Iced Tea,2,258,Counter,Card,Completed
-ORD1110,2026-05-29,14:37,Yash Bhatt,Grilled Cheese Sandwich; Croissant; Lemon Iced Tea,3,397,Zomato,Card,Completed
-ORD1111,2026-05-29,15:42,Sara Ahmed,Pasta Alfredo,1,229,Counter,UPI,Completed
-ORD1112,2026-05-30,08:39,Aarav Patel,Veg Burger; Cafe Latte; Cappuccino,3,457,QR Order,Card,Completed
-ORD1113,2026-05-30,20:26,Ritu Singh,Fresh Lime Soda; Masala Chai,2,178,QR Order,Card,Completed
-ORD1114,2026-05-30,19:34,Rahul Mehta,Masala Chai,1,79,Counter,UPI,Completed
-ORD1115,2026-05-30,09:27,Sneha Desai,Espresso,1,119,Counter,UPI,Completed
-ORD1116,2026-05-30,09:49,Aarav Patel,Masala Chai; Cold Coffee,2,248,Counter,UPI,Completed
-ORD1117,2026-05-30,18:04,Farhan Sheikh,Fresh Lime Soda,1,99,QR Order,UPI,Delivered
-ORD1118,2026-05-30,14:33,Devansh Rao,Masala Chai,1,79,Swiggy,UPI,Delivered
-ORD1119,2026-05-30,19:58,Mohit Lal,Cold Coffee,1,169,QR Order,UPI,Delivered
-ORD1120,2026-05-30,15:57,Sara Ahmed,Cappuccino; Lemon Iced Tea,2,278,Counter,UPI,Completed
-ORD1121,2026-05-30,09:34,Priya Shah,Espresso; Croissant; Fresh Lime Soda,3,327,QR Order,Card,Delivered
-ORD1122,2026-05-30,19:05,Walk-in,Iced Latte; Margherita Pizza,2,428,Counter,UPI,Delivered
-ORD1123,2026-05-30,15:24,Karan Joshi,Fresh Lime Soda; Masala Chai,2,178,Counter,UPI,Delivered
-ORD1124,2026-05-30,19:19,Lavanya Rao,French Fries,1,119,Zomato,UPI,Delivered
-ORD1125,2026-05-30,09:18,Ishita Nair,Margherita Pizza,1,249,Counter,UPI,Delivered
-ORD1126,2026-05-30,12:47,Ananya Iyer,Cappuccino; Chocolate Brownie; Cafe Latte,3,437,Counter,Card,Delivered
-ORD1127,2026-05-30,08:54,Neha Chauhan,Pasta Alfredo; Cafe Latte; Espresso,3,507,QR Order,UPI,Completed
-ORD1128,2026-05-30,11:42,Sara Ahmed,Veg Burger,1,149,Counter,UPI,Delivered
-ORD1129,2026-05-30,20:00,Priya Shah,Cold Coffee; Iced Latte; Veg Sandwich,3,487,Counter,UPI,Delivered
-ORD1130,2026-05-30,15:49,Varun Malhotra,Cold Coffee,1,169,Counter,Cash,Completed
-ORD1131,2026-05-30,17:04,Tara Menon,Cappuccino; Masala Chai,2,228,Counter,UPI,Completed
-ORD1132,2026-05-30,10:25,Vivek Sharma,Veg Sandwich; French Fries,2,258,QR Order,UPI,Delivered
-ORD1133,2026-05-30,13:10,Kavya Reddy,Lemon Iced Tea,1,129,QR Order,UPI,Delivered
-ORD1134,2026-05-30,15:48,Aarav Patel,Croissant,1,109,Swiggy,UPI,Completed
-ORD1135,2026-05-30,20:02,Ananya Iyer,Grilled Cheese Sandwich,1,159,Counter,Card,Delivered
-ORD1136,2026-05-30,21:24,Karan Joshi,Masala Chai; Fresh Lime Soda,2,178,QR Order,UPI,Delivered
-ORD1137,2026-05-30,15:04,Simran Kaur,Lemon Iced Tea,1,129,Zomato,Card,Completed
-ORD1138,2026-05-30,09:07,Aarav Patel,Cold Coffee,1,169,Swiggy,Card,Completed
-ORD1139,2026-05-30,09:57,Nikhil Verma,Grilled Cheese Sandwich; Iced Latte,2,338,Zomato,UPI,Delivered
-ORD1140,2026-05-30,18:38,Karan Joshi,Lemon Iced Tea; Iced Latte; Croissant,3,417,Swiggy,UPI,Completed
-ORD1141,2026-05-30,10:38,Megha Soni,Veg Sandwich; Margherita Pizza,2,388,Zomato,UPI,Completed
-ORD1142,2026-05-30,21:11,Devansh Rao,Cappuccino,1,149,Swiggy,UPI,Delivered
-ORD1143,2026-05-30,08:23,Sara Ahmed,Cafe Latte,1,159,QR Order,UPI,Delivered
-ORD1144,2026-05-30,15:30,Neha Chauhan,Margherita Pizza,1,249,QR Order,UPI,Completed
-ORD1145,2026-05-30,08:07,Walk-in,Veg Sandwich,1,139,Zomato,UPI,Delivered
-ORD1146,2026-05-30,21:36,Nikhil Verma,Cold Coffee; Cold Coffee,2,338,Counter,UPI,Delivered
-ORD1147,2026-05-30,14:22,Devansh Rao,Iced Latte; French Fries,2,298,QR Order,Card,Delivered
-ORD1148,2026-05-30,18:25,Yash Bhatt,Grilled Cheese Sandwich; French Fries,2,278,QR Order,Card,Delivered
-ORD1149,2026-05-30,09:05,Mohit Lal,Croissant,1,109,Counter,Card,Delivered
-ORD1150,2026-05-30,18:31,Priya Shah,Veg Burger; Blueberry Muffin,2,248,Swiggy,UPI,Delivered
-ORD1151,2026-05-30,19:41,Karan Joshi,French Fries,1,119,Counter,UPI,Delivered
-ORD1152,2026-05-30,12:46,Karan Joshi,Cold Coffee; Iced Latte,2,348,QR Order,UPI,Completed
-ORD1153,2026-05-30,20:00,Walk-in,Croissant,1,109,Counter,UPI,Delivered
-ORD1154,2026-05-30,14:36,Riya Kapoor,Lemon Iced Tea; Cold Coffee,2,298,Swiggy,UPI,Delivered
-ORD1155,2026-05-30,08:44,Ananya Iyer,Iced Latte; Iced Latte; Veg Sandwich,3,497,QR Order,UPI,Delivered
-ORD1156,2026-05-30,08:35,Ananya Iyer,Cappuccino,1,149,QR Order,Cash,Completed
-ORD1157,2026-05-30,13:13,Sneha Desai,Masala Chai; Croissant; Veg Burger,3,337,QR Order,UPI,Completed
-ORD1158,2026-05-30,21:54,Gauri Dixit,Cafe Latte,1,159,Swiggy,Card,Completed
-ORD1159,2026-05-30,18:08,Diya Saxena,Chocolate Brownie; Fresh Lime Soda; Masala Chai,3,307,Counter,UPI,Delivered
-ORD1160,2026-05-30,15:00,Ojas Tiwari,Cappuccino; Cold Coffee; Chocolate Brownie,3,447,Counter,Card,Completed
-ORD1161,2026-05-30,14:21,Priya Shah,Veg Sandwich,1,139,Counter,UPI,Delivered
-ORD1162,2026-05-30,13:36,Nikhil Verma,French Fries,1,119,Counter,UPI,Delivered
-ORD1163,2026-05-30,17:26,Farhan Sheikh,Fresh Lime Soda; Pasta Alfredo,2,328,Swiggy,UPI,Delivered
-ORD1164,2026-05-31,12:30,Rohan Das,Cold Coffee; Fresh Lime Soda,2,268,QR Order,Card,Completed
-ORD1165,2026-05-31,20:22,Ananya Iyer,Cold Coffee,1,169,QR Order,Card,Completed
-ORD1166,2026-05-31,10:32,Walk-in,Fresh Lime Soda,1,99,Swiggy,UPI,Completed
-ORD1167,2026-05-31,09:39,Tanvi Bose,Cold Coffee,1,169,Zomato,Cash,Completed
-ORD1168,2026-05-31,19:49,Tanvi Bose,Cold Coffee,1,169,QR Order,Card,Delivered
-ORD1169,2026-05-31,18:25,Ojas Tiwari,Espresso,1,119,Counter,UPI,Delivered
-ORD1170,2026-05-31,19:09,Ishita Nair,Cappuccino,1,149,Counter,Card,Delivered
-ORD1171,2026-05-31,13:01,Walk-in,Masala Chai,1,79,Counter,Card,Completed
-ORD1172,2026-05-31,13:29,Rohan Das,Lemon Iced Tea; Chocolate Brownie,2,258,Counter,Card,Completed
-ORD1173,2026-05-31,17:19,Parth Gandhi,Grilled Cheese Sandwich,1,159,Counter,Cash,Delivered
-ORD1174,2026-05-31,10:44,Karan Joshi,Fresh Lime Soda,1,99,Swiggy,UPI,Completed
-ORD1175,2026-05-31,15:25,Vivek Sharma,Margherita Pizza; Veg Sandwich,2,388,QR Order,UPI,Completed
-ORD1176,2026-05-31,14:26,Aditya Jain,Masala Chai; Cappuccino,2,228,QR Order,UPI,Completed
-ORD1177,2026-05-31,11:09,Aarav Patel,Grilled Cheese Sandwich,1,159,Counter,UPI,Completed
-ORD1178,2026-05-31,08:13,Priya Shah,Cafe Latte,1,159,Counter,Cash,Delivered
-ORD1179,2026-05-31,15:34,Ishita Nair,Lemon Iced Tea; French Fries; Cold Coffee,3,417,Swiggy,UPI,Completed
-ORD1180,2026-05-31,11:29,Karan Joshi,Margherita Pizza; Cafe Latte,2,408,Counter,UPI,Completed
-ORD1181,2026-05-31,12:40,Sneha Desai,Veg Burger,1,149,Counter,UPI,Delivered
-ORD1182,2026-05-31,14:25,Pooja Gupta,Masala Chai; Cafe Latte,2,238,QR Order,UPI,Completed
-ORD1183,2026-05-31,20:43,Rahul Mehta,Veg Burger; Veg Burger,2,298,Zomato,Card,Delivered
-ORD1184,2026-05-31,18:35,Walk-in,Veg Sandwich; Cappuccino; Grilled Cheese Sandwich,3,447,QR Order,Card,Completed
-ORD1185,2026-05-31,08:18,Ojas Tiwari,Cappuccino; Cold Coffee,2,318,Zomato,Card,Completed
-ORD1186,2026-05-31,09:28,Parth Gandhi,Cold Coffee,1,169,Counter,UPI,Completed
-ORD1187,2026-05-31,21:20,Ananya Iyer,French Fries,1,119,Counter,UPI,Delivered
-ORD1188,2026-05-31,10:20,Sara Ahmed,Masala Chai; Veg Burger,2,228,Counter,UPI,Completed
-ORD1189,2026-05-31,08:02,Manav Trivedi,Croissant,1,109,Zomato,Card,Delivered
-ORD1190,2026-05-31,12:31,Ojas Tiwari,Veg Burger,1,149,QR Order,UPI,Delivered
-ORD1191,2026-05-31,21:46,Pooja Gupta,French Fries,1,119,Counter,UPI,Completed
-ORD1192,2026-05-31,13:35,Sneha Desai,Cafe Latte; French Fries; Fresh Lime Soda,3,377,Swiggy,Card,Delivered
-ORD1193,2026-05-31,18:38,Ananya Iyer,Veg Burger; Iced Latte,2,328,Swiggy,Card,Delivered
-ORD1194,2026-05-31,21:13,Walk-in,Cheesecake Slice; Pasta Alfredo,2,388,Swiggy,UPI,Delivered
-ORD1195,2026-05-31,08:33,Arjun Pillai,Iced Latte,1,179,QR Order,Card,Completed
-ORD1196,2026-05-31,15:29,Sneha Desai,Cold Coffee,1,169,Counter,UPI,Completed
-ORD1197,2026-05-31,12:11,Ananya Iyer,Masala Chai; Masala Chai; Cold Coffee,3,327,Swiggy,UPI,Completed
-ORD1198,2026-05-31,11:22,Walk-in,Margherita Pizza; Cafe Latte,2,408,QR Order,Cash,Completed
-ORD1199,2026-05-31,11:02,Riya Kapoor,Masala Chai; Grilled Cheese Sandwich,2,238,Counter,UPI,Completed
-ORD1200,2026-05-31,21:32,Rohan Das,Masala Chai,1,79,Counter,UPI,Delivered
-ORD1201,2026-05-31,17:32,Aditya Jain,Cold Coffee,1,169,Swiggy,UPI,Delivered
-ORD1202,2026-05-31,13:49,Yash Bhatt,Masala Chai,1,79,Swiggy,Card,Delivered
-ORD1203,2026-05-31,14:01,Parth Gandhi,Veg Burger,1,149,QR Order,Card,Delivered
-ORD1204,2026-05-31,09:48,Ananya Iyer,Cheesecake Slice; Iced Latte,2,338,Counter,UPI,Delivered
-ORD1205,2026-05-31,19:51,Rahul Mehta,Veg Sandwich,1,139,Counter,Card,Delivered
-ORD1206,2026-05-31,15:09,Vivek Sharma,French Fries,1,119,Counter,Card,Delivered
-ORD1207,2026-05-31,12:00,Aditya Jain,Grilled Cheese Sandwich; Cappuccino,2,308,Counter,Cash,Delivered
-ORD1208,2026-05-31,11:55,Simran Kaur,Cappuccino; Chocolate Brownie,2,278,Zomato,UPI,Completed
-ORD1209,2026-05-31,09:25,Sneha Desai,Iced Latte,1,179,Counter,UPI,Completed
-ORD1210,2026-05-31,16:56,Ananya Iyer,Cold Coffee,1,169,QR Order,UPI,Cancelled
-ORD1211,2026-05-31,18:09,Walk-in,Masala Chai; Cold Coffee; Iced Latte,3,427,Swiggy,Card,Delivered
-ORD1212,2026-05-31,09:45,Walk-in,Fresh Lime Soda,1,99,Zomato,UPI,Delivered
-ORD1213,2026-05-31,13:46,Yash Bhatt,Fresh Lime Soda; Espresso,2,218,Counter,UPI,Delivered
-ORD1214,2026-05-31,17:11,Devansh Rao,Cold Coffee; French Fries; Margherita Pizza,3,537,Counter,UPI,Completed
-ORD1215,2026-05-31,08:49,Walk-in,Veg Sandwich; Veg Sandwich,2,278,Swiggy,UPI,Completed
-ORD1216,2026-05-31,13:14,Lavanya Rao,Grilled Cheese Sandwich,1,159,Counter,Cash,Delivered
-ORD1217,2026-05-31,09:44,Mohit Lal,Croissant; Masala Chai; Veg Burger,3,337,Counter,UPI,Delivered
-ORD1218,2026-05-31,21:36,Megha Soni,French Fries,1,119,Zomato,UPI,Completed
-ORD1219,2026-05-31,09:24,Pooja Gupta,Iced Latte,1,179,Zomato,UPI,Completed
-ORD1220,2026-05-31,18:18,Pooja Gupta,Iced Latte,1,179,Zomato,UPI,Completed
-ORD1221,2026-05-31,13:20,Yash Bhatt,Grilled Cheese Sandwich,1,159,Swiggy,UPI,Delivered
-ORD1222,2026-05-31,08:28,Sneha Desai,Cafe Latte; Cold Coffee; Grilled Cheese Sandwich,3,487,Counter,Card,Completed
-ORD1223,2026-05-31,13:55,Devansh Rao,Cheesecake Slice; Veg Sandwich,2,298,Counter,UPI,Delivered
-ORD1224,2026-05-31,14:57,Aarav Patel,Veg Burger,1,149,QR Order,UPI,Delivered
-ORD1225,2026-06-01,18:42,Karan Joshi,Lemon Iced Tea,1,129,Swiggy,Cash,Delivered
-ORD1226,2026-06-01,18:03,Manav Trivedi,Cappuccino; Chocolate Brownie,2,278,Counter,Card,Delivered
-ORD1227,2026-06-01,11:18,Rahul Mehta,Pasta Alfredo; Cold Coffee,2,398,Zomato,Card,Completed
-ORD1228,2026-06-01,12:23,Lavanya Rao,Fresh Lime Soda; Croissant,2,208,Swiggy,UPI,Completed
-ORD1229,2026-06-01,21:44,Devansh Rao,Cappuccino; Lemon Iced Tea,2,278,QR Order,UPI,Delivered
-ORD1230,2026-06-01,16:16,Priya Shah,Veg Burger,1,149,Zomato,UPI,Completed
-ORD1231,2026-06-01,15:14,Walk-in,Cafe Latte,1,159,Counter,Card,Completed
-ORD1232,2026-06-01,09:21,Walk-in,Cappuccino,1,149,Counter,UPI,Completed
-ORD1233,2026-06-01,21:20,Ritu Singh,Masala Chai,1,79,QR Order,UPI,Delivered
-ORD1234,2026-06-01,09:59,Ananya Iyer,Veg Burger,1,149,Counter,Cash,Completed
-ORD1235,2026-06-01,20:03,Walk-in,Grilled Cheese Sandwich; Lemon Iced Tea,2,288,QR Order,UPI,Completed
-ORD1236,2026-06-01,18:53,Ananya Iyer,Cappuccino; Fresh Lime Soda,2,248,Counter,Card,Delivered
-ORD1237,2026-06-01,17:26,Walk-in,Pasta Alfredo; Fresh Lime Soda,2,328,Counter,Cash,Delivered
-ORD1238,2026-06-01,12:49,Walk-in,Pasta Alfredo,1,229,QR Order,UPI,Delivered
-ORD1239,2026-06-01,14:52,Vivek Sharma,Chocolate Brownie; Espresso,2,248,Zomato,Card,Delivered
-ORD1240,2026-06-01,19:43,Walk-in,Cappuccino,1,149,QR Order,UPI,Delivered
-ORD1241,2026-06-01,21:40,Walk-in,Chocolate Brownie,1,129,QR Order,Card,Delivered
-ORD1242,2026-06-01,09:00,Karan Joshi,Cold Coffee,1,169,Zomato,UPI,Delivered
-ORD1243,2026-06-01,15:19,Nikhil Verma,Fresh Lime Soda,1,99,Zomato,Card,Delivered
-ORD1244,2026-06-01,08:11,Pooja Gupta,Lemon Iced Tea,1,129,Counter,UPI,Completed
-ORD1245,2026-06-01,12:08,Walk-in,Veg Burger; Iced Latte,2,328,Counter,UPI,Delivered
-ORD1246,2026-06-01,18:55,Ojas Tiwari,Cold Coffee,1,169,Zomato,Card,Completed
-ORD1247,2026-06-01,20:04,Walk-in,Veg Burger,1,149,Swiggy,UPI,Completed
-ORD1248,2026-06-01,12:41,Harsh Modi,Cold Coffee; Cold Coffee,2,338,Counter,UPI,Completed
-ORD1249,2026-06-01,15:13,Ishita Nair,Iced Latte,1,179,QR Order,Card,Completed
-ORD1250,2026-06-01,21:29,Neha Chauhan,Cold Coffee; Veg Burger,2,318,Counter,UPI,Delivered
-ORD1251,2026-06-01,11:42,Ishita Nair,Croissant,1,109,Counter,UPI,Delivered
-ORD1252,2026-06-01,10:28,Aarav Patel,Chocolate Brownie; Grilled Cheese Sandwich; Cappuccino,3,437,QR Order,UPI,Delivered
-ORD1253,2026-06-01,17:00,Rohan Das,Margherita Pizza,1,249,Zomato,UPI,Completed
-ORD1254,2026-06-01,10:15,Yash Bhatt,Cappuccino; Chocolate Brownie,2,278,Swiggy,Card,Completed
-ORD1255,2026-06-01,09:53,Rohan Das,Iced Latte; Iced Latte,2,358,Counter,UPI,Delivered
-ORD1256,2026-06-01,18:08,Kavya Reddy,Veg Burger; Cafe Latte; Cappuccino,3,457,Counter,UPI,Delivered
-ORD1257,2026-06-02,13:00,Varun Malhotra,Iced Latte; Iced Latte,2,358,Zomato,Cash,Completed
-ORD1258,2026-06-02,08:37,Ritu Singh,Masala Chai; Blueberry Muffin,2,178,Swiggy,Card,Completed
-ORD1259,2026-06-02,11:19,Karan Joshi,Cappuccino,1,149,Zomato,UPI,Completed
-ORD1260,2026-06-02,19:18,Walk-in,Cappuccino,1,149,QR Order,UPI,Delivered
-ORD1261,2026-06-02,12:39,Lavanya Rao,French Fries; Fresh Lime Soda,2,218,Counter,Card,Delivered
-ORD1262,2026-06-02,10:47,Yash Bhatt,Pasta Alfredo,1,229,Counter,UPI,Delivered
-ORD1263,2026-06-02,09:09,Aarav Patel,Cold Coffee; Espresso,2,288,Zomato,UPI,Completed
-ORD1264,2026-06-02,21:53,Ishita Nair,Iced Latte; Cold Coffee,2,348,Counter,UPI,Completed
-ORD1265,2026-06-02,15:16,Riya Kapoor,Lemon Iced Tea,1,129,QR Order,UPI,Delivered
-ORD1266,2026-06-02,21:22,Walk-in,Blueberry Muffin,1,99,QR Order,Cash,Delivered
-ORD1267,2026-06-02,18:43,Arjun Pillai,Masala Chai,1,79,Zomato,UPI,Delivered
-ORD1268,2026-06-02,08:33,Ananya Iyer,Cheesecake Slice; Cold Coffee,2,328,Counter,Card,Delivered
-ORD1269,2026-06-02,09:54,Megha Soni,Masala Chai; Cappuccino,2,228,Zomato,UPI,Completed
-ORD1270,2026-06-02,15:44,Parth Gandhi,Espresso; Cafe Latte,2,278,Counter,UPI,Delivered
-ORD1271,2026-06-02,12:11,Farhan Sheikh,Cappuccino,1,149,Swiggy,UPI,Completed
-ORD1272,2026-06-02,20:16,Nikhil Verma,Espresso; Lemon Iced Tea,2,248,Counter,UPI,Delivered
-ORD1273,2026-06-02,08:44,Karan Joshi,Cappuccino; Lemon Iced Tea,2,278,Counter,Cash,Completed
-ORD1274,2026-06-02,17:44,Kabir Khanna,French Fries; Lemon Iced Tea,2,248,QR Order,UPI,Delivered
-ORD1275,2026-06-02,12:54,Parth Gandhi,Cheesecake Slice,1,159,Counter,UPI,Delivered
-ORD1276,2026-06-02,11:05,Farhan Sheikh,Espresso; Cappuccino,2,268,Counter,Cash,Delivered
-ORD1277,2026-06-02,11:19,Akash Pandey,Cappuccino,1,149,Swiggy,UPI,Cancelled
-ORD1278,2026-06-02,15:51,Walk-in,Croissant; Cappuccino,2,258,Counter,Card,Delivered
-ORD1279,2026-06-02,09:58,Sara Ahmed,Veg Sandwich,1,139,Zomato,UPI,Completed
-ORD1280,2026-06-02,21:53,Aarav Patel,Grilled Cheese Sandwich,1,159,Zomato,UPI,Completed
-ORD1281,2026-06-02,09:43,Tanvi Bose,Veg Sandwich,1,139,Swiggy,Card,Completed
-ORD1282,2026-06-03,09:17,Aarav Patel,Croissant,1,109,QR Order,UPI,Delivered
-ORD1283,2026-06-03,11:05,Simran Kaur,Iced Latte; Blueberry Muffin,2,278,Counter,UPI,Delivered
-ORD1284,2026-06-03,18:40,Priya Shah,Veg Sandwich; Cold Coffee,2,308,Counter,UPI,Completed
-ORD1285,2026-06-03,15:35,Megha Soni,Veg Sandwich; Cappuccino; Espresso,3,407,QR Order,UPI,Delivered
-ORD1286,2026-06-03,14:07,Priya Shah,Chocolate Brownie; Cheesecake Slice,2,288,QR Order,UPI,Delivered
-ORD1287,2026-06-03,10:16,Diya Saxena,Espresso,1,119,Counter,UPI,Completed
-ORD1288,2026-06-03,08:04,Ojas Tiwari,French Fries,1,119,QR Order,Card,Completed
-ORD1289,2026-06-03,14:15,Parth Gandhi,Masala Chai,1,79,Counter,Cash,Completed
-ORD1290,2026-06-03,13:29,Walk-in,Masala Chai,1,79,QR Order,Cash,Delivered
-ORD1291,2026-06-03,08:54,Harsh Modi,Grilled Cheese Sandwich; Cheesecake Slice,2,318,Swiggy,Cash,Delivered
-ORD1292,2026-06-03,17:54,Rohan Das,Cold Coffee,1,169,Zomato,Cash,Delivered
-ORD1293,2026-06-03,11:27,Walk-in,Lemon Iced Tea,1,129,Zomato,UPI,Delivered
-ORD1294,2026-06-03,15:27,Walk-in,Cafe Latte; Fresh Lime Soda,2,258,Zomato,Cash,Delivered
-ORD1295,2026-06-03,11:18,Riya Kapoor,Masala Chai,1,79,QR Order,Card,Completed
-ORD1296,2026-06-03,15:55,Walk-in,Grilled Cheese Sandwich,1,159,Counter,Cash,Delivered
-ORD1297,2026-06-03,12:48,Ananya Iyer,Veg Burger; Cappuccino,2,298,Counter,Card,Completed
-ORD1298,2026-06-03,10:23,Walk-in,Margherita Pizza,1,249,Counter,UPI,Completed
-ORD1299,2026-06-03,09:34,Harsh Modi,Cold Coffee; Espresso,2,288,Counter,Card,Completed
-ORD1300,2026-06-03,17:23,Parth Gandhi,Veg Burger; French Fries; French Fries,3,387,Counter,Cash,Delivered
-ORD1301,2026-06-03,17:57,Kabir Khanna,Lemon Iced Tea; Fresh Lime Soda,2,228,Swiggy,UPI,Completed
-ORD1302,2026-06-03,09:33,Aarav Patel,Croissant,1,109,Counter,UPI,Delivered
-ORD1303,2026-06-03,09:53,Aarav Patel,Iced Latte,1,179,Zomato,Card,Completed
-ORD1304,2026-06-03,15:08,Ananya Iyer,French Fries; Lemon Iced Tea,2,248,QR Order,Card,Completed
-ORD1305,2026-06-03,19:10,Karan Joshi,Cold Coffee,1,169,Zomato,UPI,Delivered
-ORD1306,2026-06-03,18:02,Kavya Reddy,Espresso,1,119,Counter,UPI,Completed
-ORD1307,2026-06-03,19:34,Karan Joshi,Masala Chai,1,79,QR Order,UPI,Completed
-ORD1308,2026-06-03,13:34,Rahul Mehta,Lemon Iced Tea,1,129,Zomato,Card,Delivered
-ORD1309,2026-06-03,17:07,Kavya Reddy,Cold Coffee,1,169,Counter,Cash,Completed
-ORD1310,2026-06-03,15:20,Walk-in,Fresh Lime Soda,1,99,Counter,UPI,Delivered
-ORD1311,2026-06-03,08:25,Parth Gandhi,French Fries,1,119,QR Order,Cash,Completed
-ORD1312,2026-06-03,14:28,Rahul Mehta,Cold Coffee; Cafe Latte; Pasta Alfredo,3,557,QR Order,UPI,Delivered
-ORD1313,2026-06-03,18:38,Ishita Nair,Iced Latte; Iced Latte,2,358,Counter,UPI,Delivered
-ORD1314,2026-06-03,15:11,Ishita Nair,Fresh Lime Soda; Cold Coffee; Blueberry Muffin,3,367,Zomato,Cash,Completed
-ORD1315,2026-06-03,14:47,Yash Bhatt,Pasta Alfredo,1,229,Swiggy,UPI,Delivered
-ORD1316,2026-06-03,20:31,Rahul Mehta,Cold Coffee,1,169,Counter,Card,Completed
-ORD1317,2026-06-03,15:43,Priya Shah,Lemon Iced Tea; Croissant,2,238,Swiggy,Card,Completed
-ORD1318,2026-06-03,08:56,Gauri Dixit,Fresh Lime Soda,1,99,Counter,UPI,Completed
-ORD1319,2026-06-03,14:59,Pooja Gupta,Iced Latte,1,179,Counter,UPI,Completed
-ORD1320,2026-06-04,19:34,Akash Pandey,Chocolate Brownie,1,129,Zomato,Card,Completed
-ORD1321,2026-06-04,12:32,Mohit Lal,Cold Coffee,1,169,QR Order,UPI,Completed
-ORD1322,2026-06-04,08:44,Priya Shah,Blueberry Muffin,1,99,Counter,UPI,Delivered
-ORD1323,2026-06-04,09:08,Gauri Dixit,Cold Coffee,1,169,QR Order,UPI,Completed
-ORD1324,2026-06-04,11:06,Walk-in,French Fries,1,119,Counter,UPI,Delivered
-ORD1325,2026-06-04,08:13,Parth Gandhi,Cafe Latte,1,159,Zomato,UPI,Delivered
-ORD1326,2026-06-04,10:49,Ananya Iyer,Cafe Latte,1,159,Counter,UPI,Completed
-ORD1327,2026-06-04,09:00,Priya Shah,Veg Sandwich,1,139,Counter,UPI,Delivered
-ORD1328,2026-06-04,19:27,Walk-in,Pasta Alfredo; Lemon Iced Tea; Veg Burger,3,507,QR Order,UPI,Delivered
-ORD1329,2026-06-04,14:02,Priya Shah,Cold Coffee; Lemon Iced Tea,2,298,Counter,Card,Delivered
-ORD1330,2026-06-04,16:18,Aditya Jain,Veg Sandwich,1,139,QR Order,Cash,Delivered
-ORD1331,2026-06-04,20:42,Priya Shah,Margherita Pizza; Croissant; Cold Coffee,3,527,Counter,UPI,Delivered
-ORD1332,2026-06-04,15:21,Devansh Rao,Veg Sandwich,1,139,QR Order,UPI,Delivered
-ORD1333,2026-06-04,10:42,Varun Malhotra,Pasta Alfredo,1,229,Zomato,Cash,Completed
-ORD1334,2026-06-04,11:08,Walk-in,Cafe Latte,1,159,Counter,UPI,Delivered
-ORD1335,2026-06-04,19:39,Tanvi Bose,Cappuccino,1,149,Counter,UPI,Delivered
-ORD1336,2026-06-04,10:56,Ishita Nair,Masala Chai; Grilled Cheese Sandwich,2,238,Counter,Cash,Delivered
-ORD1337,2026-06-04,20:08,Aditya Jain,Cappuccino,1,149,Counter,Card,Delivered
-ORD1338,2026-06-04,12:31,Riya Kapoor,Lemon Iced Tea; Fresh Lime Soda,2,228,Zomato,Cash,Delivered
-ORD1339,2026-06-04,10:48,Simran Kaur,Cold Coffee; Cappuccino,2,318,Counter,Card,Completed
-ORD1340,2026-06-04,19:05,Neha Chauhan,Cold Coffee,1,169,Counter,UPI,Delivered
-ORD1341,2026-06-04,11:44,Walk-in,Espresso,1,119,Swiggy,UPI,Delivered
-ORD1342,2026-06-04,19:32,Ananya Iyer,Iced Latte,1,179,QR Order,UPI,Completed
-ORD1343,2026-06-04,19:03,Tara Menon,Cold Coffee; Iced Latte,2,348,Counter,UPI,Delivered
-ORD1344,2026-06-04,21:30,Megha Soni,Croissant; Veg Burger,2,258,Swiggy,UPI,Completed
-ORD1345,2026-06-04,15:39,Manav Trivedi,Cold Coffee; Margherita Pizza,2,418,Zomato,Cash,Delivered
-ORD1346,2026-06-04,20:59,Sara Ahmed,Cappuccino,1,149,Counter,UPI,Completed
-ORD1347,2026-06-04,10:55,Varun Malhotra,French Fries; Cappuccino; Masala Chai,3,347,QR Order,UPI,Delivered
-ORD1348,2026-06-04,18:09,Neha Chauhan,Cold Coffee,1,169,QR Order,UPI,Delivered
-ORD1349,2026-06-04,18:08,Karan Joshi,Fresh Lime Soda,1,99,Counter,Card,Delivered
-ORD1350,2026-06-04,12:38,Farhan Sheikh,Espresso; Pasta Alfredo,2,348,Counter,UPI,Completed
-ORD1351,2026-06-04,21:32,Devansh Rao,Veg Burger; Chocolate Brownie; Iced Latte,3,457,Counter,UPI,Completed
-ORD1352,2026-06-04,10:24,Parth Gandhi,Blueberry Muffin; Masala Chai; Chocolate Brownie,3,307,QR Order,Card,Delivered
-ORD1353,2026-06-04,11:31,Varun Malhotra,Cafe Latte,1,159,Zomato,Card,Delivered
-ORD1354,2026-06-04,17:23,Riya Kapoor,Iced Latte,1,179,QR Order,Card,Completed
-ORD1355,2026-06-04,21:19,Rahul Mehta,Grilled Cheese Sandwich; Croissant,2,268,Counter,Card,Completed
-ORD1356,2026-06-04,11:59,Riya Kapoor,Masala Chai,1,79,QR Order,UPI,Delivered
-ORD1357,2026-06-04,19:52,Sneha Desai,Espresso; Iced Latte,2,298,QR Order,Cash,Delivered
-ORD1358,2026-06-04,10:38,Neha Chauhan,Cold Coffee; Iced Latte; Blueberry Muffin,3,447,Counter,UPI,Delivered
-ORD1359,2026-06-05,17:12,Rohan Das,Cappuccino,1,149,Counter,Card,Delivered
-ORD1360,2026-06-05,19:30,Priya Shah,Masala Chai,1,79,QR Order,Card,Completed
-ORD1361,2026-06-05,15:14,Aarav Patel,Margherita Pizza; Margherita Pizza,2,498,Counter,UPI,Delivered
-ORD1362,2026-06-05,09:27,Walk-in,Veg Sandwich; Blueberry Muffin,2,238,Zomato,Card,Cancelled
-ORD1363,2026-06-05,15:45,Ananya Iyer,Fresh Lime Soda,1,99,QR Order,UPI,Delivered
-ORD1364,2026-06-05,13:43,Walk-in,Masala Chai; French Fries,2,198,QR Order,Cash,Delivered
-ORD1365,2026-06-05,14:41,Aarav Patel,Cheesecake Slice,1,159,Swiggy,UPI,Delivered
-ORD1366,2026-06-05,12:03,Aarav Patel,Cheesecake Slice; Iced Latte; Masala Chai,3,417,Counter,Card,Delivered
-ORD1367,2026-06-05,19:39,Walk-in,Cold Coffee,1,169,Swiggy,Card,Completed
-ORD1368,2026-06-05,09:08,Walk-in,Cafe Latte; Chocolate Brownie,2,288,Counter,Card,Delivered
-ORD1369,2026-06-05,10:57,Neha Chauhan,Cafe Latte,1,159,Counter,UPI,Delivered
-ORD1370,2026-06-05,21:40,Farhan Sheikh,Iced Latte,1,179,QR Order,Cash,Delivered
-ORD1371,2026-06-05,11:02,Aarav Patel,Espresso,1,119,Swiggy,Card,Delivered
-ORD1372,2026-06-05,10:11,Walk-in,Iced Latte; Cafe Latte,2,338,QR Order,UPI,Completed
-ORD1373,2026-06-05,09:49,Farhan Sheikh,Grilled Cheese Sandwich; Masala Chai,2,238,Swiggy,Card,Cancelled
-ORD1374,2026-06-05,14:05,Ananya Iyer,Veg Burger,1,149,Swiggy,UPI,Completed
-ORD1375,2026-06-05,08:46,Diya Saxena,Croissant,1,109,QR Order,UPI,Completed
-ORD1376,2026-06-05,12:11,Rahul Mehta,Cold Coffee; Margherita Pizza,2,418,QR Order,UPI,Completed
-ORD1377,2026-06-05,17:31,Walk-in,Pasta Alfredo,1,229,QR Order,Cash,Delivered
-ORD1378,2026-06-05,11:36,Farhan Sheikh,Veg Sandwich; Cold Coffee; Cafe Latte,3,467,Zomato,Cash,Delivered
-ORD1379,2026-06-05,10:43,Devansh Rao,Veg Sandwich; Iced Latte,2,318,Counter,UPI,Delivered
-ORD1380,2026-06-05,15:08,Walk-in,Grilled Cheese Sandwich,1,159,Counter,Card,Delivered
-ORD1381,2026-06-05,08:29,Varun Malhotra,Cappuccino,1,149,Counter,Card,Delivered
-ORD1382,2026-06-05,11:02,Arjun Pillai,Veg Sandwich,1,139,Counter,Cash,Completed
-ORD1383,2026-06-05,18:11,Walk-in,Veg Sandwich,1,139,Counter,Card,Delivered
-ORD1384,2026-06-05,11:41,Walk-in,Veg Burger,1,149,Swiggy,Cash,Delivered
-ORD1385,2026-06-05,17:08,Lavanya Rao,Cold Coffee; Margherita Pizza,2,418,Counter,UPI,Completed
-ORD1386,2026-06-05,09:05,Rahul Mehta,Espresso; Cappuccino,2,268,Counter,UPI,Delivered
-ORD1387,2026-06-05,20:55,Diya Saxena,Cafe Latte,1,159,Swiggy,UPI,Completed
-ORD1388,2026-06-05,20:37,Karan Joshi,Pasta Alfredo; Cappuccino,2,378,Zomato,Card,Delivered
-ORD1389,2026-06-05,17:01,Kavya Reddy,Iced Latte,1,179,Swiggy,UPI,Delivered
-ORD1390,2026-06-05,10:10,Priya Shah,Grilled Cheese Sandwich,1,159,Counter,Card,Completed
-ORD1391,2026-06-05,19:45,Ananya Iyer,Lemon Iced Tea,1,129,Swiggy,Cash,Completed
-ORD1392,2026-06-05,15:12,Gauri Dixit,Margherita Pizza; Pasta Alfredo,2,478,QR Order,UPI,Completed
-ORD1393,2026-06-05,14:52,Neha Chauhan,Lemon Iced Tea; Masala Chai; Fresh Lime Soda,3,307,QR Order,UPI,Cancelled
-ORD1394,2026-06-05,14:49,Priya Shah,Cafe Latte,1,159,Counter,UPI,Delivered
-ORD1395,2026-06-05,12:53,Walk-in,Cafe Latte,1,159,QR Order,UPI,Completed
-ORD1396,2026-06-05,13:58,Walk-in,Veg Sandwich; Pasta Alfredo,2,368,Counter,UPI,Delivered
-ORD1397,2026-06-05,12:26,Ojas Tiwari,Lemon Iced Tea; Chocolate Brownie,2,258,QR Order,UPI,Delivered
-ORD1398,2026-06-05,14:48,Ishita Nair,Lemon Iced Tea,1,129,QR Order,UPI,Delivered
-ORD1399,2026-06-05,20:49,Megha Soni,Iced Latte,1,179,Counter,Card,Completed
-ORD1400,2026-06-05,08:59,Tanvi Bose,Cold Coffee,1,169,Counter,UPI,Cancelled
-ORD1401,2026-06-05,20:44,Walk-in,Grilled Cheese Sandwich,1,159,Zomato,UPI,Completed
-ORD1402,2026-06-05,21:50,Ananya Iyer,Cappuccino; Masala Chai; Fresh Lime Soda,3,327,Zomato,Card,Completed
-ORD1403,2026-06-05,10:34,Simran Kaur,French Fries; Iced Latte; Masala Chai,3,377,Counter,UPI,Delivered
-ORD1404,2026-06-05,10:27,Karan Joshi,French Fries,1,119,Zomato,UPI,Delivered
-ORD1405,2026-06-05,19:47,Gauri Dixit,Lemon Iced Tea,1,129,Counter,Cash,Delivered
-ORD1406,2026-06-05,19:42,Sneha Desai,Cheesecake Slice; Fresh Lime Soda,2,258,QR Order,UPI,Completed
-ORD1407,2026-06-05,17:45,Yash Bhatt,Lemon Iced Tea; Masala Chai,2,208,Swiggy,UPI,Delivered
-ORD1408,2026-06-05,15:33,Manav Trivedi,Chocolate Brownie,1,129,QR Order,Cash,Delivered
-ORD1409,2026-06-05,17:08,Walk-in,Grilled Cheese Sandwich; Cheesecake Slice,2,318,Swiggy,Card,Completed
-ORD1410,2026-06-05,21:07,Kabir Khanna,Cafe Latte; Masala Chai,2,238,Counter,Card,Delivered
-ORD1411,2026-06-06,09:03,Ananya Iyer,Cold Coffee,1,169,Counter,Card,Delivered
-ORD1412,2026-06-06,11:57,Ishita Nair,Fresh Lime Soda,1,99,Counter,UPI,Delivered
-ORD1413,2026-06-06,19:51,Lavanya Rao,Cafe Latte,1,159,Zomato,Card,Completed
-ORD1414,2026-06-06,15:45,Aditya Jain,Iced Latte,1,179,Counter,UPI,Delivered
-ORD1415,2026-06-06,20:57,Kavya Reddy,Cafe Latte; Fresh Lime Soda,2,258,Counter,UPI,Delivered
-ORD1416,2026-06-06,11:20,Sara Ahmed,Cappuccino,1,149,Swiggy,UPI,Completed
-ORD1417,2026-06-06,14:06,Rahul Mehta,Espresso,1,119,Zomato,UPI,Delivered
-ORD1418,2026-06-06,12:11,Aarav Patel,Cafe Latte,1,159,Counter,Card,Delivered
-ORD1419,2026-06-06,08:48,Devansh Rao,Cafe Latte,1,159,Zomato,UPI,Completed
-ORD1420,2026-06-06,09:37,Devansh Rao,Masala Chai; Cold Coffee; Fresh Lime Soda,3,347,Counter,UPI,Delivered
-ORD1421,2026-06-06,19:10,Aarav Patel,Iced Latte,1,179,QR Order,UPI,Delivered
-ORD1422,2026-06-06,17:17,Neha Chauhan,Fresh Lime Soda; Cappuccino; Margherita Pizza,3,497,Zomato,Card,Completed
-ORD1423,2026-06-06,08:44,Varun Malhotra,Pasta Alfredo; Masala Chai; Pasta Alfredo,3,537,Counter,UPI,Delivered
-ORD1424,2026-06-06,15:42,Karan Joshi,Masala Chai; Lemon Iced Tea; Margherita Pizza,3,457,Counter,Card,Completed
-ORD1425,2026-06-06,11:11,Ananya Iyer,Veg Burger,1,149,Swiggy,UPI,Completed
-ORD1426,2026-06-06,20:07,Walk-in,French Fries; Fresh Lime Soda,2,218,Counter,UPI,Completed
-ORD1427,2026-06-06,20:59,Lavanya Rao,Espresso,1,119,QR Order,Cash,Completed
-ORD1428,2026-06-06,18:23,Rahul Mehta,Veg Burger; Veg Burger,2,298,Counter,Card,Delivered
-ORD1429,2026-06-06,15:12,Lavanya Rao,Masala Chai,1,79,Counter,Card,Completed
-ORD1430,2026-06-06,09:01,Lavanya Rao,Cappuccino; Cafe Latte,2,308,Counter,Card,Delivered
-ORD1431,2026-06-06,20:17,Arjun Pillai,Chocolate Brownie; Cappuccino,2,278,Counter,Card,Delivered
-ORD1432,2026-06-06,10:20,Diya Saxena,French Fries,1,119,Counter,Cash,Completed
-ORD1433,2026-06-06,16:19,Priya Shah,Margherita Pizza; Cheesecake Slice; Masala Chai,3,487,Counter,Card,Completed
-ORD1434,2026-06-06,18:30,Vivek Sharma,Margherita Pizza,1,249,QR Order,Card,Completed
-ORD1435,2026-06-06,20:07,Gauri Dixit,Masala Chai,1,79,Counter,UPI,Delivered
-ORD1436,2026-06-06,17:39,Walk-in,Chocolate Brownie,1,129,Counter,Cash,Completed
-ORD1437,2026-06-06,20:29,Rahul Mehta,Cold Coffee; Cold Coffee,2,338,QR Order,Cash,Delivered
-ORD1438,2026-06-06,13:00,Walk-in,Cold Coffee; Croissant,2,278,Zomato,Card,Completed
-ORD1439,2026-06-06,18:03,Sneha Desai,Cafe Latte; Lemon Iced Tea; Cold Coffee,3,457,QR Order,Card,Delivered
-ORD1440,2026-06-06,10:00,Kabir Khanna,French Fries; Cold Coffee; Chocolate Brownie,3,417,Zomato,UPI,Completed
-ORD1441,2026-06-06,18:40,Yash Bhatt,Lemon Iced Tea,1,129,QR Order,UPI,Completed
-ORD1442,2026-06-06,14:10,Sneha Desai,Veg Burger; Cheesecake Slice,2,308,Counter,Cash,Completed
-ORD1443,2026-06-06,13:49,Walk-in,Lemon Iced Tea; Blueberry Muffin; Grilled Cheese Sandwich,3,387,QR Order,Card,Completed
-ORD1444,2026-06-06,14:07,Varun Malhotra,Espresso,1,119,QR Order,Card,Cancelled
-ORD1445,2026-06-06,10:15,Parth Gandhi,Cold Coffee; Cheesecake Slice; Masala Chai,3,407,QR Order,UPI,Delivered
-ORD1446,2026-06-06,09:23,Karan Joshi,Cappuccino; Veg Burger; Cold Coffee,3,467,QR Order,Card,Completed
-ORD1447,2026-06-06,09:24,Kabir Khanna,Cheesecake Slice; Chocolate Brownie; Chocolate Brownie,3,417,Counter,Card,Delivered
-ORD1448,2026-06-06,14:40,Devansh Rao,Masala Chai; Cappuccino; Veg Sandwich,3,367,QR Order,Card,Delivered
-ORD1449,2026-06-06,11:24,Walk-in,Croissant; Chocolate Brownie,2,238,QR Order,Card,Delivered
-ORD1450,2026-06-06,15:37,Gauri Dixit,Lemon Iced Tea,1,129,Swiggy,Card,Delivered
-ORD1451,2026-06-06,19:56,Walk-in,Cappuccino; Masala Chai,2,228,Swiggy,UPI,Delivered
-ORD1452,2026-06-06,13:29,Ananya Iyer,Cappuccino,1,149,Zomato,UPI,Completed
-ORD1453,2026-06-06,12:14,Ishita Nair,Iced Latte,1,179,Counter,Card,Completed
-ORD1454,2026-06-06,10:04,Priya Shah,Lemon Iced Tea,1,129,Counter,UPI,Delivered
-ORD1455,2026-06-06,21:54,Rohan Das,Cold Coffee,1,169,QR Order,Card,Delivered
-ORD1456,2026-06-06,21:00,Farhan Sheikh,Cold Coffee,1,169,Swiggy,Card,Completed
-ORD1457,2026-06-06,11:20,Yash Bhatt,Masala Chai; Veg Burger,2,228,QR Order,UPI,Delivered
-ORD1458,2026-06-06,14:51,Neha Chauhan,Iced Latte,1,179,Counter,UPI,Completed
-ORD1459,2026-06-06,21:36,Megha Soni,Veg Burger,1,149,QR Order,UPI,Delivered
-ORD1460,2026-06-06,18:04,Walk-in,Croissant,1,109,Zomato,Cash,Delivered
-ORD1461,2026-06-07,12:02,Priya Shah,Croissant,1,109,QR Order,Card,Completed
-ORD1462,2026-06-07,14:29,Vivek Sharma,Cappuccino,1,149,Counter,Card,Completed
-ORD1463,2026-06-07,17:04,Tara Menon,Blueberry Muffin,1,99,Swiggy,UPI,Delivered
-ORD1464,2026-06-07,10:43,Sneha Desai,Margherita Pizza,1,249,Swiggy,Card,Completed
-ORD1465,2026-06-07,10:36,Aarav Patel,Margherita Pizza,1,249,Counter,Card,Completed
-ORD1466,2026-06-07,15:57,Ishita Nair,Pasta Alfredo,1,229,Zomato,Card,Completed
-ORD1467,2026-06-07,09:42,Aditya Jain,Espresso; Fresh Lime Soda; Iced Latte,3,397,Counter,Card,Completed
-ORD1468,2026-06-07,20:16,Ritu Singh,Iced Latte; French Fries; Cafe Latte,3,457,QR Order,UPI,Delivered
-ORD1469,2026-06-07,13:00,Rahul Mehta,Veg Burger,1,149,Counter,UPI,Completed
-ORD1470,2026-06-07,09:52,Yash Bhatt,French Fries,1,119,Counter,UPI,Delivered
-ORD1471,2026-06-07,08:22,Rahul Mehta,Espresso; Cafe Latte,2,278,QR Order,UPI,Completed
-ORD1472,2026-06-07,19:03,Sara Ahmed,Veg Burger,1,149,Zomato,UPI,Completed
-ORD1473,2026-06-07,11:52,Devansh Rao,Blueberry Muffin; Cold Coffee,2,268,QR Order,Card,Delivered
-ORD1474,2026-06-07,08:40,Megha Soni,Cafe Latte; Pasta Alfredo; Grilled Cheese Sandwich,3,547,QR Order,UPI,Completed
-ORD1475,2026-06-07,12:29,Devansh Rao,Cafe Latte; Masala Chai; Cold Coffee,3,407,QR Order,UPI,Delivered
-ORD1476,2026-06-07,12:10,Arjun Pillai,Cold Coffee; Cappuccino,2,318,Counter,UPI,Delivered
-ORD1477,2026-06-07,17:01,Aditya Jain,Croissant; Veg Burger,2,258,Zomato,UPI,Delivered
-ORD1478,2026-06-07,08:27,Kabir Khanna,Masala Chai; Veg Sandwich,2,218,QR Order,UPI,Cancelled
-ORD1479,2026-06-07,13:47,Pooja Gupta,Lemon Iced Tea,1,129,Counter,UPI,Delivered
-ORD1480,2026-06-07,13:15,Rahul Mehta,Cheesecake Slice,1,159,QR Order,UPI,Completed
-ORD1481,2026-06-07,15:55,Sneha Desai,Veg Burger; Masala Chai,2,228,Swiggy,UPI,Completed
-ORD1482,2026-06-07,09:05,Walk-in,Cheesecake Slice,1,159,Swiggy,Card,Completed
-ORD1483,2026-06-07,13:05,Tara Menon,Masala Chai; Espresso,2,198,Counter,Cash,Delivered
-ORD1484,2026-06-07,20:54,Diya Saxena,Lemon Iced Tea,1,129,Counter,UPI,Completed
-ORD1485,2026-06-07,11:18,Walk-in,Fresh Lime Soda,1,99,Swiggy,UPI,Completed
-ORD1486,2026-06-07,21:46,Manav Trivedi,Veg Burger,1,149,Counter,Cash,Delivered
-ORD1487,2026-06-07,17:59,Neha Chauhan,Croissant; Cold Coffee; Lemon Iced Tea,3,407,Zomato,UPI,Completed
-ORD1488,2026-06-07,20:47,Devansh Rao,French Fries; French Fries; Cold Coffee,3,407,QR Order,UPI,Completed
-ORD1489,2026-06-07,11:38,Simran Kaur,Veg Burger; Veg Burger,2,298,Zomato,Card,Completed
-ORD1490,2026-06-07,13:53,Mohit Lal,Cafe Latte,1,159,Swiggy,Card,Completed
-ORD1491,2026-06-07,21:52,Kabir Khanna,Grilled Cheese Sandwich; Cold Coffee; Cold Coffee,3,497,QR Order,Card,Delivered
-ORD1492,2026-06-07,11:27,Varun Malhotra,Cappuccino; Espresso,2,268,QR Order,UPI,Delivered
-ORD1493,2026-06-07,13:47,Yash Bhatt,Espresso,1,119,QR Order,UPI,Completed
-ORD1494,2026-06-07,17:07,Farhan Sheikh,Chocolate Brownie; Iced Latte; Blueberry Muffin,3,407,Counter,UPI,Delivered
-ORD1495,2026-06-07,10:06,Parth Gandhi,Lemon Iced Tea,1,129,QR Order,UPI,Completed
-ORD1496,2026-06-07,15:43,Varun Malhotra,Cheesecake Slice; French Fries,2,278,Counter,Card,Completed
-ORD1497,2026-06-07,12:25,Gauri Dixit,Cold Coffee; Cappuccino,2,318,Counter,UPI,Delivered
-ORD1498,2026-06-07,09:43,Walk-in,Veg Sandwich,1,139,Counter,UPI,Completed
-ORD1499,2026-06-07,12:28,Neha Chauhan,Cappuccino; Grilled Cheese Sandwich,2,308,QR Order,UPI,Completed
-ORD1500,2026-06-07,15:12,Lavanya Rao,Cold Coffee; Croissant,2,278,Counter,UPI,Completed
-ORD1501,2026-06-07,11:30,Walk-in,French Fries; Veg Burger; Cappuccino,3,417,Counter,UPI,Delivered
-ORD1502,2026-06-07,08:49,Sneha Desai,Croissant,1,109,Counter,UPI,Completed
-ORD1503,2026-06-07,13:04,Diya Saxena,Veg Burger; Grilled Cheese Sandwich; Blueberry Muffin,3,407,Counter,Card,Completed
-ORD1504,2026-06-07,10:07,Aditya Jain,French Fries; Croissant,2,228,Counter,Card,Delivered
-ORD1505,2026-06-07,17:34,Ritu Singh,Cafe Latte; Cold Coffee,2,328,QR Order,UPI,Completed
-ORD1506,2026-06-07,20:34,Neha Chauhan,Cold Coffee,1,169,QR Order,Cash,Completed
-ORD1507,2026-06-07,08:44,Karan Joshi,Lemon Iced Tea; Iced Latte,2,308,Counter,Card,Completed
-ORD1508,2026-06-07,19:52,Walk-in,Lemon Iced Tea; Margherita Pizza,2,378,Counter,UPI,Delivered
-ORD1509,2026-06-07,14:35,Ritu Singh,Cappuccino; Chocolate Brownie,2,278,Swiggy,Card,Delivered
-ORD1510,2026-06-08,17:20,Aditya Jain,Fresh Lime Soda,1,99,QR Order,UPI,Delivered
-ORD1511,2026-06-08,11:13,Pooja Gupta,Veg Burger; Iced Latte,2,328,QR Order,Card,Delivered
-ORD1512,2026-06-08,20:53,Rahul Mehta,Pasta Alfredo,1,229,QR Order,UPI,Delivered
-ORD1513,2026-06-08,20:02,Ishita Nair,Cappuccino,1,149,Counter,UPI,Cancelled
-ORD1514,2026-06-08,20:40,Kavya Reddy,Croissant; Grilled Cheese Sandwich,2,268,Counter,Cash,Delivered
-ORD1515,2026-06-08,21:36,Riya Kapoor,Cafe Latte,1,159,Swiggy,Card,Completed
-ORD1516,2026-06-08,12:45,Riya Kapoor,Espresso; Lemon Iced Tea,2,248,QR Order,UPI,Completed
-ORD1517,2026-06-08,21:34,Aditya Jain,Cappuccino; Fresh Lime Soda,2,248,Counter,UPI,Delivered
-ORD1518,2026-06-08,21:51,Tanvi Bose,Masala Chai; Grilled Cheese Sandwich,2,238,Counter,UPI,Delivered
-ORD1519,2026-06-08,08:10,Sneha Desai,Cafe Latte; Masala Chai,2,238,Swiggy,Card,Completed
-ORD1520,2026-06-08,13:44,Karan Joshi,Croissant,1,109,Counter,UPI,Completed
-ORD1521,2026-06-08,08:54,Walk-in,Veg Sandwich; Lemon Iced Tea; Veg Burger,3,417,QR Order,UPI,Completed
-ORD1522,2026-06-08,19:41,Walk-in,Masala Chai; Cold Coffee,2,248,QR Order,Cash,Delivered
-ORD1523,2026-06-08,19:42,Arjun Pillai,Croissant; Cafe Latte,2,268,Counter,UPI,Delivered
-ORD1524,2026-06-08,13:07,Tara Menon,Espresso,1,119,Zomato,UPI,Cancelled
-ORD1525,2026-06-08,13:00,Neha Chauhan,Grilled Cheese Sandwich,1,159,Counter,Cash,Delivered
-ORD1526,2026-06-08,10:22,Walk-in,Croissant,1,109,Counter,UPI,Completed
-ORD1527,2026-06-08,17:43,Walk-in,Veg Sandwich; Chocolate Brownie,2,268,QR Order,UPI,Delivered
-ORD1528,2026-06-08,13:36,Aditya Jain,Cafe Latte,1,159,Counter,Card,Delivered
-ORD1529,2026-06-08,10:17,Ananya Iyer,Masala Chai; Veg Sandwich,2,218,Swiggy,UPI,Completed
-ORD1530,2026-06-08,12:46,Walk-in,Margherita Pizza; Cold Coffee; Pasta Alfredo,3,647,QR Order,UPI,Completed
-ORD1531,2026-06-08,21:08,Rahul Mehta,Cold Coffee,1,169,Swiggy,Cash,Completed
-ORD1532,2026-06-08,18:42,Sara Ahmed,Iced Latte; Veg Sandwich,2,318,QR Order,UPI,Completed
-ORD1533,2026-06-08,13:53,Pooja Gupta,Croissant; Veg Burger,2,258,QR Order,UPI,Completed
-ORD1534,2026-06-08,09:30,Pooja Gupta,Cold Coffee,1,169,Counter,Card,Delivered
-ORD1535,2026-06-08,21:03,Devansh Rao,Cold Coffee,1,169,Counter,UPI,Completed
-ORD1536,2026-06-09,17:27,Rohan Das,Cafe Latte,1,159,Swiggy,UPI,Delivered
-ORD1537,2026-06-09,20:23,Aarav Patel,Blueberry Muffin,1,99,Counter,Card,Delivered
-ORD1538,2026-06-09,18:47,Tara Menon,Masala Chai,1,79,Swiggy,UPI,Cancelled
-ORD1539,2026-06-09,12:12,Nikhil Verma,Cold Coffee,1,169,Swiggy,Card,Delivered
-ORD1540,2026-06-09,20:46,Walk-in,Lemon Iced Tea,1,129,Counter,UPI,Delivered
-ORD1541,2026-06-09,08:53,Akash Pandey,Cafe Latte,1,159,Counter,Cash,Delivered
-ORD1542,2026-06-09,21:15,Walk-in,Iced Latte; Cold Coffee,2,348,Counter,UPI,Delivered
-ORD1543,2026-06-09,21:40,Karan Joshi,Masala Chai; Margherita Pizza; Masala Chai,3,407,QR Order,UPI,Completed
-ORD1544,2026-06-09,12:26,Devansh Rao,Cheesecake Slice,1,159,Zomato,Card,Completed
-ORD1545,2026-06-09,14:23,Megha Soni,Iced Latte,1,179,Counter,Card,Delivered
-ORD1546,2026-06-09,10:17,Megha Soni,Cappuccino,1,149,Zomato,UPI,Delivered
-ORD1547,2026-06-09,14:51,Arjun Pillai,Cold Coffee; Cold Coffee; Cafe Latte,3,497,Counter,Card,Delivered
-ORD1548,2026-06-09,08:02,Gauri Dixit,Masala Chai,1,79,Zomato,Card,Completed
-ORD1549,2026-06-09,13:09,Ritu Singh,Blueberry Muffin; Cappuccino,2,248,Counter,UPI,Delivered
-ORD1550,2026-06-09,15:26,Karan Joshi,French Fries; Pasta Alfredo; Fresh Lime Soda,3,447,Zomato,UPI,Delivered
-ORD1551,2026-06-09,15:34,Akash Pandey,Veg Burger; Cafe Latte,2,308,QR Order,UPI,Delivered
-ORD1552,2026-06-09,18:00,Walk-in,French Fries,1,119,QR Order,UPI,Delivered
-ORD1553,2026-06-09,14:07,Rahul Mehta,French Fries; Iced Latte; Veg Burger,3,447,QR Order,UPI,Delivered
-ORD1554,2026-06-09,09:15,Sneha Desai,Grilled Cheese Sandwich,1,159,QR Order,UPI,Completed
-ORD1555,2026-06-09,17:18,Vivek Sharma,Grilled Cheese Sandwich; Croissant,2,268,Counter,UPI,Delivered
-ORD1556,2026-06-09,17:40,Vivek Sharma,Masala Chai; Croissant,2,188,Zomato,UPI,Delivered
-ORD1557,2026-06-09,20:46,Ishita Nair,Masala Chai,1,79,Counter,Cash,Completed
-ORD1558,2026-06-09,18:18,Diya Saxena,Espresso,1,119,Counter,Card,Delivered
-ORD1559,2026-06-09,15:33,Aarav Patel,Veg Burger; Espresso,2,268,QR Order,Card,Delivered
-ORD1560,2026-06-09,18:17,Mohit Lal,Cold Coffee; Cappuccino,2,318,QR Order,Card,Completed
-ORD1561,2026-06-09,11:21,Vivek Sharma,Cafe Latte; French Fries; Cold Coffee,3,447,Swiggy,UPI,Completed
-ORD1562,2026-06-09,13:01,Karan Joshi,Cafe Latte; Margherita Pizza,2,408,QR Order,Cash,Delivered
-ORD1563,2026-06-09,18:14,Simran Kaur,Masala Chai; Chocolate Brownie,2,208,Counter,Card,Delivered
-ORD1564,2026-06-09,08:33,Lavanya Rao,Cold Coffee,1,169,Counter,UPI,Completed
-ORD1565,2026-06-09,19:42,Devansh Rao,Grilled Cheese Sandwich,1,159,Counter,Card,Delivered
-ORD1566,2026-06-09,09:50,Tanvi Bose,Chocolate Brownie; Cheesecake Slice,2,288,QR Order,Cash,Completed
-ORD1567,2026-06-09,16:31,Tanvi Bose,Croissant; Masala Chai,2,188,Swiggy,Cash,Delivered
-ORD1568,2026-06-09,16:34,Neha Chauhan,Grilled Cheese Sandwich; Cafe Latte,2,318,Zomato,Cash,Completed
-ORD1569,2026-06-09,12:00,Megha Soni,Veg Sandwich,1,139,QR Order,UPI,Delivered
-ORD1570,2026-06-10,18:59,Walk-in,Cappuccino; Cold Coffee; Pasta Alfredo,3,547,Swiggy,UPI,Completed
-ORD1571,2026-06-10,20:03,Sneha Desai,Cafe Latte,1,159,Counter,UPI,Completed
-ORD1572,2026-06-10,09:00,Manav Trivedi,Veg Sandwich,1,139,Zomato,UPI,Delivered
-ORD1573,2026-06-10,16:50,Akash Pandey,Lemon Iced Tea; Cafe Latte,2,288,Counter,Card,Delivered
-ORD1574,2026-06-10,20:43,Priya Shah,Chocolate Brownie,1,129,Swiggy,UPI,Delivered
-ORD1575,2026-06-10,16:39,Arjun Pillai,Lemon Iced Tea; Veg Burger; Iced Latte,3,457,Counter,UPI,Delivered
-ORD1576,2026-06-10,18:51,Sara Ahmed,Cappuccino; Veg Burger,2,298,Counter,Card,Delivered
-ORD1577,2026-06-10,19:34,Arjun Pillai,Cappuccino,1,149,Counter,UPI,Completed
-ORD1578,2026-06-10,10:02,Rahul Mehta,Cold Coffee; Fresh Lime Soda,2,268,Zomato,UPI,Completed
-ORD1579,2026-06-10,15:20,Pooja Gupta,Croissant,1,109,QR Order,Cash,Delivered
-ORD1580,2026-06-10,09:30,Akash Pandey,Cafe Latte; Iced Latte,2,338,Zomato,UPI,Completed
-ORD1581,2026-06-10,18:41,Walk-in,Cafe Latte,1,159,QR Order,UPI,Delivered
-ORD1582,2026-06-10,16:18,Kabir Khanna,French Fries,1,119,Counter,UPI,Completed
-ORD1583,2026-06-10,12:40,Walk-in,Chocolate Brownie,1,129,Swiggy,UPI,Completed
-ORD1584,2026-06-10,20:10,Akash Pandey,Cold Coffee; Chocolate Brownie,2,298,Counter,UPI,Completed
-ORD1585,2026-06-10,14:59,Ananya Iyer,Cappuccino,1,149,QR Order,UPI,Completed
-ORD1586,2026-06-10,15:54,Walk-in,Cold Coffee,1,169,Zomato,Card,Delivered
-ORD1587,2026-06-10,21:09,Neha Chauhan,Masala Chai,1,79,QR Order,UPI,Completed
-ORD1588,2026-06-10,20:34,Aarav Patel,Pasta Alfredo; Masala Chai,2,308,QR Order,Cash,Completed
-ORD1589,2026-06-10,10:38,Aarav Patel,Blueberry Muffin; Blueberry Muffin,2,198,Swiggy,UPI,Completed
-ORD1590,2026-06-10,17:02,Diya Saxena,Iced Latte,1,179,Zomato,UPI,Delivered
-ORD1591,2026-06-10,11:11,Simran Kaur,Cheesecake Slice; Masala Chai,2,238,Counter,UPI,Delivered
-ORD1592,2026-06-10,14:05,Devansh Rao,Chocolate Brownie,1,129,Swiggy,Card,Delivered
-ORD1593,2026-06-10,15:36,Walk-in,Masala Chai,1,79,Swiggy,UPI,Completed
-ORD1594,2026-06-10,12:59,Sneha Desai,Grilled Cheese Sandwich,1,159,QR Order,Cash,Completed
-ORD1595,2026-06-10,15:28,Walk-in,Croissant,1,109,Counter,UPI,Delivered
-ORD1596,2026-06-10,18:43,Sneha Desai,Espresso; Veg Burger,2,268,Zomato,UPI,Completed
-ORD1597,2026-06-10,20:22,Simran Kaur,Chocolate Brownie,1,129,Counter,UPI,Delivered
-ORD1598,2026-06-10,15:54,Kabir Khanna,Cold Coffee; Blueberry Muffin; Iced Latte,3,447,Counter,Card,Delivered
-ORD1599,2026-06-10,08:59,Kavya Reddy,Croissant; Blueberry Muffin,2,208,Swiggy,UPI,Delivered
-ORD1600,2026-06-10,13:35,Lavanya Rao,Cafe Latte; Iced Latte; Veg Sandwich,3,477,Swiggy,UPI,Delivered
-ORD1601,2026-06-10,19:32,Ishita Nair,Cold Coffee; Margherita Pizza; Lemon Iced Tea,3,547,Counter,Card,Completed
-ORD1602,2026-06-10,12:00,Walk-in,Pasta Alfredo,1,229,Counter,UPI,Completed
-ORD1603,2026-06-10,11:25,Gauri Dixit,Croissant,1,109,QR Order,UPI,Cancelled
-ORD1604,2026-06-10,10:06,Varun Malhotra,Grilled Cheese Sandwich,1,159,Counter,UPI,Cancelled
-ORD1605,2026-06-10,09:05,Priya Shah,French Fries; Pasta Alfredo,2,348,Counter,Cash,Completed
-ORD1606,2026-06-10,11:40,Aarav Patel,Veg Burger,1,149,Counter,UPI,Completed
-ORD1607,2026-06-10,17:05,Megha Soni,Masala Chai; Masala Chai,2,158,QR Order,Card,Completed
-ORD1608,2026-06-10,10:31,Priya Shah,Blueberry Muffin,1,99,QR Order,Card,Delivered
-ORD1609,2026-06-10,12:26,Walk-in,Cafe Latte,1,159,Swiggy,Card,Completed
-ORD1610,2026-06-10,12:30,Harsh Modi,Espresso; Cappuccino,2,268,Zomato,UPI,Delivered
-ORD1611,2026-06-10,18:07,Tara Menon,Masala Chai,1,79,QR Order,UPI,Delivered
-ORD1612,2026-06-11,09:35,Sneha Desai,Veg Burger,1,149,Counter,Card,Delivered
-ORD1613,2026-06-11,09:37,Diya Saxena,Croissant,1,109,QR Order,UPI,Completed
-ORD1614,2026-06-11,14:38,Tara Menon,Croissant; Lemon Iced Tea,2,238,Swiggy,Cash,Completed
-ORD1615,2026-06-11,08:18,Ananya Iyer,Grilled Cheese Sandwich,1,159,Zomato,UPI,Delivered
-ORD1616,2026-06-11,14:13,Walk-in,Fresh Lime Soda; Iced Latte; Cafe Latte,3,437,Counter,Card,Completed
-ORD1617,2026-06-11,14:04,Rohan Das,Cold Coffee,1,169,Swiggy,Card,Delivered
-ORD1618,2026-06-11,16:52,Kabir Khanna,Fresh Lime Soda,1,99,Counter,UPI,Completed
-ORD1619,2026-06-11,09:15,Ishita Nair,Cheesecake Slice,1,159,Zomato,UPI,Delivered
-ORD1620,2026-06-11,17:30,Rahul Mehta,Cold Coffee; Pasta Alfredo; Iced Latte,3,577,Counter,UPI,Completed
-ORD1621,2026-06-11,15:25,Farhan Sheikh,French Fries,1,119,Counter,Card,Delivered
-ORD1622,2026-06-11,18:52,Walk-in,Grilled Cheese Sandwich,1,159,Counter,UPI,Completed
-ORD1623,2026-06-11,17:56,Ananya Iyer,Veg Burger; Masala Chai,2,228,QR Order,UPI,Delivered
-ORD1624,2026-06-11,18:29,Karan Joshi,Cold Coffee,1,169,Counter,UPI,Completed
-ORD1625,2026-06-11,13:42,Aarav Patel,Chocolate Brownie; Croissant,2,238,Swiggy,Card,Delivered
-ORD1626,2026-06-11,09:31,Ishita Nair,Masala Chai,1,79,Counter,UPI,Delivered
-ORD1627,2026-06-11,14:09,Sneha Desai,Cold Coffee,1,169,QR Order,UPI,Delivered
-ORD1628,2026-06-11,18:17,Aarav Patel,Cold Coffee,1,169,Swiggy,UPI,Cancelled
-ORD1629,2026-06-11,11:30,Parth Gandhi,Cafe Latte; Chocolate Brownie,2,288,Counter,UPI,Completed
-ORD1630,2026-06-11,11:03,Arjun Pillai,Fresh Lime Soda,1,99,Swiggy,Card,Delivered
-ORD1631,2026-06-11,15:06,Pooja Gupta,French Fries; Iced Latte,2,298,Counter,UPI,Delivered
-ORD1632,2026-06-11,08:56,Riya Kapoor,Cappuccino,1,149,Zomato,Card,Delivered
-ORD1633,2026-06-11,18:22,Aditya Jain,Masala Chai,1,79,Counter,Card,Completed
-ORD1634,2026-06-11,13:43,Kavya Reddy,Cafe Latte; Lemon Iced Tea,2,288,Counter,UPI,Completed
-ORD1635,2026-06-11,14:43,Ishita Nair,Cappuccino,1,149,QR Order,UPI,Delivered
-ORD1636,2026-06-11,21:10,Ananya Iyer,Veg Sandwich; Lemon Iced Tea; Masala Chai,3,347,QR Order,UPI,Delivered
-ORD1637,2026-06-11,19:29,Tanvi Bose,French Fries,1,119,Counter,UPI,Delivered
-ORD1638,2026-06-11,08:42,Rohan Das,French Fries; Pasta Alfredo; Chocolate Brownie,3,477,QR Order,Card,Completed
-ORD1639,2026-06-11,11:43,Megha Soni,Veg Burger; Iced Latte,2,328,Zomato,Cash,Delivered
-ORD1640,2026-06-11,18:37,Walk-in,Espresso; Blueberry Muffin; Cold Coffee,3,387,Zomato,Card,Delivered
-ORD1641,2026-06-11,17:31,Lavanya Rao,Margherita Pizza,1,249,Counter,UPI,Completed
-ORD1642,2026-06-11,11:00,Yash Bhatt,Cold Coffee,1,169,Swiggy,UPI,Completed
-ORD1643,2026-06-11,19:22,Priya Shah,Cold Coffee,1,169,Counter,UPI,Delivered
-ORD1644,2026-06-11,09:18,Walk-in,French Fries; Espresso,2,238,QR Order,UPI,Delivered
-ORD1645,2026-06-11,14:19,Simran Kaur,Veg Burger,1,149,QR Order,UPI,Delivered
-ORD1646,2026-06-11,14:19,Rohan Das,Cafe Latte; French Fries,2,278,Zomato,Card,Delivered
-ORD1647,2026-06-11,11:45,Tara Menon,Chocolate Brownie,1,129,Counter,Cash,Delivered
-ORD1648,2026-06-11,12:58,Harsh Modi,Iced Latte,1,179,Counter,UPI,Delivered
-ORD1649,2026-06-12,17:03,Karan Joshi,Pasta Alfredo,1,229,Counter,UPI,Delivered
-ORD1650,2026-06-12,12:37,Walk-in,Veg Sandwich,1,139,Counter,UPI,Completed
-ORD1651,2026-06-12,09:59,Mohit Lal,Lemon Iced Tea; Fresh Lime Soda,2,228,Counter,UPI,Completed
-ORD1652,2026-06-12,08:30,Nikhil Verma,Cappuccino,1,149,Counter,UPI,Completed
-ORD1653,2026-06-12,17:28,Aditya Jain,Cafe Latte,1,159,QR Order,Card,Delivered
-ORD1654,2026-06-12,21:44,Neha Chauhan,Cappuccino,1,149,Zomato,UPI,Delivered
-ORD1655,2026-06-12,15:51,Kavya Reddy,Cafe Latte,1,159,Counter,Cash,Completed
-ORD1656,2026-06-12,12:02,Neha Chauhan,Cold Coffee,1,169,Counter,UPI,Delivered
-ORD1657,2026-06-12,21:32,Harsh Modi,Cheesecake Slice,1,159,Counter,UPI,Delivered
-ORD1658,2026-06-12,10:30,Simran Kaur,Fresh Lime Soda; Iced Latte,2,278,Swiggy,Cash,Completed
-ORD1659,2026-06-12,10:53,Tara Menon,Blueberry Muffin; French Fries,2,218,Swiggy,UPI,Delivered
-ORD1660,2026-06-12,18:57,Aarav Patel,Grilled Cheese Sandwich,1,159,QR Order,Card,Delivered
-ORD1661,2026-06-12,08:40,Walk-in,Iced Latte; Cappuccino,2,328,QR Order,UPI,Completed
-ORD1662,2026-06-12,16:28,Walk-in,Veg Burger,1,149,Counter,Card,Delivered
-ORD1663,2026-06-12,08:51,Aarav Patel,Fresh Lime Soda,1,99,QR Order,UPI,Completed
-ORD1664,2026-06-12,17:52,Neha Chauhan,Chocolate Brownie; Cold Coffee,2,298,Swiggy,UPI,Completed
-ORD1665,2026-06-12,21:06,Lavanya Rao,Pasta Alfredo; Margherita Pizza; Iced Latte,3,657,Counter,Cash,Completed
-ORD1666,2026-06-12,17:18,Ananya Iyer,Margherita Pizza,1,249,Counter,UPI,Delivered
-ORD1667,2026-06-12,11:21,Kabir Khanna,Lemon Iced Tea; Iced Latte; Cappuccino,3,457,Swiggy,Card,Completed
-ORD1668,2026-06-12,15:51,Rahul Mehta,Fresh Lime Soda,1,99,Zomato,UPI,Completed
-ORD1669,2026-06-12,18:46,Pooja Gupta,Cappuccino,1,149,Counter,UPI,Delivered
-ORD1670,2026-06-12,15:34,Sneha Desai,Iced Latte; Cold Coffee,2,348,Zomato,UPI,Completed
-ORD1671,2026-06-12,13:07,Vivek Sharma,Cappuccino; French Fries,2,268,Zomato,Card,Completed
-ORD1672,2026-06-12,21:02,Rohan Das,Cappuccino,1,149,QR Order,UPI,Delivered
-ORD1673,2026-06-12,12:38,Walk-in,Cappuccino,1,149,Counter,UPI,Delivered
-ORD1674,2026-06-12,21:31,Walk-in,Iced Latte,1,179,Counter,Card,Completed
-ORD1675,2026-06-12,14:34,Ritu Singh,Cold Coffee,1,169,Zomato,UPI,Delivered
-ORD1676,2026-06-12,09:07,Devansh Rao,Veg Sandwich; Masala Chai,2,218,Counter,Card,Delivered
-ORD1677,2026-06-12,20:17,Akash Pandey,Masala Chai,1,79,Counter,UPI,Delivered
-ORD1678,2026-06-12,11:14,Manav Trivedi,Pasta Alfredo,1,229,QR Order,Cash,Delivered
-ORD1679,2026-06-12,19:13,Devansh Rao,Grilled Cheese Sandwich,1,159,QR Order,UPI,Delivered
-ORD1680,2026-06-12,21:46,Lavanya Rao,Iced Latte,1,179,Counter,Card,Completed
-ORD1681,2026-06-12,11:58,Walk-in,Lemon Iced Tea; Fresh Lime Soda; Fresh Lime Soda,3,327,Counter,Card,Delivered
-ORD1682,2026-06-12,12:23,Farhan Sheikh,Masala Chai,1,79,Counter,Card,Delivered
-ORD1683,2026-06-12,09:28,Rahul Mehta,Fresh Lime Soda,1,99,Counter,Cash,Delivered
-ORD1684,2026-06-12,08:20,Ananya Iyer,Pasta Alfredo,1,229,Counter,Cash,Delivered
-ORD1685,2026-06-12,08:02,Karan Joshi,Lemon Iced Tea,1,129,QR Order,Card,Delivered
-ORD1686,2026-06-12,17:54,Harsh Modi,Cappuccino; Veg Burger,2,298,QR Order,UPI,Delivered
-ORD1687,2026-06-12,13:23,Pooja Gupta,Cold Coffee; Cappuccino,2,318,QR Order,UPI,Delivered
-ORD1688,2026-06-12,19:18,Manav Trivedi,Chocolate Brownie; Cafe Latte,2,288,Zomato,UPI,Delivered
-ORD1689,2026-06-12,09:49,Rahul Mehta,Cafe Latte,1,159,Counter,UPI,Completed
-ORD1690,2026-06-12,18:32,Gauri Dixit,Cold Coffee; Veg Sandwich; Grilled Cheese Sandwich,3,467,Zomato,Card,Delivered
-ORD1691,2026-06-12,19:12,Neha Chauhan,Cafe Latte,1,159,QR Order,UPI,Completed
-ORD1692,2026-06-12,10:46,Sneha Desai,Margherita Pizza,1,249,Swiggy,Card,Cancelled
-ORD1693,2026-06-13,13:37,Priya Shah,Grilled Cheese Sandwich; Veg Sandwich; Iced Latte,3,477,Counter,UPI,Delivered
-ORD1694,2026-06-13,15:56,Kavya Reddy,Cafe Latte,1,159,Swiggy,UPI,Delivered
-ORD1695,2026-06-13,20:44,Devansh Rao,Fresh Lime Soda,1,99,QR Order,UPI,Completed
-ORD1696,2026-06-13,10:47,Devansh Rao,Cold Coffee; Iced Latte; Fresh Lime Soda,3,447,Counter,Cash,Completed
-ORD1697,2026-06-13,18:37,Walk-in,French Fries; Iced Latte,2,298,Zomato,Card,Completed
-ORD1698,2026-06-13,19:21,Harsh Modi,Iced Latte,1,179,Counter,UPI,Delivered
-ORD1699,2026-06-13,13:56,Kabir Khanna,Pasta Alfredo; Iced Latte,2,408,Counter,UPI,Delivered
-ORD1700,2026-06-13,10:56,Arjun Pillai,Veg Sandwich; Cafe Latte,2,298,QR Order,Card,Delivered
-ORD1701,2026-06-13,10:35,Walk-in,Veg Sandwich,1,139,QR Order,UPI,Delivered
-ORD1702,2026-06-13,11:18,Mohit Lal,Cappuccino; Chocolate Brownie,2,278,Zomato,Cash,Delivered
-ORD1703,2026-06-13,20:05,Akash Pandey,Cold Coffee; Cafe Latte,2,328,QR Order,UPI,Completed
-ORD1704,2026-06-13,18:21,Walk-in,Cafe Latte; Cold Coffee,2,328,Counter,Cash,Delivered
-ORD1705,2026-06-13,08:42,Kabir Khanna,Cappuccino; Veg Burger,2,298,QR Order,Card,Completed
-ORD1706,2026-06-13,09:31,Rahul Mehta,Veg Sandwich,1,139,QR Order,UPI,Completed
-ORD1707,2026-06-13,12:31,Farhan Sheikh,Grilled Cheese Sandwich,1,159,Zomato,UPI,Delivered
-ORD1708,2026-06-13,20:42,Aarav Patel,Veg Burger,1,149,QR Order,Card,Completed
-ORD1709,2026-06-13,12:56,Farhan Sheikh,Lemon Iced Tea; Grilled Cheese Sandwich,2,288,QR Order,UPI,Completed
-ORD1710,2026-06-13,12:25,Ishita Nair,Grilled Cheese Sandwich,1,159,Counter,UPI,Delivered
-ORD1711,2026-06-13,10:35,Ojas Tiwari,Chocolate Brownie; Veg Sandwich,2,268,QR Order,Card,Completed
-ORD1712,2026-06-13,08:14,Ananya Iyer,Margherita Pizza,1,249,Counter,Card,Delivered
-ORD1713,2026-06-13,14:34,Farhan Sheikh,Masala Chai,1,79,Counter,Card,Completed
-ORD1714,2026-06-13,21:23,Devansh Rao,Veg Burger,1,149,Zomato,UPI,Completed
-ORD1715,2026-06-13,10:35,Walk-in,Iced Latte; Veg Burger,2,328,Counter,UPI,Delivered
-ORD1716,2026-06-13,11:18,Walk-in,Cappuccino,1,149,Counter,UPI,Completed
-ORD1717,2026-06-13,13:04,Sneha Desai,French Fries,1,119,Counter,UPI,Completed
-ORD1718,2026-06-13,18:54,Varun Malhotra,French Fries,1,119,Counter,UPI,Delivered
-ORD1719,2026-06-13,16:05,Rahul Mehta,Iced Latte,1,179,QR Order,Cash,Delivered
-ORD1720,2026-06-13,15:45,Diya Saxena,Veg Burger,1,149,Counter,Cash,Delivered
-ORD1721,2026-06-13,14:05,Rahul Mehta,Masala Chai,1,79,Counter,UPI,Delivered
-ORD1722,2026-06-13,12:26,Ishita Nair,Cappuccino; Iced Latte,2,328,Counter,Card,Completed
-ORD1723,2026-06-13,21:34,Aarav Patel,Veg Burger,1,149,Swiggy,Card,Completed
-ORD1724,2026-06-13,12:04,Walk-in,Iced Latte,1,179,Swiggy,UPI,Delivered
-ORD1725,2026-06-13,20:10,Akash Pandey,Cafe Latte,1,159,Counter,UPI,Delivered
-ORD1726,2026-06-13,14:39,Yash Bhatt,Fresh Lime Soda; Iced Latte,2,278,Counter,UPI,Delivered
-ORD1727,2026-06-13,16:13,Yash Bhatt,Veg Burger,1,149,Counter,Card,Completed
-ORD1728,2026-06-13,13:00,Akash Pandey,Veg Burger,1,149,Counter,Card,Delivered
-ORD1729,2026-06-13,12:35,Priya Shah,Cold Coffee,1,169,QR Order,Card,Delivered
-ORD1730,2026-06-13,21:59,Nikhil Verma,Margherita Pizza,1,249,Counter,UPI,Completed
-ORD1731,2026-06-13,10:37,Nikhil Verma,Cafe Latte,1,159,Counter,UPI,Completed
-ORD1732,2026-06-13,18:50,Parth Gandhi,Veg Sandwich; Masala Chai,2,218,QR Order,UPI,Completed
-ORD1733,2026-06-13,08:27,Aarav Patel,Lemon Iced Tea,1,129,Counter,Cash,Delivered
-ORD1734,2026-06-13,21:33,Priya Shah,Iced Latte,1,179,Counter,UPI,Completed
-ORD1735,2026-06-13,12:41,Akash Pandey,Pasta Alfredo; Veg Burger; Pasta Alfredo,3,607,Counter,UPI,Completed
-ORD1736,2026-06-13,19:59,Ananya Iyer,French Fries; Cold Coffee,2,288,Counter,UPI,Delivered
-ORD1737,2026-06-13,10:38,Ananya Iyer,Cappuccino,1,149,Counter,UPI,Delivered
-ORD1738,2026-06-13,08:40,Diya Saxena,Cheesecake Slice,1,159,Swiggy,Cash,Completed
-ORD1739,2026-06-13,09:53,Priya Shah,Cappuccino,1,149,QR Order,UPI,Completed
-ORD1740,2026-06-13,19:10,Rahul Mehta,Pasta Alfredo,1,229,Zomato,Card,Delivered
-ORD1741,2026-06-13,18:09,Walk-in,Croissant,1,109,Counter,Card,Delivered
-ORD1742,2026-06-13,14:22,Ishita Nair,Veg Sandwich,1,139,Counter,Card,Completed
-ORD1743,2026-06-13,21:01,Manav Trivedi,Lemon Iced Tea; Cafe Latte,2,288,QR Order,UPI,Delivered
-ORD1744,2026-06-13,13:24,Ritu Singh,Iced Latte; Chocolate Brownie,2,308,Counter,Card,Completed
-ORD1745,2026-06-13,10:05,Aarav Patel,Iced Latte; Pasta Alfredo,2,408,Swiggy,Card,Delivered
-ORD1746,2026-06-13,11:13,Simran Kaur,Fresh Lime Soda; Pasta Alfredo,2,328,Counter,Cash,Completed
-ORD1747,2026-06-13,21:16,Kavya Reddy,Veg Burger,1,149,QR Order,Cash,Delivered
-ORD1748,2026-06-13,14:42,Priya Shah,Grilled Cheese Sandwich,1,159,Zomato,UPI,Delivered
-ORD1749,2026-06-13,13:10,Priya Shah,Chocolate Brownie; Cappuccino,2,278,Swiggy,UPI,Delivered
-ORD1750,2026-06-13,18:46,Rahul Mehta,Veg Sandwich,1,139,Counter,UPI,Completed
-ORD1751,2026-06-14,18:10,Sneha Desai,Chocolate Brownie; Lemon Iced Tea,2,258,Counter,UPI,Delivered
-ORD1752,2026-06-14,12:51,Walk-in,Masala Chai; Croissant; French Fries,3,307,Counter,Cash,Delivered
-ORD1753,2026-06-14,13:27,Harsh Modi,Cafe Latte,1,159,Counter,Card,Completed
-ORD1754,2026-06-14,13:24,Ananya Iyer,Espresso,1,119,QR Order,Cash,Delivered
-ORD1755,2026-06-14,14:25,Riya Kapoor,Cold Coffee,1,169,Zomato,UPI,Completed
-ORD1756,2026-06-14,10:39,Parth Gandhi,Chocolate Brownie,1,129,Zomato,UPI,Delivered
-ORD1757,2026-06-14,15:09,Manav Trivedi,Cafe Latte; Espresso,2,278,Counter,Card,Delivered
-ORD1758,2026-06-14,08:43,Diya Saxena,Croissant,1,109,Counter,UPI,Delivered
-ORD1759,2026-06-14,12:42,Aditya Jain,Cappuccino; Cold Coffee,2,318,Swiggy,Cash,Completed
-ORD1760,2026-06-14,20:21,Farhan Sheikh,French Fries,1,119,QR Order,UPI,Delivered
-ORD1761,2026-06-14,17:59,Walk-in,Espresso,1,119,Counter,UPI,Delivered
-ORD1762,2026-06-14,17:43,Ishita Nair,Lemon Iced Tea,1,129,Counter,Card,Delivered
-ORD1763,2026-06-14,14:02,Kavya Reddy,Cappuccino; Masala Chai,2,228,Zomato,UPI,Delivered
-ORD1764,2026-06-14,13:57,Pooja Gupta,Iced Latte,1,179,Counter,Card,Delivered
-ORD1765,2026-06-14,17:23,Walk-in,Masala Chai; Margherita Pizza,2,328,Counter,UPI,Completed
-ORD1766,2026-06-14,15:11,Riya Kapoor,Cheesecake Slice,1,159,Counter,Card,Delivered
-ORD1767,2026-06-14,10:36,Tanvi Bose,Iced Latte; Cafe Latte,2,338,Swiggy,UPI,Delivered
-ORD1768,2026-06-14,15:18,Varun Malhotra,Veg Burger,1,149,Counter,UPI,Delivered
-ORD1769,2026-06-14,18:01,Vivek Sharma,Grilled Cheese Sandwich; Masala Chai,2,238,Counter,Card,Delivered
-ORD1770,2026-06-14,21:21,Karan Joshi,Veg Sandwich; Iced Latte,2,318,Counter,Card,Delivered
-ORD1771,2026-06-14,15:02,Harsh Modi,Pasta Alfredo,1,229,Counter,UPI,Delivered
-ORD1772,2026-06-14,16:28,Manav Trivedi,Fresh Lime Soda; Cold Coffee,2,268,Counter,Cash,Delivered
-ORD1773,2026-06-14,18:58,Aarav Patel,Fresh Lime Soda; Iced Latte,2,278,Zomato,UPI,Completed
-ORD1774,2026-06-14,13:26,Riya Kapoor,Masala Chai,1,79,Counter,UPI,Cancelled
-ORD1775,2026-06-14,18:31,Karan Joshi,Cold Coffee,1,169,QR Order,Cash,Delivered
-ORD1776,2026-06-14,10:58,Ishita Nair,Chocolate Brownie,1,129,Counter,Cash,Delivered
-ORD1777,2026-06-14,17:39,Neha Chauhan,Iced Latte; Grilled Cheese Sandwich; Veg Sandwich,3,477,QR Order,UPI,Delivered
-ORD1778,2026-06-14,18:23,Diya Saxena,Croissant; Cappuccino,2,258,Counter,UPI,Completed
-ORD1779,2026-06-14,11:38,Ishita Nair,Blueberry Muffin; Cold Coffee; Cold Coffee,3,437,Swiggy,UPI,Completed
-ORD1780,2026-06-14,13:04,Ojas Tiwari,Cafe Latte,1,159,Counter,Card,Completed
-ORD1781,2026-06-14,12:34,Devansh Rao,Cheesecake Slice; Chocolate Brownie,2,288,Counter,UPI,Delivered
-ORD1782,2026-06-14,21:41,Pooja Gupta,Iced Latte,1,179,Swiggy,Cash,Completed
-ORD1783,2026-06-14,19:42,Tanvi Bose,Masala Chai,1,79,Counter,UPI,Completed
-ORD1784,2026-06-14,11:18,Walk-in,Masala Chai; Cafe Latte,2,238,Counter,Cash,Completed
-ORD1785,2026-06-14,10:36,Ishita Nair,Fresh Lime Soda; Veg Sandwich,2,238,Counter,Card,Completed
-ORD1786,2026-06-14,09:54,Aarav Patel,Cold Coffee; Veg Burger,2,318,Swiggy,Card,Completed
-ORD1787,2026-06-14,15:22,Vivek Sharma,Veg Sandwich; Cafe Latte,2,298,Counter,UPI,Delivered
-ORD1788,2026-06-14,15:57,Kabir Khanna,Cold Coffee,1,169,Swiggy,UPI,Completed
-ORD1789,2026-06-14,08:29,Manav Trivedi,Cold Coffee,1,169,Zomato,Card,Delivered
-ORD1790,2026-06-14,09:40,Walk-in,Pasta Alfredo; French Fries,2,348,Counter,Card,Delivered
-ORD1791,2026-06-14,17:15,Arjun Pillai,Fresh Lime Soda; French Fries,2,218,QR Order,Card,Completed
-ORD1792,2026-06-14,14:05,Akash Pandey,Grilled Cheese Sandwich; Masala Chai,2,238,Counter,UPI,Completed
-ORD1793,2026-06-14,17:56,Tanvi Bose,Cafe Latte; Cold Coffee; Masala Chai,3,407,QR Order,UPI,Delivered
-ORD1794,2026-06-14,09:00,Priya Shah,Cafe Latte,1,159,Zomato,Cash,Delivered
-ORD1795,2026-06-14,11:38,Walk-in,Chocolate Brownie,1,129,Counter,Cash,Completed
-ORD1796,2026-06-15,14:35,Rohan Das,Lemon Iced Tea,1,129,Zomato,Card,Completed
-ORD1797,2026-06-15,13:43,Riya Kapoor,Croissant; Lemon Iced Tea; Cold Coffee,3,407,Counter,UPI,Cancelled
-ORD1798,2026-06-15,08:32,Walk-in,Grilled Cheese Sandwich,1,159,Counter,Card,Delivered
-ORD1799,2026-06-15,14:49,Ojas Tiwari,Cold Coffee,1,169,Swiggy,UPI,Completed
-ORD1800,2026-06-15,18:30,Aarav Patel,Espresso; Croissant,2,228,QR Order,UPI,Cancelled
-ORD1801,2026-06-15,15:48,Aarav Patel,French Fries,1,119,Swiggy,UPI,Completed
-ORD1802,2026-06-15,11:12,Varun Malhotra,Iced Latte,1,179,QR Order,Card,Completed
-ORD1803,2026-06-15,13:28,Kavya Reddy,Cappuccino; Iced Latte,2,328,QR Order,Card,Delivered
-ORD1804,2026-06-15,20:17,Sneha Desai,Veg Burger,1,149,Zomato,UPI,Completed
-ORD1805,2026-06-15,12:56,Riya Kapoor,Cold Coffee,1,169,Counter,UPI,Delivered
-ORD1806,2026-06-15,13:34,Devansh Rao,Chocolate Brownie; Veg Sandwich,2,268,QR Order,Card,Completed
-ORD1807,2026-06-15,20:56,Karan Joshi,Cafe Latte; French Fries,2,278,QR Order,UPI,Completed
-ORD1808,2026-06-15,18:41,Sneha Desai,Cold Coffee,1,169,Swiggy,Cash,Completed
-ORD1809,2026-06-15,12:50,Diya Saxena,Pasta Alfredo; Cappuccino,2,378,Zomato,Cash,Cancelled
-ORD1810,2026-06-15,21:39,Ananya Iyer,French Fries; Fresh Lime Soda,2,218,Counter,UPI,Cancelled
-ORD1811,2026-06-15,10:36,Varun Malhotra,Lemon Iced Tea; Chocolate Brownie,2,258,Counter,Cash,Cancelled
-ORD1812,2026-06-15,10:54,Neha Chauhan,Iced Latte; Cold Coffee; Veg Sandwich,3,487,QR Order,UPI,Delivered
-ORD1813,2026-06-15,18:13,Rohan Das,Grilled Cheese Sandwich,1,159,Counter,UPI,Delivered
-ORD1814,2026-06-15,13:10,Rahul Mehta,Fresh Lime Soda; Croissant,2,208,Swiggy,Card,Delivered
-ORD1815,2026-06-15,11:54,Sneha Desai,Cappuccino; Chocolate Brownie,2,278,Counter,UPI,Completed
-ORD1816,2026-06-15,18:58,Harsh Modi,Masala Chai,1,79,Zomato,Card,Completed
-ORD1817,2026-06-15,18:05,Tara Menon,Cafe Latte; Lemon Iced Tea,2,288,QR Order,UPI,Completed
-ORD1818,2026-06-15,15:23,Arjun Pillai,Croissant,1,109,Counter,UPI,Delivered
-ORD1819,2026-06-15,19:41,Karan Joshi,Veg Burger,1,149,Counter,UPI,Completed
-ORD1820,2026-06-15,11:51,Sneha Desai,Cappuccino,1,149,QR Order,UPI,Delivered
-ORD1821,2026-06-15,09:50,Farhan Sheikh,Iced Latte,1,179,QR Order,UPI,Delivered
-ORD1822,2026-06-15,19:56,Kavya Reddy,Cold Coffee,1,169,Swiggy,UPI,Completed
-ORD1823,2026-06-15,08:26,Akash Pandey,Cappuccino; Cold Coffee; Veg Sandwich,3,457,Counter,UPI,Delivered
-ORD1824,2026-06-15,14:57,Walk-in,Iced Latte,1,179,Counter,UPI,Completed
-ORD1825,2026-06-15,13:51,Ananya Iyer,Grilled Cheese Sandwich; Cafe Latte; Lemon Iced Tea,3,447,QR Order,UPI,Completed
-ORD1826,2026-06-15,10:37,Riya Kapoor,Cold Coffee; Veg Sandwich,2,308,Zomato,UPI,Delivered
-ORD1827,2026-06-15,15:11,Arjun Pillai,Cafe Latte; Iced Latte,2,338,Counter,UPI,Completed
-ORD1828,2026-06-15,13:28,Megha Soni,Cold Coffee,1,169,QR Order,Cash,Completed
-ORD1829,2026-06-15,14:21,Sara Ahmed,French Fries,1,119,QR Order,UPI,Completed
-ORD1830,2026-06-15,19:41,Sara Ahmed,Cafe Latte,1,159,Counter,UPI,Completed
-ORD1831,2026-06-15,15:55,Sneha Desai,Pasta Alfredo; Cafe Latte; Veg Burger,3,537,Zomato,UPI,Delivered
-ORD1832,2026-06-15,10:33,Kabir Khanna,Pasta Alfredo,1,229,Counter,UPI,Delivered
-ORD1833,2026-06-15,13:53,Sara Ahmed,Croissant,1,109,QR Order,Card,Delivered
-ORD1834,2026-06-15,15:08,Devansh Rao,Masala Chai; Croissant,2,188,Counter,Card,Completed
-ORD1835,2026-06-15,20:09,Karan Joshi,Grilled Cheese Sandwich; Masala Chai,2,238,Swiggy,UPI,Completed
-ORD1836,2026-06-16,10:08,Walk-in,Iced Latte; Espresso; Iced Latte,3,477,Swiggy,UPI,Completed
-ORD1837,2026-06-16,14:49,Akash Pandey,Cafe Latte,1,159,Counter,UPI,Delivered
-ORD1838,2026-06-16,14:24,Harsh Modi,Cafe Latte,1,159,QR Order,Card,Completed
-ORD1839,2026-06-16,18:06,Ishita Nair,Espresso,1,119,Counter,Card,Completed
-ORD1840,2026-06-16,17:06,Lavanya Rao,Masala Chai; Pasta Alfredo,2,308,QR Order,UPI,Delivered
-ORD1841,2026-06-16,12:37,Karan Joshi,Grilled Cheese Sandwich; Cold Coffee; Grilled Cheese Sandwich,3,487,Swiggy,UPI,Delivered
-ORD1842,2026-06-16,15:06,Arjun Pillai,French Fries,1,119,Zomato,UPI,Completed
-ORD1843,2026-06-16,17:41,Tanvi Bose,Cafe Latte; French Fries,2,278,QR Order,Cash,Delivered
-ORD1844,2026-06-16,18:11,Walk-in,Lemon Iced Tea; Croissant,2,238,Counter,Card,Completed
-ORD1845,2026-06-16,19:15,Walk-in,Blueberry Muffin,1,99,Counter,Cash,Completed
-ORD1846,2026-06-16,20:49,Gauri Dixit,Cheesecake Slice,1,159,QR Order,UPI,Delivered
-ORD1847,2026-06-16,19:58,Tanvi Bose,Veg Sandwich,1,139,Counter,UPI,Completed
-ORD1848,2026-06-16,19:57,Rohan Das,Grilled Cheese Sandwich; French Fries,2,278,Counter,UPI,Delivered
-ORD1849,2026-06-16,20:44,Aarav Patel,Cafe Latte,1,159,Counter,UPI,Completed
-ORD1850,2026-06-16,11:36,Devansh Rao,Cafe Latte; Cold Coffee,2,328,Counter,Card,Delivered
-ORD1851,2026-06-16,20:53,Walk-in,Cappuccino,1,149,Counter,UPI,Delivered
-ORD1852,2026-06-16,15:35,Sneha Desai,Margherita Pizza,1,249,Zomato,UPI,Delivered
-ORD1853,2026-06-16,16:23,Aarav Patel,Veg Sandwich; Grilled Cheese Sandwich,2,298,Counter,UPI,Completed
-ORD1854,2026-06-16,17:45,Ananya Iyer,Veg Burger,1,149,Swiggy,UPI,Delivered
-ORD1855,2026-06-16,15:29,Sneha Desai,Veg Burger; Grilled Cheese Sandwich,2,308,Zomato,Cash,Completed
-ORD1856,2026-06-16,14:09,Neha Chauhan,Cheesecake Slice,1,159,Counter,Card,Delivered
-ORD1857,2026-06-16,15:28,Arjun Pillai,Croissant; French Fries,2,228,Counter,UPI,Completed
-ORD1858,2026-06-16,17:03,Kavya Reddy,Fresh Lime Soda,1,99,Counter,UPI,Completed
-ORD1859,2026-06-16,09:53,Riya Kapoor,Cappuccino; Cappuccino,2,298,QR Order,UPI,Delivered
-ORD1860,2026-06-16,20:30,Diya Saxena,Cold Coffee; Cafe Latte,2,328,QR Order,UPI,Delivered
-ORD1861,2026-06-16,08:12,Riya Kapoor,Espresso,1,119,QR Order,Card,Delivered
-ORD1862,2026-06-16,08:10,Walk-in,Cold Coffee; French Fries,2,288,Counter,UPI,Delivered
-ORD1863,2026-06-16,13:39,Ananya Iyer,Cappuccino,1,149,Swiggy,UPI,Completed
-ORD1864,2026-06-16,15:09,Simran Kaur,Veg Burger,1,149,QR Order,UPI,Delivered
-ORD1865,2026-06-16,16:43,Lavanya Rao,Fresh Lime Soda,1,99,QR Order,UPI,Completed
-ORD1866,2026-06-16,20:42,Riya Kapoor,Veg Sandwich,1,139,Zomato,UPI,Cancelled
-ORD1867,2026-06-16,17:51,Ananya Iyer,Croissant,1,109,QR Order,Card,Delivered
-ORD1868,2026-06-16,13:08,Parth Gandhi,Lemon Iced Tea,1,129,Swiggy,UPI,Completed
-ORD1869,2026-06-16,15:19,Devansh Rao,Cold Coffee,1,169,Swiggy,UPI,Delivered
-ORD1870,2026-06-16,14:01,Mohit Lal,Cappuccino,1,149,Counter,Card,Completed
-ORD1871,2026-06-16,14:06,Simran Kaur,Cappuccino; Margherita Pizza; Chocolate Brownie,3,527,Swiggy,UPI,Completed
-ORD1872,2026-06-16,20:57,Walk-in,Cappuccino; Masala Chai,2,228,Counter,UPI,Delivered
-ORD1873,2026-06-16,18:58,Walk-in,Masala Chai,1,79,QR Order,Cash,Completed
-ORD1874,2026-06-16,19:44,Aarav Patel,Veg Sandwich; Masala Chai,2,218,Counter,Cash,Completed
-ORD1875,2026-06-17,15:49,Varun Malhotra,Chocolate Brownie,1,129,Swiggy,UPI,Completed
-ORD1876,2026-06-17,21:10,Megha Soni,Cafe Latte,1,159,Counter,Card,Delivered
-ORD1877,2026-06-17,17:52,Walk-in,Veg Burger; Cold Coffee,2,318,QR Order,UPI,Delivered
-ORD1878,2026-06-17,13:11,Diya Saxena,Lemon Iced Tea,1,129,Counter,UPI,Delivered
-ORD1879,2026-06-17,08:20,Manav Trivedi,Veg Sandwich,1,139,Counter,UPI,Delivered
-ORD1880,2026-06-17,12:09,Aarav Patel,Croissant,1,109,Counter,UPI,Completed
-ORD1881,2026-06-17,14:09,Aarav Patel,Cold Coffee; Veg Burger,2,318,Zomato,Card,Delivered
-ORD1882,2026-06-17,10:57,Priya Shah,Fresh Lime Soda,1,99,Counter,Card,Completed
-ORD1883,2026-06-17,12:04,Devansh Rao,Cappuccino,1,149,Counter,Card,Delivered
-ORD1884,2026-06-17,19:29,Ojas Tiwari,Grilled Cheese Sandwich; Cold Coffee; Veg Sandwich,3,467,Swiggy,UPI,Delivered
-ORD1885,2026-06-17,16:47,Simran Kaur,Cold Coffee,1,169,Counter,Cash,Completed
-ORD1886,2026-06-17,19:25,Akash Pandey,Iced Latte,1,179,Swiggy,Cash,Completed
-ORD1887,2026-06-17,13:15,Harsh Modi,Iced Latte,1,179,QR Order,Card,Delivered
-ORD1888,2026-06-17,19:25,Sneha Desai,French Fries; French Fries; Cold Coffee,3,407,QR Order,Cash,Delivered
-ORD1889,2026-06-17,18:35,Ishita Nair,Pasta Alfredo,1,229,QR Order,Card,Completed
-ORD1890,2026-06-17,09:41,Kabir Khanna,Croissant,1,109,Swiggy,UPI,Delivered
-ORD1891,2026-06-17,21:33,Ritu Singh,Cold Coffee,1,169,Counter,Card,Delivered
-ORD1892,2026-06-17,17:59,Walk-in,French Fries; Cafe Latte,2,278,Counter,UPI,Delivered
-ORD1893,2026-06-17,15:11,Ritu Singh,Cappuccino,1,149,Counter,Card,Completed
-ORD1894,2026-06-17,11:42,Aarav Patel,Cafe Latte; Iced Latte; Fresh Lime Soda,3,437,QR Order,Cash,Completed
-ORD1895,2026-06-17,08:36,Rahul Mehta,Cold Coffee,1,169,QR Order,Cash,Delivered
-ORD1896,2026-06-17,18:19,Walk-in,Croissant; Fresh Lime Soda; Chocolate Brownie,3,337,Counter,Cash,Cancelled
-ORD1897,2026-06-17,10:38,Walk-in,Blueberry Muffin,1,99,QR Order,Cash,Completed
-ORD1898,2026-06-17,19:03,Devansh Rao,Cold Coffee; Masala Chai; Lemon Iced Tea,3,377,Counter,UPI,Cancelled
-ORD1899,2026-06-17,19:02,Arjun Pillai,Iced Latte,1,179,QR Order,UPI,Delivered
-ORD1900,2026-06-17,17:43,Walk-in,French Fries; Cappuccino,2,268,Counter,Card,Delivered
-ORD1901,2026-06-17,14:31,Simran Kaur,Pasta Alfredo; French Fries,2,348,Counter,Card,Delivered
-ORD1902,2026-06-17,09:11,Ishita Nair,Cappuccino; Grilled Cheese Sandwich; Cold Coffee,3,477,Counter,UPI,Delivered
-ORD1903,2026-06-17,21:55,Sneha Desai,Chocolate Brownie; Cappuccino,2,278,Swiggy,Card,Delivered
-ORD1904,2026-06-17,08:05,Walk-in,Cafe Latte; Cafe Latte,2,318,Counter,Cash,Completed
-ORD1905,2026-06-17,18:31,Ritu Singh,Veg Burger,1,149,Zomato,Card,Delivered
-ORD1906,2026-06-17,13:09,Karan Joshi,Veg Sandwich; Chocolate Brownie,2,268,Zomato,UPI,Delivered
-ORD1907,2026-06-17,13:53,Walk-in,Veg Burger; Cappuccino,2,298,Zomato,Card,Delivered
-ORD1908,2026-06-17,08:04,Kabir Khanna,Masala Chai; Masala Chai,2,158,Counter,UPI,Delivered
-ORD1909,2026-06-17,19:49,Pooja Gupta,Margherita Pizza; Cappuccino,2,398,Counter,Card,Completed
-ORD1910,2026-06-17,19:20,Manav Trivedi,French Fries; Cold Coffee,2,288,Zomato,Card,Delivered
-ORD1911,2026-06-17,15:09,Aarav Patel,Cold Coffee,1,169,QR Order,Card,Delivered
-ORD1912,2026-06-17,10:57,Varun Malhotra,Chocolate Brownie; French Fries; Cold Coffee,3,417,QR Order,UPI,Completed
-ORD1913,2026-06-17,09:10,Tara Menon,Cappuccino,1,149,Counter,UPI,Delivered
-ORD1914,2026-06-17,18:42,Walk-in,Masala Chai,1,79,Counter,Card,Delivered
-ORD1915,2026-06-17,15:31,Walk-in,Cold Coffee,1,169,Counter,Card,Delivered
-ORD1916,2026-06-17,10:55,Rohan Das,Veg Burger; Iced Latte,2,328,QR Order,Card,Delivered
-ORD1917,2026-06-17,10:58,Diya Saxena,Iced Latte,1,179,Swiggy,UPI,Delivered
-ORD1918,2026-06-17,13:36,Ananya Iyer,Cold Coffee; Masala Chai,2,248,Swiggy,UPI,Delivered
-ORD1919,2026-06-17,14:24,Priya Shah,Cafe Latte,1,159,QR Order,UPI,Delivered
-ORD1920,2026-06-17,08:30,Farhan Sheikh,Cold Coffee; French Fries,2,288,Zomato,UPI,Delivered
-ORD1921,2026-06-17,09:03,Gauri Dixit,Cold Coffee,1,169,Counter,UPI,Completed
-ORD1922,2026-06-17,19:09,Kabir Khanna,French Fries,1,119,Counter,UPI,Delivered
-ORD1923,2026-06-18,19:59,Simran Kaur,Blueberry Muffin,1,99,Counter,Cash,Delivered
-ORD1924,2026-06-18,08:23,Ishita Nair,Veg Sandwich,1,139,QR Order,Card,Delivered
-ORD1925,2026-06-18,14:48,Varun Malhotra,Grilled Cheese Sandwich; Grilled Cheese Sandwich,2,318,Zomato,UPI,Delivered
-ORD1926,2026-06-18,08:33,Walk-in,Veg Burger,1,149,QR Order,Card,Delivered
-ORD1927,2026-06-18,15:52,Ananya Iyer,Cold Coffee; Iced Latte; French Fries,3,467,Counter,UPI,Delivered
-ORD1928,2026-06-18,08:02,Aarav Patel,Blueberry Muffin,1,99,Counter,UPI,Delivered
-ORD1929,2026-06-18,15:45,Akash Pandey,Cafe Latte; Cold Coffee; Cold Coffee,3,497,Counter,Cash,Completed
-ORD1930,2026-06-18,12:32,Pooja Gupta,Cappuccino,1,149,QR Order,UPI,Delivered
-ORD1931,2026-06-18,15:48,Yash Bhatt,Blueberry Muffin,1,99,Zomato,Card,Completed
-ORD1932,2026-06-18,15:02,Ananya Iyer,Iced Latte; Grilled Cheese Sandwich; Iced Latte,3,517,Swiggy,UPI,Delivered
-ORD1933,2026-06-18,19:03,Sneha Desai,Fresh Lime Soda,1,99,Counter,Card,Completed
-ORD1934,2026-06-18,20:24,Karan Joshi,Cappuccino,1,149,Counter,Card,Delivered
-ORD1935,2026-06-18,12:56,Aditya Jain,Espresso; Lemon Iced Tea,2,248,Counter,UPI,Completed
-ORD1936,2026-06-18,12:13,Rahul Mehta,Croissant; Blueberry Muffin,2,208,Counter,UPI,Delivered
-ORD1937,2026-06-18,12:16,Walk-in,Cold Coffee; Masala Chai,2,248,Swiggy,UPI,Completed
-ORD1938,2026-06-18,17:05,Walk-in,Grilled Cheese Sandwich,1,159,Counter,UPI,Completed
-ORD1939,2026-06-18,09:43,Parth Gandhi,Masala Chai; Cappuccino,2,228,Swiggy,UPI,Completed
-ORD1940,2026-06-18,08:30,Devansh Rao,Iced Latte; Cheesecake Slice,2,338,QR Order,UPI,Completed
-ORD1941,2026-06-18,11:54,Karan Joshi,Espresso; Veg Burger; Margherita Pizza,3,517,Counter,UPI,Cancelled
-ORD1942,2026-06-18,19:40,Priya Shah,Iced Latte; Lemon Iced Tea,2,308,Counter,Cash,Delivered
-ORD1943,2026-06-18,11:05,Devansh Rao,Cheesecake Slice,1,159,Zomato,Card,Completed
-ORD1944,2026-06-18,19:58,Walk-in,Cold Coffee,1,169,QR Order,Card,Delivered
-ORD1945,2026-06-18,20:52,Ananya Iyer,Pasta Alfredo,1,229,Swiggy,UPI,Delivered
-ORD1946,2026-06-18,09:07,Walk-in,Lemon Iced Tea,1,129,Counter,Card,Completed
-ORD1947,2026-06-18,15:40,Gauri Dixit,Iced Latte,1,179,Counter,Cash,Completed
-ORD1948,2026-06-18,14:19,Sneha Desai,Chocolate Brownie; Croissant,2,238,QR Order,UPI,Completed
-ORD1949,2026-06-18,19:07,Riya Kapoor,Masala Chai; Cappuccino; Cold Coffee,3,397,Swiggy,Card,Delivered
-ORD1950,2026-06-18,12:31,Vivek Sharma,Cold Coffee; Cold Coffee,2,338,Counter,Card,Delivered
-ORD1951,2026-06-18,17:02,Ishita Nair,Cold Coffee; Fresh Lime Soda,2,268,Swiggy,UPI,Delivered
-ORD1952,2026-06-18,20:21,Walk-in,Fresh Lime Soda,1,99,QR Order,UPI,Delivered
-ORD1953,2026-06-18,17:43,Walk-in,Cold Coffee,1,169,QR Order,UPI,Completed
-ORD1954,2026-06-18,12:07,Walk-in,Blueberry Muffin; Iced Latte,2,278,Counter,UPI,Delivered
-ORD1955,2026-06-18,13:30,Harsh Modi,Espresso,1,119,Swiggy,UPI,Delivered
-ORD1956,2026-06-18,20:58,Aarav Patel,Cappuccino; Espresso,2,268,Counter,UPI,Delivered
-ORD1957,2026-06-18,12:23,Aarav Patel,Croissant; Fresh Lime Soda,2,208,Counter,UPI,Delivered
-ORD1958,2026-06-18,08:25,Ishita Nair,Iced Latte,1,179,Zomato,UPI,Completed
-ORD1959,2026-06-18,14:50,Walk-in,Cafe Latte; Espresso; Fresh Lime Soda,3,377,Counter,UPI,Completed
-ORD1960,2026-06-18,17:50,Riya Kapoor,Masala Chai; Cafe Latte,2,238,Counter,UPI,Delivered
-ORD1961,2026-06-18,17:30,Arjun Pillai,Cappuccino; Chocolate Brownie,2,278,Swiggy,Cash,Delivered
-ORD1962,2026-06-18,21:55,Aarav Patel,Grilled Cheese Sandwich,1,159,QR Order,UPI,Delivered
-ORD1963,2026-06-18,14:48,Manav Trivedi,Masala Chai; French Fries,2,198,Swiggy,UPI,Completed
-ORD1964,2026-06-18,13:50,Walk-in,Cappuccino; Veg Burger,2,298,Zomato,Cash,Completed
-ORD1965,2026-06-18,08:05,Tara Menon,Lemon Iced Tea,1,129,Counter,UPI,Delivered
-ORD1966,2026-06-18,21:20,Rahul Mehta,Iced Latte,1,179,Counter,UPI,Delivered
-ORD1967,2026-06-18,19:44,Walk-in,Cold Coffee,1,169,Swiggy,Card,Completed
-ORD1968,2026-06-19,14:36,Lavanya Rao,Masala Chai; Masala Chai,2,158,QR Order,Card,Delivered
-ORD1969,2026-06-19,11:51,Walk-in,Cold Coffee,1,169,QR Order,Card,Completed
-ORD1970,2026-06-19,14:38,Ananya Iyer,Fresh Lime Soda; Masala Chai,2,178,QR Order,Card,Delivered
-ORD1971,2026-06-19,16:38,Akash Pandey,Margherita Pizza; Cold Coffee; Iced Latte,3,597,Counter,Card,Completed
-ORD1972,2026-06-19,17:52,Devansh Rao,Cheesecake Slice; Cappuccino,2,308,Counter,UPI,Delivered
-ORD1973,2026-06-19,15:20,Nikhil Verma,Cheesecake Slice,1,159,Counter,UPI,Completed
-ORD1974,2026-06-19,10:43,Ananya Iyer,Cheesecake Slice; Cappuccino,2,308,Swiggy,UPI,Delivered
-ORD1975,2026-06-19,11:39,Rahul Mehta,Cold Coffee,1,169,Zomato,UPI,Completed
-ORD1976,2026-06-19,11:01,Gauri Dixit,Cafe Latte; Fresh Lime Soda,2,258,QR Order,UPI,Delivered
-ORD1977,2026-06-19,11:17,Lavanya Rao,Masala Chai; Lemon Iced Tea; Cafe Latte,3,367,Counter,UPI,Completed
-ORD1978,2026-06-19,12:45,Karan Joshi,Chocolate Brownie,1,129,Swiggy,Cash,Completed
-ORD1979,2026-06-19,11:20,Devansh Rao,French Fries; Cappuccino,2,268,Counter,Cash,Completed
-ORD1980,2026-06-19,20:13,Aditya Jain,Veg Sandwich; Cold Coffee,2,308,Counter,Card,Completed
-ORD1981,2026-06-19,17:51,Megha Soni,Chocolate Brownie; Cold Coffee,2,298,Counter,Cash,Completed
-ORD1982,2026-06-19,19:14,Simran Kaur,Lemon Iced Tea,1,129,Counter,Card,Completed
-ORD1983,2026-06-19,20:03,Walk-in,Espresso,1,119,QR Order,UPI,Delivered
-ORD1984,2026-06-19,10:09,Aarav Patel,Veg Burger,1,149,QR Order,Cash,Delivered
-ORD1985,2026-06-19,08:50,Aarav Patel,Cold Coffee,1,169,QR Order,UPI,Delivered
-ORD1986,2026-06-19,09:17,Walk-in,Espresso; Fresh Lime Soda; Croissant,3,327,QR Order,UPI,Completed
-ORD1987,2026-06-19,13:54,Priya Shah,Fresh Lime Soda; Cold Coffee,2,268,QR Order,UPI,Delivered
-ORD1988,2026-06-19,11:55,Rahul Mehta,Chocolate Brownie,1,129,Zomato,UPI,Delivered
-ORD1989,2026-06-19,17:08,Arjun Pillai,Iced Latte,1,179,Counter,Card,Completed
-ORD1990,2026-06-19,15:59,Diya Saxena,Iced Latte; Fresh Lime Soda,2,278,Swiggy,UPI,Delivered
-ORD1991,2026-06-19,16:24,Diya Saxena,Cappuccino,1,149,Swiggy,Card,Delivered
-ORD1992,2026-06-19,21:08,Rohan Das,French Fries,1,119,Counter,UPI,Delivered
-ORD1993,2026-06-19,11:56,Sneha Desai,Chocolate Brownie,1,129,QR Order,Cash,Completed
-ORD1994,2026-06-19,10:58,Rahul Mehta,Cafe Latte,1,159,Swiggy,Card,Completed
-ORD1995,2026-06-19,15:21,Walk-in,Cold Coffee,1,169,QR Order,Card,Completed
-ORD1996,2026-06-19,17:13,Walk-in,Cheesecake Slice,1,159,Counter,UPI,Delivered
-ORD1997,2026-06-19,17:37,Harsh Modi,Margherita Pizza,1,249,Counter,Cash,Delivered
-ORD1998,2026-06-19,13:42,Varun Malhotra,Cappuccino; French Fries,2,268,Counter,Cash,Completed
-ORD1999,2026-06-19,18:02,Farhan Sheikh,French Fries,1,119,Counter,UPI,Delivered
-ORD2000,2026-06-19,21:16,Walk-in,Fresh Lime Soda,1,99,QR Order,UPI,Delivered
-ORD2001,2026-06-19,18:31,Walk-in,Cappuccino,1,149,Counter,UPI,Completed
-ORD2002,2026-06-19,10:42,Rohan Das,Cheesecake Slice; Pasta Alfredo,2,388,Counter,UPI,Completed
-ORD2003,2026-06-19,19:32,Kabir Khanna,Margherita Pizza; French Fries,2,368,Counter,Cash,Delivered
-ORD2004,2026-06-19,18:57,Walk-in,Cappuccino; Veg Sandwich; Margherita Pizza,3,537,QR Order,UPI,Delivered
-ORD2005,2026-06-19,13:30,Kabir Khanna,French Fries,1,119,Counter,UPI,Delivered
-ORD2006,2026-06-19,14:19,Mohit Lal,Margherita Pizza,1,249,QR Order,Cash,Delivered
-ORD2007,2026-06-19,14:51,Walk-in,Croissant,1,109,QR Order,Card,Completed
-ORD2008,2026-06-19,20:59,Ananya Iyer,Pasta Alfredo; Cafe Latte,2,388,QR Order,UPI,Delivered
-ORD2009,2026-06-19,12:57,Yash Bhatt,Cappuccino; Espresso; Cafe Latte,3,427,Counter,Card,Cancelled
-ORD2010,2026-06-19,12:18,Priya Shah,Veg Sandwich; Margherita Pizza; Masala Chai,3,467,Zomato,UPI,Delivered
-ORD2011,2026-06-19,08:44,Lavanya Rao,Cappuccino,1,149,Counter,UPI,Completed
-ORD2012,2026-06-19,15:50,Rohan Das,Veg Burger; Margherita Pizza,2,398,QR Order,Card,Delivered
-ORD2013,2026-06-20,11:04,Yash Bhatt,Cappuccino,1,149,Counter,UPI,Completed
-ORD2014,2026-06-20,20:02,Ananya Iyer,Veg Burger; Iced Latte,2,328,Counter,UPI,Delivered
-ORD2015,2026-06-20,09:25,Simran Kaur,Cappuccino,1,149,QR Order,Card,Completed
-ORD2016,2026-06-20,17:16,Walk-in,Margherita Pizza,1,249,Swiggy,UPI,Completed
-ORD2017,2026-06-20,18:02,Rohan Das,Chocolate Brownie,1,129,QR Order,UPI,Delivered
-ORD2018,2026-06-20,18:43,Rohan Das,Cold Coffee; Cappuccino,2,318,Counter,UPI,Delivered
-ORD2019,2026-06-20,17:46,Farhan Sheikh,Chocolate Brownie,1,129,Zomato,UPI,Cancelled
-ORD2020,2026-06-20,20:58,Ishita Nair,Cold Coffee,1,169,Zomato,UPI,Delivered
-ORD2021,2026-06-20,20:00,Ananya Iyer,Masala Chai; Masala Chai,2,158,Zomato,UPI,Completed
-ORD2022,2026-06-20,10:55,Ishita Nair,Cappuccino,1,149,Counter,UPI,Delivered
-ORD2023,2026-06-20,12:35,Farhan Sheikh,Grilled Cheese Sandwich; Lemon Iced Tea,2,288,Counter,Card,Completed
-ORD2024,2026-06-20,11:59,Sneha Desai,Iced Latte,1,179,Counter,Card,Delivered
-ORD2025,2026-06-20,08:44,Karan Joshi,Iced Latte; Blueberry Muffin,2,278,Zomato,Card,Delivered
-ORD2026,2026-06-20,17:21,Aarav Patel,Pasta Alfredo; Cappuccino; Masala Chai,3,457,Counter,UPI,Completed
-ORD2027,2026-06-20,19:24,Ojas Tiwari,Lemon Iced Tea,1,129,QR Order,UPI,Completed
-ORD2028,2026-06-20,18:10,Arjun Pillai,Blueberry Muffin; Veg Sandwich,2,238,Zomato,UPI,Completed
-ORD2029,2026-06-20,11:49,Nikhil Verma,Blueberry Muffin,1,99,QR Order,Cash,Completed
-ORD2030,2026-06-20,16:24,Sneha Desai,Lemon Iced Tea; Veg Sandwich,2,268,Counter,Card,Completed
-ORD2031,2026-06-20,10:53,Pooja Gupta,Espresso,1,119,Counter,Card,Completed
-ORD2032,2026-06-20,13:35,Walk-in,Pasta Alfredo,1,229,Zomato,Card,Completed
-ORD2033,2026-06-20,14:03,Tanvi Bose,Cappuccino; Pasta Alfredo,2,378,Counter,Card,Delivered
-ORD2034,2026-06-20,10:23,Walk-in,Masala Chai,1,79,Counter,Cash,Delivered
-ORD2035,2026-06-20,08:38,Karan Joshi,Cappuccino,1,149,QR Order,UPI,Delivered
-ORD2036,2026-06-20,17:19,Riya Kapoor,French Fries; Cold Coffee; Cafe Latte,3,447,QR Order,UPI,Completed
-ORD2037,2026-06-20,12:19,Sara Ahmed,Cappuccino; Veg Burger; Blueberry Muffin,3,397,Swiggy,UPI,Completed
-ORD2038,2026-06-20,11:25,Arjun Pillai,Cafe Latte; Cafe Latte,2,318,Zomato,UPI,Completed
-ORD2039,2026-06-20,12:46,Sneha Desai,Espresso,1,119,Counter,UPI,Completed
-ORD2040,2026-06-20,21:03,Sneha Desai,Cappuccino; Fresh Lime Soda; Masala Chai,3,327,Swiggy,UPI,Completed
-ORD2041,2026-06-20,14:39,Aditya Jain,Fresh Lime Soda,1,99,QR Order,UPI,Delivered
-ORD2042,2026-06-20,10:52,Arjun Pillai,Lemon Iced Tea; Cheesecake Slice,2,288,Counter,UPI,Delivered
-ORD2043,2026-06-20,18:17,Sneha Desai,Cappuccino,1,149,Counter,UPI,Cancelled
-ORD2044,2026-06-20,09:20,Sneha Desai,Pasta Alfredo; Cappuccino,2,378,Swiggy,Cash,Delivered
-ORD2045,2026-06-20,10:31,Arjun Pillai,Masala Chai,1,79,Counter,Cash,Completed
-ORD2046,2026-06-20,18:07,Rahul Mehta,Espresso,1,119,Counter,UPI,Completed
-ORD2047,2026-06-20,14:14,Aarav Patel,Cappuccino,1,149,Swiggy,UPI,Completed
-ORD2048,2026-06-20,12:31,Arjun Pillai,Croissant; Masala Chai,2,188,Swiggy,UPI,Delivered
-ORD2049,2026-06-20,12:33,Walk-in,Grilled Cheese Sandwich; Cafe Latte,2,318,QR Order,Card,Delivered
-ORD2050,2026-06-20,21:36,Mohit Lal,Croissant,1,109,QR Order,UPI,Delivered
-ORD2051,2026-06-20,14:12,Walk-in,Cheesecake Slice; Cappuccino,2,308,QR Order,UPI,Completed
-ORD2052,2026-06-20,20:39,Varun Malhotra,Margherita Pizza,1,249,QR Order,UPI,Completed
-ORD2053,2026-06-20,12:36,Ananya Iyer,French Fries,1,119,QR Order,UPI,Delivered
-ORD2054,2026-06-20,11:13,Pooja Gupta,Iced Latte,1,179,QR Order,Card,Cancelled
-ORD2055,2026-06-20,13:59,Karan Joshi,Veg Sandwich,1,139,QR Order,UPI,Delivered
-ORD2056,2026-06-20,10:52,Karan Joshi,Fresh Lime Soda; Grilled Cheese Sandwich,2,258,QR Order,UPI,Completed
-ORD2057,2026-06-20,15:48,Rohan Das,Lemon Iced Tea,1,129,Swiggy,UPI,Delivered
-ORD2058,2026-06-20,09:11,Vivek Sharma,Cheesecake Slice; Fresh Lime Soda,2,258,QR Order,UPI,Completed
-ORD2059,2026-06-20,18:40,Aarav Patel,Cappuccino,1,149,QR Order,UPI,Delivered
-ORD2060,2026-06-20,13:34,Devansh Rao,Cappuccino,1,149,QR Order,Card,Completed
-ORD2061,2026-06-20,08:52,Varun Malhotra,French Fries,1,119,QR Order,Card,Delivered
-ORD2062,2026-06-21,18:34,Sara Ahmed,Fresh Lime Soda; Chocolate Brownie; Veg Sandwich,3,367,Counter,UPI,Completed
-ORD2063,2026-06-21,10:25,Ishita Nair,Veg Sandwich,1,139,Counter,Cash,Completed
-ORD2064,2026-06-21,08:37,Ojas Tiwari,Chocolate Brownie; Cafe Latte; Veg Burger,3,437,Counter,Card,Completed
-ORD2065,2026-06-21,08:35,Mohit Lal,Fresh Lime Soda,1,99,Counter,Card,Delivered
-ORD2066,2026-06-21,11:51,Manav Trivedi,Cold Coffee,1,169,QR Order,UPI,Delivered
-ORD2067,2026-06-21,20:43,Manav Trivedi,Veg Sandwich,1,139,Counter,UPI,Delivered
-ORD2068,2026-06-21,19:48,Rahul Mehta,French Fries; French Fries,2,238,Counter,UPI,Completed
-ORD2069,2026-06-21,10:46,Manav Trivedi,Masala Chai,1,79,QR Order,Card,Completed
-ORD2070,2026-06-21,09:33,Priya Shah,Lemon Iced Tea; Cold Coffee,2,298,QR Order,UPI,Delivered
-ORD2071,2026-06-21,15:38,Karan Joshi,French Fries,1,119,Counter,UPI,Delivered
-ORD2072,2026-06-21,20:36,Megha Soni,Grilled Cheese Sandwich,1,159,Counter,UPI,Delivered
-ORD2073,2026-06-21,10:46,Arjun Pillai,Cheesecake Slice,1,159,Counter,UPI,Delivered
-ORD2074,2026-06-21,17:49,Diya Saxena,Masala Chai,1,79,Counter,UPI,Delivered
-ORD2075,2026-06-21,08:07,Walk-in,Cappuccino,1,149,Zomato,UPI,Delivered
-ORD2076,2026-06-21,15:24,Farhan Sheikh,Masala Chai; Pasta Alfredo,2,308,Counter,UPI,Delivered
-ORD2077,2026-06-21,11:36,Priya Shah,Masala Chai,1,79,Counter,Card,Completed
-ORD2078,2026-06-21,14:13,Kavya Reddy,Espresso,1,119,Counter,Card,Delivered
-ORD2079,2026-06-21,13:48,Walk-in,Lemon Iced Tea,1,129,Counter,UPI,Delivered
-ORD2080,2026-06-21,14:01,Walk-in,French Fries,1,119,Counter,UPI,Completed
-ORD2081,2026-06-21,13:15,Kavya Reddy,Masala Chai,1,79,Zomato,Card,Delivered
-ORD2082,2026-06-21,17:43,Tara Menon,Masala Chai; French Fries,2,198,Counter,UPI,Delivered
-ORD2083,2026-06-21,16:37,Walk-in,Masala Chai,1,79,Counter,Card,Delivered
-ORD2084,2026-06-21,12:38,Sneha Desai,Margherita Pizza; Cafe Latte,2,408,QR Order,UPI,Completed
-ORD2085,2026-06-21,17:04,Nikhil Verma,Cafe Latte,1,159,Counter,UPI,Completed
-ORD2086,2026-06-21,11:13,Kabir Khanna,Croissant,1,109,QR Order,UPI,Cancelled
-ORD2087,2026-06-21,09:24,Walk-in,Cafe Latte,1,159,Counter,Cash,Completed
-ORD2088,2026-06-21,11:13,Diya Saxena,Cold Coffee,1,169,Swiggy,Card,Cancelled
-ORD2089,2026-06-21,08:18,Simran Kaur,Cappuccino,1,149,QR Order,UPI,Delivered
-ORD2090,2026-06-21,15:38,Diya Saxena,Cappuccino,1,149,Zomato,UPI,Delivered
-ORD2091,2026-06-21,08:34,Sneha Desai,Cold Coffee,1,169,Swiggy,Card,Delivered
-ORD2092,2026-06-21,12:06,Ananya Iyer,French Fries; Cold Coffee,2,288,Counter,Card,Delivered
-ORD2093,2026-06-21,12:09,Rahul Mehta,Croissant; Chocolate Brownie; Cappuccino,3,387,Counter,Cash,Completed
-ORD2094,2026-06-21,20:35,Sneha Desai,Espresso,1,119,QR Order,Cash,Delivered
-ORD2095,2026-06-21,09:02,Diya Saxena,Lemon Iced Tea; French Fries,2,248,Counter,UPI,Completed
-ORD2096,2026-06-21,09:14,Rahul Mehta,Cheesecake Slice; French Fries,2,278,Counter,Card,Delivered
-ORD2097,2026-06-21,21:45,Riya Kapoor,Grilled Cheese Sandwich,1,159,Counter,UPI,Delivered
-ORD2098,2026-06-21,15:41,Aarav Patel,Veg Burger; Iced Latte; Masala Chai,3,407,Zomato,UPI,Completed
-ORD2099,2026-06-21,18:36,Harsh Modi,Lemon Iced Tea,1,129,Counter,Card,Delivered
-ORD2100,2026-06-21,18:49,Karan Joshi,Margherita Pizza; Pasta Alfredo,2,478,QR Order,UPI,Completed
-ORD2101,2026-06-21,15:40,Walk-in,Fresh Lime Soda,1,99,Counter,Cash,Completed
-ORD2102,2026-06-21,17:42,Mohit Lal,Espresso; Masala Chai,2,198,Zomato,Card,Completed
-ORD2103,2026-06-21,19:56,Kabir Khanna,Chocolate Brownie,1,129,Counter,UPI,Completed
-ORD2104,2026-06-21,21:09,Walk-in,Fresh Lime Soda; Iced Latte; Cappuccino,3,427,Swiggy,Card,Completed
-ORD2105,2026-06-21,11:53,Devansh Rao,Cold Coffee; Grilled Cheese Sandwich,2,328,Counter,UPI,Completed
-ORD2106,2026-06-21,10:15,Gauri Dixit,Cheesecake Slice; French Fries,2,278,Zomato,UPI,Delivered
-ORD2107,2026-06-21,12:54,Farhan Sheikh,Cappuccino; Cappuccino,2,298,Zomato,Cash,Completed
-ORD2108,2026-06-22,08:52,Pooja Gupta,Cheesecake Slice,1,159,QR Order,UPI,Delivered
-ORD2109,2026-06-22,08:26,Priya Shah,Cappuccino,1,149,QR Order,UPI,Completed
-ORD2110,2026-06-22,19:40,Walk-in,Chocolate Brownie,1,129,Counter,Card,Completed
-ORD2111,2026-06-22,11:42,Ishita Nair,Veg Sandwich,1,139,QR Order,UPI,Delivered
-ORD2112,2026-06-22,18:44,Rahul Mehta,Cafe Latte; Chocolate Brownie,2,288,Zomato,UPI,Completed
-ORD2113,2026-06-22,09:14,Farhan Sheikh,Croissant,1,109,Counter,UPI,Completed
-ORD2114,2026-06-22,12:59,Walk-in,Veg Burger,1,149,Counter,Cash,Delivered
-ORD2115,2026-06-22,11:20,Aarav Patel,Cappuccino; Espresso,2,268,QR Order,Cash,Delivered
-ORD2116,2026-06-22,14:46,Parth Gandhi,Cold Coffee; Masala Chai; Iced Latte,3,427,QR Order,UPI,Completed
-ORD2117,2026-06-22,16:03,Pooja Gupta,Iced Latte,1,179,QR Order,Cash,Delivered
-ORD2118,2026-06-22,18:00,Karan Joshi,Iced Latte; Fresh Lime Soda,2,278,QR Order,UPI,Completed
-ORD2119,2026-06-22,13:21,Diya Saxena,Veg Sandwich; Margherita Pizza; Cafe Latte,3,547,Counter,UPI,Delivered
-ORD2120,2026-06-22,09:34,Lavanya Rao,French Fries,1,119,Counter,Card,Completed
-ORD2121,2026-06-22,11:30,Rohan Das,French Fries,1,119,Counter,UPI,Completed
-ORD2122,2026-06-22,08:34,Diya Saxena,Iced Latte,1,179,QR Order,UPI,Completed
-ORD2123,2026-06-22,11:34,Tara Menon,Grilled Cheese Sandwich,1,159,Swiggy,UPI,Delivered
-ORD2124,2026-06-22,09:29,Aditya Jain,French Fries; Lemon Iced Tea,2,248,QR Order,UPI,Completed
-ORD2125,2026-06-22,18:57,Walk-in,Fresh Lime Soda; Veg Burger,2,248,Counter,UPI,Delivered
-ORD2126,2026-06-22,18:56,Rahul Mehta,Veg Burger; Masala Chai; Pasta Alfredo,3,457,Zomato,Card,Delivered
-ORD2127,2026-06-22,15:59,Tanvi Bose,Cold Coffee; Iced Latte,2,348,QR Order,UPI,Delivered
-ORD2128,2026-06-22,21:17,Walk-in,Iced Latte,1,179,Swiggy,UPI,Delivered
-ORD2129,2026-06-22,15:45,Priya Shah,Grilled Cheese Sandwich; Iced Latte,2,338,QR Order,UPI,Completed
-ORD2130,2026-06-23,20:11,Akash Pandey,Fresh Lime Soda,1,99,Counter,Card,Delivered
-ORD2131,2026-06-23,20:39,Gauri Dixit,Masala Chai,1,79,Counter,Card,Delivered
-ORD2132,2026-06-23,14:11,Pooja Gupta,Cafe Latte,1,159,Zomato,Cash,Delivered
-ORD2133,2026-06-23,13:36,Aditya Jain,Cold Coffee,1,169,QR Order,Card,Completed
-ORD2134,2026-06-23,16:05,Ritu Singh,Masala Chai; Croissant,2,188,Counter,Card,Completed
-ORD2135,2026-06-23,15:36,Walk-in,French Fries,1,119,QR Order,Cash,Completed
-ORD2136,2026-06-23,18:06,Walk-in,Veg Burger,1,149,Zomato,Card,Delivered
-ORD2137,2026-06-23,16:48,Simran Kaur,Grilled Cheese Sandwich,1,159,Swiggy,UPI,Delivered
-ORD2138,2026-06-23,08:30,Arjun Pillai,Masala Chai,1,79,QR Order,UPI,Completed
-ORD2139,2026-06-23,10:29,Ananya Iyer,Masala Chai; Cappuccino,2,228,Counter,Card,Completed
-ORD2140,2026-06-23,21:15,Ritu Singh,French Fries,1,119,QR Order,Cash,Delivered
-ORD2141,2026-06-23,17:49,Rohan Das,Croissant,1,109,Counter,UPI,Delivered
-ORD2142,2026-06-23,13:17,Lavanya Rao,Cheesecake Slice,1,159,Counter,UPI,Completed
-ORD2143,2026-06-23,15:55,Ananya Iyer,Chocolate Brownie,1,129,QR Order,UPI,Completed
-ORD2144,2026-06-23,10:40,Harsh Modi,Masala Chai,1,79,Counter,Card,Completed
-ORD2145,2026-06-23,09:05,Simran Kaur,Cold Coffee; Veg Burger,2,318,QR Order,Card,Completed
-ORD2146,2026-06-23,09:14,Rohan Das,Blueberry Muffin,1,99,Zomato,Card,Delivered
-ORD2147,2026-06-23,19:13,Walk-in,Masala Chai,1,79,Counter,Card,Completed
-ORD2148,2026-06-23,19:54,Rahul Mehta,Grilled Cheese Sandwich,1,159,Zomato,UPI,Delivered
-ORD2149,2026-06-23,20:50,Aditya Jain,Cheesecake Slice; Lemon Iced Tea,2,288,Swiggy,Card,Delivered
-ORD2150,2026-06-23,14:04,Walk-in,Cafe Latte; Cappuccino,2,308,Zomato,UPI,Delivered
-ORD2151,2026-06-23,21:56,Akash Pandey,Margherita Pizza; Cafe Latte,2,408,QR Order,Card,Delivered
-ORD2152,2026-06-23,14:13,Karan Joshi,Cappuccino; French Fries,2,268,Counter,UPI,Completed
-ORD2153,2026-06-24,09:20,Ishita Nair,Veg Burger,1,149,Counter,Card,Completed
-ORD2154,2026-06-24,14:05,Walk-in,Masala Chai; Cafe Latte,2,238,Zomato,UPI,Delivered
-ORD2155,2026-06-24,08:41,Ojas Tiwari,Grilled Cheese Sandwich,1,159,Swiggy,UPI,Delivered
-ORD2156,2026-06-24,15:11,Sneha Desai,French Fries,1,119,QR Order,UPI,Completed
-ORD2157,2026-06-24,12:35,Walk-in,Masala Chai; Iced Latte; Espresso,3,377,Zomato,UPI,Delivered
-ORD2158,2026-06-24,21:17,Aarav Patel,Cold Coffee,1,169,Swiggy,UPI,Completed
-ORD2159,2026-06-24,14:36,Harsh Modi,Chocolate Brownie; Masala Chai,2,208,QR Order,UPI,Completed
-ORD2160,2026-06-24,18:11,Riya Kapoor,Iced Latte,1,179,Swiggy,UPI,Completed
-ORD2161,2026-06-24,12:45,Ananya Iyer,Chocolate Brownie,1,129,QR Order,Card,Delivered
-ORD2162,2026-06-24,17:50,Sneha Desai,Cappuccino,1,149,Counter,UPI,Completed
-ORD2163,2026-06-24,15:13,Sneha Desai,Chocolate Brownie,1,129,Counter,Card,Delivered
-ORD2164,2026-06-24,16:19,Gauri Dixit,Cold Coffee; Masala Chai,2,248,QR Order,Cash,Delivered
-ORD2165,2026-06-24,21:01,Parth Gandhi,Fresh Lime Soda; Cafe Latte,2,258,QR Order,UPI,Delivered
-ORD2166,2026-06-24,10:41,Tara Menon,French Fries; Veg Sandwich,2,258,QR Order,Card,Delivered
-ORD2167,2026-06-24,15:07,Pooja Gupta,Masala Chai; Cappuccino,2,228,QR Order,Cash,Delivered
-ORD2168,2026-06-24,17:08,Aarav Patel,Cafe Latte; Espresso,2,278,Counter,UPI,Completed
-ORD2169,2026-06-24,21:02,Manav Trivedi,Cold Coffee,1,169,Swiggy,UPI,Delivered
-ORD2170,2026-06-24,15:34,Ojas Tiwari,Masala Chai; Veg Sandwich; French Fries,3,337,Counter,Card,Delivered
-ORD2171,2026-06-24,10:25,Karan Joshi,Cafe Latte; French Fries,2,278,Counter,UPI,Delivered
-ORD2172,2026-06-24,17:12,Ananya Iyer,Fresh Lime Soda; Cold Coffee,2,268,Counter,UPI,Delivered
-ORD2173,2026-06-24,18:37,Simran Kaur,Pasta Alfredo; Cappuccino,2,378,Swiggy,UPI,Completed
-ORD2174,2026-06-24,10:24,Priya Shah,Iced Latte,1,179,Counter,UPI,Delivered
-ORD2175,2026-06-24,18:59,Walk-in,Cappuccino,1,149,Counter,Cash,Completed
-ORD2176,2026-06-24,08:27,Aarav Patel,Fresh Lime Soda,1,99,QR Order,UPI,Delivered
-ORD2177,2026-06-24,16:55,Sneha Desai,Chocolate Brownie,1,129,QR Order,UPI,Delivered
-ORD2178,2026-06-24,08:23,Walk-in,Cappuccino; Veg Burger,2,298,Swiggy,Cash,Completed
-ORD2179,2026-06-24,11:27,Harsh Modi,Chocolate Brownie,1,129,QR Order,UPI,Delivered
-ORD2180,2026-06-24,17:02,Walk-in,Pasta Alfredo,1,229,Zomato,UPI,Delivered
-ORD2181,2026-06-24,20:17,Tanvi Bose,Cappuccino,1,149,QR Order,UPI,Completed
-ORD2182,2026-06-24,17:37,Neha Chauhan,Fresh Lime Soda,1,99,Counter,UPI,Delivered
-ORD2183,2026-06-24,12:14,Rohan Das,Lemon Iced Tea; Masala Chai,2,208,Counter,UPI,Delivered
-ORD2184,2026-06-24,15:45,Walk-in,Cold Coffee; Croissant,2,278,QR Order,UPI,Completed
-ORD2185,2026-06-24,15:31,Devansh Rao,Fresh Lime Soda,1,99,Counter,UPI,Delivered
-ORD2186,2026-06-25,20:53,Rahul Mehta,Cheesecake Slice,1,159,Swiggy,Cash,Completed
-ORD2187,2026-06-25,17:17,Yash Bhatt,Veg Sandwich,1,139,Swiggy,Cash,Delivered
-ORD2188,2026-06-25,15:02,Kavya Reddy,Veg Sandwich; Cappuccino; Cappuccino,3,437,Counter,Card,Delivered
-ORD2189,2026-06-25,19:42,Parth Gandhi,French Fries,1,119,Counter,UPI,Completed
-ORD2190,2026-06-25,20:33,Aarav Patel,Veg Sandwich,1,139,Swiggy,Card,Delivered
-ORD2191,2026-06-25,17:58,Priya Shah,Veg Sandwich,1,139,Swiggy,UPI,Completed
-ORD2192,2026-06-25,09:11,Ishita Nair,Cappuccino,1,149,QR Order,Card,Delivered
-ORD2193,2026-06-25,17:52,Kabir Khanna,Veg Sandwich; Veg Sandwich,2,278,Counter,UPI,Completed
-ORD2194,2026-06-25,11:26,Walk-in,Croissant; Cafe Latte,2,268,Counter,UPI,Delivered
-ORD2195,2026-06-25,19:44,Rahul Mehta,Grilled Cheese Sandwich; Masala Chai,2,238,QR Order,UPI,Completed
-ORD2196,2026-06-25,20:46,Lavanya Rao,Cheesecake Slice,1,159,QR Order,UPI,Completed
-ORD2197,2026-06-25,17:08,Parth Gandhi,Blueberry Muffin; Lemon Iced Tea; Margherita Pizza,3,477,QR Order,UPI,Completed
-ORD2198,2026-06-25,17:11,Ananya Iyer,French Fries,1,119,Counter,UPI,Delivered
-ORD2199,2026-06-25,20:05,Rahul Mehta,Cold Coffee,1,169,Counter,UPI,Completed
-ORD2200,2026-06-25,11:48,Manav Trivedi,Lemon Iced Tea; Lemon Iced Tea; Margherita Pizza,3,507,Swiggy,UPI,Delivered
-ORD2201,2026-06-25,10:57,Walk-in,Pasta Alfredo; Grilled Cheese Sandwich,2,388,QR Order,UPI,Delivered
-ORD2202,2026-06-25,13:43,Varun Malhotra,Iced Latte,1,179,QR Order,Card,Delivered
-ORD2203,2026-06-25,17:02,Megha Soni,Cold Coffee,1,169,Zomato,Cash,Delivered
-ORD2204,2026-06-25,16:32,Kavya Reddy,Cold Coffee; Fresh Lime Soda,2,268,Counter,UPI,Completed
-ORD2205,2026-06-25,10:34,Rahul Mehta,Cold Coffee,1,169,Zomato,UPI,Delivered
-ORD2206,2026-06-25,08:25,Sneha Desai,Iced Latte,1,179,Swiggy,UPI,Completed
-ORD2207,2026-06-25,19:13,Walk-in,Iced Latte; Fresh Lime Soda,2,278,QR Order,UPI,Delivered
-ORD2208,2026-06-25,17:13,Megha Soni,French Fries,1,119,Swiggy,Card,Completed
-ORD2209,2026-06-25,08:01,Vivek Sharma,Cheesecake Slice,1,159,QR Order,Card,Delivered
-ORD2210,2026-06-25,08:02,Walk-in,Cold Coffee,1,169,QR Order,UPI,Delivered
-ORD2211,2026-06-25,11:44,Arjun Pillai,Fresh Lime Soda,1,99,Counter,UPI,Delivered
-ORD2212,2026-06-25,17:05,Sara Ahmed,Fresh Lime Soda; Croissant,2,208,Swiggy,Card,Completed
-ORD2213,2026-06-25,21:34,Riya Kapoor,Pasta Alfredo; Veg Sandwich,2,368,Zomato,UPI,Completed
-ORD2214,2026-06-25,14:21,Walk-in,Veg Sandwich; Veg Burger,2,288,Zomato,Card,Delivered
-ORD2215,2026-06-25,20:15,Walk-in,Cappuccino; Cafe Latte,2,308,Counter,Cash,Delivered
-ORD2216,2026-06-25,13:48,Walk-in,Cafe Latte,1,159,QR Order,UPI,Delivered
-ORD2217,2026-06-25,19:38,Ritu Singh,Masala Chai,1,79,Counter,Cash,Cancelled
-ORD2218,2026-06-25,18:18,Pooja Gupta,Grilled Cheese Sandwich,1,159,Swiggy,Cash,Completed
-ORD2219,2026-06-25,14:10,Arjun Pillai,French Fries; Fresh Lime Soda,2,218,Counter,UPI,Delivered
-ORD2220,2026-06-25,15:14,Farhan Sheikh,Chocolate Brownie,1,129,QR Order,UPI,Delivered
-ORD2221,2026-06-25,15:11,Lavanya Rao,Cafe Latte,1,159,QR Order,Cash,Completed
+order_date,order_id,item_name,quantity,amount,order_type,customer_name
+2026-06-12,ORD1001,French Fries,2,240,dine_in,Priya
+2026-06-12,ORD1001,Grilled Cheese Sandwich,3,510,dine_in,Priya
+2026-06-12,ORD1002,Veg Sandwich,3,420,dine_in,Aman
+2026-06-12,ORD1002,Masala Chai,2,160,dine_in,Aman
+2026-06-12,ORD1003,Cafe Latte,1,160,dine_in,
+2026-06-12,ORD1003,Cafe Latte,1,160,dine_in,
+2026-06-12,ORD1004,Cheesecake,2,440,takeaway,Walk-in
+2026-06-12,ORD1004,Espresso,3,360,takeaway,Walk-in
+2026-06-12,ORD1004,Cappuccino,3,450,takeaway,Walk-in
+2026-06-12,ORD1005,Chocolate Brownie,1,150,delivery,Karan
+2026-06-12,ORD1005,Grilled Cheese Sandwich,2,340,delivery,Karan
+2026-06-12,ORD1006,Cappuccino,2,300,delivery,Priya
+2026-06-12,ORD1006,Pasta Alfredo,2,640,delivery,Priya
+2026-06-12,ORD1006,Veg Sandwich,1,140,delivery,Priya
+2026-06-12,ORD1007,Espresso,3,360,delivery,Karan
+2026-06-12,ORD1008,Veg Sandwich,3,420,takeaway,Riya
+2026-06-12,ORD1009,Pasta Alfredo,1,320,takeaway,Walk-in
+2026-06-12,ORD1009,Grilled Cheese Sandwich,3,510,takeaway,Walk-in
+2026-06-12,ORD1010,Chocolate Brownie,3,450,delivery,Karan
+2026-06-12,ORD1010,Cappuccino,3,450,delivery,Karan
+2026-06-12,ORD1010,Chocolate Brownie,3,450,delivery,Karan
+2026-06-12,ORD1011,Masala Chai,3,240,takeaway,Walk-in
+2026-06-12,ORD1012,Cappuccino,1,150,takeaway,Aman
+2026-06-12,ORD1012,Espresso,3,360,takeaway,Aman
+2026-06-12,ORD1013,Espresso,3,360,delivery,Priya
+2026-06-12,ORD1014,Cheesecake,3,660,delivery,Walk-in
+2026-06-12,ORD1015,French Fries,2,240,dine_in,Priya
+2026-06-12,ORD1015,Espresso,2,240,dine_in,Priya
+2026-06-13,ORD1016,Pasta Alfredo,1,320,delivery,Aman
+2026-06-13,ORD1016,Cappuccino,1,150,delivery,Aman
+2026-06-13,ORD1016,Espresso,3,360,delivery,Aman
+2026-06-13,ORD1017,Masala Chai,2,160,dine_in,
+2026-06-13,ORD1018,Pasta Alfredo,2,640,delivery,Priya
+2026-06-13,ORD1018,Grilled Cheese Sandwich,2,340,delivery,Priya
+2026-06-13,ORD1019,Veg Sandwich,2,280,dine_in,Karan
+2026-06-13,ORD1020,Chocolate Brownie,3,450,dine_in,Aman
+2026-06-13,ORD1020,French Fries,3,360,dine_in,Aman
+2026-06-13,ORD1020,Chocolate Brownie,2,300,dine_in,Aman
+2026-06-13,ORD1021,Pasta Alfredo,1,320,dine_in,Riya
+2026-06-13,ORD1021,Cappuccino,1,150,dine_in,Riya
+2026-06-13,ORD1022,Masala Chai,2,160,takeaway,Riya
+2026-06-13,ORD1023,French Fries,3,360,takeaway,Walk-in
+2026-06-13,ORD1024,Grilled Cheese Sandwich,3,510,takeaway,Riya
+2026-06-13,ORD1025,Margherita Pizza,3,840,delivery,Riya
+2026-06-13,ORD1025,Veg Sandwich,1,140,delivery,Riya
+2026-06-13,ORD1025,Grilled Cheese Sandwich,3,510,delivery,Riya
+2026-06-13,ORD1026,French Fries,1,120,dine_in,Priya
+2026-06-13,ORD1027,Pasta Alfredo,2,640,takeaway,Karan
+2026-06-13,ORD1027,Cheesecake,3,660,takeaway,Karan
+2026-06-14,ORD1028,Cappuccino,2,300,takeaway,Walk-in
+2026-06-14,ORD1028,Espresso,3,360,takeaway,Walk-in
+2026-06-14,ORD1029,Cafe Latte,2,320,takeaway,
+2026-06-14,ORD1029,Cafe Latte,1,160,takeaway,
+2026-06-14,ORD1030,Margherita Pizza,1,280,takeaway,Karan
+2026-06-14,ORD1030,Grilled Cheese Sandwich,2,340,takeaway,Karan
+2026-06-14,ORD1031,Veg Sandwich,1,140,delivery,Aman
+2026-06-14,ORD1032,Cafe Latte,3,480,dine_in,Karan
+2026-06-14,ORD1032,Margherita Pizza,1,280,dine_in,Karan
+2026-06-14,ORD1032,Veg Sandwich,2,280,dine_in,Karan
+2026-06-14,ORD1033,Cold Coffee,1,180,delivery,
+2026-06-14,ORD1034,Espresso,3,360,dine_in,Aman
+2026-06-14,ORD1035,Espresso,3,360,dine_in,
+2026-06-14,ORD1036,Pasta Alfredo,2,640,takeaway,Priya
+2026-06-14,ORD1036,Chocolate Brownie,3,450,takeaway,Priya
+2026-06-14,ORD1036,Chocolate Brownie,3,450,takeaway,Priya
+2026-06-14,ORD1037,Veg Sandwich,1,140,delivery,Aman
+2026-06-14,ORD1037,French Fries,1,120,delivery,Aman
+2026-06-14,ORD1037,French Fries,2,240,delivery,Aman
+2026-06-14,ORD1038,Pasta Alfredo,1,320,delivery,Aman
+2026-06-14,ORD1038,Veg Sandwich,3,420,delivery,Aman
+2026-06-14,ORD1039,French Fries,1,120,dine_in,Aman
+2026-06-14,ORD1039,Cappuccino,2,300,dine_in,Aman
+2026-06-14,ORD1040,Cafe Latte,3,480,takeaway,Walk-in
+2026-06-14,ORD1040,Pasta Alfredo,3,960,takeaway,Walk-in
+2026-06-14,ORD1040,Grilled Cheese Sandwich,2,340,takeaway,Walk-in
+2026-06-14,ORD1041,Cappuccino,2,300,delivery,Karan
+2026-06-14,ORD1041,Pasta Alfredo,3,960,delivery,Karan
+2026-06-14,ORD1041,Cold Coffee,2,360,delivery,Karan
+2026-06-15,ORD1042,French Fries,1,120,delivery,Riya
+2026-06-15,ORD1043,Margherita Pizza,3,840,takeaway,
+2026-06-15,ORD1044,Cheesecake,2,440,dine_in,Walk-in
+2026-06-15,ORD1045,Pasta Alfredo,1,320,takeaway,Karan
+2026-06-15,ORD1045,Veg Sandwich,2,280,takeaway,Karan
+2026-06-15,ORD1045,Masala Chai,2,160,takeaway,Karan
+2026-06-15,ORD1046,Pasta Alfredo,1,320,takeaway,Aman
+2026-06-15,ORD1046,Chocolate Brownie,3,450,takeaway,Aman
+2026-06-15,ORD1046,Veg Sandwich,1,140,takeaway,Aman
+2026-06-15,ORD1047,Chocolate Brownie,2,300,takeaway,Walk-in
+2026-06-15,ORD1047,Masala Chai,2,160,takeaway,Walk-in
+2026-06-15,ORD1047,Cheesecake,3,660,takeaway,Walk-in
+2026-06-15,ORD1048,Cafe Latte,3,480,delivery,Riya
+2026-06-15,ORD1048,Chocolate Brownie,1,150,delivery,Riya
+2026-06-15,ORD1049,Cheesecake,3,660,takeaway,Aman
+2026-06-15,ORD1049,Grilled Cheese Sandwich,1,170,takeaway,Aman
+2026-06-15,ORD1049,Pasta Alfredo,3,960,takeaway,Aman
+2026-06-15,ORD1050,Grilled Cheese Sandwich,3,510,dine_in,Aman
+2026-06-15,ORD1050,Veg Sandwich,1,140,dine_in,Aman
+2026-06-15,ORD1050,Chocolate Brownie,3,450,dine_in,Aman
+2026-06-15,ORD1051,Cafe Latte,3,480,delivery,
+2026-06-15,ORD1051,Chocolate Brownie,2,300,delivery,
+2026-06-15,ORD1051,Margherita Pizza,2,560,delivery,
+2026-06-15,ORD1052,Espresso,1,120,dine_in,Aman
+2026-06-15,ORD1052,Veg Sandwich,2,280,dine_in,Aman
+2026-06-15,ORD1053,Espresso,1,120,dine_in,Riya
+2026-06-15,ORD1054,Margherita Pizza,3,840,takeaway,Walk-in
+2026-06-15,ORD1054,Margherita Pizza,1,280,takeaway,Walk-in
+2026-06-15,ORD1054,Chocolate Brownie,2,300,takeaway,Walk-in
+2026-06-15,ORD1055,Grilled Cheese Sandwich,1,170,delivery,Riya
+2026-06-15,ORD1055,Espresso,1,120,delivery,Riya
+2026-06-15,ORD1055,Cheesecake,3,660,delivery,Riya
+2026-06-15,ORD1056,Cappuccino,2,300,dine_in,
+2026-06-15,ORD1056,Veg Sandwich,3,420,dine_in,
+2026-06-16,ORD1057,Cheesecake,2,440,takeaway,Karan
+2026-06-16,ORD1057,Cold Coffee,3,540,takeaway,Karan
+2026-06-16,ORD1058,Cold Coffee,2,360,dine_in,Aman
+2026-06-16,ORD1058,Chocolate Brownie,3,450,dine_in,Aman
+2026-06-16,ORD1059,Grilled Cheese Sandwich,3,510,takeaway,Priya
+2026-06-16,ORD1059,Margherita Pizza,2,560,takeaway,Priya
+2026-06-16,ORD1060,Espresso,2,240,dine_in,Riya
+2026-06-16,ORD1060,Cappuccino,3,450,dine_in,Riya
+2026-06-16,ORD1060,French Fries,2,240,dine_in,Riya
+2026-06-16,ORD1061,Margherita Pizza,1,280,delivery,Walk-in
+2026-06-16,ORD1061,Masala Chai,1,80,delivery,Walk-in
+2026-06-16,ORD1061,Espresso,2,240,delivery,Walk-in
+2026-06-16,ORD1062,Grilled Cheese Sandwich,1,170,takeaway,Karan
+2026-06-16,ORD1063,Cappuccino,2,300,dine_in,Priya
+2026-06-16,ORD1063,Cappuccino,2,300,dine_in,Priya
+2026-06-16,ORD1064,Grilled Cheese Sandwich,1,170,delivery,Aman
+2026-06-16,ORD1065,Veg Sandwich,1,140,takeaway,Riya
+2026-06-16,ORD1066,Espresso,1,120,delivery,
+2026-06-16,ORD1066,Cappuccino,2,300,delivery,
+2026-06-16,ORD1067,Cheesecake,2,440,takeaway,
+2026-06-17,ORD1068,Cappuccino,2,300,delivery,Walk-in
+2026-06-17,ORD1069,Cheesecake,3,660,dine_in,Riya
+2026-06-17,ORD1069,Margherita Pizza,2,560,dine_in,Riya
+2026-06-17,ORD1069,Cafe Latte,2,320,dine_in,Riya
+2026-06-17,ORD1070,Cappuccino,1,150,dine_in,Aman
+2026-06-17,ORD1071,French Fries,1,120,takeaway,
+2026-06-17,ORD1071,Cafe Latte,2,320,takeaway,
+2026-06-17,ORD1071,Pasta Alfredo,3,960,takeaway,
+2026-06-17,ORD1072,Pasta Alfredo,1,320,dine_in,
+2026-06-17,ORD1072,Cheesecake,1,220,dine_in,
+2026-06-17,ORD1072,Masala Chai,2,160,dine_in,
+2026-06-17,ORD1073,Cold Coffee,3,540,dine_in,Karan
+2026-06-17,ORD1073,Grilled Cheese Sandwich,1,170,dine_in,Karan
+2026-06-17,ORD1074,Margherita Pizza,2,560,delivery,
+2026-06-17,ORD1075,Margherita Pizza,3,840,dine_in,Karan
+2026-06-17,ORD1075,Margherita Pizza,1,280,dine_in,Karan
+2026-06-17,ORD1075,Grilled Cheese Sandwich,2,340,dine_in,Karan
+2026-06-17,ORD1076,Veg Sandwich,2,280,dine_in,
+2026-06-17,ORD1076,Cheesecake,1,220,dine_in,
+2026-06-17,ORD1077,Cold Coffee,3,540,takeaway,Walk-in
+2026-06-17,ORD1077,Chocolate Brownie,3,450,takeaway,Walk-in
+2026-06-17,ORD1078,Veg Sandwich,1,140,dine_in,Karan
+2026-06-17,ORD1078,Cappuccino,2,300,dine_in,Karan
+2026-06-17,ORD1078,Margherita Pizza,2,560,dine_in,Karan
+2026-06-17,ORD1079,French Fries,3,360,delivery,Riya
+2026-06-17,ORD1079,French Fries,3,360,delivery,Riya
+2026-06-17,ORD1079,Espresso,1,120,delivery,Riya
+2026-06-17,ORD1080,Cappuccino,2,300,dine_in,
+2026-06-17,ORD1080,Cold Coffee,1,180,dine_in,
+2026-06-17,ORD1081,Masala Chai,3,240,dine_in,Walk-in
+2026-06-17,ORD1081,Grilled Cheese Sandwich,3,510,dine_in,Walk-in
+2026-06-17,ORD1082,Chocolate Brownie,1,150,takeaway,Aman
+2026-06-18,ORD1083,Veg Sandwich,2,280,takeaway,Walk-in
+2026-06-18,ORD1083,Cafe Latte,2,320,takeaway,Walk-in
+2026-06-18,ORD1083,Grilled Cheese Sandwich,2,340,takeaway,Walk-in
+2026-06-18,ORD1084,Veg Sandwich,1,140,delivery,Priya
+2026-06-18,ORD1084,French Fries,3,360,delivery,Priya
+2026-06-18,ORD1085,Masala Chai,1,80,takeaway,Aman
+2026-06-18,ORD1085,Cheesecake,2,440,takeaway,Aman
+2026-06-18,ORD1085,Cafe Latte,2,320,takeaway,Aman
+2026-06-18,ORD1086,Masala Chai,2,160,delivery,Riya
+2026-06-18,ORD1086,Cafe Latte,1,160,delivery,Riya
+2026-06-18,ORD1086,Veg Sandwich,3,420,delivery,Riya
+2026-06-18,ORD1087,Pasta Alfredo,3,960,takeaway,Aman
+2026-06-18,ORD1087,Grilled Cheese Sandwich,1,170,takeaway,Aman
+2026-06-18,ORD1088,French Fries,1,120,delivery,Priya
+2026-06-18,ORD1088,Cheesecake,2,440,delivery,Priya
+2026-06-18,ORD1089,Chocolate Brownie,1,150,delivery,Priya
+2026-06-18,ORD1089,Cafe Latte,3,480,delivery,Priya
+2026-06-18,ORD1090,Margherita Pizza,3,840,delivery,Priya
+2026-06-18,ORD1090,Chocolate Brownie,1,150,delivery,Priya
+2026-06-18,ORD1091,Chocolate Brownie,2,300,dine_in,Riya
+2026-06-18,ORD1091,Cappuccino,1,150,dine_in,Riya
+2026-06-18,ORD1091,Cafe Latte,1,160,dine_in,Riya
+2026-06-18,ORD1092,Grilled Cheese Sandwich,3,510,delivery,Aman
+2026-06-18,ORD1092,Cappuccino,3,450,delivery,Aman
+2026-06-18,ORD1093,Veg Sandwich,2,280,dine_in,
+2026-06-18,ORD1093,French Fries,1,120,dine_in,
+2026-06-18,ORD1094,Veg Sandwich,2,280,delivery,Riya
+2026-06-18,ORD1094,Veg Sandwich,3,420,delivery,Riya
+2026-06-18,ORD1094,Masala Chai,1,80,delivery,Riya
+2026-06-19,ORD1095,French Fries,3,360,dine_in,
+2026-06-19,ORD1096,Masala Chai,2,160,takeaway,Karan
+2026-06-19,ORD1097,Pasta Alfredo,2,640,delivery,Priya
+2026-06-19,ORD1098,Cafe Latte,1,160,delivery,Priya
+2026-06-19,ORD1099,Cheesecake,2,440,dine_in,Priya
+2026-06-19,ORD1100,Chocolate Brownie,2,300,dine_in,
+2026-06-19,ORD1100,Cheesecake,1,220,dine_in,
+2026-06-19,ORD1101,Masala Chai,1,80,delivery,Karan
+2026-06-19,ORD1101,Cheesecake,3,660,delivery,Karan
+2026-06-19,ORD1102,Veg Sandwich,3,420,delivery,
+2026-06-19,ORD1103,Espresso,1,120,dine_in,Walk-in
+2026-06-20,ORD1104,Pasta Alfredo,2,640,dine_in,Aman
+2026-06-20,ORD1104,French Fries,3,360,dine_in,Aman
+2026-06-20,ORD1104,Espresso,3,360,dine_in,Aman
+2026-06-20,ORD1105,Grilled Cheese Sandwich,3,510,dine_in,Walk-in
+2026-06-20,ORD1105,Cheesecake,2,440,dine_in,Walk-in
+2026-06-20,ORD1106,Pasta Alfredo,1,320,delivery,Priya
+2026-06-20,ORD1106,Espresso,2,240,delivery,Priya
+2026-06-20,ORD1107,French Fries,3,360,delivery,Walk-in
+2026-06-20,ORD1107,Margherita Pizza,2,560,delivery,Walk-in
+2026-06-20,ORD1108,Pasta Alfredo,1,320,dine_in,Karan
+2026-06-20,ORD1108,Espresso,2,240,dine_in,Karan
+2026-06-20,ORD1108,Margherita Pizza,1,280,dine_in,Karan
+2026-06-20,ORD1109,Masala Chai,1,80,dine_in,Karan
+2026-06-20,ORD1110,Cold Coffee,2,360,dine_in,Aman
+2026-06-20,ORD1110,Margherita Pizza,2,560,dine_in,Aman
+2026-06-20,ORD1110,Cafe Latte,2,320,dine_in,Aman
+2026-06-20,ORD1111,Masala Chai,1,80,dine_in,
+2026-06-20,ORD1111,Chocolate Brownie,2,300,dine_in,
+2026-06-20,ORD1111,Pasta Alfredo,3,960,dine_in,
+2026-06-20,ORD1112,Espresso,3,360,dine_in,Karan
+2026-06-20,ORD1112,Pasta Alfredo,1,320,dine_in,Karan
+2026-06-20,ORD1112,Espresso,3,360,dine_in,Karan
+2026-06-20,ORD1113,Veg Sandwich,3,420,delivery,
+2026-06-20,ORD1113,Cappuccino,1,150,delivery,
+2026-06-20,ORD1113,Cafe Latte,1,160,delivery,
+2026-06-20,ORD1114,Chocolate Brownie,1,150,delivery,Karan
+2026-06-20,ORD1114,Pasta Alfredo,2,640,delivery,Karan
+2026-06-20,ORD1115,French Fries,3,360,delivery,
+2026-06-20,ORD1116,Masala Chai,2,160,delivery,Aman
+2026-06-20,ORD1116,Cold Coffee,3,540,delivery,Aman
+2026-06-20,ORD1116,Grilled Cheese Sandwich,2,340,delivery,Aman
+2026-06-20,ORD1117,Cappuccino,1,150,takeaway,Walk-in
+2026-06-20,ORD1117,French Fries,2,240,takeaway,Walk-in
+2026-06-20,ORD1117,French Fries,2,240,takeaway,Walk-in
+2026-06-20,ORD1118,Espresso,2,240,dine_in,Aman
+2026-06-20,ORD1118,Cheesecake,2,440,dine_in,Aman
+2026-06-20,ORD1118,Cheesecake,2,440,dine_in,Aman
+2026-06-21,ORD1119,Margherita Pizza,1,280,dine_in,Aman
+2026-06-21,ORD1119,Veg Sandwich,1,140,dine_in,Aman
+2026-06-21,ORD1119,French Fries,1,120,dine_in,Aman
+2026-06-21,ORD1120,Espresso,1,120,takeaway,Priya
+2026-06-21,ORD1121,Pasta Alfredo,2,640,dine_in,Aman
+2026-06-21,ORD1121,Cold Coffee,1,180,dine_in,Aman
+2026-06-21,ORD1122,Veg Sandwich,1,140,takeaway,Karan
+2026-06-21,ORD1122,Espresso,2,240,takeaway,Karan
+2026-06-21,ORD1122,Margherita Pizza,2,560,takeaway,Karan
+2026-06-21,ORD1123,Cappuccino,1,150,takeaway,Aman
+2026-06-21,ORD1123,Grilled Cheese Sandwich,3,510,takeaway,Aman
+2026-06-21,ORD1124,Pasta Alfredo,2,640,takeaway,Riya
+2026-06-21,ORD1125,French Fries,3,360,dine_in,Walk-in
+2026-06-21,ORD1125,Chocolate Brownie,3,450,dine_in,Walk-in
+2026-06-21,ORD1126,Cappuccino,1,150,takeaway,Aman
+2026-06-21,ORD1126,Grilled Cheese Sandwich,1,170,takeaway,Aman
+2026-06-21,ORD1126,Masala Chai,3,240,takeaway,Aman
+2026-06-21,ORD1127,Cappuccino,2,300,takeaway,Priya
+2026-06-21,ORD1127,Cappuccino,3,450,takeaway,Priya
+2026-06-21,ORD1128,Margherita Pizza,2,560,delivery,Riya
+2026-06-21,ORD1128,Cafe Latte,2,320,delivery,Riya
+2026-06-21,ORD1129,Masala Chai,3,240,delivery,Priya
+2026-06-21,ORD1129,Chocolate Brownie,3,450,delivery,Priya
+2026-06-21,ORD1129,Cafe Latte,1,160,delivery,Priya
+2026-06-21,ORD1130,Veg Sandwich,3,420,dine_in,Priya
+2026-06-21,ORD1130,Veg Sandwich,1,140,dine_in,Priya
+2026-06-21,ORD1131,Grilled Cheese Sandwich,3,510,dine_in,Karan
+2026-06-21,ORD1131,Cappuccino,1,150,dine_in,Karan
+2026-06-21,ORD1131,Cappuccino,1,150,dine_in,Karan
+2026-06-21,ORD1132,Margherita Pizza,2,560,delivery,Aman
+2026-06-21,ORD1132,Espresso,3,360,delivery,Aman
+2026-06-22,ORD1133,Espresso,2,240,takeaway,Karan
+2026-06-22,ORD1133,Pasta Alfredo,3,960,takeaway,Karan
+2026-06-22,ORD1134,Margherita Pizza,3,840,takeaway,Karan
+2026-06-22,ORD1134,Margherita Pizza,2,560,takeaway,Karan
+2026-06-22,ORD1135,French Fries,1,120,delivery,Karan
+2026-06-22,ORD1135,Veg Sandwich,2,280,delivery,Karan
+2026-06-22,ORD1136,Pasta Alfredo,2,640,delivery,Walk-in
+2026-06-22,ORD1136,Cheesecake,3,660,delivery,Walk-in
+2026-06-22,ORD1137,French Fries,2,240,delivery,Walk-in
+2026-06-22,ORD1137,Chocolate Brownie,3,450,delivery,Walk-in
+2026-06-22,ORD1137,Pasta Alfredo,1,320,delivery,Walk-in
+2026-06-22,ORD1138,French Fries,1,120,delivery,Walk-in
+2026-06-22,ORD1138,Margherita Pizza,3,840,delivery,Walk-in
+2026-06-22,ORD1138,Cheesecake,3,660,delivery,Walk-in
+2026-06-22,ORD1139,Cold Coffee,1,180,takeaway,Riya
+2026-06-22,ORD1139,Pasta Alfredo,3,960,takeaway,Riya
+2026-06-22,ORD1139,Cafe Latte,1,160,takeaway,Riya
+2026-06-22,ORD1140,Grilled Cheese Sandwich,1,170,dine_in,Priya
+2026-06-22,ORD1140,Grilled Cheese Sandwich,3,510,dine_in,Priya
+2026-06-22,ORD1141,Pasta Alfredo,2,640,dine_in,Priya
+2026-06-22,ORD1141,Cheesecake,3,660,dine_in,Priya
+2026-06-22,ORD1141,Cappuccino,3,450,dine_in,Priya
+2026-06-22,ORD1142,Margherita Pizza,2,560,dine_in,Karan
+2026-06-23,ORD1143,Espresso,2,240,delivery,Priya
+2026-06-23,ORD1143,Margherita Pizza,2,560,delivery,Priya
+2026-06-23,ORD1144,Cheesecake,3,660,delivery,Aman
+2026-06-23,ORD1144,Chocolate Brownie,3,450,delivery,Aman
+2026-06-23,ORD1144,Masala Chai,3,240,delivery,Aman
+2026-06-23,ORD1145,Masala Chai,3,240,takeaway,Riya
+2026-06-23,ORD1146,Masala Chai,3,240,takeaway,Riya
+2026-06-23,ORD1146,Cold Coffee,3,540,takeaway,Riya
+2026-06-23,ORD1147,French Fries,2,240,delivery,Priya
+2026-06-23,ORD1147,Margherita Pizza,3,840,delivery,Priya
+2026-06-23,ORD1148,Pasta Alfredo,3,960,takeaway,Aman
+2026-06-23,ORD1149,Veg Sandwich,1,140,delivery,Priya
+2026-06-23,ORD1149,Masala Chai,1,80,delivery,Priya
+2026-06-23,ORD1150,Veg Sandwich,2,280,takeaway,
+2026-06-23,ORD1151,French Fries,1,120,delivery,Aman
+2026-06-23,ORD1151,Cold Coffee,3,540,delivery,Aman
+2026-06-23,ORD1151,Masala Chai,3,240,delivery,Aman
+2026-06-23,ORD1152,Cafe Latte,3,480,delivery,Aman
+2026-06-23,ORD1153,Cold Coffee,1,180,delivery,Karan
+2026-06-23,ORD1154,Chocolate Brownie,1,150,delivery,Karan
+2026-06-23,ORD1155,Veg Sandwich,3,420,dine_in,Walk-in
+2026-06-23,ORD1155,French Fries,1,120,dine_in,Walk-in
+2026-06-23,ORD1156,Margherita Pizza,1,280,delivery,Riya
+2026-06-23,ORD1157,French Fries,3,360,takeaway,
+2026-06-23,ORD1157,Cold Coffee,2,360,takeaway,
+2026-06-24,ORD1158,Cafe Latte,3,480,takeaway,
+2026-06-24,ORD1159,Cheesecake,3,660,delivery,Riya
+2026-06-24,ORD1159,Cappuccino,1,150,delivery,Riya
+2026-06-24,ORD1159,Grilled Cheese Sandwich,1,170,delivery,Riya
+2026-06-24,ORD1160,Espresso,3,360,dine_in,Priya
+2026-06-24,ORD1160,Masala Chai,1,80,dine_in,Priya
+2026-06-24,ORD1161,Pasta Alfredo,1,320,dine_in,Aman
+2026-06-24,ORD1161,Veg Sandwich,2,280,dine_in,Aman
+2026-06-24,ORD1161,French Fries,3,360,dine_in,Aman
+2026-06-24,ORD1162,Espresso,3,360,delivery,Karan
+2026-06-24,ORD1162,French Fries,2,240,delivery,Karan
+2026-06-24,ORD1163,Espresso,3,360,dine_in,Walk-in
+2026-06-24,ORD1163,French Fries,3,360,dine_in,Walk-in
+2026-06-24,ORD1164,Cappuccino,3,450,takeaway,
+2026-06-24,ORD1165,Chocolate Brownie,1,150,takeaway,Aman
+2026-06-24,ORD1165,Espresso,3,360,takeaway,Aman
+2026-06-24,ORD1165,Chocolate Brownie,2,300,takeaway,Aman
+2026-06-24,ORD1166,Cafe Latte,2,320,takeaway,Karan
+2026-06-24,ORD1166,Chocolate Brownie,1,150,takeaway,Karan
+2026-06-24,ORD1167,Veg Sandwich,1,140,dine_in,Riya
+2026-06-24,ORD1167,Cappuccino,2,300,dine_in,Riya
+2026-06-24,ORD1168,Masala Chai,2,160,takeaway,Riya
+2026-06-24,ORD1168,Masala Chai,3,240,takeaway,Riya
+2026-06-24,ORD1169,Masala Chai,3,240,delivery,Karan
+2026-06-24,ORD1170,Cappuccino,3,450,takeaway,
+2026-06-25,ORD1171,Grilled Cheese Sandwich,3,510,takeaway,Aman
+2026-06-25,ORD1172,Cheesecake,1,220,delivery,
+2026-06-25,ORD1172,Chocolate Brownie,2,300,delivery,
+2026-06-25,ORD1173,Cold Coffee,1,180,takeaway,Karan
+2026-06-25,ORD1174,Cheesecake,3,660,takeaway,Riya
+2026-06-25,ORD1174,Veg Sandwich,2,280,takeaway,Riya
+2026-06-25,ORD1175,Margherita Pizza,3,840,delivery,Karan
+2026-06-25,ORD1175,Cold Coffee,1,180,delivery,Karan
+2026-06-25,ORD1176,Margherita Pizza,2,560,delivery,Karan
+2026-06-25,ORD1177,Cafe Latte,3,480,delivery,
+2026-06-25,ORD1177,Cafe Latte,1,160,delivery,
+2026-06-25,ORD1178,Pasta Alfredo,3,960,delivery,Karan
+2026-06-25,ORD1179,Margherita Pizza,2,560,dine_in,Riya
+2026-06-25,ORD1179,Cafe Latte,3,480,dine_in,Riya

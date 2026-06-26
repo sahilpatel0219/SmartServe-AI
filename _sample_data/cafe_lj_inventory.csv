@@ -1,22 +1,11 @@
-Ingredient,Quantity,Unit,Cost_Per_Unit,Expiry_Date,Min_Threshold
-Coffee Beans,7.5,kg,1100,2026-10-15,3
-Milk,4,litre,60,2026-06-29,20
-Sugar,12,kg,45,2027-03-01,5
-Tea Leaves,3.2,kg,320,2026-12-20,1
-Bread Loaf,18,pieces,35,2026-06-28,10
-Cheese,6,kg,480,2026-07-10,3
-Tomato,9,kg,40,2026-06-30,4
-Onion,11,kg,35,2026-07-20,4
-Potato,14,kg,28,2026-07-25,5
-Burger Buns,24,pieces,12,2026-06-30,12
-Pizza Base,16,pieces,30,2026-07-05,8
-Pasta,5,kg,140,2027-01-15,2
-All Purpose Flour,20,kg,42,2026-11-30,5
-Cocoa Powder,2.5,kg,520,2026-12-31,1
-Butter,3.5,kg,480,2026-08-15,2
-Eggs,90,pieces,7,2026-07-08,30
-Lemon,40,pieces,8,2026-07-02,20
-Blueberry,1.8,kg,900,2026-07-01,1
-Chocolate,3,kg,650,2026-10-01,1
-Ice Cream,6,litre,220,2026-09-01,2
-Paper Cups,350,pieces,3,2028-01-01,100
+item_name,quantity,unit,cost_per_unit,reorder_level,expiry_date
+Coffee Beans,12,kg,850,5,2026-09-30
+Milk,8,litre,60,10,2026-07-02
+Sugar,20,kg,45,5,
+Bread Loaf,6,pack,40,8,2026-06-29
+Cheese Slices,3,pack,180,5,2026-07-10
+Tomato,4,kg,30,6,2026-06-28
+Pasta,15,kg,120,4,2027-01-15
+Chocolate,2,kg,400,3,2026-08-20
+Pizza Base,10,pack,90,6,2026-07-05
+Potato,25,kg,25,10,
