@@ -24,7 +24,7 @@
           <td class="tabular-nums">{{ order.items|length }}</td>
           <td class="tabular-nums font-medium">Rs. {{ order.total_amount|floatformat:0 }}</td>
           <td>
-            <select class="form-control" style="padding:4px 8px;font-size:12px;width:auto;" onchange="updateStatus('{{ order.str_id }}', this.value)">
+            <select class="form-control" style="padding:4px 30px 4px 10px;font-size:12px;width:auto;background-position:right 10px center;" onchange="updateStatus('{{ order.str_id }}', this.value)">
               {% for s in statuses %}<option value="{{ s }}" {% if order.status == s %}selected{% endif %} style="text-transform:capitalize;">{{ s }}</option>{% endfor %}
             </select>
           </td>

@@ -33,6 +33,11 @@ SCHEMA = {
         'optional': ['order_type', 'customer_name', 'status'],
         'date_cols': ['order_date'],
     },
+    'customers': {
+        'required': ['name'],
+        'optional': ['phone', 'email', 'visit_count', 'total_spend', 'notes'],
+        'date_cols': [],
+    },
 }
 
 # ── Column aliases per type ──────────────────────────────────────────────────
@@ -77,6 +82,14 @@ COLUMN_ALIASES = {
         'customer_name': ['customer_name', 'customer', 'client', 'guest'],
         'status':        ['status', 'state'],
     },
+    'customers': {
+        'name':        ['name', 'customer_name', 'customer', 'full_name', 'client'],
+        'phone':       ['phone', 'mobile', 'contact', 'phone_number', 'contact_number'],
+        'email':       ['email', 'email_address', 'mail'],
+        'visit_count': ['visit_count', 'visits', 'orders', 'order_count', 'no_of_visits'],
+        'total_spend': ['total_spend', 'total_spent', 'spend', 'lifetime_value', 'ltv', 'amount'],
+        'notes':       ['notes', 'remarks', 'comments'],
+    },
 }
 
 
@@ -114,7 +127,127 @@ TEMPLATE_ROWS = {
         {'order_date': '2024-01-01', 'order_id': 'ORD001', 'item_name': 'Masala Dosa', 'quantity': 2, 'amount': 240, 'order_type': 'dine_in'},
         {'order_date': '2024-01-01', 'order_id': 'ORD001', 'item_name': 'Filter Coffee', 'quantity': 2, 'amount': 60, 'order_type': 'dine_in'},
     ],
+    'customers': [
+        {'name': 'Riya Shah', 'phone': '9876543210', 'email': 'riya@example.com', 'visit_count': 12, 'total_spend': 4800, 'notes': 'Prefers oat milk'},
+        {'name': 'Aman Verma', 'phone': '9876500011', 'email': 'aman@example.com', 'visit_count': 3, 'total_spend': 900, 'notes': ''},
+    ],
 }
+
+
+# ── Numeric helpers ──────────────────────────────────────────────────────────
+def _to_num(val, default=0.0):
+    """Best-effort convert a CSV string to a float; returns default on failure."""
+    if val is None:
+        return default
+    try:
+        s = str(val).replace(',', '').strip()
+        return float(s) if s != '' else default
+    except (ValueError, TypeError):
+        return default
+
+
+def normalize_records(records: list, upload_type: str) -> list:
+    """
+    Convert raw CSV rows (all strings) into the app's canonical internal schema:
+    numeric fields become numbers, field names match what the views/templates use,
+    and order line-items are grouped into one document per order.
+    """
+    if upload_type == 'sales':
+        out = []
+        for r in records:
+            out.append({
+                'date':      str(r.get('date', '')).strip()[:10],
+                'item_name': str(r.get('item_name', '')).strip(),
+                'quantity':  _to_num(r.get('quantity')),
+                'revenue':   _to_num(r.get('revenue')),
+                'cost':      _to_num(r.get('cost')),
+                'category':  str(r.get('category', '')).strip(),
+            })
+        return out
+
+    if upload_type == 'inventory':
+        out = []
+        for r in records:
+            out.append({
+                'item_name':     str(r.get('item_name', '')).strip(),
+                'quantity':      _to_num(r.get('quantity')),
+                'unit':          str(r.get('unit', '')).strip(),
+                'cost_per_unit': _to_num(r.get('cost_per_unit')),
+                'reorder_level': _to_num(r.get('reorder_level')),
+                'expiry_date':   str(r.get('expiry_date', '')).strip() or None,
+                'category':      str(r.get('category', '')).strip(),
+                'supplier':      str(r.get('supplier', '')).strip(),
+            })
+        return out
+
+    if upload_type == 'menu':
+        out = []
+        for r in records:
+            avail = str(r.get('is_available', 'yes')).strip().lower()
+            out.append({
+                'name':         str(r.get('item_name', '')).strip(),
+                'category':     str(r.get('category', '')).strip(),
+                'price':        _to_num(r.get('price')),
+                'cost':         _to_num(r.get('cost')),
+                'description':  str(r.get('description', '')).strip(),
+                'is_available': avail in ('yes', 'true', '1', 'available', 'y', ''),
+                'recipe':       [],
+            })
+        return out
+
+    if upload_type == 'orders':
+        # Group flat line-item rows into one document per order_id
+        groups, seq = {}, []
+        for i, r in enumerate(records):
+            oid = str(r.get('order_id', '')).strip() or f'AUTO{i}'
+            if oid not in groups:
+                groups[oid] = {
+                    'order_id':      oid,
+                    'order_type':    str(r.get('order_type', '')).strip() or 'dine_in',
+                    'customer_name': str(r.get('customer_name', '')).strip(),
+                    'items':         [],
+                    'total_amount':  0.0,
+                    'status':        str(r.get('status', '')).strip().lower() or 'delivered',
+                    'order_date':    str(r.get('order_date', '')).strip()[:10],
+                }
+                seq.append(oid)
+            qty = _to_num(r.get('quantity'), 1) or 1
+            amt = _to_num(r.get('amount'))
+            groups[oid]['items'].append({
+                'name':     str(r.get('item_name', '')).strip(),
+                'quantity': qty,
+                'subtotal': amt,
+                'price':    round(amt / qty, 2) if qty else amt,
+            })
+            groups[oid]['total_amount'] += amt
+
+        out = []
+        for oid in seq:
+            g = groups[oid]
+            try:
+                g['created_at'] = pd.to_datetime(g['order_date']).to_pydatetime().replace(tzinfo=timezone.utc)
+            except Exception:
+                g['created_at'] = datetime.now(timezone.utc)
+            out.append(g)
+        return out
+
+    if upload_type == 'customers':
+        out = []
+        for r in records:
+            name = str(r.get('name', '')).strip()
+            if not name:
+                continue
+            out.append({
+                'name':        name,
+                'phone':       str(r.get('phone', '')).strip(),
+                'email':       str(r.get('email', '')).strip(),
+                'visit_count': int(_to_num(r.get('visit_count'))),
+                'total_spend': _to_num(r.get('total_spend')),
+                'notes':       str(r.get('notes', '')).strip(),
+            })
+        return out
+
+    return records
 
 
 def validate_and_preview(uploaded_file, upload_type: str) -> dict:
@@ -239,15 +372,17 @@ def commit_upload(records: list, upload_type: str, business_id: str,
         'inventory': col.inventory,
         'menu': col.menu_items,
         'orders': col.orders,
+        'customers': col.customers,
     }[upload_type]()
 
+    # Convert raw rows into the app's canonical schema (numbers, field names, grouping)
+    docs = normalize_records(records, upload_type)
+
     # Tag and insert
-    docs = []
-    for r in records:
-        r['business_id'] = business_id
-        r['_source'] = 'upload'
-        r['created_at'] = now
-        docs.append(r)
+    for d in docs:
+        d['business_id'] = business_id
+        d['_source'] = 'upload'
+        d.setdefault('created_at', now)  # orders keep their derived date
 
     if docs:
         target.insert_many(docs)

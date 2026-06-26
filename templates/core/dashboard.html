@@ -44,7 +44,7 @@
         <i class="bi bi-currency-rupee" style="color:var(--color-primary);font-size:1.2rem;"></i>
       </div>
       <div>
-        <div class="stat-card-label">Today's Revenue</div>
+        <div class="stat-card-label">{% if kpi_date %}Revenue ({{ kpi_date }}){% else %}Today's Revenue{% endif %}</div>
         {% if kpis.today_revenue is not None %}
           <div class="stat-card-value tabular-nums">₹{{ kpis.today_revenue|floatformat:0 }}</div>
         {% else %}
@@ -59,7 +59,7 @@
         <i class="bi bi-receipt" style="color:var(--color-info);font-size:1.2rem;"></i>
       </div>
       <div>
-        <div class="stat-card-label">Orders Today</div>
+        <div class="stat-card-label">{% if kpi_date %}Orders (latest day){% else %}Orders Today{% endif %}</div>
         {% if kpis.today_orders is not None %}
           <div class="stat-card-value tabular-nums">{{ kpis.today_orders }}</div>
         {% else %}

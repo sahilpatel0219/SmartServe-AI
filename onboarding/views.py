@@ -69,6 +69,7 @@ def upload_center_view(request):
     has_inventory = any(d['type'] == 'inventory' for d in datasets)
     has_menu = any(d['type'] == 'menu' for d in datasets)
     has_orders = any(d['type'] == 'orders' for d in datasets)
+    has_customers = any(d['type'] == 'customers' for d in datasets)
 
     upload_types = [
         {
@@ -103,6 +104,14 @@ def upload_center_view(request):
             'desc': 'Past order records for demand analysis.',
             'columns': 'order_date, order_id, item_name, quantity, amount, order_type',
         },
+        {
+            'key': 'customers',
+            'label': 'Customers',
+            'icon': 'people',
+            'done': has_customers,
+            'desc': 'Customer list with visit history for segmentation.',
+            'columns': 'name, phone, email, visit_count, total_spend',
+        },
     ]
 
     done_count = sum(1 for t in upload_types if t['done'])
@@ -127,7 +136,7 @@ def upload_file_view(request, upload_type):
         return redirect('onboarding:create_business')
 
     business = membership.business
-    VALID_TYPES = {'sales', 'inventory', 'menu', 'orders'}
+    VALID_TYPES = {'sales', 'inventory', 'menu', 'orders', 'customers'}
     if upload_type not in VALID_TYPES:
         messages.error(request, 'Invalid upload type.')
         return redirect('onboarding:upload_center')

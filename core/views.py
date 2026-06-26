@@ -51,21 +51,50 @@ def dashboard_view(request):
         'items': readiness_items,
     }
 
-    # Load real KPIs if data exists
+    # Load real KPIs if data exists.
+    # Data is typically historical, so KPIs reflect the most recent day that has data
+    # rather than the literal calendar date (which usually has no sales yet).
+    kpi_date = None
     if has_sales:
-        from datetime import date, timezone
-        import datetime
-        today_str = date.today().isoformat()
-        pipeline = [
-            {'$match': {'business_id': bid, 'date': today_str}},
-            {'$group': {'_id': None, 'total': {'$sum': '$revenue'}, 'count': {'$sum': 1}}},
-        ]
-        result = list(col.sales_records().aggregate(pipeline))
-        if result:
-            kpis['today_revenue'] = result[0].get('total', 0)
-            kpis['today_orders'] = result[0].get('count', 0)
+        # Find the most recent date present in the sales data
+        latest = list(col.sales_records().find(
+            {'business_id': bid}, {'date': 1}
+        ).sort('date', -1).limit(1))
+        if latest:
+            kpi_date = latest[0].get('date')
+            pipeline = [
+                {'$match': {'business_id': bid, 'date': kpi_date}},
+                {'$group': {
+                    '_id': None,
+                    'revenue': {'$sum': '$revenue'},
+                    'cost':    {'$sum': '$cost'},
+                }},
+            ]
+            result = list(col.sales_records().aggregate(pipeline))
+            if result:
+                rev = result[0].get('revenue', 0) or 0
+                cost = result[0].get('cost', 0) or 0
+                kpis['today_revenue'] = rev
+                kpis['today_profit'] = rev - cost
+
+    # Orders on the most recent order date
+    if has_orders:
+        latest_o = list(col.orders().find(
+            {'business_id': bid}, {'created_at': 1}
+        ).sort('created_at', -1).limit(1))
+        if latest_o:
+            from datetime import datetime as _dt, time as _time
+            last_dt = latest_o[0].get('created_at')
+            if isinstance(last_dt, _dt):
+                day_start = _dt.combine(last_dt.date(), _time.min, tzinfo=last_dt.tzinfo)
+                day_end = _dt.combine(last_dt.date(), _time.max, tzinfo=last_dt.tzinfo)
+                kpis['today_orders'] = col.orders().count_documents({
+                    'business_id': bid,
+                    'created_at': {'$gte': day_start, '$lte': day_end},
+                })
 
     if has_inventory:
+        # quantity / reorder_level are numeric after normalisation
         low_stock = col.inventory().count_documents({
             'business_id': bid,
             '$expr': {'$lte': ['$quantity', '$reorder_level']}
@@ -74,6 +103,20 @@ def dashboard_view(request):
 
     if has_customers:
         kpis['active_customers'] = col.customers().count_documents({'business_id': bid})
+
+    # AI-derived KPIs from the latest prediction run (if any)
+    pred = col.predictions().find_one({'business_id': bid}, sort=[('created_at', -1)])
+    if pred:
+        waste = pred.get('waste', {}).get('estimated_loss_inr')
+        if waste is not None:
+            kpis['food_waste'] = waste
+        fc = pred.get('forecast', {})
+        total_fc = fc.get('total_forecast') or fc.get('next_period_total')
+        if total_fc is not None:
+            kpis['forecasted_sales'] = total_fc
+        hs = pred.get('health_score', {}).get('total_score')
+        if hs is not None:
+            kpis['health_score'] = round(hs)
 
     # Latest AI insights (if any exist from a prior analysis run)
     latest_insights = list(col.insights().find(
@@ -85,6 +128,7 @@ def dashboard_view(request):
         'membership': membership,
         'mongo_ok': mongo_ping(),
         'kpis': kpis,
+        'kpi_date': kpi_date,
         'data_readiness': data_readiness,
         'latest_insights': latest_insights,
     })

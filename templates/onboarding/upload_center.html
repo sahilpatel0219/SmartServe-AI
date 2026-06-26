@@ -10,7 +10,7 @@
     <div class="flex justify-between items-center" style="margin-bottom:var(--space-3);">
       <div>
         <span style="font-weight:var(--fw-semi);">Data Readiness</span>
-        <span class="text-muted text-sm" style="margin-left:var(--space-2);">{{ done_count }}/4 datasets uploaded — AI features unlock at 100%</span>
+        <span class="text-muted text-sm" style="margin-left:var(--space-2);">{{ done_count }}/{{ upload_types|length }} datasets uploaded — AI features unlock at 100%</span>
       </div>
       <span style="font-size:var(--text-xl);font-weight:var(--fw-bold);color:var(--color-primary);">{{ readiness_score }}%</span>
     </div>
