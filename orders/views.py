@@ -46,6 +46,8 @@ def create_order_view(request):
         return redirect('onboarding:create_business')
     bid = business.mongo_id
     menu_items = list(col.menu_items().find({'business_id': bid, 'is_available': True}, sort=[('category', 1), ('name', 1)]))
+    for mi in menu_items:
+        mi['str_id'] = str(mi['_id'])
     if request.method == 'POST':
         order_type = request.POST.get('order_type', 'dine_in')
         table_no = request.POST.get('table_no', '').strip()
@@ -134,4 +136,6 @@ def detail_view(request, order_id):
     if not order:
         messages.error(request, 'Order not found.')
         return redirect('orders:index')
+    order['str_id'] = str(order['_id'])
+    order['short_id'] = str(order['_id'])[-6:].upper()
     return render(request, 'orders/detail.html', {'business': business, 'order': order, 'statuses': STATUSES})

@@ -128,8 +128,10 @@
   const tiLbls   = {{ chart_data.top_items_labels|safe }};
   const tiRev    = {{ chart_data.top_items_revenue|safe }};
 
-  const gridColor = 'rgba(22,24,29,.06)';
-  const fontColor = '#16181D';
+  const _css = getComputedStyle(document.documentElement);
+  const fontColor = (_css.getPropertyValue('--color-ink') || '#16181D').trim();
+  const gridColor = (document.documentElement.getAttribute('data-theme') === 'dark')
+    ? 'rgba(255,255,255,.08)' : 'rgba(22,24,29,.06)';
 
   Chart.defaults.font.family = "'Inter','Segoe UI',sans-serif";
   Chart.defaults.color = fontColor;

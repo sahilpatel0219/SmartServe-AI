@@ -18,6 +18,8 @@ def index_view(request):
     if not business:
         return redirect('onboarding:create_business')
     sups = list(col.suppliers().find({'business_id': business.mongo_id}, sort=[('name', 1)]))
+    for s in sups:
+        s['str_id'] = str(s['_id'])
     return render(request, 'suppliers/index.html', {'business': business, 'suppliers': sups})
 
 
@@ -54,7 +56,11 @@ def purchase_order_view(request):
         return redirect('onboarding:create_business')
     bid = business.mongo_id
     sups = list(col.suppliers().find({'business_id': bid}, {'name': 1}))
+    for s in sups:
+        s['str_id'] = str(s['_id'])
     pos = list(col.purchase_orders().find({'business_id': bid}, sort=[('created_at', -1)], limit=50))
+    for p in pos:
+        p['str_id'] = str(p['_id'])
     if request.method == 'POST':
         supplier_id = request.POST.get('supplier_id', '')
         supplier_name = request.POST.get('supplier_name', '')

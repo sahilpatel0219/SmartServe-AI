@@ -18,6 +18,8 @@ def index_view(request):
     if not business:
         return redirect('onboarding:create_business')
     employees = list(col.employees().find({'business_id': business.mongo_id}, sort=[('name', 1)]))
+    for emp in employees:
+        emp['str_id'] = str(emp['_id'])
     return render(request, 'staff/index.html', {'business': business, 'employees': employees})
 
 
@@ -59,6 +61,10 @@ def mark_attendance_view(request):
         a['employee_id']: a['status']
         for a in col.attendance().find({'business_id': bid, 'date': today_str})
     }
+    # Attach a string id + today's status to each employee for the template
+    for emp in employees:
+        emp['str_id'] = str(emp['_id'])
+        emp['att_status'] = today_attendance.get(emp['str_id'], '')
     if request.method == 'POST':
         for emp in employees:
             emp_id = str(emp['_id'])

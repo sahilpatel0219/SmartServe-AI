@@ -1,9 +1,9 @@
 ﻿{% extends "base.html" %}
 {% block title %}Order Detail{% endblock %}
-{% block page_title %}Order #{{ order._id|stringformat:"s"|slice:"-6:" }}{% endblock %}
+{% block page_title %}Order #{{ order.short_id }}{% endblock %}
 {% block content %}
 {% include "partials/messages.html" %}
-<div style="max-width:640px;">
+<div style="max-width:640px;margin:0 auto;">
 <div class="card mb-4">
   <div class="card-header">
     <span class="card-title">Order Details</span>
@@ -43,7 +43,7 @@
 </div>
 <div class="card">
   <div class="card-body">
-    <form method="post" action="{% url 'orders:update_status' order._id|stringformat:'s' %}" class="flex gap-3 items-center">
+    <form method="post" action="{% url 'orders:update_status' order.str_id %}" class="flex gap-3 items-center">
       {% csrf_token %}
       <select name="status" class="form-control" style="max-width:200px;">
         {% for s in statuses %}<option value="{{ s }}" {% if order.status == s %}selected{% endif %}>{{ s }}</option>{% endfor %}

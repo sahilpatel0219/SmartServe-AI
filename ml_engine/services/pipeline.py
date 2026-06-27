@@ -63,12 +63,69 @@ def run_full_analysis(business_id: str) -> dict:
     except Exception as e:
         results['insights'] = {'error': str(e)}
 
-    # Persist a prediction record so the dashboard knows analysis has run
-    col.predictions().insert_one({
-        'business_id': bid,
-        'type': 'full_analysis',
-        'summary': {k: v for k, v in results.items() if not isinstance(v, dict) or 'error' not in v},
-        'created_at': datetime.now(timezone.utc),
-    })
+    # ── Assemble a canonical prediction document ──────────────────────────────
+    # The dashboard, results page and templates all read fixed top-level keys, so
+    # we transform each sub-result into the exact shape they expect.
+    doc = _build_prediction_doc(bid, results)
+    col.predictions().insert_one(doc)
 
     return results
+
+
+def _build_prediction_doc(bid: str, results: dict) -> dict:
+    """Transform raw sub-service outputs into the document shape the UI reads."""
+    now = datetime.now(timezone.utc)
+
+    # ── Forecast: flatten daily_forecast → {date: value} map + total ──────────
+    forecast_raw = results.get('forecast', {})
+    daily = forecast_raw.get('daily_forecast', []) if isinstance(forecast_raw, dict) else []
+    forecast_map = {d['date']: d['predicted_revenue'] for d in daily}
+    total_forecast = round(sum(d['predicted_revenue'] for d in daily), 2)
+
+    # ── Profitability: bucket items into the menu-engineering matrix ──────────
+    prof_raw = results.get('profitability', {})
+    prof_items = prof_raw.get('items', []) if isinstance(prof_raw, dict) else []
+    plural = {'Star': 'Stars', 'Plowhorse': 'Plowhorses', 'Puzzle': 'Puzzles', 'Dog': 'Dogs'}
+    menu_matrix = {'Stars': [], 'Plowhorses': [], 'Puzzles': [], 'Dogs': []}
+    for it in prof_items:
+        bucket = plural.get(it.get('classification'))
+        if bucket:
+            menu_matrix[bucket].append(it)
+
+    # ── Waste: rename fields to what the results template renders ─────────────
+    waste_raw = results.get('waste', {})
+    at_risk = waste_raw.get('at_risk_items', []) if isinstance(waste_raw, dict) else []
+    high_waste_items = [{
+        'item':            w.get('item', ''),
+        'current_stock':   w.get('quantity', 0),
+        'daily_use':       w.get('daily_use', 0),
+        'days_to_expiry':  w.get('days_until_expiry'),
+        'estimated_loss':  w.get('estimated_loss_inr', 0),
+    } for w in at_risk]
+    waste_loss = waste_raw.get('total_estimated_loss_inr', 0) if isinstance(waste_raw, dict) else 0
+
+    health_raw = results.get('health_score', {})
+    if not isinstance(health_raw, dict) or 'error' in health_raw:
+        health_raw = {}
+
+    return {
+        'business_id': bid,
+        'type': 'full_analysis',
+        'forecast': {
+            'daily_forecast': daily,
+            'map': forecast_map,
+            'total_forecast': total_forecast,
+            'item_demand': forecast_raw.get('item_demand', []) if isinstance(forecast_raw, dict) else [],
+        },
+        'profitability': {
+            'menu_matrix': menu_matrix,
+            'total_profit': prof_raw.get('total_profit') if isinstance(prof_raw, dict) else None,
+            'overall_margin': prof_raw.get('overall_margin') if isinstance(prof_raw, dict) else None,
+        },
+        'waste': {
+            'high_waste_items': high_waste_items,
+            'estimated_loss_inr': waste_loss,
+        },
+        'health_score': health_raw,
+        'created_at': now,
+    }

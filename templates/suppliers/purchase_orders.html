@@ -13,7 +13,7 @@
         <label class="form-label">Supplier</label>
         <select name="supplier_id" class="form-control" onchange="this.form.supplier_name.value=this.options[this.selectedIndex].text">
           <option value="">Select supplier</option>
-          {% for s in suppliers %}<option value="{{ s._id }}">{{ s.name }}</option>{% endfor %}
+          {% for s in suppliers %}<option value="{{ s.str_id }}">{{ s.name }}</option>{% endfor %}
         </select>
         <input type="hidden" name="supplier_name">
       </div>

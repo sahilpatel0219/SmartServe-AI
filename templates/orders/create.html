@@ -3,7 +3,7 @@
 {% block page_title %}New Order{% endblock %}
 {% block content %}
 {% include "partials/messages.html" %}
-<div style="max-width:720px;">
+<div style="max-width:720px;margin:0 auto;">
 <div class="card">
   <div class="card-header"><span class="card-title">Create Order</span></div>
   <div class="card-body">
@@ -36,7 +36,7 @@
               <div style="font-weight:var(--fw-medium);font-size:var(--text-sm);">{{ item.name }}</div>
               <div class="text-muted text-xs">{{ item.category }} &middot; Rs. {{ item.price|floatformat:0 }}</div>
             </div>
-            <input type="hidden" name="item_id" value="{{ item._id }}">
+            <input type="hidden" name="item_id" value="{{ item.str_id }}">
             <input type="number" name="item_qty" class="form-control" style="width:70px;padding:6px 8px;font-size:var(--text-sm);" value="0" min="0">
           </div>
         </div>

@@ -3,7 +3,7 @@
 {% block page_title %}Notifications{% endblock %}
 
 {% block content %}
-<div style="max-width:680px;">
+<div style="max-width:680px;margin:0 auto;">
 
   <div class="flex items-center justify-between mb-5">
     <p class="text-muted mb-0">{{ notifications|length }} notification{{ notifications|length|pluralize }}{% if unread %} · <strong>{{ unread }} unread</strong>{% endif %}</p>

@@ -61,6 +61,28 @@ def logout_view(request):
 @login_required
 def profile_view(request):
     membership = request.user.memberships.filter(is_active=True).first()
+
+    if request.method == 'POST':
+        user = request.user
+        first = request.POST.get('first_name', '').strip()
+        last = request.POST.get('last_name', '').strip()
+        phone = request.POST.get('phone', '').strip()
+        email = request.POST.get('email', '').strip()
+        if not first:
+            messages.error(request, 'First name is required.')
+        elif email and User.objects.exclude(pk=user.pk).filter(email=email).exists():
+            messages.error(request, 'That email is already in use by another account.')
+        else:
+            user.first_name = first
+            user.last_name = last
+            user.phone = phone
+            if email and email != user.email:
+                user.email = email
+                user.username = email  # username mirrors email in this app
+            user.save()
+            messages.success(request, 'Profile updated successfully.')
+            return redirect('accounts:profile')
+
     return render(request, 'accounts/profile.html', {
         'membership': membership,
         'login_history': request.user.login_history.all()[:10],

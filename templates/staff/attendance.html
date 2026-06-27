@@ -3,7 +3,7 @@
 {% block page_title %}Mark Attendance — {{ today }}{% endblock %}
 {% block content %}
 {% include "partials/messages.html" %}
-<div style="max-width:560px;">
+<div style="max-width:560px;margin:0 auto;">
 <div class="card">
   <div class="card-body">
     <form method="post">
@@ -17,11 +17,11 @@
             <td>{{ emp.name }}</td>
             <td class="text-muted">{{ emp.role|default:"—" }}</td>
             <td>
-              <select name="att_{{ emp._id }}" class="form-control" style="width:auto;padding:4px 8px;font-size:13px;">
-                <option value="present" {% if today_attendance[emp._id|stringformat:"s"] == "present" %}selected{% endif %}>Present</option>
-                <option value="absent" {% if today_attendance[emp._id|stringformat:"s"] == "absent" %}selected{% endif %}>Absent</option>
-                <option value="half_day" {% if today_attendance[emp._id|stringformat:"s"] == "half_day" %}selected{% endif %}>Half Day</option>
-                <option value="leave" {% if today_attendance[emp._id|stringformat:"s"] == "leave" %}selected{% endif %}>Leave</option>
+              <select name="att_{{ emp.str_id }}" class="form-control" style="width:auto;padding:4px 8px;font-size:13px;">
+                <option value="present" {% if emp.att_status == "present" %}selected{% endif %}>Present</option>
+                <option value="absent" {% if emp.att_status == "absent" %}selected{% endif %}>Absent</option>
+                <option value="half_day" {% if emp.att_status == "half_day" %}selected{% endif %}>Half Day</option>
+                <option value="leave" {% if emp.att_status == "leave" %}selected{% endif %}>Leave</option>
               </select>
             </td>
           </tr>

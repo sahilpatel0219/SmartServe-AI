@@ -89,10 +89,11 @@ def results_view(request):
     latest = predictions[0]
     insights = list(col.insights().find({'business_id': bid}, sort=[('created_at', -1)]))
 
-    # Unpack forecast data for Chart.js
+    # Unpack forecast data for Chart.js (canonical doc stores daily_forecast list)
     forecast = latest.get('forecast', {})
-    forecast_dates = list(forecast.keys()) if isinstance(forecast, dict) else []
-    forecast_values = [round(float(forecast[d]), 2) for d in forecast_dates]
+    daily = forecast.get('daily_forecast', []) if isinstance(forecast, dict) else []
+    forecast_dates = [d['date'] for d in daily]
+    forecast_values = [round(float(d['predicted_revenue']), 2) for d in daily]
 
     # Profitability / menu engineering
     profitability = latest.get('profitability', {})

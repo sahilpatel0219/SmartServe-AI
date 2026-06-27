@@ -104,14 +104,15 @@ def dashboard_view(request):
     if has_customers:
         kpis['active_customers'] = col.customers().count_documents({'business_id': bid})
 
-    # AI-derived KPIs from the latest prediction run (if any)
-    pred = col.predictions().find_one({'business_id': bid}, sort=[('created_at', -1)])
+    # AI-derived KPIs from the latest full-analysis run (if any)
+    pred = col.predictions().find_one(
+        {'business_id': bid, 'type': 'full_analysis'}, sort=[('created_at', -1)]
+    )
     if pred:
         waste = pred.get('waste', {}).get('estimated_loss_inr')
         if waste is not None:
             kpis['food_waste'] = waste
-        fc = pred.get('forecast', {})
-        total_fc = fc.get('total_forecast') or fc.get('next_period_total')
+        total_fc = pred.get('forecast', {}).get('total_forecast')
         if total_fc is not None:
             kpis['forecasted_sales'] = total_fc
         hs = pred.get('health_score', {}).get('total_score')
