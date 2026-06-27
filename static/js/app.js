@@ -107,35 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const savedTheme = localStorage.getItem('ss_theme') || 'light';
   if (icon) icon.className = savedTheme === 'dark' ? 'bi bi-sun' : 'bi bi-moon';
 
-  // Animate stat cards and content cards on page load
-  document.querySelectorAll('.stat-card').forEach((card, i) => {
-    card.style.animationDelay = `${i * 0.07}s`;
-    card.classList.add('animate-in');
-  });
-
-  // Number counter animation for stat values
-  document.querySelectorAll('.stat-value[data-count], .stat-card-value[data-count]').forEach(el => {
-    animateCounter(el, parseInt(el.dataset.count));
-  });
-
 });
-
-// ── Number counter animation ─────────────────────────────────
-function animateCounter(el, target) {
-  const start   = 0;
-  const duration = 1200;
-  const startTime = performance.now();
-  const prefix  = el.dataset.prefix || '';
-  const suffix  = el.dataset.suffix || '';
-
-  function step(now) {
-    const progress = Math.min((now - startTime) / duration, 1);
-    const ease = 1 - Math.pow(1 - progress, 3);
-    el.textContent = prefix + Math.floor(ease * target).toLocaleString('en-IN') + suffix;
-    if (progress < 1) requestAnimationFrame(step);
-  }
-  requestAnimationFrame(step);
-}
 
 // ── Upload file guard ────────────────────────────────────────
 function checkFile(key) {

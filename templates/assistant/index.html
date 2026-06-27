@@ -6,7 +6,7 @@
 <div style="max-width:760px;margin:0 auto;display:flex;flex-direction:column;height:calc(100vh - 140px);min-height:480px;">
 
   <div class="flex items-center gap-3 mb-4">
-    <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--color-primary),#40916C);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+    <div style="width:44px;height:44px;border-radius:50%;background:var(--color-primary);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
       <i class="bi bi-robot" style="color:#fff;font-size:1.2rem;"></i>
     </div>
     <div>
@@ -24,7 +24,7 @@
 
     <!-- Welcome message -->
     <div class="flex gap-2">
-      <div style="width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--color-primary),#40916C);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+      <div style="width:32px;height:32px;border-radius:50%;background:var(--color-primary);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
         <i class="bi bi-robot" style="color:#fff;font-size:.85rem;"></i>
       </div>
       <div class="chat-bubble-ai">
@@ -114,7 +114,7 @@ function addBubble(text, isUser) {
     row.innerHTML = `<div class="chat-bubble-user">${escHtml(text)}</div>`;
   } else {
     row.className = 'flex gap-2';
-    const icon = `<div style="width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--color-primary),#40916C);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="bi bi-robot" style="color:#fff;font-size:.85rem;"></i></div>`;
+    const icon = `<div style="width:32px;height:32px;border-radius:50%;background:var(--color-primary);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="bi bi-robot" style="color:#fff;font-size:.85rem;"></i></div>`;
     row.innerHTML = `${icon}<div class="chat-bubble-ai">${escHtml(text)}</div>`;
   }
   chatWindow.appendChild(row);
@@ -125,7 +125,7 @@ function addBubble(text, isUser) {
 function addTyping() {
   const row = document.createElement('div');
   row.className = 'flex gap-2';
-  const icon = `<div style="width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--color-primary),#40916C);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="bi bi-robot" style="color:#fff;font-size:.85rem;"></i></div>`;
+  const icon = `<div style="width:32px;height:32px;border-radius:50%;background:var(--color-primary);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="bi bi-robot" style="color:#fff;font-size:.85rem;"></i></div>`;
   row.innerHTML = `${icon}<div class="chat-bubble-ai chat-bubble-typing">Thinking…</div>`;
   row.id = 'typingRow';
   chatWindow.appendChild(row);
