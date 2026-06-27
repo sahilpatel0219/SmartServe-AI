@@ -63,8 +63,7 @@ let recipeCount = 0;
 function addIngredient() {
   recipeCount++;
   const div = document.createElement('div');
-  div.className = 'grid gap-3 mb-3';
-  div.style.gridTemplateColumns = '1fr 100px 100px 40px';
+  div.className = 'recipe-row mb-3';
   div.innerHTML = '<input type="text" name="ingredient_name" class="form-control" placeholder="Ingredient" list="ing_list">' +
     '<input type="number" name="ingredient_qty" class="form-control" placeholder="Qty" step="0.1" min="0">' +
     '<input type="text" name="ingredient_unit" class="form-control" placeholder="Unit">' +

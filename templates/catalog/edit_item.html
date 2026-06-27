@@ -49,7 +49,7 @@
         </div>
         <div id="recipe_rows">
           {% for r in item.recipe %}
-          <div class="grid gap-3 mb-3" style="grid-template-columns:1fr 100px 100px 40px;">
+          <div class="recipe-row mb-3">
             <input type="text" name="ingredient_name" class="form-control" value="{{ r.ingredient }}" list="ing_list">
             <input type="number" name="ingredient_qty" class="form-control" value="{{ r.quantity }}" step="0.1">
             <input type="text" name="ingredient_unit" class="form-control" value="{{ r.unit }}">
@@ -70,8 +70,7 @@
 <script>
 function addIngredient() {
   const div = document.createElement('div');
-  div.className = 'grid gap-3 mb-3';
-  div.style.gridTemplateColumns = '1fr 100px 100px 40px';
+  div.className = 'recipe-row mb-3';
   div.innerHTML = '<input type="text" name="ingredient_name" class="form-control" placeholder="Ingredient" list="ing_list"><input type="number" name="ingredient_qty" class="form-control" placeholder="Qty" step="0.1"><input type="text" name="ingredient_unit" class="form-control" placeholder="Unit"><button type="button" class="btn btn-ghost btn-sm text-danger" onclick="this.parentElement.remove()"><i class="bi bi-x-lg"></i></button>';
   document.getElementById('recipe_rows').appendChild(div);
 }
