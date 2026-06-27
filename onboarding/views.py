@@ -49,9 +49,8 @@ def create_business_view(request):
 @login_required
 def upload_center_view(request):
     """Data Import Center — hub for all data uploads."""
-    membership = Membership.objects.filter(
-        user=request.user, is_active=True
-    ).select_related('business').first()
+    from core.utils import get_active_membership
+    membership = get_active_membership(request)
     if not membership:
         return redirect('onboarding:create_business')
 
@@ -129,9 +128,8 @@ def upload_center_view(request):
 @login_required
 def upload_file_view(request, upload_type):
     """Handle file upload → validate → show preview → confirm → commit."""
-    membership = Membership.objects.filter(
-        user=request.user, is_active=True
-    ).select_related('business').first()
+    from core.utils import get_active_membership
+    membership = get_active_membership(request)
     if not membership:
         return redirect('onboarding:create_business')
 

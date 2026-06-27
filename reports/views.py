@@ -13,8 +13,8 @@ import pandas as pd
 
 
 def _get_business(request):
-    m = Membership.objects.filter(user=request.user, is_active=True).select_related('business').first()
-    return (m.business, m) if m else (None, None)
+    from core.utils import get_active_business
+    return get_active_business(request)
 
 
 def _period_cutoff(period_str):

@@ -60,7 +60,8 @@ def logout_view(request):
 
 @login_required
 def profile_view(request):
-    membership = request.user.memberships.filter(is_active=True).first()
+    from core.utils import get_active_membership
+    membership = get_active_membership(request)
 
     if request.method == 'POST':
         form_type = request.POST.get('form_type', 'account')

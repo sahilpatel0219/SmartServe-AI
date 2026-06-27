@@ -5,10 +5,8 @@ from mongo.client import ping as mongo_ping
 
 @login_required
 def dashboard_view(request):
-    from accounts.models import Membership
-    membership = Membership.objects.filter(
-        user=request.user, is_active=True
-    ).select_related('business').first()
+    from core.utils import get_active_membership
+    membership = get_active_membership(request)
 
     if not membership:
         return redirect('onboarding:create_business')

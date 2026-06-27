@@ -13,8 +13,8 @@ from mongo import collections as col
 
 
 def _get_business(request):
-    m = Membership.objects.filter(user=request.user, is_active=True).select_related('business').first()
-    return (m.business, m) if m else (None, None)
+    from core.utils import get_active_business
+    return get_active_business(request)
 
 
 def generate_notifications(bid: str):
@@ -68,7 +68,9 @@ def generate_notifications(bid: str):
                 pass
 
     # ── AI forecast alerts ────────────────────────────────────────────────────
-    pred = col.predictions().find_one({'business_id': bid}, sort=[('created_at', -1)])
+    pred = col.predictions().find_one(
+        {'business_id': bid, 'type': 'full_analysis'}, sort=[('created_at', -1)]
+    )
     if pred:
         waste = pred.get('waste', {}).get('estimated_loss_inr', 0)
         if waste and float(waste) > 500:
