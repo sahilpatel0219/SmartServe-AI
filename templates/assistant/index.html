@@ -3,7 +3,7 @@
 {% block page_title %}AI Assistant{% endblock %}
 
 {% block content %}
-<div style="max-width:680px;display:flex;flex-direction:column;height:calc(100vh - 120px);">
+<div style="max-width:760px;margin:0 auto;display:flex;flex-direction:column;height:calc(100vh - 140px);min-height:480px;">
 
   <div class="flex items-center gap-3 mb-4">
     <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--color-primary),#40916C);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
@@ -28,8 +28,17 @@
         <i class="bi bi-robot" style="color:#fff;font-size:.85rem;"></i>
       </div>
       <div class="chat-bubble-ai">
-        <p class="mb-0">Hi! I'm your SmartServe AI assistant for <strong>{{ business.name }}</strong>. I can answer questions about your revenue, inventory, AI forecasts, and business health — all from your actual data.</p>
-        <p class="mb-0 mt-2 text-muted text-sm">Try: "What are my top items?" · "How's my stock?" · "What's my health score?"</p>
+        <p class="mb-0">Hi! I'm your SmartServe AI assistant for <strong>{{ business.name }}</strong>. I can answer questions about your revenue, profit, orders, customers, inventory, AI forecasts, and business health — all from your actual data.</p>
+        {% if has_data %}
+        <div class="suggestion-chips">
+          <button class="chip" onclick="askChip(this)">What's my total revenue?</button>
+          <button class="chip" onclick="askChip(this)">How much profit?</button>
+          <button class="chip" onclick="askChip(this)">What's my busiest day?</button>
+          <button class="chip" onclick="askChip(this)">What are my top items?</button>
+          <button class="chip" onclick="askChip(this)">How's my stock?</button>
+          <button class="chip" onclick="askChip(this)">What's my health score?</button>
+        </div>
+        {% endif %}
       </div>
     </div>
 
@@ -78,6 +87,19 @@
 }
 .chat-row-user { display: flex; justify-content: flex-end; }
 .chat-bubble-typing { color: var(--color-muted); font-style: italic; font-size: .85rem; }
+[data-theme="dark"] .chat-bubble-user { background: var(--color-primary); color: #0F1117; font-weight: 500; }
+.suggestion-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: var(--space-3); }
+.chip {
+  background: var(--color-canvas);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  padding: 5px 12px;
+  font-size: .8rem;
+  color: var(--color-ink);
+  cursor: pointer;
+  transition: all var(--t-fast);
+}
+.chip:hover { border-color: var(--color-primary); color: var(--color-primary); background: var(--color-primary-light); }
 </style>
 
 <script>
@@ -142,6 +164,11 @@ async function sendMessage() {
     sendBtn.disabled = false;
     msgInput.focus();
   }
+}
+
+function askChip(btn) {
+  msgInput.value = btn.textContent;
+  sendMessage();
 }
 
 sendBtn.addEventListener('click', sendMessage);
