@@ -17,6 +17,9 @@
   <!-- Design System -->
   <link rel="stylesheet" href="/static/css/design-system.css">
 
+  <!-- Chart.js (loaded early so inline chart scripts in page content can use it) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
   {% block extra_css %}{% endblock %}
 </head>
 <body>
@@ -100,8 +103,6 @@
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<!-- Chart.js -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <!-- SmartServe App JS -->
 <script src="/static/js/app.js"></script>
 
