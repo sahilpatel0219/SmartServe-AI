@@ -21,6 +21,7 @@
 
       <form method="post">
         {% csrf_token %}
+        <input type="hidden" name="form_type" value="account">
         <div class="grid grid-2 gap-4">
           <div class="form-group">
             <label class="form-label">First Name *</label>
@@ -46,6 +47,44 @@
       </form>
     </div>
   </div>
+
+  {% if business %}
+  <div class="card" style="margin-top:var(--space-4);">
+    <div class="card-header">
+      <span class="card-title">Business Details</span>
+      {% if membership %}<span class="badge badge-neutral">{{ membership.get_role_display }}</span>{% endif %}
+    </div>
+    <div class="card-body">
+      {% if membership.is_manager %}
+      <form method="post">
+        {% csrf_token %}
+        <input type="hidden" name="form_type" value="business">
+        <div class="grid grid-2 gap-4">
+          <div class="form-group" style="grid-column:1/-1;">
+            <label class="form-label">Business Name *</label>
+            <input type="text" name="business_name" class="form-control" value="{{ business.name }}" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Business Type</label>
+            <select name="business_type" class="form-control">
+              {% for val, label in business_types %}
+              <option value="{{ val }}" {% if business.business_type == val %}selected{% endif %}>{{ label }}</option>
+              {% endfor %}
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary mt-2"><i class="bi bi-check2 me-1"></i>Save Business</button>
+      </form>
+      {% else %}
+      <table class="data-table">
+        <tr><td style="color:var(--color-muted);width:140px;">Name</td><td>{{ business.name }}</td></tr>
+        <tr><td style="color:var(--color-muted);">Type</td><td>{{ business.get_business_type_display }}</td></tr>
+      </table>
+      <p class="text-muted text-xs mt-2">Only the owner or a manager can edit business details.</p>
+      {% endif %}
+    </div>
+  </div>
+  {% endif %}
 
   {% if login_history %}
   <div class="card" style="margin-top:var(--space-4);">

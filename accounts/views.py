@@ -63,28 +63,53 @@ def profile_view(request):
     membership = request.user.memberships.filter(is_active=True).first()
 
     if request.method == 'POST':
-        user = request.user
-        first = request.POST.get('first_name', '').strip()
-        last = request.POST.get('last_name', '').strip()
-        phone = request.POST.get('phone', '').strip()
-        email = request.POST.get('email', '').strip()
-        if not first:
-            messages.error(request, 'First name is required.')
-        elif email and User.objects.exclude(pk=user.pk).filter(email=email).exists():
-            messages.error(request, 'That email is already in use by another account.')
+        form_type = request.POST.get('form_type', 'account')
+
+        # ── Business details (only owners/managers may edit) ─────────────────
+        if form_type == 'business':
+            if not membership or not membership.is_manager:
+                messages.error(request, 'Only the owner or a manager can edit business details.')
+                return redirect('accounts:profile')
+            business = membership.business
+            name = request.POST.get('business_name', '').strip()
+            btype = request.POST.get('business_type', '').strip()
+            valid_types = {key for key, _ in Business.BUSINESS_TYPES}
+            if not name:
+                messages.error(request, 'Business name is required.')
+            else:
+                business.name = name
+                if btype in valid_types:
+                    business.business_type = btype
+                business.save()
+                messages.success(request, 'Business details updated successfully.')
+                return redirect('accounts:profile')
+
+        # ── Account details ──────────────────────────────────────────────────
         else:
-            user.first_name = first
-            user.last_name = last
-            user.phone = phone
-            if email and email != user.email:
-                user.email = email
-                user.username = email  # username mirrors email in this app
-            user.save()
-            messages.success(request, 'Profile updated successfully.')
-            return redirect('accounts:profile')
+            user = request.user
+            first = request.POST.get('first_name', '').strip()
+            last = request.POST.get('last_name', '').strip()
+            phone = request.POST.get('phone', '').strip()
+            email = request.POST.get('email', '').strip()
+            if not first:
+                messages.error(request, 'First name is required.')
+            elif email and User.objects.exclude(pk=user.pk).filter(email=email).exists():
+                messages.error(request, 'That email is already in use by another account.')
+            else:
+                user.first_name = first
+                user.last_name = last
+                user.phone = phone
+                if email and email != user.email:
+                    user.email = email
+                    user.username = email  # username mirrors email in this app
+                user.save()
+                messages.success(request, 'Profile updated successfully.')
+                return redirect('accounts:profile')
 
     return render(request, 'accounts/profile.html', {
         'membership': membership,
+        'business': membership.business if membership else None,
+        'business_types': Business.BUSINESS_TYPES,
         'login_history': request.user.login_history.all()[:10],
     })
 
