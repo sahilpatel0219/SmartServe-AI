@@ -8,10 +8,7 @@
   <div class="flex items-center justify-between mb-5">
     <p class="text-muted mb-0">{{ notifications|length }} notification{{ notifications|length|pluralize }}{% if unread %} · <strong>{{ unread }} unread</strong>{% endif %}</p>
     {% if unread %}
-    <form method="post" action="{% url 'notifications:mark_all_read' %}">
-      {% csrf_token %}
-      <button type="submit" class="btn btn-ghost btn-sm">Mark all as read</button>
-    </form>
+    <button type="button" id="markAllBtn" class="btn btn-outline btn-sm">Mark all as read</button>
     {% endif %}
   </div>
 
@@ -31,7 +28,7 @@
       <div class="card-body" style="display:flex;align-items:flex-start;gap:var(--space-3);padding:var(--space-3) var(--space-4);">
         <div style="margin-top:2px;">
           {% if n.severity == 'danger' %}
-          <i class="bi bi-exclamation-circle-fill" style="color:#DC3545;"></i>
+          <i class="bi bi-exclamation-circle-fill" style="color:var(--color-danger);"></i>
           {% elif n.severity == 'warning' %}
           <i class="bi bi-exclamation-triangle-fill" style="color:var(--color-secondary);"></i>
           {% else %}
@@ -58,22 +55,42 @@
 </div>
 
 <style>
-.unread-notif { background: rgba(45,106,79,.03); }
+.unread-notif { background: var(--color-primary-light); }
 </style>
 
 <script>
+// Mark a single notification as read (updates in place)
 document.querySelectorAll('.mark-read-btn').forEach(btn => {
   btn.addEventListener('click', async function() {
     const id = this.dataset.id;
-    await fetch(`/notifications/${id}/read/`, {
+    const resp = await fetch(`/notifications/${id}/read/`, {
       method: 'POST',
       headers: {'X-CSRFToken': '{{ csrf_token }}'},
     });
+    if (!resp.ok) { showToast('Could not mark as read.', 'danger'); return; }
     const card = document.getElementById('notif-' + id);
     card.classList.remove('unread-notif');
     card.style.borderLeft = '';
     this.remove();
   });
 });
+
+// Mark ALL as read via AJAX, then reload so the count + topbar dot clear
+const markAllBtn = document.getElementById('markAllBtn');
+if (markAllBtn) {
+  markAllBtn.addEventListener('click', async function() {
+    this.disabled = true;
+    const resp = await fetch('{% url "notifications:mark_all_read" %}', {
+      method: 'POST',
+      headers: {'X-CSRFToken': '{{ csrf_token }}'},
+    });
+    if (resp.ok) {
+      window.location.reload();
+    } else {
+      this.disabled = false;
+      showToast('Could not mark all as read.', 'danger');
+    }
+  });
+}
 </script>
 {% endblock %}
