@@ -400,19 +400,18 @@ a:hover { color:var(--color-primary-hover); }
 
 /* ── Page header (title + actions) ───────────────────────────── */
 .page-header {
-  display:flex; align-items:center; justify-content:space-between;
-  gap:var(--space-4); flex-wrap:wrap;
+  display:flex; align-items:flex-start; justify-content:space-between;
+  gap:var(--space-4); flex-wrap:nowrap;
   margin-bottom:var(--space-8);
 }
-.page-header > :first-child { min-width:0; }      /* let the title shrink instead of forcing a wrap */
+.page-header > :first-child { min-width:0; }      /* title shrinks (wraps text) so buttons stay top-right */
 .page-header__title { font-size:var(--text-2xl); font-weight:var(--fw-bold); letter-spacing:-0.02em; line-height:1.2; }
 .page-header__sub   { font-size:var(--text-sm); color:var(--color-muted); margin-top:2px; }
-.page-header__actions { display:flex; gap:var(--space-2); flex-wrap:wrap; flex-shrink:0; }
+.page-header__actions { display:flex; gap:var(--space-2); flex-shrink:0; }
 
-/* When the content column gets tight, stack title over actions cleanly
-   (covers the sidebar-shown 768-900px zone where they'd otherwise wrap awkwardly) */
-@media (max-width: 900px) {
-  .page-header { flex-direction:column; align-items:flex-start; gap:var(--space-3); }
+/* On mobile (sidebar hidden) stack title over actions */
+@media (max-width: 768px) {
+  .page-header { flex-direction:column; align-items:stretch; gap:var(--space-3); flex-wrap:wrap; }
 }
 
 /* ── Main Content ────────────────────────────────────────────── */
@@ -498,10 +497,10 @@ a:hover { color:var(--color-primary-hover); }
 .feature-card {
   background:var(--color-surface); border:1px solid var(--color-border-hover);
   border-radius:var(--radius-lg); padding:var(--space-6);
-  box-shadow:var(--shadow-sm);
-  transition:border-color var(--t-fast), box-shadow var(--t-fast);
+  box-shadow:var(--shadow-md);
+  transition:border-color var(--t-fast), box-shadow var(--t-fast), transform var(--t-fast);
 }
-.feature-card:hover { border-color:var(--color-subtle); box-shadow:var(--shadow-md); }
+.feature-card:hover { border-color:var(--color-subtle); box-shadow:var(--shadow-lg); transform:translateY(-2px); }
 .feature-card__icon {
   width:44px; height:44px; border-radius:var(--radius-md);
   background:var(--color-primary-light); color:var(--color-primary);
