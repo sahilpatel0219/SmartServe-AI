@@ -102,6 +102,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // Keep the active item visible: if the sidebar nav is scrollable, bring the
+  // active link into view without scrolling the whole page (fixes the nav
+  // appearing to "jump to the top" after navigating to a bottom item).
+  const activeLink = document.querySelector('.sidebar-nav .nav-link.active');
+  if (activeLink) activeLink.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+
   // Sync theme icon with current theme
   const icon = document.getElementById('themeIcon');
   const savedTheme = localStorage.getItem('ss_theme') || 'light';
