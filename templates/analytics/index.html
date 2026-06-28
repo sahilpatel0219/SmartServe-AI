@@ -95,12 +95,14 @@
 </div>
 
 <!-- Busiest Days chart -->
-<div class="card mb-4">
+<div class="card mb-4" style="max-width:560px;">
   <div class="card-header">
     <span class="card-title">Busiest Days</span>
   </div>
   <div class="card-body">
-    <canvas id="dowChart" height="80"></canvas>
+    <div style="height:240px;">
+      <canvas id="dowChart"></canvas>
+    </div>
   </div>
 </div>
 
@@ -212,10 +214,12 @@
           data: dowData,
           backgroundColor: 'rgba(45,106,79,.75)',
           borderRadius: 6,
+          maxBarThickness: 28,
         }],
       },
       options: {
         responsive: true,
+        maintainAspectRatio: false,
         plugins: { legend: { display: false } },
         scales: {
           x: { grid: { display: false } },
