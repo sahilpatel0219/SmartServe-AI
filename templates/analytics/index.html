@@ -94,6 +94,16 @@
   </div>
 </div>
 
+<!-- Busiest Days chart -->
+<div class="card mb-4">
+  <div class="card-header">
+    <span class="card-title">Busiest Days</span>
+  </div>
+  <div class="card-body">
+    <canvas id="dowChart" height="80"></canvas>
+  </div>
+</div>
+
 <!-- Export row -->
 <div class="flex gap-3 mt-2">
   <a href="{% url 'reports:export' 'sales' 'excel' %}?period={{ period }}"
@@ -113,6 +123,8 @@
   const profit   = {{ chart_data.daily_profit|safe }};
   const tiLbls   = {{ chart_data.top_items_labels|safe }};
   const tiRev    = {{ chart_data.top_items_revenue|safe }};
+  const dowLbls  = {{ chart_data.dow_labels|safe }};
+  const dowData  = {{ chart_data.dow_data|safe }};
 
   const _css = getComputedStyle(document.documentElement);
   const fontColor = (_css.getPropertyValue('--color-ink') || '#16181D').trim();
@@ -184,6 +196,33 @@
             ticks: { callback: v => '₹' + v.toLocaleString('en-IN') },
           },
           y: { grid: { display: false } },
+        },
+      },
+    });
+  }
+
+  // Busiest days (day-of-week) bar
+  if (document.getElementById('dowChart')) {
+    new Chart(document.getElementById('dowChart'), {
+      type: 'bar',
+      data: {
+        labels: dowLbls.map(d => d.slice(0,3)),
+        datasets: [{
+          label: 'Revenue',
+          data: dowData,
+          backgroundColor: 'rgba(45,106,79,.75)',
+          borderRadius: 6,
+        }],
+      },
+      options: {
+        responsive: true,
+        plugins: { legend: { display: false } },
+        scales: {
+          x: { grid: { display: false } },
+          y: {
+            grid: { color: gridColor },
+            ticks: { callback: v => '₹' + v.toLocaleString('en-IN') },
+          },
         },
       },
     });
