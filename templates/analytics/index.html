@@ -86,25 +86,13 @@
 
   <div class="card">
     <div class="card-header">
-      <span class="card-title">Busiest Days</span>
+      <span class="card-title">Top Items by Revenue</span>
     </div>
     <div class="card-body">
-      <canvas id="dowChart" height="120"></canvas>
+      <canvas id="topItemsChart" height="220"></canvas>
     </div>
   </div>
 </div>
-
-<!-- Top Items chart -->
-{% if chart_data.top_items_labels %}
-<div class="card mb-4">
-  <div class="card-header">
-    <span class="card-title">Top Items by Revenue</span>
-  </div>
-  <div class="card-body">
-    <canvas id="topItemsChart" height="80"></canvas>
-  </div>
-</div>
-{% endif %}
 
 <!-- Export row -->
 <div class="flex gap-3 mt-2">
@@ -123,8 +111,6 @@
   const labels   = {{ chart_data.daily_labels|safe }};
   const revenue  = {{ chart_data.daily_revenue|safe }};
   const profit   = {{ chart_data.daily_profit|safe }};
-  const dowLbls  = {{ chart_data.dow_labels|safe }};
-  const dowData  = {{ chart_data.dow_data|safe }};
   const tiLbls   = {{ chart_data.top_items_labels|safe }};
   const tiRev    = {{ chart_data.top_items_revenue|safe }};
 
@@ -167,31 +153,6 @@
       plugins: { legend: { position: 'top' } },
       scales: {
         x: { grid: { color: gridColor }, ticks: { maxTicksLimit: 10 } },
-        y: {
-          grid: { color: gridColor },
-          ticks: { callback: v => '₹' + v.toLocaleString('en-IN') },
-        },
-      },
-    },
-  });
-
-  // Day-of-week bar
-  new Chart(document.getElementById('dowChart'), {
-    type: 'bar',
-    data: {
-      labels: dowLbls.map(d => d.slice(0,3)),
-      datasets: [{
-        label: 'Revenue',
-        data: dowData,
-        backgroundColor: 'rgba(45,106,79,.75)',
-        borderRadius: 6,
-      }],
-    },
-    options: {
-      responsive: true,
-      plugins: { legend: { display: false } },
-      scales: {
-        x: { grid: { display: false } },
         y: {
           grid: { color: gridColor },
           ticks: { callback: v => '₹' + v.toLocaleString('en-IN') },
