@@ -6,16 +6,19 @@
   <meta name="description" content="SmartServe AI — AI-Powered Operating System for Food Businesses">
   <title>{% block title %}SmartServe AI{% endblock %}</title>
 
-  <!-- Google Fonts -->
+  <!-- Set theme before paint to avoid flash (dark is default) -->
+  <script>(function(){var t=localStorage.getItem('ss_theme')||'dark';document.documentElement.setAttribute('data-theme',t);if(localStorage.getItem('ss_motion')==='off')document.documentElement.classList.add('no-motion');})();</script>
+
+  <!-- Google Fonts: Inter Tight (display) + Inter (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <!-- Bootstrap 5 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <!-- Design System (versioned to bust browser cache on updates) -->
-  <link rel="stylesheet" href="/static/css/design-system.css?v=20260628-4">
+  <!-- Noir Crimson Design System (versioned to bust browser cache on updates) -->
+  <link rel="stylesheet" href="/static/css/theme.css?v=20260630-noir-2">
 
   <!-- Chart.js (loaded early so inline chart scripts in page content can use it) -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
@@ -30,7 +33,7 @@
   {# Topbar inlined so the page_title block works via template inheritance #}
   <header class="topbar" id="topbar">
     <div class="topbar-left">
-      <button class="btn btn-ghost btn-sm sidebar-toggle d-md-none" onclick="toggleSidebar()" style="padding:6px;" aria-label="Toggle menu">
+      <button class="btn btn-ghost btn-sm sidebar-toggle d-lg-none" onclick="toggleSidebar()" style="padding:6px;" aria-label="Toggle menu">
         <i class="bi bi-list" style="font-size:1.25rem;"></i>
       </button>
       <span class="topbar-title">{% block page_title %}{% endblock %}</span>
@@ -104,7 +107,9 @@
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <!-- SmartServe App JS -->
-<script src="/static/js/app.js?v=20260628-4"></script>
+<script src="/static/js/app.js?v=20260630-noir-1"></script>
+<!-- Motion layer (respects prefers-reduced-motion + Reduce-motion toggle) -->
+<script src="/static/js/motion.js?v=20260630-noir-2"></script>
 
 {% block extra_js %}{% endblock %}
 </body>

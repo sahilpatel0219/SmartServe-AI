@@ -100,6 +100,8 @@ else:
 # ── MongoDB settings (accessed via mongo/client.py) ────────────────────────────
 MONGO_URI = config('MONGO_URI', default='mongodb://localhost:27017')
 MONGO_DB_NAME = config('MONGO_DB_NAME', default='smartserve_db')
+# Set True in .env only if Atlas certificate validation fails locally (dev only)
+MONGO_TLS_ALLOW_INVALID = config('MONGO_TLS_ALLOW_INVALID', default=False, cast=bool)
 
 # ── Password Validation ─────────────────────────────────────────────────────────
 AUTH_PASSWORD_VALIDATORS = [

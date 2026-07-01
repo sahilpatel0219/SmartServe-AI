@@ -227,8 +227,9 @@ SmartServe AI
 ├── notifications/       # Smart alerts (low stock, expiry, waste risk)
 ├── reports/             # PDF (reportlab) + Excel (openpyxl) exports
 ├── static/
-│   ├── css/design-system.css  # Full design token system
-│   └── js/app.js              # UI utilities (toast, sidebar, dropzone)
+│   ├── css/theme.css          # Noir Crimson design system (tokens + components)
+│   ├── js/app.js              # UI utilities (toast, sidebar, dropzone, motion toggle)
+│   └── js/motion.js           # Motion layer (count-up, scroll reveal; reduced-motion aware)
 └── templates/           # All HTML templates (base + per-app)
 ```
 

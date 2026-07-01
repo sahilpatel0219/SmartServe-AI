@@ -108,10 +108,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const activeLink = document.querySelector('.sidebar-nav .nav-link.active');
   if (activeLink) activeLink.scrollIntoView({ block: 'nearest', inline: 'nearest' });
 
-  // Sync theme icon with current theme
-  const icon = document.getElementById('themeIcon');
-  const savedTheme = localStorage.getItem('ss_theme') || 'light';
-  if (icon) icon.className = savedTheme === 'dark' ? 'bi bi-sun' : 'bi bi-moon';
+  // Sync the "Reduce motion" toggle label/icon with saved preference
+  syncMotionToggle();
 
 });
 
@@ -126,24 +124,36 @@ function checkFile(key) {
   return true;
 }
 
-// ── Theme (light / dark) ─────────────────────────────────────
-function applyTheme(theme) {
-  document.documentElement.setAttribute('data-theme', theme);
-  localStorage.setItem('ss_theme', theme);
-  const icon = document.getElementById('themeIcon');
-  if (icon) icon.className = theme === 'dark' ? 'bi bi-sun' : 'bi bi-moon';
-}
-
-function toggleTheme() {
-  const current = document.documentElement.getAttribute('data-theme') || 'light';
-  applyTheme(current === 'dark' ? 'light' : 'dark');
-}
-
-// Apply saved theme immediately (runs before DOMContentLoaded to avoid flash)
+// ── Theme ────────────────────────────────────────────────────
+// Dark is the default and only built theme in the Noir Crimson system. The
+// pre-paint inline script in base.html applies data-theme before first paint;
+// this re-asserts it as a safety net. A light theme is structurally possible
+// later (tokens are theme-able) but is intentionally not built yet.
 (function () {
-  const saved = localStorage.getItem('ss_theme') || 'light';
+  const saved = localStorage.getItem('ss_theme') || 'dark';
   document.documentElement.setAttribute('data-theme', saved);
 })();
+
+// ── Motion preference (user toggle to reduce interface motion) ───────────────
+function syncMotionToggle() {
+  const off   = localStorage.getItem('ss_motion') === 'off';
+  const icon  = document.getElementById('motionIcon');
+  const label = document.getElementById('motionLabel');
+  if (icon)  icon.className = off ? 'bi bi-play-circle' : 'bi bi-stars';
+  if (label) label.textContent = off ? 'Enable motion' : 'Reduce motion';
+}
+
+function toggleMotion() {
+  const off = localStorage.getItem('ss_motion') === 'off';
+  if (off) {
+    localStorage.removeItem('ss_motion');
+    document.documentElement.classList.remove('no-motion');
+  } else {
+    localStorage.setItem('ss_motion', 'off');
+    document.documentElement.classList.add('no-motion');
+  }
+  syncMotionToggle();
+}
 
 // ── Formatters ───────────────────────────────────────────────
 function formatCurrency(val, currency = 'INR') {

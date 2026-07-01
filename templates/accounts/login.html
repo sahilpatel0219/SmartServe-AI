@@ -3,18 +3,19 @@
 
 {% block full_page %}
 <div class="auth-page">
-  <div style="width:100%;max-width:420px;">
+  <div class="glow-blob" style="top:-160px;left:50%;transform:translateX(-50%);"></div>
+  <div style="width:100%;max-width:420px;position:relative;z-index:1;">
 
     <div class="auth-logo" style="justify-content:center;margin-bottom:var(--space-6);">
-      <div style="width:44px;height:44px;background:var(--color-primary);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:1.25rem;">S</div>
+      <div class="logo-mark" style="width:44px;height:44px;font-size:1.25rem;">S</div>
       <div>
-        <div style="font-weight:700;font-size:1.15rem;color:var(--color-ink);">SmartServe AI</div>
-        <div style="font-size:var(--text-xs);color:var(--color-muted);">AI-Powered Food Business OS</div>
+        <div style="font-family:var(--font-display);font-weight:700;font-size:1.15rem;color:var(--text-primary);letter-spacing:-.02em;">SmartServe AI</div>
+        <div style="font-size:var(--text-xs);color:var(--text-muted);">AI-Powered Food Business OS</div>
       </div>
     </div>
 
     <div class="auth-card">
-      <h1 style="font-size:var(--text-2xl);font-weight:700;margin-bottom:4px;">Welcome back</h1>
+      <h1 class="section-title" style="margin-bottom:4px;">Welcome back</h1>
       <p class="text-muted text-sm mb-6">Sign in to your SmartServe workspace</p>
 
       <form method="post" novalidate>

@@ -80,8 +80,8 @@
       <a href="{% url 'notifications:index' %}" class="nav-link {% if 'notifications' in request.resolver_match.namespace %}active{% endif %}">
         <i class="bi bi-bell"></i> Notifications
       </a>
-      <button type="button" class="nav-link w-100 text-start border-0 bg-transparent" onclick="toggleTheme()" title="Toggle dark / light mode" style="cursor:pointer;">
-        <i class="bi bi-moon" id="themeIcon"></i> Theme
+      <button type="button" class="nav-link w-100 text-start border-0 bg-transparent" onclick="toggleMotion()" title="Reduce / enable interface motion" style="cursor:pointer;">
+        <i class="bi bi-stars" id="motionIcon"></i> <span id="motionLabel">Reduce motion</span>
       </button>
     </div>
 

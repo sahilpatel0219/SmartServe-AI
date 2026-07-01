@@ -4,14 +4,14 @@
 {% block title %}SmartServe AI — AI-Powered Operating System for Food Businesses{% endblock %}
 
 {% block full_page %}
-<div style="min-height:100vh;background:var(--color-canvas);">
+<div class="glow-wrap" style="min-height:100vh;background:var(--bg-base);overflow:hidden;">
 
-  <!-- Nav -->
-  <nav style="position:sticky;top:0;z-index:100;background:var(--color-surface);border-bottom:1px solid var(--color-border);padding:0 var(--space-8);">
+  <!-- Nav (glass) -->
+  <nav style="position:sticky;top:0;z-index:100;background:rgba(20,20,22,.72);backdrop-filter:blur(var(--blur)) saturate(140%);-webkit-backdrop-filter:blur(var(--blur)) saturate(140%);border-bottom:1px solid var(--hairline);padding:0 var(--space-8);">
     <div style="max-width:1200px;margin:0 auto;height:64px;display:flex;align-items:center;justify-content:space-between;">
       <div style="display:flex;align-items:center;gap:var(--space-3);">
-        <div style="width:36px;height:36px;background:var(--color-primary);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:1.1rem;">S</div>
-        <span style="font-weight:700;font-size:1.1rem;color:var(--color-ink);">SmartServe AI</span>
+        <div class="logo-mark">S</div>
+        <span style="font-family:var(--font-display);font-weight:700;font-size:1.1rem;color:var(--text-primary);letter-spacing:-.02em;">SmartServe AI</span>
       </div>
       <div style="display:flex;align-items:center;gap:var(--space-3);">
         <a href="{% url 'accounts:login' %}" class="btn btn-outline btn-sm">Sign in</a>
@@ -20,18 +20,19 @@
     </div>
   </nav>
 
-  <!-- Hero -->
-  <section style="max-width:1200px;margin:0 auto;padding:var(--space-16) var(--space-8);text-align:center;">
-    <div style="display:inline-flex;align-items:center;gap:var(--space-2);background:var(--color-primary-light);border:1px solid var(--color-border);border-radius:var(--radius-pill);padding:6px 16px;margin-bottom:var(--space-6);">
-      <i class="bi bi-stars" style="color:var(--color-primary);font-size:14px;"></i>
-      <span style="font-size:var(--text-sm);font-weight:var(--fw-medium);color:var(--color-primary);">AI-Powered Food Business OS</span>
+  <!-- Hero (dramatic: crimson glow + accent headline) -->
+  <section style="position:relative;max-width:1200px;margin:0 auto;padding:var(--space-16) var(--space-8);text-align:center;">
+    <div class="glow-blob" style="top:-120px;left:50%;transform:translateX(-50%);"></div>
+
+    <div class="status-pill" style="margin-bottom:var(--space-6);color:var(--brand);border-color:var(--brand-tint);background:var(--brand-tint);">
+      <i class="bi bi-stars"></i> AI-Powered Food Business OS
     </div>
 
-    <h1 style="font-size:clamp(2rem,5vw,3.5rem);font-weight:800;color:var(--color-ink);line-height:1.15;margin-bottom:var(--space-6);max-width:800px;margin-left:auto;margin-right:auto;">
-      Run your food business<br>smarter with AI
+    <h1 class="display-hero" style="margin-bottom:var(--space-6);max-width:860px;margin-left:auto;margin-right:auto;">
+      Run your food business <span class="accent">smarter with AI</span>
     </h1>
 
-    <p style="font-size:var(--text-lg);color:var(--color-muted);max-width:580px;margin:0 auto var(--space-8);line-height:1.7;">
+    <p style="font-size:var(--text-lg);color:var(--text-muted);max-width:580px;margin:0 auto var(--space-8);line-height:1.7;">
       SmartServe AI combines orders, inventory, staff, analytics, and machine learning into one platform built for restaurants, cafés, bakeries, and food trucks.
     </p>
 
@@ -48,7 +49,7 @@
     <div class="grid grid-3 gap-6">
 
       {% for feat in features %}
-      <div class="feature-card">
+      <div class="feature-card" data-reveal>
         <div class="feature-card__icon"><i class="bi bi-{{ feat.icon }}"></i></div>
         <div class="feature-card__title">{{ feat.title }}</div>
         <p class="feature-card__desc">{{ feat.desc }}</p>
@@ -59,8 +60,8 @@
   </section>
 
   <!-- Footer -->
-  <footer style="border-top:1px solid var(--color-border);padding:var(--space-8);text-align:center;">
-    <p style="font-size:var(--text-sm);color:var(--color-muted);">
+  <footer style="border-top:1px solid var(--hairline);padding:var(--space-8);text-align:center;">
+    <p style="font-size:var(--text-sm);color:var(--text-muted);">
       &copy; 2025 SmartServe AI. Built for food businesses that mean business.
     </p>
   </footer>

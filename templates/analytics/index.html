@@ -31,7 +31,7 @@
 <!-- KPI row -->
 <div class="stat-grid mb-6">
   <div class="stat-card">
-    <div class="stat-icon" style="background:rgba(45,106,79,.12);color:var(--color-primary);">
+    <div class="stat-icon" style="background:var(--brand-tint);color:var(--brand);">
       <i class="bi bi-currency-rupee"></i>
     </div>
     <div>
@@ -45,7 +45,7 @@
     {% endif %}
   </div>
   <div class="stat-card">
-    <div class="stat-icon" style="background:rgba(232,163,61,.12);color:var(--color-secondary);">
+    <div class="stat-icon" style="background:var(--success-tint);color:var(--success);">
       <i class="bi bi-graph-up-arrow"></i>
     </div>
     <div>
@@ -54,7 +54,7 @@
     </div>
   </div>
   <div class="stat-card">
-    <div class="stat-icon" style="background:rgba(45,106,79,.08);color:var(--color-primary);">
+    <div class="stat-icon" style="background:var(--info-tint);color:var(--info);">
       <i class="bi bi-receipt"></i>
     </div>
     <div>
@@ -63,7 +63,7 @@
     </div>
   </div>
   <div class="stat-card">
-    <div class="stat-icon" style="background:rgba(22,24,29,.07);color:var(--color-ink);">
+    <div class="stat-icon" style="background:var(--glass-bg);color:var(--text-primary);">
       <i class="bi bi-basket"></i>
     </div>
     <div>
@@ -128,15 +128,20 @@
   const dowLbls  = {{ chart_data.dow_labels|safe }};
   const dowData  = {{ chart_data.dow_data|safe }};
 
+  // Pull chart colors from the Noir Crimson tokens (no hardcoded palette)
   const _css = getComputedStyle(document.documentElement);
-  const fontColor = (_css.getPropertyValue('--color-ink') || '#16181D').trim();
-  const gridColor = (document.documentElement.getAttribute('data-theme') === 'dark')
-    ? 'rgba(255,255,255,.08)' : 'rgba(22,24,29,.06)';
+  const tok = (n, fb) => (_css.getPropertyValue(n) || fb).trim();
+  const cBrand   = tok('--brand', '#E5392E');
+  const cBrandTint = tok('--brand-tint', 'rgba(229,57,46,.12)');
+  const cInfo    = tok('--info', '#60A5FA');
+  const cInfoTint = tok('--info-tint', 'rgba(96,165,250,.14)');
+  const fontColor = tok('--text-muted', '#A1A1AA');
+  const gridColor = 'rgba(255,255,255,.07)';
 
   Chart.defaults.font.family = "'Inter','Segoe UI',sans-serif";
   Chart.defaults.color = fontColor;
 
-  // Revenue & Profit trend (line)
+  // Revenue & Profit trend (line) — crimson primary, blue secondary
   new Chart(document.getElementById('revTrendChart'), {
     type: 'line',
     data: {
@@ -145,8 +150,8 @@
         {
           label: 'Revenue',
           data: revenue,
-          borderColor: '#2D6A4F',
-          backgroundColor: 'rgba(45,106,79,.08)',
+          borderColor: cBrand,
+          backgroundColor: cBrandTint,
           fill: true,
           tension: .35,
           pointRadius: labels.length > 30 ? 0 : 3,
@@ -154,8 +159,8 @@
         {
           label: 'Profit',
           data: profit,
-          borderColor: '#E8A33D',
-          backgroundColor: 'rgba(232,163,61,.08)',
+          borderColor: cInfo,
+          backgroundColor: cInfoTint,
           fill: true,
           tension: .35,
           pointRadius: labels.length > 30 ? 0 : 3,
@@ -184,7 +189,7 @@
         datasets: [{
           label: 'Revenue',
           data: tiRev,
-          backgroundColor: 'rgba(45,106,79,.75)',
+          backgroundColor: cBrand,
           borderRadius: 6,
         }],
       },
@@ -212,7 +217,7 @@
         datasets: [{
           label: 'Revenue',
           data: dowData,
-          backgroundColor: 'rgba(45,106,79,.75)',
+          backgroundColor: cBrand,
           borderRadius: 6,
           maxBarThickness: 28,
         }],

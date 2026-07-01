@@ -137,16 +137,27 @@ def landing_view(request):
     if request.user.is_authenticated:
         return redirect('core:dashboard')
 
+    # Icon colors are handled by the .feature-card__icon class (theme token),
+    # so feature dicts carry only content — no presentation/hex here.
     features = [
-        {'icon': 'receipt', 'title': 'Order Management', 'desc': 'Counter, QR, delivery, phone — manage all orders in one live board.', 'bg': '#E8F5EF', 'color': '#2D6A4F'},
-        {'icon': 'box-seam', 'title': 'Smart Inventory', 'desc': 'Auto-deduct stock when orders are placed. Get alerted before you run out.', 'bg': '#FEF3DD', 'color': '#E8A33D'},
-        {'icon': 'bar-chart-line', 'title': 'Real-Time Analytics', 'desc': 'Daily revenue, profit, top items, and busiest hours — from your own data.', 'bg': '#DBEAFE', 'color': '#2563EB'},
-        {'icon': 'cpu', 'title': 'AI Forecasting', 'desc': 'Demand forecasts, waste prediction, and a health score — trained on your data.', 'bg': '#E8F5EF', 'color': '#2D6A4F'},
-        {'icon': 'chat-dots', 'title': 'AI Assistant', 'desc': 'Ask questions in plain language. Get answers from your own business metrics.', 'bg': '#FEF3DD', 'color': '#E8A33D'},
-        {'icon': 'people', 'title': 'Team & Suppliers', 'desc': 'Manage staff shifts, attendance, suppliers, and purchase orders in one place.', 'bg': '#DBEAFE', 'color': '#2563EB'},
+        {'icon': 'receipt', 'title': 'Order Management', 'desc': 'Counter, QR, delivery, phone — manage all orders in one live board.'},
+        {'icon': 'box-seam', 'title': 'Smart Inventory', 'desc': 'Auto-deduct stock when orders are placed. Get alerted before you run out.'},
+        {'icon': 'bar-chart-line', 'title': 'Real-Time Analytics', 'desc': 'Daily revenue, profit, top items, and busiest hours — from your own data.'},
+        {'icon': 'cpu', 'title': 'AI Forecasting', 'desc': 'Demand forecasts, waste prediction, and a health score — trained on your data.'},
+        {'icon': 'chat-dots', 'title': 'AI Assistant', 'desc': 'Ask questions in plain language. Get answers from your own business metrics.'},
+        {'icon': 'people', 'title': 'Team & Suppliers', 'desc': 'Manage staff shifts, attendance, suppliers, and purchase orders in one place.'},
     ]
 
     return render(request, 'core/landing.html', {'features': features})
+
+
+def styleguide_view(request):
+    """
+    Living style guide — renders every component and state in the Noir Crimson
+    theme on a single page for review. Standalone (no auth/chrome) so the design
+    system can be inspected in isolation. Presentation only; no business data.
+    """
+    return render(request, 'core/styleguide.html')
 
 
 def handler404(request, exception):
