@@ -147,10 +147,11 @@
   const tok = (n, fb) => (_css.getPropertyValue(n) || fb).trim();
   const cBrand = tok('--brand', '#E5392E');
   const cBrandTint = tok('--brand-tint', 'rgba(229,57,46,.12)');
-  const gridColor = 'rgba(255,255,255,.07)';
-  Chart.defaults.font.family = "'Inter','Segoe UI',sans-serif";
+  const gridColor = tok('--hairline', 'rgba(255,255,255,.07)');
+  Chart.defaults.font.family = tok('--font-body', 'Inter, sans-serif');
   Chart.defaults.color = tok('--text-muted', '#A1A1AA');
-  new Chart(document.getElementById('forecastChart'), {
+  var _reg = (window.SmartServe && SmartServe.registerChart) ? SmartServe.registerChart : (c => c);
+  _reg(new Chart(document.getElementById('forecastChart'), {
     type: 'line',
     data: {
       labels,
@@ -159,6 +160,7 @@
         data,
         borderColor: cBrand,
         backgroundColor: cBrandTint,
+        _ssRole: 'brand', _ssFill: true,
         fill: true,
         tension: .4,
         pointRadius: 5,
@@ -175,7 +177,7 @@
         }
       }
     }
-  });
+  }));
 })();
 </script>
 {% endif %}

@@ -1,56 +1,81 @@
-# SmartServe AI — Design System ("Noir Crimson")
+# SmartServe AI — Design System
 
-A dark, premium, editorial UI: near-black canvas, a single glowing crimson
-accent, tight grotesk headlines, glassmorphic depth, and tasteful motion.
+A premium, editorial UI in two themes that share one structure, type system, and
+component set — only the token *values* differ:
 
-> **Live reference:** run the app and open **`/styleguide`** to see every
-> component and state rendered in the real theme.
+- **Dark (default) — "Noir Crimson":** near-black canvas, glowing **crimson** accent.
+- **Light — "Indigo":** warm-white canvas, **indigo** accent (deliberately not red,
+  so light-mode red alerts never collide with the brand).
+
+> **Live reference:** run the app and open **`/styleguide`** (has a theme toggle)
+> to see every component and state in either theme.
 >
 > **Single source of truth:** [`static/css/theme.css`](static/css/theme.css).
 > All color, spacing, radius, shadow, blur, and type are CSS custom properties.
 > No component hardcodes a hex value outside that file.
 
+## Type system (shared by both themes)
+
+One deliberate sans-serif system — **no serif anywhere**, no stray non-token fonts.
+
+- **Display** `--font-display` = **Inter Tight** (600/700/800) — hero, h1–h3, big KPI
+  numbers; use `--lh-tight`/`--lh-snug` + `--tracking-tight`.
+- **Body** `--font-body` = **Inter** (400/500/600) — all UI text, tables, forms,
+  captions; `--lh-normal`.
+- **Mono** `--font-mono` = JetBrains Mono — **only** for order IDs / raw code.
+- Weights: `--fw-regular 400`, `--fw-medium 500`, `--fw-semibold 600`, `--fw-bold 700`,
+  `--fw-black 800` (legacy `--fw-normal`/`--fw-semi` aliased).
+- Fluid scale (`clamp()`): `--fs-hero`, `--fs-h1`, `--fs-h2`, `--fs-h3`, `--fs-title`,
+  `--fs-body`, `--fs-sm`, `--fs-caption`.
+- All numeric data uses `font-variant-numeric: tabular-nums` (`.tabular-nums`).
+- Fonts load via `<link rel="preconnect">` + `display=swap`; the pre-paint theme
+  script prevents FOUC and matched sans fallbacks minimize FOUT.
+
 ---
 
 ## 1. Tokens
 
-### Surfaces
-| Token | Value | Use |
-|---|---|---|
-| `--bg-deep` | `#070708` | Behind hero/auth, deepest layer |
-| `--bg-base` | `#0A0A0B` | App background |
-| `--bg-elev-1` | `#141416` | Cards, panels, sidebar |
-| `--bg-elev-2` | `#1A1A1D` | Inputs, table headers, footers |
-| `--glass-bg` | `rgba(255,255,255,.04)` | Glassmorphic raised/overlay surfaces |
-| `--glass-border` | `rgba(255,255,255,.09)` | Glass borders |
-| `--hairline` | `rgba(255,255,255,.08)` | Hairline dividers/borders |
+Token **names are identical across themes**; only values differ. Values live in
+`[data-theme="dark"]` and `[data-theme="light"]`; theme-independent tokens (type,
+spacing, radius, blur, motion) and the legacy `--color-*`/`--radius-*`/`--shadow-*`
+aliases live on `:root`.
 
-### Text
-| Token | Value | Use |
-|---|---|---|
-| `--text-primary` | `#F4F4F3` | Body & headings |
-| `--text-muted` | `#A1A1AA` | Secondary text |
-| `--text-faint` | `#6B6B73` | Captions, placeholders, icons |
+### Surfaces
+| Token | Dark | Light | Use |
+|---|---|---|---|
+| `--bg-deep` | `#070708` | `#ECEBE8` | Behind hero/auth |
+| `--bg-base` | `#0A0A0B` | `#F7F7F5` | App background |
+| `--bg-elev-1` | `#141416` | `#FFFFFF` | Cards, panels, sidebar |
+| `--bg-elev-2` | `#1A1A1D` | `#FFFFFF` | Inputs, table headers |
+| `--glass-bg` | white /.04 | white /.65 | Glassmorphic surfaces |
+| `--hairline` | white /.08 | `#111318` /.08 | Hairline dividers |
+
+### Text (AA verified)
+| Token | Dark | Light | Contrast on card (light) |
+|---|---|---|---|
+| `--text-primary` | `#F4F4F3` | `#14161C` | 18.1 |
+| `--text-muted` | `#A1A1AA` | `#565B63` | 6.8 |
+| `--text-faint` | `#6B6B73` | `#71767E` | 4.57 |
 
 ### Brand & status
-The brand is red, so red is **not** the generic error color. Use `--brand` for
-interactive chrome (buttons, links, active nav, highlights) and solid *critical*
-banners. Use the **status palette** for data states, deltas, stock levels, and
-validation. Brand vs. alert is distinguished by **fill + icon + position**, not
-hue alone.
+The brand is **not** the generic error color. Use `--brand` for interactive chrome
+(buttons, links, active nav, highlights) and solid *critical* banners. Use the
+**status palette** for data states, deltas, stock levels, and validation. Brand vs.
+alert is distinguished by **fill + icon + position**, not hue alone.
 
-| Token | Value | Use |
-|---|---|---|
-| `--brand` | `#E5392E` | CTAs, links, active states, highlights |
-| `--brand-hover` | `#C72A22` | Hover |
-| `--brand-tint` / `--brand-glow` | crimson @ .12 / .45 | Soft fills / glow |
-| `--success` | `#34D399` | Positive data, "in stock", up-deltas |
-| `--warning` | `#FBBF24` | Caution, "low" |
-| `--info` | `#60A5FA` | Neutral/secondary data series |
-| `--danger` | `#FF5A52` | Negative data (losses, below-threshold) |
-| `--critical` | = `--brand` | Solid system-critical banners only |
+| Token | Dark | Light | Use |
+|---|---|---|---|
+| `--brand` | `#E5392E` (crimson) | `#4F46E5` (indigo) | CTAs, links, active, highlights |
+| `--brand-hover` | `#C72A22` | `#4338CA` | Hover |
+| `--success` | `#34D399` | `#15803D` | Positive data, up-deltas (AA 5.0) |
+| `--warning` | `#FBBF24` | `#B45309` | Caution, "low" (AA 5.0) |
+| `--info` | `#60A5FA` | `#2563EB` | Secondary data series (AA 5.2) |
+| `--danger` | `#FF5A52` | `#DC2626` | Negative data (AA 4.8) |
+| `--critical` | = `--brand` (red) | `#B91C1C` (red) | Solid system-critical banners |
 
-Each status color has a matching `*-tint` for soft badge/alert backgrounds.
+In **light**, brand is indigo and critical/danger are red — cleanly separate. Each
+status color has a matching `*-tint` for soft fills; `--focus-ring` and
+`--skeleton-base/sheen` are also theme-scoped so focus and shimmer read on both.
 
 ### Radius, blur, elevation
 `--r-sm 10px` · `--r-md 14px` · `--r-lg 20px` · `--r-pill 999px` · `--blur 20px`
@@ -141,9 +166,31 @@ Mobile-first; verified at 375 / 768 / 1024 / 1440px with no horizontal overflow.
 
 ---
 
-## 6. Theming
+## 6. Theming (two themes)
 
-Dark is the **default and only built theme**. Tokens are structured so a light
-theme could be added later under a `[data-theme="light"]` block, but it is
-intentionally not built now. The pre-paint script in `base.html` applies the
-theme before first paint to avoid flash.
+Two themes switch via `data-theme` on `<html>`: **dark** (default, crimson) and
+**light** (indigo). Token names are identical; only values differ.
+
+- **Storage key:** `localStorage['smartserve-theme']` = `'dark'` | `'light'`.
+- **Default logic:** saved choice → OS `prefers-color-scheme` → dark fallback.
+- **No-FOUC:** a script at the very top of `<head>` (in `base.html` and the
+  styleguide) sets `data-theme` before any CSS/paint.
+- **Toggle:** a real `<button>` in the top bar (and on `/styleguide`) — moon/sun
+  icon, `aria-label` + `aria-pressed`, keyboard-operable, ≥44px. It flips
+  `data-theme`, persists the choice, swaps the icon, and calls `applyChartTheme()`.
+- **Post-load transition:** `app.js` adds `html.theme-ready` after first paint, so
+  switching themes animates (~200ms) but the initial load never flashes a
+  transition. Disabled under `prefers-reduced-motion` / `html.no-motion`.
+- **JS-driven visuals re-theme on toggle:** Chart.js charts register via
+  `SmartServe.registerChart()` (registry initialized in `<head>`) and are recolored
+  by `applyChartTheme()` reading tokens through `getComputedStyle`. Film-grain is
+  gated to dark; the hero glow softens on light; skeleton shimmer and focus rings
+  use theme-scoped tokens; glass panels read `--glass-*` so they flip automatically.
+
+## 7. Accessibility
+
+- Light-mode text and status colors verified **WCAG AA** (see the Text/Status tables).
+- Status is never color-only — always paired with an icon + label.
+- Visible focus rings in both themes via `--focus-ring`; toggle is keyboard- and
+  screen-reader-operable.
+- Full `prefers-reduced-motion` support + a user "Reduce motion" toggle.

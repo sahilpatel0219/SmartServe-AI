@@ -6,8 +6,18 @@
   <meta name="description" content="SmartServe AI — AI-Powered Operating System for Food Businesses">
   <title>{% block title %}SmartServe AI{% endblock %}</title>
 
-  <!-- Set theme before paint to avoid flash (dark is default) -->
-  <script>(function(){var t=localStorage.getItem('ss_theme')||'dark';document.documentElement.setAttribute('data-theme',t);if(localStorage.getItem('ss_motion')==='off')document.documentElement.classList.add('no-motion');})();</script>
+  <!-- Set theme before any CSS/paint to avoid FOUC. Default: saved choice,
+       else the OS colour-scheme, else dark. -->
+  <script>
+  (function(){
+    try{
+      var t = localStorage.getItem('smartserve-theme');
+      if(!t){ t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'; }
+      document.documentElement.setAttribute('data-theme', t);
+    }catch(e){ document.documentElement.setAttribute('data-theme','dark'); }
+    try{ if(localStorage.getItem('ss_motion')==='off') document.documentElement.classList.add('no-motion'); }catch(e){}
+  })();
+  </script>
 
   <!-- Google Fonts: Inter Tight (display) + Inter (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,10 +28,20 @@
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <!-- Noir Crimson Design System (versioned to bust browser cache on updates) -->
-  <link rel="stylesheet" href="/static/css/theme.css?v=20260630-noir-2">
+  <link rel="stylesheet" href="/static/css/theme.css?v=20260630-noir-8">
 
   <!-- Chart.js (loaded early so inline chart scripts in page content can use it) -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <!-- Chart registry — defined before content chart scripts run so they can
+       register instances for theme re-coloring. applyChartTheme() is added by app.js. -->
+  <script>
+  (function(){
+    window.SmartServe = window.SmartServe || {};
+    SmartServe.charts = SmartServe.charts || [];
+    SmartServe.token = function(n, f){ var v = getComputedStyle(document.documentElement).getPropertyValue(n).trim(); return v || f || ''; };
+    SmartServe.registerChart = function(c){ if(c) SmartServe.charts.push(c); return c; };
+  })();
+  </script>
 
   {% block extra_css %}{% endblock %}
 </head>
@@ -61,6 +81,12 @@
         </ul>
       </div>
       {% endif %}
+
+      <!-- Theme toggle (dark ⇄ light) -->
+      <button type="button" class="topbar-icon-btn" id="themeToggle" onclick="toggleTheme()"
+              aria-label="Switch color theme" aria-pressed="false" title="Switch theme">
+        <i class="bi bi-moon-stars" id="themeIcon" style="font-size:1rem;"></i>
+      </button>
 
       <!-- Notifications bell -->
       <a href="{% url 'notifications:index' %}" class="topbar-icon-btn" title="Notifications" style="position:relative;">
@@ -107,7 +133,7 @@
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <!-- SmartServe App JS -->
-<script src="/static/js/app.js?v=20260630-noir-1"></script>
+<script src="/static/js/app.js?v=20260630-noir-3"></script>
 <!-- Motion layer (respects prefers-reduced-motion + Reduce-motion toggle) -->
 <script src="/static/js/motion.js?v=20260630-noir-2"></script>
 

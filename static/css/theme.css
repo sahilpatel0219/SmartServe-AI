@@ -15,71 +15,58 @@
    1. DESIGN TOKENS
    ───────────────────────────────────────────────────────────── */
 :root {
-  /* ── Surfaces ── */
-  --bg-deep:    #070708;
-  --bg-base:    #0A0A0B;
-  --bg-elev-1:  #141416;
-  --bg-elev-2:  #1A1A1D;
-  --glass-bg:     rgba(255,255,255,.04);
-  --glass-border: rgba(255,255,255,.09);
-  --hairline:     rgba(255,255,255,.08);
+  /* Color, surface, and shadow tokens are THEME-SCOPED — see the
+     [data-theme="dark"] (default) and [data-theme="light"] blocks below.
+     :root holds only theme-independent tokens (type, spacing, radius, motion)
+     plus the legacy aliases that re-point old names at the scoped tokens. */
 
-  /* ── Text ── */
-  --text-primary: #F4F4F3;
-  --text-muted:   #A1A1AA;
-  --text-faint:   #6B6B73;
-
-  /* ── Brand (crimson) — CTAs, links, active states, highlights ── */
-  --brand:       #E5392E;
-  --brand-hover: #C72A22;
-  --brand-tint:  rgba(229,57,46,.12);
-  --brand-glow:  rgba(229,57,46,.45);
-
-  /* ── Status palette (separated from brand so alerts stay readable) ── */
-  --success:  #34D399;
-  --warning:  #FBBF24;
-  --info:     #60A5FA;
-  --danger:   #FF5A52;        /* inline negative data (losses, below-threshold) */
-  --critical: var(--brand);   /* solid filled banners for true system-critical only */
-
-  /* tints for soft badge/alert fills */
-  --success-tint: rgba(52,211,153,.13);
-  --warning-tint: rgba(251,191,36,.14);
-  --info-tint:    rgba(96,165,250,.14);
-  --danger-tint:  rgba(255,90,82,.13);
-
-  /* ── Radius / blur ── */
+  /* ── Radius / blur (theme-independent) ── */
   --r-sm:  10px;
   --r-md:  14px;
   --r-lg:  20px;
   --r-pill:999px;
   --blur:  20px;
 
-  /* ── Elevation (layered, soft) ── */
-  --shadow-1: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.35);
-  --shadow-2: 0 2px 6px rgba(0,0,0,.5), 0 20px 50px rgba(0,0,0,.45);
-  --shadow-glow: 0 0 0 1px var(--brand-tint), 0 12px 40px var(--brand-glow);
-  --inset-hi: inset 0 1px 0 rgba(255,255,255,.06);  /* top light-catch */
+  /* ════════════════════════════════════════════════════════════
+     TYPE SYSTEM (shared by both themes — theme-independent)
+     One deliberate sans-serif system. Display = Inter Tight,
+     body = Inter. No serif anywhere. Mono only for order IDs / code.
+     ════════════════════════════════════════════════════════════ */
+  --font-display: 'Inter Tight', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  --font-body:    'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  --font-mono:    'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
 
-  /* ── Type ── */
-  --font-display: 'Inter Tight', system-ui, -apple-system, sans-serif;
-  --font-body:    'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --font-mono:    'SF Mono', 'Fira Code', ui-monospace, monospace;
+  /* Font weights (canonical + legacy aliases kept so nothing breaks) */
+  --fw-regular:  400;
+  --fw-medium:   500;
+  --fw-semibold: 600;
+  --fw-bold:     700;
+  --fw-black:    800;
+  --fw-normal:   400;   /* legacy alias of --fw-regular */
+  --fw-semi:     600;   /* legacy alias of --fw-semibold */
 
-  /* Fluid type scale (clamp: mobile → desktop) */
-  --fs-hero:    clamp(2.4rem, 1.4rem + 4.5vw, 4.5rem);
+  /* Fluid type scale (clamp: mobile → desktop). Canonical names below;
+     existing --fs-page/section/card names retained as aliases so the dark
+     theme renders byte-identical. */
+  --fs-hero:    clamp(2.5rem, 1.4rem + 4.6vw, 4.5rem);
+  --fs-h1:      clamp(2rem, 1.4rem + 2.4vw, 3rem);
+  --fs-h2:      clamp(1.5rem, 1.2rem + 1.4vw, 2.25rem);
+  --fs-h3:      clamp(1.25rem, 1.1rem + .7vw, 1.5rem);
+  --fs-title:   1.125rem;
+  --fs-body:    0.9375rem;
+  --fs-sm:      0.875rem;
+  --fs-caption: 0.75rem;
+  /* legacy scale aliases (unchanged values → dark unaffected) */
   --fs-page:    clamp(1.6rem, 1.2rem + 1.6vw, 2.25rem);
   --fs-section: clamp(1.2rem, 1rem + .7vw, 1.5rem);
   --fs-card:    1.0625rem;
-  --fs-body:    0.9375rem;
-  --fs-caption: 0.8125rem;
 
-  /* Font weights */
-  --fw-normal: 400;
-  --fw-medium: 500;
-  --fw-semi:   600;
-  --fw-bold:   700;
-  --fw-black:  800;
+  /* Line-height + tracking */
+  --lh-tight:  1.05;
+  --lh-snug:   1.25;
+  --lh-normal: 1.5;
+  --tracking-tight:  -0.02em;
+  --tracking-normal: 0;
 
   /* ── Spacing ── */
   --space-1:  0.25rem;
@@ -169,6 +156,121 @@
   --text-4xl:  2.25rem;
 }
 
+/* ════════════════════════════════════════════════════════════
+   THEME SCOPES — switched via [data-theme] on <html>.
+   Token NAMES are identical across themes; only values differ.
+   Dark is the default; light uses an INDIGO brand (never red),
+   so light-mode critical/danger alerts (red) never collide with it.
+   ════════════════════════════════════════════════════════════ */
+[data-theme="dark"] {
+  /* surfaces */
+  --bg-deep:    #070708;
+  --bg-base:    #0A0A0B;
+  --bg-elev-1:  #141416;
+  --bg-elev-2:  #1A1A1D;
+  --glass-bg:     rgba(255,255,255,.04);
+  --glass-border: rgba(255,255,255,.09);
+  --hairline:     rgba(255,255,255,.08);
+
+  /* text */
+  --text-primary: #F4F4F3;
+  --text-muted:   #A1A1AA;
+  --text-faint:   #6B6B73;
+
+  /* brand — crimson */
+  --brand:       #E5392E;
+  --brand-hover: #C72A22;
+  --brand-tint:  rgba(229,57,46,.12);
+  --brand-glow:  rgba(229,57,46,.45);
+
+  /* status palette */
+  --success:  #34D399;
+  --warning:  #FBBF24;
+  --info:     #60A5FA;
+  --danger:   #FF5A52;
+  --critical: var(--brand);   /* dark critical == brand red */
+
+  --success-tint: rgba(52,211,153,.13);
+  --warning-tint: rgba(251,191,36,.14);
+  --info-tint:    rgba(96,165,250,.14);
+  --danger-tint:  rgba(255,90,82,.13);
+
+  /* elevation — heavy black shadows on dark */
+  --shadow-1: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.35);
+  --shadow-2: 0 2px 6px rgba(0,0,0,.5), 0 20px 50px rgba(0,0,0,.45);
+  --shadow-glow: 0 0 0 1px var(--brand-tint), 0 12px 40px var(--brand-glow);
+  --inset-hi: inset 0 1px 0 rgba(255,255,255,.06);  /* top light-catch */
+
+  /* skeleton shimmer (visible on dark) */
+  --skeleton-base:  rgba(255,255,255,.04);
+  --skeleton-sheen: rgba(255,255,255,.08);
+
+  /* visible focus ring */
+  --focus-ring: rgba(229,57,46,.5);
+
+  /* danger-button foreground — dark text reads on the light coral danger */
+  --btn-danger-fg: #1A0606;
+
+  /* tinted glass for the sticky topbar + subtle hover overlay */
+  --topbar-bg: rgba(20,20,22,.72);
+  --overlay-hover: rgba(255,255,255,.08);
+}
+
+[data-theme="light"] {
+  /* surfaces — warm neutral canvas, white raised cards */
+  --bg-deep:    #ECEBE8;
+  --bg-base:    #F7F7F5;
+  --bg-elev-1:  #FFFFFF;
+  --bg-elev-2:  #FFFFFF;
+  --glass-bg:     rgba(255,255,255,.65);
+  --glass-border: rgba(17,19,24,.08);
+  --hairline:     rgba(17,19,24,.08);
+
+  /* text (AA on white: primary 18.1, muted 6.8, faint 4.57) */
+  --text-primary: #14161C;
+  --text-muted:   #565B63;
+  --text-faint:   #71767E;
+
+  /* brand — INDIGO (deliberately not the dark theme's red) */
+  --brand:       #4F46E5;
+  --brand-hover: #4338CA;
+  --brand-tint:  rgba(79,70,229,.10);
+  --brand-glow:  rgba(79,70,229,.18);
+
+  /* status palette, tuned for contrast on white */
+  --success:  #15803D;
+  --warning:  #B45309;
+  --info:     #2563EB;
+  --danger:   #DC2626;        /* inline negative data */
+  --critical: #B91C1C;        /* solid critical banners — RED, separate from indigo brand */
+
+  /* soft washes for badge/alert fills on white */
+  --success-tint: rgba(21,128,61,.10);
+  --warning-tint: rgba(180,83,9,.10);
+  --info-tint:    rgba(37,99,235,.10);
+  --danger-tint:  rgba(220,38,38,.10);
+
+  /* elevation — soft cool-gray shadows; brand glow subtle on light */
+  --shadow-1: 0 1px 2px rgba(17,19,24,.06), 0 8px 24px rgba(17,19,24,.06);
+  --shadow-2: 0 2px 8px rgba(17,19,24,.08), 0 20px 50px rgba(17,19,24,.08);
+  --shadow-glow: 0 0 0 1px var(--brand-tint), 0 10px 30px rgba(79,70,229,.14);
+  --inset-hi: inset 0 1px 0 rgba(255,255,255,.7);  /* subtle top highlight on white cards */
+
+  /* skeleton shimmer (visible on white) */
+  --skeleton-base:  rgba(17,19,24,.06);
+  --skeleton-sheen: rgba(17,19,24,.12);
+
+  /* visible focus ring */
+  --focus-ring: rgba(79,70,229,.4);
+
+  /* danger-button foreground — white reads on the saturated red danger */
+  --btn-danger-fg: #FFFFFF;
+
+  /* tinted glass for the sticky topbar + subtle hover overlay */
+  --topbar-bg: rgba(255,255,255,.75);
+  --overlay-hover: rgba(17,19,24,.06);
+}
+
 /* ─────────────────────────────────────────────────────────────
    2. BASE RESET + GLOBALS
    ───────────────────────────────────────────────────────────── */
@@ -193,8 +295,9 @@ body {
   --bs-border-color: var(--hairline);
 }
 
-/* Subtle film-grain richness — extremely low opacity, never harms contrast */
-body::before {
+/* Subtle film-grain richness — DARK ONLY (dark noise on white looks dirty).
+   Extremely low opacity, never harms contrast. */
+[data-theme="dark"] body::before {
   content: '';
   position: fixed; inset: 0; z-index: 0; pointer-events: none;
   opacity: .025;
@@ -202,6 +305,21 @@ body::before {
 }
 
 ::selection { background: var(--brand-tint); color: var(--text-primary); }
+
+/* Smooth color transition when switching themes — applied ONLY after first
+   paint (JS adds .theme-ready) so the initial load never flashes a transition.
+   Limited to color/background/border props; disabled under reduced motion. */
+html.theme-ready body,
+html.theme-ready .card, html.theme-ready .stat-card, html.theme-ready .feature-card,
+html.theme-ready .sidebar, html.theme-ready .topbar, html.theme-ready .glass,
+html.theme-ready .form-control, html.theme-ready .data-table th, html.theme-ready .btn,
+html.theme-ready .dropdown-menu, html.theme-ready .toast, html.theme-ready .auth-card {
+  transition: background-color .2s ease, border-color .2s ease, color .2s ease, box-shadow .2s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  html.theme-ready * { transition: none !important; }
+}
+html.no-motion.theme-ready * { transition: none !important; }
 
 /* ─────────────────────────────────────────────────────────────
    3. TYPOGRAPHY
@@ -264,10 +382,12 @@ a:hover { color: var(--brand-hover); }
   position: absolute; z-index: -1; pointer-events: none;
   width: 60vw; max-width: 760px; aspect-ratio: 1;
   border-radius: 50%;
-  background: radial-gradient(circle, var(--brand-glow) 0%, rgba(229,57,46,.12) 38%, transparent 70%);
+  background: radial-gradient(circle, var(--brand-glow) 0%, var(--brand-tint) 38%, transparent 70%);
   filter: blur(40px);
   opacity: .9;
 }
+/* Softer glow on light — a strong brand blob muddies a white canvas */
+[data-theme="light"] .glow-blob { opacity: .55; filter: blur(52px); }
 
 /* ─────────────────────────────────────────────────────────────
    5. SIDEBAR (dark, crimson active indicator)
@@ -349,7 +469,7 @@ a:hover { color: var(--brand-hover); }
 .topbar {
   position: fixed; top: 0; left: var(--sidebar-width); right: 0;
   height: var(--topbar-height);
-  background: rgba(20,20,22,.72);
+  background: var(--topbar-bg);
   backdrop-filter: blur(var(--blur)) saturate(140%);
   -webkit-backdrop-filter: blur(var(--blur)) saturate(140%);
   border-bottom: 1px solid var(--hairline);
@@ -539,7 +659,7 @@ a:hover { color: var(--brand-hover); }
   text-decoration: none; line-height: 1; white-space: nowrap;
   min-height: 40px;
 }
-.btn:focus-visible { outline: none; box-shadow: 0 0 0 3px var(--brand-tint); }
+.btn:focus-visible { outline: none; box-shadow: 0 0 0 3px var(--focus-ring); }
 
 .btn-primary {
   background: var(--brand); color: #fff; border-color: var(--brand);
@@ -548,7 +668,7 @@ a:hover { color: var(--brand-hover); }
 .btn-primary:hover { background: var(--brand-hover); border-color: var(--brand-hover); color: #fff; box-shadow: 0 6px 24px var(--brand-glow), var(--inset-hi); }
 
 .btn-secondary { background: var(--glass-bg); color: var(--text-primary); border-color: var(--glass-border); }
-.btn-secondary:hover { background: rgba(255,255,255,.08); color: var(--text-primary); }
+.btn-secondary:hover { background: var(--overlay-hover); color: var(--text-primary); }
 
 .btn-outline { background: transparent; color: var(--text-primary); border-color: var(--glass-border); }
 .btn-outline:hover { background: var(--glass-bg); border-color: var(--text-faint); color: var(--text-primary); }
@@ -556,8 +676,8 @@ a:hover { color: var(--brand-hover); }
 .btn-ghost { background: transparent; color: var(--text-muted); border-color: transparent; }
 .btn-ghost:hover { background: var(--glass-bg); color: var(--text-primary); }
 
-.btn-danger { background: var(--danger); color: #1A0606; border-color: var(--danger); font-weight: var(--fw-bold); }
-.btn-danger:hover { filter: brightness(1.06); color: #1A0606; }
+.btn-danger { background: var(--danger); color: var(--btn-danger-fg); border-color: var(--danger); font-weight: var(--fw-bold); }
+.btn-danger:hover { filter: brightness(1.06); color: var(--btn-danger-fg); }
 
 .btn-sm  { padding: 7px var(--space-3); font-size: var(--text-xs); min-height: 34px; }
 .btn-lg  { padding: 14px var(--space-8); font-size: var(--text-base); min-height: 50px; }
@@ -577,7 +697,7 @@ a:hover { color: var(--brand-hover); }
   transition: border-color var(--t-fast), box-shadow var(--t-fast), background var(--t-fast);
   min-height: 44px;
 }
-.form-control:focus { border-color: var(--brand); box-shadow: 0 0 0 3px var(--brand-tint); background: var(--bg-elev-2); }
+.form-control:focus { border-color: var(--brand); box-shadow: 0 0 0 3px var(--focus-ring); background: var(--bg-elev-2); }
 .form-control::placeholder { color: var(--text-faint); }
 .form-control:hover:not(:focus) { border-color: var(--text-faint); }
 .form-control.is-invalid { border-color: var(--danger); }
@@ -746,7 +866,9 @@ input::placeholder, textarea::placeholder { color: var(--text-faint); }
    ───────────────────────────────────────────────────────────── */
 .spinner { width: 20px; height: 20px; border: 2px solid var(--hairline); border-top-color: var(--brand); border-radius: 50%; animation: spin .7s linear infinite; display: inline-block; }
 .skeleton {
-  background: linear-gradient(90deg, var(--glass-bg) 25%, rgba(255,255,255,.08) 37%, var(--glass-bg) 63%);
+  /* --skeleton-base / --skeleton-sheen are theme-scoped so the shimmer is
+     visible on both dark and white surfaces */
+  background: linear-gradient(90deg, var(--skeleton-base) 25%, var(--skeleton-sheen) 37%, var(--skeleton-base) 63%);
   background-size: 400% 100%;
   border-radius: var(--r-sm);
   animation: shimmer 1.4s ease infinite;

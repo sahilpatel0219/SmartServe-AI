@@ -111,6 +111,13 @@ document.addEventListener('DOMContentLoaded', () => {
   // Sync the "Reduce motion" toggle label/icon with saved preference
   syncMotionToggle();
 
+  // Sync the theme toggle icon/ARIA with the current theme
+  syncThemeToggle();
+
+  // Enable smooth theme color-transitions only AFTER first paint, so switching
+  // themes animates but the initial load does not flash a transition.
+  requestAnimationFrame(() => document.documentElement.classList.add('theme-ready'));
+
 });
 
 // ── Upload file guard ────────────────────────────────────────
@@ -124,15 +131,94 @@ function checkFile(key) {
   return true;
 }
 
-// ── Theme ────────────────────────────────────────────────────
-// Dark is the default and only built theme in the Noir Crimson system. The
-// pre-paint inline script in base.html applies data-theme before first paint;
-// this re-asserts it as a safety net. A light theme is structurally possible
-// later (tokens are theme-able) but is intentionally not built yet.
-(function () {
-  const saved = localStorage.getItem('ss_theme') || 'dark';
-  document.documentElement.setAttribute('data-theme', saved);
-})();
+// ── Theme (dark ⇄ light) ─────────────────────────────────────
+// Dark is the default; light uses an indigo brand. The pre-paint script in
+// base.html sets data-theme before first paint (saved choice → OS preference →
+// dark). Storage key: 'smartserve-theme'.
+const THEME_KEY = 'smartserve-theme';
+
+function currentTheme() {
+  return document.documentElement.getAttribute('data-theme') || 'dark';
+}
+
+// Reflect the active theme on the toggle button's icon + ARIA state.
+function syncThemeToggle() {
+  const theme = currentTheme();
+  const icon = document.getElementById('themeIcon');
+  const btn  = document.getElementById('themeToggle');
+  // Show the icon of the theme you'd switch TO: sun in dark, moon in light.
+  if (icon) icon.className = theme === 'dark' ? 'bi bi-sun' : 'bi bi-moon-stars';
+  if (btn) {
+    btn.setAttribute('aria-pressed', theme === 'light' ? 'true' : 'false');
+    btn.setAttribute('title', theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
+  }
+}
+
+function applyTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  try { localStorage.setItem(THEME_KEY, theme); } catch (e) {}
+  syncThemeToggle();
+  // Re-theme JS-driven visuals that bake colors at render (charts).
+  if (typeof window.applyChartTheme === 'function') window.applyChartTheme();
+}
+
+function toggleTheme() {
+  applyTheme(currentTheme() === 'dark' ? 'light' : 'dark');
+}
+
+// ── Chart theming ────────────────────────────────────────────
+// Chart.js bakes colors at render time, so charts must be re-themed on toggle.
+// Templates register their chart instances (and tag each dataset with a
+// _ssRole of 'brand' | 'info' and _ssFill true/false) via SmartServe.registerChart.
+// The registry itself is initialized early in base.html <head> so content chart
+// scripts (which run before this file) can register; guard with || so we never
+// clobber already-registered charts.
+window.SmartServe = window.SmartServe || {};
+SmartServe.charts = SmartServe.charts || [];
+SmartServe.token = SmartServe.token || function (name, fallback) {
+  const v = getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  return v || fallback || '';
+};
+SmartServe.registerChart = SmartServe.registerChart || function (chart) {
+  if (chart) SmartServe.charts.push(chart);
+  return chart;
+};
+
+window.applyChartTheme = function () {
+  if (typeof Chart === 'undefined') return;
+  const t = SmartServe.token;
+  const font  = t('--text-muted', '#A1A1AA');
+  const grid  = t('--hairline', 'rgba(255,255,255,.07)');
+  const brand = t('--brand', '#E5392E');
+  const brandTint = t('--brand-tint', 'rgba(229,57,46,.12)');
+  const info  = t('--info', '#60A5FA');
+  const infoTint = t('--info-tint', 'rgba(96,165,250,.14)');
+
+  Chart.defaults.color = font;
+  Chart.defaults.font.family = t('--font-body', 'Inter, sans-serif');
+
+  SmartServe.charts.forEach(ch => {
+    if (!ch || !ch.options) return;
+    const scales = ch.options.scales || {};
+    Object.keys(scales).forEach(k => {
+      const s = scales[k];
+      if (s.grid && s.grid.display !== false) s.grid.color = grid;
+      if (s.ticks) s.ticks.color = font;
+    });
+    const lg = ch.options.plugins && ch.options.plugins.legend;
+    if (lg && lg.labels) lg.labels.color = font;
+    (ch.data.datasets || []).forEach(ds => {
+      if (ds._ssRole === 'brand') {
+        ds.borderColor = brand;
+        ds.backgroundColor = ds._ssFill ? brandTint : brand;
+      } else if (ds._ssRole === 'info') {
+        ds.borderColor = info;
+        ds.backgroundColor = ds._ssFill ? infoTint : info;
+      }
+    });
+    ch.update('none');
+  });
+};
 
 // ── Motion preference (user toggle to reduce interface motion) ───────────────
 function syncMotionToggle() {

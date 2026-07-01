@@ -136,13 +136,13 @@
   const cInfo    = tok('--info', '#60A5FA');
   const cInfoTint = tok('--info-tint', 'rgba(96,165,250,.14)');
   const fontColor = tok('--text-muted', '#A1A1AA');
-  const gridColor = 'rgba(255,255,255,.07)';
+  const gridColor = tok('--hairline', 'rgba(255,255,255,.07)');
 
-  Chart.defaults.font.family = "'Inter','Segoe UI',sans-serif";
+  Chart.defaults.font.family = tok('--font-body', 'Inter, sans-serif');
   Chart.defaults.color = fontColor;
 
-  // Revenue & Profit trend (line) — crimson primary, blue secondary
-  new Chart(document.getElementById('revTrendChart'), {
+  // Revenue & Profit trend (line) — brand primary, info secondary
+  SmartServe.registerChart(new Chart(document.getElementById('revTrendChart'), {
     type: 'line',
     data: {
       labels,
@@ -152,6 +152,7 @@
           data: revenue,
           borderColor: cBrand,
           backgroundColor: cBrandTint,
+          _ssRole: 'brand', _ssFill: true,
           fill: true,
           tension: .35,
           pointRadius: labels.length > 30 ? 0 : 3,
@@ -161,6 +162,7 @@
           data: profit,
           borderColor: cInfo,
           backgroundColor: cInfoTint,
+          _ssRole: 'info', _ssFill: true,
           fill: true,
           tension: .35,
           pointRadius: labels.length > 30 ? 0 : 3,
@@ -178,11 +180,11 @@
         },
       },
     },
-  });
+  }));
 
   // Top items horizontal bar
   if (document.getElementById('topItemsChart')) {
-    new Chart(document.getElementById('topItemsChart'), {
+    SmartServe.registerChart(new Chart(document.getElementById('topItemsChart'), {
       type: 'bar',
       data: {
         labels: tiLbls,
@@ -190,6 +192,7 @@
           label: 'Revenue',
           data: tiRev,
           backgroundColor: cBrand,
+          _ssRole: 'brand', _ssFill: false,
           borderRadius: 6,
         }],
       },
@@ -205,12 +208,12 @@
           y: { grid: { display: false } },
         },
       },
-    });
+    }));
   }
 
   // Busiest days (day-of-week) bar
   if (document.getElementById('dowChart')) {
-    new Chart(document.getElementById('dowChart'), {
+    SmartServe.registerChart(new Chart(document.getElementById('dowChart'), {
       type: 'bar',
       data: {
         labels: dowLbls.map(d => d.slice(0,3)),
@@ -218,6 +221,7 @@
           label: 'Revenue',
           data: dowData,
           backgroundColor: cBrand,
+          _ssRole: 'brand', _ssFill: false,
           borderRadius: 6,
           maxBarThickness: 28,
         }],
@@ -234,7 +238,7 @@
           },
         },
       },
-    });
+    }));
   }
 })();
 </script>
