@@ -108,9 +108,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const activeLink = document.querySelector('.sidebar-nav .nav-link.active');
   if (activeLink) activeLink.scrollIntoView({ block: 'nearest', inline: 'nearest' });
 
-  // Sync the "Reduce motion" toggle label/icon with saved preference
-  syncMotionToggle();
-
   // Sync the theme toggle icon/ARIA with the current theme
   syncThemeToggle();
 
@@ -141,17 +138,17 @@ function currentTheme() {
   return document.documentElement.getAttribute('data-theme') || 'dark';
 }
 
-// Reflect the active theme on the toggle button's icon + ARIA state.
+// Reflect the active theme on the sidebar toggle's icon + ARIA state.
 function syncThemeToggle() {
   const theme = currentTheme();
-  const icon = document.getElementById('themeIcon');
-  const btn  = document.getElementById('themeToggle');
-  // Show the icon of the theme you'd switch TO: sun in dark, moon in light.
-  if (icon) icon.className = theme === 'dark' ? 'bi bi-sun' : 'bi bi-moon-stars';
-  if (btn) {
-    btn.setAttribute('aria-pressed', theme === 'light' ? 'true' : 'false');
-    btn.setAttribute('title', theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
-  }
+  const iconClass = theme === 'dark' ? 'bi bi-sun' : 'bi bi-moon-stars'; // icon of the theme you'd switch TO
+  const title = theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme';
+  const pressed = theme === 'light' ? 'true' : 'false';
+
+  const icon = document.getElementById('themeIconSidebar');
+  const btn  = document.getElementById('themeToggleSidebar');
+  if (icon) icon.className = iconClass;
+  if (btn) { btn.setAttribute('aria-pressed', pressed); btn.setAttribute('title', title); }
 }
 
 function applyTheme(theme) {
@@ -219,27 +216,6 @@ window.applyChartTheme = function () {
     ch.update('none');
   });
 };
-
-// ── Motion preference (user toggle to reduce interface motion) ───────────────
-function syncMotionToggle() {
-  const off   = localStorage.getItem('ss_motion') === 'off';
-  const icon  = document.getElementById('motionIcon');
-  const label = document.getElementById('motionLabel');
-  if (icon)  icon.className = off ? 'bi bi-play-circle' : 'bi bi-stars';
-  if (label) label.textContent = off ? 'Enable motion' : 'Reduce motion';
-}
-
-function toggleMotion() {
-  const off = localStorage.getItem('ss_motion') === 'off';
-  if (off) {
-    localStorage.removeItem('ss_motion');
-    document.documentElement.classList.remove('no-motion');
-  } else {
-    localStorage.setItem('ss_motion', 'off');
-    document.documentElement.classList.add('no-motion');
-  }
-  syncMotionToggle();
-}
 
 // ── Formatters ───────────────────────────────────────────────
 function formatCurrency(val, currency = 'INR') {

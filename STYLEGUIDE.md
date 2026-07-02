@@ -18,18 +18,21 @@ component set — only the token *values* differ:
 
 One deliberate sans-serif system — **no serif anywhere**, no stray non-token fonts.
 
-- **Display** `--font-display` = **Inter Tight** (600/700/800) — hero, h1–h3, big KPI
-  numbers; use `--lh-tight`/`--lh-snug` + `--tracking-tight`.
-- **Body** `--font-body` = **Inter** (400/500/600) — all UI text, tables, forms,
-  captions; `--lh-normal`.
+- **Display** `--font-display` = **Helvetica Neue / Helvetica / Arial** — hero, h1–h3,
+  big KPI numbers; use `--lh-tight`/`--lh-snug` + `--tracking-tight`.
+- **Body** `--font-body` = **Helvetica Neue / Helvetica / Arial** — all UI text,
+  tables, forms, captions; `--lh-normal`.
+- All system fonts — no web-font loading, no FOUT risk. Windows/Android generally
+  lack Helvetica Neue and fall back to Arial, which is near-identical; expect a
+  slightly different look across platforms — that's expected, not a bug.
 - **Mono** `--font-mono` = JetBrains Mono — **only** for order IDs / raw code.
 - Weights: `--fw-regular 400`, `--fw-medium 500`, `--fw-semibold 600`, `--fw-bold 700`,
   `--fw-black 800` (legacy `--fw-normal`/`--fw-semi` aliased).
 - Fluid scale (`clamp()`): `--fs-hero`, `--fs-h1`, `--fs-h2`, `--fs-h3`, `--fs-title`,
   `--fs-body`, `--fs-sm`, `--fs-caption`.
 - All numeric data uses `font-variant-numeric: tabular-nums` (`.tabular-nums`).
-- Fonts load via `<link rel="preconnect">` + `display=swap`; the pre-paint theme
-  script prevents FOUC and matched sans fallbacks minimize FOUT.
+- No `<link>` font loading is needed (system fonts); the pre-paint theme script
+  still prevents a theme-color FOUC on load.
 
 ---
 
@@ -83,8 +86,8 @@ status color has a matching `*-tint` for soft fills; `--focus-ring` and
 `--inset-hi` (1px top light-catch on cards).
 
 ### Type
-- **Display:** `Inter Tight` (600/700/800) — headlines, KPI numbers, titles.
-- **Body:** `Inter` (400/500/600).
+- **Display:** `Helvetica Neue` / `Helvetica` / `Arial` (system fonts) — headlines, KPI numbers, titles.
+- **Body:** `Helvetica Neue` / `Helvetica` / `Arial`.
 - Fluid sizes via `clamp()`: `--fs-hero`, `--fs-page`, `--fs-section`, `--fs-card`.
 - Numbers use `font-variant-numeric: tabular-nums` (`.tabular-nums`).
 - A single headline word may be set in `--brand` via `.accent` — used sparingly.
@@ -107,9 +110,15 @@ Class-driven; all read from tokens. (See `/styleguide` for live examples.)
 - **KPI:** `.stat-grid`, `.stat-card`, `.stat-icon`, `.stat-value`,
   `.stat-card-change.up/.down`.
 - **Feature card:** `.feature-card` (`__icon`, `__title`, `__desc`).
-- **Buttons:** `.btn` + `.btn-primary` (crimson, glow on hover) /
-  `.btn-secondary` (glass) / `.btn-outline` / `.btn-ghost` / `.btn-danger`;
-  sizes `.btn-sm/.btn-lg`, `.btn-pill`.
+- **Buttons:** `.btn` + `.btn-primary` (brand color, glow on hover) /
+  `.btn-secondary` / `.btn-outline` / `.btn-ghost` / `.btn-danger`; sizes
+  `.btn-sm/.btn-lg`, `.btn-pill`; `:disabled` (50% opacity, no pointer events).
+  Secondary/outline surfaces use dedicated `--btn-secondary-bg` /
+  `--btn-outline-border` tokens (not the panel `--glass-*` tokens) so they read
+  clearly on both the near-black dark canvas and white light canvas. Motion:
+  hover lifts 1px with a brand-tinted glow; `:active` scales to `.97`;
+  `:focus-visible` shows a 3px ring in `--focus-ring` (crimson in dark, indigo
+  in light) — same timing/easing in both themes, only colors differ.
 - **Forms:** `.form-control` (dark field, crimson focus ring),
   `.form-label/.form-group/.form-text`, `.is-invalid/.is-valid`.
 - **Badges / pills:** `.badge` + `-success/-warning/-danger/-info/-neutral/-brand`;
@@ -145,13 +154,13 @@ Animate only `transform` / `opacity`. Everything degrades gracefully.
   preserving currency/grouping/suffix), **scroll reveal** for `[data-reveal]`
   (manual viewport scan — reliable everywhere), and the Analyze-run progress bar.
 
-### Reduced motion (three layers)
+### Reduced motion — follows the OS setting only
+There is no in-app "Reduce motion" toggle. Motion follows `prefers-reduced-motion`
+exclusively:
 1. Global CSS safety net: `@media (prefers-reduced-motion: reduce)` disables all
-   animation/transition.
-2. User opt-out: the sidebar **"Reduce motion"** toggle sets `html.no-motion`
-   (persisted in `localStorage` as `ss_motion`), which disables CSS motion.
-3. `motion.js` checks both and, when motion is off, reveals all `[data-reveal]`
-   content instantly (never stuck invisible).
+   animation/transition app-wide.
+2. `motion.js` checks the same media query and, when the OS setting is on,
+   reveals all `[data-reveal]` content instantly (never stuck invisible).
 
 ---
 
@@ -175,12 +184,14 @@ Two themes switch via `data-theme` on `<html>`: **dark** (default, crimson) and
 - **Default logic:** saved choice → OS `prefers-color-scheme` → dark fallback.
 - **No-FOUC:** a script at the very top of `<head>` (in `base.html` and the
   styleguide) sets `data-theme` before any CSS/paint.
-- **Toggle:** a real `<button>` in the top bar (and on `/styleguide`) — moon/sun
-  icon, `aria-label` + `aria-pressed`, keyboard-operable, ≥44px. It flips
-  `data-theme`, persists the choice, swaps the icon, and calls `applyChartTheme()`.
+- **Toggle:** a labeled **"Change Theme"** `<button>` (text + moon/sun icon) in the
+  sidebar's Settings section (`#themeToggleSidebar`/`#themeIconSidebar`), at every
+  screen size, plus a matching button on `/styleguide`. Real button, `aria-label`
+  + `aria-pressed`, keyboard-operable, ≥44px touch target. It flips `data-theme`,
+  persists the choice, swaps the icon, and calls `applyChartTheme()`.
 - **Post-load transition:** `app.js` adds `html.theme-ready` after first paint, so
   switching themes animates (~200ms) but the initial load never flashes a
-  transition. Disabled under `prefers-reduced-motion` / `html.no-motion`.
+  transition. Disabled under `prefers-reduced-motion`.
 - **JS-driven visuals re-theme on toggle:** Chart.js charts register via
   `SmartServe.registerChart()` (registry initialized in `<head>`) and are recolored
   by `applyChartTheme()` reading tokens through `getComputedStyle`. Film-grain is
@@ -193,4 +204,5 @@ Two themes switch via `data-theme` on `<html>`: **dark** (default, crimson) and
 - Status is never color-only — always paired with an icon + label.
 - Visible focus rings in both themes via `--focus-ring`; toggle is keyboard- and
   screen-reader-operable.
-- Full `prefers-reduced-motion` support + a user "Reduce motion" toggle.
+- Full `prefers-reduced-motion` support, driven entirely by the OS setting (no
+  in-app override).

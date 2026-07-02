@@ -24,16 +24,18 @@ supersedes the previous green/amber palette.**
   no component hardcodes a hex outside this file. Color/shadow tokens are
   theme-scoped (`[data-theme="dark"]` / `[data-theme="light"]`); type, spacing,
   radius, and motion tokens (plus legacy `--color-*` aliases) live on `:root`.
-- **Type system:** one sans-serif system — **Inter Tight** (display) + **Inter**
-  (body); no serif anywhere; tabular numerals on all data. Weights and a fluid
+- **Type system:** one sans-serif system — **Helvetica Neue / Helvetica / Arial**
+  for both display and body; all system fonts, so there's no web-font loading and
+  no FOUT. No serif anywhere; tabular numerals on all data. Weights and a fluid
   `clamp()` scale are tokenized (`--fw-*`, `--fs-*`).
-- **Theme toggle:** top-bar button (and on `/styleguide`) — persists to
-  `localStorage['smartserve-theme']`; defaults to the saved choice, else the OS
-  `prefers-color-scheme`, else dark. A pre-paint script prevents FOUC; charts
-  re-theme on toggle via `applyChartTheme()`.
+- **"Change Theme" button:** a labeled control (text + moon/sun icon) in the
+  sidebar's Settings section — persists to `localStorage['smartserve-theme']`;
+  defaults to the saved choice, else the OS `prefers-color-scheme`, else dark.
+  A pre-paint script prevents FOUC; charts re-theme on toggle via
+  `applyChartTheme()`.
 - **Motion:** [`static/js/motion.js`](static/js/motion.js) — KPI count-up and
-  scroll reveal; disabled by the OS setting or the in-app **Reduce motion**
-  toggle (sidebar).
+  scroll reveal; follows the OS `prefers-reduced-motion` setting only (no
+  in-app override).
 - **Accessibility:** light-mode colors verified WCAG AA; visible focus rings in
   both themes; status always icon + label, never color alone.
 - **Live reference:** run the app and open **`/styleguide`** (has a theme toggle)

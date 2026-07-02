@@ -1,16 +1,14 @@
 /* ============================================================
-   SmartServe AI — Motion Layer (Noir Crimson)
-   GPU-friendly only (transform / opacity). Every effect respects
-   prefers-reduced-motion AND the user "Reduce motion" toggle
-   (html.no-motion). When motion is off, content is shown instantly
-   with no animation.
+   SmartServe AI — Motion Layer
+   GPU-friendly only (transform / opacity). Every effect follows the
+   OS-level prefers-reduced-motion setting only — there is no in-app
+   override. When motion is off, content is shown instantly with no
+   animation.
    ============================================================ */
 (function () {
   'use strict';
 
-  const motionOff =
-    window.matchMedia('(prefers-reduced-motion: reduce)').matches ||
-    document.documentElement.classList.contains('no-motion');
+  const motionOff = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   // If motion is disabled, reveal any opt-in elements immediately and stop.
   if (motionOff) {
