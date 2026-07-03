@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Edit Employee{% endblock %}
+{% block page_title %}Edit Employee{% endblock %}
+{% block content %}
+{% include "partials/messages.html" %}
+<div style="max-width:480px;margin:0 auto;">
+<div class="card">
+  <div class="card-body">
+    <form method="post">
+      {% csrf_token %}
+      <div class="form-group"><label class="form-label">Full Name *</label><input type="text" name="name" class="form-control" value="{{ employee.name }}" required></div>
+      <div class="form-group"><label class="form-label">Role</label><input type="text" name="role" class="form-control" value="{{ employee.role }}" placeholder="e.g. Chef, Cashier, Server"></div>
+      <div class="form-group"><label class="form-label">Phone</label><input type="tel" name="phone" class="form-control" value="{{ employee.phone }}"></div>
+      <div class="form-group"><label class="form-label">Email</label><input type="email" name="email" class="form-control" value="{{ employee.email }}"></div>
+      <div class="form-group"><label class="form-label">Monthly Salary (INR)</label><input type="number" name="salary" class="form-control" step="0.01" min="0" value="{{ employee.salary|default:0 }}"></div>
+      <div class="form-group"><label class="form-label">Join Date</label><input type="date" name="join_date" class="form-control" value="{{ employee.join_date }}"></div>
+      <div class="form-group">
+        <label class="form-label">Status</label>
+        <select name="status" class="form-control">
+          <option value="active" {% if employee.status == 'active' %}selected{% endif %}>Active</option>
+          <option value="inactive" {% if employee.status == 'inactive' %}selected{% endif %}>Inactive</option>
+        </select>
+      </div>
+      <div class="flex gap-3"><button type="submit" class="btn btn-primary">Save Changes</button><a href="{% url 'staff:index' %}" class="btn btn-outline">Cancel</a></div>
+    </form>
+  </div>
+</div>
+</div>
+{% endblock %}

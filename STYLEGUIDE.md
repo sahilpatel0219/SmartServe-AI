@@ -16,15 +16,16 @@ component set — only the token *values* differ:
 
 ## Type system (shared by both themes)
 
-One deliberate sans-serif system — **no serif anywhere**, no stray non-token fonts.
+One deliberate sans-serif system — **Open Sans throughout**, no stray non-token fonts.
 
-- **Display** `--font-display` = **Helvetica Neue / Helvetica / Arial** — hero, h1–h3,
-  big KPI numbers; use `--lh-tight`/`--lh-snug` + `--tracking-tight`.
-- **Body** `--font-body` = **Helvetica Neue / Helvetica / Arial** — all UI text,
-  tables, forms, captions; `--lh-normal`.
-- All system fonts — no web-font loading, no FOUT risk. Windows/Android generally
-  lack Helvetica Neue and fall back to Arial, which is near-identical; expect a
-  slightly different look across platforms — that's expected, not a bug.
+- **Display** `--font-display` = **Open Sans** — hero, h1–h3, big KPI numbers;
+  use `--lh-tight`/`--lh-snug` + `--tracking-tight`.
+- **Body** `--font-body` = **Open Sans** — all UI text, tables, forms, captions;
+  `--lh-normal`.
+- Loaded via Google Fonts `<link>` in `base.html` / the styleguide, weights
+  400/500/600/700/800, `font-display:swap` to minimize FOUT. Falls back to
+  `system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif` if the
+  webfont hasn't loaded yet or fails to load.
 - **Mono** `--font-mono` = JetBrains Mono — **only** for order IDs / raw code.
 - Weights: `--fw-regular 400`, `--fw-medium 500`, `--fw-semibold 600`, `--fw-bold 700`,
   `--fw-black 800` (legacy `--fw-normal`/`--fw-semi` aliased).
@@ -86,8 +87,8 @@ status color has a matching `*-tint` for soft fills; `--focus-ring` and
 `--inset-hi` (1px top light-catch on cards).
 
 ### Type
-- **Display:** `Helvetica Neue` / `Helvetica` / `Arial` (system fonts) — headlines, KPI numbers, titles.
-- **Body:** `Helvetica Neue` / `Helvetica` / `Arial`.
+- **Display:** `Open Sans` (Google Font) — headlines, KPI numbers, titles.
+- **Body:** `Open Sans`.
 - Fluid sizes via `clamp()`: `--fs-hero`, `--fs-page`, `--fs-section`, `--fs-card`.
 - Numbers use `font-variant-numeric: tabular-nums` (`.tabular-nums`).
 - A single headline word may be set in `--brand` via `.accent` — used sparingly.

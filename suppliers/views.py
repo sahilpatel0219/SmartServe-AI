@@ -50,6 +50,50 @@ def add_supplier_view(request):
 
 
 @login_required
+def edit_supplier_view(request, supplier_id):
+    business, _ = _get_business(request)
+    if not business:
+        return redirect('onboarding:create_business')
+    bid = business.mongo_id
+    supplier = col.suppliers().find_one({'_id': ObjectId(supplier_id), 'business_id': bid})
+    if not supplier:
+        messages.error(request, 'Supplier not found.')
+        return redirect('suppliers:index')
+    if request.method == 'POST':
+        name = request.POST.get('name', '').strip()
+        if not name:
+            messages.error(request, 'Supplier name is required.')
+        else:
+            col.suppliers().update_one(
+                {'_id': ObjectId(supplier_id)},
+                {'$set': {
+                    'name': name,
+                    'contact_person': request.POST.get('contact_person', '').strip(),
+                    'phone': request.POST.get('phone', '').strip(),
+                    'email': request.POST.get('email', '').strip(),
+                    'address': request.POST.get('address', '').strip(),
+                    'products': request.POST.get('products', '').strip(),
+                    'payment_terms': request.POST.get('payment_terms', '').strip(),
+                    'updated_at': datetime.now(timezone.utc),
+                }},
+            )
+            messages.success(request, f'Supplier "{name}" updated.')
+            return redirect('suppliers:index')
+    supplier['str_id'] = str(supplier['_id'])
+    return render(request, 'suppliers/edit.html', {'business': business, 'supplier': supplier})
+
+
+@login_required
+def delete_supplier_view(request, supplier_id):
+    business, _ = _get_business(request)
+    if not business:
+        return redirect('onboarding:create_business')
+    col.suppliers().delete_one({'_id': ObjectId(supplier_id), 'business_id': business.mongo_id})
+    messages.success(request, 'Supplier removed.')
+    return redirect('suppliers:index')
+
+
+@login_required
 def purchase_order_view(request):
     business, _ = _get_business(request)
     if not business:

@@ -29,12 +29,12 @@
 
   /* ════════════════════════════════════════════════════════════
      TYPE SYSTEM (shared by both themes — theme-independent)
-     One deliberate sans-serif system: Helvetica Neue / Helvetica / Arial —
-     all system fonts, so no web-font loading (no FOUT risk). No serif
-     anywhere. Mono only for order IDs / code.
+     Open Sans throughout — a Google Font, loaded via <link> in base.html
+     and the styleguide (font-display:swap to minimize FOUT). Mono only
+     for order IDs / code.
      ════════════════════════════════════════════════════════════ */
-  --font-display: 'Helvetica Neue', Helvetica, Arial, system-ui, sans-serif;
-  --font-body:    'Helvetica Neue', Helvetica, Arial, system-ui, sans-serif;
+  --font-display: 'Open Sans', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  --font-body:    'Open Sans', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
   --font-mono:    'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
 
   /* Font weights (canonical + legacy aliases kept so nothing breaks) */
@@ -200,7 +200,8 @@
   --shadow-1: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.35);
   --shadow-2: 0 2px 6px rgba(0,0,0,.5), 0 20px 50px rgba(0,0,0,.45);
   --shadow-glow: 0 0 0 1px var(--brand-tint), 0 12px 40px var(--brand-glow);
-  --inset-hi: inset 0 1px 0 rgba(255,255,255,.06);  /* top light-catch */
+  --inset-hi: inset 0 1px 0 rgba(255,255,255,.06);  /* top light-catch — neutral cards/panels */
+  --inset-hi-brand: inset 0 1px 0 rgba(255,255,255,.06);  /* same on dark: saturated brand surfaces (buttons, logo, avatar) */
 
   /* skeleton shimmer (visible on dark) */
   --skeleton-base:  rgba(255,255,255,.04);
@@ -262,7 +263,8 @@
   --shadow-1: 0 1px 2px rgba(17,19,24,.06), 0 8px 24px rgba(17,19,24,.06);
   --shadow-2: 0 2px 8px rgba(17,19,24,.08), 0 20px 50px rgba(17,19,24,.08);
   --shadow-glow: 0 0 0 1px var(--brand-tint), 0 10px 30px rgba(79,70,229,.14);
-  --inset-hi: inset 0 1px 0 rgba(255,255,255,.7);  /* subtle top highlight on white cards */
+  --inset-hi: inset 0 1px 0 rgba(255,255,255,.7);  /* subtle top highlight on white cards — invisible on a white bg */
+  --inset-hi-brand: inset 0 1px 0 rgba(255,255,255,.25);  /* soft gloss on saturated buttons/logo/avatar — NOT the near-opaque card value above, which reads as a harsh white strip on a solid color */
 
   /* skeleton shimmer (visible on white) */
   --skeleton-base:  rgba(17,19,24,.06);
@@ -428,7 +430,7 @@ a:hover { color: var(--brand-hover); }
   color: #fff; font-family: var(--font-display);
   font-weight: var(--fw-black); font-size: 1.05rem;
   flex-shrink: 0;
-  box-shadow: 0 4px 16px var(--brand-glow), var(--inset-hi);
+  box-shadow: 0 4px 16px var(--brand-glow), var(--inset-hi-brand);
 }
 .logo-text { font-family: var(--font-display); font-weight: var(--fw-bold); font-size: 1rem; color: var(--text-primary); line-height: 1.2; letter-spacing: -0.02em; }
 .logo-sub  { font-size: var(--text-xs); color: var(--text-muted); }
@@ -520,7 +522,7 @@ a:hover { color: var(--brand-hover); }
   border: none; cursor: pointer;
   display: flex; align-items: center; justify-content: center;
   transition: filter var(--t-fast), box-shadow var(--t-fast);
-  box-shadow: var(--inset-hi);
+  box-shadow: var(--inset-hi-brand);
 }
 .topbar-avatar::after { display: none !important; }
 .topbar-avatar:hover { filter: brightness(1.1); box-shadow: 0 0 0 3px var(--brand-tint); }
@@ -677,9 +679,9 @@ a:hover { color: var(--brand-hover); }
 
 .btn-primary {
   background: var(--brand); color: #fff; border-color: var(--brand);
-  box-shadow: var(--inset-hi);
+  box-shadow: var(--inset-hi-brand);
 }
-.btn-primary:hover { background: var(--brand-hover); border-color: var(--brand-hover); color: #fff; box-shadow: 0 6px 24px var(--brand-glow), var(--inset-hi); }
+.btn-primary:hover { background: var(--brand-hover); border-color: var(--brand-hover); color: #fff; box-shadow: 0 6px 24px var(--brand-glow), var(--inset-hi-brand); }
 
 .btn-secondary { background: var(--btn-secondary-bg); color: var(--text-primary); border-color: var(--btn-outline-border); }
 .btn-secondary:hover { background: var(--btn-secondary-bg-hover); color: var(--text-primary); }

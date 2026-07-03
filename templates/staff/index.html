@@ -14,7 +14,7 @@
 <div class="card">
   <div class="card-body" style="padding:0;">
     <table class="data-table">
-      <thead><tr><th>Name</th><th>Role</th><th>Phone</th><th>Salary (INR)</th><th>Join Date</th><th>Status</th></tr></thead>
+      <thead><tr><th>Name</th><th>Role</th><th>Phone</th><th>Salary (INR)</th><th>Join Date</th><th>Status</th><th></th></tr></thead>
       <tbody>
         {% for emp in employees %}
         <tr>
@@ -24,6 +24,14 @@
           <td class="tabular-nums">{{ emp.salary|default:0|floatformat:0 }}</td>
           <td>{{ emp.join_date|default:"—" }}</td>
           <td><span class="badge {% if emp.status == 'active' %}badge-success{% else %}badge-neutral{% endif %}">{{ emp.status|default:"active" }}</span></td>
+          <td>
+            <div class="flex gap-2">
+              <a href="{% url 'staff:edit_employee' emp.str_id %}" class="btn btn-ghost btn-sm"><i class="bi bi-pencil"></i></a>
+              <form method="post" action="{% url 'staff:delete_employee' emp.str_id %}" onsubmit="return confirm('Remove {{ emp.name|escapejs }} from staff?')">
+                {% csrf_token %}<button type="submit" class="btn btn-ghost btn-sm text-danger"><i class="bi bi-trash3"></i></button>
+              </form>
+            </div>
+          </td>
         </tr>
         {% endfor %}
       </tbody>

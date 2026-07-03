@@ -14,7 +14,7 @@
 <div class="card">
   <div class="card-body" style="padding:0;">
     <table class="data-table">
-      <thead><tr><th>Name</th><th>Contact</th><th>Phone</th><th>Products</th><th>Payment Terms</th></tr></thead>
+      <thead><tr><th>Name</th><th>Contact</th><th>Phone</th><th>Products</th><th>Payment Terms</th><th></th></tr></thead>
       <tbody>
         {% for s in suppliers %}
         <tr>
@@ -23,6 +23,14 @@
           <td>{{ s.phone|default:"—" }}</td>
           <td class="text-sm text-muted">{{ s.products|default:"—"|truncatechars:40 }}</td>
           <td>{{ s.payment_terms|default:"—" }}</td>
+          <td>
+            <div class="flex gap-2">
+              <a href="{% url 'suppliers:edit' s.str_id %}" class="btn btn-ghost btn-sm"><i class="bi bi-pencil"></i></a>
+              <form method="post" action="{% url 'suppliers:delete' s.str_id %}" onsubmit="return confirm('Remove {{ s.name|escapejs }} from suppliers?')">
+                {% csrf_token %}<button type="submit" class="btn btn-ghost btn-sm text-danger"><i class="bi bi-trash3"></i></button>
+              </form>
+            </div>
+          </td>
         </tr>
         {% endfor %}
       </tbody>

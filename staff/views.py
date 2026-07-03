@@ -50,6 +50,50 @@ def add_employee_view(request):
 
 
 @login_required
+def edit_employee_view(request, employee_id):
+    business, _ = _get_business(request)
+    if not business:
+        return redirect('onboarding:create_business')
+    bid = business.mongo_id
+    employee = col.employees().find_one({'_id': ObjectId(employee_id), 'business_id': bid})
+    if not employee:
+        messages.error(request, 'Employee not found.')
+        return redirect('staff:index')
+    if request.method == 'POST':
+        name = request.POST.get('name', '').strip()
+        if not name:
+            messages.error(request, 'Employee name is required.')
+        else:
+            col.employees().update_one(
+                {'_id': ObjectId(employee_id)},
+                {'$set': {
+                    'name': name,
+                    'role': request.POST.get('role', '').strip(),
+                    'phone': request.POST.get('phone', '').strip(),
+                    'email': request.POST.get('email', '').strip(),
+                    'salary': float(request.POST.get('salary', 0) or 0),
+                    'join_date': request.POST.get('join_date', '').strip(),
+                    'status': request.POST.get('status', 'active').strip(),
+                    'updated_at': datetime.now(timezone.utc),
+                }},
+            )
+            messages.success(request, f'"{name}" updated.')
+            return redirect('staff:index')
+    employee['str_id'] = str(employee['_id'])
+    return render(request, 'staff/edit_employee.html', {'business': business, 'employee': employee})
+
+
+@login_required
+def delete_employee_view(request, employee_id):
+    business, _ = _get_business(request)
+    if not business:
+        return redirect('onboarding:create_business')
+    col.employees().delete_one({'_id': ObjectId(employee_id), 'business_id': business.mongo_id})
+    messages.success(request, 'Employee removed.')
+    return redirect('staff:index')
+
+
+@login_required
 def mark_attendance_view(request):
     business, _ = _get_business(request)
     if not business:

@@ -24,10 +24,10 @@ supersedes the previous green/amber palette.**
   no component hardcodes a hex outside this file. Color/shadow tokens are
   theme-scoped (`[data-theme="dark"]` / `[data-theme="light"]`); type, spacing,
   radius, and motion tokens (plus legacy `--color-*` aliases) live on `:root`.
-- **Type system:** one sans-serif system — **Helvetica Neue / Helvetica / Arial**
-  for both display and body; all system fonts, so there's no web-font loading and
-  no FOUT. No serif anywhere; tabular numerals on all data. Weights and a fluid
-  `clamp()` scale are tokenized (`--fw-*`, `--fs-*`).
+- **Type system:** one sans-serif system — **Open Sans** for both display and
+  body, loaded via Google Fonts (`font-display:swap` to minimize FOUT). Tabular
+  numerals on all data. Weights and a fluid `clamp()` scale are tokenized
+  (`--fw-*`, `--fs-*`).
 - **"Change Theme" button:** a labeled control (text + moon/sun icon) in the
   sidebar's Settings section — persists to `localStorage['smartserve-theme']`;
   defaults to the saved choice, else the OS `prefers-color-scheme`, else dark.
