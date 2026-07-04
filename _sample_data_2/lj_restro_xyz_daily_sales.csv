@@ -1,0 +1,2001 @@
+date,item_name,quantity,revenue,cost
+2026-01-01,Paneer Butter Masala,6,1920,840
+2026-01-01,Veg Biryani,3,750,330
+2026-01-01,Margherita Pizza,11,3300,1430
+2026-01-01,Hakka Noodles,10,2200,950
+2026-01-01,Masala Dosa,10,1800,700
+2026-01-01,Cold Coffee,7,980,315
+2026-01-01,Chocolate Brownie,6,1080,390
+2026-01-01,Veg Burger,20,3800,1600
+2026-01-01,Caesar Salad,5,1050,450
+2026-01-01,Tomato Soup,16,2560,960
+2026-01-02,Paneer Butter Masala,4,1280,560
+2026-01-02,Veg Biryani,3,750,330
+2026-01-02,Margherita Pizza,5,1500,650
+2026-01-02,Hakka Noodles,9,1980,855
+2026-01-02,Masala Dosa,10,1800,700
+2026-01-02,Cold Coffee,19,2660,855
+2026-01-02,Chocolate Brownie,3,540,195
+2026-01-02,Veg Burger,20,3800,1600
+2026-01-02,Caesar Salad,9,1890,810
+2026-01-02,Tomato Soup,20,3200,1200
+2026-01-03,Paneer Butter Masala,20,6400,2800
+2026-01-03,Veg Biryani,12,3000,1320
+2026-01-03,Margherita Pizza,21,6300,2730
+2026-01-03,Hakka Noodles,13,2860,1235
+2026-01-03,Masala Dosa,3,540,210
+2026-01-03,Cold Coffee,10,1400,450
+2026-01-03,Chocolate Brownie,20,3600,1300
+2026-01-03,Veg Burger,16,3040,1280
+2026-01-03,Caesar Salad,13,2730,1170
+2026-01-03,Tomato Soup,8,1280,480
+2026-01-04,Paneer Butter Masala,11,3520,1540
+2026-01-04,Veg Biryani,16,4000,1760
+2026-01-04,Margherita Pizza,7,2100,910
+2026-01-04,Hakka Noodles,6,1320,570
+2026-01-04,Masala Dosa,18,3240,1260
+2026-01-04,Cold Coffee,7,980,315
+2026-01-04,Chocolate Brownie,17,3060,1105
+2026-01-04,Veg Burger,17,3230,1360
+2026-01-04,Caesar Salad,13,2730,1170
+2026-01-04,Tomato Soup,5,800,300
+2026-01-05,Paneer Butter Masala,17,5440,2380
+2026-01-05,Veg Biryani,20,5000,2200
+2026-01-05,Margherita Pizza,6,1800,780
+2026-01-05,Hakka Noodles,15,3300,1425
+2026-01-05,Masala Dosa,5,900,350
+2026-01-05,Cold Coffee,20,2800,900
+2026-01-05,Chocolate Brownie,12,2160,780
+2026-01-05,Veg Burger,14,2660,1120
+2026-01-05,Caesar Salad,9,1890,810
+2026-01-05,Tomato Soup,5,800,300
+2026-01-06,Paneer Butter Masala,4,1280,560
+2026-01-06,Veg Biryani,10,2500,1100
+2026-01-06,Margherita Pizza,12,3600,1560
+2026-01-06,Hakka Noodles,5,1100,475
+2026-01-06,Masala Dosa,10,1800,700
+2026-01-06,Cold Coffee,6,840,270
+2026-01-06,Chocolate Brownie,15,2700,975
+2026-01-06,Veg Burger,11,2090,880
+2026-01-06,Caesar Salad,17,3570,1530
+2026-01-06,Tomato Soup,14,2240,840
+2026-01-07,Paneer Butter Masala,8,2560,1120
+2026-01-07,Veg Biryani,14,3500,1540
+2026-01-07,Margherita Pizza,14,4200,1820
+2026-01-07,Hakka Noodles,9,1980,855
+2026-01-07,Masala Dosa,11,1980,770
+2026-01-07,Cold Coffee,5,700,225
+2026-01-07,Chocolate Brownie,8,1440,520
+2026-01-07,Veg Burger,20,3800,1600
+2026-01-07,Caesar Salad,10,2100,900
+2026-01-07,Tomato Soup,8,1280,480
+2026-01-08,Paneer Butter Masala,17,5440,2380
+2026-01-08,Veg Biryani,15,3750,1650
+2026-01-08,Margherita Pizza,11,3300,1430
+2026-01-08,Hakka Noodles,20,4400,1900
+2026-01-08,Masala Dosa,10,1800,700
+2026-01-08,Cold Coffee,13,1820,585
+2026-01-08,Chocolate Brownie,4,720,260
+2026-01-08,Veg Burger,10,1900,800
+2026-01-08,Caesar Salad,4,840,360
+2026-01-08,Tomato Soup,13,2080,780
+2026-01-09,Paneer Butter Masala,15,4800,2100
+2026-01-09,Veg Biryani,11,2750,1210
+2026-01-09,Margherita Pizza,5,1500,650
+2026-01-09,Hakka Noodles,9,1980,855
+2026-01-09,Masala Dosa,13,2340,910
+2026-01-09,Cold Coffee,9,1260,405
+2026-01-09,Chocolate Brownie,18,3240,1170
+2026-01-09,Veg Burger,15,2850,1200
+2026-01-09,Caesar Salad,17,3570,1530
+2026-01-09,Tomato Soup,7,1120,420
+2026-01-10,Paneer Butter Masala,13,4160,1820
+2026-01-10,Veg Biryani,8,2000,880
+2026-01-10,Margherita Pizza,12,3600,1560
+2026-01-10,Hakka Noodles,25,5500,2375
+2026-01-10,Masala Dosa,25,4500,1750
+2026-01-10,Cold Coffee,13,1820,585
+2026-01-10,Chocolate Brownie,20,3600,1300
+2026-01-10,Veg Burger,18,3420,1440
+2026-01-10,Caesar Salad,17,3570,1530
+2026-01-10,Tomato Soup,12,1920,720
+2026-01-11,Paneer Butter Masala,8,2560,1120
+2026-01-11,Veg Biryani,23,5750,2530
+2026-01-11,Margherita Pizza,22,6600,2860
+2026-01-11,Hakka Noodles,6,1320,570
+2026-01-11,Masala Dosa,5,900,350
+2026-01-11,Cold Coffee,7,980,315
+2026-01-11,Chocolate Brownie,8,1440,520
+2026-01-11,Veg Burger,10,1900,800
+2026-01-11,Caesar Salad,20,4200,1800
+2026-01-11,Tomato Soup,6,960,360
+2026-01-12,Paneer Butter Masala,15,4800,2100
+2026-01-12,Veg Biryani,15,3750,1650
+2026-01-12,Margherita Pizza,17,5100,2210
+2026-01-12,Hakka Noodles,19,4180,1805
+2026-01-12,Masala Dosa,11,1980,770
+2026-01-12,Cold Coffee,20,2800,900
+2026-01-12,Chocolate Brownie,3,540,195
+2026-01-12,Veg Burger,6,1140,480
+2026-01-12,Caesar Salad,20,4200,1800
+2026-01-12,Tomato Soup,11,1760,660
+2026-01-13,Paneer Butter Masala,13,4160,1820
+2026-01-13,Veg Biryani,6,1500,660
+2026-01-13,Margherita Pizza,12,3600,1560
+2026-01-13,Hakka Noodles,16,3520,1520
+2026-01-13,Masala Dosa,8,1440,560
+2026-01-13,Cold Coffee,17,2380,765
+2026-01-13,Chocolate Brownie,3,540,195
+2026-01-13,Veg Burger,11,2090,880
+2026-01-13,Caesar Salad,19,3990,1710
+2026-01-13,Tomato Soup,8,1280,480
+2026-01-14,Paneer Butter Masala,19,6080,2660
+2026-01-14,Veg Biryani,6,1500,660
+2026-01-14,Margherita Pizza,12,3600,1560
+2026-01-14,Hakka Noodles,19,4180,1805
+2026-01-14,Masala Dosa,9,1620,630
+2026-01-14,Cold Coffee,7,980,315
+2026-01-14,Chocolate Brownie,14,2520,910
+2026-01-14,Veg Burger,8,1520,640
+2026-01-14,Caesar Salad,20,4200,1800
+2026-01-14,Tomato Soup,19,3040,1140
+2026-01-15,Paneer Butter Masala,3,960,420
+2026-01-15,Veg Biryani,13,3250,1430
+2026-01-15,Margherita Pizza,18,5400,2340
+2026-01-15,Hakka Noodles,3,660,285
+2026-01-15,Masala Dosa,6,1080,420
+2026-01-15,Cold Coffee,14,1960,630
+2026-01-15,Chocolate Brownie,12,2160,780
+2026-01-15,Veg Burger,10,1900,800
+2026-01-15,Caesar Salad,4,840,360
+2026-01-15,Tomato Soup,10,1600,600
+2026-01-16,Paneer Butter Masala,5,1600,700
+2026-01-16,Veg Biryani,5,1250,550
+2026-01-16,Margherita Pizza,18,5400,2340
+2026-01-16,Hakka Noodles,5,1100,475
+2026-01-16,Masala Dosa,20,3600,1400
+2026-01-16,Cold Coffee,7,980,315
+2026-01-16,Chocolate Brownie,7,1260,455
+2026-01-16,Veg Burger,18,3420,1440
+2026-01-16,Caesar Salad,20,4200,1800
+2026-01-16,Tomato Soup,8,1280,480
+2026-01-17,Paneer Butter Masala,13,4160,1820
+2026-01-17,Veg Biryani,23,5750,2530
+2026-01-17,Margherita Pizza,20,6000,2600
+2026-01-17,Hakka Noodles,11,2420,1045
+2026-01-17,Masala Dosa,25,4500,1750
+2026-01-17,Cold Coffee,11,1540,495
+2026-01-17,Chocolate Brownie,15,2700,975
+2026-01-17,Veg Burger,18,3420,1440
+2026-01-17,Caesar Salad,17,3570,1530
+2026-01-17,Tomato Soup,21,3360,1260
+2026-01-18,Paneer Butter Masala,23,7360,3220
+2026-01-18,Veg Biryani,21,5250,2310
+2026-01-18,Margherita Pizza,7,2100,910
+2026-01-18,Hakka Noodles,12,2640,1140
+2026-01-18,Masala Dosa,12,2160,840
+2026-01-18,Cold Coffee,6,840,270
+2026-01-18,Chocolate Brownie,16,2880,1040
+2026-01-18,Veg Burger,3,570,240
+2026-01-18,Caesar Salad,25,5250,2250
+2026-01-18,Tomato Soup,12,1920,720
+2026-01-19,Paneer Butter Masala,10,3200,1400
+2026-01-19,Veg Biryani,3,750,330
+2026-01-19,Margherita Pizza,5,1500,650
+2026-01-19,Hakka Noodles,4,880,380
+2026-01-19,Masala Dosa,10,1800,700
+2026-01-19,Cold Coffee,5,700,225
+2026-01-19,Chocolate Brownie,4,720,260
+2026-01-19,Veg Burger,13,2470,1040
+2026-01-19,Caesar Salad,5,1050,450
+2026-01-19,Tomato Soup,19,3040,1140
+2026-01-20,Paneer Butter Masala,10,3200,1400
+2026-01-20,Veg Biryani,11,2750,1210
+2026-01-20,Margherita Pizza,18,5400,2340
+2026-01-20,Hakka Noodles,9,1980,855
+2026-01-20,Masala Dosa,20,3600,1400
+2026-01-20,Cold Coffee,7,980,315
+2026-01-20,Chocolate Brownie,18,3240,1170
+2026-01-20,Veg Burger,10,1900,800
+2026-01-20,Caesar Salad,18,3780,1620
+2026-01-20,Tomato Soup,16,2560,960
+2026-01-21,Paneer Butter Masala,9,2880,1260
+2026-01-21,Veg Biryani,6,1500,660
+2026-01-21,Margherita Pizza,6,1800,780
+2026-01-21,Hakka Noodles,16,3520,1520
+2026-01-21,Masala Dosa,14,2520,980
+2026-01-21,Cold Coffee,16,2240,720
+2026-01-21,Chocolate Brownie,16,2880,1040
+2026-01-21,Veg Burger,17,3230,1360
+2026-01-21,Caesar Salad,4,840,360
+2026-01-21,Tomato Soup,6,960,360
+2026-01-22,Paneer Butter Masala,4,1280,560
+2026-01-22,Veg Biryani,15,3750,1650
+2026-01-22,Margherita Pizza,13,3900,1690
+2026-01-22,Hakka Noodles,6,1320,570
+2026-01-22,Masala Dosa,10,1800,700
+2026-01-22,Cold Coffee,9,1260,405
+2026-01-22,Chocolate Brownie,9,1620,585
+2026-01-22,Veg Burger,20,3800,1600
+2026-01-22,Caesar Salad,17,3570,1530
+2026-01-22,Tomato Soup,7,1120,420
+2026-01-23,Paneer Butter Masala,16,5120,2240
+2026-01-23,Veg Biryani,8,2000,880
+2026-01-23,Margherita Pizza,11,3300,1430
+2026-01-23,Hakka Noodles,17,3740,1615
+2026-01-23,Masala Dosa,10,1800,700
+2026-01-23,Cold Coffee,5,700,225
+2026-01-23,Chocolate Brownie,17,3060,1105
+2026-01-23,Veg Burger,20,3800,1600
+2026-01-23,Caesar Salad,6,1260,540
+2026-01-23,Tomato Soup,4,640,240
+2026-01-24,Paneer Butter Masala,25,8000,3500
+2026-01-24,Veg Biryani,3,750,330
+2026-01-24,Margherita Pizza,6,1800,780
+2026-01-24,Hakka Noodles,12,2640,1140
+2026-01-24,Masala Dosa,10,1800,700
+2026-01-24,Cold Coffee,20,2800,900
+2026-01-24,Chocolate Brownie,22,3960,1430
+2026-01-24,Veg Burger,22,4180,1760
+2026-01-24,Caesar Salad,11,2310,990
+2026-01-24,Tomato Soup,18,2880,1080
+2026-01-25,Paneer Butter Masala,5,1600,700
+2026-01-25,Veg Biryani,10,2500,1100
+2026-01-25,Margherita Pizza,18,5400,2340
+2026-01-25,Hakka Noodles,3,660,285
+2026-01-25,Masala Dosa,18,3240,1260
+2026-01-25,Cold Coffee,13,1820,585
+2026-01-25,Chocolate Brownie,21,3780,1365
+2026-01-25,Veg Burger,15,2850,1200
+2026-01-25,Caesar Salad,20,4200,1800
+2026-01-25,Tomato Soup,25,4000,1500
+2026-01-26,Paneer Butter Masala,18,5760,2520
+2026-01-26,Veg Biryani,7,1750,770
+2026-01-26,Margherita Pizza,9,2700,1170
+2026-01-26,Hakka Noodles,12,2640,1140
+2026-01-26,Masala Dosa,9,1620,630
+2026-01-26,Cold Coffee,4,560,180
+2026-01-26,Chocolate Brownie,20,3600,1300
+2026-01-26,Veg Burger,4,760,320
+2026-01-26,Caesar Salad,13,2730,1170
+2026-01-26,Tomato Soup,4,640,240
+2026-01-27,Paneer Butter Masala,4,1280,560
+2026-01-27,Veg Biryani,18,4500,1980
+2026-01-27,Margherita Pizza,19,5700,2470
+2026-01-27,Hakka Noodles,19,4180,1805
+2026-01-27,Masala Dosa,8,1440,560
+2026-01-27,Cold Coffee,4,560,180
+2026-01-27,Chocolate Brownie,19,3420,1235
+2026-01-27,Veg Burger,5,950,400
+2026-01-27,Caesar Salad,8,1680,720
+2026-01-27,Tomato Soup,5,800,300
+2026-01-28,Paneer Butter Masala,5,1600,700
+2026-01-28,Veg Biryani,10,2500,1100
+2026-01-28,Margherita Pizza,15,4500,1950
+2026-01-28,Hakka Noodles,6,1320,570
+2026-01-28,Masala Dosa,10,1800,700
+2026-01-28,Cold Coffee,4,560,180
+2026-01-28,Chocolate Brownie,5,900,325
+2026-01-28,Veg Burger,16,3040,1280
+2026-01-28,Caesar Salad,19,3990,1710
+2026-01-28,Tomato Soup,13,2080,780
+2026-01-29,Paneer Butter Masala,11,3520,1540
+2026-01-29,Veg Biryani,9,2250,990
+2026-01-29,Margherita Pizza,13,3900,1690
+2026-01-29,Hakka Noodles,10,2200,950
+2026-01-29,Masala Dosa,11,1980,770
+2026-01-29,Cold Coffee,15,2100,675
+2026-01-29,Chocolate Brownie,7,1260,455
+2026-01-29,Veg Burger,12,2280,960
+2026-01-29,Caesar Salad,17,3570,1530
+2026-01-29,Tomato Soup,13,2080,780
+2026-01-30,Paneer Butter Masala,5,1600,700
+2026-01-30,Veg Biryani,3,750,330
+2026-01-30,Margherita Pizza,17,5100,2210
+2026-01-30,Hakka Noodles,6,1320,570
+2026-01-30,Masala Dosa,5,900,350
+2026-01-30,Cold Coffee,20,2800,900
+2026-01-30,Chocolate Brownie,9,1620,585
+2026-01-30,Veg Burger,19,3610,1520
+2026-01-30,Caesar Salad,11,2310,990
+2026-01-30,Tomato Soup,7,1120,420
+2026-01-31,Paneer Butter Masala,17,5440,2380
+2026-01-31,Veg Biryani,6,1500,660
+2026-01-31,Margherita Pizza,12,3600,1560
+2026-01-31,Hakka Noodles,17,3740,1615
+2026-01-31,Masala Dosa,15,2700,1050
+2026-01-31,Cold Coffee,10,1400,450
+2026-01-31,Chocolate Brownie,21,3780,1365
+2026-01-31,Veg Burger,25,4750,2000
+2026-01-31,Caesar Salad,15,3150,1350
+2026-01-31,Tomato Soup,23,3680,1380
+2026-02-01,Paneer Butter Masala,3,960,420
+2026-02-01,Veg Biryani,25,6250,2750
+2026-02-01,Margherita Pizza,15,4500,1950
+2026-02-01,Hakka Noodles,7,1540,665
+2026-02-01,Masala Dosa,8,1440,560
+2026-02-01,Cold Coffee,13,1820,585
+2026-02-01,Chocolate Brownie,7,1260,455
+2026-02-01,Veg Burger,7,1330,560
+2026-02-01,Caesar Salad,25,5250,2250
+2026-02-01,Tomato Soup,8,1280,480
+2026-02-02,Paneer Butter Masala,11,3520,1540
+2026-02-02,Veg Biryani,12,3000,1320
+2026-02-02,Margherita Pizza,9,2700,1170
+2026-02-02,Hakka Noodles,13,2860,1235
+2026-02-02,Masala Dosa,9,1620,630
+2026-02-02,Cold Coffee,11,1540,495
+2026-02-02,Chocolate Brownie,19,3420,1235
+2026-02-02,Veg Burger,18,3420,1440
+2026-02-02,Caesar Salad,11,2310,990
+2026-02-02,Tomato Soup,4,640,240
+2026-02-03,Paneer Butter Masala,5,1600,700
+2026-02-03,Veg Biryani,16,4000,1760
+2026-02-03,Margherita Pizza,11,3300,1430
+2026-02-03,Hakka Noodles,4,880,380
+2026-02-03,Masala Dosa,3,540,210
+2026-02-03,Cold Coffee,13,1820,585
+2026-02-03,Chocolate Brownie,7,1260,455
+2026-02-03,Veg Burger,11,2090,880
+2026-02-03,Caesar Salad,8,1680,720
+2026-02-03,Tomato Soup,17,2720,1020
+2026-02-04,Paneer Butter Masala,20,6400,2800
+2026-02-04,Veg Biryani,16,4000,1760
+2026-02-04,Margherita Pizza,20,6000,2600
+2026-02-04,Hakka Noodles,3,660,285
+2026-02-04,Masala Dosa,6,1080,420
+2026-02-04,Cold Coffee,5,700,225
+2026-02-04,Chocolate Brownie,7,1260,455
+2026-02-04,Veg Burger,20,3800,1600
+2026-02-04,Caesar Salad,4,840,360
+2026-02-04,Tomato Soup,14,2240,840
+2026-02-05,Paneer Butter Masala,20,6400,2800
+2026-02-05,Veg Biryani,7,1750,770
+2026-02-05,Margherita Pizza,16,4800,2080
+2026-02-05,Hakka Noodles,7,1540,665
+2026-02-05,Masala Dosa,4,720,280
+2026-02-05,Cold Coffee,12,1680,540
+2026-02-05,Chocolate Brownie,14,2520,910
+2026-02-05,Veg Burger,4,760,320
+2026-02-05,Caesar Salad,14,2940,1260
+2026-02-05,Tomato Soup,9,1440,540
+2026-02-06,Paneer Butter Masala,10,3200,1400
+2026-02-06,Veg Biryani,6,1500,660
+2026-02-06,Margherita Pizza,14,4200,1820
+2026-02-06,Hakka Noodles,20,4400,1900
+2026-02-06,Masala Dosa,16,2880,1120
+2026-02-06,Cold Coffee,7,980,315
+2026-02-06,Chocolate Brownie,10,1800,650
+2026-02-06,Veg Burger,8,1520,640
+2026-02-06,Caesar Salad,8,1680,720
+2026-02-06,Tomato Soup,16,2560,960
+2026-02-07,Paneer Butter Masala,3,960,420
+2026-02-07,Veg Biryani,10,2500,1100
+2026-02-07,Margherita Pizza,16,4800,2080
+2026-02-07,Hakka Noodles,20,4400,1900
+2026-02-07,Masala Dosa,12,2160,840
+2026-02-07,Cold Coffee,13,1820,585
+2026-02-07,Chocolate Brownie,10,1800,650
+2026-02-07,Veg Burger,7,1330,560
+2026-02-07,Caesar Salad,18,3780,1620
+2026-02-07,Tomato Soup,5,800,300
+2026-02-08,Paneer Butter Masala,22,7040,3080
+2026-02-08,Veg Biryani,12,3000,1320
+2026-02-08,Margherita Pizza,11,3300,1430
+2026-02-08,Hakka Noodles,21,4620,1995
+2026-02-08,Masala Dosa,17,3060,1190
+2026-02-08,Cold Coffee,15,2100,675
+2026-02-08,Chocolate Brownie,12,2160,780
+2026-02-08,Veg Burger,12,2280,960
+2026-02-08,Caesar Salad,3,630,270
+2026-02-08,Tomato Soup,11,1760,660
+2026-02-09,Paneer Butter Masala,15,4800,2100
+2026-02-09,Veg Biryani,13,3250,1430
+2026-02-09,Margherita Pizza,11,3300,1430
+2026-02-09,Hakka Noodles,5,1100,475
+2026-02-09,Masala Dosa,11,1980,770
+2026-02-09,Cold Coffee,14,1960,630
+2026-02-09,Chocolate Brownie,19,3420,1235
+2026-02-09,Veg Burger,15,2850,1200
+2026-02-09,Caesar Salad,20,4200,1800
+2026-02-09,Tomato Soup,13,2080,780
+2026-02-10,Paneer Butter Masala,3,960,420
+2026-02-10,Veg Biryani,6,1500,660
+2026-02-10,Margherita Pizza,11,3300,1430
+2026-02-10,Hakka Noodles,8,1760,760
+2026-02-10,Masala Dosa,11,1980,770
+2026-02-10,Cold Coffee,4,560,180
+2026-02-10,Chocolate Brownie,6,1080,390
+2026-02-10,Veg Burger,16,3040,1280
+2026-02-10,Caesar Salad,14,2940,1260
+2026-02-10,Tomato Soup,13,2080,780
+2026-02-11,Paneer Butter Masala,16,5120,2240
+2026-02-11,Veg Biryani,19,4750,2090
+2026-02-11,Margherita Pizza,6,1800,780
+2026-02-11,Hakka Noodles,15,3300,1425
+2026-02-11,Masala Dosa,9,1620,630
+2026-02-11,Cold Coffee,11,1540,495
+2026-02-11,Chocolate Brownie,4,720,260
+2026-02-11,Veg Burger,16,3040,1280
+2026-02-11,Caesar Salad,3,630,270
+2026-02-11,Tomato Soup,19,3040,1140
+2026-02-12,Paneer Butter Masala,20,6400,2800
+2026-02-12,Veg Biryani,9,2250,990
+2026-02-12,Margherita Pizza,14,4200,1820
+2026-02-12,Hakka Noodles,16,3520,1520
+2026-02-12,Masala Dosa,5,900,350
+2026-02-12,Cold Coffee,13,1820,585
+2026-02-12,Chocolate Brownie,13,2340,845
+2026-02-12,Veg Burger,6,1140,480
+2026-02-12,Caesar Salad,12,2520,1080
+2026-02-12,Tomato Soup,19,3040,1140
+2026-02-13,Paneer Butter Masala,12,3840,1680
+2026-02-13,Veg Biryani,16,4000,1760
+2026-02-13,Margherita Pizza,13,3900,1690
+2026-02-13,Hakka Noodles,15,3300,1425
+2026-02-13,Masala Dosa,12,2160,840
+2026-02-13,Cold Coffee,20,2800,900
+2026-02-13,Chocolate Brownie,7,1260,455
+2026-02-13,Veg Burger,9,1710,720
+2026-02-13,Caesar Salad,16,3360,1440
+2026-02-13,Tomato Soup,15,2400,900
+2026-02-14,Paneer Butter Masala,10,3200,1400
+2026-02-14,Veg Biryani,15,3750,1650
+2026-02-14,Margherita Pizza,18,5400,2340
+2026-02-14,Hakka Noodles,25,5500,2375
+2026-02-14,Masala Dosa,3,540,210
+2026-02-14,Cold Coffee,15,2100,675
+2026-02-14,Chocolate Brownie,15,2700,975
+2026-02-14,Veg Burger,11,2090,880
+2026-02-14,Caesar Salad,20,4200,1800
+2026-02-14,Tomato Soup,16,2560,960
+2026-02-15,Paneer Butter Masala,21,6720,2940
+2026-02-15,Veg Biryani,21,5250,2310
+2026-02-15,Margherita Pizza,21,6300,2730
+2026-02-15,Hakka Noodles,11,2420,1045
+2026-02-15,Masala Dosa,23,4140,1610
+2026-02-15,Cold Coffee,22,3080,990
+2026-02-15,Chocolate Brownie,10,1800,650
+2026-02-15,Veg Burger,6,1140,480
+2026-02-15,Caesar Salad,15,3150,1350
+2026-02-15,Tomato Soup,23,3680,1380
+2026-02-16,Paneer Butter Masala,13,4160,1820
+2026-02-16,Veg Biryani,5,1250,550
+2026-02-16,Margherita Pizza,10,3000,1300
+2026-02-16,Hakka Noodles,12,2640,1140
+2026-02-16,Masala Dosa,10,1800,700
+2026-02-16,Cold Coffee,9,1260,405
+2026-02-16,Chocolate Brownie,7,1260,455
+2026-02-16,Veg Burger,3,570,240
+2026-02-16,Caesar Salad,4,840,360
+2026-02-16,Tomato Soup,10,1600,600
+2026-02-17,Paneer Butter Masala,18,5760,2520
+2026-02-17,Veg Biryani,5,1250,550
+2026-02-17,Margherita Pizza,17,5100,2210
+2026-02-17,Hakka Noodles,16,3520,1520
+2026-02-17,Masala Dosa,9,1620,630
+2026-02-17,Cold Coffee,15,2100,675
+2026-02-17,Chocolate Brownie,18,3240,1170
+2026-02-17,Veg Burger,15,2850,1200
+2026-02-17,Caesar Salad,10,2100,900
+2026-02-17,Tomato Soup,7,1120,420
+2026-02-18,Paneer Butter Masala,3,960,420
+2026-02-18,Veg Biryani,6,1500,660
+2026-02-18,Margherita Pizza,16,4800,2080
+2026-02-18,Hakka Noodles,10,2200,950
+2026-02-18,Masala Dosa,8,1440,560
+2026-02-18,Cold Coffee,19,2660,855
+2026-02-18,Chocolate Brownie,17,3060,1105
+2026-02-18,Veg Burger,4,760,320
+2026-02-18,Caesar Salad,20,4200,1800
+2026-02-18,Tomato Soup,10,1600,600
+2026-02-19,Paneer Butter Masala,6,1920,840
+2026-02-19,Veg Biryani,17,4250,1870
+2026-02-19,Margherita Pizza,7,2100,910
+2026-02-19,Hakka Noodles,17,3740,1615
+2026-02-19,Masala Dosa,19,3420,1330
+2026-02-19,Cold Coffee,20,2800,900
+2026-02-19,Chocolate Brownie,13,2340,845
+2026-02-19,Veg Burger,17,3230,1360
+2026-02-19,Caesar Salad,19,3990,1710
+2026-02-19,Tomato Soup,16,2560,960
+2026-02-20,Paneer Butter Masala,20,6400,2800
+2026-02-20,Veg Biryani,17,4250,1870
+2026-02-20,Margherita Pizza,8,2400,1040
+2026-02-20,Hakka Noodles,18,3960,1710
+2026-02-20,Masala Dosa,17,3060,1190
+2026-02-20,Cold Coffee,11,1540,495
+2026-02-20,Chocolate Brownie,10,1800,650
+2026-02-20,Veg Burger,11,2090,880
+2026-02-20,Caesar Salad,19,3990,1710
+2026-02-20,Tomato Soup,18,2880,1080
+2026-02-21,Paneer Butter Masala,12,3840,1680
+2026-02-21,Veg Biryani,13,3250,1430
+2026-02-21,Margherita Pizza,21,6300,2730
+2026-02-21,Hakka Noodles,6,1320,570
+2026-02-21,Masala Dosa,15,2700,1050
+2026-02-21,Cold Coffee,12,1680,540
+2026-02-21,Chocolate Brownie,13,2340,845
+2026-02-21,Veg Burger,16,3040,1280
+2026-02-21,Caesar Salad,16,3360,1440
+2026-02-21,Tomato Soup,25,4000,1500
+2026-02-22,Paneer Butter Masala,6,1920,840
+2026-02-22,Veg Biryani,8,2000,880
+2026-02-22,Margherita Pizza,8,2400,1040
+2026-02-22,Hakka Noodles,12,2640,1140
+2026-02-22,Masala Dosa,18,3240,1260
+2026-02-22,Cold Coffee,8,1120,360
+2026-02-22,Chocolate Brownie,11,1980,715
+2026-02-22,Veg Burger,6,1140,480
+2026-02-22,Caesar Salad,20,4200,1800
+2026-02-22,Tomato Soup,20,3200,1200
+2026-02-23,Paneer Butter Masala,13,4160,1820
+2026-02-23,Veg Biryani,20,5000,2200
+2026-02-23,Margherita Pizza,17,5100,2210
+2026-02-23,Hakka Noodles,16,3520,1520
+2026-02-23,Masala Dosa,4,720,280
+2026-02-23,Cold Coffee,9,1260,405
+2026-02-23,Chocolate Brownie,16,2880,1040
+2026-02-23,Veg Burger,15,2850,1200
+2026-02-23,Caesar Salad,3,630,270
+2026-02-23,Tomato Soup,15,2400,900
+2026-02-24,Paneer Butter Masala,18,5760,2520
+2026-02-24,Veg Biryani,3,750,330
+2026-02-24,Margherita Pizza,14,4200,1820
+2026-02-24,Hakka Noodles,12,2640,1140
+2026-02-24,Masala Dosa,15,2700,1050
+2026-02-24,Cold Coffee,16,2240,720
+2026-02-24,Chocolate Brownie,20,3600,1300
+2026-02-24,Veg Burger,20,3800,1600
+2026-02-24,Caesar Salad,10,2100,900
+2026-02-24,Tomato Soup,18,2880,1080
+2026-02-25,Paneer Butter Masala,10,3200,1400
+2026-02-25,Veg Biryani,11,2750,1210
+2026-02-25,Margherita Pizza,16,4800,2080
+2026-02-25,Hakka Noodles,18,3960,1710
+2026-02-25,Masala Dosa,3,540,210
+2026-02-25,Cold Coffee,15,2100,675
+2026-02-25,Chocolate Brownie,13,2340,845
+2026-02-25,Veg Burger,15,2850,1200
+2026-02-25,Caesar Salad,8,1680,720
+2026-02-25,Tomato Soup,17,2720,1020
+2026-02-26,Paneer Butter Masala,7,2240,980
+2026-02-26,Veg Biryani,20,5000,2200
+2026-02-26,Margherita Pizza,3,900,390
+2026-02-26,Hakka Noodles,15,3300,1425
+2026-02-26,Masala Dosa,3,540,210
+2026-02-26,Cold Coffee,5,700,225
+2026-02-26,Chocolate Brownie,16,2880,1040
+2026-02-26,Veg Burger,7,1330,560
+2026-02-26,Caesar Salad,17,3570,1530
+2026-02-26,Tomato Soup,8,1280,480
+2026-02-27,Paneer Butter Masala,4,1280,560
+2026-02-27,Veg Biryani,11,2750,1210
+2026-02-27,Margherita Pizza,15,4500,1950
+2026-02-27,Hakka Noodles,13,2860,1235
+2026-02-27,Masala Dosa,9,1620,630
+2026-02-27,Cold Coffee,17,2380,765
+2026-02-27,Chocolate Brownie,13,2340,845
+2026-02-27,Veg Burger,13,2470,1040
+2026-02-27,Caesar Salad,15,3150,1350
+2026-02-27,Tomato Soup,11,1760,660
+2026-02-28,Paneer Butter Masala,20,6400,2800
+2026-02-28,Veg Biryani,13,3250,1430
+2026-02-28,Margherita Pizza,6,1800,780
+2026-02-28,Hakka Noodles,22,4840,2090
+2026-02-28,Masala Dosa,3,540,210
+2026-02-28,Cold Coffee,25,3500,1125
+2026-02-28,Chocolate Brownie,5,900,325
+2026-02-28,Veg Burger,17,3230,1360
+2026-02-28,Caesar Salad,12,2520,1080
+2026-02-28,Tomato Soup,6,960,360
+2026-03-01,Paneer Butter Masala,5,1600,700
+2026-03-01,Veg Biryani,3,750,330
+2026-03-01,Margherita Pizza,12,3600,1560
+2026-03-01,Hakka Noodles,11,2420,1045
+2026-03-01,Masala Dosa,3,540,210
+2026-03-01,Cold Coffee,8,1120,360
+2026-03-01,Chocolate Brownie,12,2160,780
+2026-03-01,Veg Burger,8,1520,640
+2026-03-01,Caesar Salad,22,4620,1980
+2026-03-01,Tomato Soup,7,1120,420
+2026-03-02,Paneer Butter Masala,9,2880,1260
+2026-03-02,Veg Biryani,17,4250,1870
+2026-03-02,Margherita Pizza,11,3300,1430
+2026-03-02,Hakka Noodles,14,3080,1330
+2026-03-02,Masala Dosa,8,1440,560
+2026-03-02,Cold Coffee,6,840,270
+2026-03-02,Chocolate Brownie,8,1440,520
+2026-03-02,Veg Burger,12,2280,960
+2026-03-02,Caesar Salad,6,1260,540
+2026-03-02,Tomato Soup,3,480,180
+2026-03-03,Paneer Butter Masala,12,3840,1680
+2026-03-03,Veg Biryani,15,3750,1650
+2026-03-03,Margherita Pizza,15,4500,1950
+2026-03-03,Hakka Noodles,9,1980,855
+2026-03-03,Masala Dosa,5,900,350
+2026-03-03,Cold Coffee,10,1400,450
+2026-03-03,Chocolate Brownie,6,1080,390
+2026-03-03,Veg Burger,12,2280,960
+2026-03-03,Caesar Salad,6,1260,540
+2026-03-03,Tomato Soup,4,640,240
+2026-03-04,Paneer Butter Masala,14,4480,1960
+2026-03-04,Veg Biryani,20,5000,2200
+2026-03-04,Margherita Pizza,16,4800,2080
+2026-03-04,Hakka Noodles,14,3080,1330
+2026-03-04,Masala Dosa,5,900,350
+2026-03-04,Cold Coffee,19,2660,855
+2026-03-04,Chocolate Brownie,13,2340,845
+2026-03-04,Veg Burger,3,570,240
+2026-03-04,Caesar Salad,16,3360,1440
+2026-03-04,Tomato Soup,18,2880,1080
+2026-03-05,Paneer Butter Masala,6,1920,840
+2026-03-05,Veg Biryani,16,4000,1760
+2026-03-05,Margherita Pizza,14,4200,1820
+2026-03-05,Hakka Noodles,17,3740,1615
+2026-03-05,Masala Dosa,7,1260,490
+2026-03-05,Cold Coffee,16,2240,720
+2026-03-05,Chocolate Brownie,8,1440,520
+2026-03-05,Veg Burger,19,3610,1520
+2026-03-05,Caesar Salad,11,2310,990
+2026-03-05,Tomato Soup,20,3200,1200
+2026-03-06,Paneer Butter Masala,18,5760,2520
+2026-03-06,Veg Biryani,17,4250,1870
+2026-03-06,Margherita Pizza,16,4800,2080
+2026-03-06,Hakka Noodles,11,2420,1045
+2026-03-06,Masala Dosa,13,2340,910
+2026-03-06,Cold Coffee,10,1400,450
+2026-03-06,Chocolate Brownie,5,900,325
+2026-03-06,Veg Burger,11,2090,880
+2026-03-06,Caesar Salad,17,3570,1530
+2026-03-06,Tomato Soup,10,1600,600
+2026-03-07,Paneer Butter Masala,21,6720,2940
+2026-03-07,Veg Biryani,18,4500,1980
+2026-03-07,Margherita Pizza,16,4800,2080
+2026-03-07,Hakka Noodles,3,660,285
+2026-03-07,Masala Dosa,22,3960,1540
+2026-03-07,Cold Coffee,16,2240,720
+2026-03-07,Chocolate Brownie,10,1800,650
+2026-03-07,Veg Burger,22,4180,1760
+2026-03-07,Caesar Salad,11,2310,990
+2026-03-07,Tomato Soup,17,2720,1020
+2026-03-08,Paneer Butter Masala,13,4160,1820
+2026-03-08,Veg Biryani,16,4000,1760
+2026-03-08,Margherita Pizza,13,3900,1690
+2026-03-08,Hakka Noodles,13,2860,1235
+2026-03-08,Masala Dosa,25,4500,1750
+2026-03-08,Cold Coffee,3,420,135
+2026-03-08,Chocolate Brownie,23,4140,1495
+2026-03-08,Veg Burger,11,2090,880
+2026-03-08,Caesar Salad,6,1260,540
+2026-03-08,Tomato Soup,12,1920,720
+2026-03-09,Paneer Butter Masala,16,5120,2240
+2026-03-09,Veg Biryani,18,4500,1980
+2026-03-09,Margherita Pizza,20,6000,2600
+2026-03-09,Hakka Noodles,10,2200,950
+2026-03-09,Masala Dosa,18,3240,1260
+2026-03-09,Cold Coffee,18,2520,810
+2026-03-09,Chocolate Brownie,17,3060,1105
+2026-03-09,Veg Burger,3,570,240
+2026-03-09,Caesar Salad,5,1050,450
+2026-03-09,Tomato Soup,12,1920,720
+2026-03-10,Paneer Butter Masala,10,3200,1400
+2026-03-10,Veg Biryani,15,3750,1650
+2026-03-10,Margherita Pizza,10,3000,1300
+2026-03-10,Hakka Noodles,12,2640,1140
+2026-03-10,Masala Dosa,14,2520,980
+2026-03-10,Cold Coffee,18,2520,810
+2026-03-10,Chocolate Brownie,20,3600,1300
+2026-03-10,Veg Burger,19,3610,1520
+2026-03-10,Caesar Salad,14,2940,1260
+2026-03-10,Tomato Soup,16,2560,960
+2026-03-11,Paneer Butter Masala,20,6400,2800
+2026-03-11,Veg Biryani,13,3250,1430
+2026-03-11,Margherita Pizza,14,4200,1820
+2026-03-11,Hakka Noodles,17,3740,1615
+2026-03-11,Masala Dosa,11,1980,770
+2026-03-11,Cold Coffee,12,1680,540
+2026-03-11,Chocolate Brownie,11,1980,715
+2026-03-11,Veg Burger,10,1900,800
+2026-03-11,Caesar Salad,6,1260,540
+2026-03-11,Tomato Soup,9,1440,540
+2026-03-12,Paneer Butter Masala,13,4160,1820
+2026-03-12,Veg Biryani,6,1500,660
+2026-03-12,Margherita Pizza,20,6000,2600
+2026-03-12,Hakka Noodles,8,1760,760
+2026-03-12,Masala Dosa,9,1620,630
+2026-03-12,Cold Coffee,9,1260,405
+2026-03-12,Chocolate Brownie,18,3240,1170
+2026-03-12,Veg Burger,11,2090,880
+2026-03-12,Caesar Salad,19,3990,1710
+2026-03-12,Tomato Soup,12,1920,720
+2026-03-13,Paneer Butter Masala,6,1920,840
+2026-03-13,Veg Biryani,9,2250,990
+2026-03-13,Margherita Pizza,12,3600,1560
+2026-03-13,Hakka Noodles,10,2200,950
+2026-03-13,Masala Dosa,14,2520,980
+2026-03-13,Cold Coffee,8,1120,360
+2026-03-13,Chocolate Brownie,12,2160,780
+2026-03-13,Veg Burger,3,570,240
+2026-03-13,Caesar Salad,20,4200,1800
+2026-03-13,Tomato Soup,7,1120,420
+2026-03-14,Paneer Butter Masala,13,4160,1820
+2026-03-14,Veg Biryani,5,1250,550
+2026-03-14,Margherita Pizza,5,1500,650
+2026-03-14,Hakka Noodles,25,5500,2375
+2026-03-14,Masala Dosa,15,2700,1050
+2026-03-14,Cold Coffee,8,1120,360
+2026-03-14,Chocolate Brownie,22,3960,1430
+2026-03-14,Veg Burger,7,1330,560
+2026-03-14,Caesar Salad,3,630,270
+2026-03-14,Tomato Soup,15,2400,900
+2026-03-15,Paneer Butter Masala,22,7040,3080
+2026-03-15,Veg Biryani,22,5500,2420
+2026-03-15,Margherita Pizza,21,6300,2730
+2026-03-15,Hakka Noodles,16,3520,1520
+2026-03-15,Masala Dosa,10,1800,700
+2026-03-15,Cold Coffee,5,700,225
+2026-03-15,Chocolate Brownie,13,2340,845
+2026-03-15,Veg Burger,22,4180,1760
+2026-03-15,Caesar Salad,7,1470,630
+2026-03-15,Tomato Soup,6,960,360
+2026-03-16,Paneer Butter Masala,15,4800,2100
+2026-03-16,Veg Biryani,18,4500,1980
+2026-03-16,Margherita Pizza,5,1500,650
+2026-03-16,Hakka Noodles,4,880,380
+2026-03-16,Masala Dosa,7,1260,490
+2026-03-16,Cold Coffee,7,980,315
+2026-03-16,Chocolate Brownie,12,2160,780
+2026-03-16,Veg Burger,5,950,400
+2026-03-16,Caesar Salad,10,2100,900
+2026-03-16,Tomato Soup,6,960,360
+2026-03-17,Paneer Butter Masala,20,6400,2800
+2026-03-17,Veg Biryani,16,4000,1760
+2026-03-17,Margherita Pizza,10,3000,1300
+2026-03-17,Hakka Noodles,19,4180,1805
+2026-03-17,Masala Dosa,15,2700,1050
+2026-03-17,Cold Coffee,17,2380,765
+2026-03-17,Chocolate Brownie,17,3060,1105
+2026-03-17,Veg Burger,12,2280,960
+2026-03-17,Caesar Salad,16,3360,1440
+2026-03-17,Tomato Soup,12,1920,720
+2026-03-18,Paneer Butter Masala,4,1280,560
+2026-03-18,Veg Biryani,6,1500,660
+2026-03-18,Margherita Pizza,9,2700,1170
+2026-03-18,Hakka Noodles,9,1980,855
+2026-03-18,Masala Dosa,11,1980,770
+2026-03-18,Cold Coffee,5,700,225
+2026-03-18,Chocolate Brownie,8,1440,520
+2026-03-18,Veg Burger,10,1900,800
+2026-03-18,Caesar Salad,8,1680,720
+2026-03-18,Tomato Soup,20,3200,1200
+2026-03-19,Paneer Butter Masala,5,1600,700
+2026-03-19,Veg Biryani,8,2000,880
+2026-03-19,Margherita Pizza,3,900,390
+2026-03-19,Hakka Noodles,16,3520,1520
+2026-03-19,Masala Dosa,17,3060,1190
+2026-03-19,Cold Coffee,18,2520,810
+2026-03-19,Chocolate Brownie,12,2160,780
+2026-03-19,Veg Burger,4,760,320
+2026-03-19,Caesar Salad,10,2100,900
+2026-03-19,Tomato Soup,12,1920,720
+2026-03-20,Paneer Butter Masala,12,3840,1680
+2026-03-20,Veg Biryani,17,4250,1870
+2026-03-20,Margherita Pizza,5,1500,650
+2026-03-20,Hakka Noodles,10,2200,950
+2026-03-20,Masala Dosa,11,1980,770
+2026-03-20,Cold Coffee,9,1260,405
+2026-03-20,Chocolate Brownie,16,2880,1040
+2026-03-20,Veg Burger,6,1140,480
+2026-03-20,Caesar Salad,20,4200,1800
+2026-03-20,Tomato Soup,10,1600,600
+2026-03-21,Paneer Butter Masala,8,2560,1120
+2026-03-21,Veg Biryani,13,3250,1430
+2026-03-21,Margherita Pizza,8,2400,1040
+2026-03-21,Hakka Noodles,6,1320,570
+2026-03-21,Masala Dosa,5,900,350
+2026-03-21,Cold Coffee,10,1400,450
+2026-03-21,Chocolate Brownie,15,2700,975
+2026-03-21,Veg Burger,15,2850,1200
+2026-03-21,Caesar Salad,21,4410,1890
+2026-03-21,Tomato Soup,7,1120,420
+2026-03-22,Paneer Butter Masala,21,6720,2940
+2026-03-22,Veg Biryani,15,3750,1650
+2026-03-22,Margherita Pizza,18,5400,2340
+2026-03-22,Hakka Noodles,13,2860,1235
+2026-03-22,Masala Dosa,23,4140,1610
+2026-03-22,Cold Coffee,25,3500,1125
+2026-03-22,Chocolate Brownie,22,3960,1430
+2026-03-22,Veg Burger,21,3990,1680
+2026-03-22,Caesar Salad,6,1260,540
+2026-03-22,Tomato Soup,5,800,300
+2026-03-23,Paneer Butter Masala,16,5120,2240
+2026-03-23,Veg Biryani,13,3250,1430
+2026-03-23,Margherita Pizza,11,3300,1430
+2026-03-23,Hakka Noodles,3,660,285
+2026-03-23,Masala Dosa,5,900,350
+2026-03-23,Cold Coffee,10,1400,450
+2026-03-23,Chocolate Brownie,3,540,195
+2026-03-23,Veg Burger,11,2090,880
+2026-03-23,Caesar Salad,4,840,360
+2026-03-23,Tomato Soup,8,1280,480
+2026-03-24,Paneer Butter Masala,18,5760,2520
+2026-03-24,Veg Biryani,19,4750,2090
+2026-03-24,Margherita Pizza,17,5100,2210
+2026-03-24,Hakka Noodles,11,2420,1045
+2026-03-24,Masala Dosa,8,1440,560
+2026-03-24,Cold Coffee,16,2240,720
+2026-03-24,Chocolate Brownie,18,3240,1170
+2026-03-24,Veg Burger,5,950,400
+2026-03-24,Caesar Salad,18,3780,1620
+2026-03-24,Tomato Soup,14,2240,840
+2026-03-25,Paneer Butter Masala,16,5120,2240
+2026-03-25,Veg Biryani,13,3250,1430
+2026-03-25,Margherita Pizza,13,3900,1690
+2026-03-25,Hakka Noodles,6,1320,570
+2026-03-25,Masala Dosa,8,1440,560
+2026-03-25,Cold Coffee,13,1820,585
+2026-03-25,Chocolate Brownie,16,2880,1040
+2026-03-25,Veg Burger,18,3420,1440
+2026-03-25,Caesar Salad,12,2520,1080
+2026-03-25,Tomato Soup,15,2400,900
+2026-03-26,Paneer Butter Masala,20,6400,2800
+2026-03-26,Veg Biryani,4,1000,440
+2026-03-26,Margherita Pizza,17,5100,2210
+2026-03-26,Hakka Noodles,5,1100,475
+2026-03-26,Masala Dosa,13,2340,910
+2026-03-26,Cold Coffee,11,1540,495
+2026-03-26,Chocolate Brownie,13,2340,845
+2026-03-26,Veg Burger,6,1140,480
+2026-03-26,Caesar Salad,15,3150,1350
+2026-03-26,Tomato Soup,19,3040,1140
+2026-03-27,Paneer Butter Masala,3,960,420
+2026-03-27,Veg Biryani,20,5000,2200
+2026-03-27,Margherita Pizza,17,5100,2210
+2026-03-27,Hakka Noodles,16,3520,1520
+2026-03-27,Masala Dosa,4,720,280
+2026-03-27,Cold Coffee,9,1260,405
+2026-03-27,Chocolate Brownie,19,3420,1235
+2026-03-27,Veg Burger,14,2660,1120
+2026-03-27,Caesar Salad,18,3780,1620
+2026-03-27,Tomato Soup,17,2720,1020
+2026-03-28,Paneer Butter Masala,5,1600,700
+2026-03-28,Veg Biryani,11,2750,1210
+2026-03-28,Margherita Pizza,13,3900,1690
+2026-03-28,Hakka Noodles,25,5500,2375
+2026-03-28,Masala Dosa,8,1440,560
+2026-03-28,Cold Coffee,15,2100,675
+2026-03-28,Chocolate Brownie,21,3780,1365
+2026-03-28,Veg Burger,22,4180,1760
+2026-03-28,Caesar Salad,7,1470,630
+2026-03-28,Tomato Soup,3,480,180
+2026-03-29,Paneer Butter Masala,12,3840,1680
+2026-03-29,Veg Biryani,10,2500,1100
+2026-03-29,Margherita Pizza,15,4500,1950
+2026-03-29,Hakka Noodles,25,5500,2375
+2026-03-29,Masala Dosa,3,540,210
+2026-03-29,Cold Coffee,25,3500,1125
+2026-03-29,Chocolate Brownie,20,3600,1300
+2026-03-29,Veg Burger,6,1140,480
+2026-03-29,Caesar Salad,12,2520,1080
+2026-03-29,Tomato Soup,7,1120,420
+2026-03-30,Paneer Butter Masala,17,5440,2380
+2026-03-30,Veg Biryani,6,1500,660
+2026-03-30,Margherita Pizza,7,2100,910
+2026-03-30,Hakka Noodles,18,3960,1710
+2026-03-30,Masala Dosa,12,2160,840
+2026-03-30,Cold Coffee,19,2660,855
+2026-03-30,Chocolate Brownie,11,1980,715
+2026-03-30,Veg Burger,16,3040,1280
+2026-03-30,Caesar Salad,18,3780,1620
+2026-03-30,Tomato Soup,18,2880,1080
+2026-03-31,Paneer Butter Masala,10,3200,1400
+2026-03-31,Veg Biryani,17,4250,1870
+2026-03-31,Margherita Pizza,20,6000,2600
+2026-03-31,Hakka Noodles,7,1540,665
+2026-03-31,Masala Dosa,15,2700,1050
+2026-03-31,Cold Coffee,9,1260,405
+2026-03-31,Chocolate Brownie,19,3420,1235
+2026-03-31,Veg Burger,7,1330,560
+2026-03-31,Caesar Salad,5,1050,450
+2026-03-31,Tomato Soup,11,1760,660
+2026-04-01,Paneer Butter Masala,16,5120,2240
+2026-04-01,Veg Biryani,13,3250,1430
+2026-04-01,Margherita Pizza,19,5700,2470
+2026-04-01,Hakka Noodles,11,2420,1045
+2026-04-01,Masala Dosa,3,540,210
+2026-04-01,Cold Coffee,12,1680,540
+2026-04-01,Chocolate Brownie,12,2160,780
+2026-04-01,Veg Burger,18,3420,1440
+2026-04-01,Caesar Salad,7,1470,630
+2026-04-01,Tomato Soup,17,2720,1020
+2026-04-02,Paneer Butter Masala,20,6400,2800
+2026-04-02,Veg Biryani,18,4500,1980
+2026-04-02,Margherita Pizza,14,4200,1820
+2026-04-02,Hakka Noodles,13,2860,1235
+2026-04-02,Masala Dosa,20,3600,1400
+2026-04-02,Cold Coffee,20,2800,900
+2026-04-02,Chocolate Brownie,15,2700,975
+2026-04-02,Veg Burger,17,3230,1360
+2026-04-02,Caesar Salad,13,2730,1170
+2026-04-02,Tomato Soup,9,1440,540
+2026-04-03,Paneer Butter Masala,10,3200,1400
+2026-04-03,Veg Biryani,15,3750,1650
+2026-04-03,Margherita Pizza,10,3000,1300
+2026-04-03,Hakka Noodles,16,3520,1520
+2026-04-03,Masala Dosa,4,720,280
+2026-04-03,Cold Coffee,13,1820,585
+2026-04-03,Chocolate Brownie,18,3240,1170
+2026-04-03,Veg Burger,15,2850,1200
+2026-04-03,Caesar Salad,15,3150,1350
+2026-04-03,Tomato Soup,7,1120,420
+2026-04-04,Paneer Butter Masala,22,7040,3080
+2026-04-04,Veg Biryani,5,1250,550
+2026-04-04,Margherita Pizza,8,2400,1040
+2026-04-04,Hakka Noodles,23,5060,2185
+2026-04-04,Masala Dosa,16,2880,1120
+2026-04-04,Cold Coffee,7,980,315
+2026-04-04,Chocolate Brownie,21,3780,1365
+2026-04-04,Veg Burger,7,1330,560
+2026-04-04,Caesar Salad,23,4830,2070
+2026-04-04,Tomato Soup,21,3360,1260
+2026-04-05,Paneer Butter Masala,3,960,420
+2026-04-05,Veg Biryani,8,2000,880
+2026-04-05,Margherita Pizza,20,6000,2600
+2026-04-05,Hakka Noodles,8,1760,760
+2026-04-05,Masala Dosa,6,1080,420
+2026-04-05,Cold Coffee,22,3080,990
+2026-04-05,Chocolate Brownie,13,2340,845
+2026-04-05,Veg Burger,16,3040,1280
+2026-04-05,Caesar Salad,18,3780,1620
+2026-04-05,Tomato Soup,6,960,360
+2026-04-06,Paneer Butter Masala,13,4160,1820
+2026-04-06,Veg Biryani,20,5000,2200
+2026-04-06,Margherita Pizza,15,4500,1950
+2026-04-06,Hakka Noodles,13,2860,1235
+2026-04-06,Masala Dosa,18,3240,1260
+2026-04-06,Cold Coffee,20,2800,900
+2026-04-06,Chocolate Brownie,4,720,260
+2026-04-06,Veg Burger,5,950,400
+2026-04-06,Caesar Salad,10,2100,900
+2026-04-06,Tomato Soup,12,1920,720
+2026-04-07,Paneer Butter Masala,10,3200,1400
+2026-04-07,Veg Biryani,5,1250,550
+2026-04-07,Margherita Pizza,16,4800,2080
+2026-04-07,Hakka Noodles,6,1320,570
+2026-04-07,Masala Dosa,6,1080,420
+2026-04-07,Cold Coffee,17,2380,765
+2026-04-07,Chocolate Brownie,8,1440,520
+2026-04-07,Veg Burger,12,2280,960
+2026-04-07,Caesar Salad,3,630,270
+2026-04-07,Tomato Soup,4,640,240
+2026-04-08,Paneer Butter Masala,13,4160,1820
+2026-04-08,Veg Biryani,4,1000,440
+2026-04-08,Margherita Pizza,12,3600,1560
+2026-04-08,Hakka Noodles,14,3080,1330
+2026-04-08,Masala Dosa,14,2520,980
+2026-04-08,Cold Coffee,16,2240,720
+2026-04-08,Chocolate Brownie,7,1260,455
+2026-04-08,Veg Burger,10,1900,800
+2026-04-08,Caesar Salad,19,3990,1710
+2026-04-08,Tomato Soup,16,2560,960
+2026-04-09,Paneer Butter Masala,8,2560,1120
+2026-04-09,Veg Biryani,8,2000,880
+2026-04-09,Margherita Pizza,8,2400,1040
+2026-04-09,Hakka Noodles,5,1100,475
+2026-04-09,Masala Dosa,15,2700,1050
+2026-04-09,Cold Coffee,10,1400,450
+2026-04-09,Chocolate Brownie,18,3240,1170
+2026-04-09,Veg Burger,7,1330,560
+2026-04-09,Caesar Salad,10,2100,900
+2026-04-09,Tomato Soup,17,2720,1020
+2026-04-10,Paneer Butter Masala,11,3520,1540
+2026-04-10,Veg Biryani,17,4250,1870
+2026-04-10,Margherita Pizza,11,3300,1430
+2026-04-10,Hakka Noodles,3,660,285
+2026-04-10,Masala Dosa,17,3060,1190
+2026-04-10,Cold Coffee,12,1680,540
+2026-04-10,Chocolate Brownie,20,3600,1300
+2026-04-10,Veg Burger,8,1520,640
+2026-04-10,Caesar Salad,5,1050,450
+2026-04-10,Tomato Soup,17,2720,1020
+2026-04-11,Paneer Butter Masala,17,5440,2380
+2026-04-11,Veg Biryani,15,3750,1650
+2026-04-11,Margherita Pizza,20,6000,2600
+2026-04-11,Hakka Noodles,13,2860,1235
+2026-04-11,Masala Dosa,21,3780,1470
+2026-04-11,Cold Coffee,15,2100,675
+2026-04-11,Chocolate Brownie,11,1980,715
+2026-04-11,Veg Burger,18,3420,1440
+2026-04-11,Caesar Salad,22,4620,1980
+2026-04-11,Tomato Soup,7,1120,420
+2026-04-12,Paneer Butter Masala,12,3840,1680
+2026-04-12,Veg Biryani,18,4500,1980
+2026-04-12,Margherita Pizza,17,5100,2210
+2026-04-12,Hakka Noodles,15,3300,1425
+2026-04-12,Masala Dosa,15,2700,1050
+2026-04-12,Cold Coffee,3,420,135
+2026-04-12,Chocolate Brownie,18,3240,1170
+2026-04-12,Veg Burger,13,2470,1040
+2026-04-12,Caesar Salad,3,630,270
+2026-04-12,Tomato Soup,5,800,300
+2026-04-13,Paneer Butter Masala,18,5760,2520
+2026-04-13,Veg Biryani,12,3000,1320
+2026-04-13,Margherita Pizza,10,3000,1300
+2026-04-13,Hakka Noodles,14,3080,1330
+2026-04-13,Masala Dosa,10,1800,700
+2026-04-13,Cold Coffee,9,1260,405
+2026-04-13,Chocolate Brownie,11,1980,715
+2026-04-13,Veg Burger,7,1330,560
+2026-04-13,Caesar Salad,6,1260,540
+2026-04-13,Tomato Soup,4,640,240
+2026-04-14,Paneer Butter Masala,12,3840,1680
+2026-04-14,Veg Biryani,17,4250,1870
+2026-04-14,Margherita Pizza,4,1200,520
+2026-04-14,Hakka Noodles,14,3080,1330
+2026-04-14,Masala Dosa,7,1260,490
+2026-04-14,Cold Coffee,5,700,225
+2026-04-14,Chocolate Brownie,12,2160,780
+2026-04-14,Veg Burger,13,2470,1040
+2026-04-14,Caesar Salad,16,3360,1440
+2026-04-14,Tomato Soup,8,1280,480
+2026-04-15,Paneer Butter Masala,9,2880,1260
+2026-04-15,Veg Biryani,7,1750,770
+2026-04-15,Margherita Pizza,20,6000,2600
+2026-04-15,Hakka Noodles,14,3080,1330
+2026-04-15,Masala Dosa,19,3420,1330
+2026-04-15,Cold Coffee,19,2660,855
+2026-04-15,Chocolate Brownie,11,1980,715
+2026-04-15,Veg Burger,8,1520,640
+2026-04-15,Caesar Salad,11,2310,990
+2026-04-15,Tomato Soup,18,2880,1080
+2026-04-16,Paneer Butter Masala,12,3840,1680
+2026-04-16,Veg Biryani,13,3250,1430
+2026-04-16,Margherita Pizza,6,1800,780
+2026-04-16,Hakka Noodles,17,3740,1615
+2026-04-16,Masala Dosa,5,900,350
+2026-04-16,Cold Coffee,7,980,315
+2026-04-16,Chocolate Brownie,10,1800,650
+2026-04-16,Veg Burger,15,2850,1200
+2026-04-16,Caesar Salad,20,4200,1800
+2026-04-16,Tomato Soup,14,2240,840
+2026-04-17,Paneer Butter Masala,5,1600,700
+2026-04-17,Veg Biryani,15,3750,1650
+2026-04-17,Margherita Pizza,3,900,390
+2026-04-17,Hakka Noodles,11,2420,1045
+2026-04-17,Masala Dosa,20,3600,1400
+2026-04-17,Cold Coffee,6,840,270
+2026-04-17,Chocolate Brownie,17,3060,1105
+2026-04-17,Veg Burger,14,2660,1120
+2026-04-17,Caesar Salad,11,2310,990
+2026-04-17,Tomato Soup,15,2400,900
+2026-04-18,Paneer Butter Masala,17,5440,2380
+2026-04-18,Veg Biryani,7,1750,770
+2026-04-18,Margherita Pizza,12,3600,1560
+2026-04-18,Hakka Noodles,22,4840,2090
+2026-04-18,Masala Dosa,3,540,210
+2026-04-18,Cold Coffee,25,3500,1125
+2026-04-18,Chocolate Brownie,16,2880,1040
+2026-04-18,Veg Burger,12,2280,960
+2026-04-18,Caesar Salad,6,1260,540
+2026-04-18,Tomato Soup,21,3360,1260
+2026-04-19,Paneer Butter Masala,15,4800,2100
+2026-04-19,Veg Biryani,20,5000,2200
+2026-04-19,Margherita Pizza,7,2100,910
+2026-04-19,Hakka Noodles,8,1760,760
+2026-04-19,Masala Dosa,5,900,350
+2026-04-19,Cold Coffee,5,700,225
+2026-04-19,Chocolate Brownie,15,2700,975
+2026-04-19,Veg Burger,22,4180,1760
+2026-04-19,Caesar Salad,7,1470,630
+2026-04-19,Tomato Soup,7,1120,420
+2026-04-20,Paneer Butter Masala,10,3200,1400
+2026-04-20,Veg Biryani,20,5000,2200
+2026-04-20,Margherita Pizza,7,2100,910
+2026-04-20,Hakka Noodles,15,3300,1425
+2026-04-20,Masala Dosa,17,3060,1190
+2026-04-20,Cold Coffee,14,1960,630
+2026-04-20,Chocolate Brownie,20,3600,1300
+2026-04-20,Veg Burger,16,3040,1280
+2026-04-20,Caesar Salad,7,1470,630
+2026-04-20,Tomato Soup,16,2560,960
+2026-04-21,Paneer Butter Masala,6,1920,840
+2026-04-21,Veg Biryani,18,4500,1980
+2026-04-21,Margherita Pizza,16,4800,2080
+2026-04-21,Hakka Noodles,11,2420,1045
+2026-04-21,Masala Dosa,4,720,280
+2026-04-21,Cold Coffee,14,1960,630
+2026-04-21,Chocolate Brownie,9,1620,585
+2026-04-21,Veg Burger,17,3230,1360
+2026-04-21,Caesar Salad,17,3570,1530
+2026-04-21,Tomato Soup,10,1600,600
+2026-04-22,Paneer Butter Masala,14,4480,1960
+2026-04-22,Veg Biryani,6,1500,660
+2026-04-22,Margherita Pizza,14,4200,1820
+2026-04-22,Hakka Noodles,20,4400,1900
+2026-04-22,Masala Dosa,14,2520,980
+2026-04-22,Cold Coffee,4,560,180
+2026-04-22,Chocolate Brownie,15,2700,975
+2026-04-22,Veg Burger,11,2090,880
+2026-04-22,Caesar Salad,9,1890,810
+2026-04-22,Tomato Soup,6,960,360
+2026-04-23,Paneer Butter Masala,17,5440,2380
+2026-04-23,Veg Biryani,5,1250,550
+2026-04-23,Margherita Pizza,9,2700,1170
+2026-04-23,Hakka Noodles,3,660,285
+2026-04-23,Masala Dosa,4,720,280
+2026-04-23,Cold Coffee,13,1820,585
+2026-04-23,Chocolate Brownie,10,1800,650
+2026-04-23,Veg Burger,7,1330,560
+2026-04-23,Caesar Salad,9,1890,810
+2026-04-23,Tomato Soup,5,800,300
+2026-04-24,Paneer Butter Masala,20,6400,2800
+2026-04-24,Veg Biryani,9,2250,990
+2026-04-24,Margherita Pizza,9,2700,1170
+2026-04-24,Hakka Noodles,10,2200,950
+2026-04-24,Masala Dosa,13,2340,910
+2026-04-24,Cold Coffee,7,980,315
+2026-04-24,Chocolate Brownie,3,540,195
+2026-04-24,Veg Burger,11,2090,880
+2026-04-24,Caesar Salad,7,1470,630
+2026-04-24,Tomato Soup,7,1120,420
+2026-04-25,Paneer Butter Masala,25,8000,3500
+2026-04-25,Veg Biryani,13,3250,1430
+2026-04-25,Margherita Pizza,10,3000,1300
+2026-04-25,Hakka Noodles,7,1540,665
+2026-04-25,Masala Dosa,3,540,210
+2026-04-25,Cold Coffee,8,1120,360
+2026-04-25,Chocolate Brownie,3,540,195
+2026-04-25,Veg Burger,17,3230,1360
+2026-04-25,Caesar Salad,12,2520,1080
+2026-04-25,Tomato Soup,16,2560,960
+2026-04-26,Paneer Butter Masala,3,960,420
+2026-04-26,Veg Biryani,10,2500,1100
+2026-04-26,Margherita Pizza,13,3900,1690
+2026-04-26,Hakka Noodles,5,1100,475
+2026-04-26,Masala Dosa,8,1440,560
+2026-04-26,Cold Coffee,20,2800,900
+2026-04-26,Chocolate Brownie,23,4140,1495
+2026-04-26,Veg Burger,7,1330,560
+2026-04-26,Caesar Salad,6,1260,540
+2026-04-26,Tomato Soup,22,3520,1320
+2026-04-27,Paneer Butter Masala,17,5440,2380
+2026-04-27,Veg Biryani,14,3500,1540
+2026-04-27,Margherita Pizza,19,5700,2470
+2026-04-27,Hakka Noodles,6,1320,570
+2026-04-27,Masala Dosa,17,3060,1190
+2026-04-27,Cold Coffee,19,2660,855
+2026-04-27,Chocolate Brownie,10,1800,650
+2026-04-27,Veg Burger,4,760,320
+2026-04-27,Caesar Salad,19,3990,1710
+2026-04-27,Tomato Soup,12,1920,720
+2026-04-28,Paneer Butter Masala,17,5440,2380
+2026-04-28,Veg Biryani,3,750,330
+2026-04-28,Margherita Pizza,4,1200,520
+2026-04-28,Hakka Noodles,18,3960,1710
+2026-04-28,Masala Dosa,15,2700,1050
+2026-04-28,Cold Coffee,16,2240,720
+2026-04-28,Chocolate Brownie,6,1080,390
+2026-04-28,Veg Burger,18,3420,1440
+2026-04-28,Caesar Salad,17,3570,1530
+2026-04-28,Tomato Soup,5,800,300
+2026-04-29,Paneer Butter Masala,5,1600,700
+2026-04-29,Veg Biryani,13,3250,1430
+2026-04-29,Margherita Pizza,7,2100,910
+2026-04-29,Hakka Noodles,5,1100,475
+2026-04-29,Masala Dosa,7,1260,490
+2026-04-29,Cold Coffee,11,1540,495
+2026-04-29,Chocolate Brownie,20,3600,1300
+2026-04-29,Veg Burger,13,2470,1040
+2026-04-29,Caesar Salad,15,3150,1350
+2026-04-29,Tomato Soup,19,3040,1140
+2026-04-30,Paneer Butter Masala,12,3840,1680
+2026-04-30,Veg Biryani,17,4250,1870
+2026-04-30,Margherita Pizza,19,5700,2470
+2026-04-30,Hakka Noodles,16,3520,1520
+2026-04-30,Masala Dosa,6,1080,420
+2026-04-30,Cold Coffee,6,840,270
+2026-04-30,Chocolate Brownie,20,3600,1300
+2026-04-30,Veg Burger,9,1710,720
+2026-04-30,Caesar Salad,16,3360,1440
+2026-04-30,Tomato Soup,17,2720,1020
+2026-05-01,Paneer Butter Masala,10,3200,1400
+2026-05-01,Veg Biryani,16,4000,1760
+2026-05-01,Margherita Pizza,13,3900,1690
+2026-05-01,Hakka Noodles,17,3740,1615
+2026-05-01,Masala Dosa,15,2700,1050
+2026-05-01,Cold Coffee,16,2240,720
+2026-05-01,Chocolate Brownie,6,1080,390
+2026-05-01,Veg Burger,13,2470,1040
+2026-05-01,Caesar Salad,16,3360,1440
+2026-05-01,Tomato Soup,13,2080,780
+2026-05-02,Paneer Butter Masala,13,4160,1820
+2026-05-02,Veg Biryani,17,4250,1870
+2026-05-02,Margherita Pizza,8,2400,1040
+2026-05-02,Hakka Noodles,22,4840,2090
+2026-05-02,Masala Dosa,6,1080,420
+2026-05-02,Cold Coffee,6,840,270
+2026-05-02,Chocolate Brownie,6,1080,390
+2026-05-02,Veg Burger,6,1140,480
+2026-05-02,Caesar Salad,20,4200,1800
+2026-05-02,Tomato Soup,7,1120,420
+2026-05-03,Paneer Butter Masala,17,5440,2380
+2026-05-03,Veg Biryani,8,2000,880
+2026-05-03,Margherita Pizza,25,7500,3250
+2026-05-03,Hakka Noodles,5,1100,475
+2026-05-03,Masala Dosa,25,4500,1750
+2026-05-03,Cold Coffee,25,3500,1125
+2026-05-03,Chocolate Brownie,16,2880,1040
+2026-05-03,Veg Burger,7,1330,560
+2026-05-03,Caesar Salad,20,4200,1800
+2026-05-03,Tomato Soup,17,2720,1020
+2026-05-04,Paneer Butter Masala,16,5120,2240
+2026-05-04,Veg Biryani,4,1000,440
+2026-05-04,Margherita Pizza,12,3600,1560
+2026-05-04,Hakka Noodles,12,2640,1140
+2026-05-04,Masala Dosa,14,2520,980
+2026-05-04,Cold Coffee,6,840,270
+2026-05-04,Chocolate Brownie,19,3420,1235
+2026-05-04,Veg Burger,9,1710,720
+2026-05-04,Caesar Salad,7,1470,630
+2026-05-04,Tomato Soup,18,2880,1080
+2026-05-05,Paneer Butter Masala,10,3200,1400
+2026-05-05,Veg Biryani,6,1500,660
+2026-05-05,Margherita Pizza,14,4200,1820
+2026-05-05,Hakka Noodles,20,4400,1900
+2026-05-05,Masala Dosa,14,2520,980
+2026-05-05,Cold Coffee,6,840,270
+2026-05-05,Chocolate Brownie,11,1980,715
+2026-05-05,Veg Burger,10,1900,800
+2026-05-05,Caesar Salad,16,3360,1440
+2026-05-05,Tomato Soup,20,3200,1200
+2026-05-06,Paneer Butter Masala,20,6400,2800
+2026-05-06,Veg Biryani,3,750,330
+2026-05-06,Margherita Pizza,11,3300,1430
+2026-05-06,Hakka Noodles,3,660,285
+2026-05-06,Masala Dosa,8,1440,560
+2026-05-06,Cold Coffee,11,1540,495
+2026-05-06,Chocolate Brownie,12,2160,780
+2026-05-06,Veg Burger,13,2470,1040
+2026-05-06,Caesar Salad,14,2940,1260
+2026-05-06,Tomato Soup,3,480,180
+2026-05-07,Paneer Butter Masala,8,2560,1120
+2026-05-07,Veg Biryani,7,1750,770
+2026-05-07,Margherita Pizza,15,4500,1950
+2026-05-07,Hakka Noodles,5,1100,475
+2026-05-07,Masala Dosa,7,1260,490
+2026-05-07,Cold Coffee,3,420,135
+2026-05-07,Chocolate Brownie,5,900,325
+2026-05-07,Veg Burger,19,3610,1520
+2026-05-07,Caesar Salad,9,1890,810
+2026-05-07,Tomato Soup,15,2400,900
+2026-05-08,Paneer Butter Masala,16,5120,2240
+2026-05-08,Veg Biryani,17,4250,1870
+2026-05-08,Margherita Pizza,13,3900,1690
+2026-05-08,Hakka Noodles,8,1760,760
+2026-05-08,Masala Dosa,14,2520,980
+2026-05-08,Cold Coffee,12,1680,540
+2026-05-08,Chocolate Brownie,13,2340,845
+2026-05-08,Veg Burger,5,950,400
+2026-05-08,Caesar Salad,4,840,360
+2026-05-08,Tomato Soup,7,1120,420
+2026-05-09,Paneer Butter Masala,10,3200,1400
+2026-05-09,Veg Biryani,5,1250,550
+2026-05-09,Margherita Pizza,6,1800,780
+2026-05-09,Hakka Noodles,13,2860,1235
+2026-05-09,Masala Dosa,21,3780,1470
+2026-05-09,Cold Coffee,20,2800,900
+2026-05-09,Chocolate Brownie,22,3960,1430
+2026-05-09,Veg Burger,21,3990,1680
+2026-05-09,Caesar Salad,20,4200,1800
+2026-05-09,Tomato Soup,13,2080,780
+2026-05-10,Paneer Butter Masala,11,3520,1540
+2026-05-10,Veg Biryani,23,5750,2530
+2026-05-10,Margherita Pizza,7,2100,910
+2026-05-10,Hakka Noodles,17,3740,1615
+2026-05-10,Masala Dosa,20,3600,1400
+2026-05-10,Cold Coffee,7,980,315
+2026-05-10,Chocolate Brownie,15,2700,975
+2026-05-10,Veg Burger,22,4180,1760
+2026-05-10,Caesar Salad,23,4830,2070
+2026-05-10,Tomato Soup,15,2400,900
+2026-05-11,Paneer Butter Masala,4,1280,560
+2026-05-11,Veg Biryani,10,2500,1100
+2026-05-11,Margherita Pizza,15,4500,1950
+2026-05-11,Hakka Noodles,4,880,380
+2026-05-11,Masala Dosa,3,540,210
+2026-05-11,Cold Coffee,9,1260,405
+2026-05-11,Chocolate Brownie,12,2160,780
+2026-05-11,Veg Burger,9,1710,720
+2026-05-11,Caesar Salad,7,1470,630
+2026-05-11,Tomato Soup,11,1760,660
+2026-05-12,Paneer Butter Masala,12,3840,1680
+2026-05-12,Veg Biryani,13,3250,1430
+2026-05-12,Margherita Pizza,6,1800,780
+2026-05-12,Hakka Noodles,3,660,285
+2026-05-12,Masala Dosa,18,3240,1260
+2026-05-12,Cold Coffee,16,2240,720
+2026-05-12,Chocolate Brownie,8,1440,520
+2026-05-12,Veg Burger,7,1330,560
+2026-05-12,Caesar Salad,15,3150,1350
+2026-05-12,Tomato Soup,20,3200,1200
+2026-05-13,Paneer Butter Masala,10,3200,1400
+2026-05-13,Veg Biryani,19,4750,2090
+2026-05-13,Margherita Pizza,20,6000,2600
+2026-05-13,Hakka Noodles,14,3080,1330
+2026-05-13,Masala Dosa,5,900,350
+2026-05-13,Cold Coffee,15,2100,675
+2026-05-13,Chocolate Brownie,4,720,260
+2026-05-13,Veg Burger,16,3040,1280
+2026-05-13,Caesar Salad,3,630,270
+2026-05-13,Tomato Soup,17,2720,1020
+2026-05-14,Paneer Butter Masala,5,1600,700
+2026-05-14,Veg Biryani,13,3250,1430
+2026-05-14,Margherita Pizza,16,4800,2080
+2026-05-14,Hakka Noodles,15,3300,1425
+2026-05-14,Masala Dosa,16,2880,1120
+2026-05-14,Cold Coffee,12,1680,540
+2026-05-14,Chocolate Brownie,6,1080,390
+2026-05-14,Veg Burger,15,2850,1200
+2026-05-14,Caesar Salad,3,630,270
+2026-05-14,Tomato Soup,13,2080,780
+2026-05-15,Paneer Butter Masala,8,2560,1120
+2026-05-15,Veg Biryani,17,4250,1870
+2026-05-15,Margherita Pizza,14,4200,1820
+2026-05-15,Hakka Noodles,5,1100,475
+2026-05-15,Masala Dosa,16,2880,1120
+2026-05-15,Cold Coffee,6,840,270
+2026-05-15,Chocolate Brownie,10,1800,650
+2026-05-15,Veg Burger,16,3040,1280
+2026-05-15,Caesar Salad,15,3150,1350
+2026-05-15,Tomato Soup,19,3040,1140
+2026-05-16,Paneer Butter Masala,6,1920,840
+2026-05-16,Veg Biryani,18,4500,1980
+2026-05-16,Margherita Pizza,15,4500,1950
+2026-05-16,Hakka Noodles,16,3520,1520
+2026-05-16,Masala Dosa,12,2160,840
+2026-05-16,Cold Coffee,16,2240,720
+2026-05-16,Chocolate Brownie,10,1800,650
+2026-05-16,Veg Burger,6,1140,480
+2026-05-16,Caesar Salad,23,4830,2070
+2026-05-16,Tomato Soup,7,1120,420
+2026-05-17,Paneer Butter Masala,23,7360,3220
+2026-05-17,Veg Biryani,23,5750,2530
+2026-05-17,Margherita Pizza,11,3300,1430
+2026-05-17,Hakka Noodles,17,3740,1615
+2026-05-17,Masala Dosa,17,3060,1190
+2026-05-17,Cold Coffee,8,1120,360
+2026-05-17,Chocolate Brownie,12,2160,780
+2026-05-17,Veg Burger,7,1330,560
+2026-05-17,Caesar Salad,8,1680,720
+2026-05-17,Tomato Soup,13,2080,780
+2026-05-18,Paneer Butter Masala,9,2880,1260
+2026-05-18,Veg Biryani,8,2000,880
+2026-05-18,Margherita Pizza,7,2100,910
+2026-05-18,Hakka Noodles,5,1100,475
+2026-05-18,Masala Dosa,8,1440,560
+2026-05-18,Cold Coffee,18,2520,810
+2026-05-18,Chocolate Brownie,17,3060,1105
+2026-05-18,Veg Burger,17,3230,1360
+2026-05-18,Caesar Salad,13,2730,1170
+2026-05-18,Tomato Soup,13,2080,780
+2026-05-19,Paneer Butter Masala,7,2240,980
+2026-05-19,Veg Biryani,17,4250,1870
+2026-05-19,Margherita Pizza,5,1500,650
+2026-05-19,Hakka Noodles,18,3960,1710
+2026-05-19,Masala Dosa,17,3060,1190
+2026-05-19,Cold Coffee,12,1680,540
+2026-05-19,Chocolate Brownie,11,1980,715
+2026-05-19,Veg Burger,4,760,320
+2026-05-19,Caesar Salad,14,2940,1260
+2026-05-19,Tomato Soup,19,3040,1140
+2026-05-20,Paneer Butter Masala,5,1600,700
+2026-05-20,Veg Biryani,12,3000,1320
+2026-05-20,Margherita Pizza,17,5100,2210
+2026-05-20,Hakka Noodles,17,3740,1615
+2026-05-20,Masala Dosa,4,720,280
+2026-05-20,Cold Coffee,4,560,180
+2026-05-20,Chocolate Brownie,14,2520,910
+2026-05-20,Veg Burger,12,2280,960
+2026-05-20,Caesar Salad,5,1050,450
+2026-05-20,Tomato Soup,5,800,300
+2026-05-21,Paneer Butter Masala,19,6080,2660
+2026-05-21,Veg Biryani,15,3750,1650
+2026-05-21,Margherita Pizza,17,5100,2210
+2026-05-21,Hakka Noodles,20,4400,1900
+2026-05-21,Masala Dosa,4,720,280
+2026-05-21,Cold Coffee,17,2380,765
+2026-05-21,Chocolate Brownie,9,1620,585
+2026-05-21,Veg Burger,13,2470,1040
+2026-05-21,Caesar Salad,18,3780,1620
+2026-05-21,Tomato Soup,19,3040,1140
+2026-05-22,Paneer Butter Masala,7,2240,980
+2026-05-22,Veg Biryani,4,1000,440
+2026-05-22,Margherita Pizza,17,5100,2210
+2026-05-22,Hakka Noodles,6,1320,570
+2026-05-22,Masala Dosa,13,2340,910
+2026-05-22,Cold Coffee,5,700,225
+2026-05-22,Chocolate Brownie,19,3420,1235
+2026-05-22,Veg Burger,8,1520,640
+2026-05-22,Caesar Salad,4,840,360
+2026-05-22,Tomato Soup,10,1600,600
+2026-05-23,Paneer Butter Masala,21,6720,2940
+2026-05-23,Veg Biryani,21,5250,2310
+2026-05-23,Margherita Pizza,23,6900,2990
+2026-05-23,Hakka Noodles,23,5060,2185
+2026-05-23,Masala Dosa,10,1800,700
+2026-05-23,Cold Coffee,17,2380,765
+2026-05-23,Chocolate Brownie,17,3060,1105
+2026-05-23,Veg Burger,15,2850,1200
+2026-05-23,Caesar Salad,18,3780,1620
+2026-05-23,Tomato Soup,20,3200,1200
+2026-05-24,Paneer Butter Masala,16,5120,2240
+2026-05-24,Veg Biryani,5,1250,550
+2026-05-24,Margherita Pizza,16,4800,2080
+2026-05-24,Hakka Noodles,6,1320,570
+2026-05-24,Masala Dosa,16,2880,1120
+2026-05-24,Cold Coffee,7,980,315
+2026-05-24,Chocolate Brownie,25,4500,1625
+2026-05-24,Veg Burger,18,3420,1440
+2026-05-24,Caesar Salad,15,3150,1350
+2026-05-24,Tomato Soup,13,2080,780
+2026-05-25,Paneer Butter Masala,7,2240,980
+2026-05-25,Veg Biryani,13,3250,1430
+2026-05-25,Margherita Pizza,5,1500,650
+2026-05-25,Hakka Noodles,7,1540,665
+2026-05-25,Masala Dosa,14,2520,980
+2026-05-25,Cold Coffee,12,1680,540
+2026-05-25,Chocolate Brownie,15,2700,975
+2026-05-25,Veg Burger,7,1330,560
+2026-05-25,Caesar Salad,5,1050,450
+2026-05-25,Tomato Soup,12,1920,720
+2026-05-26,Paneer Butter Masala,20,6400,2800
+2026-05-26,Veg Biryani,15,3750,1650
+2026-05-26,Margherita Pizza,13,3900,1690
+2026-05-26,Hakka Noodles,7,1540,665
+2026-05-26,Masala Dosa,19,3420,1330
+2026-05-26,Cold Coffee,5,700,225
+2026-05-26,Chocolate Brownie,16,2880,1040
+2026-05-26,Veg Burger,19,3610,1520
+2026-05-26,Caesar Salad,14,2940,1260
+2026-05-26,Tomato Soup,3,480,180
+2026-05-27,Paneer Butter Masala,14,4480,1960
+2026-05-27,Veg Biryani,12,3000,1320
+2026-05-27,Margherita Pizza,8,2400,1040
+2026-05-27,Hakka Noodles,9,1980,855
+2026-05-27,Masala Dosa,13,2340,910
+2026-05-27,Cold Coffee,18,2520,810
+2026-05-27,Chocolate Brownie,9,1620,585
+2026-05-27,Veg Burger,10,1900,800
+2026-05-27,Caesar Salad,7,1470,630
+2026-05-27,Tomato Soup,7,1120,420
+2026-05-28,Paneer Butter Masala,5,1600,700
+2026-05-28,Veg Biryani,12,3000,1320
+2026-05-28,Margherita Pizza,6,1800,780
+2026-05-28,Hakka Noodles,19,4180,1805
+2026-05-28,Masala Dosa,20,3600,1400
+2026-05-28,Cold Coffee,19,2660,855
+2026-05-28,Chocolate Brownie,4,720,260
+2026-05-28,Veg Burger,13,2470,1040
+2026-05-28,Caesar Salad,7,1470,630
+2026-05-28,Tomato Soup,15,2400,900
+2026-05-29,Paneer Butter Masala,7,2240,980
+2026-05-29,Veg Biryani,8,2000,880
+2026-05-29,Margherita Pizza,8,2400,1040
+2026-05-29,Hakka Noodles,8,1760,760
+2026-05-29,Masala Dosa,17,3060,1190
+2026-05-29,Cold Coffee,4,560,180
+2026-05-29,Chocolate Brownie,16,2880,1040
+2026-05-29,Veg Burger,14,2660,1120
+2026-05-29,Caesar Salad,10,2100,900
+2026-05-29,Tomato Soup,17,2720,1020
+2026-05-30,Paneer Butter Masala,15,4800,2100
+2026-05-30,Veg Biryani,21,5250,2310
+2026-05-30,Margherita Pizza,12,3600,1560
+2026-05-30,Hakka Noodles,25,5500,2375
+2026-05-30,Masala Dosa,12,2160,840
+2026-05-30,Cold Coffee,15,2100,675
+2026-05-30,Chocolate Brownie,22,3960,1430
+2026-05-30,Veg Burger,11,2090,880
+2026-05-30,Caesar Salad,17,3570,1530
+2026-05-30,Tomato Soup,21,3360,1260
+2026-05-31,Paneer Butter Masala,21,6720,2940
+2026-05-31,Veg Biryani,15,3750,1650
+2026-05-31,Margherita Pizza,18,5400,2340
+2026-05-31,Hakka Noodles,23,5060,2185
+2026-05-31,Masala Dosa,23,4140,1610
+2026-05-31,Cold Coffee,20,2800,900
+2026-05-31,Chocolate Brownie,10,1800,650
+2026-05-31,Veg Burger,11,2090,880
+2026-05-31,Caesar Salad,8,1680,720
+2026-05-31,Tomato Soup,13,2080,780
+2026-06-01,Paneer Butter Masala,4,1280,560
+2026-06-01,Veg Biryani,18,4500,1980
+2026-06-01,Margherita Pizza,14,4200,1820
+2026-06-01,Hakka Noodles,20,4400,1900
+2026-06-01,Masala Dosa,6,1080,420
+2026-06-01,Cold Coffee,19,2660,855
+2026-06-01,Chocolate Brownie,6,1080,390
+2026-06-01,Veg Burger,12,2280,960
+2026-06-01,Caesar Salad,5,1050,450
+2026-06-01,Tomato Soup,8,1280,480
+2026-06-02,Paneer Butter Masala,11,3520,1540
+2026-06-02,Veg Biryani,17,4250,1870
+2026-06-02,Margherita Pizza,19,5700,2470
+2026-06-02,Hakka Noodles,7,1540,665
+2026-06-02,Masala Dosa,16,2880,1120
+2026-06-02,Cold Coffee,5,700,225
+2026-06-02,Chocolate Brownie,10,1800,650
+2026-06-02,Veg Burger,17,3230,1360
+2026-06-02,Caesar Salad,14,2940,1260
+2026-06-02,Tomato Soup,3,480,180
+2026-06-03,Paneer Butter Masala,16,5120,2240
+2026-06-03,Veg Biryani,4,1000,440
+2026-06-03,Margherita Pizza,15,4500,1950
+2026-06-03,Hakka Noodles,19,4180,1805
+2026-06-03,Masala Dosa,14,2520,980
+2026-06-03,Cold Coffee,10,1400,450
+2026-06-03,Chocolate Brownie,15,2700,975
+2026-06-03,Veg Burger,5,950,400
+2026-06-03,Caesar Salad,14,2940,1260
+2026-06-03,Tomato Soup,10,1600,600
+2026-06-04,Paneer Butter Masala,3,960,420
+2026-06-04,Veg Biryani,13,3250,1430
+2026-06-04,Margherita Pizza,6,1800,780
+2026-06-04,Hakka Noodles,13,2860,1235
+2026-06-04,Masala Dosa,7,1260,490
+2026-06-04,Cold Coffee,7,980,315
+2026-06-04,Chocolate Brownie,4,720,260
+2026-06-04,Veg Burger,12,2280,960
+2026-06-04,Caesar Salad,18,3780,1620
+2026-06-04,Tomato Soup,7,1120,420
+2026-06-05,Paneer Butter Masala,18,5760,2520
+2026-06-05,Veg Biryani,17,4250,1870
+2026-06-05,Margherita Pizza,3,900,390
+2026-06-05,Hakka Noodles,5,1100,475
+2026-06-05,Masala Dosa,3,540,210
+2026-06-05,Cold Coffee,11,1540,495
+2026-06-05,Chocolate Brownie,9,1620,585
+2026-06-05,Veg Burger,7,1330,560
+2026-06-05,Caesar Salad,20,4200,1800
+2026-06-05,Tomato Soup,19,3040,1140
+2026-06-06,Paneer Butter Masala,20,6400,2800
+2026-06-06,Veg Biryani,7,1750,770
+2026-06-06,Margherita Pizza,15,4500,1950
+2026-06-06,Hakka Noodles,12,2640,1140
+2026-06-06,Masala Dosa,15,2700,1050
+2026-06-06,Cold Coffee,7,980,315
+2026-06-06,Chocolate Brownie,5,900,325
+2026-06-06,Veg Burger,12,2280,960
+2026-06-06,Caesar Salad,20,4200,1800
+2026-06-06,Tomato Soup,21,3360,1260
+2026-06-07,Paneer Butter Masala,6,1920,840
+2026-06-07,Veg Biryani,7,1750,770
+2026-06-07,Margherita Pizza,22,6600,2860
+2026-06-07,Hakka Noodles,25,5500,2375
+2026-06-07,Masala Dosa,3,540,210
+2026-06-07,Cold Coffee,23,3220,1035
+2026-06-07,Chocolate Brownie,12,2160,780
+2026-06-07,Veg Burger,8,1520,640
+2026-06-07,Caesar Salad,15,3150,1350
+2026-06-07,Tomato Soup,20,3200,1200
+2026-06-08,Paneer Butter Masala,3,960,420
+2026-06-08,Veg Biryani,14,3500,1540
+2026-06-08,Margherita Pizza,10,3000,1300
+2026-06-08,Hakka Noodles,16,3520,1520
+2026-06-08,Masala Dosa,8,1440,560
+2026-06-08,Cold Coffee,5,700,225
+2026-06-08,Chocolate Brownie,19,3420,1235
+2026-06-08,Veg Burger,14,2660,1120
+2026-06-08,Caesar Salad,5,1050,450
+2026-06-08,Tomato Soup,19,3040,1140
+2026-06-09,Paneer Butter Masala,20,6400,2800
+2026-06-09,Veg Biryani,19,4750,2090
+2026-06-09,Margherita Pizza,19,5700,2470
+2026-06-09,Hakka Noodles,20,4400,1900
+2026-06-09,Masala Dosa,3,540,210
+2026-06-09,Cold Coffee,15,2100,675
+2026-06-09,Chocolate Brownie,18,3240,1170
+2026-06-09,Veg Burger,4,760,320
+2026-06-09,Caesar Salad,15,3150,1350
+2026-06-09,Tomato Soup,14,2240,840
+2026-06-10,Paneer Butter Masala,11,3520,1540
+2026-06-10,Veg Biryani,3,750,330
+2026-06-10,Margherita Pizza,14,4200,1820
+2026-06-10,Hakka Noodles,5,1100,475
+2026-06-10,Masala Dosa,14,2520,980
+2026-06-10,Cold Coffee,10,1400,450
+2026-06-10,Chocolate Brownie,6,1080,390
+2026-06-10,Veg Burger,13,2470,1040
+2026-06-10,Caesar Salad,7,1470,630
+2026-06-10,Tomato Soup,4,640,240
+2026-06-11,Paneer Butter Masala,14,4480,1960
+2026-06-11,Veg Biryani,20,5000,2200
+2026-06-11,Margherita Pizza,13,3900,1690
+2026-06-11,Hakka Noodles,8,1760,760
+2026-06-11,Masala Dosa,17,3060,1190
+2026-06-11,Cold Coffee,18,2520,810
+2026-06-11,Chocolate Brownie,8,1440,520
+2026-06-11,Veg Burger,7,1330,560
+2026-06-11,Caesar Salad,5,1050,450
+2026-06-11,Tomato Soup,17,2720,1020
+2026-06-12,Paneer Butter Masala,4,1280,560
+2026-06-12,Veg Biryani,12,3000,1320
+2026-06-12,Margherita Pizza,9,2700,1170
+2026-06-12,Hakka Noodles,4,880,380
+2026-06-12,Masala Dosa,9,1620,630
+2026-06-12,Cold Coffee,4,560,180
+2026-06-12,Chocolate Brownie,13,2340,845
+2026-06-12,Veg Burger,12,2280,960
+2026-06-12,Caesar Salad,19,3990,1710
+2026-06-12,Tomato Soup,15,2400,900
+2026-06-13,Paneer Butter Masala,25,8000,3500
+2026-06-13,Veg Biryani,22,5500,2420
+2026-06-13,Margherita Pizza,13,3900,1690
+2026-06-13,Hakka Noodles,5,1100,475
+2026-06-13,Masala Dosa,11,1980,770
+2026-06-13,Cold Coffee,15,2100,675
+2026-06-13,Chocolate Brownie,17,3060,1105
+2026-06-13,Veg Burger,5,950,400
+2026-06-13,Caesar Salad,16,3360,1440
+2026-06-13,Tomato Soup,13,2080,780
+2026-06-14,Paneer Butter Masala,7,2240,980
+2026-06-14,Veg Biryani,17,4250,1870
+2026-06-14,Margherita Pizza,20,6000,2600
+2026-06-14,Hakka Noodles,18,3960,1710
+2026-06-14,Masala Dosa,21,3780,1470
+2026-06-14,Cold Coffee,18,2520,810
+2026-06-14,Chocolate Brownie,16,2880,1040
+2026-06-14,Veg Burger,10,1900,800
+2026-06-14,Caesar Salad,22,4620,1980
+2026-06-14,Tomato Soup,22,3520,1320
+2026-06-15,Paneer Butter Masala,14,4480,1960
+2026-06-15,Veg Biryani,19,4750,2090
+2026-06-15,Margherita Pizza,11,3300,1430
+2026-06-15,Hakka Noodles,5,1100,475
+2026-06-15,Masala Dosa,16,2880,1120
+2026-06-15,Cold Coffee,5,700,225
+2026-06-15,Chocolate Brownie,16,2880,1040
+2026-06-15,Veg Burger,8,1520,640
+2026-06-15,Caesar Salad,20,4200,1800
+2026-06-15,Tomato Soup,12,1920,720
+2026-06-16,Paneer Butter Masala,13,4160,1820
+2026-06-16,Veg Biryani,6,1500,660
+2026-06-16,Margherita Pizza,5,1500,650
+2026-06-16,Hakka Noodles,13,2860,1235
+2026-06-16,Masala Dosa,12,2160,840
+2026-06-16,Cold Coffee,12,1680,540
+2026-06-16,Chocolate Brownie,17,3060,1105
+2026-06-16,Veg Burger,16,3040,1280
+2026-06-16,Caesar Salad,8,1680,720
+2026-06-16,Tomato Soup,17,2720,1020
+2026-06-17,Paneer Butter Masala,14,4480,1960
+2026-06-17,Veg Biryani,17,4250,1870
+2026-06-17,Margherita Pizza,4,1200,520
+2026-06-17,Hakka Noodles,14,3080,1330
+2026-06-17,Masala Dosa,16,2880,1120
+2026-06-17,Cold Coffee,11,1540,495
+2026-06-17,Chocolate Brownie,4,720,260
+2026-06-17,Veg Burger,5,950,400
+2026-06-17,Caesar Salad,15,3150,1350
+2026-06-17,Tomato Soup,14,2240,840
+2026-06-18,Paneer Butter Masala,19,6080,2660
+2026-06-18,Veg Biryani,8,2000,880
+2026-06-18,Margherita Pizza,3,900,390
+2026-06-18,Hakka Noodles,7,1540,665
+2026-06-18,Masala Dosa,17,3060,1190
+2026-06-18,Cold Coffee,4,560,180
+2026-06-18,Chocolate Brownie,7,1260,455
+2026-06-18,Veg Burger,5,950,400
+2026-06-18,Caesar Salad,10,2100,900
+2026-06-18,Tomato Soup,14,2240,840
+2026-06-19,Paneer Butter Masala,14,4480,1960
+2026-06-19,Veg Biryani,15,3750,1650
+2026-06-19,Margherita Pizza,4,1200,520
+2026-06-19,Hakka Noodles,7,1540,665
+2026-06-19,Masala Dosa,17,3060,1190
+2026-06-19,Cold Coffee,14,1960,630
+2026-06-19,Chocolate Brownie,14,2520,910
+2026-06-19,Veg Burger,17,3230,1360
+2026-06-19,Caesar Salad,5,1050,450
+2026-06-19,Tomato Soup,7,1120,420
+2026-06-20,Paneer Butter Masala,23,7360,3220
+2026-06-20,Veg Biryani,17,4250,1870
+2026-06-20,Margherita Pizza,18,5400,2340
+2026-06-20,Hakka Noodles,16,3520,1520
+2026-06-20,Masala Dosa,13,2340,910
+2026-06-20,Cold Coffee,12,1680,540
+2026-06-20,Chocolate Brownie,7,1260,455
+2026-06-20,Veg Burger,3,570,240
+2026-06-20,Caesar Salad,10,2100,900
+2026-06-20,Tomato Soup,22,3520,1320
+2026-06-21,Paneer Butter Masala,23,7360,3220
+2026-06-21,Veg Biryani,18,4500,1980
+2026-06-21,Margherita Pizza,25,7500,3250
+2026-06-21,Hakka Noodles,7,1540,665
+2026-06-21,Masala Dosa,13,2340,910
+2026-06-21,Cold Coffee,13,1820,585
+2026-06-21,Chocolate Brownie,21,3780,1365
+2026-06-21,Veg Burger,11,2090,880
+2026-06-21,Caesar Salad,15,3150,1350
+2026-06-21,Tomato Soup,22,3520,1320
+2026-06-22,Paneer Butter Masala,9,2880,1260
+2026-06-22,Veg Biryani,6,1500,660
+2026-06-22,Margherita Pizza,7,2100,910
+2026-06-22,Hakka Noodles,5,1100,475
+2026-06-22,Masala Dosa,17,3060,1190
+2026-06-22,Cold Coffee,8,1120,360
+2026-06-22,Chocolate Brownie,17,3060,1105
+2026-06-22,Veg Burger,5,950,400
+2026-06-22,Caesar Salad,13,2730,1170
+2026-06-22,Tomato Soup,14,2240,840
+2026-06-23,Paneer Butter Masala,5,1600,700
+2026-06-23,Veg Biryani,20,5000,2200
+2026-06-23,Margherita Pizza,20,6000,2600
+2026-06-23,Hakka Noodles,12,2640,1140
+2026-06-23,Masala Dosa,12,2160,840
+2026-06-23,Cold Coffee,8,1120,360
+2026-06-23,Chocolate Brownie,8,1440,520
+2026-06-23,Veg Burger,14,2660,1120
+2026-06-23,Caesar Salad,19,3990,1710
+2026-06-23,Tomato Soup,10,1600,600
+2026-06-24,Paneer Butter Masala,6,1920,840
+2026-06-24,Veg Biryani,9,2250,990
+2026-06-24,Margherita Pizza,7,2100,910
+2026-06-24,Hakka Noodles,10,2200,950
+2026-06-24,Masala Dosa,18,3240,1260
+2026-06-24,Cold Coffee,3,420,135
+2026-06-24,Chocolate Brownie,14,2520,910
+2026-06-24,Veg Burger,20,3800,1600
+2026-06-24,Caesar Salad,14,2940,1260
+2026-06-24,Tomato Soup,17,2720,1020
+2026-06-25,Paneer Butter Masala,20,6400,2800
+2026-06-25,Veg Biryani,7,1750,770
+2026-06-25,Margherita Pizza,5,1500,650
+2026-06-25,Hakka Noodles,5,1100,475
+2026-06-25,Masala Dosa,12,2160,840
+2026-06-25,Cold Coffee,15,2100,675
+2026-06-25,Chocolate Brownie,18,3240,1170
+2026-06-25,Veg Burger,19,3610,1520
+2026-06-25,Caesar Salad,16,3360,1440
+2026-06-25,Tomato Soup,16,2560,960
+2026-06-26,Paneer Butter Masala,5,1600,700
+2026-06-26,Veg Biryani,7,1750,770
+2026-06-26,Margherita Pizza,13,3900,1690
+2026-06-26,Hakka Noodles,5,1100,475
+2026-06-26,Masala Dosa,17,3060,1190
+2026-06-26,Cold Coffee,17,2380,765
+2026-06-26,Chocolate Brownie,19,3420,1235
+2026-06-26,Veg Burger,14,2660,1120
+2026-06-26,Caesar Salad,7,1470,630
+2026-06-26,Tomato Soup,20,3200,1200
+2026-06-27,Paneer Butter Masala,10,3200,1400
+2026-06-27,Veg Biryani,8,2000,880
+2026-06-27,Margherita Pizza,20,6000,2600
+2026-06-27,Hakka Noodles,23,5060,2185
+2026-06-27,Masala Dosa,5,900,350
+2026-06-27,Cold Coffee,7,980,315
+2026-06-27,Chocolate Brownie,23,4140,1495
+2026-06-27,Veg Burger,8,1520,640
+2026-06-27,Caesar Salad,15,3150,1350
+2026-06-27,Tomato Soup,10,1600,600
+2026-06-28,Paneer Butter Masala,10,3200,1400
+2026-06-28,Veg Biryani,16,4000,1760
+2026-06-28,Margherita Pizza,12,3600,1560
+2026-06-28,Hakka Noodles,17,3740,1615
+2026-06-28,Masala Dosa,23,4140,1610
+2026-06-28,Cold Coffee,15,2100,675
+2026-06-28,Chocolate Brownie,6,1080,390
+2026-06-28,Veg Burger,13,2470,1040
+2026-06-28,Caesar Salad,11,2310,990
+2026-06-28,Tomato Soup,25,4000,1500
+2026-06-29,Paneer Butter Masala,11,3520,1540
+2026-06-29,Veg Biryani,7,1750,770
+2026-06-29,Margherita Pizza,12,3600,1560
+2026-06-29,Hakka Noodles,20,4400,1900
+2026-06-29,Masala Dosa,5,900,350
+2026-06-29,Cold Coffee,19,2660,855
+2026-06-29,Chocolate Brownie,8,1440,520
+2026-06-29,Veg Burger,7,1330,560
+2026-06-29,Caesar Salad,8,1680,720
+2026-06-29,Tomato Soup,13,2080,780
+2026-06-30,Paneer Butter Masala,4,1280,560
+2026-06-30,Veg Biryani,3,750,330
+2026-06-30,Margherita Pizza,5,1500,650
+2026-06-30,Hakka Noodles,4,880,380
+2026-06-30,Masala Dosa,11,1980,770
+2026-06-30,Cold Coffee,9,1260,405
+2026-06-30,Chocolate Brownie,16,2880,1040
+2026-06-30,Veg Burger,3,570,240
+2026-06-30,Caesar Salad,18,3780,1620
+2026-06-30,Tomato Soup,20,3200,1200
+2026-07-01,Paneer Butter Masala,12,3840,1680
+2026-07-01,Veg Biryani,12,3000,1320
+2026-07-01,Margherita Pizza,18,5400,2340
+2026-07-01,Hakka Noodles,10,2200,950
+2026-07-01,Masala Dosa,15,2700,1050
+2026-07-01,Cold Coffee,12,1680,540
+2026-07-01,Chocolate Brownie,17,3060,1105
+2026-07-01,Veg Burger,5,950,400
+2026-07-01,Caesar Salad,4,840,360
+2026-07-01,Tomato Soup,8,1280,480
+2026-07-02,Paneer Butter Masala,17,5440,2380
+2026-07-02,Veg Biryani,16,4000,1760
+2026-07-02,Margherita Pizza,18,5400,2340
+2026-07-02,Hakka Noodles,17,3740,1615
+2026-07-02,Masala Dosa,9,1620,630
+2026-07-02,Cold Coffee,13,1820,585
+2026-07-02,Chocolate Brownie,7,1260,455
+2026-07-02,Veg Burger,13,2470,1040
+2026-07-02,Caesar Salad,13,2730,1170
+2026-07-02,Tomato Soup,14,2240,840
+2026-07-03,Paneer Butter Masala,15,4800,2100
+2026-07-03,Veg Biryani,7,1750,770
+2026-07-03,Margherita Pizza,14,4200,1820
+2026-07-03,Hakka Noodles,19,4180,1805
+2026-07-03,Masala Dosa,20,3600,1400
+2026-07-03,Cold Coffee,6,840,270
+2026-07-03,Chocolate Brownie,13,2340,845
+2026-07-03,Veg Burger,10,1900,800
+2026-07-03,Caesar Salad,17,3570,1530
+2026-07-03,Tomato Soup,6,960,360
+2026-07-04,Paneer Butter Masala,13,4160,1820
+2026-07-04,Veg Biryani,21,5250,2310
+2026-07-04,Margherita Pizza,12,3600,1560
+2026-07-04,Hakka Noodles,8,1760,760
+2026-07-04,Masala Dosa,7,1260,490
+2026-07-04,Cold Coffee,5,700,225
+2026-07-04,Chocolate Brownie,15,2700,975
+2026-07-04,Veg Burger,18,3420,1440
+2026-07-04,Caesar Salad,20,4200,1800
+2026-07-04,Tomato Soup,12,1920,720
+2026-07-05,Paneer Butter Masala,10,3200,1400
+2026-07-05,Veg Biryani,16,4000,1760
+2026-07-05,Margherita Pizza,16,4800,2080
+2026-07-05,Hakka Noodles,11,2420,1045
+2026-07-05,Masala Dosa,10,1800,700
+2026-07-05,Cold Coffee,22,3080,990
+2026-07-05,Chocolate Brownie,23,4140,1495
+2026-07-05,Veg Burger,21,3990,1680
+2026-07-05,Caesar Salad,22,4620,1980
+2026-07-05,Tomato Soup,15,2400,900
+2026-07-06,Paneer Butter Masala,18,5760,2520
+2026-07-06,Veg Biryani,3,750,330
+2026-07-06,Margherita Pizza,5,1500,650
+2026-07-06,Hakka Noodles,15,3300,1425
+2026-07-06,Masala Dosa,19,3420,1330
+2026-07-06,Cold Coffee,17,2380,765
+2026-07-06,Chocolate Brownie,10,1800,650
+2026-07-06,Veg Burger,9,1710,720
+2026-07-06,Caesar Salad,14,2940,1260
+2026-07-06,Tomato Soup,4,640,240
+2026-07-07,Paneer Butter Masala,4,1280,560
+2026-07-07,Veg Biryani,12,3000,1320
+2026-07-07,Margherita Pizza,18,5400,2340
+2026-07-07,Hakka Noodles,18,3960,1710
+2026-07-07,Masala Dosa,12,2160,840
+2026-07-07,Cold Coffee,20,2800,900
+2026-07-07,Chocolate Brownie,3,540,195
+2026-07-07,Veg Burger,6,1140,480
+2026-07-07,Caesar Salad,16,3360,1440
+2026-07-07,Tomato Soup,7,1120,420
+2026-07-08,Paneer Butter Masala,11,3520,1540
+2026-07-08,Veg Biryani,14,3500,1540
+2026-07-08,Margherita Pizza,15,4500,1950
+2026-07-08,Hakka Noodles,14,3080,1330
+2026-07-08,Masala Dosa,4,720,280
+2026-07-08,Cold Coffee,15,2100,675
+2026-07-08,Chocolate Brownie,4,720,260
+2026-07-08,Veg Burger,20,3800,1600
+2026-07-08,Caesar Salad,9,1890,810
+2026-07-08,Tomato Soup,14,2240,840
+2026-07-09,Paneer Butter Masala,20,6400,2800
+2026-07-09,Veg Biryani,12,3000,1320
+2026-07-09,Margherita Pizza,5,1500,650
+2026-07-09,Hakka Noodles,15,3300,1425
+2026-07-09,Masala Dosa,19,3420,1330
+2026-07-09,Cold Coffee,17,2380,765
+2026-07-09,Chocolate Brownie,20,3600,1300
+2026-07-09,Veg Burger,11,2090,880
+2026-07-09,Caesar Salad,6,1260,540
+2026-07-09,Tomato Soup,7,1120,420
+2026-07-10,Paneer Butter Masala,6,1920,840
+2026-07-10,Veg Biryani,15,3750,1650
+2026-07-10,Margherita Pizza,14,4200,1820
+2026-07-10,Hakka Noodles,13,2860,1235
+2026-07-10,Masala Dosa,20,3600,1400
+2026-07-10,Cold Coffee,14,1960,630
+2026-07-10,Chocolate Brownie,7,1260,455
+2026-07-10,Veg Burger,9,1710,720
+2026-07-10,Caesar Salad,19,3990,1710
+2026-07-10,Tomato Soup,15,2400,900
+2026-07-11,Paneer Butter Masala,23,7360,3220
+2026-07-11,Veg Biryani,5,1250,550
+2026-07-11,Margherita Pizza,5,1500,650
+2026-07-11,Hakka Noodles,5,1100,475
+2026-07-11,Masala Dosa,8,1440,560
+2026-07-11,Cold Coffee,16,2240,720
+2026-07-11,Chocolate Brownie,22,3960,1430
+2026-07-11,Veg Burger,23,4370,1840
+2026-07-11,Caesar Salad,21,4410,1890
+2026-07-11,Tomato Soup,8,1280,480
+2026-07-12,Paneer Butter Masala,23,7360,3220
+2026-07-12,Veg Biryani,8,2000,880
+2026-07-12,Margherita Pizza,16,4800,2080
+2026-07-12,Hakka Noodles,16,3520,1520
+2026-07-12,Masala Dosa,10,1800,700
+2026-07-12,Cold Coffee,18,2520,810
+2026-07-12,Chocolate Brownie,15,2700,975
+2026-07-12,Veg Burger,16,3040,1280
+2026-07-12,Caesar Salad,23,4830,2070
+2026-07-12,Tomato Soup,23,3680,1380
+2026-07-13,Paneer Butter Masala,20,6400,2800
+2026-07-13,Veg Biryani,18,4500,1980
+2026-07-13,Margherita Pizza,12,3600,1560
+2026-07-13,Hakka Noodles,18,3960,1710
+2026-07-13,Masala Dosa,3,540,210
+2026-07-13,Cold Coffee,14,1960,630
+2026-07-13,Chocolate Brownie,13,2340,845
+2026-07-13,Veg Burger,6,1140,480
+2026-07-13,Caesar Salad,16,3360,1440
+2026-07-13,Tomato Soup,12,1920,720
+2026-07-14,Paneer Butter Masala,3,960,420
+2026-07-14,Veg Biryani,18,4500,1980
+2026-07-14,Margherita Pizza,11,3300,1430
+2026-07-14,Hakka Noodles,10,2200,950
+2026-07-14,Masala Dosa,4,720,280
+2026-07-14,Cold Coffee,18,2520,810
+2026-07-14,Chocolate Brownie,8,1440,520
+2026-07-14,Veg Burger,19,3610,1520
+2026-07-14,Caesar Salad,15,3150,1350
+2026-07-14,Tomato Soup,7,1120,420
+2026-07-15,Paneer Butter Masala,10,3200,1400
+2026-07-15,Veg Biryani,4,1000,440
+2026-07-15,Margherita Pizza,6,1800,780
+2026-07-15,Hakka Noodles,9,1980,855
+2026-07-15,Masala Dosa,3,540,210
+2026-07-15,Cold Coffee,17,2380,765
+2026-07-15,Chocolate Brownie,13,2340,845
+2026-07-15,Veg Burger,16,3040,1280
+2026-07-15,Caesar Salad,7,1470,630
+2026-07-15,Tomato Soup,16,2560,960
+2026-07-16,Paneer Butter Masala,9,2880,1260
+2026-07-16,Veg Biryani,16,4000,1760
+2026-07-16,Margherita Pizza,19,5700,2470
+2026-07-16,Hakka Noodles,18,3960,1710
+2026-07-16,Masala Dosa,4,720,280
+2026-07-16,Cold Coffee,7,980,315
+2026-07-16,Chocolate Brownie,19,3420,1235
+2026-07-16,Veg Burger,9,1710,720
+2026-07-16,Caesar Salad,20,4200,1800
+2026-07-16,Tomato Soup,13,2080,780
+2026-07-17,Paneer Butter Masala,18,5760,2520
+2026-07-17,Veg Biryani,19,4750,2090
+2026-07-17,Margherita Pizza,15,4500,1950
+2026-07-17,Hakka Noodles,13,2860,1235
+2026-07-17,Masala Dosa,8,1440,560
+2026-07-17,Cold Coffee,17,2380,765
+2026-07-17,Chocolate Brownie,20,3600,1300
+2026-07-17,Veg Burger,13,2470,1040
+2026-07-17,Caesar Salad,20,4200,1800
+2026-07-17,Tomato Soup,14,2240,840
+2026-07-18,Paneer Butter Masala,13,4160,1820
+2026-07-18,Veg Biryani,22,5500,2420
+2026-07-18,Margherita Pizza,11,3300,1430
+2026-07-18,Hakka Noodles,12,2640,1140
+2026-07-18,Masala Dosa,13,2340,910
+2026-07-18,Cold Coffee,25,3500,1125
+2026-07-18,Chocolate Brownie,15,2700,975
+2026-07-18,Veg Burger,12,2280,960
+2026-07-18,Caesar Salad,15,3150,1350
+2026-07-18,Tomato Soup,15,2400,900
+2026-07-19,Paneer Butter Masala,11,3520,1540
+2026-07-19,Veg Biryani,22,5500,2420
+2026-07-19,Margherita Pizza,16,4800,2080
+2026-07-19,Hakka Noodles,22,4840,2090
+2026-07-19,Masala Dosa,17,3060,1190
+2026-07-19,Cold Coffee,25,3500,1125
+2026-07-19,Chocolate Brownie,13,2340,845
+2026-07-19,Veg Burger,15,2850,1200
+2026-07-19,Caesar Salad,7,1470,630
+2026-07-19,Tomato Soup,25,4000,1500

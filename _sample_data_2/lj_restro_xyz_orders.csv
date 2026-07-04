@@ -1,0 +1,456 @@
+order_date,order_id,item_name,quantity,amount,order_type,customer_name
+2026-06-10,ORD2001,Masala Chai,1,60,dine_in,Arjun
+2026-06-10,ORD2001,Chicken Biryani,3,1080,dine_in,Arjun
+2026-06-10,ORD2001,Farmhouse Pizza,1,420,dine_in,Arjun
+2026-06-10,ORD2001,Dal Tadka,1,220,dine_in,Arjun
+2026-06-15,ORD2002,Hakka Noodles,1,240,takeaway,Rahul
+2026-06-23,ORD2003,Manchurian,1,210,dine_in,Krishna
+2026-06-23,ORD2003,Veg Biryani,2,560,dine_in,Krishna
+2026-06-29,ORD2004,Dal Tadka,1,220,dine_in,Ishita
+2026-06-04,ORD2005,Mojito,1,170,takeaway,Diya
+2026-06-04,ORD2005,Farmhouse Pizza,1,420,takeaway,Diya
+2026-06-14,ORD2006,Paneer Butter Masala,3,960,dine_in,Aarav
+2026-06-14,ORD2006,Veg Burger,3,540,dine_in,Aarav
+2026-06-14,ORD2006,Coke,2,160,dine_in,Aarav
+2026-06-26,ORD2007,Veg Biryani,3,840,dine_in,Priya
+2026-06-14,ORD2008,Paneer Tikka,2,580,delivery,Diya
+2026-06-14,ORD2008,Veg Biryani,3,840,delivery,Diya
+2026-06-17,ORD2009,Cold Coffee,3,480,takeaway,Meera
+2026-06-23,ORD2010,Butter Naan,3,165,dine_in,Riya
+2026-06-23,ORD2010,Chicken Biryani,2,720,dine_in,Riya
+2026-06-23,ORD2010,Veg Burger,2,360,dine_in,Riya
+2026-06-23,ORD2010,Chicken Biryani,2,720,dine_in,Riya
+2026-06-29,ORD2011,Manchurian,1,210,takeaway,Ishita
+2026-06-29,ORD2011,Farmhouse Pizza,2,840,takeaway,Ishita
+2026-06-29,ORD2011,Cold Coffee,3,480,takeaway,Ishita
+2026-06-20,ORD2012,Butter Naan,2,110,takeaway,Rahul
+2026-06-20,ORD2012,Tandoori Chicken,2,840,takeaway,Rahul
+2026-06-20,ORD2012,Mojito,1,170,takeaway,Rahul
+2026-06-20,ORD2012,Paneer Butter Masala,2,640,takeaway,Rahul
+2026-06-12,ORD2013,Coke,2,160,dine_in,Sneha
+2026-06-12,ORD2013,Paneer Butter Masala,3,960,dine_in,Sneha
+2026-06-12,ORD2013,Margherita Pizza,2,680,dine_in,Sneha
+2026-06-30,ORD2014,Caesar Salad,2,460,dine_in,Riya
+2026-06-30,ORD2014,Hakka Noodles,3,720,dine_in,Riya
+2026-06-30,ORD2014,Chicken Biryani,3,1080,dine_in,Riya
+2026-06-30,ORD2014,Paneer Butter Masala,2,640,dine_in,Riya
+2026-06-11,ORD2015,Cold Coffee,1,160,takeaway,Meera
+2026-06-11,ORD2015,Hakka Noodles,3,720,takeaway,Meera
+2026-06-04,ORD2016,Farmhouse Pizza,3,1260,dine_in,Yash
+2026-06-22,ORD2017,Butter Naan,1,55,delivery,
+2026-06-22,ORD2017,Gulab Jamun,3,330,delivery,
+2026-06-22,ORD2017,Chocolate Brownie,1,190,delivery,
+2026-06-22,ORD2017,Tomato Soup,2,300,delivery,
+2026-06-03,ORD2018,Paneer Butter Masala,2,640,dine_in,Diya
+2026-06-03,ORD2018,Mojito,1,170,dine_in,Diya
+2026-06-03,ORD2018,Veg Burger,1,180,dine_in,Diya
+2026-06-03,ORD2018,Chicken Biryani,1,360,dine_in,Diya
+2026-06-09,ORD2019,Tomato Soup,1,150,dine_in,Neha
+2026-06-09,ORD2019,Chocolate Brownie,1,190,dine_in,Neha
+2026-06-21,ORD2020,Cold Coffee,2,320,delivery,Krishna
+2026-06-21,ORD2020,Hakka Noodles,3,720,delivery,Krishna
+2026-06-21,ORD2020,Farmhouse Pizza,2,840,delivery,Krishna
+2026-06-30,ORD2021,Caesar Salad,3,690,takeaway,Yash
+2026-06-30,ORD2021,Caesar Salad,1,230,takeaway,Yash
+2026-06-30,ORD2021,Tandoori Chicken,1,420,takeaway,Yash
+2026-06-30,ORD2021,Coke,1,80,takeaway,Yash
+2026-06-29,ORD2022,Gulab Jamun,3,330,dine_in,Riya
+2026-06-29,ORD2022,Veg Biryani,3,840,dine_in,Riya
+2026-06-29,ORD2022,Hakka Noodles,1,240,dine_in,Riya
+2026-06-29,ORD2022,Tomato Soup,2,300,dine_in,Riya
+2026-06-23,ORD2023,Veg Biryani,3,840,takeaway,Sneha
+2026-06-23,ORD2023,Lassi,2,240,takeaway,Sneha
+2026-06-23,ORD2023,Paneer Tikka,1,290,takeaway,Sneha
+2026-06-23,ORD2023,Paneer Butter Masala,2,640,takeaway,Sneha
+2026-06-22,ORD2024,Dal Tadka,3,660,dine_in,
+2026-06-22,ORD2024,Margherita Pizza,1,340,dine_in,
+2026-06-22,ORD2024,Coke,1,80,dine_in,
+2026-06-22,ORD2024,Farmhouse Pizza,2,840,dine_in,
+2026-06-30,ORD2025,Tomato Soup,2,300,takeaway,Ishita
+2026-06-11,ORD2026,Butter Naan,3,165,dine_in,Neha
+2026-06-11,ORD2026,French Fries,1,140,dine_in,Neha
+2026-06-01,ORD2027,Gulab Jamun,2,220,delivery,Krishna
+2026-06-01,ORD2027,Coke,2,160,delivery,Krishna
+2026-06-01,ORD2027,Masala Chai,3,180,delivery,Krishna
+2026-06-13,ORD2028,Gulab Jamun,3,330,dine_in,Meera
+2026-06-16,ORD2029,Chocolate Brownie,2,380,dine_in,
+2026-06-16,ORD2029,Coke,3,240,dine_in,
+2026-06-16,ORD2029,Masala Chai,3,180,dine_in,
+2026-06-16,ORD2029,Coke,1,80,dine_in,
+2026-06-18,ORD2030,Lassi,1,120,dine_in,Ishita
+2026-06-18,ORD2030,Tandoori Chicken,3,1260,dine_in,Ishita
+2026-06-18,ORD2030,Butter Naan,2,110,dine_in,Ishita
+2026-06-28,ORD2031,French Fries,1,140,dine_in,Aarav
+2026-06-28,ORD2031,Hakka Noodles,2,480,dine_in,Aarav
+2026-06-28,ORD2031,Masala Chai,1,60,dine_in,Aarav
+2026-06-19,ORD2032,Hakka Noodles,1,240,delivery,Aarav
+2026-06-19,ORD2032,Gulab Jamun,2,220,delivery,Aarav
+2026-06-19,ORD2032,Caesar Salad,3,690,delivery,Aarav
+2026-06-14,ORD2033,Veg Burger,3,540,delivery,Diya
+2026-06-14,ORD2033,Caesar Salad,1,230,delivery,Diya
+2026-06-10,ORD2034,Tomato Soup,1,150,dine_in,Diya
+2026-06-10,ORD2034,Cold Coffee,1,160,dine_in,Diya
+2026-06-10,ORD2034,Farmhouse Pizza,1,420,dine_in,Diya
+2026-06-16,ORD2035,Butter Naan,1,55,takeaway,Riya
+2026-06-29,ORD2036,Coke,1,80,dine_in,Ananya
+2026-06-11,ORD2037,Caesar Salad,2,460,delivery,Diya
+2026-06-11,ORD2037,Lassi,1,120,delivery,Diya
+2026-06-12,ORD2038,Veg Biryani,3,840,delivery,Vivaan
+2026-06-12,ORD2038,Cold Coffee,2,320,delivery,Vivaan
+2026-06-03,ORD2039,Veg Burger,2,360,delivery,Ananya
+2026-06-03,ORD2039,Paneer Butter Masala,1,320,delivery,Ananya
+2026-06-03,ORD2039,Veg Biryani,1,280,delivery,Ananya
+2026-06-12,ORD2040,Manchurian,3,630,takeaway,Neha
+2026-06-12,ORD2040,Hakka Noodles,2,480,takeaway,Neha
+2026-06-12,ORD2040,French Fries,3,420,takeaway,Neha
+2026-06-12,ORD2040,Farmhouse Pizza,1,420,takeaway,Neha
+2026-06-14,ORD2041,French Fries,1,140,dine_in,Diya
+2026-06-19,ORD2042,Mojito,3,510,delivery,Vivaan
+2026-06-25,ORD2043,Veg Burger,3,540,dine_in,Ananya
+2026-06-02,ORD2044,Coke,3,240,takeaway,
+2026-06-02,ORD2044,Margherita Pizza,1,340,takeaway,
+2026-06-02,ORD2044,Veg Burger,2,360,takeaway,
+2026-06-02,ORD2044,Gulab Jamun,2,220,takeaway,
+2026-06-01,ORD2045,Caesar Salad,2,460,takeaway,Arjun
+2026-06-01,ORD2045,Manchurian,1,210,takeaway,Arjun
+2026-06-01,ORD2045,Farmhouse Pizza,3,1260,takeaway,Arjun
+2026-06-01,ORD2045,Chocolate Brownie,1,190,takeaway,Arjun
+2026-06-30,ORD2046,Caesar Salad,3,690,dine_in,Sneha
+2026-06-15,ORD2047,Paneer Butter Masala,1,320,dine_in,Neha
+2026-06-15,ORD2047,Lassi,3,360,dine_in,Neha
+2026-06-15,ORD2047,Masala Chai,1,60,dine_in,Neha
+2026-06-06,ORD2048,Farmhouse Pizza,3,1260,takeaway,Sneha
+2026-06-06,ORD2048,Coke,1,80,takeaway,Sneha
+2026-06-06,ORD2048,French Fries,2,280,takeaway,Sneha
+2026-06-06,ORD2048,Hakka Noodles,1,240,takeaway,Sneha
+2026-06-20,ORD2049,Dal Tadka,3,660,dine_in,Rahul
+2026-06-20,ORD2049,Farmhouse Pizza,2,840,dine_in,Rahul
+2026-06-16,ORD2050,Chocolate Brownie,1,190,delivery,Karan
+2026-06-16,ORD2050,Tomato Soup,1,150,delivery,Karan
+2026-06-16,ORD2050,Chocolate Brownie,2,380,delivery,Karan
+2026-06-16,ORD2050,Coke,2,160,delivery,Karan
+2026-06-23,ORD2051,Hakka Noodles,2,480,dine_in,Krishna
+2026-06-10,ORD2052,Paneer Tikka,1,290,delivery,Aman
+2026-06-10,ORD2052,Mojito,3,510,delivery,Aman
+2026-06-10,ORD2052,Cold Coffee,1,160,delivery,Aman
+2026-06-17,ORD2053,Margherita Pizza,1,340,takeaway,Krishna
+2026-06-17,ORD2053,Tandoori Chicken,1,420,takeaway,Krishna
+2026-06-17,ORD2053,Butter Naan,1,55,takeaway,Krishna
+2026-06-27,ORD2054,Coke,1,80,takeaway,Neha
+2026-06-27,ORD2054,Hakka Noodles,2,480,takeaway,Neha
+2026-06-27,ORD2054,Lassi,3,360,takeaway,Neha
+2026-06-27,ORD2054,French Fries,2,280,takeaway,Neha
+2026-06-21,ORD2055,Tandoori Chicken,2,840,dine_in,Yash
+2026-06-14,ORD2056,Gulab Jamun,1,110,delivery,Karan
+2026-06-14,ORD2056,French Fries,3,420,delivery,Karan
+2026-06-22,ORD2057,Coke,2,160,delivery,Rahul
+2026-06-22,ORD2057,Chicken Biryani,1,360,delivery,Rahul
+2026-06-15,ORD2058,Hakka Noodles,1,240,takeaway,Sneha
+2026-06-11,ORD2059,Paneer Tikka,3,870,dine_in,Vivaan
+2026-06-11,ORD2059,Dal Tadka,1,220,dine_in,Vivaan
+2026-06-12,ORD2060,Cold Coffee,3,480,dine_in,Rahul
+2026-06-12,ORD2060,Manchurian,2,420,dine_in,Rahul
+2026-06-26,ORD2061,Farmhouse Pizza,2,840,dine_in,Diya
+2026-06-26,ORD2061,Veg Burger,1,180,dine_in,Diya
+2026-06-26,ORD2061,Chocolate Brownie,1,190,dine_in,Diya
+2026-06-26,ORD2061,Mojito,1,170,dine_in,Diya
+2026-06-21,ORD2062,Paneer Butter Masala,3,960,delivery,Rahul
+2026-06-21,ORD2062,Paneer Butter Masala,3,960,delivery,Rahul
+2026-06-01,ORD2063,Paneer Tikka,2,580,dine_in,Ishita
+2026-06-01,ORD2063,Hakka Noodles,3,720,dine_in,Ishita
+2026-06-01,ORD2063,Paneer Butter Masala,1,320,dine_in,Ishita
+2026-06-01,ORD2063,Butter Naan,2,110,dine_in,Ishita
+2026-06-28,ORD2064,Cold Coffee,3,480,delivery,Diya
+2026-06-28,ORD2064,French Fries,3,420,delivery,Diya
+2026-06-28,ORD2064,Chocolate Brownie,2,380,delivery,Diya
+2026-06-16,ORD2065,Caesar Salad,3,690,dine_in,
+2026-06-10,ORD2066,Veg Burger,3,540,delivery,Krishna
+2026-06-10,ORD2066,Tandoori Chicken,1,420,delivery,Krishna
+2026-06-10,ORD2066,Veg Biryani,1,280,delivery,Krishna
+2026-06-10,ORD2066,Tandoori Chicken,1,420,delivery,Krishna
+2026-06-03,ORD2067,Caesar Salad,2,460,delivery,Vivaan
+2026-06-28,ORD2068,Veg Burger,3,540,takeaway,Rahul
+2026-06-28,ORD2068,Butter Naan,1,55,takeaway,Rahul
+2026-06-28,ORD2068,Mojito,3,510,takeaway,Rahul
+2026-06-28,ORD2068,Chocolate Brownie,2,380,takeaway,Rahul
+2026-06-06,ORD2069,Dal Tadka,3,660,dine_in,Aman
+2026-06-06,ORD2069,Paneer Tikka,3,870,dine_in,Aman
+2026-06-06,ORD2069,Farmhouse Pizza,1,420,dine_in,Aman
+2026-06-04,ORD2070,Dal Tadka,2,440,delivery,Priya
+2026-06-04,ORD2070,Margherita Pizza,1,340,delivery,Priya
+2026-06-22,ORD2071,Veg Burger,3,540,delivery,Rahul
+2026-06-22,ORD2071,Hakka Noodles,1,240,delivery,Rahul
+2026-06-12,ORD2072,Gulab Jamun,1,110,dine_in,Arjun
+2026-06-12,ORD2072,Mojito,3,510,dine_in,Arjun
+2026-06-10,ORD2073,Hakka Noodles,1,240,takeaway,Rahul
+2026-06-20,ORD2074,Paneer Butter Masala,1,320,takeaway,Rahul
+2026-06-20,ORD2074,Coke,1,80,takeaway,Rahul
+2026-06-20,ORD2074,Margherita Pizza,1,340,takeaway,Rahul
+2026-06-20,ORD2074,Cold Coffee,3,480,takeaway,Rahul
+2026-06-16,ORD2075,Manchurian,3,630,delivery,Ananya
+2026-06-16,ORD2075,Tandoori Chicken,2,840,delivery,Ananya
+2026-06-16,ORD2075,Farmhouse Pizza,1,420,delivery,Ananya
+2026-06-01,ORD2076,Farmhouse Pizza,1,420,dine_in,Aarav
+2026-06-21,ORD2077,Margherita Pizza,1,340,takeaway,Vivaan
+2026-06-21,ORD2077,Veg Burger,1,180,takeaway,Vivaan
+2026-06-06,ORD2078,Veg Biryani,3,840,takeaway,Aman
+2026-06-06,ORD2078,Mojito,3,510,takeaway,Aman
+2026-06-03,ORD2079,Gulab Jamun,3,330,delivery,Aman
+2026-06-17,ORD2080,Cold Coffee,2,320,takeaway,Ananya
+2026-06-17,ORD2080,Dal Tadka,2,440,takeaway,Ananya
+2026-06-17,ORD2080,Caesar Salad,1,230,takeaway,Ananya
+2026-06-17,ORD2080,Chicken Biryani,2,720,takeaway,Ananya
+2026-06-06,ORD2081,Farmhouse Pizza,1,420,dine_in,Aman
+2026-06-06,ORD2081,Veg Biryani,2,560,dine_in,Aman
+2026-06-06,ORD2081,Veg Burger,3,540,dine_in,Aman
+2026-06-09,ORD2082,Manchurian,3,630,takeaway,Aarav
+2026-06-02,ORD2083,Paneer Butter Masala,2,640,dine_in,Priya
+2026-06-26,ORD2084,French Fries,1,140,dine_in,Riya
+2026-06-26,ORD2084,Manchurian,2,420,dine_in,Riya
+2026-06-26,ORD2084,Dal Tadka,3,660,dine_in,Riya
+2026-06-26,ORD2084,Caesar Salad,2,460,dine_in,Riya
+2026-06-11,ORD2085,Gulab Jamun,2,220,dine_in,
+2026-06-11,ORD2085,Veg Burger,2,360,dine_in,
+2026-06-06,ORD2086,Tandoori Chicken,3,1260,dine_in,
+2026-06-02,ORD2087,Coke,2,160,dine_in,Vivaan
+2026-06-02,ORD2087,Chicken Biryani,1,360,dine_in,Vivaan
+2026-06-02,ORD2087,Veg Burger,3,540,dine_in,Vivaan
+2026-06-02,ORD2087,Chocolate Brownie,2,380,dine_in,Vivaan
+2026-06-18,ORD2088,Mojito,2,340,dine_in,Sneha
+2026-06-18,ORD2088,Dal Tadka,2,440,dine_in,Sneha
+2026-06-18,ORD2088,Hakka Noodles,3,720,dine_in,Sneha
+2026-06-15,ORD2089,Masala Chai,2,120,delivery,Diya
+2026-06-15,ORD2089,Tandoori Chicken,3,1260,delivery,Diya
+2026-06-15,ORD2089,Tomato Soup,1,150,delivery,Diya
+2026-06-15,ORD2089,Veg Burger,3,540,delivery,Diya
+2026-06-09,ORD2090,French Fries,3,420,takeaway,Aarav
+2026-06-09,ORD2090,Tomato Soup,2,300,takeaway,Aarav
+2026-06-09,ORD2090,Lassi,2,240,takeaway,Aarav
+2026-06-13,ORD2091,Coke,1,80,delivery,Sneha
+2026-06-13,ORD2091,Veg Biryani,2,560,delivery,Sneha
+2026-06-24,ORD2092,Chocolate Brownie,3,570,takeaway,Neha
+2026-06-24,ORD2092,Coke,1,80,takeaway,Neha
+2026-06-24,ORD2092,Veg Burger,1,180,takeaway,Neha
+2026-06-24,ORD2092,Gulab Jamun,3,330,takeaway,Neha
+2026-06-01,ORD2093,Cold Coffee,1,160,dine_in,Karan
+2026-06-01,ORD2093,Masala Chai,2,120,dine_in,Karan
+2026-06-01,ORD2093,Dal Tadka,1,220,dine_in,Karan
+2026-06-26,ORD2094,Manchurian,2,420,delivery,Rahul
+2026-06-26,ORD2094,Mojito,3,510,delivery,Rahul
+2026-06-26,ORD2094,Chicken Biryani,2,720,delivery,Rahul
+2026-06-18,ORD2095,Dal Tadka,3,660,takeaway,Meera
+2026-06-18,ORD2095,Dal Tadka,3,660,takeaway,Meera
+2026-06-15,ORD2096,Masala Chai,2,120,delivery,Vivaan
+2026-06-15,ORD2097,Paneer Tikka,1,290,dine_in,Neha
+2026-06-24,ORD2098,Paneer Butter Masala,2,640,dine_in,Priya
+2026-06-24,ORD2098,Cold Coffee,1,160,dine_in,Priya
+2026-06-24,ORD2098,Mojito,3,510,dine_in,Priya
+2026-06-18,ORD2099,Manchurian,1,210,takeaway,
+2026-06-27,ORD2100,French Fries,3,420,dine_in,Diya
+2026-06-27,ORD2100,Butter Naan,2,110,dine_in,Diya
+2026-06-01,ORD2101,French Fries,1,140,dine_in,Meera
+2026-06-12,ORD2102,Chicken Biryani,3,1080,delivery,Priya
+2026-06-12,ORD2102,Caesar Salad,1,230,delivery,Priya
+2026-06-12,ORD2102,Farmhouse Pizza,2,840,delivery,Priya
+2026-06-30,ORD2103,Lassi,1,120,delivery,Karan
+2026-06-30,ORD2103,Mojito,2,340,delivery,Karan
+2026-06-30,ORD2103,Manchurian,1,210,delivery,Karan
+2026-06-30,ORD2103,Veg Biryani,1,280,delivery,Karan
+2026-06-09,ORD2104,Veg Burger,3,540,delivery,Rahul
+2026-06-09,ORD2104,Mojito,1,170,delivery,Rahul
+2026-06-24,ORD2105,French Fries,3,420,takeaway,Karan
+2026-06-24,ORD2105,Mojito,1,170,takeaway,Karan
+2026-06-24,ORD2105,Paneer Tikka,3,870,takeaway,Karan
+2026-06-04,ORD2106,Masala Chai,2,120,takeaway,Krishna
+2026-06-04,ORD2106,Veg Biryani,3,840,takeaway,Krishna
+2026-06-04,ORD2106,French Fries,1,140,takeaway,Krishna
+2026-06-04,ORD2106,Mojito,2,340,takeaway,Krishna
+2026-06-17,ORD2107,Tandoori Chicken,2,840,dine_in,Rahul
+2026-06-17,ORD2107,French Fries,1,140,dine_in,Rahul
+2026-06-17,ORD2107,Masala Chai,2,120,dine_in,Rahul
+2026-06-17,ORD2107,Margherita Pizza,1,340,dine_in,Rahul
+2026-06-05,ORD2108,Butter Naan,3,165,delivery,Aarav
+2026-06-05,ORD2108,Paneer Butter Masala,3,960,delivery,Aarav
+2026-06-18,ORD2109,French Fries,2,280,dine_in,Yash
+2026-06-18,ORD2109,Chicken Biryani,3,1080,dine_in,Yash
+2026-06-18,ORD2109,French Fries,3,420,dine_in,Yash
+2026-06-18,ORD2110,Mojito,1,170,dine_in,Rahul
+2026-06-25,ORD2111,Masala Chai,3,180,takeaway,Aarav
+2026-06-25,ORD2111,Paneer Tikka,1,290,takeaway,Aarav
+2026-06-25,ORD2111,Caesar Salad,1,230,takeaway,Aarav
+2026-06-25,ORD2111,French Fries,1,140,takeaway,Aarav
+2026-06-11,ORD2112,Margherita Pizza,3,1020,dine_in,
+2026-06-11,ORD2112,Paneer Butter Masala,3,960,dine_in,
+2026-06-11,ORD2112,French Fries,3,420,dine_in,
+2026-06-11,ORD2112,Mojito,3,510,dine_in,
+2026-06-01,ORD2113,Caesar Salad,1,230,delivery,Yash
+2026-06-01,ORD2113,French Fries,1,140,delivery,Yash
+2026-06-01,ORD2113,Hakka Noodles,2,480,delivery,Yash
+2026-06-26,ORD2114,Tomato Soup,1,150,delivery,Aarav
+2026-06-26,ORD2114,Margherita Pizza,3,1020,delivery,Aarav
+2026-06-26,ORD2114,Manchurian,3,630,delivery,Aarav
+2026-06-17,ORD2115,Farmhouse Pizza,1,420,dine_in,Karan
+2026-06-17,ORD2115,Masala Chai,2,120,dine_in,Karan
+2026-06-17,ORD2115,Mojito,3,510,dine_in,Karan
+2026-06-17,ORD2115,Farmhouse Pizza,2,840,dine_in,Karan
+2026-06-04,ORD2116,Veg Burger,2,360,delivery,Ananya
+2026-06-04,ORD2116,Margherita Pizza,2,680,delivery,Ananya
+2026-06-04,ORD2116,Mojito,2,340,delivery,Ananya
+2026-06-04,ORD2117,Manchurian,2,420,takeaway,Aman
+2026-06-04,ORD2117,Gulab Jamun,3,330,takeaway,Aman
+2026-06-11,ORD2118,Mojito,1,170,delivery,Krishna
+2026-06-02,ORD2119,Farmhouse Pizza,3,1260,dine_in,Diya
+2026-06-02,ORD2119,French Fries,2,280,dine_in,Diya
+2026-06-23,ORD2120,Caesar Salad,3,690,takeaway,Diya
+2026-06-23,ORD2120,Caesar Salad,1,230,takeaway,Diya
+2026-06-23,ORD2120,Margherita Pizza,1,340,takeaway,Diya
+2026-06-23,ORD2120,Masala Chai,3,180,takeaway,Diya
+2026-06-30,ORD2121,Margherita Pizza,1,340,takeaway,Sneha
+2026-06-30,ORD2121,Masala Chai,1,60,takeaway,Sneha
+2026-06-30,ORD2121,Veg Biryani,1,280,takeaway,Sneha
+2026-06-18,ORD2122,Caesar Salad,2,460,delivery,Priya
+2026-06-18,ORD2122,Cold Coffee,1,160,delivery,Priya
+2026-06-04,ORD2123,Dal Tadka,2,440,dine_in,Arjun
+2026-06-04,ORD2123,Dal Tadka,2,440,dine_in,Arjun
+2026-06-04,ORD2123,Gulab Jamun,3,330,dine_in,Arjun
+2026-06-21,ORD2124,Hakka Noodles,3,720,delivery,Rahul
+2026-06-21,ORD2124,Farmhouse Pizza,2,840,delivery,Rahul
+2026-06-21,ORD2124,Lassi,3,360,delivery,Rahul
+2026-06-14,ORD2125,Cold Coffee,3,480,takeaway,Yash
+2026-06-14,ORD2126,Chicken Biryani,2,720,delivery,
+2026-06-14,ORD2126,Gulab Jamun,1,110,delivery,
+2026-06-15,ORD2127,Butter Naan,2,110,dine_in,Rahul
+2026-06-15,ORD2127,French Fries,3,420,dine_in,Rahul
+2026-06-30,ORD2128,Tomato Soup,3,450,takeaway,Riya
+2026-06-30,ORD2128,Coke,1,80,takeaway,Riya
+2026-06-30,ORD2128,Masala Chai,3,180,takeaway,Riya
+2026-06-30,ORD2128,French Fries,3,420,takeaway,Riya
+2026-06-07,ORD2129,Margherita Pizza,1,340,delivery,Ananya
+2026-06-13,ORD2130,Paneer Tikka,3,870,dine_in,Riya
+2026-06-18,ORD2131,Coke,1,80,delivery,Ishita
+2026-06-29,ORD2132,Tandoori Chicken,1,420,delivery,Yash
+2026-06-21,ORD2133,Chicken Biryani,2,720,takeaway,Ananya
+2026-06-21,ORD2133,French Fries,3,420,takeaway,Ananya
+2026-06-21,ORD2133,Dal Tadka,3,660,takeaway,Ananya
+2026-06-22,ORD2134,Butter Naan,1,55,dine_in,Ananya
+2026-06-22,ORD2134,Tomato Soup,2,300,dine_in,Ananya
+2026-06-04,ORD2135,Tomato Soup,1,150,delivery,Ishita
+2026-06-04,ORD2135,Farmhouse Pizza,2,840,delivery,Ishita
+2026-06-04,ORD2135,Hakka Noodles,2,480,delivery,Ishita
+2026-06-30,ORD2136,Gulab Jamun,2,220,dine_in,
+2026-06-30,ORD2136,Farmhouse Pizza,1,420,dine_in,
+2026-06-10,ORD2137,Farmhouse Pizza,1,420,dine_in,Arjun
+2026-06-19,ORD2138,Farmhouse Pizza,2,840,dine_in,Aarav
+2026-06-19,ORD2138,Veg Burger,3,540,dine_in,Aarav
+2026-06-19,ORD2138,Farmhouse Pizza,1,420,dine_in,Aarav
+2026-06-19,ORD2138,Gulab Jamun,2,220,dine_in,Aarav
+2026-06-04,ORD2139,Mojito,2,340,takeaway,Ishita
+2026-06-13,ORD2140,Chocolate Brownie,2,380,delivery,Diya
+2026-06-13,ORD2140,Coke,1,80,delivery,Diya
+2026-06-13,ORD2140,Lassi,3,360,delivery,Diya
+2026-06-14,ORD2141,Cold Coffee,3,480,dine_in,
+2026-06-13,ORD2142,Paneer Butter Masala,2,640,delivery,Ananya
+2026-06-13,ORD2142,Tandoori Chicken,1,420,delivery,Ananya
+2026-06-27,ORD2143,Paneer Tikka,3,870,delivery,Rahul
+2026-06-27,ORD2143,Chicken Biryani,3,1080,delivery,Rahul
+2026-06-27,ORD2143,Veg Biryani,1,280,delivery,Rahul
+2026-06-19,ORD2144,Chicken Biryani,3,1080,takeaway,Ishita
+2026-06-19,ORD2144,French Fries,2,280,takeaway,Ishita
+2026-06-19,ORD2144,Veg Biryani,2,560,takeaway,Ishita
+2026-06-19,ORD2144,Veg Biryani,3,840,takeaway,Ishita
+2026-06-02,ORD2145,Veg Burger,3,540,dine_in,Vivaan
+2026-06-02,ORD2145,Butter Naan,3,165,dine_in,Vivaan
+2026-06-02,ORD2145,Paneer Butter Masala,3,960,dine_in,Vivaan
+2026-06-02,ORD2145,French Fries,3,420,dine_in,Vivaan
+2026-06-23,ORD2146,Masala Chai,2,120,dine_in,Sneha
+2026-06-23,ORD2146,Masala Chai,1,60,dine_in,Sneha
+2026-06-23,ORD2146,Tandoori Chicken,2,840,dine_in,Sneha
+2026-06-23,ORD2146,Chocolate Brownie,3,570,dine_in,Sneha
+2026-06-25,ORD2147,Butter Naan,3,165,takeaway,Riya
+2026-06-07,ORD2148,Mojito,3,510,takeaway,Rahul
+2026-06-07,ORD2148,Coke,2,160,takeaway,Rahul
+2026-06-07,ORD2149,Lassi,1,120,dine_in,Ananya
+2026-06-07,ORD2149,Mojito,3,510,dine_in,Ananya
+2026-06-07,ORD2149,Paneer Butter Masala,1,320,dine_in,Ananya
+2026-06-27,ORD2150,Gulab Jamun,3,330,dine_in,Ishita
+2026-06-22,ORD2151,Lassi,3,360,dine_in,Krishna
+2026-06-22,ORD2151,Mojito,2,340,dine_in,Krishna
+2026-06-20,ORD2152,Manchurian,3,630,dine_in,Krishna
+2026-06-20,ORD2152,Masala Chai,1,60,dine_in,Krishna
+2026-06-20,ORD2152,Caesar Salad,3,690,dine_in,Krishna
+2026-06-22,ORD2153,Manchurian,1,210,dine_in,Riya
+2026-06-22,ORD2153,Lassi,2,240,dine_in,Riya
+2026-06-22,ORD2153,Manchurian,1,210,dine_in,Riya
+2026-06-22,ORD2153,Paneer Tikka,2,580,dine_in,Riya
+2026-06-12,ORD2154,Paneer Butter Masala,2,640,dine_in,Neha
+2026-06-12,ORD2154,Hakka Noodles,2,480,dine_in,Neha
+2026-06-12,ORD2154,Mojito,1,170,dine_in,Neha
+2026-06-12,ORD2154,Masala Chai,3,180,dine_in,Neha
+2026-06-26,ORD2155,Paneer Tikka,1,290,delivery,Ishita
+2026-06-26,ORD2155,Chicken Biryani,1,360,delivery,Ishita
+2026-06-02,ORD2156,Veg Burger,2,360,takeaway,Sneha
+2026-06-02,ORD2156,French Fries,1,140,takeaway,Sneha
+2026-06-02,ORD2156,Lassi,3,360,takeaway,Sneha
+2026-06-18,ORD2157,Margherita Pizza,2,680,takeaway,Priya
+2026-06-18,ORD2157,Chicken Biryani,1,360,takeaway,Priya
+2026-06-18,ORD2157,Tandoori Chicken,1,420,takeaway,Priya
+2026-06-18,ORD2157,Dal Tadka,2,440,takeaway,Priya
+2026-06-25,ORD2158,Lassi,2,240,dine_in,Krishna
+2026-06-25,ORD2158,Coke,3,240,dine_in,Krishna
+2026-06-25,ORD2158,Chocolate Brownie,2,380,dine_in,Krishna
+2026-06-14,ORD2159,Masala Chai,3,180,takeaway,Priya
+2026-06-01,ORD2160,Tandoori Chicken,1,420,delivery,Priya
+2026-06-01,ORD2160,Masala Chai,2,120,delivery,Priya
+2026-06-19,ORD2161,Manchurian,3,630,dine_in,Sneha
+2026-06-19,ORD2161,Paneer Butter Masala,1,320,dine_in,Sneha
+2026-06-19,ORD2161,Tandoori Chicken,1,420,dine_in,Sneha
+2026-06-19,ORD2161,Mojito,3,510,dine_in,Sneha
+2026-06-07,ORD2162,Mojito,2,340,dine_in,Riya
+2026-06-02,ORD2163,Butter Naan,3,165,dine_in,Ananya
+2026-06-17,ORD2164,Gulab Jamun,3,330,dine_in,Vivaan
+2026-06-20,ORD2165,Butter Naan,3,165,dine_in,Yash
+2026-06-20,ORD2165,Chocolate Brownie,2,380,dine_in,Yash
+2026-06-01,ORD2166,Mojito,1,170,takeaway,
+2026-06-01,ORD2166,Veg Burger,2,360,takeaway,
+2026-06-01,ORD2166,Chocolate Brownie,1,190,takeaway,
+2026-06-01,ORD2166,Veg Biryani,2,560,takeaway,
+2026-06-09,ORD2167,Margherita Pizza,3,1020,dine_in,Neha
+2026-06-09,ORD2167,Butter Naan,2,110,dine_in,Neha
+2026-06-09,ORD2167,Paneer Tikka,2,580,dine_in,Neha
+2026-06-10,ORD2168,Chicken Biryani,2,720,delivery,Arjun
+2026-06-10,ORD2168,Butter Naan,1,55,delivery,Arjun
+2026-06-10,ORD2168,Caesar Salad,1,230,delivery,Arjun
+2026-06-11,ORD2169,Margherita Pizza,3,1020,dine_in,Aarav
+2026-06-11,ORD2169,Paneer Tikka,1,290,dine_in,Aarav
+2026-06-27,ORD2170,Dal Tadka,3,660,delivery,Aarav
+2026-06-27,ORD2170,Butter Naan,2,110,delivery,Aarav
+2026-06-27,ORD2170,Tandoori Chicken,2,840,delivery,Aarav
+2026-06-27,ORD2170,Margherita Pizza,2,680,delivery,Aarav
+2026-06-07,ORD2171,Chicken Biryani,2,720,delivery,Ishita
+2026-06-07,ORD2171,Hakka Noodles,3,720,delivery,Ishita
+2026-06-18,ORD2172,Veg Burger,3,540,dine_in,Yash
+2026-06-18,ORD2172,Tandoori Chicken,1,420,dine_in,Yash
+2026-06-10,ORD2173,Manchurian,3,630,dine_in,Riya
+2026-06-10,ORD2173,Dal Tadka,3,660,dine_in,Riya
+2026-06-10,ORD2173,Cold Coffee,2,320,dine_in,Riya
+2026-06-20,ORD2174,Cold Coffee,1,160,dine_in,Krishna
+2026-06-20,ORD2174,French Fries,2,280,dine_in,Krishna
+2026-06-20,ORD2174,Paneer Butter Masala,1,320,dine_in,Krishna
+2026-06-20,ORD2174,Paneer Butter Masala,2,640,dine_in,Krishna
+2026-06-20,ORD2175,French Fries,1,140,takeaway,Ananya
+2026-06-20,ORD2175,Cold Coffee,2,320,takeaway,Ananya
+2026-06-20,ORD2175,Butter Naan,1,55,takeaway,Ananya
+2026-06-20,ORD2175,Lassi,2,240,takeaway,Ananya
+2026-06-21,ORD2176,Paneer Tikka,3,870,dine_in,Arjun
+2026-06-24,ORD2177,Lassi,2,240,takeaway,Ananya
+2026-06-24,ORD2177,Cold Coffee,2,320,takeaway,Ananya
+2026-06-24,ORD2177,Margherita Pizza,2,680,takeaway,Ananya
+2026-06-24,ORD2177,Veg Biryani,2,560,takeaway,Ananya
+2026-06-01,ORD2178,Paneer Butter Masala,3,960,dine_in,Aman
+2026-06-01,ORD2178,Masala Chai,1,60,dine_in,Aman
+2026-06-01,ORD2178,Gulab Jamun,2,220,dine_in,Aman
+2026-06-01,ORD2178,Caesar Salad,3,690,dine_in,Aman
+2026-06-11,ORD2179,Mojito,2,340,takeaway,Sneha
+2026-06-11,ORD2179,Tandoori Chicken,3,1260,takeaway,Sneha
+2026-06-11,ORD2179,Cold Coffee,3,480,takeaway,Sneha
+2026-06-04,ORD2180,Chicken Biryani,2,720,delivery,Riya

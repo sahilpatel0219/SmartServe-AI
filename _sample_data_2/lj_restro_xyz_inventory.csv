@@ -1,0 +1,26 @@
+item_name,quantity,unit,cost_per_unit,reorder_level,expiry_date
+Basmati Rice,45,kg,78.0,15,2027-05-15
+Wheat Flour,60,kg,42.0,20,2027-03-20
+Paneer,18,kg,340.0,8,2026-07-12
+Fresh Milk,35,litre,64.0,15,2026-07-06
+Butter,12,kg,520.0,5,2026-08-18
+Mozzarella Cheese,10,kg,460.0,4,2026-08-05
+Tomatoes,28,kg,36.0,10,2026-07-07
+Onions,40,kg,32.0,12,2026-08-01
+Potatoes,55,kg,30.0,15,2026-08-20
+Cooking Oil,25,litre,155.0,8,2027-01-10
+Sunflower Oil,18,litre,168.0,6,2027-02-05
+Salt,50,kg,22.0,10,
+Sugar,42,kg,48.0,10,
+Tea Leaves,15,kg,520.0,5,2027-04-15
+Coffee Beans,20,kg,890.0,8,2027-01-30
+Chicken Breast,22,kg,285.0,10,2026-07-08
+Eggs,180,piece,7.0,60,2026-07-20
+Coriander,6,kg,90.0,3,2026-07-05
+Mint Leaves,5,kg,110.0,2,2026-07-05
+Soft Drinks,96,bottle,38.0,24,2027-06-30
+Mineral Water,120,bottle,18.0,30,2027-06-30
+Disposable Cups,500,piece,2.5,100,
+Paper Napkins,1200,piece,0.6,250,
+Black Pepper,8,kg,640.0,3,2027-05-10
+Red Chili Powder,12,kg,310.0,4,2027-04-22

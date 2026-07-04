@@ -1,0 +1,31 @@
+item_name,category,price,cost,is_available
+Paneer Butter Masala,Main Course,320,135,yes
+Veg Biryani,Main Course,260,95,yes
+Chicken Biryani,Main Course,340,145,yes
+Dal Tadka,Main Course,210,70,yes
+Butter Naan,Breads,45,12,yes
+Garlic Naan,Breads,60,18,yes
+Veg Hakka Noodles,Chinese,220,78,yes
+Schezwan Fried Rice,Chinese,240,85,yes
+Margherita Pizza,Pizza,280,105,yes
+Farmhouse Pizza,Pizza,390,160,yes
+Veg Burger,Fast Food,170,62,yes
+French Fries,Fast Food,140,42,yes
+Caesar Salad,Salads,210,72,yes
+Tomato Soup,Soups,160,48,yes
+Hot & Sour Soup,Soups,180,55,yes
+Chocolate Brownie,Desserts,190,58,no
+Gulab Jamun,Desserts,110,28,yes
+Vanilla Ice Cream,Desserts,130,36,yes
+Fresh Lime Soda,Beverages,90,22,yes
+Mango Shake,Beverages,170,52,no
+Cold Coffee,Beverages,180,55,no
+Masala Chai,Beverages,80,20,yes
+Cappuccino,Beverages,150,45,yes
+Mineral Water,Beverages,30,10,yes
+Fresh Orange Juice,Beverages,180,65,no
+Tandoori Chicken,Starters,420,180,yes
+Paneer Tikka,Starters,310,120,yes
+Veg Spring Rolls,Starters,190,68,no
+Hara Bhara Kebab,Starters,240,88,yes
+Pasta Alfredo,Pasta,290,110,yes
