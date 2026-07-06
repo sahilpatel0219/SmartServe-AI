@@ -69,6 +69,39 @@ def add_customer_view(request):
 
 
 @login_required
+def edit_customer_view(request, customer_id):
+    business, _ = _get_business(request)
+    if not business:
+        return redirect('onboarding:create_business')
+    bid = business.mongo_id
+    customer = col.customers().find_one({'_id': ObjectId(customer_id), 'business_id': bid})
+    if not customer:
+        messages.error(request, 'Customer not found.')
+        return redirect('customers:index')
+    if request.method == 'POST':
+        name = request.POST.get('name', '').strip()
+        if not name:
+            messages.error(request, 'Customer name is required.')
+        else:
+            # Only profile fields are editable; visit_count / total_spend are
+            # system-managed (derived from orders) and left untouched.
+            col.customers().update_one(
+                {'_id': ObjectId(customer_id)},
+                {'$set': {
+                    'name': name,
+                    'phone': request.POST.get('phone', '').strip(),
+                    'email': request.POST.get('email', '').strip(),
+                    'notes': request.POST.get('notes', '').strip(),
+                    'updated_at': datetime.now(timezone.utc),
+                }},
+            )
+            messages.success(request, f'Customer "{name}" updated.')
+            return redirect('customers:detail', customer_id=customer_id)
+    customer['str_id'] = str(customer['_id'])
+    return render(request, 'customers/edit.html', {'business': business, 'customer': customer})
+
+
+@login_required
 def detail_view(request, customer_id):
     business, _ = _get_business(request)
     if not business:
@@ -78,6 +111,7 @@ def detail_view(request, customer_id):
     if not customer:
         messages.error(request, 'Customer not found.')
         return redirect('customers:index')
+    customer['str_id'] = str(customer['_id'])
     customer['segment'] = _segment(customer.get('visit_count', 0), customer.get('total_spend', 0))
     # Recent orders for this customer by name match
     orders = list(col.orders().find(

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Edit Customer{% endblock %}
+{% block page_title %}Edit Customer{% endblock %}
+{% block content %}
+{% include "partials/messages.html" %}
+<div style="max-width:480px;margin:0 auto;">
+<div class="card">
+  <div class="card-header"><span class="card-title">Edit Customer</span></div>
+  <div class="card-body">
+    <form method="post">
+      {% csrf_token %}
+      <div class="form-group"><label class="form-label">Name *</label><input type="text" name="name" class="form-control" value="{{ customer.name }}" required></div>
+      <div class="form-group"><label class="form-label">Phone</label><input type="tel" name="phone" class="form-control" value="{{ customer.phone }}"></div>
+      <div class="form-group"><label class="form-label">Email</label><input type="email" name="email" class="form-control" value="{{ customer.email }}"></div>
+      <div class="form-group"><label class="form-label">Notes</label><textarea name="notes" class="form-control" rows="2">{{ customer.notes }}</textarea></div>
+      <div class="flex gap-3"><button type="submit" class="btn btn-primary">Save Changes</button><a href="{% url 'customers:detail' customer.str_id %}" class="btn btn-outline">Cancel</a></div>
+    </form>
+  </div>
+</div>
+</div>
+{% endblock %}
