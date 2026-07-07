@@ -25,3 +25,8 @@ local_settings.py
 # OS
 .DS_Store
 Thumbs.db
+
+#folders
+.claude
+SETUP.md
+STYLEGUIDE.md
