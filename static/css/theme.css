@@ -27,6 +27,10 @@
   --r-pill:999px;
   --blur:  20px;
 
+  /* ── Bento grid (theme-independent) ── */
+  --r-cell:   20px;                       /* rounded corner of a bento cell */
+  --gap-bento: clamp(12px, 1.5vw, 20px);  /* consistent gap between cells */
+
   /* ════════════════════════════════════════════════════════════
      TYPE SYSTEM (shared by both themes — theme-independent)
      Open Sans throughout — a Google Font, loaded via <link> in base.html
@@ -160,65 +164,70 @@
 /* ════════════════════════════════════════════════════════════
    THEME SCOPES — switched via [data-theme] on <html>.
    Token NAMES are identical across themes; only values differ.
-   Dark is the default; light uses an INDIGO brand (never red),
-   so light-mode critical/danger alerts (red) never collide with it.
+   Dark (default) = "Ember" red identity (#950101 brand, softened
+   near-black-red surfaces). Light = "Orchard" green identity
+   (#1A5319 forest brand, mint page + white cells). A separate
+   functional status palette keeps alerts readable in both.
    ════════════════════════════════════════════════════════════ */
 [data-theme="dark"] {
-  /* surfaces */
-  --bg-deep:    #070708;
-  --bg-base:    #0A0A0B;
-  --bg-elev-1:  #141416;
-  --bg-elev-2:  #1A1A1D;
-  --glass-bg:     rgba(255,255,255,.04);
-  --glass-border: rgba(255,255,255,.09);
+  /* surfaces — softened from pure black to calm red-on-black vibration */
+  --bg-deep:    #050203;
+  --bg-base:    #0B0607;
+  --bg-elev-1:  #170809;
+  --bg-elev-2:  #210B0C;
+  --surface-accent: #3D0000;                    /* palette maroon — accent cells / tints */
+  --glass-bg:     rgba(30,6,7,.55);
+  --glass-border: rgba(255,60,60,.14);
   --hairline:     rgba(255,255,255,.08);
+  --cell-border:  rgba(149,1,1,.35);            /* red-tinted bento cell edge */
 
   /* text */
-  --text-primary: #F4F4F3;
-  --text-muted:   #A1A1AA;
-  --text-faint:   #6B6B73;
+  --text-primary: #F4ECEC;
+  --text-muted:   #B39E9E;
+  --text-faint:   #6E5859;
 
-  /* brand — crimson */
-  --brand:       #E5392E;
-  --brand-hover: #C72A22;
-  --brand-tint:  rgba(229,57,46,.12);
-  --brand-glow:  rgba(229,57,46,.45);
+  /* brand — deep red (#FF0000 reserved as a sparing glow/danger only) */
+  --brand:       #950101;
+  --brand-hover: #B30202;
+  --brand-mid:   #B30202;
+  --brand-soft:  #3D0000;
+  --brand-tint:  rgba(149,1,1,.15);
+  --brand-glow:  rgba(255,0,0,.25);
 
-  /* status palette */
-  --success:  #34D399;
-  --warning:  #FBBF24;
-  --info:     #60A5FA;
-  --danger:   #FF5A52;
-  --critical: var(--brand);   /* dark critical == brand red */
+  /* functional status — deliberately separate from brand red */
+  --success:  #5FB85C;        /* green so "positive" ≠ brand */
+  --warning:  #F0A828;
+  --info:     #5AA2E8;
+  --danger:   #FF0000;        /* bright red — ALERTS ONLY, always with icon + fill */
+  --critical: #FF1A1A;
 
-  --success-tint: rgba(52,211,153,.13);
-  --warning-tint: rgba(251,191,36,.14);
-  --info-tint:    rgba(96,165,250,.14);
-  --danger-tint:  rgba(255,90,82,.13);
+  --success-tint: rgba(95,184,92,.15);
+  --warning-tint: rgba(240,168,40,.15);
+  --info-tint:    rgba(90,162,232,.15);
+  --danger-tint:  rgba(255,0,0,.14);
 
   /* elevation — heavy black shadows on dark */
-  --shadow-1: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.35);
-  --shadow-2: 0 2px 6px rgba(0,0,0,.5), 0 20px 50px rgba(0,0,0,.45);
-  --shadow-glow: 0 0 0 1px var(--brand-tint), 0 12px 40px var(--brand-glow);
-  --inset-hi: inset 0 1px 0 rgba(255,255,255,.06);  /* top light-catch — neutral cards/panels */
-  --inset-hi-brand: inset 0 1px 0 rgba(255,255,255,.06);  /* same on dark: saturated brand surfaces (buttons, logo, avatar) */
+  --shadow-1: 0 1px 2px rgba(0,0,0,.5), 0 10px 30px rgba(0,0,0,.45);
+  --shadow-2: 0 4px 14px rgba(0,0,0,.55), 0 24px 60px rgba(0,0,0,.5);
+  --shadow-glow: 0 0 0 1px var(--brand-tint), 0 14px 40px var(--brand-glow);
+  --inset-hi: inset 0 1px 0 rgba(255,255,255,.05);         /* neutral cards/panels */
+  --inset-hi-brand: inset 0 1px 0 rgba(255,255,255,.08);   /* saturated brand surfaces */
 
   /* skeleton shimmer (visible on dark) */
   --skeleton-base:  rgba(255,255,255,.04);
-  --skeleton-sheen: rgba(255,255,255,.08);
+  --skeleton-sheen: rgba(255,90,90,.10);
 
-  /* visible focus ring */
-  --focus-ring: rgba(229,57,46,.5);
+  /* visible focus ring — bright red for high visibility on dark */
+  --focus-ring: rgba(255,60,60,.5);
 
-  /* danger-button foreground — dark text reads on the light coral danger */
-  --btn-danger-fg: #1A0606;
+  /* danger-button foreground — white reads on pure-red danger */
+  --btn-danger-fg: #FFFFFF;
 
   /* tinted glass for the sticky topbar + subtle hover overlay */
-  --topbar-bg: rgba(20,20,22,.72);
-  --overlay-hover: rgba(255,255,255,.08);
+  --topbar-bg: rgba(15,6,7,.72);
+  --overlay-hover: rgba(255,255,255,.06);
 
-  /* secondary/outline button surface — equals the prior glass-bg/glass-border
-     values so dark rendering is unchanged; light gets a tuned pair below */
+  /* secondary/outline button surfaces */
   --btn-secondary-bg:       var(--glass-bg);
   --btn-secondary-bg-hover: var(--overlay-hover);
   --btn-outline-border:       var(--glass-border);
@@ -226,65 +235,67 @@
 }
 
 [data-theme="light"] {
-  /* surfaces — warm neutral canvas, white raised cards */
-  --bg-deep:    #ECEBE8;
-  --bg-base:    #F7F7F5;
+  /* surfaces — mint page, white bento cells */
+  --bg-deep:    #CFE8D1;
+  --bg-base:    #DDEFDE;
   --bg-elev-1:  #FFFFFF;
   --bg-elev-2:  #FFFFFF;
+  --surface-accent: #EAF5EB;                     /* pale mint — accent cells / tints */
   --glass-bg:     rgba(255,255,255,.65);
-  --glass-border: rgba(17,19,24,.08);
-  --hairline:     rgba(17,19,24,.08);
+  --glass-border: rgba(26,83,25,.14);
+  --hairline:     rgba(26,83,25,.12);
+  --cell-border:  rgba(80,141,78,.30);           /* green-tinted bento cell edge */
 
-  /* text (AA on white: primary 18.1, muted 6.8, faint 4.57) */
-  --text-primary: #14161C;
-  --text-muted:   #565B63;
-  --text-faint:   #71767E;
+  /* text (forest-toned neutrals) */
+  --text-primary: #13291A;
+  --text-muted:   #4A5F4C;
+  --text-faint:   #7C8F7E;
 
-  /* brand — INDIGO (deliberately not the dark theme's red) */
-  --brand:       #4F46E5;
-  --brand-hover: #4338CA;
-  --brand-tint:  rgba(79,70,229,.10);
-  --brand-glow:  rgba(79,70,229,.18);
+  /* brand — dark forest green (deliberately not the dark theme's red) */
+  --brand:       #1A5319;
+  --brand-hover: #14400F;
+  --brand-mid:   #508D4E;      /* secondary green */
+  --brand-soft:  #80AF81;      /* soft accent / illustration */
+  --brand-tint:  rgba(26,83,25,.10);
+  --brand-glow:  rgba(80,141,78,.20);
 
-  /* status palette, tuned for contrast on white */
-  --success:  #15803D;
-  --warning:  #B45309;
-  --info:     #2563EB;
-  --danger:   #DC2626;        /* inline negative data */
-  --critical: #B91C1C;        /* solid critical banners — RED, separate from indigo brand */
+  /* functional status */
+  --success:  #2E7D32;        /* distinct from brand by lightness */
+  --warning:  #C77700;
+  --info:     #1565C0;
+  --danger:   #C62828;        /* red — clean separation from green brand */
+  --critical: #B71C1C;
 
-  /* soft washes for badge/alert fills on white */
-  --success-tint: rgba(21,128,61,.10);
-  --warning-tint: rgba(180,83,9,.10);
-  --info-tint:    rgba(37,99,235,.10);
-  --danger-tint:  rgba(220,38,38,.10);
+  --success-tint: rgba(46,125,50,.10);
+  --warning-tint: rgba(199,119,0,.10);
+  --info-tint:    rgba(21,101,192,.10);
+  --danger-tint:  rgba(198,40,40,.10);
 
-  /* elevation — soft cool-gray shadows; brand glow subtle on light */
-  --shadow-1: 0 1px 2px rgba(17,19,24,.06), 0 8px 24px rgba(17,19,24,.06);
-  --shadow-2: 0 2px 8px rgba(17,19,24,.08), 0 20px 50px rgba(17,19,24,.08);
-  --shadow-glow: 0 0 0 1px var(--brand-tint), 0 10px 30px rgba(79,70,229,.14);
-  --inset-hi: inset 0 1px 0 rgba(255,255,255,.7);  /* subtle top highlight on white cards — invisible on a white bg */
-  --inset-hi-brand: inset 0 1px 0 rgba(255,255,255,.25);  /* soft gloss on saturated buttons/logo/avatar — NOT the near-opaque card value above, which reads as a harsh white strip on a solid color */
+  /* elevation — soft cool-green shadows */
+  --shadow-1: 0 1px 2px rgba(20,40,25,.06), 0 10px 30px rgba(20,40,25,.06);
+  --shadow-2: 0 4px 14px rgba(20,40,25,.08), 0 24px 60px rgba(20,40,25,.08);
+  --shadow-glow: 0 0 0 1px var(--brand-tint), 0 12px 30px rgba(80,141,78,.16);
+  --inset-hi: inset 0 1px 0 rgba(255,255,255,.7);          /* invisible on white cards */
+  --inset-hi-brand: inset 0 1px 0 rgba(255,255,255,.22);   /* soft gloss on saturated buttons */
 
   /* skeleton shimmer (visible on white) */
-  --skeleton-base:  rgba(17,19,24,.06);
-  --skeleton-sheen: rgba(17,19,24,.12);
+  --skeleton-base:  rgba(20,40,25,.06);
+  --skeleton-sheen: rgba(20,40,25,.12);
 
   /* visible focus ring */
-  --focus-ring: rgba(79,70,229,.4);
+  --focus-ring: rgba(26,83,25,.35);
 
   /* danger-button foreground — white reads on the saturated red danger */
   --btn-danger-fg: #FFFFFF;
 
   /* tinted glass for the sticky topbar + subtle hover overlay */
-  --topbar-bg: rgba(255,255,255,.75);
-  --overlay-hover: rgba(17,19,24,.06);
+  --topbar-bg: rgba(221,239,222,.78);
+  --overlay-hover: rgba(26,83,25,.06);
 
-  /* secondary/outline buttons need more presence on white than --glass-bg/
-     --glass-border give (those are tuned for panels, not button fills) */
-  --btn-secondary-bg:       rgba(17,19,24,.05);
-  --btn-secondary-bg-hover: rgba(17,19,24,.09);
-  --btn-outline-border:       rgba(17,19,24,.18);
+  /* secondary/outline button surfaces */
+  --btn-secondary-bg:       rgba(26,83,25,.06);
+  --btn-secondary-bg-hover: rgba(26,83,25,.10);
+  --btn-outline-border:       rgba(26,83,25,.22);
   --btn-outline-border-hover: var(--brand);
 }
 
