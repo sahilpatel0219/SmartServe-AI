@@ -138,17 +138,20 @@ function currentTheme() {
   return document.documentElement.getAttribute('data-theme') || 'dark';
 }
 
-// Reflect the active theme on the sidebar toggle's icon + ARIA state.
+// Reflect the active theme on every "Change Theme" control's icon + ARIA state
+// (the app sidebar toggle, and the landing-page nav toggle when present).
 function syncThemeToggle() {
   const theme = currentTheme();
   const iconClass = theme === 'dark' ? 'bi bi-sun' : 'bi bi-moon-stars'; // icon of the theme you'd switch TO
   const title = theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme';
   const pressed = theme === 'light' ? 'true' : 'false';
 
-  const icon = document.getElementById('themeIconSidebar');
-  const btn  = document.getElementById('themeToggleSidebar');
-  if (icon) icon.className = iconClass;
-  if (btn) { btn.setAttribute('aria-pressed', pressed); btn.setAttribute('title', title); }
+  [['themeIconSidebar', 'themeToggleSidebar'], ['themeIconNav', 'themeToggleNav']].forEach(([iconId, btnId]) => {
+    const icon = document.getElementById(iconId);
+    const btn  = document.getElementById(btnId);
+    if (icon) icon.className = iconClass;
+    if (btn) { btn.setAttribute('aria-pressed', pressed); btn.setAttribute('title', title); }
+  });
 }
 
 function applyTheme(theme) {

@@ -1,70 +1,451 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block title %}SmartServe AI — AI-Powered Operating System for Food Businesses{% endblock %}
+{% block title %}SmartServe AI — the AI operating system for food businesses{% endblock %}
+
+{% block extra_css %}
+<style>
+/* ============================================================
+   Landing page — expressive marketing treatment.
+   All colors/fonts come from design-system tokens (theme.css).
+   Scoped with .lp- so nothing leaks into the app UI.
+   ============================================================ */
+.lp { background: var(--bg-base); color: var(--text-primary); overflow-x: clip; }
+.lp-wrap { max-width: 1160px; margin: 0 auto; padding-left: var(--space-6); padding-right: var(--space-6); }
+.lp section { position: relative; }
+.lp-eyebrow { font-size: var(--text-xs); font-weight: var(--fw-bold); letter-spacing: .14em; text-transform: uppercase; color: var(--brand); }
+
+/* ── Nav ──────────────────────────────────────────────────── */
+.lp-nav {
+  position: sticky; top: 0; z-index: 200;
+  background: var(--topbar-bg);
+  backdrop-filter: blur(var(--blur)) saturate(140%);
+  -webkit-backdrop-filter: blur(var(--blur)) saturate(140%);
+  border-bottom: 1px solid var(--hairline);
+}
+.lp-nav__bar { display: flex; align-items: center; justify-content: space-between; height: 66px; gap: var(--space-4); }
+.lp-brand { display: flex; align-items: center; gap: var(--space-3); text-decoration: none; }
+.lp-brand__name { font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; color: var(--text-primary); letter-spacing: -.02em; }
+.lp-nav__links { display: flex; align-items: center; gap: var(--space-6); }
+.lp-nav__links a { color: var(--text-muted); font-size: var(--text-sm); font-weight: var(--fw-medium); text-decoration: none; transition: color var(--t-fast); }
+.lp-nav__links a:hover { color: var(--text-primary); }
+.lp-nav__actions { display: flex; align-items: center; gap: var(--space-2); }
+.lp-nav__theme {
+  width: 40px; height: 40px; min-width: 40px; border-radius: var(--r-sm);
+  display: inline-flex; align-items: center; justify-content: center;
+  border: 1px solid var(--glass-border); background: transparent; color: var(--text-muted);
+  cursor: pointer; transition: color var(--t-fast), border-color var(--t-fast), background var(--t-fast);
+}
+.lp-nav__theme:hover { color: var(--text-primary); border-color: var(--text-faint); background: var(--overlay-hover); }
+.lp-nav__theme:focus-visible { outline: none; box-shadow: 0 0 0 3px var(--focus-ring); }
+.lp-burger { display: none; width: 44px; height: 44px; border: 1px solid var(--glass-border); border-radius: var(--r-sm); background: transparent; color: var(--text-primary); cursor: pointer; align-items: center; justify-content: center; font-size: 1.3rem; }
+
+/* ── Hero ─────────────────────────────────────────────────── */
+.lp-hero { padding: clamp(48px, 8vw, 104px) 0 clamp(40px, 6vw, 72px); text-align: center; }
+.lp-hero .glow-blob { top: -140px; left: 50%; transform: translateX(-50%); }
+.lp-hero__brand { display: flex; flex-direction: column; align-items: center; gap: var(--space-3); margin-bottom: var(--space-6); }
+.lp-hero__brand .logo-mark { width: 46px; height: 46px; font-size: 1.35rem; border-radius: var(--r-md); }
+.lp-hero__brandname { font-family: var(--font-display); font-weight: var(--fw-black); font-size: clamp(1.6rem, 1.2rem + 1.4vw, 2.25rem); letter-spacing: -.02em; color: var(--text-primary); line-height: 1; }
+.lp-hero__pill { margin-bottom: var(--space-6); color: var(--brand); border-color: var(--brand-tint); background: var(--brand-tint); }
+.lp-hero h1 { max-width: 16ch; margin: 0 auto var(--space-5); }
+.lp-hero__sub { font-size: clamp(1.05rem, .9rem + .7vw, 1.4rem); color: var(--text-primary); font-weight: var(--fw-semi); margin-bottom: var(--space-3); }
+.lp-hero__lede { font-size: var(--text-lg); color: var(--text-muted); max-width: 60ch; margin: 0 auto var(--space-8); line-height: 1.65; }
+.lp-hero__cta { display: flex; align-items: center; justify-content: center; gap: var(--space-3); flex-wrap: wrap; }
+
+/* typewriter */
+.lp-typer { position: relative; display: inline-block; color: var(--brand); font-weight: 700; }
+.lp-typer__sizer { visibility: hidden; white-space: nowrap; }
+.lp-typer__text { position: absolute; inset: 0; white-space: nowrap; }
+.lp-typer__text::after { content: ''; display: inline-block; width: 2px; height: 1.05em; margin-left: 3px; background: var(--brand); vertical-align: -0.16em; animation: lpCaret 1s steps(1) infinite; }
+.lp-typer.is-static .lp-typer__text::after { display: none; }
+@keyframes lpCaret { 0%,50% { opacity: 1; } 50.01%,100% { opacity: 0; } }
+
+/* hero product mock — abstract "one platform, many tools", no fake numbers */
+.lp-mock { max-width: 640px; margin: clamp(36px,5vw,56px) auto 0; }
+.lp-mock__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-3); }
+.lp-mock__tile { display: flex; flex-direction: column; align-items: center; gap: 8px; padding: var(--space-4) var(--space-3); border-radius: var(--r-md); background: var(--surface-accent); border: 1px solid var(--cell-border); }
+.lp-mock__tile i { font-size: 1.4rem; color: var(--brand); }
+.lp-mock__tile span { font-size: var(--text-xs); color: var(--text-muted); font-weight: var(--fw-medium); }
+
+/* ── Section shell ────────────────────────────────────────── */
+.lp-section { padding: clamp(48px, 7vw, 88px) 0; }
+.lp-section__head { text-align: center; max-width: 60ch; margin: 0 auto clamp(28px,4vw,48px); }
+.lp-section__head h2 { font-size: var(--fs-h2); margin: var(--space-2) 0 var(--space-3); }
+.lp-section__head p { color: var(--text-muted); font-size: var(--text-lg); line-height: 1.6; }
+
+/* ── Metrics strip ────────────────────────────────────────── */
+.lp-metric { text-align: center; }
+.lp-metric__num { font-family: var(--font-display); font-weight: var(--fw-bold); font-size: clamp(2.2rem, 1.6rem + 2vw, 3.2rem); line-height: 1; color: var(--brand); font-variant-numeric: tabular-nums; }
+.lp-metric__label { margin-top: var(--space-2); color: var(--text-muted); font-size: var(--text-sm); }
+
+/* ── Feature cells ────────────────────────────────────────── */
+.lp-feat__icon { width: 46px; height: 46px; border-radius: var(--r-md); background: var(--brand-tint); color: var(--brand); display: inline-flex; align-items: center; justify-content: center; font-size: 1.3rem; margin-bottom: var(--space-4); }
+.lp-feat h3 { font-family: var(--font-display); font-size: 1.1rem; font-weight: var(--fw-semi); letter-spacing: -.01em; margin-bottom: var(--space-2); }
+.lp-feat p { color: var(--text-muted); font-size: var(--text-sm); line-height: 1.6; margin: 0; }
+.bento-cell--brand .lp-feat__icon { background: rgba(255,255,255,.16); color: #fff; }
+.bento-cell--brand .lp-feat p { color: rgba(255,255,255,.85); }
+
+/* ── How it works ─────────────────────────────────────────── */
+.lp-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--gap-bento); }
+.lp-step__n { font-family: var(--font-display); font-weight: var(--fw-bold); font-size: var(--text-sm); color: var(--brand); letter-spacing: .1em; }
+.lp-step__icon { width: 52px; height: 52px; border-radius: var(--r-md); background: var(--surface-accent); border: 1px solid var(--cell-border); color: var(--brand); display: inline-flex; align-items: center; justify-content: center; font-size: 1.5rem; margin: var(--space-3) 0; }
+.lp-step h3 { font-family: var(--font-display); font-size: 1.1rem; font-weight: var(--fw-semi); margin-bottom: var(--space-2); }
+.lp-step p { color: var(--text-muted); font-size: var(--text-sm); line-height: 1.6; margin: 0; }
+.lp-note { margin-top: var(--space-8); text-align: center; font-size: var(--text-sm); color: var(--text-muted); }
+.lp-note strong { color: var(--text-primary); }
+
+/* ── Pricing ──────────────────────────────────────────────── */
+.lp-pricing { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--gap-bento); align-items: stretch; }
+.lp-plan { display: flex; flex-direction: column; }
+.lp-plan--featured { border-color: var(--brand); box-shadow: var(--shadow-glow); }
+.lp-plan__badge { align-self: flex-start; margin-bottom: var(--space-3); }
+.lp-plan__name { font-family: var(--font-display); font-weight: var(--fw-semi); font-size: 1.05rem; }
+.lp-plan__price { font-family: var(--font-display); font-weight: var(--fw-bold); font-size: clamp(1.9rem,1.4rem+1.6vw,2.5rem); color: var(--text-primary); font-variant-numeric: tabular-nums; margin: var(--space-2) 0; }
+.lp-plan__price span { font-size: var(--text-sm); font-weight: var(--fw-medium); color: var(--text-muted); }
+.lp-plan__desc { color: var(--text-muted); font-size: var(--text-sm); line-height: 1.55; margin-bottom: var(--space-4); }
+.lp-plan__list { list-style: none; padding: 0; margin: 0 0 var(--space-6); display: flex; flex-direction: column; gap: var(--space-2); flex: 1; }
+.lp-plan__list li { display: flex; align-items: flex-start; gap: var(--space-2); font-size: var(--text-sm); color: var(--text-primary); }
+.lp-plan__list i { color: var(--success); margin-top: 3px; flex-shrink: 0; }
+
+/* ── Final CTA band ───────────────────────────────────────── */
+.lp-cta-band { text-align: center; }
+.lp-cta-band .bento-cell { padding: clamp(36px,5vw,64px) var(--space-6); }
+.lp-cta-band h2 { font-size: var(--fs-h2); max-width: 20ch; margin: 0 auto var(--space-5); }
+
+/* ── Footer ───────────────────────────────────────────────── */
+.lp-footer { border-top: 1px solid var(--hairline); padding: clamp(40px,5vw,64px) 0 var(--space-8); }
+.lp-footer__grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: var(--space-8); margin-bottom: var(--space-8); }
+.lp-footer__col h4 { font-size: var(--text-xs); text-transform: uppercase; letter-spacing: .1em; color: var(--text-faint); margin-bottom: var(--space-3); }
+.lp-footer__col a { display: block; color: var(--text-muted); font-size: var(--text-sm); text-decoration: none; margin-bottom: var(--space-2); transition: color var(--t-fast); }
+.lp-footer__col a:hover { color: var(--text-primary); }
+.lp-footer__legal { border-top: 1px solid var(--hairline); padding-top: var(--space-6); font-size: var(--text-xs); color: var(--text-faint); display: flex; justify-content: space-between; flex-wrap: wrap; gap: var(--space-2); }
+
+/* ── Load-sequence entrance (base state visible → degrades safely) ── */
+@keyframes lpEnter { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+@keyframes lpRise  { from { transform: translateY(14px); } to { transform: none; } }  /* opacity stays 1 → headline always readable */
+/* Failsafe: once JS confirms load (or if animations never advance), force the
+   final visible state so nothing can get stuck mid-entrance. */
+.lp-entered .lp-enter, .lp-entered .lp-enter-hero { opacity: 1 !important; transform: none !important; animation: none !important; }
+/* hard reveal failsafe (JS adds .lp-force-visible if reveal transitions never run) */
+.lp-force-visible .lp-reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+@media (prefers-reduced-motion: no-preference) {
+  .lp-enter { animation: lpEnter .55s cubic-bezier(.22,1,.36,1) both; }
+  .lp-enter-hero { animation: lpRise .6s cubic-bezier(.22,1,.36,1) both; }
+
+  /* scroll reveal — only active with JS (.lp-anim) + motion allowed */
+  .lp-anim .lp-reveal { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s cubic-bezier(.22,1,.36,1); }
+  .lp-anim .lp-reveal.revealed { opacity: 1; transform: none; }
+  .lp-anim .lp-stagger > *:nth-child(2) { transition-delay: .07s; }
+  .lp-anim .lp-stagger > *:nth-child(3) { transition-delay: .14s; }
+  .lp-anim .lp-stagger > *:nth-child(4) { transition-delay: .21s; }
+  .lp-anim .lp-stagger > *:nth-child(5) { transition-delay: .28s; }
+  .lp-anim .lp-stagger > *:nth-child(6) { transition-delay: .35s; }
+}
+
+/* ── Responsive ───────────────────────────────────────────── */
+.lp-drawer-only { display: none; }   /* hidden on desktop; appears inside the open mobile drawer */
+@media (max-width: 860px) {
+  .lp-nav__links { display: none; }
+  .lp-nav__cta { display: none; }      /* desktop-bar auth CTAs hide on mobile (they move into the drawer) */
+  .lp-burger { display: inline-flex; }
+  .lp-nav.is-open .lp-nav__links {
+    display: flex; flex-direction: column; align-items: stretch; gap: var(--space-4);
+    position: absolute; left: 0; right: 0; top: 66px;
+    background: var(--bg-elev-1); border-bottom: 1px solid var(--hairline);
+    padding: var(--space-6);
+  }
+  .lp-nav.is-open .lp-drawer-only { display: flex; }
+  .lp-footer__grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 720px) {
+  .lp-steps, .lp-pricing { grid-template-columns: 1fr; }
+  .lp-mock__grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 480px) {
+  .lp-footer__grid { grid-template-columns: 1fr; }
+  .lp-hero .glow-blob { opacity: .5; }   /* lighter glow on mobile for perf */
+}
+</style>
+{% endblock %}
 
 {% block full_page %}
-<div class="glow-wrap" style="min-height:100vh;background:var(--bg-base);overflow:hidden;">
+<script>document.documentElement.classList.add('lp-anim');window.__lpFallback=setTimeout(function(){document.documentElement.classList.remove('lp-anim');},4000);</script>
 
-  <!-- Nav (glass) -->
-  <nav style="position:sticky;top:0;z-index:100;background:var(--glass-bg);backdrop-filter:blur(var(--blur)) saturate(140%);-webkit-backdrop-filter:blur(var(--blur)) saturate(140%);border-bottom:1px solid var(--hairline);padding:0 var(--space-8);">
-    <div style="max-width:1200px;margin:0 auto;height:64px;display:flex;align-items:center;justify-content:space-between;">
-      <div style="display:flex;align-items:center;gap:var(--space-3);">
+<div class="lp glow-wrap">
+
+  <!-- ── Nav ─────────────────────────────────────────────── -->
+  <nav class="lp-nav" id="lpNav">
+    <div class="lp-wrap lp-nav__bar lp-enter" style="animation-delay:.05s">
+      <a href="{% url 'core:landing' %}" class="lp-brand">
         <div class="logo-mark">S</div>
-        <span style="font-family:var(--font-display);font-weight:700;font-size:1.1rem;color:var(--text-primary);letter-spacing:-.02em;">SmartServe AI</span>
+        <span class="lp-brand__name">SmartServe AI</span>
+      </a>
+      <div class="lp-nav__links">
+        <a href="#features">Features</a>
+        <a href="#how">How It Works</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+        <a href="{% url 'accounts:login' %}" class="btn btn-outline btn-sm lp-drawer-only" style="justify-content:center">Sign in</a>
+        <a href="{% url 'accounts:register' %}" class="btn btn-primary btn-sm lp-drawer-only" style="justify-content:center">Get Started</a>
       </div>
-      <div style="display:flex;align-items:center;gap:var(--space-3);">
-        <a href="{% url 'accounts:login' %}" class="btn btn-outline btn-sm">Sign in</a>
-        <a href="{% url 'accounts:register' %}" class="btn btn-primary btn-sm">Get started free</a>
+      <div class="lp-nav__actions">
+        <button type="button" class="lp-nav__theme" id="themeToggleNav" onclick="toggleTheme()" aria-label="Change theme" aria-pressed="false" title="Change theme">
+          <i class="bi bi-sun" id="themeIconNav"></i>
+        </button>
+        <a href="{% url 'accounts:login' %}" class="btn btn-outline btn-sm lp-nav__cta">Sign in</a>
+        <a href="{% url 'accounts:register' %}" class="btn btn-primary btn-sm lp-nav__cta">Get Started</a>
+        <button type="button" class="lp-burger" id="lpNavToggle" aria-label="Open menu" aria-expanded="false"><i class="bi bi-list"></i></button>
       </div>
     </div>
   </nav>
 
-  <!-- Hero (dramatic: crimson glow + accent headline) -->
-  <section style="position:relative;max-width:1200px;margin:0 auto;padding:var(--space-16) var(--space-8);text-align:center;">
-    <div class="glow-blob" style="top:-120px;left:50%;transform:translateX(-50%);"></div>
-
-    <div class="status-pill" style="margin-bottom:var(--space-6);color:var(--brand);border-color:var(--brand-tint);background:var(--brand-tint);">
-      <i class="bi bi-stars"></i> AI-Powered Food Business OS
-    </div>
-
-    <h1 class="display-hero" style="margin-bottom:var(--space-6);max-width:860px;margin-left:auto;margin-right:auto;">
-      Run your food business <span class="accent">smarter with AI</span>
-    </h1>
-
-    <p style="font-size:var(--text-lg);color:var(--text-muted);max-width:580px;margin:0 auto var(--space-8);line-height:1.7;">
-      SmartServe AI combines orders, inventory, staff, analytics, and machine learning into one platform built for restaurants, cafés, bakeries, and food trucks.
-    </p>
-
-    <div style="display:flex;align-items:center;justify-content:center;gap:var(--space-4);flex-wrap:wrap;">
-      <a href="{% url 'accounts:register' %}" class="btn btn-primary btn-lg">
-        Start for free <i class="bi bi-arrow-right ms-1"></i>
-      </a>
-      <a href="{% url 'accounts:login' %}" class="btn btn-outline btn-lg">Sign in</a>
-    </div>
-  </section>
-
-  <!-- Feature Grid -->
-  <section style="max-width:1200px;margin:0 auto;padding:0 var(--space-8) var(--space-16);">
-    <div class="grid grid-3 gap-6">
-
-      {% for feat in features %}
-      <div class="feature-card" data-reveal>
-        <div class="feature-card__icon"><i class="bi bi-{{ feat.icon }}"></i></div>
-        <div class="feature-card__title">{{ feat.title }}</div>
-        <p class="feature-card__desc">{{ feat.desc }}</p>
+  <!-- ── Hero ────────────────────────────────────────────── -->
+  <section class="lp-hero">
+    <div class="glow-blob"></div>
+    <div class="lp-wrap">
+      <div class="status-pill lp-hero__pill lp-enter" style="animation-delay:.12s"><i class="bi bi-stars"></i> AI operating system for food businesses</div>
+      <div class="lp-hero__brand lp-enter" style="animation-delay:.06s">
+        <div class="logo-mark">S</div>
+        <span class="lp-hero__brandname">SmartServe AI</span>
       </div>
-      {% endfor %}
 
+
+      <h1 class="display-hero lp-enter-hero" style="animation-delay:.1s">
+        Know what to buy, cook, and staff <span class="accent">before you run out.</span>
+      </h1>
+
+      <p class="lp-hero__sub lp-enter" style="animation-delay:.26s">
+        Purpose-built for
+        <span class="lp-typer" aria-hidden="true"
+              data-words='["caf&#233;s","restaurants","bakeries","cloud kitchens"]'
+              data-type-speed="45" data-erase-speed="28" data-hold="1500">
+          <span class="lp-typer__sizer">cloud kitchens</span>
+          <span class="lp-typer__text">caf&#233;s</span>
+        </span><span aria-hidden="true">.</span>
+        <span class="sr-only">Purpose-built for caf&#233;s, restaurants, bakeries, and cloud kitchens.</span>
+      </p>
+
+      <p class="lp-hero__lede lp-enter" style="animation-delay:.32s">
+        Upload your sales and stock. SmartServe forecasts demand, flags waste before it spoils,
+        and scores your business health — all computed from your own data, never guesswork.
+      </p>
+
+      <div class="lp-hero__cta lp-enter" style="animation-delay:.4s">
+        <a href="{% url 'accounts:register' %}" class="btn btn-primary btn-lg">Get Started Free <i class="bi bi-arrow-right ms-1"></i></a>
+        <a href="#how" class="btn btn-outline btn-lg">See how it works</a>
+      </div>
+
+      <!-- abstract product mock: one platform, six tools -->
+      <div class="lp-mock lp-enter" style="animation-delay:.5s">
+        <div class="bento-cell bento-cell--glass">
+          <div class="lp-mock__grid">
+            <div class="lp-mock__tile"><i class="bi bi-receipt"></i><span>Orders</span></div>
+            <div class="lp-mock__tile"><i class="bi bi-box-seam"></i><span>Inventory</span></div>
+            <div class="lp-mock__tile"><i class="bi bi-graph-up-arrow"></i><span>Forecast</span></div>
+            <div class="lp-mock__tile"><i class="bi bi-trash3"></i><span>Waste</span></div>
+            <div class="lp-mock__tile"><i class="bi bi-people"></i><span>Staff</span></div>
+            <div class="lp-mock__tile"><i class="bi bi-heart-pulse"></i><span>Health</span></div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer style="border-top:1px solid var(--hairline);padding:var(--space-8);text-align:center;">
-    <p style="font-size:var(--text-sm);color:var(--text-muted);">
-      &copy; 2025 SmartServe AI. Built for food businesses that mean business.
-    </p>
+  <!-- ── Metrics strip ───────────────────────────────────── -->
+  <section class="lp-section" style="padding-top:0">
+    <div class="lp-wrap">
+      <div class="bento lp-stagger">
+        <div class="bento-cell bento-cell--accent b-2 lp-reveal lp-metric">
+          <div class="lp-metric__num lp-count">6</div>
+          <div class="lp-metric__label">operational tools unified in one login</div>
+        </div>
+        <div class="bento-cell bento-cell--accent b-2 lp-reveal lp-metric">
+          <div class="lp-metric__num"><span class="lp-count">7</span>-day</div>
+          <div class="lp-metric__label">demand forecast from your own sales</div>
+        </div>
+        <div class="bento-cell bento-cell--accent b-2 lp-reveal lp-metric">
+          <div class="lp-metric__num lp-count">100</div>
+          <div class="lp-metric__label">point business health score</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Features (bento) ────────────────────────────────── -->
+  <section class="lp-section" id="features">
+    <div class="lp-wrap">
+      <div class="lp-section__head lp-reveal">
+        <div class="lp-eyebrow">Features</div>
+        <h2>Six tools that replace a shelf of spreadsheets</h2>
+        <p>Every module reads from the same data you upload — so your numbers stay consistent across the whole platform.</p>
+      </div>
+
+      <div class="bento lp-stagger">
+        <div class="bento-cell b-4 lp-reveal lp-feat">
+          <div class="lp-feat__icon"><i class="bi bi-box-seam"></i></div>
+          <h3>Smart Inventory Management</h3>
+          <p>Stock deducts automatically as orders come in, and you're alerted before an ingredient runs out — no more mid-service surprises.</p>
+        </div>
+        <div class="bento-cell b-2 lp-reveal lp-feat">
+          <div class="lp-feat__icon"><i class="bi bi-graph-up-arrow"></i></div>
+          <h3>AI Demand Forecasting</h3>
+          <p>A 7-day demand forecast trained on your own history.</p>
+        </div>
+        <div class="bento-cell b-2 lp-reveal lp-feat">
+          <div class="lp-feat__icon"><i class="bi bi-trash3"></i></div>
+          <h3>Food Waste Prediction</h3>
+          <p>Spot items likely to spoil before they cost you.</p>
+        </div>
+        <div class="bento-cell b-2 lp-reveal lp-feat">
+          <div class="lp-feat__icon"><i class="bi bi-cash-coin"></i></div>
+          <h3>Profit Analytics</h3>
+          <p>See revenue, margins, and best-sellers at a glance.</p>
+        </div>
+        <div class="bento-cell b-2 lp-reveal lp-feat">
+          <div class="lp-feat__icon"><i class="bi bi-heart-pulse"></i></div>
+          <h3>Business Health Score</h3>
+          <p>One 0–100 read on how the business is doing.</p>
+        </div>
+        <div class="bento-cell bento-cell--brand b-6 lp-reveal lp-feat">
+          <div class="lp-feat__icon"><i class="bi bi-diagram-3"></i></div>
+          <h3>Unified Operations</h3>
+          <p>Orders, menu, inventory, staff, suppliers, and customers in one place — one login for the whole floor and the back office.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── How it works ────────────────────────────────────── -->
+  <section class="lp-section" id="how">
+    <div class="lp-wrap">
+      <div class="lp-section__head lp-reveal">
+        <div class="lp-eyebrow">How it works</div>
+        <h2>Three steps from raw files to real decisions</h2>
+      </div>
+
+      <div class="lp-steps lp-stagger">
+        <div class="bento-cell lp-reveal lp-step">
+          <div class="lp-step__n">STEP 01</div>
+          <div class="lp-step__icon"><i class="bi bi-cloud-upload"></i></div>
+          <h3>Upload your data</h3>
+          <p>Drop in your sales and stock files — CSV or Excel. Columns are mapped automatically, so there's nothing to reformat.</p>
+        </div>
+        <div class="bento-cell lp-reveal lp-step">
+          <div class="lp-step__n">STEP 02</div>
+          <div class="lp-step__icon"><i class="bi bi-cpu"></i></div>
+          <h3>Analyze your business</h3>
+          <p>SmartServe learns your patterns and runs forecasts, waste checks, and a health score — trained only on the data you uploaded.</p>
+        </div>
+        <div class="bento-cell lp-reveal lp-step">
+          <div class="lp-step__n">STEP 03</div>
+          <div class="lp-step__icon"><i class="bi bi-lightbulb"></i></div>
+          <h3>Act on the insights</h3>
+          <p>Know what to buy, cook, and staff for the week ahead — and cut the waste you'd otherwise throw out.</p>
+        </div>
+      </div>
+
+      <p class="lp-note lp-reveal"><i class="bi bi-shield-lock"></i>&nbsp; Predictions run <strong>only on your own uploaded data</strong>. No shared models, no invented numbers.</p>
+    </div>
+  </section>
+
+  <!-- ── Pricing ─────────────────────────────────────────── -->
+  <section class="lp-section" id="pricing">
+    <div class="lp-wrap">
+      <div class="lp-section__head lp-reveal">
+        <div class="lp-eyebrow">Pricing</div>
+        <h2>Plans that grow with your kitchen</h2>
+        <p>Start with a single café; scale to multiple branches when you're ready.</p>
+      </div>
+
+      <div class="lp-pricing lp-stagger">
+        <div class="bento-cell lp-reveal lp-plan">
+          <div class="lp-plan__name">Basic</div>
+          <div class="lp-plan__price lp-count">₹2,999</div><div class="lp-plan__price" style="margin-top:-14px"><span>per month</span></div>
+          <p class="lp-plan__desc">For a single café or bakery finding its feet.</p>
+          <ul class="lp-plan__list">
+            <li><i class="bi bi-check-lg"></i> Orders, menu &amp; inventory</li>
+            <li><i class="bi bi-check-lg"></i> Profit analytics</li>
+            <li><i class="bi bi-check-lg"></i> Low-stock alerts</li>
+          </ul>
+          <a href="{% url 'accounts:register' %}" class="btn btn-outline w-full" style="justify-content:center">Get Started</a>
+        </div>
+
+        <div class="bento-cell lp-reveal lp-plan lp-plan--featured">
+          <span class="badge badge-brand lp-plan__badge">Most popular</span>
+          <div class="lp-plan__name">Pro</div>
+          <div class="lp-plan__price lp-count">₹7,999</div><div class="lp-plan__price" style="margin-top:-14px"><span>per month</span></div>
+          <p class="lp-plan__desc">For a busy restaurant that wants the AI edge.</p>
+          <ul class="lp-plan__list">
+            <li><i class="bi bi-check-lg"></i> Everything in Basic</li>
+            <li><i class="bi bi-check-lg"></i> AI demand forecasting</li>
+            <li><i class="bi bi-check-lg"></i> Food waste prediction</li>
+            <li><i class="bi bi-check-lg"></i> Business health score</li>
+          </ul>
+          <a href="{% url 'accounts:register' %}" class="btn btn-primary w-full" style="justify-content:center">Get Started</a>
+        </div>
+
+        <div class="bento-cell lp-reveal lp-plan">
+          <div class="lp-plan__name">Enterprise</div>
+          <div class="lp-plan__price"><span class="lp-count">₹20,000</span><span>+ / month</span></div>
+          <p class="lp-plan__desc" style="margin-top:var(--space-2)">For multi-branch groups and cloud kitchens.</p>
+          <ul class="lp-plan__list">
+            <li><i class="bi bi-check-lg"></i> Everything in Pro</li>
+            <li><i class="bi bi-check-lg"></i> Multiple branches</li>
+            <li><i class="bi bi-check-lg"></i> Supplier &amp; purchase orders</li>
+            <li><i class="bi bi-check-lg"></i> Priority support</li>
+          </ul>
+          <a href="{% url 'accounts:register' %}" class="btn btn-outline w-full" style="justify-content:center">Contact sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Final CTA band ──────────────────────────────────── -->
+  <section class="lp-section lp-cta-band">
+    <div class="lp-wrap">
+      <div class="bento-cell bento-cell--accent lp-reveal glow-wrap">
+        <div class="glow-blob" style="top:auto;bottom:-160px;left:50%;transform:translateX(-50%);opacity:.4"></div>
+        <h2>Stop guessing. Start serving smarter.</h2>
+        <a href="{% url 'accounts:register' %}" class="btn btn-primary btn-lg">Get Started Free <i class="bi bi-arrow-right ms-1"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ──────────────────────────────────────────── -->
+  <footer class="lp-footer" id="contact">
+    <div class="lp-wrap">
+      <div class="lp-footer__grid">
+        <div class="lp-footer__col">
+          <div class="lp-brand" style="margin-bottom:var(--space-3)">
+            <div class="logo-mark">S</div>
+            <span class="lp-brand__name">SmartServe AI</span>
+          </div>
+          <p style="color:var(--text-muted);font-size:var(--text-sm);max-width:34ch;line-height:1.6">The AI operating system for cafés, restaurants, bakeries, and cloud kitchens.</p>
+        </div>
+        <div class="lp-footer__col">
+          <h4>Product</h4>
+          <a href="#features">Features</a>
+          <a href="#how">How it works</a>
+          <a href="#pricing">Pricing</a>
+          <a href="{% url 'accounts:login' %}">Sign in</a>
+        </div>
+        <div class="lp-footer__col">
+          <h4>Contact</h4>
+          <a href="mailto:hello@smartserve.ai">team.intellisupplyai@gmail.com</a>
+          <a href="{% url 'accounts:register' %}">Get started free</a>
+        </div>
+      </div>
+      <div class="lp-footer__legal">
+        <span>&copy; 2026 SmartServe AI. <br> Built for food businesses that mean business.</span>
+        <span>Your data stays yours.</span>
+      </div>
+    </div>
   </footer>
 
 </div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/typewriter.js' %}?v=20260707-lp4"></script>
+<script src="{% static 'js/landing.js' %}?v=20260707-lp4"></script>
 {% endblock %}

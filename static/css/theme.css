@@ -170,10 +170,12 @@
    functional status palette keeps alerts readable in both.
    ════════════════════════════════════════════════════════════ */
 [data-theme="dark"] {
-  /* surfaces — softened from pure black to calm red-on-black vibration */
+  /* surfaces — softened from pure black to calm red-on-black vibration.
+     (page bg and elev-1 card surface swapped per request → cards read darker
+     than the page.) */
   --bg-deep:    #050203;
-  --bg-base:    #0B0607;
-  --bg-elev-1:  #170809;
+  --bg-base:    #170809;
+  --bg-elev-1:  #0B0607;
   --bg-elev-2:  #210B0C;
   --surface-accent: #3D0000;                    /* palette maroon — accent cells / tints */
   --glass-bg:     rgba(30,6,7,.55);
@@ -650,6 +652,55 @@ a:hover { color: var(--brand-hover); }
 .feature-card__desc  { font-size: var(--text-sm); color: var(--text-muted); line-height: 1.65; margin: 0; }
 
 /* ─────────────────────────────────────────────────────────────
+   8b. BENTO GRID — modular varied-size cells (dashboards, report,
+       landing). 6-col desktop, reflows 6→4→2→1. Cells share the
+       card language (radius, border, elevation) via tokens.
+   ───────────────────────────────────────────────────────────── */
+.bento { display: grid; grid-template-columns: repeat(6, 1fr); gap: var(--gap-bento); }
+.bento-cell {
+  position: relative;
+  background: var(--bg-elev-1);
+  border: 1px solid var(--cell-border);
+  border-radius: var(--r-cell);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-1), var(--inset-hi);
+  transition: transform var(--t-base), box-shadow var(--t-base), border-color var(--t-base);
+  overflow: hidden;
+}
+.bento-cell--accent { background: var(--surface-accent); }
+.bento-cell--brand  { background: var(--brand); color: #fff; border-color: transparent; box-shadow: var(--shadow-glow), var(--inset-hi-brand); }
+.bento-cell--glass  {
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--blur)) saturate(140%);
+  -webkit-backdrop-filter: blur(var(--blur)) saturate(140%);
+  border-color: var(--glass-border);
+}
+/* column / row span utilities */
+.b-2 { grid-column: span 2; } .b-3 { grid-column: span 3; }
+.b-4 { grid-column: span 4; } .b-6 { grid-column: span 6; }
+.b-rows-2 { grid-row: span 2; }
+
+@media (max-width: 900px) {
+  .bento { grid-template-columns: repeat(4, 1fr); }
+  .b-6, .b-4 { grid-column: span 4; }
+  .b-3, .b-2 { grid-column: span 2; }
+}
+@media (max-width: 600px) {
+  .bento { grid-template-columns: repeat(2, 1fr); }
+  .b-2, .b-3, .b-4, .b-6 { grid-column: span 2; }
+  .b-rows-2 { grid-row: span 1; }
+}
+@media (max-width: 440px) {
+  .bento { grid-template-columns: 1fr; }
+  .b-2, .b-3, .b-4, .b-6 { grid-column: span 1; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .bento-cell:hover { transform: translateY(-4px); box-shadow: var(--shadow-2); border-color: var(--brand-tint); }
+  .bento-cell--brand:hover { box-shadow: var(--shadow-glow), var(--inset-hi-brand); border-color: transparent; }
+}
+
+/* ─────────────────────────────────────────────────────────────
    9. EMPTY STATES (restyled; never replaced with fake data)
    ───────────────────────────────────────────────────────────── */
 .empty-state { text-align: center; padding: var(--space-16) var(--space-8); max-width: 440px; margin: 0 auto; }
@@ -939,6 +990,11 @@ input::placeholder, textarea::placeholder { color: var(--text-faint); }
 .qa-grid   { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); }
 .recipe-row{ display: grid; grid-template-columns: 1fr 100px 100px 40px; gap: var(--space-3); align-items: flex-end; }
 .w-full { width: 100%; }
+/* screen-reader-only text (kept in DOM for assistive tech, hidden visually) */
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
 .mt-2 { margin-top: var(--space-2); } .mt-4 { margin-top: var(--space-4); } .mt-6 { margin-top: var(--space-6); }
 .mb-0 { margin-bottom: 0; } .mb-2 { margin-bottom: var(--space-2); } .mb-4 { margin-bottom: var(--space-4); }
 .mb-5 { margin-bottom: var(--space-5); } .mb-6 { margin-bottom: var(--space-6); } .mb-8 { margin-bottom: var(--space-8); }

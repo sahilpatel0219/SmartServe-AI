@@ -16,9 +16,17 @@ A premium, token-driven design system with **two themes** that share one
 structure, type system, and component set — only token values differ. **This
 supersedes the previous green/amber palette.**
 
-- **Themes:** **dark (default) — "Noir Crimson"** (crimson accent) and
-  **light — "Indigo"** (indigo accent, deliberately not red so light-mode red
-  alerts never collide with the brand). Switch via `data-theme` on `<html>`.
+- **Themes:** **dark (default) — "Ember"** (deep-red `#950101` brand on softened
+  near-black-red surfaces) and **light — "Orchard"** (forest-green `#1A5319`
+  brand on a mint canvas with white cells). Each keeps a separate functional
+  status palette so alerts stay readable (in dark, brand-red and danger-red are
+  separated by brightness + fill + icon, never hue alone). Switch via
+  `data-theme` on `<html>`.
+- **Bento layout:** a modular grid of varied-size rounded cells (`.bento` +
+  `.bento-cell` with `.b-2/.b-3/.b-4/.b-6` spans; tokens `--r-cell`,
+  `--gap-bento`) leads the expressive screens — the **landing page**
+  ([`templates/core/landing.html`](templates/core/landing.html)) and, going
+  forward, the dashboards/report. Data-dense screens keep calm tables/forms.
 - **Single source of truth:** [`static/css/theme.css`](static/css/theme.css) —
   all color, spacing, radius, shadow, blur, and type are CSS custom properties;
   no component hardcodes a hex outside this file. Color/shadow tokens are
@@ -34,8 +42,12 @@ supersedes the previous green/amber palette.**
   A pre-paint script prevents FOUC; charts re-theme on toggle via
   `applyChartTheme()`.
 - **Motion:** [`static/js/motion.js`](static/js/motion.js) — KPI count-up and
-  scroll reveal; follows the OS `prefers-reduced-motion` setting only (no
-  in-app override).
+  scroll reveal. The landing page adds [`typewriter.js`](static/js/typewriter.js)
+  (rotating hero word, no layout shift, full phrase in an `.sr-only` for AT) and
+  [`landing.js`](static/js/landing.js) (staggered entrance, IntersectionObserver
+  scroll-reveal + count-up, smooth anchor scroll, mobile drawer). All motion
+  follows the OS `prefers-reduced-motion` setting only (no in-app override) and
+  degrades to instant, fully-visible content.
 - **Accessibility:** light-mode colors verified WCAG AA; visible focus rings in
   both themes; status always icon + label, never color alone.
 - **Live reference:** run the app and open **`/styleguide`** (has a theme toggle)
