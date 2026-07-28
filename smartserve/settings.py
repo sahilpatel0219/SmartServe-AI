@@ -3,9 +3,14 @@ SmartServe AI — Django settings.
 Hybrid DB: SQLite/Postgres (auth/users) + MongoDB (operational data).
 All secrets via python-decouple (.env file).
 """
+import sys
 from pathlib import Path
 from datetime import timedelta
 from decouple import config, Csv
+
+# True while running the test suite — disables side effects like assistant
+# gap/security logging so tests never touch (or slow down on) the real database.
+TESTING = 'test' in sys.argv
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 

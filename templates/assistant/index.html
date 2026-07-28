@@ -31,12 +31,7 @@
         <p class="mb-0">Hi! I'm your SmartServe AI assistant for <strong>{{ business.name }}</strong>. I can answer questions about your revenue, profit, orders, customers, inventory, AI forecasts, and business health — all from your actual data.</p>
         {% if has_data %}
         <div class="suggestion-chips">
-          <button class="chip" onclick="askChip(this)">What's my total revenue?</button>
-          <button class="chip" onclick="askChip(this)">How much profit?</button>
-          <button class="chip" onclick="askChip(this)">What's my busiest day?</button>
-          <button class="chip" onclick="askChip(this)">What are my top items?</button>
-          <button class="chip" onclick="askChip(this)">How's my stock?</button>
-          <button class="chip" onclick="askChip(this)">What's my health score?</button>
+          {% for c in starter_chips %}<button class="chip" onclick="askChip(this)">{{ c }}</button>{% endfor %}
         </div>
         {% endif %}
       </div>
@@ -63,6 +58,10 @@
     <a href="{% url 'onboarding:upload_center' %}">Upload your data</a> to enable the assistant.
   </p>
   {% endif %}
+
+  <p class="text-subtle text-xs text-center mt-2" style="opacity:.8;">
+    <i class="bi bi-shield-check"></i> Answers are generated only from your own uploaded business data.
+  </p>
 
 </div>
 
@@ -99,6 +98,16 @@
   transition: all var(--t-fast);
 }
 .chip:hover { border-color: var(--color-primary); color: var(--color-primary); background: var(--color-primary-light); }
+.ai-actions { display: flex; align-items: center; gap: 6px; margin-top: 8px; }
+.thumb {
+  background: transparent; border: 1px solid var(--color-border); border-radius: var(--radius-pill);
+  width: 26px; height: 26px; display: inline-flex; align-items: center; justify-content: center;
+  color: var(--color-muted); cursor: pointer; transition: all var(--t-fast); font-size: .8rem;
+}
+.thumb:hover { color: var(--color-ink); border-color: var(--color-border-hover); }
+.thumb.up.active { color: var(--color-success); border-color: var(--color-success); }
+.thumb.down.active { color: var(--color-danger); border-color: var(--color-danger); }
+.thumb.done { pointer-events: none; }
 </style>
 
 <script>
@@ -106,19 +115,65 @@ const chatWindow = document.getElementById('chatWindow');
 const msgInput   = document.getElementById('msgInput');
 const sendBtn    = document.getElementById('sendBtn');
 
-function addBubble(text, isUser) {
+const AI_ICON = `<div style="width:32px;height:32px;border-radius:50%;background:var(--color-primary);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="bi bi-robot" style="color:#fff;font-size:.85rem;"></i></div>`;
+
+function addBubble(text, isUser, opts) {
+  opts = opts || {};
   const row = document.createElement('div');
   if (isUser) {
     row.className = 'chat-row-user';
     row.innerHTML = `<div class="chat-bubble-user">${escHtml(text)}</div>`;
-  } else {
-    row.className = 'flex gap-2';
-    const icon = `<div style="width:32px;height:32px;border-radius:50%;background:var(--color-primary);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="bi bi-robot" style="color:#fff;font-size:.85rem;"></i></div>`;
-    row.innerHTML = `${icon}<div class="chat-bubble-ai">${escHtml(text)}</div>`;
+    chatWindow.appendChild(row);
+    chatWindow.scrollTop = chatWindow.scrollHeight;
+    return row;
   }
+  row.className = 'flex gap-2';
+  row.innerHTML = AI_ICON;
+  const bubble = document.createElement('div');
+  bubble.className = 'chat-bubble-ai';
+  bubble.innerHTML = `<div>${escHtml(text)}</div>`;
+
+  // Thumbs up/down feedback (skip for clarifying questions)
+  if (!opts.clarification) {
+    const actions = document.createElement('div');
+    actions.className = 'ai-actions';
+    actions.innerHTML = '<button class="thumb up" aria-label="Helpful"><i class="bi bi-hand-thumbs-up"></i></button>'
+                      + '<button class="thumb down" aria-label="Not helpful"><i class="bi bi-hand-thumbs-down"></i></button>';
+    const q = opts.question || '';
+    actions.querySelector('.up').addEventListener('click', () => sendFeedback('up', q, text, actions));
+    actions.querySelector('.down').addEventListener('click', () => sendFeedback('down', q, text, actions));
+    bubble.appendChild(actions);
+  }
+
+  // Follow-up suggestion chips generated from context
+  if (opts.chips && opts.chips.length) {
+    const fu = document.createElement('div');
+    fu.className = 'suggestion-chips';
+    opts.chips.forEach(c => {
+      const b = document.createElement('button');
+      b.className = 'chip'; b.textContent = c;
+      b.addEventListener('click', () => askChip(b));
+      fu.appendChild(b);
+    });
+    bubble.appendChild(fu);
+  }
+
+  row.appendChild(bubble);
   chatWindow.appendChild(row);
   chatWindow.scrollTop = chatWindow.scrollHeight;
   return row;
+}
+
+async function sendFeedback(rating, question, answer, actionsEl) {
+  actionsEl.querySelector('.' + rating).classList.add('active');
+  actionsEl.querySelectorAll('.thumb').forEach(t => t.classList.add('done'));
+  try {
+    await fetch('{% url "assistant:feedback" %}', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json', 'X-CSRFToken': '{{ csrf_token }}'},
+      body: JSON.stringify({rating, question, answer}),
+    });
+  } catch (e) { /* feedback is best-effort */ }
 }
 
 function addTyping() {
@@ -154,7 +209,11 @@ async function sendMessage() {
     const data = await resp.json();
     const typing = document.getElementById('typingRow');
     if (typing) typing.remove();
-    addBubble(data.reply || data.error || 'No response received.', false);
+    addBubble(data.reply || data.error || 'No response received.', false, {
+      chips: data.chips || [],
+      question: msg,
+      clarification: data.needs_clarification,
+    });
   } catch(e) {
     const typing = document.getElementById('typingRow');
     if (typing) typing.remove();

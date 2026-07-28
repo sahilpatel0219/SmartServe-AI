@@ -4,4 +4,5 @@ app_name = 'assistant'
 urlpatterns = [
     path('', views.index_view, name='index'),
     path('chat/', views.chat_view, name='chat'),
+    path('feedback/', views.feedback_view, name='feedback'),
 ]
