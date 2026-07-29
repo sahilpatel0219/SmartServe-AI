@@ -6,7 +6,7 @@
 <div style="max-width:700px;margin:0 auto;">
   <p class="text-muted mb-6">Download your business data as PDF or Excel. Reports are generated from the data you have uploaded.</p>
 
-  {% if not has_sales and not has_inventory %}
+  {% if not has_sales and not has_inventory and not has_customers and not has_staff and not has_orders %}
   <div class="empty-state">
     <div class="empty-icon"><i class="bi bi-file-earmark-bar-graph"></i></div>
     <h3 class="empty-title">No Data to Report</h3>
@@ -64,6 +64,75 @@
         </a>
         <a href="{% url 'reports:export' 'inventory' 'pdf' %}"
            class="btn btn-outline btn-sm">
+          <i class="bi bi-file-earmark-pdf"></i> Export PDF
+        </a>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+
+  <!-- Customer report card -->
+  {% if has_customers %}
+  <div class="card mb-4">
+    <div class="card-header">
+      <div>
+        <span class="card-title">Customer Report</span>
+        <div class="text-muted text-sm mt-1">Current customers with visits and total spend</div>
+      </div>
+      <i class="bi bi-people" style="font-size:1.4rem;color:var(--color-info);"></i>
+    </div>
+    <div class="card-body">
+      <div class="flex gap-2">
+        <a href="{% url 'reports:export' 'customers' 'excel' %}" class="btn btn-outline btn-sm">
+          <i class="bi bi-file-earmark-excel"></i> Export Excel
+        </a>
+        <a href="{% url 'reports:export' 'customers' 'pdf' %}" class="btn btn-outline btn-sm">
+          <i class="bi bi-file-earmark-pdf"></i> Export PDF
+        </a>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+
+  <!-- Staff report card -->
+  {% if has_staff %}
+  <div class="card mb-4">
+    <div class="card-header">
+      <div>
+        <span class="card-title">Staff Report</span>
+        <div class="text-muted text-sm mt-1">Team members, roles, and details</div>
+      </div>
+      <i class="bi bi-person-badge" style="font-size:1.4rem;color:var(--color-primary);"></i>
+    </div>
+    <div class="card-body">
+      <div class="flex gap-2">
+        <a href="{% url 'reports:export' 'staff' 'excel' %}" class="btn btn-outline btn-sm">
+          <i class="bi bi-file-earmark-excel"></i> Export Excel
+        </a>
+        <a href="{% url 'reports:export' 'staff' 'pdf' %}" class="btn btn-outline btn-sm">
+          <i class="bi bi-file-earmark-pdf"></i> Export PDF
+        </a>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+
+  <!-- Order report card -->
+  {% if has_orders %}
+  <div class="card mb-4">
+    <div class="card-header">
+      <div>
+        <span class="card-title">Order Report</span>
+        <div class="text-muted text-sm mt-1">Orders with customer, total, type, and status</div>
+      </div>
+      <i class="bi bi-receipt" style="font-size:1.4rem;color:var(--color-secondary);"></i>
+    </div>
+    <div class="card-body">
+      <div class="flex gap-2">
+        <a href="{% url 'reports:export' 'orders' 'excel' %}" class="btn btn-outline btn-sm">
+          <i class="bi bi-file-earmark-excel"></i> Export Excel
+        </a>
+        <a href="{% url 'reports:export' 'orders' 'pdf' %}" class="btn btn-outline btn-sm">
           <i class="bi bi-file-earmark-pdf"></i> Export PDF
         </a>
       </div>

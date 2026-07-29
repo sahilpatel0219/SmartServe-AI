@@ -44,11 +44,17 @@ def index_view(request):
     # Check which data types are available
     has_sales = col.sales_records().count_documents({'business_id': bid}) > 0
     has_inventory = col.inventory().count_documents({'business_id': bid}) > 0
+    has_customers = col.customers().count_documents({'business_id': bid}) > 0
+    has_staff = col.employees().count_documents({'business_id': bid}) > 0
+    has_orders = col.orders().count_documents({'business_id': bid}) > 0
 
     return render(request, 'reports/index.html', {
         'business': business,
         'has_sales': has_sales,
         'has_inventory': has_inventory,
+        'has_customers': has_customers,
+        'has_staff': has_staff,
+        'has_orders': has_orders,
         'period_options': [('7', '7 days'), ('30', '30 days'), ('90', '90 days'), ('365', '1 year')],
     })
 
@@ -66,6 +72,12 @@ def export_view(request, report_type, fmt):
         return _export_sales(bid, fmt, cutoff, days, business.name)
     elif report_type == 'inventory':
         return _export_inventory(bid, fmt, business.name)
+    elif report_type == 'customers':
+        return _export_customers(bid, fmt, business.name)
+    elif report_type == 'staff':
+        return _export_staff(bid, fmt, business.name)
+    elif report_type == 'orders':
+        return _export_orders(bid, fmt, business.name)
     else:
         return HttpResponse('Invalid report type', status=400)
 
@@ -122,6 +134,82 @@ def _export_inventory(bid, fmt, biz_name):
     title = f'{biz_name} — Inventory Report'
     filename = 'inventory_report'
 
+    if fmt == 'excel':
+        return _to_excel(df, filename, title)
+    elif fmt == 'pdf':
+        return _to_pdf(df, filename, title, list(df.columns))
+    return HttpResponse('Invalid format.', status=400)
+
+
+# ── Customer report ───────────────────────────────────────────────────────────
+
+def _export_customers(bid, fmt, biz_name):
+    records = list(col.customers().find({'business_id': bid}, sort=[('name', 1)]))
+    return _export_columns(
+        records, ['name', 'phone', 'email', 'visit_count', 'total_spend'],
+        f'{biz_name} — Customer Report', 'customer_report', fmt,
+        empty_msg='No customer data available.',
+    )
+
+
+# ── Staff report ──────────────────────────────────────────────────────────────
+
+def _export_staff(bid, fmt, biz_name):
+    records = list(col.employees().find({'business_id': bid}, sort=[('name', 1)]))
+    return _export_columns(
+        records, ['name', 'role', 'phone', 'email', 'salary', 'join_date', 'status'],
+        f'{biz_name} — Staff Report', 'staff_report', fmt,
+        empty_msg='No staff data available.',
+    )
+
+
+# ── Order report ──────────────────────────────────────────────────────────────
+
+def _export_orders(bid, fmt, biz_name):
+    records = list(col.orders().find({'business_id': bid}, sort=[('created_at', -1)]))
+    if not records:
+        return HttpResponse('No order data available.', status=404)
+
+    rows = []
+    for o in records:
+        dt = o.get('created_at') or o.get('order_date')
+        date_s = dt.strftime('%Y-%m-%d %H:%M') if isinstance(dt, datetime) else str(dt or '')[:16]
+        items = o.get('items')
+        if isinstance(items, list):
+            items_s = f'{len(items)} item(s)'
+        else:
+            items_s = str(o.get('item_name') or items or '—')
+        total = o.get('total_amount', o.get('amount', 0)) or 0
+        rows.append({
+            'Date': date_s,
+            'Order ID': str(o.get('order_id') or o.get('_id', ''))[:12],
+            'Customer': o.get('customer_name') or '—',
+            'Items': items_s,
+            'Total (₹)': total,
+            'Type': (o.get('order_type') or '—').replace('_', ' ').title(),
+            'Status': (o.get('status') or '—').title(),
+        })
+    df = pd.DataFrame(rows)
+    title = f'{biz_name} — Orders Report'
+    if fmt == 'excel':
+        return _to_excel(df, 'orders_report', title)
+    elif fmt == 'pdf':
+        return _to_pdf(df, 'orders_report', title, list(df.columns))
+    return HttpResponse('Invalid format.', status=400)
+
+
+# ── Shared column exporter ────────────────────────────────────────────────────
+
+def _export_columns(records, keep, title, filename, fmt, empty_msg='No data available.'):
+    """Export a collection's records, keeping only the columns that exist."""
+    if not records:
+        return HttpResponse(empty_msg, status=404)
+    df = pd.DataFrame(records)
+    cols = [c for c in keep if c in df.columns]
+    if not cols:
+        return HttpResponse('Data format not recognized.', status=400)
+    df = df[cols].copy()
+    df.columns = [c.replace('_', ' ').title() for c in cols]
     if fmt == 'excel':
         return _to_excel(df, filename, title)
     elif fmt == 'pdf':
