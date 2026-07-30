@@ -61,10 +61,11 @@ A single action that runs the full pipeline on the uploaded data — sales forec
 
 | Layer | Technology |
 |---|---|
-| **Backend** | Python 3.11+, Django 5.x, Django REST Framework |
+| **Backend** | Python 3.11+, Django 6.x, Django REST Framework (JSON API only) |
+| **Auth** | JWT via `djangorestframework-simplejwt`; CORS via `django-cors-headers` |
 | **Database** | MongoDB (business data, uploads, predictions) + relational DB (auth, users, roles) |
-| **Frontend** | HTML5, CSS3, Bootstrap 5, JavaScript, Chart.js |
-| **AI / ML** | Pandas, NumPy, scikit-learn, XGBoost, Prophet |
+| **Frontend** | React 18 + Vite, React Router, TanStack Query, Axios, Recharts |
+| **AI / ML** | Pandas, NumPy, scikit-learn, XGBoost |
 | **Deployment** | Docker, Nginx, Gunicorn, AWS / DigitalOcean |
 
 **On the hybrid database:** Django's auth and admin are built on the ORM, so users, roles, and subscriptions live in a relational DB. High-volume, schema-flexible data (uploaded datasets, sales records, orders, predictions) lives in MongoDB behind a repository layer. Views never touch `pymongo` directly.
@@ -79,7 +80,15 @@ A single action that runs the full pipeline on the uploaded data — sales forec
 - **Motion:** Restrained — staggered entrance, scroll reveal, hover lift, count-up numbers. Honors `prefers-reduced-motion` automatically.
 - **Status colors** are deliberately kept separate from the brand color so alerts remain readable in both themes.
 
-See `STYLEGUIDE.md` (or the `/styleguide` page) for the full component library.
+The design system now lives in **`frontend/src/styles/theme.css`** as the React
+app's global stylesheet — same token names, same two `[data-theme]` scopes as the
+original Django stylesheet, so both themes render identically. Reusable
+components are in `frontend/src/components/` (`ui.jsx` for cards, bento cells,
+KPI tiles, tables, modals, forms, empty states; `charts.jsx` for Recharts
+wrappers that re-read theme colors on toggle; `AppShell.jsx` for the side nav and
+top bar).
+
+See `STYLEGUIDE.md` for the component library reference.
 
 ---
 
@@ -91,7 +100,24 @@ See `STYLEGUIDE.md` (or the `/styleguide` page) for the full component library.
 - MongoDB (local install or a hosted cluster such as MongoDB Atlas)
 - pip / virtualenv
 
-### Installation
+- Node.js 18+ (for the React frontend)
+
+### Architecture
+
+The app runs as **two processes**: a Django REST API that returns JSON only, and a
+React single-page app that owns the entire UI. They talk over HTTP and are
+connected by exactly two settings — the frontend's `VITE_API_URL` and the
+backend's `CORS_ALLOWED_ORIGINS`.
+
+```
+frontend/  React + Vite SPA  ──HTTP + JWT──▶  Django REST API (/api/*)
+  :5173                                          :8000
+```
+
+Every endpoint is documented in **[`API.md`](API.md)** — method, URL, request
+body, and response shape.
+
+### Installation — backend
 
 ```bash
 # 1. Clone
@@ -107,19 +133,50 @@ pip install -r requirements.txt
 
 # 4. Environment variables
 cp .env.example .env
-# Now open .env and fill in your values — see SETUP.md
+# Open .env and fill in your values — see SETUP.md.
+# CORS_ALLOWED_ORIGINS must include wherever Vite serves the frontend.
 
 # 5. Database
 python manage.py migrate
 
 # 6. Create an admin account
 python manage.py createsuperuser
+```
 
-# 7. Run
+### Installation — frontend
+
+```bash
+cd frontend
+npm install
+cp .env.example .env      # VITE_API_URL should point at the backend's /api
+```
+
+### Running both (two terminals)
+
+Terminal 1 — API:
+
+```bash
 python manage.py runserver
 ```
 
-Open http://127.0.0.1:8000 — the admin panel is at `/admin`.
+Terminal 2 — React app:
+
+```bash
+npm run dev --prefix frontend
+```
+
+Then open **http://localhost:5173**. The Django admin stays at
+http://127.0.0.1:8000/admin, and the API root is http://127.0.0.1:8000/api/.
+
+### How the two are wired together
+
+| Setting | Where | Purpose |
+|---|---|---|
+| `VITE_API_URL` | `frontend/.env` | Base URL the React app calls. Default `http://127.0.0.1:8000/api` |
+| `CORS_ALLOWED_ORIGINS` | `.env` (backend) | Origins allowed to call the API. Must include `http://localhost:5173` |
+
+If you change the Vite port or serve the API from another host, update **both**
+or the browser will block the requests.
 
 ### Docker
 
@@ -165,7 +222,9 @@ Sample CSV files for a fictional café (**Cafe LJ**) are included so the upload 
 
 ```
 smartserve/       # project config
-core/             # base templates, design system, shared utils
+api/              # REST API: serializers, JWT auth, tenancy, per-domain views
+frontend/         # React + Vite SPA (the entire UI)
+core/             # shared utils, legacy templates (being retired)
 accounts/         # auth, roles, workspaces, subscriptions
 onboarding/       # business registration + data upload + validation
 catalog/          # menu items, categories, recipes

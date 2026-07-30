@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     # third-party
     'rest_framework',
     'rest_framework_simplejwt',
+    'corsheaders',
     # local
     'core',
     'accounts',
@@ -45,11 +46,13 @@ INSTALLED_APPS = [
     'assistant',
     'reports',
     'notifications',
+    'api',
 ]
 
 # ── Middleware ──────────────────────────────────────────────────────────────────
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -57,6 +60,19 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+# ── CORS (React dev server) ─────────────────────────────────────────────────────
+CORS_ALLOWED_ORIGINS = config(
+    'CORS_ALLOWED_ORIGINS',
+    default='http://localhost:5173,http://127.0.0.1:5173',
+    cast=Csv(),
+)
+CORS_ALLOW_CREDENTIALS = True
+# The React client sends the active-workspace id on every request; it isn't in
+# django-cors-headers' default allow-list, so the browser would drop the request
+# after preflight if we didn't add it here.
+from corsheaders.defaults import default_headers  # noqa: E402
+CORS_ALLOW_HEADERS = list(default_headers) + ['x-business-id']
 
 ROOT_URLCONF = 'smartserve.urls'
 
@@ -151,8 +167,11 @@ DEFAULT_FROM_EMAIL = config('EMAIL_HOST_USER', default='noreply@smartserve.ai')
 
 # ── DRF ─────────────────────────────────────────────────────────────────────────
 REST_FRAMEWORK = {
+    # JWT only. The React app is the sole API client and sends a bearer token;
+    # dropping SessionAuthentication means no CSRF coupling and no reliance on
+    # cookies for cross-origin calls. Django's own session auth still guards
+    # /admin/, which is not a DRF view.
     'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework.authentication.SessionAuthentication',
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ],
     'DEFAULT_PERMISSION_CLASSES': [
@@ -160,6 +179,9 @@ REST_FRAMEWORK = {
     ],
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 25,
+    # Turns unhandled exceptions (e.g. a transient MongoDB drop) into a clean
+    # JSON error instead of Django's HTML debug page leaking into the SPA.
+    'EXCEPTION_HANDLER': 'api.exceptions.api_exception_handler',
 }
 
 # ── SimpleJWT ───────────────────────────────────────────────────────────────────

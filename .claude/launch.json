@@ -2,10 +2,16 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "SmartServe AI",
+      "name": "SmartServe API",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["manage.py", "runserver", "8060"],
-      "port": 8060
+      "runtimeArgs": ["manage.py", "runserver", "8000"],
+      "port": 8000
+    },
+    {
+      "name": "SmartServe Frontend",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--prefix", "frontend"],
+      "port": 5173
     }
   ]
 }
