@@ -271,9 +271,9 @@ Stated honestly, because they shape how the system should be judged:
 
 | Name | Role | Ownership |
 |---|---|---|
-| `TODO: Name` | AI/ML Engineer | Data pipeline, forecasting models, accuracy evaluation |
-| `TODO: Name` | Backend Engineer | Django, MongoDB, auth, multi-tenant isolation, inventory logic |
-| `TODO: Name` | Frontend Engineer | UI/UX, bento design system, dashboards, upload flow |
+| `Patel Sahil` | Backend Engineer | Django, MongoDB, auth, multi-tenant isolation, inventory logic |
+| `Patel Maahi` | AI/ML Engineer | Data pipeline, forecasting models, accuracy evaluation |
+| `Mewada Het` | Frontend Engineer | UI/UX, bento design system, dashboards, upload flow |
 
 All members contribute to integration, testing, and documentation.
 
