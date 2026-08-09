@@ -261,10 +261,16 @@ def validate_and_preview(uploaded_file, upload_type: str) -> dict:
 
     filename = uploaded_file.name.lower()
     try:
+        # keep_default_na=False: pandas otherwise converts truly blank cells to
+        # float NaN *before* applying dtype=str, regardless of the requested
+        # string dtype. That NaN then lands in the JSON preview response, and
+        # Python's strict json.dumps (used by DRF) rejects NaN outright,
+        # 500ing the whole upload. Blank optional cells (e.g. expiry_date)
+        # must parse as '' instead.
         if filename.endswith('.csv'):
-            df = pd.read_csv(uploaded_file, dtype=str)
+            df = pd.read_csv(uploaded_file, dtype=str, keep_default_na=False)
         elif filename.endswith(('.xlsx', '.xls')):
-            df = pd.read_excel(uploaded_file, dtype=str)
+            df = pd.read_excel(uploaded_file, dtype=str, keep_default_na=False)
         else:
             return {'status': 'error', 'message': 'Only CSV and XLSX files are supported.'}
     except Exception as e:
@@ -291,7 +297,10 @@ def validate_and_preview(uploaded_file, upload_type: str) -> dict:
         }
 
     # Remove completely empty rows
-    df = df.dropna(how='all')
+    # With keep_default_na=False (above), a fully-blank row now parses as all
+    # empty strings rather than all NaN, so dropna(how='all') alone would no
+    # longer catch it. Drop rows where every cell is blank/whitespace-only.
+    df = df[~(df.apply(lambda col: col.astype(str).str.strip()).eq('').all(axis=1))]
 
     # Validate date columns
     row_errors = []

@@ -1,0 +1,721 @@
+date,item_name,quantity,revenue,cost
+2026-06-01,Cappuccino,7,1050,315
+2026-06-01,Cafe Latte,8,1280,384
+2026-06-01,Espresso,6,720,180
+2026-06-01,Cold Coffee,10,1800,550
+2026-06-01,Masala Chai,14,1120,280
+2026-06-01,Veg Sandwich,8,1120,400
+2026-06-01,Grilled Cheese Sandwich,4,680,260
+2026-06-01,French Fries,7,840,280
+2026-06-01,Margherita Pizza,3,840,330
+2026-06-01,Pasta Alfredo,3,960,390
+2026-06-01,Chocolate Brownie,5,750,275
+2026-06-01,Cheesecake,3,660,270
+2026-06-02,Cappuccino,10,1500,450
+2026-06-02,Cafe Latte,8,1280,384
+2026-06-02,Espresso,5,600,150
+2026-06-02,Cold Coffee,8,1440,440
+2026-06-02,Masala Chai,13,1040,260
+2026-06-02,Veg Sandwich,4,560,200
+2026-06-02,Grilled Cheese Sandwich,5,850,325
+2026-06-02,French Fries,7,840,280
+2026-06-02,Margherita Pizza,3,840,330
+2026-06-02,Pasta Alfredo,2,640,260
+2026-06-02,Chocolate Brownie,6,900,330
+2026-06-02,Cheesecake,3,660,270
+2026-06-03,Cappuccino,7,1050,315
+2026-06-03,Cafe Latte,10,1600,480
+2026-06-03,Espresso,7,840,210
+2026-06-03,Cold Coffee,8,1440,440
+2026-06-03,Masala Chai,12,960,240
+2026-06-03,Veg Sandwich,5,700,250
+2026-06-03,Grilled Cheese Sandwich,6,1020,390
+2026-06-03,French Fries,6,720,240
+2026-06-03,Margherita Pizza,4,1120,440
+2026-06-03,Pasta Alfredo,3,960,390
+2026-06-03,Chocolate Brownie,5,750,275
+2026-06-03,Cheesecake,4,880,360
+2026-06-04,Cappuccino,12,1800,540
+2026-06-04,Cafe Latte,7,1120,336
+2026-06-04,Espresso,6,720,180
+2026-06-04,Cold Coffee,7,1260,385
+2026-06-04,Masala Chai,9,720,180
+2026-06-04,Veg Sandwich,5,700,250
+2026-06-04,Grilled Cheese Sandwich,4,680,260
+2026-06-04,French Fries,6,720,240
+2026-06-04,Margherita Pizza,4,1120,440
+2026-06-04,Pasta Alfredo,3,960,390
+2026-06-04,Chocolate Brownie,5,750,275
+2026-06-04,Cheesecake,3,660,270
+2026-06-05,Cappuccino,12,1800,540
+2026-06-05,Cafe Latte,9,1440,432
+2026-06-05,Espresso,7,840,210
+2026-06-05,Cold Coffee,6,1080,330
+2026-06-05,Masala Chai,13,1040,260
+2026-06-05,Veg Sandwich,5,700,250
+2026-06-05,Grilled Cheese Sandwich,4,680,260
+2026-06-05,French Fries,9,1080,360
+2026-06-05,Margherita Pizza,4,1120,440
+2026-06-05,Pasta Alfredo,3,960,390
+2026-06-05,Chocolate Brownie,5,750,275
+2026-06-05,Cheesecake,5,1100,450
+2026-06-06,Cappuccino,12,1800,540
+2026-06-06,Cafe Latte,10,1600,480
+2026-06-06,Espresso,9,1080,270
+2026-06-06,Cold Coffee,10,1800,550
+2026-06-06,Masala Chai,15,1200,300
+2026-06-06,Veg Sandwich,11,1540,550
+2026-06-06,Grilled Cheese Sandwich,9,1530,585
+2026-06-06,French Fries,9,1080,360
+2026-06-06,Margherita Pizza,6,1680,660
+2026-06-06,Pasta Alfredo,4,1280,520
+2026-06-06,Chocolate Brownie,9,1350,495
+2026-06-06,Cheesecake,6,1320,540
+2026-06-07,Cappuccino,11,1650,495
+2026-06-07,Cafe Latte,12,1920,576
+2026-06-07,Espresso,8,960,240
+2026-06-07,Cold Coffee,11,1980,605
+2026-06-07,Masala Chai,19,1520,380
+2026-06-07,Veg Sandwich,7,980,350
+2026-06-07,Grilled Cheese Sandwich,5,850,325
+2026-06-07,French Fries,12,1440,480
+2026-06-07,Margherita Pizza,5,1400,550
+2026-06-07,Pasta Alfredo,3,960,390
+2026-06-07,Chocolate Brownie,5,750,275
+2026-06-07,Cheesecake,4,880,360
+2026-06-08,Cappuccino,12,1800,540
+2026-06-08,Cafe Latte,9,1440,432
+2026-06-08,Espresso,5,600,150
+2026-06-08,Cold Coffee,8,1440,440
+2026-06-08,Masala Chai,17,1360,340
+2026-06-08,Veg Sandwich,6,840,300
+2026-06-08,Grilled Cheese Sandwich,7,1190,455
+2026-06-08,French Fries,9,1080,360
+2026-06-08,Margherita Pizza,3,840,330
+2026-06-08,Pasta Alfredo,4,1280,520
+2026-06-08,Chocolate Brownie,6,900,330
+2026-06-08,Cheesecake,4,880,360
+2026-06-09,Cappuccino,10,1500,450
+2026-06-09,Cafe Latte,7,1120,336
+2026-06-09,Espresso,6,720,180
+2026-06-09,Cold Coffee,7,1260,385
+2026-06-09,Masala Chai,15,1200,300
+2026-06-09,Veg Sandwich,7,980,350
+2026-06-09,Grilled Cheese Sandwich,4,680,260
+2026-06-09,French Fries,7,840,280
+2026-06-09,Margherita Pizza,3,840,330
+2026-06-09,Pasta Alfredo,4,1280,520
+2026-06-09,Chocolate Brownie,6,900,330
+2026-06-09,Cheesecake,3,660,270
+2026-06-10,Cappuccino,11,1650,495
+2026-06-10,Cafe Latte,8,1280,384
+2026-06-10,Espresso,9,1080,270
+2026-06-10,Cold Coffee,9,1620,495
+2026-06-10,Masala Chai,15,1200,300
+2026-06-10,Veg Sandwich,7,980,350
+2026-06-10,Grilled Cheese Sandwich,4,680,260
+2026-06-10,French Fries,7,840,280
+2026-06-10,Margherita Pizza,3,840,330
+2026-06-10,Pasta Alfredo,4,1280,520
+2026-06-10,Chocolate Brownie,7,1050,385
+2026-06-10,Cheesecake,5,1100,450
+2026-06-11,Cappuccino,7,1050,315
+2026-06-11,Cafe Latte,11,1760,528
+2026-06-11,Espresso,9,1080,270
+2026-06-11,Cold Coffee,6,1080,330
+2026-06-11,Masala Chai,12,960,240
+2026-06-11,Veg Sandwich,4,560,200
+2026-06-11,Grilled Cheese Sandwich,6,1020,390
+2026-06-11,French Fries,8,960,320
+2026-06-11,Margherita Pizza,3,840,330
+2026-06-11,Pasta Alfredo,3,960,390
+2026-06-11,Chocolate Brownie,5,750,275
+2026-06-11,Cheesecake,3,660,270
+2026-06-12,Cappuccino,11,1650,495
+2026-06-12,Cafe Latte,9,1440,432
+2026-06-12,Espresso,8,960,240
+2026-06-12,Cold Coffee,10,1800,550
+2026-06-12,Masala Chai,11,880,220
+2026-06-12,Veg Sandwich,6,840,300
+2026-06-12,Grilled Cheese Sandwich,7,1190,455
+2026-06-12,French Fries,9,1080,360
+2026-06-12,Margherita Pizza,4,1120,440
+2026-06-12,Pasta Alfredo,3,960,390
+2026-06-12,Chocolate Brownie,4,600,220
+2026-06-12,Cheesecake,4,880,360
+2026-06-13,Cappuccino,14,2100,630
+2026-06-13,Cafe Latte,10,1600,480
+2026-06-13,Espresso,8,960,240
+2026-06-13,Cold Coffee,8,1440,440
+2026-06-13,Masala Chai,17,1360,340
+2026-06-13,Veg Sandwich,7,980,350
+2026-06-13,Grilled Cheese Sandwich,8,1360,520
+2026-06-13,French Fries,11,1320,440
+2026-06-13,Margherita Pizza,4,1120,440
+2026-06-13,Pasta Alfredo,3,960,390
+2026-06-13,Chocolate Brownie,7,1050,385
+2026-06-13,Cheesecake,4,880,360
+2026-06-14,Cappuccino,16,2400,720
+2026-06-14,Cafe Latte,12,1920,576
+2026-06-14,Espresso,9,1080,270
+2026-06-14,Cold Coffee,12,2160,660
+2026-06-14,Masala Chai,18,1440,360
+2026-06-14,Veg Sandwich,6,840,300
+2026-06-14,Grilled Cheese Sandwich,5,850,325
+2026-06-14,French Fries,8,960,320
+2026-06-14,Margherita Pizza,5,1400,550
+2026-06-14,Pasta Alfredo,4,1280,520
+2026-06-14,Chocolate Brownie,7,1050,385
+2026-06-14,Cheesecake,6,1320,540
+2026-06-15,Cappuccino,9,1350,405
+2026-06-15,Cafe Latte,10,1600,480
+2026-06-15,Espresso,8,960,240
+2026-06-15,Cold Coffee,12,2160,660
+2026-06-15,Masala Chai,12,960,240
+2026-06-15,Veg Sandwich,6,840,300
+2026-06-15,Grilled Cheese Sandwich,6,1020,390
+2026-06-15,French Fries,8,960,320
+2026-06-15,Margherita Pizza,4,1120,440
+2026-06-15,Pasta Alfredo,3,960,390
+2026-06-15,Chocolate Brownie,7,1050,385
+2026-06-15,Cheesecake,5,1100,450
+2026-06-16,Cappuccino,12,1800,540
+2026-06-16,Cafe Latte,8,1280,384
+2026-06-16,Espresso,11,1320,330
+2026-06-16,Cold Coffee,11,1980,605
+2026-06-16,Masala Chai,18,1440,360
+2026-06-16,Veg Sandwich,9,1260,450
+2026-06-16,Grilled Cheese Sandwich,7,1190,455
+2026-06-16,French Fries,6,720,240
+2026-06-16,Margherita Pizza,5,1400,550
+2026-06-16,Pasta Alfredo,3,960,390
+2026-06-16,Chocolate Brownie,5,750,275
+2026-06-16,Cheesecake,3,660,270
+2026-06-17,Cappuccino,13,1950,585
+2026-06-17,Cafe Latte,8,1280,384
+2026-06-17,Espresso,8,960,240
+2026-06-17,Cold Coffee,8,1440,440
+2026-06-17,Masala Chai,12,960,240
+2026-06-17,Veg Sandwich,8,1120,400
+2026-06-17,Grilled Cheese Sandwich,7,1190,455
+2026-06-17,French Fries,7,840,280
+2026-06-17,Margherita Pizza,5,1400,550
+2026-06-17,Pasta Alfredo,2,640,260
+2026-06-17,Chocolate Brownie,4,600,220
+2026-06-17,Cheesecake,5,1100,450
+2026-06-18,Cappuccino,11,1650,495
+2026-06-18,Cafe Latte,11,1760,528
+2026-06-18,Espresso,6,720,180
+2026-06-18,Cold Coffee,9,1620,495
+2026-06-18,Masala Chai,13,1040,260
+2026-06-18,Veg Sandwich,8,1120,400
+2026-06-18,Grilled Cheese Sandwich,4,680,260
+2026-06-18,French Fries,10,1200,400
+2026-06-18,Margherita Pizza,3,840,330
+2026-06-18,Pasta Alfredo,3,960,390
+2026-06-18,Chocolate Brownie,6,900,330
+2026-06-18,Cheesecake,5,1100,450
+2026-06-19,Cappuccino,7,1050,315
+2026-06-19,Cafe Latte,11,1760,528
+2026-06-19,Espresso,6,720,180
+2026-06-19,Cold Coffee,8,1440,440
+2026-06-19,Masala Chai,12,960,240
+2026-06-19,Veg Sandwich,6,840,300
+2026-06-19,Grilled Cheese Sandwich,5,850,325
+2026-06-19,French Fries,7,840,280
+2026-06-19,Margherita Pizza,5,1400,550
+2026-06-19,Pasta Alfredo,2,640,260
+2026-06-19,Chocolate Brownie,5,750,275
+2026-06-19,Cheesecake,3,660,270
+2026-06-20,Cappuccino,15,2250,675
+2026-06-20,Cafe Latte,11,1760,528
+2026-06-20,Espresso,9,1080,270
+2026-06-20,Cold Coffee,13,2340,715
+2026-06-20,Masala Chai,12,960,240
+2026-06-20,Veg Sandwich,8,1120,400
+2026-06-20,Grilled Cheese Sandwich,9,1530,585
+2026-06-20,French Fries,13,1560,520
+2026-06-20,Margherita Pizza,4,1120,440
+2026-06-20,Pasta Alfredo,3,960,390
+2026-06-20,Chocolate Brownie,6,900,330
+2026-06-20,Cheesecake,7,1540,630
+2026-06-21,Cappuccino,20,3000,900
+2026-06-21,Cafe Latte,13,2080,624
+2026-06-21,Espresso,9,1080,270
+2026-06-21,Cold Coffee,15,2700,825
+2026-06-21,Masala Chai,21,1680,420
+2026-06-21,Veg Sandwich,10,1400,500
+2026-06-21,Grilled Cheese Sandwich,10,1700,650
+2026-06-21,French Fries,12,1440,480
+2026-06-21,Margherita Pizza,4,1120,440
+2026-06-21,Pasta Alfredo,6,1920,780
+2026-06-21,Chocolate Brownie,7,1050,385
+2026-06-21,Cheesecake,7,1540,630
+2026-06-22,Cappuccino,9,1350,405
+2026-06-22,Cafe Latte,8,1280,384
+2026-06-22,Espresso,6,720,180
+2026-06-22,Cold Coffee,10,1800,550
+2026-06-22,Masala Chai,12,960,240
+2026-06-22,Veg Sandwich,8,1120,400
+2026-06-22,Grilled Cheese Sandwich,7,1190,455
+2026-06-22,French Fries,7,840,280
+2026-06-22,Margherita Pizza,5,1400,550
+2026-06-22,Pasta Alfredo,3,960,390
+2026-06-22,Chocolate Brownie,6,900,330
+2026-06-22,Cheesecake,6,1320,540
+2026-06-23,Cappuccino,9,1350,405
+2026-06-23,Cafe Latte,10,1600,480
+2026-06-23,Espresso,7,840,210
+2026-06-23,Cold Coffee,7,1260,385
+2026-06-23,Masala Chai,16,1280,320
+2026-06-23,Veg Sandwich,8,1120,400
+2026-06-23,Grilled Cheese Sandwich,5,850,325
+2026-06-23,French Fries,9,1080,360
+2026-06-23,Margherita Pizza,5,1400,550
+2026-06-23,Pasta Alfredo,3,960,390
+2026-06-23,Chocolate Brownie,4,600,220
+2026-06-23,Cheesecake,4,880,360
+2026-06-24,Cappuccino,15,2250,675
+2026-06-24,Cafe Latte,11,1760,528
+2026-06-24,Espresso,10,1200,300
+2026-06-24,Cold Coffee,10,1800,550
+2026-06-24,Masala Chai,11,880,220
+2026-06-24,Veg Sandwich,6,840,300
+2026-06-24,Grilled Cheese Sandwich,5,850,325
+2026-06-24,French Fries,10,1200,400
+2026-06-24,Margherita Pizza,6,1680,660
+2026-06-24,Pasta Alfredo,4,1280,520
+2026-06-24,Chocolate Brownie,7,1050,385
+2026-06-24,Cheesecake,4,880,360
+2026-06-25,Cappuccino,8,1200,360
+2026-06-25,Cafe Latte,10,1600,480
+2026-06-25,Espresso,9,1080,270
+2026-06-25,Cold Coffee,7,1260,385
+2026-06-25,Masala Chai,13,1040,260
+2026-06-25,Veg Sandwich,5,700,250
+2026-06-25,Grilled Cheese Sandwich,6,1020,390
+2026-06-25,French Fries,8,960,320
+2026-06-25,Margherita Pizza,5,1400,550
+2026-06-25,Pasta Alfredo,4,1280,520
+2026-06-25,Chocolate Brownie,6,900,330
+2026-06-25,Cheesecake,3,660,270
+2026-06-26,Cappuccino,10,1500,450
+2026-06-26,Cafe Latte,13,2080,624
+2026-06-26,Espresso,10,1200,300
+2026-06-26,Cold Coffee,11,1980,605
+2026-06-26,Masala Chai,16,1280,320
+2026-06-26,Veg Sandwich,6,840,300
+2026-06-26,Grilled Cheese Sandwich,7,1190,455
+2026-06-26,French Fries,6,720,240
+2026-06-26,Margherita Pizza,6,1680,660
+2026-06-26,Pasta Alfredo,4,1280,520
+2026-06-26,Chocolate Brownie,5,750,275
+2026-06-26,Cheesecake,5,1100,450
+2026-06-27,Cappuccino,13,1950,585
+2026-06-27,Cafe Latte,15,2400,720
+2026-06-27,Espresso,8,960,240
+2026-06-27,Cold Coffee,8,1440,440
+2026-06-27,Masala Chai,14,1120,280
+2026-06-27,Veg Sandwich,8,1120,400
+2026-06-27,Grilled Cheese Sandwich,9,1530,585
+2026-06-27,French Fries,13,1560,520
+2026-06-27,Margherita Pizza,5,1400,550
+2026-06-27,Pasta Alfredo,5,1600,650
+2026-06-27,Chocolate Brownie,7,1050,385
+2026-06-27,Cheesecake,7,1540,630
+2026-06-28,Cappuccino,19,2850,855
+2026-06-28,Cafe Latte,10,1600,480
+2026-06-28,Espresso,13,1560,390
+2026-06-28,Cold Coffee,10,1800,550
+2026-06-28,Masala Chai,23,1840,460
+2026-06-28,Veg Sandwich,8,1120,400
+2026-06-28,Grilled Cheese Sandwich,6,1020,390
+2026-06-28,French Fries,10,1200,400
+2026-06-28,Margherita Pizza,7,1960,770
+2026-06-28,Pasta Alfredo,4,1280,520
+2026-06-28,Chocolate Brownie,8,1200,440
+2026-06-28,Cheesecake,6,1320,540
+2026-06-29,Cappuccino,11,1650,495
+2026-06-29,Cafe Latte,8,1280,384
+2026-06-29,Espresso,8,960,240
+2026-06-29,Cold Coffee,6,1080,330
+2026-06-29,Masala Chai,16,1280,320
+2026-06-29,Veg Sandwich,6,840,300
+2026-06-29,Grilled Cheese Sandwich,6,1020,390
+2026-06-29,French Fries,8,960,320
+2026-06-29,Margherita Pizza,5,1400,550
+2026-06-29,Pasta Alfredo,3,960,390
+2026-06-29,Chocolate Brownie,4,600,220
+2026-06-29,Cheesecake,5,1100,450
+2026-06-30,Cappuccino,9,1350,405
+2026-06-30,Cafe Latte,11,1760,528
+2026-06-30,Espresso,8,960,240
+2026-06-30,Cold Coffee,7,1260,385
+2026-06-30,Masala Chai,11,880,220
+2026-06-30,Veg Sandwich,6,840,300
+2026-06-30,Grilled Cheese Sandwich,5,850,325
+2026-06-30,French Fries,6,720,240
+2026-06-30,Margherita Pizza,3,840,330
+2026-06-30,Pasta Alfredo,3,960,390
+2026-06-30,Chocolate Brownie,7,1050,385
+2026-06-30,Cheesecake,5,1100,450
+2026-07-01,Cappuccino,13,1950,585
+2026-07-01,Cafe Latte,10,1600,480
+2026-07-01,Espresso,9,1080,270
+2026-07-01,Cold Coffee,7,1260,385
+2026-07-01,Masala Chai,13,1040,260
+2026-07-01,Veg Sandwich,7,980,350
+2026-07-01,Grilled Cheese Sandwich,6,1020,390
+2026-07-01,French Fries,9,1080,360
+2026-07-01,Margherita Pizza,5,1400,550
+2026-07-01,Pasta Alfredo,4,1280,520
+2026-07-01,Chocolate Brownie,5,750,275
+2026-07-01,Cheesecake,5,1100,450
+2026-07-02,Cappuccino,14,2100,630
+2026-07-02,Cafe Latte,9,1440,432
+2026-07-02,Espresso,6,720,180
+2026-07-02,Cold Coffee,10,1800,550
+2026-07-02,Masala Chai,16,1280,320
+2026-07-02,Veg Sandwich,7,980,350
+2026-07-02,Grilled Cheese Sandwich,7,1190,455
+2026-07-02,French Fries,10,1200,400
+2026-07-02,Margherita Pizza,5,1400,550
+2026-07-02,Pasta Alfredo,3,960,390
+2026-07-02,Chocolate Brownie,5,750,275
+2026-07-02,Cheesecake,4,880,360
+2026-07-03,Cappuccino,10,1500,450
+2026-07-03,Cafe Latte,11,1760,528
+2026-07-03,Espresso,5,600,150
+2026-07-03,Cold Coffee,8,1440,440
+2026-07-03,Masala Chai,13,1040,260
+2026-07-03,Veg Sandwich,5,700,250
+2026-07-03,Grilled Cheese Sandwich,6,1020,390
+2026-07-03,French Fries,7,840,280
+2026-07-03,Margherita Pizza,3,840,330
+2026-07-03,Pasta Alfredo,3,960,390
+2026-07-03,Chocolate Brownie,4,600,220
+2026-07-03,Cheesecake,5,1100,450
+2026-07-04,Cappuccino,12,1800,540
+2026-07-04,Cafe Latte,14,2240,672
+2026-07-04,Espresso,9,1080,270
+2026-07-04,Cold Coffee,16,2880,880
+2026-07-04,Masala Chai,19,1520,380
+2026-07-04,Veg Sandwich,7,980,350
+2026-07-04,Grilled Cheese Sandwich,7,1190,455
+2026-07-04,French Fries,14,1680,560
+2026-07-04,Margherita Pizza,6,1680,660
+2026-07-04,Pasta Alfredo,6,1920,780
+2026-07-04,Chocolate Brownie,9,1350,495
+2026-07-04,Cheesecake,8,1760,720
+2026-07-05,Cappuccino,19,2850,855
+2026-07-05,Cafe Latte,17,2720,816
+2026-07-05,Espresso,11,1320,330
+2026-07-05,Cold Coffee,14,2520,770
+2026-07-05,Masala Chai,18,1440,360
+2026-07-05,Veg Sandwich,11,1540,550
+2026-07-05,Grilled Cheese Sandwich,8,1360,520
+2026-07-05,French Fries,13,1560,520
+2026-07-05,Margherita Pizza,7,1960,770
+2026-07-05,Pasta Alfredo,5,1600,650
+2026-07-05,Chocolate Brownie,7,1050,385
+2026-07-05,Cheesecake,5,1100,450
+2026-07-06,Cappuccino,13,1950,585
+2026-07-06,Cafe Latte,10,1600,480
+2026-07-06,Espresso,9,1080,270
+2026-07-06,Cold Coffee,8,1440,440
+2026-07-06,Masala Chai,10,800,200
+2026-07-06,Veg Sandwich,6,840,300
+2026-07-06,Grilled Cheese Sandwich,5,850,325
+2026-07-06,French Fries,7,840,280
+2026-07-06,Margherita Pizza,5,1400,550
+2026-07-06,Pasta Alfredo,3,960,390
+2026-07-06,Chocolate Brownie,5,750,275
+2026-07-06,Cheesecake,5,1100,450
+2026-07-07,Cappuccino,9,1350,405
+2026-07-07,Cafe Latte,10,1600,480
+2026-07-07,Espresso,8,960,240
+2026-07-07,Cold Coffee,9,1620,495
+2026-07-07,Masala Chai,12,960,240
+2026-07-07,Veg Sandwich,7,980,350
+2026-07-07,Grilled Cheese Sandwich,7,1190,455
+2026-07-07,French Fries,9,1080,360
+2026-07-07,Margherita Pizza,5,1400,550
+2026-07-07,Pasta Alfredo,4,1280,520
+2026-07-07,Chocolate Brownie,7,1050,385
+2026-07-07,Cheesecake,4,880,360
+2026-07-08,Cappuccino,9,1350,405
+2026-07-08,Cafe Latte,10,1600,480
+2026-07-08,Espresso,8,960,240
+2026-07-08,Cold Coffee,10,1800,550
+2026-07-08,Masala Chai,11,880,220
+2026-07-08,Veg Sandwich,7,980,350
+2026-07-08,Grilled Cheese Sandwich,5,850,325
+2026-07-08,French Fries,7,840,280
+2026-07-08,Margherita Pizza,3,840,330
+2026-07-08,Pasta Alfredo,2,640,260
+2026-07-08,Chocolate Brownie,5,750,275
+2026-07-08,Cheesecake,3,660,270
+2026-07-09,Cappuccino,12,1800,540
+2026-07-09,Cafe Latte,9,1440,432
+2026-07-09,Espresso,6,720,180
+2026-07-09,Cold Coffee,8,1440,440
+2026-07-09,Masala Chai,10,800,200
+2026-07-09,Veg Sandwich,7,980,350
+2026-07-09,Grilled Cheese Sandwich,4,680,260
+2026-07-09,French Fries,7,840,280
+2026-07-09,Margherita Pizza,4,1120,440
+2026-07-09,Pasta Alfredo,2,640,260
+2026-07-09,Chocolate Brownie,6,900,330
+2026-07-09,Cheesecake,3,660,270
+2026-07-10,Cappuccino,8,1200,360
+2026-07-10,Cafe Latte,9,1440,432
+2026-07-10,Espresso,6,720,180
+2026-07-10,Cold Coffee,8,1440,440
+2026-07-10,Masala Chai,15,1200,300
+2026-07-10,Veg Sandwich,6,840,300
+2026-07-10,Grilled Cheese Sandwich,6,1020,390
+2026-07-10,French Fries,9,1080,360
+2026-07-10,Margherita Pizza,4,1120,440
+2026-07-10,Pasta Alfredo,2,640,260
+2026-07-10,Chocolate Brownie,4,600,220
+2026-07-10,Cheesecake,5,1100,450
+2026-07-11,Cappuccino,16,2400,720
+2026-07-11,Cafe Latte,17,2720,816
+2026-07-11,Espresso,14,1680,420
+2026-07-11,Cold Coffee,15,2700,825
+2026-07-11,Masala Chai,24,1920,480
+2026-07-11,Veg Sandwich,13,1820,650
+2026-07-11,Grilled Cheese Sandwich,7,1190,455
+2026-07-11,French Fries,9,1080,360
+2026-07-11,Margherita Pizza,6,1680,660
+2026-07-11,Pasta Alfredo,4,1280,520
+2026-07-11,Chocolate Brownie,10,1500,550
+2026-07-11,Cheesecake,7,1540,630
+2026-07-12,Cappuccino,16,2400,720
+2026-07-12,Cafe Latte,14,2240,672
+2026-07-12,Espresso,8,960,240
+2026-07-12,Cold Coffee,12,2160,660
+2026-07-12,Masala Chai,19,1520,380
+2026-07-12,Veg Sandwich,6,840,300
+2026-07-12,Grilled Cheese Sandwich,8,1360,520
+2026-07-12,French Fries,12,1440,480
+2026-07-12,Margherita Pizza,4,1120,440
+2026-07-12,Pasta Alfredo,3,960,390
+2026-07-12,Chocolate Brownie,6,900,330
+2026-07-12,Cheesecake,6,1320,540
+2026-07-13,Cappuccino,12,1800,540
+2026-07-13,Cafe Latte,13,2080,624
+2026-07-13,Espresso,7,840,210
+2026-07-13,Cold Coffee,11,1980,605
+2026-07-13,Masala Chai,17,1360,340
+2026-07-13,Veg Sandwich,6,840,300
+2026-07-13,Grilled Cheese Sandwich,7,1190,455
+2026-07-13,French Fries,11,1320,440
+2026-07-13,Margherita Pizza,5,1400,550
+2026-07-13,Pasta Alfredo,3,960,390
+2026-07-13,Chocolate Brownie,8,1200,440
+2026-07-13,Cheesecake,6,1320,540
+2026-07-14,Cappuccino,10,1500,450
+2026-07-14,Cafe Latte,9,1440,432
+2026-07-14,Espresso,8,960,240
+2026-07-14,Cold Coffee,8,1440,440
+2026-07-14,Masala Chai,16,1280,320
+2026-07-14,Veg Sandwich,8,1120,400
+2026-07-14,Grilled Cheese Sandwich,4,680,260
+2026-07-14,French Fries,10,1200,400
+2026-07-14,Margherita Pizza,5,1400,550
+2026-07-14,Pasta Alfredo,4,1280,520
+2026-07-14,Chocolate Brownie,6,900,330
+2026-07-14,Cheesecake,4,880,360
+2026-07-15,Cappuccino,15,2250,675
+2026-07-15,Cafe Latte,9,1440,432
+2026-07-15,Espresso,10,1200,300
+2026-07-15,Cold Coffee,10,1800,550
+2026-07-15,Masala Chai,14,1120,280
+2026-07-15,Veg Sandwich,7,980,350
+2026-07-15,Grilled Cheese Sandwich,7,1190,455
+2026-07-15,French Fries,7,840,280
+2026-07-15,Margherita Pizza,6,1680,660
+2026-07-15,Pasta Alfredo,4,1280,520
+2026-07-15,Chocolate Brownie,5,750,275
+2026-07-15,Cheesecake,6,1320,540
+2026-07-16,Cappuccino,10,1500,450
+2026-07-16,Cafe Latte,10,1600,480
+2026-07-16,Espresso,7,840,210
+2026-07-16,Cold Coffee,6,1080,330
+2026-07-16,Masala Chai,15,1200,300
+2026-07-16,Veg Sandwich,5,700,250
+2026-07-16,Grilled Cheese Sandwich,4,680,260
+2026-07-16,French Fries,9,1080,360
+2026-07-16,Margherita Pizza,4,1120,440
+2026-07-16,Pasta Alfredo,4,1280,520
+2026-07-16,Chocolate Brownie,6,900,330
+2026-07-16,Cheesecake,4,880,360
+2026-07-17,Cappuccino,12,1800,540
+2026-07-17,Cafe Latte,7,1120,336
+2026-07-17,Espresso,8,960,240
+2026-07-17,Cold Coffee,8,1440,440
+2026-07-17,Masala Chai,13,1040,260
+2026-07-17,Veg Sandwich,6,840,300
+2026-07-17,Grilled Cheese Sandwich,5,850,325
+2026-07-17,French Fries,7,840,280
+2026-07-17,Margherita Pizza,5,1400,550
+2026-07-17,Pasta Alfredo,2,640,260
+2026-07-17,Chocolate Brownie,4,600,220
+2026-07-17,Cheesecake,4,880,360
+2026-07-18,Cappuccino,15,2250,675
+2026-07-18,Cafe Latte,13,2080,624
+2026-07-18,Espresso,10,1200,300
+2026-07-18,Cold Coffee,11,1980,605
+2026-07-18,Masala Chai,20,1600,400
+2026-07-18,Veg Sandwich,8,1120,400
+2026-07-18,Grilled Cheese Sandwich,8,1360,520
+2026-07-18,French Fries,9,1080,360
+2026-07-18,Margherita Pizza,5,1400,550
+2026-07-18,Pasta Alfredo,3,960,390
+2026-07-18,Chocolate Brownie,6,900,330
+2026-07-18,Cheesecake,4,880,360
+2026-07-19,Cappuccino,18,2700,810
+2026-07-19,Cafe Latte,11,1760,528
+2026-07-19,Espresso,9,1080,270
+2026-07-19,Cold Coffee,12,2160,660
+2026-07-19,Masala Chai,21,1680,420
+2026-07-19,Veg Sandwich,12,1680,600
+2026-07-19,Grilled Cheese Sandwich,8,1360,520
+2026-07-19,French Fries,10,1200,400
+2026-07-19,Margherita Pizza,5,1400,550
+2026-07-19,Pasta Alfredo,4,1280,520
+2026-07-19,Chocolate Brownie,7,1050,385
+2026-07-19,Cheesecake,5,1100,450
+2026-07-20,Cappuccino,10,1500,450
+2026-07-20,Cafe Latte,8,1280,384
+2026-07-20,Espresso,9,1080,270
+2026-07-20,Cold Coffee,8,1440,440
+2026-07-20,Masala Chai,13,1040,260
+2026-07-20,Veg Sandwich,5,700,250
+2026-07-20,Grilled Cheese Sandwich,6,1020,390
+2026-07-20,French Fries,7,840,280
+2026-07-20,Margherita Pizza,5,1400,550
+2026-07-20,Pasta Alfredo,3,960,390
+2026-07-20,Chocolate Brownie,5,750,275
+2026-07-20,Cheesecake,4,880,360
+2026-07-21,Cappuccino,8,1200,360
+2026-07-21,Cafe Latte,12,1920,576
+2026-07-21,Espresso,7,840,210
+2026-07-21,Cold Coffee,10,1800,550
+2026-07-21,Masala Chai,12,960,240
+2026-07-21,Veg Sandwich,5,700,250
+2026-07-21,Grilled Cheese Sandwich,6,1020,390
+2026-07-21,French Fries,5,600,200
+2026-07-21,Margherita Pizza,3,840,330
+2026-07-21,Pasta Alfredo,3,960,390
+2026-07-21,Chocolate Brownie,5,750,275
+2026-07-21,Cheesecake,5,1100,450
+2026-07-22,Cappuccino,12,1800,540
+2026-07-22,Cafe Latte,10,1600,480
+2026-07-22,Espresso,8,960,240
+2026-07-22,Cold Coffee,7,1260,385
+2026-07-22,Masala Chai,12,960,240
+2026-07-22,Veg Sandwich,6,840,300
+2026-07-22,Grilled Cheese Sandwich,5,850,325
+2026-07-22,French Fries,9,1080,360
+2026-07-22,Margherita Pizza,5,1400,550
+2026-07-22,Pasta Alfredo,3,960,390
+2026-07-22,Chocolate Brownie,5,750,275
+2026-07-22,Cheesecake,4,880,360
+2026-07-23,Cappuccino,16,2400,720
+2026-07-23,Cafe Latte,9,1440,432
+2026-07-23,Espresso,7,840,210
+2026-07-23,Cold Coffee,11,1980,605
+2026-07-23,Masala Chai,12,960,240
+2026-07-23,Veg Sandwich,6,840,300
+2026-07-23,Grilled Cheese Sandwich,5,850,325
+2026-07-23,French Fries,6,720,240
+2026-07-23,Margherita Pizza,5,1400,550
+2026-07-23,Pasta Alfredo,4,1280,520
+2026-07-23,Chocolate Brownie,5,750,275
+2026-07-23,Cheesecake,4,880,360
+2026-07-24,Cappuccino,14,2100,630
+2026-07-24,Cafe Latte,11,1760,528
+2026-07-24,Espresso,10,1200,300
+2026-07-24,Cold Coffee,12,2160,660
+2026-07-24,Masala Chai,17,1360,340
+2026-07-24,Veg Sandwich,8,1120,400
+2026-07-24,Grilled Cheese Sandwich,7,1190,455
+2026-07-24,French Fries,11,1320,440
+2026-07-24,Margherita Pizza,5,1400,550
+2026-07-24,Pasta Alfredo,4,1280,520
+2026-07-24,Chocolate Brownie,7,1050,385
+2026-07-24,Cheesecake,6,1320,540
+2026-07-25,Cappuccino,13,1950,585
+2026-07-25,Cafe Latte,12,1920,576
+2026-07-25,Espresso,11,1320,330
+2026-07-25,Cold Coffee,16,2880,880
+2026-07-25,Masala Chai,22,1760,440
+2026-07-25,Veg Sandwich,9,1260,450
+2026-07-25,Grilled Cheese Sandwich,7,1190,455
+2026-07-25,French Fries,13,1560,520
+2026-07-25,Margherita Pizza,8,2240,880
+2026-07-25,Pasta Alfredo,7,2240,910
+2026-07-25,Chocolate Brownie,9,1350,495
+2026-07-25,Cheesecake,7,1540,630
+2026-07-26,Cappuccino,10,1500,450
+2026-07-26,Cafe Latte,12,1920,576
+2026-07-26,Espresso,9,1080,270
+2026-07-26,Cold Coffee,9,1620,495
+2026-07-26,Masala Chai,12,960,240
+2026-07-26,Veg Sandwich,11,1540,550
+2026-07-26,Grilled Cheese Sandwich,8,1360,520
+2026-07-26,French Fries,10,1200,400
+2026-07-26,Margherita Pizza,7,1960,770
+2026-07-26,Pasta Alfredo,5,1600,650
+2026-07-26,Chocolate Brownie,8,1200,440
+2026-07-26,Cheesecake,5,1100,450
+2026-07-27,Cappuccino,12,1800,540
+2026-07-27,Cafe Latte,9,1440,432
+2026-07-27,Espresso,8,960,240
+2026-07-27,Cold Coffee,10,1800,550
+2026-07-27,Masala Chai,10,800,200
+2026-07-27,Veg Sandwich,6,840,300
+2026-07-27,Grilled Cheese Sandwich,5,850,325
+2026-07-27,French Fries,7,840,280
+2026-07-27,Margherita Pizza,3,840,330
+2026-07-27,Pasta Alfredo,3,960,390
+2026-07-27,Chocolate Brownie,5,750,275
+2026-07-27,Cheesecake,4,880,360
+2026-07-28,Cappuccino,12,1800,540
+2026-07-28,Cafe Latte,13,2080,624
+2026-07-28,Espresso,8,960,240
+2026-07-28,Cold Coffee,13,2340,715
+2026-07-28,Masala Chai,18,1440,360
+2026-07-28,Veg Sandwich,8,1120,400
+2026-07-28,Grilled Cheese Sandwich,6,1020,390
+2026-07-28,French Fries,8,960,320
+2026-07-28,Margherita Pizza,5,1400,550
+2026-07-28,Pasta Alfredo,5,1600,650
+2026-07-28,Chocolate Brownie,6,900,330
+2026-07-28,Cheesecake,5,1100,450
+2026-07-29,Cappuccino,15,2250,675
+2026-07-29,Cafe Latte,12,1920,576
+2026-07-29,Espresso,9,1080,270
+2026-07-29,Cold Coffee,9,1620,495
+2026-07-29,Masala Chai,15,1200,300
+2026-07-29,Veg Sandwich,9,1260,450
+2026-07-29,Grilled Cheese Sandwich,7,1190,455
+2026-07-29,French Fries,11,1320,440
+2026-07-29,Margherita Pizza,4,1120,440
+2026-07-29,Pasta Alfredo,4,1280,520
+2026-07-29,Chocolate Brownie,8,1200,440
+2026-07-29,Cheesecake,5,1100,450
+2026-07-30,Cappuccino,10,1500,450
+2026-07-30,Cafe Latte,14,2240,672
+2026-07-30,Espresso,9,1080,270
+2026-07-30,Cold Coffee,8,1440,440
+2026-07-30,Masala Chai,12,960,240
+2026-07-30,Veg Sandwich,8,1120,400
+2026-07-30,Grilled Cheese Sandwich,6,1020,390
+2026-07-30,French Fries,7,840,280
+2026-07-30,Margherita Pizza,6,1680,660
+2026-07-30,Pasta Alfredo,5,1600,650
+2026-07-30,Chocolate Brownie,6,900,330
+2026-07-30,Cheesecake,4,880,360

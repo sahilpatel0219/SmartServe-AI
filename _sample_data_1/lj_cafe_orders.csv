@@ -1,0 +1,782 @@
+order_date,order_id,item_name,quantity,amount,order_type,customer_name
+2026-06-01,ORD2001,Masala Chai,2,160,takeaway,
+2026-06-01,ORD2002,Cappuccino,3,450,dine_in,Guest
+2026-06-01,ORD2002,Masala Chai,1,80,dine_in,Guest
+2026-06-01,ORD2003,Chocolate Brownie,2,300,qr,Arjun Desai
+2026-06-01,ORD2003,French Fries,2,240,qr,Arjun Desai
+2026-06-01,ORD2003,Espresso,2,240,qr,Arjun Desai
+2026-06-01,ORD2004,French Fries,1,120,dine_in,Neha Kulkarni
+2026-06-01,ORD2004,Veg Sandwich,3,420,dine_in,Neha Kulkarni
+2026-06-01,ORD2005,Cappuccino,3,450,dine_in,
+2026-06-01,ORD2005,Veg Sandwich,2,280,dine_in,
+2026-06-01,ORD2006,Chocolate Brownie,1,150,delivery,Anjali Rao
+2026-06-01,ORD2006,Cheesecake,2,440,delivery,Anjali Rao
+2026-06-01,ORD2007,Cafe Latte,1,160,dine_in,Arjun Desai
+2026-06-01,ORD2007,French Fries,2,240,dine_in,Arjun Desai
+2026-06-02,ORD2008,Cafe Latte,2,320,dine_in,
+2026-06-02,ORD2009,Pasta Alfredo,3,960,qr,Sneha Iyer
+2026-06-02,ORD2009,Grilled Cheese Sandwich,1,170,qr,Sneha Iyer
+2026-06-02,ORD2010,Grilled Cheese Sandwich,2,340,qr,Rohit Gupta
+2026-06-02,ORD2010,Veg Sandwich,1,140,qr,Rohit Gupta
+2026-06-02,ORD2010,French Fries,2,240,qr,Rohit Gupta
+2026-06-02,ORD2011,Cheesecake,1,220,dine_in,Sneha Iyer
+2026-06-02,ORD2012,French Fries,1,120,takeaway,
+2026-06-02,ORD2013,Cappuccino,1,150,delivery,Sneha Iyer
+2026-06-02,ORD2014,Veg Sandwich,2,280,qr,Riya Shah
+2026-06-02,ORD2014,Cheesecake,1,220,qr,Riya Shah
+2026-06-03,ORD2015,Espresso,1,120,takeaway,
+2026-06-03,ORD2016,French Fries,2,240,takeaway,Guest
+2026-06-03,ORD2017,Masala Chai,1,80,dine_in,Sneha Iyer
+2026-06-03,ORD2017,Chocolate Brownie,2,300,dine_in,Sneha Iyer
+2026-06-03,ORD2018,French Fries,1,120,dine_in,
+2026-06-03,ORD2019,French Fries,1,120,takeaway,Anjali Rao
+2026-06-03,ORD2019,Masala Chai,2,160,takeaway,Anjali Rao
+2026-06-03,ORD2020,Cold Coffee,2,360,qr,Vikram Singh
+2026-06-04,ORD2021,Chocolate Brownie,2,300,takeaway,Sneha Iyer
+2026-06-04,ORD2022,Cheesecake,1,220,dine_in,Riya Shah
+2026-06-04,ORD2022,French Fries,2,240,dine_in,Riya Shah
+2026-06-04,ORD2022,Masala Chai,1,80,dine_in,Riya Shah
+2026-06-04,ORD2023,Chocolate Brownie,3,450,dine_in,Guest
+2026-06-04,ORD2023,Cheesecake,1,220,dine_in,Guest
+2026-06-04,ORD2024,Masala Chai,2,160,delivery,Aman Verma
+2026-06-04,ORD2025,Cafe Latte,1,160,dine_in,
+2026-06-04,ORD2026,Espresso,2,240,dine_in,
+2026-06-05,ORD2027,Masala Chai,2,160,dine_in,Sneha Iyer
+2026-06-05,ORD2028,Cafe Latte,1,160,qr,Sneha Iyer
+2026-06-05,ORD2028,French Fries,1,120,qr,Sneha Iyer
+2026-06-05,ORD2029,Margherita Pizza,1,280,qr,Karan Mehta
+2026-06-05,ORD2029,Veg Sandwich,2,280,qr,Karan Mehta
+2026-06-05,ORD2030,Veg Sandwich,3,420,dine_in,Aman Verma
+2026-06-05,ORD2030,Chocolate Brownie,3,450,dine_in,Aman Verma
+2026-06-05,ORD2031,Cafe Latte,1,160,dine_in,
+2026-06-05,ORD2031,Chocolate Brownie,2,300,dine_in,
+2026-06-05,ORD2032,Pasta Alfredo,3,960,dine_in,Guest
+2026-06-05,ORD2032,Cold Coffee,1,180,dine_in,Guest
+2026-06-05,ORD2033,Chocolate Brownie,1,150,delivery,Vikram Singh
+2026-06-05,ORD2033,Grilled Cheese Sandwich,1,170,delivery,Vikram Singh
+2026-06-06,ORD2034,Cafe Latte,1,160,dine_in,Vikram Singh
+2026-06-06,ORD2035,Chocolate Brownie,2,300,takeaway,Vikram Singh
+2026-06-06,ORD2035,Margherita Pizza,2,560,takeaway,Vikram Singh
+2026-06-06,ORD2036,Chocolate Brownie,2,300,delivery,Priya Nair
+2026-06-06,ORD2036,Cafe Latte,2,320,delivery,Priya Nair
+2026-06-06,ORD2037,Cheesecake,1,220,takeaway,Walk-in
+2026-06-06,ORD2038,Cafe Latte,1,160,dine_in,Karan Mehta
+2026-06-06,ORD2038,Chocolate Brownie,2,300,dine_in,Karan Mehta
+2026-06-06,ORD2039,Grilled Cheese Sandwich,1,170,delivery,Rohit Gupta
+2026-06-06,ORD2040,Chocolate Brownie,1,150,dine_in,
+2026-06-07,ORD2041,Cold Coffee,2,360,takeaway,
+2026-06-07,ORD2041,Espresso,1,120,takeaway,
+2026-06-07,ORD2042,Pasta Alfredo,1,320,dine_in,Guest
+2026-06-07,ORD2043,Espresso,1,120,qr,Karan Mehta
+2026-06-07,ORD2043,Pasta Alfredo,1,320,qr,Karan Mehta
+2026-06-07,ORD2044,Margherita Pizza,1,280,qr,Priya Nair
+2026-06-07,ORD2045,Chocolate Brownie,1,150,qr,Priya Nair
+2026-06-07,ORD2046,Veg Sandwich,1,140,dine_in,Karan Mehta
+2026-06-07,ORD2046,Cappuccino,1,150,dine_in,Karan Mehta
+2026-06-07,ORD2046,Espresso,1,120,dine_in,Karan Mehta
+2026-06-07,ORD2047,Cafe Latte,2,320,delivery,Anjali Rao
+2026-06-07,ORD2047,Cheesecake,1,220,delivery,Anjali Rao
+2026-06-07,ORD2047,French Fries,2,240,delivery,Anjali Rao
+2026-06-07,ORD2048,Pasta Alfredo,1,320,takeaway,Neha Kulkarni
+2026-06-07,ORD2049,French Fries,1,120,delivery,Neha Kulkarni
+2026-06-07,ORD2049,Chocolate Brownie,1,150,delivery,Neha Kulkarni
+2026-06-08,ORD2050,Chocolate Brownie,2,300,qr,Anjali Rao
+2026-06-08,ORD2050,Cafe Latte,3,480,qr,Anjali Rao
+2026-06-08,ORD2051,Pasta Alfredo,1,320,takeaway,Aman Verma
+2026-06-08,ORD2051,Espresso,1,120,takeaway,Aman Verma
+2026-06-08,ORD2052,Cheesecake,2,440,dine_in,Guest
+2026-06-08,ORD2052,Veg Sandwich,2,280,dine_in,Guest
+2026-06-08,ORD2052,Grilled Cheese Sandwich,1,170,dine_in,Guest
+2026-06-08,ORD2053,Cheesecake,1,220,takeaway,Anjali Rao
+2026-06-08,ORD2054,Grilled Cheese Sandwich,2,340,qr,Neha Kulkarni
+2026-06-08,ORD2055,Grilled Cheese Sandwich,1,170,dine_in,Vikram Singh
+2026-06-08,ORD2055,Cafe Latte,2,320,dine_in,Vikram Singh
+2026-06-08,ORD2056,Chocolate Brownie,2,300,dine_in,Walk-in
+2026-06-09,ORD2057,Grilled Cheese Sandwich,1,170,qr,Aman Verma
+2026-06-09,ORD2058,Margherita Pizza,1,280,delivery,Rohit Gupta
+2026-06-09,ORD2059,Chocolate Brownie,2,300,takeaway,Guest
+2026-06-09,ORD2059,Cafe Latte,1,160,takeaway,Guest
+2026-06-09,ORD2060,Masala Chai,2,160,qr,Anjali Rao
+2026-06-09,ORD2061,Cold Coffee,1,180,dine_in,Arjun Desai
+2026-06-09,ORD2061,Espresso,1,120,dine_in,Arjun Desai
+2026-06-09,ORD2061,French Fries,1,120,dine_in,Arjun Desai
+2026-06-10,ORD2062,Cold Coffee,2,360,dine_in,Sneha Iyer
+2026-06-10,ORD2062,Grilled Cheese Sandwich,2,340,dine_in,Sneha Iyer
+2026-06-10,ORD2062,Margherita Pizza,3,840,dine_in,Sneha Iyer
+2026-06-10,ORD2063,Pasta Alfredo,3,960,delivery,Neha Kulkarni
+2026-06-10,ORD2064,Espresso,1,120,qr,Sneha Iyer
+2026-06-10,ORD2065,Veg Sandwich,1,140,delivery,Sneha Iyer
+2026-06-10,ORD2065,Cappuccino,1,150,delivery,Sneha Iyer
+2026-06-10,ORD2066,Cheesecake,3,660,takeaway,
+2026-06-10,ORD2067,Grilled Cheese Sandwich,2,340,dine_in,Neha Kulkarni
+2026-06-10,ORD2068,Cheesecake,2,440,takeaway,Rohit Gupta
+2026-06-10,ORD2068,Veg Sandwich,2,280,takeaway,Rohit Gupta
+2026-06-11,ORD2069,Chocolate Brownie,1,150,dine_in,Arjun Desai
+2026-06-11,ORD2070,Pasta Alfredo,2,640,dine_in,Anjali Rao
+2026-06-11,ORD2070,French Fries,1,120,dine_in,Anjali Rao
+2026-06-11,ORD2071,Grilled Cheese Sandwich,1,170,dine_in,
+2026-06-11,ORD2071,Cafe Latte,3,480,dine_in,
+2026-06-11,ORD2072,Margherita Pizza,1,280,delivery,Arjun Desai
+2026-06-11,ORD2072,Chocolate Brownie,1,150,delivery,Arjun Desai
+2026-06-11,ORD2073,Cappuccino,1,150,dine_in,Arjun Desai
+2026-06-12,ORD2074,Veg Sandwich,1,140,dine_in,Walk-in
+2026-06-12,ORD2074,Cafe Latte,2,320,dine_in,Walk-in
+2026-06-12,ORD2075,Espresso,2,240,delivery,Anjali Rao
+2026-06-12,ORD2076,Chocolate Brownie,2,300,takeaway,Guest
+2026-06-12,ORD2076,Veg Sandwich,3,420,takeaway,Guest
+2026-06-12,ORD2076,Cafe Latte,1,160,takeaway,Guest
+2026-06-12,ORD2077,Pasta Alfredo,2,640,takeaway,Aman Verma
+2026-06-12,ORD2077,Grilled Cheese Sandwich,2,340,takeaway,Aman Verma
+2026-06-12,ORD2078,Cafe Latte,1,160,delivery,Anjali Rao
+2026-06-12,ORD2078,Grilled Cheese Sandwich,1,170,delivery,Anjali Rao
+2026-06-12,ORD2079,Cheesecake,1,220,dine_in,Guest
+2026-06-12,ORD2079,Veg Sandwich,2,280,dine_in,Guest
+2026-06-13,ORD2080,Cafe Latte,3,480,dine_in,Anjali Rao
+2026-06-13,ORD2080,Grilled Cheese Sandwich,1,170,dine_in,Anjali Rao
+2026-06-13,ORD2080,Masala Chai,1,80,dine_in,Anjali Rao
+2026-06-13,ORD2081,Chocolate Brownie,2,300,dine_in,
+2026-06-13,ORD2081,Cafe Latte,1,160,dine_in,
+2026-06-13,ORD2081,Margherita Pizza,1,280,dine_in,
+2026-06-13,ORD2082,Cold Coffee,1,180,dine_in,
+2026-06-13,ORD2083,Espresso,1,120,dine_in,Priya Nair
+2026-06-13,ORD2083,Chocolate Brownie,3,450,dine_in,Priya Nair
+2026-06-13,ORD2083,Cafe Latte,2,320,dine_in,Priya Nair
+2026-06-13,ORD2084,Chocolate Brownie,3,450,takeaway,Guest
+2026-06-13,ORD2084,Pasta Alfredo,3,960,takeaway,Guest
+2026-06-13,ORD2085,French Fries,1,120,takeaway,Rohit Gupta
+2026-06-13,ORD2086,Pasta Alfredo,1,320,takeaway,Sneha Iyer
+2026-06-13,ORD2086,Cappuccino,2,300,takeaway,Sneha Iyer
+2026-06-13,ORD2087,Cappuccino,1,150,dine_in,Vikram Singh
+2026-06-13,ORD2088,Chocolate Brownie,1,150,qr,Sneha Iyer
+2026-06-14,ORD2089,Cheesecake,2,440,takeaway,Arjun Desai
+2026-06-14,ORD2089,Cappuccino,3,450,takeaway,Arjun Desai
+2026-06-14,ORD2089,French Fries,1,120,takeaway,Arjun Desai
+2026-06-14,ORD2090,Cappuccino,2,300,dine_in,Guest
+2026-06-14,ORD2091,Margherita Pizza,3,840,dine_in,Walk-in
+2026-06-14,ORD2092,Margherita Pizza,2,560,dine_in,Vikram Singh
+2026-06-14,ORD2092,Cheesecake,1,220,dine_in,Vikram Singh
+2026-06-14,ORD2093,Grilled Cheese Sandwich,3,510,dine_in,Sneha Iyer
+2026-06-14,ORD2093,Veg Sandwich,2,280,dine_in,Sneha Iyer
+2026-06-14,ORD2094,Cafe Latte,1,160,dine_in,
+2026-06-14,ORD2094,Veg Sandwich,2,280,dine_in,
+2026-06-14,ORD2095,Masala Chai,2,160,delivery,Anjali Rao
+2026-06-14,ORD2095,Chocolate Brownie,1,150,delivery,Anjali Rao
+2026-06-14,ORD2096,Masala Chai,3,240,dine_in,Priya Nair
+2026-06-14,ORD2096,Chocolate Brownie,3,450,dine_in,Priya Nair
+2026-06-14,ORD2097,Margherita Pizza,3,840,takeaway,Aman Verma
+2026-06-14,ORD2097,Grilled Cheese Sandwich,1,170,takeaway,Aman Verma
+2026-06-15,ORD2098,Chocolate Brownie,3,450,delivery,Neha Kulkarni
+2026-06-15,ORD2099,Masala Chai,1,80,takeaway,Riya Shah
+2026-06-15,ORD2099,Espresso,1,120,takeaway,Riya Shah
+2026-06-15,ORD2100,Cold Coffee,1,180,qr,Vikram Singh
+2026-06-15,ORD2101,Margherita Pizza,3,840,dine_in,Aman Verma
+2026-06-15,ORD2101,Cheesecake,1,220,dine_in,Aman Verma
+2026-06-15,ORD2101,Cappuccino,2,300,dine_in,Aman Verma
+2026-06-15,ORD2102,Espresso,3,360,dine_in,
+2026-06-15,ORD2103,Cheesecake,2,440,qr,Arjun Desai
+2026-06-15,ORD2104,Pasta Alfredo,3,960,dine_in,Karan Mehta
+2026-06-15,ORD2104,Masala Chai,2,160,dine_in,Karan Mehta
+2026-06-16,ORD2105,Veg Sandwich,3,420,dine_in,Vikram Singh
+2026-06-16,ORD2106,Grilled Cheese Sandwich,2,340,takeaway,
+2026-06-16,ORD2106,Margherita Pizza,2,560,takeaway,
+2026-06-16,ORD2107,Masala Chai,1,80,dine_in,Guest
+2026-06-16,ORD2108,Margherita Pizza,3,840,delivery,Vikram Singh
+2026-06-16,ORD2108,Cafe Latte,2,320,delivery,Vikram Singh
+2026-06-16,ORD2109,Cafe Latte,1,160,qr,Aman Verma
+2026-06-16,ORD2109,Espresso,2,240,qr,Aman Verma
+2026-06-16,ORD2110,Cold Coffee,2,360,takeaway,Anjali Rao
+2026-06-17,ORD2111,Veg Sandwich,1,140,dine_in,Anjali Rao
+2026-06-17,ORD2111,Cold Coffee,1,180,dine_in,Anjali Rao
+2026-06-17,ORD2111,Grilled Cheese Sandwich,1,170,dine_in,Anjali Rao
+2026-06-17,ORD2112,Espresso,1,120,dine_in,Aman Verma
+2026-06-17,ORD2112,Cheesecake,1,220,dine_in,Aman Verma
+2026-06-17,ORD2113,Cheesecake,2,440,qr,Vikram Singh
+2026-06-17,ORD2114,Masala Chai,1,80,takeaway,
+2026-06-17,ORD2115,Cheesecake,2,440,qr,Priya Nair
+2026-06-17,ORD2115,Pasta Alfredo,1,320,qr,Priya Nair
+2026-06-17,ORD2115,Margherita Pizza,1,280,qr,Priya Nair
+2026-06-17,ORD2116,Grilled Cheese Sandwich,3,510,dine_in,Riya Shah
+2026-06-17,ORD2117,Cafe Latte,2,320,qr,Arjun Desai
+2026-06-17,ORD2117,Cheesecake,2,440,qr,Arjun Desai
+2026-06-18,ORD2118,Cold Coffee,2,360,delivery,Neha Kulkarni
+2026-06-18,ORD2118,Espresso,1,120,delivery,Neha Kulkarni
+2026-06-18,ORD2118,Masala Chai,2,160,delivery,Neha Kulkarni
+2026-06-18,ORD2119,Chocolate Brownie,3,450,dine_in,Anjali Rao
+2026-06-18,ORD2120,Margherita Pizza,2,560,dine_in,Rohit Gupta
+2026-06-18,ORD2121,Cappuccino,1,150,takeaway,Guest
+2026-06-18,ORD2121,Grilled Cheese Sandwich,3,510,takeaway,Guest
+2026-06-18,ORD2121,French Fries,2,240,takeaway,Guest
+2026-06-18,ORD2122,Cafe Latte,1,160,dine_in,Riya Shah
+2026-06-18,ORD2122,Veg Sandwich,3,420,dine_in,Riya Shah
+2026-06-18,ORD2123,Cheesecake,1,220,delivery,Aman Verma
+2026-06-18,ORD2123,Veg Sandwich,1,140,delivery,Aman Verma
+2026-06-18,ORD2123,Espresso,2,240,delivery,Aman Verma
+2026-06-19,ORD2124,Cheesecake,3,660,delivery,Priya Nair
+2026-06-19,ORD2124,French Fries,1,120,delivery,Priya Nair
+2026-06-19,ORD2125,Cheesecake,2,440,qr,Priya Nair
+2026-06-19,ORD2126,Cappuccino,1,150,dine_in,Riya Shah
+2026-06-19,ORD2127,Masala Chai,3,240,dine_in,Neha Kulkarni
+2026-06-19,ORD2127,Cappuccino,1,150,dine_in,Neha Kulkarni
+2026-06-19,ORD2128,Masala Chai,1,80,dine_in,Riya Shah
+2026-06-19,ORD2128,Cafe Latte,2,320,dine_in,Riya Shah
+2026-06-19,ORD2129,Espresso,3,360,takeaway,
+2026-06-19,ORD2129,French Fries,2,240,takeaway,
+2026-06-20,ORD2130,Cafe Latte,1,160,qr,Neha Kulkarni
+2026-06-20,ORD2130,Grilled Cheese Sandwich,2,340,qr,Neha Kulkarni
+2026-06-20,ORD2131,Masala Chai,1,80,takeaway,
+2026-06-20,ORD2131,Veg Sandwich,1,140,takeaway,
+2026-06-20,ORD2131,Cafe Latte,3,480,takeaway,
+2026-06-20,ORD2132,Espresso,1,120,dine_in,Arjun Desai
+2026-06-20,ORD2132,French Fries,2,240,dine_in,Arjun Desai
+2026-06-20,ORD2133,Grilled Cheese Sandwich,1,170,dine_in,Walk-in
+2026-06-20,ORD2133,Masala Chai,3,240,dine_in,Walk-in
+2026-06-20,ORD2133,Cappuccino,3,450,dine_in,Walk-in
+2026-06-20,ORD2134,Espresso,2,240,takeaway,Priya Nair
+2026-06-20,ORD2135,Espresso,1,120,delivery,Vikram Singh
+2026-06-20,ORD2136,Grilled Cheese Sandwich,1,170,dine_in,Walk-in
+2026-06-20,ORD2136,Pasta Alfredo,2,640,dine_in,Walk-in
+2026-06-20,ORD2137,French Fries,2,240,dine_in,Walk-in
+2026-06-20,ORD2137,Cafe Latte,1,160,dine_in,Walk-in
+2026-06-21,ORD2138,Cafe Latte,1,160,takeaway,Sneha Iyer
+2026-06-21,ORD2139,Margherita Pizza,2,560,delivery,Priya Nair
+2026-06-21,ORD2139,Grilled Cheese Sandwich,1,170,delivery,Priya Nair
+2026-06-21,ORD2140,Cold Coffee,1,180,dine_in,
+2026-06-21,ORD2140,Pasta Alfredo,3,960,dine_in,
+2026-06-21,ORD2141,French Fries,1,120,takeaway,Priya Nair
+2026-06-21,ORD2142,Chocolate Brownie,1,150,delivery,Vikram Singh
+2026-06-21,ORD2143,Margherita Pizza,2,560,delivery,Rohit Gupta
+2026-06-21,ORD2144,Veg Sandwich,2,280,dine_in,
+2026-06-21,ORD2145,Cold Coffee,2,360,dine_in,Karan Mehta
+2026-06-21,ORD2146,French Fries,1,120,dine_in,Arjun Desai
+2026-06-21,ORD2146,Margherita Pizza,2,560,dine_in,Arjun Desai
+2026-06-22,ORD2147,Grilled Cheese Sandwich,1,170,dine_in,Vikram Singh
+2026-06-22,ORD2147,Cheesecake,1,220,dine_in,Vikram Singh
+2026-06-22,ORD2147,Pasta Alfredo,1,320,dine_in,Vikram Singh
+2026-06-22,ORD2148,French Fries,2,240,delivery,Aman Verma
+2026-06-22,ORD2148,Chocolate Brownie,1,150,delivery,Aman Verma
+2026-06-22,ORD2149,Espresso,2,240,dine_in,Guest
+2026-06-22,ORD2149,Cheesecake,1,220,dine_in,Guest
+2026-06-22,ORD2149,Grilled Cheese Sandwich,1,170,dine_in,Guest
+2026-06-22,ORD2150,Veg Sandwich,3,420,takeaway,Priya Nair
+2026-06-22,ORD2151,Cafe Latte,1,160,dine_in,Neha Kulkarni
+2026-06-22,ORD2151,Masala Chai,3,240,dine_in,Neha Kulkarni
+2026-06-22,ORD2152,Margherita Pizza,3,840,takeaway,Sneha Iyer
+2026-06-22,ORD2152,Cafe Latte,1,160,takeaway,Sneha Iyer
+2026-06-22,ORD2152,Cheesecake,2,440,takeaway,Sneha Iyer
+2026-06-22,ORD2153,Veg Sandwich,1,140,takeaway,Arjun Desai
+2026-06-22,ORD2153,Pasta Alfredo,1,320,takeaway,Arjun Desai
+2026-06-22,ORD2153,Cappuccino,1,150,takeaway,Arjun Desai
+2026-06-23,ORD2154,Chocolate Brownie,2,300,qr,Arjun Desai
+2026-06-23,ORD2154,Cold Coffee,2,360,qr,Arjun Desai
+2026-06-23,ORD2155,Masala Chai,2,160,takeaway,
+2026-06-23,ORD2155,Chocolate Brownie,1,150,takeaway,
+2026-06-23,ORD2155,Cheesecake,3,660,takeaway,
+2026-06-23,ORD2156,Espresso,2,240,takeaway,Aman Verma
+2026-06-23,ORD2157,Pasta Alfredo,1,320,takeaway,Karan Mehta
+2026-06-23,ORD2157,Espresso,3,360,takeaway,Karan Mehta
+2026-06-23,ORD2158,Espresso,2,240,dine_in,Walk-in
+2026-06-23,ORD2158,Veg Sandwich,2,280,dine_in,Walk-in
+2026-06-23,ORD2159,Masala Chai,2,160,dine_in,Vikram Singh
+2026-06-23,ORD2160,Grilled Cheese Sandwich,2,340,dine_in,Riya Shah
+2026-06-23,ORD2160,Pasta Alfredo,1,320,dine_in,Riya Shah
+2026-06-24,ORD2161,Cold Coffee,2,360,dine_in,Guest
+2026-06-24,ORD2161,Espresso,2,240,dine_in,Guest
+2026-06-24,ORD2162,Cappuccino,2,300,takeaway,Sneha Iyer
+2026-06-24,ORD2162,Cafe Latte,2,320,takeaway,Sneha Iyer
+2026-06-24,ORD2163,Veg Sandwich,1,140,takeaway,
+2026-06-24,ORD2163,Cappuccino,2,300,takeaway,
+2026-06-24,ORD2163,Chocolate Brownie,2,300,takeaway,
+2026-06-24,ORD2164,Margherita Pizza,1,280,qr,Vikram Singh
+2026-06-24,ORD2164,Cappuccino,2,300,qr,Vikram Singh
+2026-06-24,ORD2165,Grilled Cheese Sandwich,1,170,dine_in,
+2026-06-24,ORD2165,Veg Sandwich,2,280,dine_in,
+2026-06-24,ORD2166,Margherita Pizza,1,280,dine_in,
+2026-06-24,ORD2166,Masala Chai,2,160,dine_in,
+2026-06-24,ORD2167,Pasta Alfredo,2,640,takeaway,Neha Kulkarni
+2026-06-24,ORD2167,Chocolate Brownie,1,150,takeaway,Neha Kulkarni
+2026-06-25,ORD2168,Veg Sandwich,2,280,dine_in,Rohit Gupta
+2026-06-25,ORD2168,Espresso,2,240,dine_in,Rohit Gupta
+2026-06-25,ORD2168,Cold Coffee,2,360,dine_in,Rohit Gupta
+2026-06-25,ORD2169,Cheesecake,1,220,takeaway,Riya Shah
+2026-06-25,ORD2170,French Fries,2,240,qr,Vikram Singh
+2026-06-25,ORD2170,Espresso,1,120,qr,Vikram Singh
+2026-06-25,ORD2170,Pasta Alfredo,1,320,qr,Vikram Singh
+2026-06-25,ORD2171,Cheesecake,1,220,takeaway,Anjali Rao
+2026-06-25,ORD2171,Masala Chai,2,160,takeaway,Anjali Rao
+2026-06-25,ORD2171,Pasta Alfredo,2,640,takeaway,Anjali Rao
+2026-06-25,ORD2172,French Fries,1,120,takeaway,Arjun Desai
+2026-06-25,ORD2172,Cappuccino,1,150,takeaway,Arjun Desai
+2026-06-25,ORD2173,Pasta Alfredo,3,960,delivery,Aman Verma
+2026-06-25,ORD2173,Masala Chai,3,240,delivery,Aman Verma
+2026-06-26,ORD2174,Cold Coffee,2,360,takeaway,Arjun Desai
+2026-06-26,ORD2174,Cappuccino,1,150,takeaway,Arjun Desai
+2026-06-26,ORD2174,Pasta Alfredo,2,640,takeaway,Arjun Desai
+2026-06-26,ORD2175,Espresso,1,120,delivery,Arjun Desai
+2026-06-26,ORD2175,Chocolate Brownie,1,150,delivery,Arjun Desai
+2026-06-26,ORD2176,Cappuccino,2,300,takeaway,
+2026-06-26,ORD2177,Grilled Cheese Sandwich,2,340,dine_in,Anjali Rao
+2026-06-26,ORD2178,Cheesecake,3,660,qr,Arjun Desai
+2026-06-26,ORD2178,Cappuccino,1,150,qr,Arjun Desai
+2026-06-26,ORD2179,Margherita Pizza,1,280,takeaway,Rohit Gupta
+2026-06-26,ORD2179,Grilled Cheese Sandwich,1,170,takeaway,Rohit Gupta
+2026-06-26,ORD2180,Veg Sandwich,2,280,takeaway,Walk-in
+2026-06-26,ORD2180,Chocolate Brownie,2,300,takeaway,Walk-in
+2026-06-26,ORD2180,Masala Chai,1,80,takeaway,Walk-in
+2026-06-27,ORD2181,Masala Chai,3,240,dine_in,
+2026-06-27,ORD2181,Cold Coffee,3,540,dine_in,
+2026-06-27,ORD2182,Cheesecake,1,220,takeaway,Rohit Gupta
+2026-06-27,ORD2182,Masala Chai,2,160,takeaway,Rohit Gupta
+2026-06-27,ORD2182,Chocolate Brownie,3,450,takeaway,Rohit Gupta
+2026-06-27,ORD2183,Espresso,1,120,takeaway,Anjali Rao
+2026-06-27,ORD2183,Masala Chai,1,80,takeaway,Anjali Rao
+2026-06-27,ORD2184,French Fries,1,120,delivery,Aman Verma
+2026-06-27,ORD2184,Chocolate Brownie,3,450,delivery,Aman Verma
+2026-06-27,ORD2185,Margherita Pizza,1,280,takeaway,Neha Kulkarni
+2026-06-27,ORD2185,Masala Chai,1,80,takeaway,Neha Kulkarni
+2026-06-27,ORD2186,Cappuccino,3,450,takeaway,
+2026-06-27,ORD2187,Cafe Latte,2,320,takeaway,Karan Mehta
+2026-06-27,ORD2188,Cappuccino,2,300,dine_in,
+2026-06-27,ORD2189,Chocolate Brownie,1,150,dine_in,Vikram Singh
+2026-06-27,ORD2189,Cold Coffee,1,180,dine_in,Vikram Singh
+2026-06-27,ORD2190,Cold Coffee,1,180,dine_in,
+2026-06-27,ORD2190,Margherita Pizza,2,560,dine_in,
+2026-06-27,ORD2190,Cappuccino,1,150,dine_in,
+2026-06-28,ORD2191,Espresso,1,120,dine_in,
+2026-06-28,ORD2191,Masala Chai,1,80,dine_in,
+2026-06-28,ORD2192,Masala Chai,3,240,dine_in,
+2026-06-28,ORD2192,French Fries,2,240,dine_in,
+2026-06-28,ORD2193,French Fries,1,120,takeaway,Priya Nair
+2026-06-28,ORD2193,Masala Chai,1,80,takeaway,Priya Nair
+2026-06-28,ORD2193,Cold Coffee,1,180,takeaway,Priya Nair
+2026-06-28,ORD2194,Cheesecake,1,220,delivery,Vikram Singh
+2026-06-28,ORD2194,Espresso,3,360,delivery,Vikram Singh
+2026-06-28,ORD2195,Espresso,2,240,dine_in,Guest
+2026-06-28,ORD2196,Margherita Pizza,1,280,qr,Anjali Rao
+2026-06-28,ORD2196,Veg Sandwich,2,280,qr,Anjali Rao
+2026-06-28,ORD2197,Espresso,2,240,delivery,Aman Verma
+2026-06-28,ORD2198,Grilled Cheese Sandwich,2,340,dine_in,
+2026-06-28,ORD2198,Cold Coffee,1,180,dine_in,
+2026-06-28,ORD2199,Masala Chai,3,240,dine_in,Arjun Desai
+2026-06-28,ORD2200,French Fries,1,120,dine_in,
+2026-06-29,ORD2201,Cheesecake,3,660,delivery,Neha Kulkarni
+2026-06-29,ORD2201,Cafe Latte,1,160,delivery,Neha Kulkarni
+2026-06-29,ORD2202,French Fries,1,120,dine_in,
+2026-06-29,ORD2203,Grilled Cheese Sandwich,2,340,takeaway,Guest
+2026-06-29,ORD2203,Margherita Pizza,2,560,takeaway,Guest
+2026-06-29,ORD2204,Chocolate Brownie,2,300,qr,Karan Mehta
+2026-06-29,ORD2205,French Fries,1,120,qr,Aman Verma
+2026-06-29,ORD2205,Margherita Pizza,2,560,qr,Aman Verma
+2026-06-29,ORD2205,Veg Sandwich,1,140,qr,Aman Verma
+2026-06-29,ORD2206,Pasta Alfredo,2,640,dine_in,Guest
+2026-06-30,ORD2207,Chocolate Brownie,1,150,dine_in,
+2026-06-30,ORD2208,Cafe Latte,2,320,delivery,Arjun Desai
+2026-06-30,ORD2208,Margherita Pizza,1,280,delivery,Arjun Desai
+2026-06-30,ORD2209,Pasta Alfredo,2,640,takeaway,Anjali Rao
+2026-06-30,ORD2209,Cappuccino,2,300,takeaway,Anjali Rao
+2026-06-30,ORD2210,Grilled Cheese Sandwich,1,170,delivery,Sneha Iyer
+2026-06-30,ORD2211,Pasta Alfredo,1,320,qr,Riya Shah
+2026-06-30,ORD2212,Cappuccino,1,150,dine_in,Aman Verma
+2026-06-30,ORD2212,Cafe Latte,1,160,dine_in,Aman Verma
+2026-06-30,ORD2212,French Fries,2,240,dine_in,Aman Verma
+2026-07-01,ORD2213,Veg Sandwich,2,280,dine_in,
+2026-07-01,ORD2213,Grilled Cheese Sandwich,2,340,dine_in,
+2026-07-01,ORD2214,Chocolate Brownie,1,150,takeaway,Neha Kulkarni
+2026-07-01,ORD2215,Margherita Pizza,3,840,dine_in,Neha Kulkarni
+2026-07-01,ORD2215,Espresso,1,120,dine_in,Neha Kulkarni
+2026-07-01,ORD2216,Masala Chai,2,160,qr,Riya Shah
+2026-07-01,ORD2217,Margherita Pizza,1,280,delivery,Neha Kulkarni
+2026-07-01,ORD2217,Grilled Cheese Sandwich,1,170,delivery,Neha Kulkarni
+2026-07-01,ORD2218,Cheesecake,1,220,takeaway,Sneha Iyer
+2026-07-02,ORD2219,Cappuccino,1,150,delivery,Anjali Rao
+2026-07-02,ORD2219,Cold Coffee,1,180,delivery,Anjali Rao
+2026-07-02,ORD2219,Chocolate Brownie,2,300,delivery,Anjali Rao
+2026-07-02,ORD2220,Cheesecake,1,220,dine_in,Riya Shah
+2026-07-02,ORD2221,Cappuccino,1,150,takeaway,Neha Kulkarni
+2026-07-02,ORD2222,Veg Sandwich,3,420,takeaway,
+2026-07-02,ORD2222,Pasta Alfredo,1,320,takeaway,
+2026-07-02,ORD2222,Chocolate Brownie,1,150,takeaway,
+2026-07-02,ORD2223,Cold Coffee,1,180,dine_in,
+2026-07-02,ORD2223,Grilled Cheese Sandwich,1,170,dine_in,
+2026-07-02,ORD2223,Masala Chai,2,160,dine_in,
+2026-07-02,ORD2224,Margherita Pizza,1,280,takeaway,
+2026-07-02,ORD2224,French Fries,1,120,takeaway,
+2026-07-03,ORD2225,Veg Sandwich,1,140,delivery,Anjali Rao
+2026-07-03,ORD2225,Grilled Cheese Sandwich,1,170,delivery,Anjali Rao
+2026-07-03,ORD2225,Chocolate Brownie,2,300,delivery,Anjali Rao
+2026-07-03,ORD2226,Cold Coffee,1,180,dine_in,
+2026-07-03,ORD2227,Cappuccino,2,300,qr,Priya Nair
+2026-07-03,ORD2227,Margherita Pizza,2,560,qr,Priya Nair
+2026-07-03,ORD2228,Masala Chai,1,80,takeaway,Anjali Rao
+2026-07-03,ORD2229,Cafe Latte,3,480,dine_in,
+2026-07-03,ORD2229,Margherita Pizza,1,280,dine_in,
+2026-07-03,ORD2230,Cappuccino,2,300,dine_in,Arjun Desai
+2026-07-03,ORD2230,Cafe Latte,3,480,dine_in,Arjun Desai
+2026-07-03,ORD2230,Cold Coffee,3,540,dine_in,Arjun Desai
+2026-07-03,ORD2231,Masala Chai,1,80,takeaway,Karan Mehta
+2026-07-03,ORD2231,Cappuccino,1,150,takeaway,Karan Mehta
+2026-07-04,ORD2232,Cheesecake,2,440,dine_in,
+2026-07-04,ORD2233,Cold Coffee,1,180,delivery,Karan Mehta
+2026-07-04,ORD2233,Margherita Pizza,1,280,delivery,Karan Mehta
+2026-07-04,ORD2234,Masala Chai,2,160,takeaway,Rohit Gupta
+2026-07-04,ORD2234,Veg Sandwich,2,280,takeaway,Rohit Gupta
+2026-07-04,ORD2235,Cold Coffee,1,180,takeaway,Vikram Singh
+2026-07-04,ORD2235,Veg Sandwich,2,280,takeaway,Vikram Singh
+2026-07-04,ORD2236,Cappuccino,1,150,dine_in,
+2026-07-04,ORD2237,Masala Chai,1,80,takeaway,Guest
+2026-07-04,ORD2237,Espresso,1,120,takeaway,Guest
+2026-07-04,ORD2238,Margherita Pizza,3,840,dine_in,Karan Mehta
+2026-07-04,ORD2238,Chocolate Brownie,1,150,dine_in,Karan Mehta
+2026-07-04,ORD2239,French Fries,3,360,dine_in,
+2026-07-04,ORD2239,Espresso,1,120,dine_in,
+2026-07-04,ORD2240,Espresso,3,360,dine_in,Neha Kulkarni
+2026-07-04,ORD2240,Margherita Pizza,1,280,dine_in,Neha Kulkarni
+2026-07-04,ORD2241,Cappuccino,2,300,takeaway,Aman Verma
+2026-07-05,ORD2242,Cheesecake,1,220,delivery,Karan Mehta
+2026-07-05,ORD2243,Cappuccino,3,450,dine_in,Vikram Singh
+2026-07-05,ORD2243,Pasta Alfredo,3,960,dine_in,Vikram Singh
+2026-07-05,ORD2244,Cappuccino,2,300,takeaway,
+2026-07-05,ORD2244,Cheesecake,2,440,takeaway,
+2026-07-05,ORD2245,Margherita Pizza,1,280,takeaway,Neha Kulkarni
+2026-07-05,ORD2245,Masala Chai,2,160,takeaway,Neha Kulkarni
+2026-07-05,ORD2246,Cafe Latte,1,160,qr,Anjali Rao
+2026-07-05,ORD2247,Margherita Pizza,1,280,takeaway,Karan Mehta
+2026-07-05,ORD2247,Masala Chai,2,160,takeaway,Karan Mehta
+2026-07-05,ORD2247,Veg Sandwich,1,140,takeaway,Karan Mehta
+2026-07-05,ORD2248,Cold Coffee,3,540,dine_in,
+2026-07-05,ORD2248,Cheesecake,1,220,dine_in,
+2026-07-05,ORD2248,Masala Chai,3,240,dine_in,
+2026-07-05,ORD2249,Grilled Cheese Sandwich,2,340,qr,Riya Shah
+2026-07-06,ORD2250,Cafe Latte,2,320,takeaway,Riya Shah
+2026-07-06,ORD2251,Pasta Alfredo,2,640,qr,Anjali Rao
+2026-07-06,ORD2251,Cafe Latte,1,160,qr,Anjali Rao
+2026-07-06,ORD2252,Masala Chai,1,80,dine_in,Arjun Desai
+2026-07-06,ORD2252,Cappuccino,3,450,dine_in,Arjun Desai
+2026-07-06,ORD2253,Espresso,1,120,dine_in,Guest
+2026-07-06,ORD2254,Cheesecake,2,440,dine_in,Guest
+2026-07-06,ORD2255,Pasta Alfredo,2,640,dine_in,Arjun Desai
+2026-07-07,ORD2256,Margherita Pizza,3,840,takeaway,Priya Nair
+2026-07-07,ORD2257,Cafe Latte,1,160,dine_in,Anjali Rao
+2026-07-07,ORD2258,Veg Sandwich,3,420,takeaway,Guest
+2026-07-07,ORD2258,Cappuccino,1,150,takeaway,Guest
+2026-07-07,ORD2259,Cold Coffee,2,360,qr,Vikram Singh
+2026-07-07,ORD2259,Veg Sandwich,2,280,qr,Vikram Singh
+2026-07-07,ORD2260,Cafe Latte,1,160,takeaway,Arjun Desai
+2026-07-07,ORD2260,Pasta Alfredo,1,320,takeaway,Arjun Desai
+2026-07-07,ORD2261,Masala Chai,1,80,delivery,Aman Verma
+2026-07-07,ORD2262,Cheesecake,2,440,takeaway,
+2026-07-08,ORD2263,Veg Sandwich,1,140,dine_in,Sneha Iyer
+2026-07-08,ORD2263,Masala Chai,1,80,dine_in,Sneha Iyer
+2026-07-08,ORD2264,Margherita Pizza,1,280,dine_in,Vikram Singh
+2026-07-08,ORD2264,Cheesecake,1,220,dine_in,Vikram Singh
+2026-07-08,ORD2264,Grilled Cheese Sandwich,1,170,dine_in,Vikram Singh
+2026-07-08,ORD2265,Veg Sandwich,1,140,dine_in,Guest
+2026-07-08,ORD2265,Grilled Cheese Sandwich,2,340,dine_in,Guest
+2026-07-08,ORD2265,Cappuccino,2,300,dine_in,Guest
+2026-07-08,ORD2266,Cold Coffee,1,180,qr,Aman Verma
+2026-07-08,ORD2266,Pasta Alfredo,3,960,qr,Aman Verma
+2026-07-08,ORD2266,Margherita Pizza,2,560,qr,Aman Verma
+2026-07-08,ORD2267,French Fries,1,120,dine_in,Sneha Iyer
+2026-07-08,ORD2267,Espresso,1,120,dine_in,Sneha Iyer
+2026-07-08,ORD2268,Cafe Latte,1,160,takeaway,Sneha Iyer
+2026-07-08,ORD2268,Veg Sandwich,1,140,takeaway,Sneha Iyer
+2026-07-09,ORD2269,Cafe Latte,1,160,takeaway,
+2026-07-09,ORD2269,Espresso,1,120,takeaway,
+2026-07-09,ORD2270,Veg Sandwich,1,140,takeaway,Arjun Desai
+2026-07-09,ORD2270,French Fries,2,240,takeaway,Arjun Desai
+2026-07-09,ORD2271,Masala Chai,1,80,qr,Arjun Desai
+2026-07-09,ORD2272,Veg Sandwich,2,280,takeaway,
+2026-07-09,ORD2272,Espresso,1,120,takeaway,
+2026-07-09,ORD2273,Pasta Alfredo,1,320,dine_in,
+2026-07-09,ORD2273,Cold Coffee,2,360,dine_in,
+2026-07-09,ORD2274,Cafe Latte,1,160,dine_in,
+2026-07-09,ORD2274,Pasta Alfredo,2,640,dine_in,
+2026-07-09,ORD2275,Cheesecake,2,440,takeaway,Neha Kulkarni
+2026-07-10,ORD2276,Grilled Cheese Sandwich,3,510,dine_in,Sneha Iyer
+2026-07-10,ORD2277,Masala Chai,3,240,takeaway,Sneha Iyer
+2026-07-10,ORD2278,French Fries,2,240,dine_in,
+2026-07-10,ORD2279,Cheesecake,1,220,takeaway,Guest
+2026-07-10,ORD2279,Grilled Cheese Sandwich,1,170,takeaway,Guest
+2026-07-10,ORD2279,Margherita Pizza,3,840,takeaway,Guest
+2026-07-10,ORD2280,Chocolate Brownie,1,150,qr,Neha Kulkarni
+2026-07-10,ORD2280,Cafe Latte,3,480,qr,Neha Kulkarni
+2026-07-10,ORD2280,Cheesecake,3,660,qr,Neha Kulkarni
+2026-07-10,ORD2281,Pasta Alfredo,3,960,dine_in,Arjun Desai
+2026-07-10,ORD2282,Grilled Cheese Sandwich,1,170,delivery,Anjali Rao
+2026-07-10,ORD2282,Cafe Latte,1,160,delivery,Anjali Rao
+2026-07-10,ORD2283,Pasta Alfredo,2,640,dine_in,Neha Kulkarni
+2026-07-10,ORD2283,Cheesecake,1,220,dine_in,Neha Kulkarni
+2026-07-10,ORD2283,Cold Coffee,2,360,dine_in,Neha Kulkarni
+2026-07-11,ORD2284,Espresso,2,240,delivery,Arjun Desai
+2026-07-11,ORD2284,Veg Sandwich,1,140,delivery,Arjun Desai
+2026-07-11,ORD2284,Cappuccino,1,150,delivery,Arjun Desai
+2026-07-11,ORD2285,Cheesecake,1,220,takeaway,
+2026-07-11,ORD2286,Margherita Pizza,2,560,dine_in,Vikram Singh
+2026-07-11,ORD2287,Veg Sandwich,1,140,dine_in,Vikram Singh
+2026-07-11,ORD2287,Cafe Latte,1,160,dine_in,Vikram Singh
+2026-07-11,ORD2288,Veg Sandwich,3,420,qr,Aman Verma
+2026-07-11,ORD2289,Margherita Pizza,1,280,dine_in,
+2026-07-11,ORD2290,French Fries,2,240,takeaway,Neha Kulkarni
+2026-07-11,ORD2290,Cold Coffee,3,540,takeaway,Neha Kulkarni
+2026-07-11,ORD2291,Cappuccino,1,150,dine_in,Anjali Rao
+2026-07-11,ORD2291,Pasta Alfredo,2,640,dine_in,Anjali Rao
+2026-07-11,ORD2292,Cold Coffee,1,180,takeaway,Riya Shah
+2026-07-12,ORD2293,Cafe Latte,1,160,qr,Aman Verma
+2026-07-12,ORD2293,Margherita Pizza,1,280,qr,Aman Verma
+2026-07-12,ORD2293,Espresso,1,120,qr,Aman Verma
+2026-07-12,ORD2294,Chocolate Brownie,2,300,takeaway,Vikram Singh
+2026-07-12,ORD2294,Veg Sandwich,2,280,takeaway,Vikram Singh
+2026-07-12,ORD2294,Pasta Alfredo,2,640,takeaway,Vikram Singh
+2026-07-12,ORD2295,Pasta Alfredo,3,960,takeaway,Rohit Gupta
+2026-07-12,ORD2295,Espresso,3,360,takeaway,Rohit Gupta
+2026-07-12,ORD2296,Pasta Alfredo,1,320,qr,Sneha Iyer
+2026-07-12,ORD2296,Cafe Latte,1,160,qr,Sneha Iyer
+2026-07-12,ORD2296,Espresso,1,120,qr,Sneha Iyer
+2026-07-12,ORD2297,Margherita Pizza,2,560,dine_in,Rohit Gupta
+2026-07-12,ORD2298,Grilled Cheese Sandwich,2,340,takeaway,Guest
+2026-07-12,ORD2298,Espresso,3,360,takeaway,Guest
+2026-07-12,ORD2299,Margherita Pizza,1,280,takeaway,
+2026-07-12,ORD2300,French Fries,1,120,takeaway,Priya Nair
+2026-07-12,ORD2300,Pasta Alfredo,1,320,takeaway,Priya Nair
+2026-07-12,ORD2301,Margherita Pizza,3,840,dine_in,Karan Mehta
+2026-07-12,ORD2301,Cheesecake,2,440,dine_in,Karan Mehta
+2026-07-12,ORD2302,French Fries,1,120,takeaway,
+2026-07-12,ORD2302,Espresso,2,240,takeaway,
+2026-07-13,ORD2303,Cappuccino,1,150,qr,Karan Mehta
+2026-07-13,ORD2303,Masala Chai,2,160,qr,Karan Mehta
+2026-07-13,ORD2304,Cheesecake,2,440,dine_in,Vikram Singh
+2026-07-13,ORD2304,French Fries,1,120,dine_in,Vikram Singh
+2026-07-13,ORD2304,Margherita Pizza,2,560,dine_in,Vikram Singh
+2026-07-13,ORD2305,Margherita Pizza,3,840,dine_in,Neha Kulkarni
+2026-07-13,ORD2305,Cappuccino,2,300,dine_in,Neha Kulkarni
+2026-07-13,ORD2306,Cheesecake,3,660,takeaway,Anjali Rao
+2026-07-13,ORD2307,Cappuccino,1,150,qr,Karan Mehta
+2026-07-13,ORD2307,French Fries,1,120,qr,Karan Mehta
+2026-07-13,ORD2308,Cafe Latte,1,160,qr,Aman Verma
+2026-07-13,ORD2308,Cold Coffee,3,540,qr,Aman Verma
+2026-07-14,ORD2309,Espresso,1,120,dine_in,Guest
+2026-07-14,ORD2309,Pasta Alfredo,1,320,dine_in,Guest
+2026-07-14,ORD2310,Pasta Alfredo,1,320,qr,Karan Mehta
+2026-07-14,ORD2311,Veg Sandwich,3,420,takeaway,Neha Kulkarni
+2026-07-14,ORD2312,Chocolate Brownie,2,300,dine_in,Sneha Iyer
+2026-07-14,ORD2312,Cafe Latte,1,160,dine_in,Sneha Iyer
+2026-07-14,ORD2312,Espresso,1,120,dine_in,Sneha Iyer
+2026-07-14,ORD2313,Cold Coffee,1,180,qr,Priya Nair
+2026-07-14,ORD2314,Chocolate Brownie,2,300,delivery,Rohit Gupta
+2026-07-14,ORD2315,Grilled Cheese Sandwich,1,170,takeaway,Sneha Iyer
+2026-07-14,ORD2315,French Fries,3,360,takeaway,Sneha Iyer
+2026-07-15,ORD2316,Margherita Pizza,3,840,qr,Aman Verma
+2026-07-15,ORD2316,Masala Chai,1,80,qr,Aman Verma
+2026-07-15,ORD2317,Cappuccino,3,450,takeaway,Walk-in
+2026-07-15,ORD2317,Cafe Latte,3,480,takeaway,Walk-in
+2026-07-15,ORD2317,French Fries,3,360,takeaway,Walk-in
+2026-07-15,ORD2318,Cold Coffee,1,180,dine_in,Guest
+2026-07-15,ORD2318,Grilled Cheese Sandwich,2,340,dine_in,Guest
+2026-07-15,ORD2319,Margherita Pizza,1,280,dine_in,Sneha Iyer
+2026-07-15,ORD2319,Pasta Alfredo,2,640,dine_in,Sneha Iyer
+2026-07-15,ORD2320,Chocolate Brownie,1,150,qr,Vikram Singh
+2026-07-15,ORD2320,Cappuccino,1,150,qr,Vikram Singh
+2026-07-15,ORD2321,Cafe Latte,1,160,delivery,Vikram Singh
+2026-07-15,ORD2322,Cheesecake,1,220,takeaway,Anjali Rao
+2026-07-16,ORD2323,Chocolate Brownie,1,150,dine_in,Sneha Iyer
+2026-07-16,ORD2324,Grilled Cheese Sandwich,3,510,dine_in,Priya Nair
+2026-07-16,ORD2325,Chocolate Brownie,3,450,dine_in,
+2026-07-16,ORD2325,Cafe Latte,1,160,dine_in,
+2026-07-16,ORD2326,Pasta Alfredo,1,320,dine_in,Aman Verma
+2026-07-16,ORD2327,Cheesecake,1,220,takeaway,
+2026-07-16,ORD2328,Cheesecake,2,440,qr,Aman Verma
+2026-07-16,ORD2328,Espresso,1,120,qr,Aman Verma
+2026-07-16,ORD2329,Veg Sandwich,1,140,dine_in,Aman Verma
+2026-07-16,ORD2330,Cafe Latte,2,320,dine_in,Priya Nair
+2026-07-17,ORD2331,Cheesecake,3,660,takeaway,
+2026-07-17,ORD2331,Cold Coffee,3,540,takeaway,
+2026-07-17,ORD2332,Cold Coffee,1,180,dine_in,Guest
+2026-07-17,ORD2332,Cafe Latte,1,160,dine_in,Guest
+2026-07-17,ORD2333,Cheesecake,2,440,qr,Aman Verma
+2026-07-17,ORD2333,Grilled Cheese Sandwich,1,170,qr,Aman Verma
+2026-07-17,ORD2333,Veg Sandwich,1,140,qr,Aman Verma
+2026-07-17,ORD2334,Margherita Pizza,2,560,dine_in,Aman Verma
+2026-07-17,ORD2335,Chocolate Brownie,1,150,takeaway,Walk-in
+2026-07-17,ORD2336,Cheesecake,2,440,dine_in,Neha Kulkarni
+2026-07-17,ORD2337,Grilled Cheese Sandwich,1,170,dine_in,
+2026-07-17,ORD2337,Cafe Latte,2,320,dine_in,
+2026-07-18,ORD2338,Veg Sandwich,2,280,dine_in,Riya Shah
+2026-07-18,ORD2338,Espresso,2,240,dine_in,Riya Shah
+2026-07-18,ORD2339,Cafe Latte,2,320,takeaway,Priya Nair
+2026-07-18,ORD2339,Cappuccino,1,150,takeaway,Priya Nair
+2026-07-18,ORD2340,Grilled Cheese Sandwich,2,340,dine_in,Riya Shah
+2026-07-18,ORD2341,Grilled Cheese Sandwich,1,170,dine_in,Guest
+2026-07-18,ORD2341,Cheesecake,3,660,dine_in,Guest
+2026-07-18,ORD2342,Cafe Latte,1,160,takeaway,Priya Nair
+2026-07-18,ORD2342,Masala Chai,2,160,takeaway,Priya Nair
+2026-07-18,ORD2343,Veg Sandwich,3,420,dine_in,
+2026-07-18,ORD2343,Grilled Cheese Sandwich,3,510,dine_in,
+2026-07-18,ORD2343,Pasta Alfredo,3,960,dine_in,
+2026-07-18,ORD2344,Cheesecake,3,660,delivery,Aman Verma
+2026-07-18,ORD2344,Grilled Cheese Sandwich,1,170,delivery,Aman Verma
+2026-07-18,ORD2345,French Fries,2,240,dine_in,Anjali Rao
+2026-07-18,ORD2346,Cappuccino,3,450,takeaway,Priya Nair
+2026-07-18,ORD2347,Veg Sandwich,2,280,dine_in,
+2026-07-18,ORD2347,Margherita Pizza,3,840,dine_in,
+2026-07-19,ORD2348,Cappuccino,1,150,dine_in,Sneha Iyer
+2026-07-19,ORD2349,Margherita Pizza,1,280,qr,Anjali Rao
+2026-07-19,ORD2349,Cafe Latte,3,480,qr,Anjali Rao
+2026-07-19,ORD2350,Margherita Pizza,1,280,takeaway,
+2026-07-19,ORD2350,Veg Sandwich,2,280,takeaway,
+2026-07-19,ORD2351,Veg Sandwich,1,140,qr,Arjun Desai
+2026-07-19,ORD2352,Cold Coffee,3,540,dine_in,Guest
+2026-07-19,ORD2353,Cappuccino,2,300,takeaway,Riya Shah
+2026-07-19,ORD2354,Cappuccino,2,300,dine_in,Priya Nair
+2026-07-19,ORD2355,Veg Sandwich,1,140,qr,Anjali Rao
+2026-07-19,ORD2356,Cafe Latte,1,160,takeaway,Walk-in
+2026-07-19,ORD2356,Pasta Alfredo,1,320,takeaway,Walk-in
+2026-07-20,ORD2357,Grilled Cheese Sandwich,1,170,dine_in,Neha Kulkarni
+2026-07-20,ORD2358,Cafe Latte,2,320,takeaway,Walk-in
+2026-07-20,ORD2358,Margherita Pizza,1,280,takeaway,Walk-in
+2026-07-20,ORD2359,Cheesecake,1,220,dine_in,Arjun Desai
+2026-07-20,ORD2359,Pasta Alfredo,2,640,dine_in,Arjun Desai
+2026-07-20,ORD2360,Cheesecake,2,440,dine_in,
+2026-07-20,ORD2361,Cappuccino,2,300,qr,Karan Mehta
+2026-07-20,ORD2362,Veg Sandwich,1,140,dine_in,Rohit Gupta
+2026-07-20,ORD2363,Cafe Latte,2,320,qr,Anjali Rao
+2026-07-20,ORD2363,Cold Coffee,1,180,qr,Anjali Rao
+2026-07-21,ORD2364,Cafe Latte,1,160,dine_in,
+2026-07-21,ORD2364,Cappuccino,2,300,dine_in,
+2026-07-21,ORD2365,Cheesecake,2,440,takeaway,Walk-in
+2026-07-21,ORD2365,Cafe Latte,1,160,takeaway,Walk-in
+2026-07-21,ORD2366,Pasta Alfredo,2,640,takeaway,Anjali Rao
+2026-07-21,ORD2367,Masala Chai,1,80,dine_in,Priya Nair
+2026-07-21,ORD2368,Cheesecake,1,220,qr,Rohit Gupta
+2026-07-21,ORD2368,Veg Sandwich,2,280,qr,Rohit Gupta
+2026-07-21,ORD2369,Pasta Alfredo,1,320,dine_in,Karan Mehta
+2026-07-21,ORD2370,Veg Sandwich,1,140,dine_in,Vikram Singh
+2026-07-21,ORD2370,Grilled Cheese Sandwich,2,340,dine_in,Vikram Singh
+2026-07-22,ORD2371,Masala Chai,1,80,qr,Karan Mehta
+2026-07-22,ORD2371,French Fries,1,120,qr,Karan Mehta
+2026-07-22,ORD2372,Cappuccino,1,150,dine_in,Sneha Iyer
+2026-07-22,ORD2372,Cold Coffee,1,180,dine_in,Sneha Iyer
+2026-07-22,ORD2372,Veg Sandwich,3,420,dine_in,Sneha Iyer
+2026-07-22,ORD2373,Cappuccino,1,150,dine_in,
+2026-07-22,ORD2373,Chocolate Brownie,1,150,dine_in,
+2026-07-22,ORD2373,Masala Chai,1,80,dine_in,
+2026-07-22,ORD2374,Cold Coffee,1,180,takeaway,Guest
+2026-07-22,ORD2374,Cafe Latte,1,160,takeaway,Guest
+2026-07-22,ORD2374,French Fries,1,120,takeaway,Guest
+2026-07-22,ORD2375,Cold Coffee,2,360,dine_in,Karan Mehta
+2026-07-22,ORD2376,Pasta Alfredo,2,640,dine_in,
+2026-07-22,ORD2377,Cafe Latte,1,160,dine_in,
+2026-07-23,ORD2378,Cafe Latte,2,320,takeaway,
+2026-07-23,ORD2378,Cappuccino,1,150,takeaway,
+2026-07-23,ORD2379,French Fries,2,240,dine_in,
+2026-07-23,ORD2379,Cappuccino,3,450,dine_in,
+2026-07-23,ORD2380,Masala Chai,1,80,takeaway,Karan Mehta
+2026-07-23,ORD2381,Pasta Alfredo,3,960,takeaway,
+2026-07-23,ORD2381,Cheesecake,1,220,takeaway,
+2026-07-23,ORD2381,Cold Coffee,2,360,takeaway,
+2026-07-23,ORD2382,Cafe Latte,1,160,takeaway,
+2026-07-23,ORD2383,Cold Coffee,1,180,takeaway,Karan Mehta
+2026-07-23,ORD2383,Chocolate Brownie,2,300,takeaway,Karan Mehta
+2026-07-23,ORD2383,Margherita Pizza,3,840,takeaway,Karan Mehta
+2026-07-23,ORD2384,Pasta Alfredo,1,320,dine_in,Vikram Singh
+2026-07-23,ORD2384,Margherita Pizza,2,560,dine_in,Vikram Singh
+2026-07-23,ORD2385,Cold Coffee,1,180,dine_in,Rohit Gupta
+2026-07-23,ORD2385,Cappuccino,2,300,dine_in,Rohit Gupta
+2026-07-23,ORD2385,Masala Chai,2,160,dine_in,Rohit Gupta
+2026-07-24,ORD2386,Cold Coffee,3,540,takeaway,
+2026-07-24,ORD2387,Pasta Alfredo,2,640,dine_in,Riya Shah
+2026-07-24,ORD2388,Cold Coffee,2,360,dine_in,
+2026-07-24,ORD2389,Pasta Alfredo,3,960,dine_in,
+2026-07-24,ORD2389,Cappuccino,3,450,dine_in,
+2026-07-24,ORD2390,Pasta Alfredo,1,320,dine_in,Guest
+2026-07-24,ORD2391,Masala Chai,1,80,qr,Vikram Singh
+2026-07-24,ORD2391,Espresso,1,120,qr,Vikram Singh
+2026-07-24,ORD2391,French Fries,1,120,qr,Vikram Singh
+2026-07-24,ORD2392,French Fries,2,240,dine_in,
+2026-07-24,ORD2392,Cappuccino,1,150,dine_in,
+2026-07-24,ORD2392,Veg Sandwich,1,140,dine_in,
+2026-07-25,ORD2393,Cappuccino,1,150,dine_in,Walk-in
+2026-07-25,ORD2394,Margherita Pizza,1,280,takeaway,
+2026-07-25,ORD2395,Cafe Latte,1,160,dine_in,Anjali Rao
+2026-07-25,ORD2395,Veg Sandwich,1,140,dine_in,Anjali Rao
+2026-07-25,ORD2395,Masala Chai,1,80,dine_in,Anjali Rao
+2026-07-25,ORD2396,Chocolate Brownie,1,150,delivery,Anjali Rao
+2026-07-25,ORD2396,Veg Sandwich,3,420,delivery,Anjali Rao
+2026-07-25,ORD2397,Cold Coffee,2,360,takeaway,Guest
+2026-07-25,ORD2397,Chocolate Brownie,1,150,takeaway,Guest
+2026-07-25,ORD2398,Espresso,3,360,takeaway,Sneha Iyer
+2026-07-25,ORD2399,Pasta Alfredo,1,320,dine_in,Guest
+2026-07-25,ORD2399,Cappuccino,2,300,dine_in,Guest
+2026-07-25,ORD2400,Chocolate Brownie,2,300,dine_in,Guest
+2026-07-25,ORD2401,Cheesecake,1,220,dine_in,
+2026-07-25,ORD2401,Cafe Latte,1,160,dine_in,
+2026-07-26,ORD2402,French Fries,1,120,dine_in,
+2026-07-26,ORD2402,Cappuccino,1,150,dine_in,
+2026-07-26,ORD2403,Cafe Latte,1,160,dine_in,Walk-in
+2026-07-26,ORD2403,Cappuccino,2,300,dine_in,Walk-in
+2026-07-26,ORD2404,French Fries,1,120,takeaway,
+2026-07-26,ORD2404,Grilled Cheese Sandwich,2,340,takeaway,
+2026-07-26,ORD2405,Chocolate Brownie,1,150,takeaway,Vikram Singh
+2026-07-26,ORD2405,Cheesecake,2,440,takeaway,Vikram Singh
+2026-07-26,ORD2405,Cold Coffee,1,180,takeaway,Vikram Singh
+2026-07-26,ORD2406,Cappuccino,1,150,qr,Riya Shah
+2026-07-26,ORD2406,Veg Sandwich,1,140,qr,Riya Shah
+2026-07-26,ORD2407,Cheesecake,1,220,dine_in,Anjali Rao
+2026-07-26,ORD2408,Pasta Alfredo,2,640,takeaway,
+2026-07-26,ORD2408,Cheesecake,3,660,takeaway,
+2026-07-26,ORD2409,Grilled Cheese Sandwich,1,170,dine_in,Priya Nair
+2026-07-26,ORD2409,Espresso,1,120,dine_in,Priya Nair
+2026-07-26,ORD2409,Cappuccino,1,150,dine_in,Priya Nair
+2026-07-26,ORD2410,Masala Chai,1,80,dine_in,Neha Kulkarni
+2026-07-26,ORD2410,Chocolate Brownie,1,150,dine_in,Neha Kulkarni
+2026-07-26,ORD2410,Cheesecake,1,220,dine_in,Neha Kulkarni
+2026-07-26,ORD2411,Espresso,1,120,dine_in,Neha Kulkarni
+2026-07-26,ORD2411,Cappuccino,1,150,dine_in,Neha Kulkarni
+2026-07-26,ORD2412,Cold Coffee,1,180,takeaway,Arjun Desai
+2026-07-26,ORD2412,Cafe Latte,1,160,takeaway,Arjun Desai
+2026-07-27,ORD2413,Masala Chai,2,160,dine_in,
+2026-07-27,ORD2414,Chocolate Brownie,2,300,takeaway,Sneha Iyer
+2026-07-27,ORD2415,Espresso,1,120,takeaway,Anjali Rao
+2026-07-27,ORD2415,French Fries,1,120,takeaway,Anjali Rao
+2026-07-27,ORD2416,Pasta Alfredo,1,320,takeaway,Karan Mehta
+2026-07-27,ORD2416,Cappuccino,3,450,takeaway,Karan Mehta
+2026-07-27,ORD2417,Chocolate Brownie,1,150,delivery,Aman Verma
+2026-07-27,ORD2418,Pasta Alfredo,2,640,qr,Neha Kulkarni
+2026-07-27,ORD2418,Cold Coffee,1,180,qr,Neha Kulkarni
+2026-07-28,ORD2419,Margherita Pizza,2,560,qr,Neha Kulkarni
+2026-07-28,ORD2419,Chocolate Brownie,2,300,qr,Neha Kulkarni
+2026-07-28,ORD2420,Cheesecake,2,440,dine_in,Aman Verma
+2026-07-28,ORD2420,Cappuccino,2,300,dine_in,Aman Verma
+2026-07-28,ORD2421,Espresso,1,120,takeaway,
+2026-07-28,ORD2421,Cafe Latte,1,160,takeaway,
+2026-07-28,ORD2421,French Fries,1,120,takeaway,
+2026-07-28,ORD2422,Cappuccino,2,300,qr,Karan Mehta
+2026-07-28,ORD2423,Chocolate Brownie,1,150,dine_in,
+2026-07-28,ORD2424,Veg Sandwich,1,140,qr,Arjun Desai
+2026-07-28,ORD2424,Cafe Latte,2,320,qr,Arjun Desai
+2026-07-28,ORD2425,Margherita Pizza,1,280,takeaway,Rohit Gupta
+2026-07-28,ORD2425,French Fries,3,360,takeaway,Rohit Gupta
+2026-07-28,ORD2426,Grilled Cheese Sandwich,1,170,takeaway,
+2026-07-29,ORD2427,Pasta Alfredo,1,320,takeaway,
+2026-07-29,ORD2428,Veg Sandwich,2,280,qr,Sneha Iyer
+2026-07-29,ORD2428,Grilled Cheese Sandwich,3,510,qr,Sneha Iyer
+2026-07-29,ORD2428,Masala Chai,2,160,qr,Sneha Iyer
+2026-07-29,ORD2429,Masala Chai,2,160,takeaway,
+2026-07-29,ORD2430,Cappuccino,1,150,dine_in,
+2026-07-29,ORD2430,Grilled Cheese Sandwich,3,510,dine_in,
+2026-07-29,ORD2431,Veg Sandwich,1,140,dine_in,Vikram Singh
+2026-07-29,ORD2431,Cappuccino,1,150,dine_in,Vikram Singh
+2026-07-29,ORD2432,Cold Coffee,1,180,dine_in,Vikram Singh
+2026-07-30,ORD2433,Masala Chai,2,160,delivery,Vikram Singh
+2026-07-30,ORD2433,Grilled Cheese Sandwich,3,510,delivery,Vikram Singh
+2026-07-30,ORD2434,Cheesecake,2,440,dine_in,Karan Mehta
+2026-07-30,ORD2434,French Fries,1,120,dine_in,Karan Mehta
+2026-07-30,ORD2435,Espresso,3,360,qr,Riya Shah
+2026-07-30,ORD2435,Cafe Latte,2,320,qr,Riya Shah
+2026-07-30,ORD2435,Masala Chai,2,160,qr,Riya Shah
+2026-07-30,ORD2436,Cappuccino,1,150,dine_in,Guest
+2026-07-30,ORD2436,Espresso,1,120,dine_in,Guest
+2026-07-30,ORD2436,Cold Coffee,1,180,dine_in,Guest
+2026-07-30,ORD2437,Masala Chai,1,80,dine_in,Rohit Gupta
+2026-07-30,ORD2438,Grilled Cheese Sandwich,3,510,qr,Vikram Singh
+2026-07-30,ORD2438,Chocolate Brownie,1,150,qr,Vikram Singh
+2026-07-30,ORD2438,Cafe Latte,1,160,qr,Vikram Singh
+2026-07-30,ORD2439,French Fries,2,240,dine_in,Vikram Singh
