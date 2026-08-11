@@ -16,6 +16,11 @@ COPY . .
 
 RUN python manage.py collectstatic --noinput
 
+# Render assigns the actual listen port via $PORT at container start (not a
+# fixed value like 8000), and runserver is Django's single-threaded dev
+# server — not fit for production traffic. Gunicorn + the shell form of CMD
+# (so $PORT and the migrate step run) match what render.yaml's native-runtime
+# path uses. Migrations run here (container start) rather than at image build
+# time, since the database isn't reachable during the build step.
 EXPOSE 8000
-
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+CMD python manage.py migrate --noinput && gunicorn smartserve.wsgi:application --bind 0.0.0.0:${PORT:-8000}
