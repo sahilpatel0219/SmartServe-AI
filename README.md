@@ -201,6 +201,67 @@ All configuration is via environment variables — **never commit `.env`**. See 
 
 ---
 
+## Deployment
+
+The frontend and backend deploy to **two separate hosts** — this isn't optional.
+Vercel is a static/serverless host built for frontends; it doesn't suit a
+Django app with MongoDB connections and heavy ML dependencies (XGBoost,
+scikit-learn, pandas) well. The working split:
+
+| Part | Host | Why |
+|---|---|---|
+| `frontend/` (React) | **Vercel** | Purpose-built for this — fast, free, zero config |
+| Everything else (Django API) | **Render** (or Railway/Fly.io/a VPS) | Handles a long-running Python process, real dependency sizes, and persistent DB connections normally |
+| MongoDB | **Atlas** (unchanged) | Already cloud-hosted; nothing to migrate |
+
+### Backend → Render
+
+1. Push this repo to GitHub.
+2. Render dashboard → **New → Blueprint** → point at the repo. It reads
+   [`render.yaml`](render.yaml) and provisions a web service + a free Postgres
+   database (for accounts/roles — SQLite has no persistent disk on Render's
+   free tier, so Postgres replaces it in production; MongoDB keeps holding all
+   the operational business data, unchanged).
+3. In the service's **Environment** tab, fill in the values `render.yaml`
+   deliberately leaves blank (`sync: false`):
+   - `MONGO_URI` — your Atlas connection string
+   - `CORS_ALLOWED_ORIGINS` — your Vercel URL, e.g. `https://smartserve-ai.vercel.app`
+   - `CSRF_TRUSTED_ORIGINS` — same Vercel URL (only needed for `/admin/`)
+   - `LLM_API_KEY` — optional
+4. Deploy. Render runs `collectstatic` + `migrate` automatically (see
+   `buildCommand` in `render.yaml`), then starts Gunicorn.
+5. **Whitelist Render's outbound traffic in Atlas** — Network Access → Add IP
+   → `0.0.0.0/0` is simplest for a PaaS host with rotating egress IPs (Render
+   doesn't publish a static IP range on the free tier).
+
+No `render.yaml`? Use the plain [`Procfile`](Procfile) instead — same two
+commands (`release: migrate`, `web: gunicorn ...`), works on Railway/Heroku-style
+hosts too.
+
+### Frontend → Vercel
+
+1. Vercel dashboard → **New Project** → import the repo → set **Root
+   Directory** to `frontend/` (this is a monorepo; Vercel needs to know the
+   frontend isn't at the repo root).
+2. Framework preset: Vite (auto-detected). Build command / output directory:
+   defaults are correct (`npm run build` / `dist`).
+3. **Settings → Environment Variables** → add `VITE_API_URL` =
+   `https://<your-render-service>.onrender.com/api` — **not** in a `.env`
+   file; Vercel doesn't read repo `.env` files, only its own dashboard vars.
+4. Deploy. [`frontend/vercel.json`](frontend/vercel.json) rewrites all paths
+   to `index.html` so React Router's client-side routes (e.g. a direct visit
+   to `/dashboard`) don't 404 on Vercel's static host.
+5. Go back to Render and set `CORS_ALLOWED_ORIGINS` to the real Vercel URL
+   Vercel just gave you (steps 3 above referenced it in advance — close the
+   loop once both sides exist).
+
+### After both are live
+
+Register an account at your Vercel URL — it calls the Render API, which reads
+from Atlas. Same app, same behavior as local dev, just deployed.
+
+---
+
 ## Sample Data
 
 Sample CSV files for a fictional café (**Cafe LJ**) are included so the upload and analysis flow can be tested immediately:
