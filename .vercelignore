@@ -5,40 +5,45 @@
 # *preset* detection, not this separate Functions auto-detection). Excluding
 # every backend path here stops Vercel from ever seeing those files, so it
 # can't misidentify this as a Python project.
-accounts/
-analytics/
-api/
-assistant/
-catalog/
-core/
-customers/
-inventory/
-ml_engine/
-mongo/
-notifications/
-onboarding/
-orders/
-reports/
-smartserve/
-staff/
-suppliers/
-templates/
-static/
-staticfiles/
-media/
-_impDocs/
-_sample_data_1/
-_sample_data_2/
+#
+# IMPORTANT: every pattern below is anchored with a leading "/" so it only
+# matches at the repo root — without the "/", e.g. "api/" also matches
+# frontend/src/api/ (gitignore-style patterns match at any depth by default),
+# which broke the frontend's own API client module on the previous deploy.
+/accounts/
+/analytics/
+/api/
+/assistant/
+/catalog/
+/core/
+/customers/
+/inventory/
+/ml_engine/
+/mongo/
+/notifications/
+/onboarding/
+/orders/
+/reports/
+/smartserve/
+/staff/
+/suppliers/
+/templates/
+/static/
+/staticfiles/
+/media/
+/_impDocs/
+/_sample_data_1/
+/_sample_data_2/
 
-manage.py
-requirements.txt
-render.yaml
-Procfile
-db.sqlite3
-docker-compose.yml
-Dockerfile
-API.md
-PROJECT_STRUCTURE_MAP.pdf
-PRESENTATION_BACKEND_ENGINEER.md
-PRESENTATION_FRONTEND_ENGINEER.md
-PRESENTATION_AIML_ENGINEER.md
+/manage.py
+/requirements.txt
+/render.yaml
+/Procfile
+/db.sqlite3
+/docker-compose.yml
+/Dockerfile
+/API.md
+/PROJECT_STRUCTURE_MAP.pdf
+/PRESENTATION_BACKEND_ENGINEER.md
+/PRESENTATION_FRONTEND_ENGINEER.md
+/PRESENTATION_AIML_ENGINEER.md
